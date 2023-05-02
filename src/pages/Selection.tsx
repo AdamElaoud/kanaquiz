@@ -3,8 +3,8 @@ import "./Selection.scss";
 
 const Selection = () : JSX.Element => {
     const toggleButtons: [ButtonConfig, ButtonConfig] = [
-        { text: 'LEFT', onClick: () => null },
-        { text: 'RIGHT', onClick: () => null }
+        { text: 'LEFT', onClick: () => console.log("LEFT") },
+        { text: 'RIGHT', onClick: () => console.log("RIGHT") }
     ];
 
     return (

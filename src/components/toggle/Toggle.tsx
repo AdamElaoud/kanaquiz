@@ -1,5 +1,6 @@
 import { ReactButtonOnClickEvent, ReactButtonOnClick } from "@/types";
 import { useState } from "react";
+import "./Toggle.scss";
 
 export interface ButtonConfig {
     onClick: ReactButtonOnClick,
@@ -23,8 +24,8 @@ const Toggle = (props: Props) : JSX.Element => {
 
     const [leftButton, rightButton] = buttons;
 
-    const leftButtonClasses = activeSide === Side.Left ? 'left active' : 'left';
-    const rightButtonClasses = activeSide === Side.Right ? 'right active' : 'right';
+    const leftButtonClasses = activeSide === Side.Left ? 'left toggle-button active' : 'left toggle-button';
+    const rightButtonClasses = activeSide === Side.Right ? 'right toggle-button active' : 'right toggle-button';
 
     const onClick = (sideOnClick: ReactButtonOnClick, side: Side) => (event: ReactButtonOnClickEvent) => {
         setActiveSide(side);

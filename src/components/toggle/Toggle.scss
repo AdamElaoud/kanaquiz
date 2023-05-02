@@ -1,10 +1,28 @@
 .toggle {
+    .toggle-button {
+        background-color: white;
+        cursor: pointer;
+
+        &:hover {
+            background-color: gray;
+            color: white;
+        }
+
+        &.active {
+            background-color: blue;
+            color: white;
+        }
+    }
     
     .left {
-        border-radius: 2rem 0 0 2rem;
+        border-radius: 0.85rem 0 0 0.85rem;
+        border: 2px solid black;
+        border-right: 1px solid black;
     }
-
+    
     .right {
-        border-radius: 0 2rem 2rem 0;
+        border-radius: 0 0.85rem 0.85rem 0;
+        border: 2px solid black;
+        border-left: 1px solid black;
     }
 }
