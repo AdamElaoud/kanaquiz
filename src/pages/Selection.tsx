@@ -2,17 +2,10 @@ import Toggle, { ButtonConfig } from "../components/toggle/Toggle";
 import "./Selection.scss";
 
 const Selection = () : JSX.Element => {
-    const leftButton: ButtonConfig = {
-        text: 'LEFT',
-        onClick: () => null
-    };
-
-    const rightButton: ButtonConfig = {
-        text: 'RIGHT',
-        onClick: () => null
-    };
-    
-    const toggleButtons = [leftButton, rightButton];
+    const toggleButtons: [ButtonConfig, ButtonConfig] = [
+        { text: 'LEFT', onClick: () => null },
+        { text: 'RIGHT', onClick: () => null }
+    ];
 
     return (
         <div className = "selection-page">
