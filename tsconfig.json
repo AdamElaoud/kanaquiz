@@ -1,0 +1,39 @@
+{
+    "compilerOptions": {
+      "allowImportingTsExtensions": true,
+      "allowJs": true,
+      "alwaysStrict": true,
+      "baseUrl": ".",
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "incremental": true,
+      "isolatedModules": true,
+      "jsx": "react-jsx",
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "module": "esnext",
+      "moduleResolution": "bundler",
+      "noEmit": true,
+      "noImplicitThis": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "paths": {
+        "@/*": ["src/*"]
+      },
+      "resolveJsonModule": true,
+      "skipLibCheck": true,
+      "sourceMap": true,
+      "strict": true,
+      "strictFunctionTypes": true,
+      "strictNullChecks": true,
+      "strictPropertyInitialization": true,
+      "target": "esnext",
+      "typeRoots": [
+          "./node_modules/@types",
+          "./src/types"
+      ]
+    },
+    "include": ["**/*.ts", "**/*.tsx"],
+    "exclude": ["node_modules"],
+    "references": [{ "path": "./tsconfig.node.json" }]
+  }
+  

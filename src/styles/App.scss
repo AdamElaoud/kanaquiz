@@ -1,0 +1,17 @@
+@use "./colors" as *;
+@import url("https://fonts.googleapis.com/css?family=Nunito:400");
+
+* {
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif !important;
+}
+
+html {
+    background-color: gray;
+    font-size: 10px; // sets 1 rem = 10px instead of 16px
+    color: $textColor;
+    
+    body {
+        margin: 0;
+    }
+}
