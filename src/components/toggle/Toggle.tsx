@@ -2,7 +2,7 @@ import { ReactButtonOnClickEvent, ReactButtonOnClick } from "@/types";
 import { useState } from "react";
 import "./Toggle.scss";
 
-export interface ButtonConfig {
+export interface ToggleButtonConfig {
     onClick: ReactButtonOnClick,
     text: string
 };
@@ -13,7 +13,7 @@ export enum Side {
 };
 
 interface Props {
-    buttons: [ButtonConfig, ButtonConfig],
+    buttons: [ToggleButtonConfig, ToggleButtonConfig],
     defaultActiveSide?: Side
 };
 

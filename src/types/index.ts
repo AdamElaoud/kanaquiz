@@ -6,3 +6,4 @@ export enum Theme {
 
 export type ReactButtonOnClick = React.MouseEventHandler<HTMLButtonElement>;
 export type ReactButtonOnClickEvent = React.MouseEvent<HTMLButtonElement, MouseEvent>;
+export type ReactChildren = React.ReactNode;
