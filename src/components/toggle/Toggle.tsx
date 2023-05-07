@@ -3,6 +3,7 @@ import { useState } from "react";
 import "./Toggle.scss";
 
 export interface ToggleButtonConfig {
+    className?: string,
     onClick: ReactButtonOnClick,
     text: string
 };
@@ -14,30 +15,39 @@ export enum Side {
 
 interface Props {
     buttons: [ToggleButtonConfig, ToggleButtonConfig],
+    className?: string,
     defaultActiveSide?: Side
 };
 
 const Toggle = (props: Props) : JSX.Element => {
-    const { buttons, defaultActiveSide } = props;
+    const { buttons, className, defaultActiveSide } = props;
 
     const [activeSide, setActiveSide] = useState(defaultActiveSide);
 
     const [leftButton, rightButton] = buttons;
 
-    const leftButtonClasses = activeSide === Side.Left ? 'left toggle-button active' : 'left toggle-button';
-    const rightButtonClasses = activeSide === Side.Right ? 'right toggle-button active' : 'right toggle-button';
+    const leftButtonClasses = ["left", "toggle-button"];
+    if (activeSide === Side.Left) leftButtonClasses.push("active")
+    if (leftButton.className) leftButtonClasses.push(leftButton.className);
+
+    const rightButtonClasses = ["right", "toggle-button"];
+    if (activeSide === Side.Left) rightButtonClasses.push("active")
+    if (leftButton.className) rightButtonClasses.push(leftButton.className);
+
 
     const onClick = (sideOnClick: ReactButtonOnClick, side: Side) => (event: ReactButtonOnClickEvent) => {
         setActiveSide(side);
         sideOnClick(event);
     };
 
+    const toggleClasses = className ? `toggle ${className}` : "toggle";
+
     return (
-        <div className = "toggle">
-            <button className = {leftButtonClasses} onClick = {onClick(leftButton.onClick, Side.Left)}>
+        <div className = {toggleClasses}>
+            <button className = {leftButtonClasses.join(" ")} onClick = {onClick(leftButton.onClick, Side.Left)}>
                 {leftButton.text}
             </button>
-            <button className = {rightButtonClasses} onClick = {onClick(rightButton.onClick, Side.Right)}>
+            <button className = {rightButtonClasses.join(" ")} onClick = {onClick(rightButton.onClick, Side.Right)}>
                 {rightButton.text}
             </button>
         </div>
