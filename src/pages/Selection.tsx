@@ -1,6 +1,8 @@
 import Button from "@/components/button/Button";
 import Toggle, { ToggleButtonConfig } from "@/components/toggle/Toggle";
 import "./Selection.scss";
+import TabSet from "@/components/tabs/TabSet";
+import Tab from "@/components/tabs/Tab";
 
 const Selection = () : JSX.Element => {
     const toggleButtons: [ToggleButtonConfig, ToggleButtonConfig] = [
@@ -15,6 +17,14 @@ const Selection = () : JSX.Element => {
             <Button onClick = {() => console.log("clicked!")}>
                 Test
             </Button>
+            <TabSet>
+                <Tab title = "hai" icon = "search">
+                    Tab #1 Content
+                </Tab>
+                <Tab>
+                    Tab #2 Content
+                </Tab>
+            </TabSet>
         </div>
     );
 };
