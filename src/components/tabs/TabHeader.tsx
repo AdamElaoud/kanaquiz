@@ -1,5 +1,6 @@
 import { CustomIconType, FontAwesomeIconType, Size } from "@/types";
 import Icon from "../icon/Icon";
+import "./TabHeader.scss";
 
 interface Props {
     icon?: FontAwesomeIconType | CustomIconType,

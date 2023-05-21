@@ -14,14 +14,16 @@ const Selection = () : JSX.Element => {
         <div className = "selection-page">
             Selection
             <Toggle buttons = {toggleButtons}/>
+            
             <Button onClick = {() => console.log("clicked!")}>
                 Test
             </Button>
-            <TabSet>
+
+            <TabSet onTabChange = {({ prevTabIndex, newTabIndex }) => console.log(`tab changed from ${prevTabIndex} to ${newTabIndex}`)}>
                 <Tab title = "hai" icon = "search">
                     Tab #1 Content
                 </Tab>
-                <Tab>
+                <Tab title = "bai" icon = "gear">
                     Tab #2 Content
                 </Tab>
             </TabSet>

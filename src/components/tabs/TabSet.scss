@@ -1,0 +1,20 @@
+.tabset {
+    background-color: lightgreen;
+    border: 2px solid green;
+    height: 35rem;
+    padding: 2rem;
+    position: relative;
+    width: 50rem;
+    
+    .tabheaders {
+        display: flex;
+        flex-direction: row;
+        left: 0;
+        position: absolute;
+        top: 0;
+    }
+
+    .tabcontent {
+        margin-top: 3rem;
+    }
+}

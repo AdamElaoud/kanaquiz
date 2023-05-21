@@ -1,10 +1,11 @@
-import { Children, useMemo, useState } from "react";
+import { Children, useEffect, useMemo, useState } from "react";
 import { ReactElement } from "@/types";
 import TabHeader from "./TabHeader";
+import "./TabSet.scss";
 
 interface Props {
-    startingTab?: number,
-    onTabChange?: (prevTabIndex: number, prevTabTitle: string, newTabIndex: number, newTabTitle: string) => void,
+    startingTabIndex?: number,
+    onTabChange?: (tabState: { prevTabIndex?: number, prevTabTitle?: string, newTabIndex?: number, newTabTitle?: string }) => void,
     children: ReactElement[],
     className?: string
 };
@@ -12,9 +13,9 @@ interface Props {
 const DEFAULT_STARTING_TAB = 0;
 
 const TabSet = (props: Props) : JSX.Element => {
-    const { children, className, onTabChange, startingTab } = props;
+    const { children, className, onTabChange, startingTabIndex } = props;
 
-    const [activeTabIndex, setActiveTabIndex] = useState(startingTab || DEFAULT_STARTING_TAB);
+    const [activeTabIndex, setActiveTabIndex] = useState(startingTabIndex || DEFAULT_STARTING_TAB);
 
     const tabHeaderData = useMemo(() => {
         return Children.map(children, (tab: ReactElement, tabIndex) => {
@@ -23,6 +24,8 @@ const TabSet = (props: Props) : JSX.Element => {
             return {
                 ...(icon && { icon }),
                 ...(iconSize && { iconSize }),
+                // NOTE: icon/title combinations should be unique
+                key: `${tabIndex}-${icon}-${title}`,
                 tabIndex,
                 ...(title && { title }),
             };
@@ -31,16 +34,30 @@ const TabSet = (props: Props) : JSX.Element => {
     }, [children]);
 
     const onTabHeaderClick = (newTabIndex: number) => () => {
-        if (onTabChange)
-            onTabChange(activeTabIndex, tabHeaderData[activeTabIndex].title, newTabIndex, tabHeaderData[newTabIndex].title);
-
-        setActiveTabIndex(newTabIndex);
+        if (newTabIndex !== activeTabIndex) {
+            if (onTabChange)
+                onTabChange({
+                    prevTabIndex: activeTabIndex,
+                    prevTabTitle: tabHeaderData[activeTabIndex].title,
+                    newTabIndex,
+                    newTabTitle: tabHeaderData[newTabIndex].title
+                });
+    
+            setActiveTabIndex(newTabIndex);
+        }
     };
 
+    let classes = "tabset";
+    if (className) classes += ` ${className}`;
+
     return (
-        <div className = {className}>
-            {tabHeaderData.map(data => <TabHeader changeTab = {onTabHeaderClick} {...data}/>)}
-            {children[activeTabIndex]}
+        <div className = {classes}>
+            <nav className = "tabheaders">
+                {tabHeaderData.map(data => <TabHeader changeTab = {onTabHeaderClick} {...data}/>)}
+            </nav>
+            <div className = "tabcontent">
+                {children[activeTabIndex]}
+            </div>
         </div>
     );
 };
