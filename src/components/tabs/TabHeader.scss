@@ -9,11 +9,14 @@
     
     &:hover {
         background-color: gray;
+        border: 2px solid black;
+        color: white;
         cursor: pointer;
     }
     
     &.active {
         background-color: lightblue;
         border: 2px solid blue;
+        color: black;
     }
 }
