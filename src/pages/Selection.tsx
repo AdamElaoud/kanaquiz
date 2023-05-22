@@ -4,7 +4,6 @@ import TabSet from "@/components/tabs/TabSet";
 import Tab from "@/components/tabs/Tab";
 import "./Selection.scss";
 import useKanaDictionary from "@/hooks/useKanaDictionary";
-import KanaButton from "@/components/kana-button-row/KanaButton";
 import { useState } from "react";
 import { Mode } from "@/types";
 import KanaButtonRow from "@/components/kana-button-row/KanaButtonRow";
@@ -18,9 +17,22 @@ const Selection = () : JSX.Element => {
     const katakanaButtonRowChars = Object.values(katakana.groupsToChars);
 
     const addSelection = (letter: string) => () => {
-        setSelections(currentSelections => [...currentSelections, letter]);
+        if (selections.includes(letter)) {
+            console.log("REMOVING SELECTION");
+            const letterIndex = selections.findIndex(selection => selection === letter);
+            const updatedSelections = selections;
+
+            updatedSelections.splice(letterIndex, 1);
+
+            setSelections(updatedSelections);
+
+        } else {
+            console.log("ADDING SELECTION");
+            setSelections(currentSelections => [...currentSelections, letter]);
+        }
     };
 
+    console.log('selections :>> ', selections);
 
     const toggleButtons: [ToggleButtonConfig, ToggleButtonConfig] = [
         { text: 'Show Kana', onClick: () => setMode(Mode.Kana) },
@@ -38,10 +50,14 @@ const Selection = () : JSX.Element => {
 
             <TabSet className = "selection-tabset">
                 <Tab title = "ひ Hiragana">
-                    {hiraganaButtonRowChars.map(row => <KanaButtonRow addSelection = {addSelection} key = {row[0][Mode.Kana]} mode = {mode} row = {row}/>)}
+                    {hiraganaButtonRowChars.map(row =>
+                        <KanaButtonRow addSelection = {addSelection} key = {row[0][Mode.Kana]} mode = {mode} row = {row}/>
+                    )}
                 </Tab>
                 <Tab title = "カ Katakana">
-                    {katakanaButtonRowChars.map(row => <KanaButtonRow addSelection = {addSelection} key = {row[0][Mode.Kana]} mode = {mode} row = {row}/>)}
+                    {katakanaButtonRowChars.map(row =>
+                        <KanaButtonRow addSelection = {addSelection} key = {row[0][Mode.Kana]} mode = {mode} row = {row}/>
+                    )}
                 </Tab>
             </TabSet>
         </div>

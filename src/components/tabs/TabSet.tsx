@@ -1,4 +1,4 @@
-import { Children, useEffect, useMemo, useState } from "react";
+import { Children, useMemo, useState } from "react";
 import { ReactElement } from "@/types";
 import TabHeader from "./TabHeader";
 import "./TabSet.scss";
@@ -53,7 +53,7 @@ const TabSet = (props: Props) : JSX.Element => {
     return (
         <div className = {classes}>
             <nav className = "tab-headers">
-                {tabHeaderData.map(data => <TabHeader changeTab = {onTabHeaderClick} {...data}/>)}
+                {tabHeaderData.map(data => <TabHeader changeTab = {onTabHeaderClick} isActiveTab = {activeTabIndex === data.tabIndex} {...data}/>)}
             </nav>
             <div className = "tab-content">
                 {children[activeTabIndex]}

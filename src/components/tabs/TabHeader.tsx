@@ -5,16 +5,20 @@ import "./TabHeader.scss";
 interface Props {
     icon?: IconType,
     iconSize?: Size,
+    isActiveTab: boolean,
     changeTab: (newTabIndex: number) => () => void,
     tabIndex: number,
     title?: string
 };
 
 const TabHeader = (props: Props) : JSX.Element => {
-    const { icon, iconSize, changeTab, tabIndex, title } = props;
+    const { icon, iconSize, isActiveTab, changeTab, tabIndex, title } = props;
+
+    let classes = "tab-header";
+    if (isActiveTab) classes += " active"
 
     return (
-        <div className = 'tabheader' onClick = {changeTab(tabIndex)}>
+        <div className = {classes} onClick = {changeTab(tabIndex)}>
             {icon && <Icon size = {iconSize} type = {icon} />}
             {title && title}
         </div>

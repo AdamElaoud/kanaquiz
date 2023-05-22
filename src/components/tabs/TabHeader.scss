@@ -1,4 +1,4 @@
-.tabheader {
+.tab-header {
     align-items: center;
     background-color: pink;
     border: 2px solid red;
@@ -8,8 +8,12 @@
     width: 15rem;
     
     &:hover {
+        background-color: gray;
+        cursor: pointer;
+    }
+    
+    &.active {
         background-color: lightblue;
         border: 2px solid blue;
-        cursor: pointer;
     }
 }
