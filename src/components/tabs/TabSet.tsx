@@ -52,10 +52,10 @@ const TabSet = (props: Props) : JSX.Element => {
 
     return (
         <div className = {classes}>
-            <nav className = "tabheaders">
+            <nav className = "tab-headers">
                 {tabHeaderData.map(data => <TabHeader changeTab = {onTabHeaderClick} {...data}/>)}
             </nav>
-            <div className = "tabcontent">
+            <div className = "tab-content">
                 {children[activeTabIndex]}
             </div>
         </div>

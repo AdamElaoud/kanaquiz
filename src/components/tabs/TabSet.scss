@@ -6,7 +6,7 @@
     position: relative;
     width: 50rem;
     
-    .tabheaders {
+    .tab-headers {
         display: flex;
         flex-direction: row;
         height: 3rem;
@@ -15,7 +15,11 @@
         top: 0;
     }
 
-    .tabcontent {
+    .tab-content {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 95%;
         margin-top: 3rem;
     }
 }

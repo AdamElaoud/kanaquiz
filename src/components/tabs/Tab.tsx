@@ -1,4 +1,5 @@
 import { IconType, ReactChildren, Size } from "@/types";
+import "./Tab.scss";
 
 export interface TabProps {
     children: ReactChildren,

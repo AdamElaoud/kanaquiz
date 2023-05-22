@@ -13,6 +13,11 @@ export enum Size {
     Large = "lg"
 };
 
+export enum Mode {
+    Kana = 0,
+    Romaji = 1
+};
+
 export type ReactButtonOnClick = React.MouseEventHandler<HTMLButtonElement>;
 export type ReactButtonOnClickEvent = React.MouseEvent<HTMLButtonElement, MouseEvent>;
 export type ReactChildren = React.ReactNode;
