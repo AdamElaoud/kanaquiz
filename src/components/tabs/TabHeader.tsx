@@ -1,16 +1,16 @@
-import { CustomIconType, FontAwesomeIconType, Size } from "@/types";
+import { IconType, Size } from "@/types";
 import Icon from "../icon/Icon";
 import "./TabHeader.scss";
 
 interface Props {
-    icon?: FontAwesomeIconType | CustomIconType,
+    icon?: IconType,
     iconSize?: Size,
     changeTab: (newTabIndex: number) => () => void,
     tabIndex: number,
     title?: string
 };
 
-const TabHeader = (props: Props) => {
+const TabHeader = (props: Props) : JSX.Element => {
     const { icon, iconSize, changeTab, tabIndex, title } = props;
 
     return (

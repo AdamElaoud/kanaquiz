@@ -1,19 +1,22 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CustomIconMap, FontAwesomeIconMap } from "./IconTypes";
-import { CustomIconType, FontAwesomeIconType, Size, isCustomIconType, isFontAwesomeIconType } from "@/types";
+import { IconType, Size, isCustomIconType, isFontAwesomeIconType } from "@/types";
 import "./Icon.scss";
 
 interface Props {
     className?: string,
     size?: Size,
-    type: FontAwesomeIconType | CustomIconType
+    type: IconType
 };
 
-const Icon = (props: Props) => {
+const DEFAULT_ICON_SIZE = Size.Medium;
+
+const Icon = (props: Props) : JSX.Element => {
     const { className, type, size } = props;
     
     const classes = ["icon"];
     if (size) classes.push(size);
+    else classes.push(DEFAULT_ICON_SIZE);
     if (className) classes.push(className);
 
     if (isFontAwesomeIconType(type)) {
@@ -26,7 +29,11 @@ const Icon = (props: Props) => {
     } else if (isCustomIconType(type)) {
         const customIconType = CustomIconMap[type];
 
-        return customIconType;
+        return (
+            <div className = {classes.join(" ")}>
+                {customIconType}
+            </div>
+        );
 
     } else {
         throw "Invalid Icon type supplied!";

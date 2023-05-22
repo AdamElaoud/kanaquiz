@@ -3,4 +3,19 @@
     display: flex;
     flex-direction: column;
     font-size: 2rem;
+    height: 100vh;
+    width: 100vw;
+
+    .options-bar {
+        align-items: center;
+        display: flex;
+        height: 5rem;
+        justify-content: space-between;
+        width: 65%;
+    }
+
+    .selection-tabset {
+        height: 80%;
+        width: 65%;
+    }
 }

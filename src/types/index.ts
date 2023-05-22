@@ -21,8 +21,8 @@ export type ReactFragment = React.ReactFragment;
 
 export type CustomIconType = keyof CustomIconMapType;
 export type CustomIconMapType = {
-    "hiragana": ReactElement;
-    "katakana": ReactElement;
+    "hiragana": string;
+    "katakana": string;
 };
 
 export type FontAwesomeIconType = keyof FontAwesomeIconMapType;
@@ -33,6 +33,8 @@ export type FontAwesomeIconMapType = {
     "search": IconDefinition;
     "x": IconDefinition;
 };
+
+export type IconType = FontAwesomeIconType | CustomIconType;
 
 export const isFontAwesomeIconType = (type: FontAwesomeIconType | CustomIconType): type is FontAwesomeIconType => {
     return type in FontAwesomeIconMap;

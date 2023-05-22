@@ -1,30 +1,31 @@
 import Button from "@/components/button/Button";
 import Toggle, { ToggleButtonConfig } from "@/components/toggle/Toggle";
-import "./Selection.scss";
 import TabSet from "@/components/tabs/TabSet";
 import Tab from "@/components/tabs/Tab";
+import "./Selection.scss";
+import { Size } from "@/types";
 
 const Selection = () : JSX.Element => {
     const toggleButtons: [ToggleButtonConfig, ToggleButtonConfig] = [
-        { text: 'LEFT', onClick: () => console.log("LEFT") },
-        { text: 'RIGHT', onClick: () => console.log("RIGHT") }
+        { text: 'Show Kana', onClick: () => console.log("Show Kana") },
+        { text: 'Show Romaji', onClick: () => console.log("Show Romaji") }
     ];
 
     return (
         <div className = "selection-page">
-            Selection
-            <Toggle buttons = {toggleButtons}/>
-            
-            <Button onClick = {() => console.log("clicked!")}>
-                Test
-            </Button>
+            <div className = "options-bar">
+                <Button icon = "search" onClick = {() => console.log("search!")} />
+                <Toggle buttons = {toggleButtons}/>
+                <Button icon = "gear" onClick = {() => console.log("settings!")} />
+            </div>
 
-            <TabSet onTabChange = {({ prevTabIndex, newTabIndex }) => console.log(`tab changed from ${prevTabIndex} to ${newTabIndex}`)}>
-                <Tab title = "hai" icon = "search">
-                    Tab #1 Content
+
+            <TabSet className = "selection-tabset">
+                <Tab title = "Hiragana" icon = "hiragana">
+                    Hiragana Content
                 </Tab>
-                <Tab title = "bai" icon = "gear">
-                    Tab #2 Content
+                <Tab title = "Katakana" icon = "katakana">
+                    Katakana Content
                 </Tab>
             </TabSet>
         </div>

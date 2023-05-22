@@ -16,6 +16,6 @@ export const FontAwesomeIconMap: FontAwesomeIconMapType = {
 };
 
 export const CustomIconMap: CustomIconMapType = {
-    "hiragana": <div></div>,
-    "katakana": <div></div>,
+    "hiragana": "ひ",
+    "katakana": "カ",
 };

@@ -19,10 +19,12 @@ interface Props {
     defaultActiveSide?: Side
 };
 
+const DEFAULT_ACTIVE_SIDE = Side.Left;
+
 const Toggle = (props: Props) : JSX.Element => {
     const { buttons, className, defaultActiveSide } = props;
 
-    const [activeSide, setActiveSide] = useState(defaultActiveSide);
+    const [activeSide, setActiveSide] = useState(defaultActiveSide || DEFAULT_ACTIVE_SIDE);
 
     const [leftButton, rightButton] = buttons;
 
@@ -31,13 +33,15 @@ const Toggle = (props: Props) : JSX.Element => {
     if (leftButton.className) leftButtonClasses.push(leftButton.className);
 
     const rightButtonClasses = ["right", "toggle-button"];
-    if (activeSide === Side.Left) rightButtonClasses.push("active")
-    if (leftButton.className) rightButtonClasses.push(leftButton.className);
+    if (activeSide === Side.Right) rightButtonClasses.push("active")
+    if (rightButton.className) rightButtonClasses.push(rightButton.className);
 
 
     const onClick = (sideOnClick: ReactButtonOnClick, side: Side) => (event: ReactButtonOnClickEvent) => {
-        setActiveSide(side);
-        sideOnClick(event);
+        if (side !== activeSide) {
+            setActiveSide(side);
+            sideOnClick(event);
+        }
     };
 
     const toggleClasses = className ? `toggle ${className}` : "toggle";
@@ -52,10 +56,6 @@ const Toggle = (props: Props) : JSX.Element => {
             </button>
         </div>
     );
-};
-
-Toggle.defaultProps = {
-    defaultActiveSide: Side.Left
 };
 
 export default Toggle;

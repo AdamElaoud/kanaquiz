@@ -1,9 +1,9 @@
-import { CustomIconType, FontAwesomeIconType, ReactChildren, Size } from "@/types";
+import { IconType, ReactChildren, Size } from "@/types";
 
 export interface TabProps {
     children: ReactChildren,
     className?: string,
-    icon?: FontAwesomeIconType | CustomIconType,
+    icon?: IconType,
     iconSize?: Size,
     title?: string,
 };
