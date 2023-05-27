@@ -9,7 +9,11 @@ import { Mode } from "@/types";
 import KanaButtonRow from "@/components/kana-button-row/KanaButtonRow";
 import Searchbar from "@/components/common/searchbar/Searchbar";
 
+const ENGLISH_DELIMITERS = [" ", ","];
+const JAPANESE_DELIMITERS = ["　", "、"];
+
 const Selection = () : JSX.Element => {
+    const [showSearchbar, setShowSearchbar] = useState<boolean>(false);
     const [selections, setSelections] = useState<string[]>([]);
     const [mode, setMode] = useState<Mode>(Mode.Kana);
     const { hiragana, katakana } = useKanaDictionary();
@@ -41,12 +45,14 @@ const Selection = () : JSX.Element => {
     ];
 
     const searchFn = (_rawSearch: string, queries: string[]) => {
+        console.log('queries :>> ', queries);
+
         const data = {
             ...hiragana.charsToGroups,
             ...katakana.charsToGroups
         };
 
-        return queries.reduce((searchResults: string[], query: string) => {
+        const searchResults = queries.reduce((searchResults: string[], query: string) => {
             const groups: string[] = data[query];
 
             if (groups)
@@ -54,18 +60,28 @@ const Selection = () : JSX.Element => {
 
             return searchResults;
         }, []);
+
+        const uniqueSearchResults = [...(new Set(searchResults))];
+        console.log('uniqueSearchResults :>> ', uniqueSearchResults);
+
+        return uniqueSearchResults.map(result => <div key = {result}>{result}</div>)
     };
 
     return (
         <div className = "selection-page">
             <div className = "options-bar">
-                <Button icon = "search" onClick = {() => console.log("search!")} />
+                <Button icon = "search" onClick = {() => setShowSearchbar(prevState => !prevState)} />
                 <Toggle buttons = {toggleButtons}/>
                 <Button icon = "gear" onClick = {() => console.log("settings!")} />
             </div>
 
-            <Searchbar searchFn = {searchFn} delimiters = {[" ", ","]}/>
-
+            {showSearchbar && 
+                <Searchbar
+                    searchFn = {searchFn}
+                    delimiters = {[...ENGLISH_DELIMITERS, ...JAPANESE_DELIMITERS]}
+                    placeholder = "Search for Kana"
+                />
+            }
 
             <TabSet className = "selection-tabset">
                 <Tab title = "ひ Hiragana">

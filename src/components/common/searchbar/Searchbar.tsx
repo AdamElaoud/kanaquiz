@@ -1,19 +1,21 @@
-import { ReactInputOnChangeEvent } from "@/types";
+import { ReactFormOnSubmitEvent, ReactInputOnChangeEvent, ReactNode } from "@/types";
 import { useState } from "react";
 import "./Searchbar.scss";
+import "../../../styles/_index.scss";
 
 interface Props {
     delimiters?: string[],
-    searchFn: (rawSearch: string, queries: string[]) => string[]
+    placeholder?: string,
+    searchFn: (rawSearch: string, queries: string[]) => ReactNode[]
 };
 
 const DEFAULT_DELIMITER = [" "];
 
 const Searchbar = (props: Props) : JSX.Element => {
-    const { delimiters = DEFAULT_DELIMITER, searchFn } = props;
+    const { delimiters = DEFAULT_DELIMITER, placeholder = "", searchFn } = props;
     
     const [searchText, setSearchText] = useState<string>("");
-    const [searchResults, setSearchResults] = useState<string[]>([]);
+    const [searchResults, setSearchResults] = useState<ReactNode[]>([]);
 
     const onSearchChange = (event: ReactInputOnChangeEvent) => {
         const rawSearch = event.target.value;
@@ -24,17 +26,29 @@ const Searchbar = (props: Props) : JSX.Element => {
             return [...queries, ...rawSearch.split(delimiter)];
         }, []);
 
-        const uniqueSearchResults = new Set(searchFn(rawSearch, queries));
-        setSearchResults([...uniqueSearchResults]);
+        setSearchResults(searchFn(rawSearch, queries));
+    };
+
+    const onSubmit = (event: ReactFormOnSubmitEvent) => {
+        event.preventDefault();
     };
 
     return (
         <>
-            <form className = "search-form" role = "search">
-                <input className = "search-input" type = "search" name = "searchbar" value = {searchText} role = "search" onChange = {onSearchChange}/>
+            <form className = "search-form" role = "search" onSubmit = {onSubmit}>
+                <label className = "visually-hidden" htmlFor = "searchbar">Search for Kana</label>
+                <input
+                    className = "search-input"
+                    name = "searchbar"
+                    type = "search"
+                    role = "search"
+                    placeholder = {placeholder}
+                    value = {searchText}
+                    onChange = {onSearchChange}
+                />
             </form>
             <div className = "search-results">
-                {searchResults.join(", ")}
+                {searchResults}
             </div>
         </>
     );

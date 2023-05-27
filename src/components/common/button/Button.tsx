@@ -1,9 +1,9 @@
-import { IconType, ReactChildren, Size } from "@/types";
+import { IconType, ReactNode, Size } from "@/types";
 import "./Button.scss";
 import Icon from "../icon/Icon";
 
 interface Props {
-    children?: ReactChildren,
+    children?: ReactNode,
     className?: string,
     icon?: IconType,
     iconSize?: Size,

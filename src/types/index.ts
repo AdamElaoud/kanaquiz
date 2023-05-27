@@ -21,10 +21,11 @@ export enum Mode {
 
 export type ReactButtonOnClick = React.MouseEventHandler<HTMLButtonElement>;
 export type ReactButtonOnClickEvent = React.MouseEvent<HTMLButtonElement, MouseEvent>;
-export type ReactChildren = React.ReactNode;
+export type ReactNode = React.ReactNode;
 export type ReactElement = React.ReactElement;
 export type ReactFragment = React.ReactFragment;
 export type ReactInputOnChangeEvent = React.ChangeEvent<HTMLInputElement>;
+export type ReactFormOnSubmitEvent = React.FormEvent<HTMLFormElement>;
 
 export type CharsToGroups = {
     [key: string]: string[]
