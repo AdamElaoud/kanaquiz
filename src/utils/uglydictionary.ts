@@ -63,3 +63,28 @@ export const kanaDictionary = {
       'k_group33_a': { characters: { 'ティ': ['ti'], 'ディ': ['di'], 'デュ': ['du'], 'トゥ': ['tu'] } }
     }
   };
+
+// Object.entries(groupsToChars).reduce((charsToGroups, group) => {
+//     const key = group[0];
+//     const chars = group[1];
+
+//     chars.forEach(char => {
+//         const kana = char[0];
+//         const romaji = char[1];
+
+//         const kanaGroups = charsToGroups[kana];
+//         const romajiGroups = charsToGroups[romaji];
+
+//         if (kanaGroups)
+//             charsToGroups[kana] = [...kanaGroups, key];
+//         else
+//             charsToGroups[kana] = [key];
+
+//         if (romajiGroups)
+//             charsToGroups[romaji] = [...romajiGroups, key];
+//         else
+//             charsToGroups[romaji] = [key];
+//     });
+
+//     return charsToGroups;
+// }, {});

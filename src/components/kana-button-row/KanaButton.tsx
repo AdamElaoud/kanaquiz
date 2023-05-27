@@ -11,7 +11,6 @@ interface Props {
 const KanaButton = (props: Props) : JSX.Element => {
     const { addSelection, letters, mode } = props;
 
-    // add logic to handle removing h_ / k_ from romaji in dictionary?
     return (
         <Button className = "kana-button" onClick = {addSelection(letters[Mode.ID])}>
             {letters[mode]}

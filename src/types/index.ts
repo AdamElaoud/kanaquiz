@@ -24,6 +24,15 @@ export type ReactButtonOnClickEvent = React.MouseEvent<HTMLButtonElement, MouseE
 export type ReactChildren = React.ReactNode;
 export type ReactElement = React.ReactElement;
 export type ReactFragment = React.ReactFragment;
+export type ReactInputOnChangeEvent = React.ChangeEvent<HTMLInputElement>;
+
+export type CharsToGroups = {
+    [key: string]: string[]
+};
+
+export type GroupsToChars = {
+    [key: string]: string[][]
+};
 
 export type CustomIconType = keyof CustomIconMapType;
 export type CustomIconMapType = {

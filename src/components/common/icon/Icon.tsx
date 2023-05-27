@@ -12,11 +12,9 @@ interface Props {
 const DEFAULT_ICON_SIZE = Size.Medium;
 
 const Icon = (props: Props) : JSX.Element => {
-    const { className, type, size } = props;
+    const { className, type, size = DEFAULT_ICON_SIZE } = props;
     
-    const classes = ["icon"];
-    if (size) classes.push(size);
-    else classes.push(DEFAULT_ICON_SIZE);
+    const classes = ["icon", size];
     if (className) classes.push(className);
 
     if (isFontAwesomeIconType(type)) {

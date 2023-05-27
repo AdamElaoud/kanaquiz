@@ -13,9 +13,9 @@ interface Props {
 const DEFAULT_STARTING_TAB = 0;
 
 const TabSet = (props: Props) : JSX.Element => {
-    const { children, className, onTabChange, startingTabIndex } = props;
+    const { children, className, onTabChange, startingTabIndex = DEFAULT_STARTING_TAB } = props;
 
-    const [activeTabIndex, setActiveTabIndex] = useState(startingTabIndex || DEFAULT_STARTING_TAB);
+    const [activeTabIndex, setActiveTabIndex] = useState(startingTabIndex);
 
     const tabHeaderData = useMemo(() => {
         return Children.map(children, (tab: ReactElement, tabIndex) => {

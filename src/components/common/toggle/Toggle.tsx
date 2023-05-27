@@ -22,9 +22,9 @@ interface Props {
 const DEFAULT_ACTIVE_SIDE = Side.Left;
 
 const Toggle = (props: Props) : JSX.Element => {
-    const { buttons, className, defaultActiveSide } = props;
+    const { buttons, className, defaultActiveSide = DEFAULT_ACTIVE_SIDE } = props;
 
-    const [activeSide, setActiveSide] = useState(defaultActiveSide || DEFAULT_ACTIVE_SIDE);
+    const [activeSide, setActiveSide] = useState(defaultActiveSide);
 
     const [leftButton, rightButton] = buttons;
 

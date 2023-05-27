@@ -1,5 +1,5 @@
 import Button from "@/components/common/button/Button";
-import Toggle, { ToggleButtonConfig } from "@/components/toggle/Toggle";
+import Toggle, { ToggleButtonConfig } from "@/components/common/toggle/Toggle";
 import TabSet from "@/components/common/tabs/TabSet";
 import Tab from "@/components/common/tabs/Tab";
 import "./Selection.scss";
@@ -7,6 +7,7 @@ import useKanaDictionary from "@/hooks/useKanaDictionary";
 import { useState } from "react";
 import { Mode } from "@/types";
 import KanaButtonRow from "@/components/kana-button-row/KanaButtonRow";
+import Searchbar from "@/components/common/searchbar/Searchbar";
 
 const Selection = () : JSX.Element => {
     const [selections, setSelections] = useState<string[]>([]);
@@ -39,6 +40,22 @@ const Selection = () : JSX.Element => {
         { text: 'Show Romaji', onClick: () => setMode(Mode.Romaji) }
     ];
 
+    const searchFn = (_rawSearch: string, queries: string[]) => {
+        const data = {
+            ...hiragana.charsToGroups,
+            ...katakana.charsToGroups
+        };
+
+        return queries.reduce((searchResults: string[], query: string) => {
+            const groups: string[] = data[query];
+
+            if (groups)
+                searchResults.push(...groups);
+
+            return searchResults;
+        }, []);
+    };
+
     return (
         <div className = "selection-page">
             <div className = "options-bar">
@@ -46,6 +63,8 @@ const Selection = () : JSX.Element => {
                 <Toggle buttons = {toggleButtons}/>
                 <Button icon = "gear" onClick = {() => console.log("settings!")} />
             </div>
+
+            <Searchbar searchFn = {searchFn} delimiters = {[" ", ","]}/>
 
 
             <TabSet className = "selection-tabset">
