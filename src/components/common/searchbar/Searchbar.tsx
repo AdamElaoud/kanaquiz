@@ -26,7 +26,7 @@ const Searchbar = (props: Props) : JSX.Element => {
             return [...queries, ...rawSearch.split(delimiter)];
         }, []);
 
-        setSearchResults(searchFn(rawSearch, queries));
+        setSearchResults(searchFn(rawSearch, cleanQueries(queries, delimiters)));
     };
 
     const onSubmit = (event: ReactFormOnSubmitEvent) => {
@@ -52,6 +52,22 @@ const Searchbar = (props: Props) : JSX.Element => {
             </div>
         </>
     );
+};
+
+const buildRegexFromDelimiters = (delimiters: string[]) : RegExp => {
+    const escapedDelimiters = delimiters.map(delimiter => delimiter.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+    return new RegExp(["^$"].concat(escapedDelimiters).join("|"));
+};
+
+
+const cleanQueries = (queries: string[], delimiters: string[]) => {
+    const uniqueQueries = [...(new Set([...queries]))];
+
+    const invalidQueryRegex = buildRegexFromDelimiters(delimiters);
+
+    const cleanedQueries = uniqueQueries.filter(query => !query.match(invalidQueryRegex));
+
+    return cleanedQueries;
 };
 
 export default Searchbar;

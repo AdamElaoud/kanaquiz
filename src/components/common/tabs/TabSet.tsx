@@ -15,17 +15,17 @@ const DEFAULT_STARTING_TAB = 0;
 const TabSet = (props: Props) : JSX.Element => {
     const { children, className, onTabChange, startingTabIndex = DEFAULT_STARTING_TAB } = props;
 
-    const [activeTabIndex, setActiveTabIndex] = useState(startingTabIndex);
+    const [activeTabIndex, setActiveTabIndex] = useState<number>(startingTabIndex);
 
     const tabHeaderData = useMemo(() => {
-        return Children.map(children, (tab: ReactElement, tabIndex) => {
-            const { icon, iconSize, title } = tab.props;
+        return Children.map(children, (tab: ReactElement) => {
+            const { icon, iconSize, tabIndex, title } = tab.props;
 
             return {
                 ...(icon && { icon }),
                 ...(iconSize && { iconSize }),
-                // NOTE: icon/title combinations should be unique
-                key: `${tabIndex}-${icon}-${title}`,
+                // NOTE: tabIndices should be unique and NOT generated from array index
+                key: tabIndex,
                 tabIndex,
                 ...(title && { title }),
             };

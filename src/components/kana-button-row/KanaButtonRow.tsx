@@ -2,15 +2,17 @@ import { Mode } from "@/types";
 import KanaButton from "./KanaButton";
 import Button from "../common/button/Button";
 import "./KanaButtonRow.scss";
+import useMode from "@/hooks/useMode";
 
 interface Props {
     addSelection: (letter: string) => () => void,
-    mode: Mode,
     row: string[][]
 };
 
 const KanaButtonRow = (props: Props) : JSX.Element => {
-    const { addSelection, mode, row } = props;
+    const { addSelection, row } = props;
+
+    const mode = useMode();
 
     return (
         <div className = "button-row">
