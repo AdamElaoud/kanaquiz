@@ -1,4 +1,4 @@
-import { CustomIconMap, FontAwesomeIconMap } from "@/components/icon/IconTypes";
+import { CustomIconMap, FontAwesomeIconMap } from "@/components/common/icon/IconTypes";
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 
 // potential future color theming
@@ -15,7 +15,8 @@ export enum Size {
 
 export enum Mode {
     Kana = 0,
-    Romaji = 1
+    Romaji = 1,
+    ID = 2
 };
 
 export type ReactButtonOnClick = React.MouseEventHandler<HTMLButtonElement>;

@@ -1,7 +1,7 @@
-import Button from "@/components/button/Button";
+import Button from "@/components/common/button/Button";
 import Toggle, { ToggleButtonConfig } from "@/components/toggle/Toggle";
-import TabSet from "@/components/tabs/TabSet";
-import Tab from "@/components/tabs/Tab";
+import TabSet from "@/components/common/tabs/TabSet";
+import Tab from "@/components/common/tabs/Tab";
 import "./Selection.scss";
 import useKanaDictionary from "@/hooks/useKanaDictionary";
 import { useState } from "react";

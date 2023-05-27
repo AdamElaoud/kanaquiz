@@ -1,5 +1,5 @@
 import { Mode } from "@/types";
-import Button from "../button/Button";
+import Button from "../common/button/Button";
 import "./KanaButton.scss";
 
 interface Props {
@@ -11,8 +11,9 @@ interface Props {
 const KanaButton = (props: Props) : JSX.Element => {
     const { addSelection, letters, mode } = props;
 
+    // add logic to handle removing h_ / k_ from romaji in dictionary?
     return (
-        <Button className = "kana-button" onClick = {addSelection(letters[Mode.Romaji])}>
+        <Button className = "kana-button" onClick = {addSelection(letters[Mode.ID])}>
             {letters[mode]}
         </Button>
     );
