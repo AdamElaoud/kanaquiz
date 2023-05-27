@@ -14,7 +14,7 @@ const ENGLISH_DELIMITERS = [" ", ",", ", "];
 const JAPANESE_DELIMITERS = ["　", "、"];
 
 const Selection = () : JSX.Element => {
-    const [showSearchbar, setShowSearchbar] = useState<boolean>(true);
+    const [showSearchbar, setShowSearchbar] = useState<boolean>(false);
     const [selections, setSelections] = useState<string[]>([]);
     const [mode, setMode] = useState<Mode>(Mode.Kana);
     const { hiragana, katakana, search } = useKanaDictionary();
@@ -63,13 +63,13 @@ const Selection = () : JSX.Element => {
                 <TabSet className = "selection-tabset">
                     <Tab title = "ひ Hiragana" tabIndex = {0}>
                         {hiraganaGroups.map(group =>
-                        // key is first Kana in group
+                            // key is first Kana in group
                             <KanaButtonRow addSelection = {addSelection} key = {group[0][Mode.Kana]} row = {group}/>
                         )}
                     </Tab>
                     <Tab title = "カ Katakana" tabIndex = {1}>
                         {katakanaGroups.map(group =>
-                        // key is first Kana in group
+                            // key is first Kana in group
                             <KanaButtonRow addSelection = {addSelection} key = {group[0][Mode.Kana]} row = {group}/>
                         )}
                     </Tab>

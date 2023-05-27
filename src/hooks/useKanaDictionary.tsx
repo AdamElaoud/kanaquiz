@@ -32,7 +32,7 @@ const useKanaDictionary = () => {
         return kanaGroups.map(group =>
             // key is first Kana in group
             <KanaButtonRow addSelection = {addSelection} key = {group[0][Mode.Kana]} row = {group}/>
-        )
+        );
     };
 
     return {
