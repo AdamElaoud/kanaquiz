@@ -1,3 +1,12 @@
+@use "../../../styles/index" as *;
+
 .button {
-    
+    @extend .padding;
+    @extend .rounded-border;
+    background-color: $lightGray;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $darkGray;
+    }
 }

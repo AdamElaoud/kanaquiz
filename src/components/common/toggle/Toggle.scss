@@ -1,29 +1,34 @@
-.toggle {
-    .toggle-button {
-        background-color: white;
-        cursor: pointer;
-        padding: 0.5rem 1rem 0.5rem 1rem;
+@use "../../../styles/index" as *;
 
+.toggle {
+    @extend .rounded-border;
+    align-items: center;
+    background-color: $lightGray;
+    border: $borderThickness solid $lightGray;
+    display: flex;
+    
+    .toggle-button {
+        @extend .rounded-border;
+        @extend .padding;
+        font-size: $smallFontSize;
+        font-weight: 400;
+        
         &:hover {
-            background-color: gray;
-            color: white;
+            background-color: $mediumGray;
+            cursor: pointer;
         }
 
         &.active {
-            background-color: blue;
-            color: white;
+            background-color: $darkGray;
+            font-weight: 600;
         }
     }
-    
+
     .left {
-        border-radius: 0.85rem 0 0 0.85rem;
-        border: 2px solid black;
-        border-right: 1px solid black;
+        margin-right: calc($borderThickness / 2);
     }
-    
+
     .right {
-        border-radius: 0 0.85rem 0.85rem 0;
-        border: 2px solid black;
-        border-left: 1px solid black;
+        margin-left: calc($borderThickness / 2);
     }
 }

@@ -1,3 +1,14 @@
+@use "./values" as *;
+
 .visually-hidden {
     display: none;
+}
+
+.rounded-border {
+    border-radius: $borderRadius;
+}
+
+$halfPadding: calc($padding / 2);
+.padding {
+    padding: $halfPadding $padding $halfPadding $padding;
 }

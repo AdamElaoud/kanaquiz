@@ -1,22 +1,26 @@
+@use "../../../styles//index" as *;
+
+$tabHeaderBorderRadius: 1.5rem;
+$tabHeaderHeight: 4rem;
+$tabHeaderWidth: 16rem;
+
 .tab-header {
     align-items: center;
-    background-color: pink;
-    border: 2px solid red;
+    background-color: $lightGray;
+    border-top-left-radius: $tabHeaderBorderRadius;
+    border-top-right-radius: $tabHeaderBorderRadius;
     display: flex;
-    height: 3rem;
+    height: $tabHeaderHeight;
     justify-content: center;
-    width: 15rem;
+    width: $tabHeaderWidth;
     
     &:hover {
-        background-color: gray;
-        border: 2px solid black;
-        color: white;
+        background-color: $mediumGray;
         cursor: pointer;
     }
     
     &.active {
-        background-color: lightblue;
-        border: 2px solid blue;
-        color: black;
+        background-color: $darkGray;
+        font-weight: 600;
     }
 }

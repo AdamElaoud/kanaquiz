@@ -17,7 +17,7 @@ const KanaButtonRow = (props: Props) : JSX.Element => {
     return (
         <div className = "button-row">
             <Button className = 'select-all-button' onClick = {() => console.log("SELECT ALL")}>
-                ALL
+                All
             </Button>
 
             {row.map(letters => {

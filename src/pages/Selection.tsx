@@ -5,7 +5,7 @@ import Tab from "@/components/common/tabs/Tab";
 import "./Selection.scss";
 import useKanaDictionary from "@/hooks/useKanaDictionary";
 import { useState } from "react";
-import { Mode } from "@/types";
+import { Mode, Size } from "@/types";
 import KanaButtonRow from "@/components/kana-button-row/KanaButtonRow";
 import Searchbar from "@/components/common/searchbar/Searchbar";
 import { ModeContextProvider } from "@/hooks/useMode";
@@ -47,9 +47,9 @@ const Selection = () : JSX.Element => {
         <ModeContextProvider value = {mode}>
             <div className = "selection-page">
                 <div className = "options-bar">
-                    <Button icon = "search" onClick = {() => setShowSearchbar(prevState => !prevState)} />
+                    <Button icon = "search" iconSize = {Size.Medium} onClick = {() => setShowSearchbar(prevState => !prevState)} />
                     <Toggle buttons = {toggleButtons}/>
-                    <Button icon = "gear" onClick = {() => console.log("settings!")} />
+                    <Button icon = "gear" iconSize = {Size.Medium} onClick = {() => console.log("settings!")} />
                 </div>
 
                 {showSearchbar && 

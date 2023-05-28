@@ -1,5 +1,5 @@
-@use "./colors" as *;
-@import url("https://fonts.googleapis.com/css?family=Nunito:400");
+@use "./index" as *;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
 
 * {
     box-sizing: border-box;
@@ -12,6 +12,45 @@ html {
     color: $textColor;
     
     body {
+        font-size: $mediumFontSize;
         margin: 0;
+        
+        button {
+            border: none;
+            font-size: $mediumFontSize;
+        }
+
+        input {
+            font-size: $smallFontSize;
+            outline: transparent;
+
+            &::-webkit-search-cancel-button {
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 12px;
+            height: 12px;
+        }
+
+        $scrollBarBorderRadius: 0.5rem;
+        ::-webkit-scrollbar-track {
+            background-color: $lightBlack;
+            border-radius: $scrollBarBorderRadius;
+            margin: 0.75rem;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: $mediumBlack;
+            border-radius: $scrollBarBorderRadius;
+            
+            &:hover {
+                background-color: $darkBlack;
+                cursor: pointer;
+            }
+        }
     }
 }

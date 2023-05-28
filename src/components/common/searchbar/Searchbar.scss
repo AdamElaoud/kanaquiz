@@ -1,9 +1,53 @@
-.search-form {
-    .search-input {
+@use "../../../styles/index" as *;
 
-    }
-}
+$inputHeight: 3rem;
+$searchResultsHeight: 25rem;
 
-.search-results {
+.search {
+    position: relative;
+    width: 45%;
+
+    .search-form {
+        display: flex;
+        justify-content: center;
+        margin-bottom: $sectionSpacing;
     
+        .search-input {
+            @extend .padding;
+            @extend .rounded-border;
+            background-color: $lightGray;
+            border: none;
+            height: $inputHeight;
+            width: 100%;
+            
+            &.showing-results {
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+    }
+    
+    .search-results-container {
+        @extend .padding;
+        background-color: $mediumGray;
+        border-bottom-left-radius: $borderRadius;
+        border-bottom-right-radius: $borderRadius;
+        bottom: calc($sectionSpacing - $searchResultsHeight);
+        height: $searchResultsHeight;
+        max-width: 100%;
+        position: absolute;
+        width: 100%;
+        z-index: $overlayZIndex;
+
+        .search-results {
+            align-items: flex-start;
+            column-gap: 2%;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: flex-start;
+            overflow-y: auto;
+            row-gap: 2%;;
+        }
+    }
 }

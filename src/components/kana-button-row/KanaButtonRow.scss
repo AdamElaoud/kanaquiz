@@ -1,4 +1,9 @@
 .button-row {
+    align-items: center;
+    display: flex;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+
     .select-all-button {
         margin-right: 2rem;
     }

@@ -16,6 +16,7 @@ const Searchbar = (props: Props) : JSX.Element => {
     
     const [searchText, setSearchText] = useState<string>("");
     const [searchResults, setSearchResults] = useState<ReactNode[]>([]);
+    const [showResults, setShowResults] = useState<boolean>(false);
 
     const onSearchChange = (event: ReactInputOnChangeEvent) => {
         const rawSearch = event.target.value;
@@ -26,31 +27,43 @@ const Searchbar = (props: Props) : JSX.Element => {
             return [...queries, ...rawSearch.split(delimiter)];
         }, []);
 
-        setSearchResults(searchFn(rawSearch, cleanQueries(queries, delimiters)));
+        const results = searchFn(rawSearch, cleanQueries(queries, delimiters));
+
+        setSearchResults(results);
+        setShowResults(results.length > 0);
     };
 
     const onSubmit = (event: ReactFormOnSubmitEvent) => {
         event.preventDefault();
     };
 
+    const inputClasses = showResults ? "search-input showing-results" : "search-input";
+
     return (
-        <>
+        <div className = "search">
             <form className = "search-form" role = "search" onSubmit = {onSubmit}>
                 <label className = "visually-hidden" htmlFor = "searchbar">Search for Kana</label>
                 <input
-                    className = "search-input"
+                    className = {inputClasses}
                     name = "searchbar"
                     type = "search"
                     role = "search"
                     placeholder = {placeholder}
                     value = {searchText}
                     onChange = {onSearchChange}
+                    onBlur = {() => setShowResults(false)}
+                    onFocus = {() => setShowResults(searchResults.length > 0)}
                 />
             </form>
-            <div className = "search-results">
-                {searchResults}
-            </div>
-        </>
+            {showResults &&
+                // container is necessary to add space between scrollbar and side of element
+                <div className = "search-results-container">
+                    <div className = "search-results">
+                        {searchResults}
+                    </div>
+                </div>
+            }
+        </div>
     );
 };
 
