@@ -1,4 +1,4 @@
-import { CustomIconMap, FontAwesomeIconMap } from "@/components/common/icon/IconTypes";
+import { CustomIconMap, FontAwesomeIconMap } from "@/common/components/icon/IconTypes";
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 
 // potential future color theming

@@ -1,6 +1,6 @@
 import { Mode } from "@/types";
 import KanaButton from "./KanaButton";
-import Button from "../common/button/Button";
+import { Button } from "@/common/components";
 import "./KanaButtonRow.scss";
 import useMode from "@/hooks/useMode";
 

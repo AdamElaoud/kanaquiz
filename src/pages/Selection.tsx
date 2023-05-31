@@ -1,16 +1,17 @@
-import Button from "@/components/common/button/Button";
-import Toggle, { ToggleButtonConfig } from "@/components/common/toggle/Toggle";
-import TabSet from "@/components/common/tabs/TabSet";
-import Tab from "@/components/common/tabs/Tab";
+import { Button } from "@/common/components";
+import { Toggle } from "@/common/components";
+import { ToggleButtonConfig } from "@/common/components/toggle/Toggle";
+import { TabSet } from "@/common/components";
+import { Tab } from "@/common/components";
 import "./Selection.scss";
 import useKanaDictionary from "@/hooks/useKanaDictionary";
 import { useState } from "react";
 import { Mode, Size } from "@/types";
 import KanaButtonRow from "@/components/kana-button-row/KanaButtonRow";
-import Searchbar from "@/components/common/searchbar/Searchbar";
+import { Searchbar } from "@/common/components";
 import { ModeContextProvider } from "@/hooks/useMode";
 import { SelectionsContextProvider } from "@/hooks/useSelections";
-import useLocalStorage from "@/hooks/useLocalStorage";
+import useLocalStorage from "@/common/hooks/useLocalStorage";
 
 const ENGLISH_DELIMITERS = [" ", ",", ", "];
 const JAPANESE_DELIMITERS = ["　", "、"];

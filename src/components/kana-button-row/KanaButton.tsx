@@ -1,5 +1,5 @@
 import { Mode } from "@/types";
-import Button from "../common/button/Button";
+import { Button } from "@/common/components";
 import "./KanaButton.scss";
 import useSelections from "@/hooks/useSelections";
 

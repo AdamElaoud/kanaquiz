@@ -1,7 +1,7 @@
 import { ReactFormOnSubmitEvent, ReactInputOnChangeEvent, ReactNode } from "@/types";
 import { useState, useRef } from "react";
 import "./Searchbar.scss";
-import "../../../styles/_index.scss";
+import "@/styles/_index.scss";
 
 interface Props {
     delimiters?: string[],
@@ -39,10 +39,6 @@ const Searchbar = (props: Props) : JSX.Element => {
     };
 
     const inputClasses = showResults ? "search-input showing-results" : "search-input";
-
-    console.log('searchResultsRef.current :>> ', searchResultsRef.current);
-    console.log('document.activeElement :>> ', document.activeElement);
-    console.log('contains :>> ', searchResultsRef.current?.contains(document.activeElement));
 
     return (
         <div className = "search">
