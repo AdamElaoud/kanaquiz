@@ -3,7 +3,7 @@ import { createContext, useContext } from "react";
 
 type SelectionsContextType = {
     selections: string[],
-    updateSelections: (letter: string) => () => void
+    updateSelections: (letter: string[], addOnly?: boolean) => void
 };
 
 const SelectionsContext = createContext<SelectionsContextType>({} as SelectionsContextType);

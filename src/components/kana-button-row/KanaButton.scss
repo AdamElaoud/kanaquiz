@@ -1,6 +1,8 @@
+$kanaButtonMargin: 0.25rem;
+
 .kana-button {
-    margin-left: 0.25rem;
-    margin-right: 0.25rem;
+    margin-left: $kanaButtonMargin;
+    margin-right: $kanaButtonMargin;
 
     &.is-selected {
         background-color: gold;

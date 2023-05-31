@@ -21,18 +21,22 @@ const KanaSelection = () : JSX.Element => {
     const hiraganaGroups = Object.values(hiragana.groupsToChars);
     const katakanaGroups = Object.values(katakana.groupsToChars);
 
-    const updateSelections = (letter: string) => () => {
-        if (selections.includes(letter)) {
-            const letterIndex = selections.findIndex(selection => selection === letter);
-            const updatedSelections = [...selections];
+    const updateSelections = (letters: string[], addOnly?: boolean) => {
+        const updatedSelections = [...selections];
 
-            updatedSelections.splice(letterIndex, 1);
+        letters.forEach(letter => {
+            if (selections.includes(letter)) {
+                if (!addOnly) {
+                    const letterIndex = updatedSelections.findIndex(selection => selection === letter);
+                    updatedSelections.splice(letterIndex, 1);
+                }
+    
+            } else {
+                updatedSelections.push(letter);
+            }
+        });
 
-            setSelections(updatedSelections);
-
-        } else {
-            setSelections(currentSelections => [...currentSelections, letter]);
-        }
+        setSelections(updatedSelections);
     };
 
     const searchFn = (_rawSearch: string, queries: string[]) => search(queries);
@@ -47,18 +51,15 @@ const KanaSelection = () : JSX.Element => {
             <ModeContextProvider value = {mode}>
                 <div className = "selection-page">
                     <div className = "options-bar">
-                        <Button iconType = {FontAwesomeIconType.Search} iconSize = {Size.Medium} onClick = {() => setShowSearchbar(prevState => !prevState)} />
                         <Toggle buttons = {toggleButtons}/>
                         <Button iconType = {FontAwesomeIconType.Gear} iconSize = {Size.Medium} onClick = {() => console.log("settings!")} />
                     </div>
 
-                    {showSearchbar && 
-                        <Searchbar
-                            searchFn = {searchFn}
-                            delimiters = {[...ENGLISH_DELIMITERS, ...JAPANESE_DELIMITERS]}
-                            placeholder = "Search for Kana"
-                        />
-                    }
+                    <Searchbar
+                        searchFn = {searchFn}
+                        delimiters = {[...ENGLISH_DELIMITERS, ...JAPANESE_DELIMITERS]}
+                        placeholder = "Search for Kana"
+                    />
 
                     <TabSet className = "selection-tabset">
                         <Tab title = "ひ Hiragana" tabID = {0}>

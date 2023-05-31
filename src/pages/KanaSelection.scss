@@ -10,9 +10,15 @@
         align-items: center;
         display: flex;
         height: 5rem;
-        justify-content: space-between;
+        justify-content: center;
         margin-bottom: $sectionSpacing;
+        position: relative;
         width: 100%;
+
+        .button {
+            position: absolute;
+            right: 0;
+        }
     }
 
     .selection-tabset {

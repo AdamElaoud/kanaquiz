@@ -18,7 +18,7 @@ const KanaButton = (props: Props) : JSX.Element => {
     const classes = isSelected ? "kana-button is-selected" : "kana-button";
 
     return (
-        <Button className = {classes} onClick = {updateSelections(letters[Mode.ID])}>
+        <Button className = {classes} onClick = {() => updateSelections([letters[Mode.ID]])}>
             {letters[mode]}
         </Button>
     );
