@@ -1,17 +1,6 @@
-import { ReactButtonOnClickEvent, ReactButtonOnClick } from "@/common/types";
+import { ReactButtonOnClickEvent, ReactButtonOnClick, ToggleButtonConfig, Side } from "@/common/types";
 import { useState } from "react";
 import "./Toggle.scss";
-
-export interface ToggleButtonConfig {
-    className?: string,
-    onClick: ReactButtonOnClick,
-    text: string
-};
-
-export enum Side {
-    Left = 'left',
-    Right = 'right'
-};
 
 interface Props {
     buttons: [ToggleButtonConfig, ToggleButtonConfig],

@@ -1,24 +1,30 @@
-import { IconType, ReactNode, Size } from "@/common/types";
+import { IconType, ReactNode, Side, Size } from "@/common/types";
 import "./Button.scss";
 import Icon from "../icon/Icon";
 
 interface Props {
     children?: ReactNode,
     className?: string,
-    icon?: IconType,
+    iconType?: IconType,
+    iconSide?: Side,
     iconSize?: Size,
     onClick: () => void
 };
 
+const DEFAULT_ICON_SIDE = Side.Left;
+
 const Button = (props: Props) : JSX.Element => {
-    const { children, className, icon, iconSize, onClick } = props;
+    const { children, className, iconType, iconSide = DEFAULT_ICON_SIDE, iconSize, onClick } = props;
 
     const classes = className ? `button ${className}` : "button";
 
+    const displayIcon = iconType && <Icon size = {iconSize} type = {iconType} />;
+
     return (
         <button className = {classes} onClick = {onClick}>
-            {icon && <Icon size = {iconSize} type = {icon} />}
+            {iconSide === Side.Left && displayIcon}
             {children}
+            {iconSide === Side.Right && displayIcon}
         </button>
     );
 };

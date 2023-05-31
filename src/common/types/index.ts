@@ -7,6 +7,11 @@ export enum Size {
     Large = "lg"
 };
 
+export enum Side {
+    Left = 'left',
+    Right = 'right'
+};
+
 export type ReactButtonOnClick = React.MouseEventHandler<HTMLButtonElement>;
 export type ReactButtonOnClickEvent = React.MouseEvent<HTMLButtonElement, MouseEvent>;
 export type ReactNode = React.ReactNode;
@@ -15,6 +20,12 @@ export type ReactFragment = React.ReactFragment;
 export type ReactInputOnChangeEvent = React.ChangeEvent<HTMLInputElement>;
 export type ReactFormOnSubmitEvent = React.FormEvent<HTMLFormElement>;
 export type ReactSetState<T> = React.Dispatch<React.SetStateAction<T>>;
+
+export interface ToggleButtonConfig {
+    className?: string,
+    onClick: ReactButtonOnClick,
+    text: string
+};
 
 export type CustomIconType = keyof CustomIconMapType;
 export type CustomIconMapType = {

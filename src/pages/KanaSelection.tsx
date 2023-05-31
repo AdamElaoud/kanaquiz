@@ -1,18 +1,13 @@
-import { Button } from "@/common/components";
-import { Toggle } from "@/common/components";
-import { ToggleButtonConfig } from "@/common/components/toggle/Toggle";
-import { TabSet } from "@/common/components";
-import { Tab } from "@/common/components";
-import "./KanaSelection.scss";
+import { Button, Toggle, TabSet, Tab, Searchbar } from "@/common/components";
+import { Size, ToggleButtonConfig } from "@/common/types";
 import useKanaDictionary from "@/hooks/useKanaDictionary";
 import { useState } from "react";
-import { Size } from "@/common/types";
 import { Mode } from "@/types";
 import KanaButtonRow from "@/components/kana-button-row/KanaButtonRow";
-import { Searchbar } from "@/common/components";
 import { ModeContextProvider } from "@/hooks/useMode";
 import { SelectionsContextProvider } from "@/hooks/useSelections";
 import useLocalStorage from "@/common/hooks/useLocalStorage";
+import "./KanaSelection.scss";
 
 const ENGLISH_DELIMITERS = [" ", ",", ", "];
 const JAPANESE_DELIMITERS = ["　", "、"];
@@ -52,9 +47,9 @@ const KanaSelection = () : JSX.Element => {
             <ModeContextProvider value = {mode}>
                 <div className = "selection-page">
                     <div className = "options-bar">
-                        <Button icon = "search" iconSize = {Size.Medium} onClick = {() => setShowSearchbar(prevState => !prevState)} />
+                        <Button iconType = "search" iconSize = {Size.Medium} onClick = {() => setShowSearchbar(prevState => !prevState)} />
                         <Toggle buttons = {toggleButtons}/>
-                        <Button icon = "gear" iconSize = {Size.Medium} onClick = {() => console.log("settings!")} />
+                        <Button iconType = "gear" iconSize = {Size.Medium} onClick = {() => console.log("settings!")} />
                     </div>
 
                     {showSearchbar && 
