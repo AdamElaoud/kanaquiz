@@ -24,11 +24,12 @@
         display: flex;
         flex-direction: column;
         height: 100%;
-        justify-content: space-between;
+        justify-content: center;
         width: 50rem;
 
         .step-text {
             font-weight: $fontWeightBold;
+            margin-top: 1rem;
         }
     }
 }

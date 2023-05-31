@@ -14,5 +14,13 @@
         margin-left: $barSideMargin;
         margin-right: $barSideMargin;
         width: 4rem;
+
+        &.active {
+            background-color: $active;
+        }
+
+        &.complete {
+            background-color: $complete;
+        }
     }
 }

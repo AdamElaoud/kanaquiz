@@ -13,18 +13,26 @@ const StepDisplay = (props: Props) : JSX.Element => {
     const stepDisplay = steps.reduce((stepDisplay: ReactNode[], step, index) => {
         const { iconType, ID, title } = step;
 
+        const active = index === activeStepIndex;
+        const complete = index < activeStepIndex;
+
         const stepProps = {
-            active: index === activeStepIndex,
-            complete: index < activeStepIndex,
+            active,
+            complete,
             iconType,
             key: ID,
             title
         };
 
-        stepDisplay.push(<Step {...stepProps}/>);
+        if (index !== 0) {
+            const barClasses = ["bar"];
+            if (active) barClasses.push("active");
+            if (complete) barClasses.push("complete");
 
-        if (index !== steps.length - 1)
-            stepDisplay.push(<div className = "bar" key = {`${ID}-bar`}></div>);
+            stepDisplay.push(<div className = {barClasses.join(" ")} key = {`${ID}-bar`}></div>);
+        }
+
+        stepDisplay.push(<Step {...stepProps}/>);
 
         return stepDisplay;
     }, []);

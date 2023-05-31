@@ -4,7 +4,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     width: $largeIconSize + 1rem;
 
     .icon {
@@ -14,18 +14,19 @@
     }
 
     .title {
+        margin-top: 0.25rem;
         text-align: center;
     }
 
     &.active {
         .icon {
-            background-color: lightblue;
+            background-color: $active;
         }
     }
 
     &.complete {
         .icon {
-            background-color: lightgreen;
+            background-color: $complete;
         }
     }
 }

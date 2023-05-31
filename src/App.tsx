@@ -19,12 +19,12 @@ const steps: StepConfig[] = [
         iconType: FontAwesomeIconType.ClipboardQuestion,
         ID: PageID.QuizSelect,
         text: "Select the type for your quiz!",
-        title: "Quiz"
+        title: "Type"
     },
     {
         iconType: FontAwesomeIconType.Play,
         ID: PageID.KanaQuiz,
-        title: "Go!"
+        title: "Quiz!"
     },
 ];
 
