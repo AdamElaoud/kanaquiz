@@ -16,8 +16,8 @@
     }
 
     .tab-content {
-        @extend .rounded-border;
-        @extend .padding;
+        @extend %rounded-border;
+        @extend %padding;
         background-color: $darkGray;
         border-top-left-radius: 0;
         display: flex;

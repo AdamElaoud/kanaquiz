@@ -6,8 +6,8 @@ export interface TabProps {
     className?: string,
     icon?: IconType,
     iconSize?: Size,
-    // NOTE: tabIndices should be unique and NOT generated from array index
-    tabIndex: number,
+    // NOTE: tabIDs should be unique and NOT generated from array index
+    tabID: number,
     title?: string,
 };
 

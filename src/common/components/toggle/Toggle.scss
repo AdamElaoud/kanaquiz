@@ -1,17 +1,17 @@
 @use "../../../styles/index" as *;
 
 .toggle {
-    @extend .rounded-border;
+    @extend %rounded-border;
     align-items: center;
     background-color: $lightGray;
     border: $borderThickness solid $lightGray;
     display: flex;
     
     .toggle-button {
-        @extend .rounded-border;
-        @extend .padding;
+        @extend %rounded-border;
+        @extend %padding;
         font-size: $smallFontSize;
-        font-weight: 400;
+        font-weight: $fontWeightNormal;
         
         &:hover {
             background-color: $mediumGray;
@@ -20,7 +20,7 @@
 
         &.active {
             background-color: $darkGray;
-            font-weight: 600;
+            font-weight: $fontWeightBold;
         }
     }
 

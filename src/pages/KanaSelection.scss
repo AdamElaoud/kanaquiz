@@ -4,8 +4,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
 
     .options-bar {
         align-items: center;
@@ -13,11 +12,10 @@
         height: 5rem;
         justify-content: space-between;
         margin-bottom: $sectionSpacing;
-        width: 65%;
+        width: 100%;
     }
 
     .selection-tabset {
         height: 80%;
-        width: 65%;
     }
 }

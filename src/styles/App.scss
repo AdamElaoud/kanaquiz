@@ -54,3 +54,26 @@ html {
         }
     }
 }
+
+.app {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100vh;
+    width: 100vw;
+
+    $pageWidth: 65%;
+    .page {
+        height: 90%;
+        width: $pageWidth;
+    }
+
+    .page-carousel {
+        bottom: 0;
+        position: absolute;
+        width: $pageWidth;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}

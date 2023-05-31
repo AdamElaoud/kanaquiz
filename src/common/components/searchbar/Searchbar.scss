@@ -13,8 +13,8 @@ $searchResultsHeight: 25rem;
         margin-bottom: $sectionSpacing;
     
         .search-input {
-            @extend .padding;
-            @extend .rounded-border;
+            @extend %padding;
+            @extend %rounded-border;
             background-color: $lightGray;
             border: none;
             height: $inputHeight;
@@ -28,7 +28,7 @@ $searchResultsHeight: 25rem;
     }
     
     .search-results-container {
-        @extend .padding;
+        @extend %padding;
         background-color: $mediumGray;
         border-bottom-left-radius: $borderRadius;
         border-bottom-right-radius: $borderRadius;

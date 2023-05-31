@@ -1,0 +1,34 @@
+@use "../../../styles/" as *;
+
+.step-carousel {
+    @include padding(2);
+    @extend %rounded-border;
+    align-items: center;
+    background-color: $mediumGray;
+    display: flex;
+    height: 12rem;
+    justify-content: space-between;
+    width: 100%;
+
+    $buttonSpacing: 4rem;
+    .back-button {
+        margin-right: $buttonSpacing
+    }
+
+    .next-button {
+        margin-left: $buttonSpacing;
+    }
+
+    .steps-content {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+        width: 50rem;
+
+        .step-text {
+            font-weight: $fontWeightBold;
+        }
+    }
+}

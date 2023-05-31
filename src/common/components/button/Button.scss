@@ -1,12 +1,20 @@
 @use "../../../styles/index" as *;
 
 .button {
-    @extend .padding;
-    @extend .rounded-border;
+    @extend %padding;
+    @extend %rounded-border;
+    align-items: center;
     background-color: $lightGray;
+    display: flex;
+    justify-content: center;
 
     &:hover {
         cursor: pointer;
         background-color: $lightBlack;
+    }
+
+    &:disabled {
+        cursor: auto;
+        background-color: $darkGray;
     }
 }

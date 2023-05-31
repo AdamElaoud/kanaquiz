@@ -27,19 +27,40 @@ export interface ToggleButtonConfig {
     text: string
 };
 
-export type CustomIconType = keyof CustomIconMapType;
-export type CustomIconMapType = {
-    "hiragana": string;
-    "katakana": string;
+export type StepState = (stepState: { prevStepID?: number, prevStepTitle?: string, newStepID?: number, newStepTitle?: string }) => void;
+
+export type TabState = (tabState: { prevTabID?: number, prevTabTitle?: string, newTabID?: number, newTabTitle?: string }) => void;
+
+export interface StepConfig {
+    iconType?: IconType
+    // NOTE: stepIDs should be unique and NOT generated from array index
+    ID: number,
+    text?: string,
+    title: string,
 };
 
-export type FontAwesomeIconType = keyof FontAwesomeIconMapType;
+export enum CustomIconType {
+    Blank = "blank",
+    Hiragana = "hiragana",
+    Katakana = "katakana"
+};
+export type CustomIconMapType = {
+    [key in CustomIconType]: string;
+};
+
+export enum FontAwesomeIconType {
+    ArrowLeft = "arrowLeft",
+    ArrowRight = "arrowRight",
+    ClipboardQuestion = "clipboardQuestion",
+    Check = "check",
+    FlagCheckered = "flagCheckered",
+    Gear = "gear",
+    Play = "play",
+    Search = "search",
+    X = "x"
+};
 export type FontAwesomeIconMapType = {
-    "check": IconDefinition;
-    "flagCheckered": IconDefinition;
-    "gear": IconDefinition;
-    "search": IconDefinition;
-    "x": IconDefinition;
+    [key in FontAwesomeIconType]: IconDefinition;
 };
 
 export type IconType = FontAwesomeIconType | CustomIconType;

@@ -1,0 +1,31 @@
+@use "../../../styles/index" as *;
+
+.step {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: $largeIconSize + 1rem;
+
+    .icon {
+        background-color: $darkGray;
+        border-radius: 50%;
+        padding: 0.65rem;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    &.active {
+        .icon {
+            background-color: lightblue;
+        }
+    }
+
+    &.complete {
+        .icon {
+            background-color: lightgreen;
+        }
+    }
+}

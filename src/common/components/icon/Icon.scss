@@ -5,7 +5,7 @@
     border-radius: 50%;
     box-sizing: border-box !important;
     display: flex;
-    font-weight: bold;
+    font-weight: $fontWeightBold;
     justify-content: center;
 
     &.sm {

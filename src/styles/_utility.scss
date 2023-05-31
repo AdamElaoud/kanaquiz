@@ -4,11 +4,15 @@
     display: none;
 }
 
-.rounded-border {
+%rounded-border {
     border-radius: $borderRadius;
 }
 
 $halfPadding: calc($padding / 2);
-.padding {
+%padding {
     padding: $halfPadding $padding $halfPadding $padding;
+}
+
+@mixin padding($multiplier: 1) {
+    padding: calc($halfPadding * $multiplier) calc($padding * $multiplier) calc($halfPadding * $multiplier) calc($padding * $multiplier);
 }

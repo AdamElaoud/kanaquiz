@@ -21,6 +21,6 @@ $tabHeaderWidth: 16rem;
     
     &.active {
         background-color: $darkGray;
-        font-weight: 600;
+        font-weight: $fontWeightBold;
     }
 }

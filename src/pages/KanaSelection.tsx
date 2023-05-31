@@ -1,5 +1,5 @@
 import { Button, Toggle, TabSet, Tab, Searchbar } from "@/common/components";
-import { Size, ToggleButtonConfig } from "@/common/types";
+import { FontAwesomeIconType, Size, ToggleButtonConfig } from "@/common/types";
 import useKanaDictionary from "@/hooks/useKanaDictionary";
 import { useState } from "react";
 import { Mode } from "@/types";
@@ -47,9 +47,9 @@ const KanaSelection = () : JSX.Element => {
             <ModeContextProvider value = {mode}>
                 <div className = "selection-page">
                     <div className = "options-bar">
-                        <Button iconType = "search" iconSize = {Size.Medium} onClick = {() => setShowSearchbar(prevState => !prevState)} />
+                        <Button iconType = {FontAwesomeIconType.Search} iconSize = {Size.Medium} onClick = {() => setShowSearchbar(prevState => !prevState)} />
                         <Toggle buttons = {toggleButtons}/>
-                        <Button iconType = "gear" iconSize = {Size.Medium} onClick = {() => console.log("settings!")} />
+                        <Button iconType = {FontAwesomeIconType.Gear} iconSize = {Size.Medium} onClick = {() => console.log("settings!")} />
                     </div>
 
                     {showSearchbar && 
@@ -61,13 +61,13 @@ const KanaSelection = () : JSX.Element => {
                     }
 
                     <TabSet className = "selection-tabset">
-                        <Tab title = "ひ Hiragana" tabIndex = {0}>
+                        <Tab title = "ひ Hiragana" tabID = {0}>
                             {hiraganaGroups.map(group =>
                                 // key is first Kana in group
                                 <KanaButtonRow key = {group[0][Mode.Kana]} row = {group}/>
                             )}
                         </Tab>
-                        <Tab title = "カ Katakana" tabIndex = {1}>
+                        <Tab title = "カ Katakana" tabID = {1}>
                             {katakanaGroups.map(group =>
                                 // key is first Kana in group
                                 <KanaButtonRow key = {group[0][Mode.Kana]} row = {group}/>
