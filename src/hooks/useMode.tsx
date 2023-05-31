@@ -15,7 +15,7 @@ export const useMode = () => {
 };
 
 interface Props {
-    children?: ReactNode,
+    children: ReactNode,
     value: Mode
 };
 

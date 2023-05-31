@@ -1,5 +1,5 @@
 import { ReactFormOnSubmitEvent, ReactInputOnChangeEvent, ReactNode } from "@/types";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import "./Searchbar.scss";
 import "../../../styles/_index.scss";
 
@@ -17,6 +17,7 @@ const Searchbar = (props: Props) : JSX.Element => {
     const [searchText, setSearchText] = useState<string>("");
     const [searchResults, setSearchResults] = useState<ReactNode[]>([]);
     const [showResults, setShowResults] = useState<boolean>(false);
+    const searchResultsRef = useRef<HTMLDivElement>(null);
 
     const onSearchChange = (event: ReactInputOnChangeEvent) => {
         const rawSearch = event.target.value;
@@ -24,7 +25,7 @@ const Searchbar = (props: Props) : JSX.Element => {
         setSearchText(rawSearch);
 
         const queries = delimiters.reduce((queries: string[], delimiter: string) => {
-            return [...queries, ...rawSearch.split(delimiter)];
+            return [...queries, ...rawSearch.trim().split(delimiter)];
         }, []);
 
         const results = searchFn(rawSearch, cleanQueries(queries, delimiters));
@@ -39,6 +40,10 @@ const Searchbar = (props: Props) : JSX.Element => {
 
     const inputClasses = showResults ? "search-input showing-results" : "search-input";
 
+    console.log('searchResultsRef.current :>> ', searchResultsRef.current);
+    console.log('document.activeElement :>> ', document.activeElement);
+    console.log('contains :>> ', searchResultsRef.current?.contains(document.activeElement));
+
     return (
         <div className = "search">
             <form className = "search-form" role = "search" onSubmit = {onSubmit}>
@@ -51,13 +56,15 @@ const Searchbar = (props: Props) : JSX.Element => {
                     placeholder = {placeholder}
                     value = {searchText}
                     onChange = {onSearchChange}
-                    onBlur = {() => setShowResults(false)}
                     onFocus = {() => setShowResults(searchResults.length > 0)}
                 />
             </form>
             {showResults &&
                 // container is necessary to add space between scrollbar and side of element
-                <div className = "search-results-container">
+                <div
+                    className = "search-results-container"
+                    ref = {searchResultsRef}
+                >
                     <div className = "search-results">
                         {searchResults}
                     </div>

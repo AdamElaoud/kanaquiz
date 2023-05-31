@@ -4,7 +4,7 @@ import { charsToGroups as hiraganaCharsToGroups, groupsToChars as hiraganaGroups
 import { charsToGroups as kataKanaCharsToGroups, groupsToChars as katakanaGroupsToChars } from "@/utils/katakana";
 
 const useKanaDictionary = () => {
-    const search = (queries: string[], addSelection: (letter: string) => () => void) => {
+    const search = (queries: string[]) => {
         const hiraganaSearchResults = queries.reduce((searchResults: string[], query: string) => {
             const groups: string[] = hiraganaCharsToGroups[query];
 
@@ -31,7 +31,7 @@ const useKanaDictionary = () => {
 
         return kanaGroups.map(group =>
             // key is first Kana in group
-            <KanaButtonRow addSelection = {addSelection} key = {group[0][Mode.Kana]} row = {group}/>
+            <KanaButtonRow key = {group[0][Mode.Kana]} row = {group}/>
         );
     };
 

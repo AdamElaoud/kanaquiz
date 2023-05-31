@@ -26,6 +26,7 @@ export type ReactElement = React.ReactElement;
 export type ReactFragment = React.ReactFragment;
 export type ReactInputOnChangeEvent = React.ChangeEvent<HTMLInputElement>;
 export type ReactFormOnSubmitEvent = React.FormEvent<HTMLFormElement>;
+export type ReactSetState<T> = React.Dispatch<React.SetStateAction<T>>;
 
 export type CharsToGroups = {
     [key: string]: string[]

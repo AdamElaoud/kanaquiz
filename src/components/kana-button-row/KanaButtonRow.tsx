@@ -5,13 +5,12 @@ import "./KanaButtonRow.scss";
 import useMode from "@/hooks/useMode";
 
 interface Props {
-    addSelection: (letter: string) => () => void,
     row: string[][]
 };
 
 const KanaButtonRow = (props: Props) : JSX.Element => {
-    const { addSelection, row } = props;
-
+    const { row } = props;
+    
     const mode = useMode();
 
     return (
@@ -21,7 +20,7 @@ const KanaButtonRow = (props: Props) : JSX.Element => {
             </Button>
 
             {row.map(letters => {
-                const kanaButtonProps = { addSelection, key: letters[Mode.Kana], letters, mode };
+                const kanaButtonProps = { key: letters[Mode.Kana], letters, mode };
                 return <KanaButton {...kanaButtonProps} />;
             })}
         </div>
