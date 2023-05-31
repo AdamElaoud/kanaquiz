@@ -19,12 +19,6 @@ export enum PageType {
     QuizSummary = "QuizSummary",
 };
 
-export enum PageID {
-    KanaSelect = 0,
-    QuizSelect = 1,
-    KanaQuiz = 2
-};
-
 export type PageMapType = {
     [key in PageType]: ReactNode;
 };

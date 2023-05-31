@@ -1,6 +1,7 @@
 @use "../../../styles/index" as *;
 
 .toggle {
+    @include padding(0.25);
     @extend %rounded-border;
     align-items: center;
     background-color: $lightGray;

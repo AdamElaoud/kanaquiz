@@ -27,14 +27,14 @@ export interface ToggleButtonConfig {
     text: string
 };
 
-export type StepState = (stepState: { prevStepID?: number, prevStepTitle?: string, newStepID?: number, newStepTitle?: string }) => void;
+export type StepState = (stepState: { prevStepID?: number | string, prevStepTitle?: string, newStepID?: number | string, newStepTitle?: string }) => void;
 
 export type TabState = (tabState: { prevTabID?: number, prevTabTitle?: string, newTabID?: number, newTabTitle?: string }) => void;
 
 export interface StepConfig {
     iconType?: IconType
     // NOTE: stepIDs should be unique and NOT generated from array index
-    ID: number,
+    ID: number | string,
     text?: string,
     title: string,
 };

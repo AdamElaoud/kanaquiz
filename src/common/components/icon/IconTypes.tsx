@@ -1,8 +1,8 @@
 import { CustomIconMapType, FontAwesomeIconMapType, } from "@/common/types";
 import {
+    faAngleLeft,
+    faAngleRight,
     faCheck,
-    faChevronLeft,
-    faChevronRight,
     faClipboardQuestion,
     faFlagCheckered,
     faGear,
@@ -12,8 +12,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const FontAwesomeIconMap: FontAwesomeIconMapType = {
-    "arrowLeft": faChevronLeft,
-    "arrowRight": faChevronRight,
+    "arrowLeft": faAngleLeft,
+    "arrowRight": faAngleRight,
     "check": faCheck,
     "clipboardQuestion": faClipboardQuestion,
     "flagCheckered": faFlagCheckered,
