@@ -1,4 +1,4 @@
-import { IconType, ReactNode, Size } from "@/types";
+import { IconType, ReactNode, Size } from "@/common/types";
 import "./Button.scss";
 import Icon from "../icon/Icon";
 

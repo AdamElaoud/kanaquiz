@@ -1,4 +1,4 @@
-import { IconType, Size } from "@/types";
+import { IconType, Size } from "@/common/types";
 import Icon from "../icon/Icon";
 import "./TabHeader.scss";
 

@@ -1,4 +1,4 @@
-import { ReactFormOnSubmitEvent, ReactInputOnChangeEvent, ReactNode } from "@/types";
+import { ReactFormOnSubmitEvent, ReactInputOnChangeEvent, ReactNode } from "@/common/types";
 import { useState, useRef } from "react";
 import "./Searchbar.scss";
 import "@/styles/_index.scss";

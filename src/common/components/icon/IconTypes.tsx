@@ -1,4 +1,4 @@
-import { CustomIconMapType, FontAwesomeIconMapType, } from "@/types";
+import { CustomIconMapType, FontAwesomeIconMapType, } from "@/common/types";
 import {
     faCheck,
     faFlagCheckered,

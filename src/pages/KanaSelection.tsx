@@ -3,10 +3,11 @@ import { Toggle } from "@/common/components";
 import { ToggleButtonConfig } from "@/common/components/toggle/Toggle";
 import { TabSet } from "@/common/components";
 import { Tab } from "@/common/components";
-import "./Selection.scss";
+import "./KanaSelection.scss";
 import useKanaDictionary from "@/hooks/useKanaDictionary";
 import { useState } from "react";
-import { Mode, Size } from "@/types";
+import { Size } from "@/common/types";
+import { Mode } from "@/types";
 import KanaButtonRow from "@/components/kana-button-row/KanaButtonRow";
 import { Searchbar } from "@/common/components";
 import { ModeContextProvider } from "@/hooks/useMode";
@@ -16,7 +17,7 @@ import useLocalStorage from "@/common/hooks/useLocalStorage";
 const ENGLISH_DELIMITERS = [" ", ",", ", "];
 const JAPANESE_DELIMITERS = ["　", "、"];
 
-const Selection = () : JSX.Element => {
+const KanaSelection = () : JSX.Element => {
     const [showSearchbar, setShowSearchbar] = useState<boolean>(false);
     const [selections, setSelections] = useLocalStorage<string[]>("selections", []);
     const [mode, setMode] = useState<Mode>(Mode.Kana);
@@ -84,4 +85,4 @@ const Selection = () : JSX.Element => {
     );
 };
 
-export default Selection;
+export default KanaSelection;

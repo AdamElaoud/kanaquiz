@@ -1,4 +1,4 @@
-import { IconType, ReactNode, Size } from "@/types";
+import { IconType, ReactNode, Size } from "@/common/types";
 import "./Tab.scss";
 
 export interface TabProps {

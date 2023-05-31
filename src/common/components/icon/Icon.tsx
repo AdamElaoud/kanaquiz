@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CustomIconMap, FontAwesomeIconMap } from "./IconTypes";
-import { IconType, Size, isCustomIconType, isFontAwesomeIconType } from "@/types";
+import { IconType, Size, isCustomIconType, isFontAwesomeIconType } from "@/common/types";
 import "./Icon.scss";
 
 interface Props {

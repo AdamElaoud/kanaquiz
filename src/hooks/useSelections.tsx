@@ -1,4 +1,4 @@
-import { ReactNode } from "@/types";
+import { ReactNode } from "@/common/types";
 import { createContext, useContext } from "react";
 
 type SelectionsContextType = {

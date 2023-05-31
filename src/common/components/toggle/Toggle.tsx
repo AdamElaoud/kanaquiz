@@ -1,4 +1,4 @@
-import { ReactButtonOnClickEvent, ReactButtonOnClick } from "@/types";
+import { ReactButtonOnClickEvent, ReactButtonOnClick } from "@/common/types";
 import { useState } from "react";
 import "./Toggle.scss";
 

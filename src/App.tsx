@@ -1,9 +1,9 @@
-import Selection from './pages/Selection';
+import KanaSelection from './pages/KanaSelection';
 import './styles/App.scss';
 
 const App = () : JSX.Element => {
     return (
-        <Selection />
+        <KanaSelection />
     );
 }
 

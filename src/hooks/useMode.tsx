@@ -1,4 +1,5 @@
-import { Mode, ReactNode } from "@/types";
+import { ReactNode } from "@/common/types";
+import { Mode } from "@/types";
 import { createContext, useContext } from "react";
 
 const ModeContext = createContext<Mode>(Mode.Kana);

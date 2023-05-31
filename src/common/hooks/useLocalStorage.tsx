@@ -1,4 +1,4 @@
-import { ReactSetState } from "@/types";
+import { ReactSetState } from "@/common/types";
 import { useState, useCallback } from "react";
 
 const useLocalStorage = <T,>(key: string, initialValue: T): [T, ReactSetState<T>] => {
