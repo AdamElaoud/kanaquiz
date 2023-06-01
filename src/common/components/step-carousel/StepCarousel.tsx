@@ -6,6 +6,7 @@ import { useState } from "react";
 interface Props {
     className?: string,
     onStepChange?: StepState,
+    showCheckOnComplete?: boolean,
     startingStepID?: number,
     steps: StepConfig[],
 };
@@ -13,7 +14,7 @@ interface Props {
 const DEFAULT_STARTING_STEP_INDEX = 0;
 
 const StepCarousel = (props: Props) : JSX.Element => {
-    const { className, onStepChange, steps, startingStepID = steps[0].ID } = props;
+    const { className, onStepChange, showCheckOnComplete, steps, startingStepID = steps[0].ID } = props;
 
     const [activeStepIndex, setActiveStepIndex] = useState<number>(() => {
         return steps.findIndex(step => step.ID === startingStepID) || DEFAULT_STARTING_STEP_INDEX;
@@ -66,7 +67,7 @@ const StepCarousel = (props: Props) : JSX.Element => {
             </Button>
 
             <div className = "steps-content">
-                <StepDisplay steps = {steps} activeStepIndex = {activeStepIndex}/>
+                <StepDisplay steps = {steps} activeStepIndex = {activeStepIndex} showCheckOnComplete = {showCheckOnComplete}/>
                 <div className = "step-text">
                     {steps[activeStepIndex].text}
                 </div>

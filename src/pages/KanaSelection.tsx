@@ -13,8 +13,7 @@ const ENGLISH_DELIMITERS = [" ", ",", ", "];
 const JAPANESE_DELIMITERS = ["　", "、"];
 
 const KanaSelection = () : JSX.Element => {
-    const [showSearchbar, setShowSearchbar] = useState<boolean>(false);
-    const [selections, setSelections] = useLocalStorage<string[]>("selections", []);
+    const [selections, setSelections] = useLocalStorage<string[]>("kana-selections", []);
     const [mode, setMode] = useState<Mode>(Mode.Kana);
     const { hiragana, katakana, search } = useKanaDictionary();
 
@@ -49,7 +48,7 @@ const KanaSelection = () : JSX.Element => {
     return (
         <SelectionsContextProvider value = {{ selections, updateSelections }}>
             <ModeContextProvider value = {mode}>
-                <div className = "selection-page">
+                <div className = "kana-selection-page">
                     <div className = "options-bar">
                         <Toggle buttons = {toggleButtons}/>
                         <Button iconType = {FontAwesomeIconType.Gear} iconSize = {Size.Medium} onClick = {() => console.log("settings!")} />

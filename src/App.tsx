@@ -7,6 +7,7 @@ import { PageMapType, PageType } from '@/types';
 import QuizSelection from '@/pages/QuizSelection';
 import KanaQuiz from '@/pages/KanaQuiz';
 import QuizSummary from '@/pages/QuizSummary';
+import QuizRecap from './pages/QuizRecap';
 
 const steps: StepConfig[] = [
     {
@@ -18,13 +19,13 @@ const steps: StepConfig[] = [
     {
         iconType: FontAwesomeIconType.ClipboardQuestion,
         ID: PageType.QuizSelect,
-        text: "Select the type for your quiz!",
-        title: "Type"
+        text: "Select your quiz types!",
+        title: "Quiz"
     },
     {
         iconType: FontAwesomeIconType.Play,
-        ID: PageType.KanaQuiz,
-        title: "Quiz!"
+        ID: PageType.QuizSummary,
+        title: "Go!"
     },
 ];
 
@@ -32,7 +33,8 @@ const PAGES: PageMapType = {
     KanaSelection: <KanaSelection />,
     QuizSelection: <QuizSelection />,
     KanaQuiz: <KanaQuiz />,
-    QuizSummary: <QuizSummary />
+    QuizSummary: <QuizSummary />,
+    QuizRecap: <QuizRecap />
 };
 
 const App = () : JSX.Element => {
@@ -47,7 +49,7 @@ const App = () : JSX.Element => {
             <div className = "page">
                 {page}
             </div>
-            <StepCarousel className = "page-carousel" steps = {steps} onStepChange = {onStepChange}/>
+            <StepCarousel className = "page-carousel" steps = {steps} onStepChange = {onStepChange} showCheckOnComplete = {true}/>
         </div>
     );
 };

@@ -17,6 +17,7 @@ export enum PageType {
     QuizSelect = "QuizSelection",
     KanaQuiz = "KanaQuiz",
     QuizSummary = "QuizSummary",
+    QuizRecap = "QuizRecap"
 };
 
 export type PageMapType = {

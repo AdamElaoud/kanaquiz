@@ -4,11 +4,12 @@ import "./StepDisplay.scss"
 
 interface Props {
     activeStepIndex: number,
+    showCheckOnComplete?: boolean,
     steps: StepConfig[]
 };
 
 const StepDisplay = (props: Props) : JSX.Element => {
-    const { activeStepIndex, steps } = props;
+    const { activeStepIndex, showCheckOnComplete, steps } = props;
 
     const stepDisplay = steps.reduce((stepDisplay: ReactNode[], step, index) => {
         const { iconType, ID, title } = step;
@@ -21,6 +22,7 @@ const StepDisplay = (props: Props) : JSX.Element => {
             complete,
             iconType,
             key: ID,
+            showCheckOnComplete,
             title
         };
 
