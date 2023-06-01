@@ -1,9 +1,16 @@
 @use "../../../styles/index" as *;
+@use "./Step.scss" as *;
 
 .step-display {
     align-items: flex-start;
     display: flex;
     font-size: $smallFontSize;
+
+    .flag-step {
+        background-color: $darkGray;
+        border-radius: 50%;
+        padding: $stepIconPadding;
+    }
 
     $barHeight: 0.2rem;
     $barSideMargin: 1rem;

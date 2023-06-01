@@ -1,16 +1,44 @@
 import { FontAwesomeIconType, Size } from "@/common/types";
 import { Button } from "@/common/components";
 import "./QuizSelection.scss";
+import QuizTypeCard from "@/components/quiz-type/QuizTypeCard";
+import { useState } from "react";
+import { QuizType } from "@/types";
+import { QuizSelectionsContextProvider } from "@/hooks/useQuizSelections";
+import QuizSelectionsDisplay from "@/components/quiz-selections-display/QuizSelectionsDisplay";
+import { QUIZ_TYPES } from "@/utils/constants";
 
 const QuizSelection = () : JSX.Element => {
-    return (
-        <div className = "quiz-selection-page">
-            <div className = "options-bar">
-                <Button iconType = {FontAwesomeIconType.Gear} iconSize = {Size.Medium} onClick = {() => console.log("settings!")} />
-            </div>
+    const [quizSelections, setQuizSelections] = useState<QuizType[]>([QuizType.MultipleChoice]);
 
-            
-        </div>
+    const updateQuizSelections = (quizType: QuizType) => {
+        const updatedSelections = [...quizSelections];
+
+        if (quizSelections.includes(quizType)) {
+            const quizTypeIndex = updatedSelections.findIndex(selection => selection === quizType);
+            updatedSelections.splice(quizTypeIndex, 1);
+
+        } else {
+            updatedSelections.push(quizType);
+        }
+
+        setQuizSelections(updatedSelections);
+    };
+
+    return (
+        <QuizSelectionsContextProvider value = {{ quizSelections, updateQuizSelections }}>
+            <div className = "quiz-selection-page">
+                <div className = "options-bar">
+                    <Button iconType = {FontAwesomeIconType.Gear} iconSize = {Size.Medium} onClick = {() => console.log("settings!")} />
+                </div>
+
+                <div className = "quiz-types">
+                    {QUIZ_TYPES.map(quizType => <QuizTypeCard {...quizType}/>)}
+                </div>
+
+                <QuizSelectionsDisplay />
+            </div>
+        </QuizSelectionsContextProvider>
     );
 };
 

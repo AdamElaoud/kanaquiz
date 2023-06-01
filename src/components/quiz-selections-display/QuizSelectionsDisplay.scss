@@ -1,0 +1,16 @@
+@use "../../styles/index" as *;
+
+.quiz-selections-display {
+    @extend %padding;
+    @extend %rounded-border;
+    align-items: center;
+    background-color: $mediumGray;
+    display: flex;
+    justify-content: center;
+    margin-top: $sectionSpacing;
+    width: 100%;
+
+    .flag-step {
+        background-color: transparent;
+    }
+}

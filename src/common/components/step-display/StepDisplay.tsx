@@ -1,21 +1,23 @@
-import { ReactNode, StepConfig } from "@/common/types";
-import { Step } from "..";
+import { FontAwesomeIconType, ReactNode, StepConfig } from "@/common/types";
+import { Icon, Step } from "..";
 import "./StepDisplay.scss"
 
 interface Props {
-    activeStepIndex: number,
+    activeStepIndex?: number,
+    displayFlagAtEnd?: boolean,
     showCheckOnComplete?: boolean,
     steps: StepConfig[]
 };
 
 const StepDisplay = (props: Props) : JSX.Element => {
-    const { activeStepIndex, showCheckOnComplete, steps } = props;
+    const { activeStepIndex, displayFlagAtEnd, showCheckOnComplete, steps } = props;
 
     const stepDisplay = steps.reduce((stepDisplay: ReactNode[], step, index) => {
         const { iconType, ID, title } = step;
 
-        const active = index === activeStepIndex;
-        const complete = index < activeStepIndex;
+        // need explicit check for undefined as 0 is falsey
+        const active = activeStepIndex !== undefined ? index === activeStepIndex : false;
+        const complete = activeStepIndex !== undefined ? index < activeStepIndex : false;
 
         const stepProps = {
             active,
@@ -38,6 +40,15 @@ const StepDisplay = (props: Props) : JSX.Element => {
 
         return stepDisplay;
     }, []);
+
+    if (displayFlagAtEnd) {
+        stepDisplay.push(<div className = "bar" key = "flag-bar"></div>);
+        stepDisplay.push(
+            <div className = "flag-step">
+                <Icon type = {FontAwesomeIconType.FlagCheckered} />
+            </div>
+        );
+    }
 
     return (
         <div className = "step-display">

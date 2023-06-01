@@ -63,16 +63,14 @@ html {
     height: 100vh;
     width: 100vw;
 
-    $pageWidth: 65%;
     .page {
         height: 90%;
-        width: $pageWidth;
     }
 
     .page-carousel {
         bottom: 0;
+        height: 10%;
         position: absolute;
-        width: $pageWidth;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
     }

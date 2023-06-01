@@ -3,7 +3,7 @@ import KanaButton from "./KanaButton";
 import { Button } from "@/common/components";
 import "./KanaButtonRow.scss";
 import useMode from "@/hooks/useMode";
-import useSelections from "@/hooks/useSelections";
+import useKanaSelections from "@/hooks/useKanaSelections";
 import { FontAwesomeIconType } from "@/common/types";
 
 interface Props {
@@ -14,11 +14,11 @@ const KanaButtonRow = (props: Props) : JSX.Element => {
     const { row } = props;
     
     const mode = useMode();
-    const { updateSelections } = useSelections();
+    const { updateKanaSelections } = useKanaSelections();
 
     const selectEntireRow = () => {
         const allLetters = row.map(letters => letters[Mode.ID]);
-        updateSelections(allLetters);
+        updateKanaSelections(allLetters);
     };
 
     return (

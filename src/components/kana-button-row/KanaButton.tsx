@@ -1,7 +1,7 @@
 import { Mode } from "@/types";
 import { Button } from "@/common/components";
 import "./KanaButton.scss";
-import useSelections from "@/hooks/useSelections";
+import useKanaSelections from "@/hooks/useKanaSelections";
 
 interface Props {
     letters: string[],
@@ -11,14 +11,14 @@ interface Props {
 const KanaButton = (props: Props) : JSX.Element => {
     const { letters, mode } = props;
 
-    const { selections, updateSelections } = useSelections();
+    const { kanaSelections, updateKanaSelections } = useKanaSelections();
 
-    const isSelected = letters.some(char => selections.includes(char));
+    const isSelected = letters.some(char => kanaSelections.includes(char));
 
     const classes = isSelected ? "kana-button is-selected" : "kana-button";
 
     return (
-        <Button className = {classes} onClick = {() => updateSelections([letters[Mode.ID]])}>
+        <Button className = {classes} onClick = {() => updateKanaSelections([letters[Mode.ID]])}>
             {letters[mode]}
         </Button>
     );

@@ -1,5 +1,8 @@
 @use "../styles/index" as *;
+@use "../common/components/tabs/TabHeader.scss" as *;
+@use "../common/components/searchbar/Searchbar.scss" as *;
 
+$sectionMargin: 5rem;
 .quiz-selection-page {
     align-items: center;
     display: flex;
@@ -18,6 +21,25 @@
         .button {
             position: absolute;
             right: 0;
+        }
+    }
+
+    $headerDistance: calc($tabHeaderHeight + $inputHeight + $sectionSpacing);
+    .quiz-types {
+        @extend %rounded-border;
+        background-color: $mediumGray;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: calc(80% - $headerDistance);
+        margin-top: $headerDistance;
+        padding: 2rem;
+        width: 100%;
+
+        .quiz-type {
+            align-self: center;
+            justify-self: center;
         }
     }
 }

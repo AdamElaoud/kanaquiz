@@ -12,6 +12,13 @@ export enum Mode {
     ID = 2
 };
 
+export enum QuizType {
+    MultipleChoice = "multiple-choice",
+    MultipleChoiceReverse = "multiple-choice-reverse",
+    WriteTheAnswer = "write-the-answer",
+    WriteTheAnswerX3 = "write-the-answer-x3",
+};
+
 export enum PageType {
     KanaSelect = "KanaSelection",
     QuizSelect = "QuizSelection",

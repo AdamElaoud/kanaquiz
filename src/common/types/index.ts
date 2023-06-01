@@ -20,6 +20,9 @@ export type ReactFragment = React.ReactFragment;
 export type ReactInputOnChangeEvent = React.ChangeEvent<HTMLInputElement>;
 export type ReactFormOnSubmitEvent = React.FormEvent<HTMLFormElement>;
 export type ReactSetState<T> = React.Dispatch<React.SetStateAction<T>>;
+export type CSSStyles = React.CSSProperties;
+
+export type windowSize = [width: number, height: number];
 
 export interface ToggleButtonConfig {
     className?: string,
@@ -53,10 +56,14 @@ export enum FontAwesomeIconType {
     ArrowRight = "arrowRight",
     ClipboardQuestion = "clipboardQuestion",
     Check = "check",
+    Doho = "dojo",
     FlagCheckered = "flagCheckered",
     Gear = "gear",
+    NumberList = "numberList",
+    Pencil = "pencil",
     Play = "play",
     Search = "search",
+    Torii = "torii",
     X = "x"
 };
 export type FontAwesomeIconMapType = {

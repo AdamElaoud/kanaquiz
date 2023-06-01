@@ -3,18 +3,17 @@ import { Icon } from "..";
 import "./Step.scss";
 
 interface Props {
-    active: boolean,
-    complete: boolean,
+    active?: boolean,
+    complete?: boolean,
     iconType?: IconType,
     showCheckOnComplete?: boolean,
     title: string,
 };
 
 const DEFAULT_ICON_TYPE = CustomIconType.Blank;
-const DEFAULT_SHOW_CHECK_ON_COMPLETE = false;
 
 const Step = (props: Props) : JSX.Element => {
-    const { active, complete, iconType = DEFAULT_ICON_TYPE, showCheckOnComplete = DEFAULT_SHOW_CHECK_ON_COMPLETE, title } = props;
+    const { active, complete, iconType = DEFAULT_ICON_TYPE, showCheckOnComplete, title } = props;
 
     const classes = ["step"];
     if (active) classes.push("active");

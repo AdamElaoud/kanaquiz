@@ -1,0 +1,27 @@
+@use "../../styles/index" as *;
+
+$borderThickness: 5px;
+.quiz-type {
+    @include padding(2);
+    @extend %rounded-border;
+    align-items: center;
+    background-color: $darkGray;
+    border: $borderThickness solid $darkGray;
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+    justify-content: flex-start;
+    width: 20rem;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &.is-selected {
+        border: $borderThickness solid $active;
+    }
+
+    input {
+        text-align: center;
+    }
+}

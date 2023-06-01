@@ -5,26 +5,24 @@ import { useState } from "react";
 import { Mode } from "@/types";
 import KanaButtonRow from "@/components/kana-button-row/KanaButtonRow";
 import { ModeContextProvider } from "@/hooks/useMode";
-import { SelectionsContextProvider } from "@/hooks/useSelections";
+import { KanaSelectionsContextProvider } from "@/hooks/useKanaSelections";
 import useLocalStorage from "@/common/hooks/useLocalStorage";
 import "./KanaSelection.scss";
-
-const ENGLISH_DELIMITERS = [" ", ",", ", "];
-const JAPANESE_DELIMITERS = ["　", "、"];
+import { ENGLISH_DELIMITERS, JAPANESE_DELIMITERS } from "@/utils/constants";
 
 const KanaSelection = () : JSX.Element => {
-    const [selections, setSelections] = useLocalStorage<string[]>("kana-selections", []);
+    const [kanaSelections, setKanaSelections] = useLocalStorage<string[]>("kana-selections", []);
     const [mode, setMode] = useState<Mode>(Mode.Kana);
     const { hiragana, katakana, search } = useKanaDictionary();
 
     const hiraganaGroups = Object.values(hiragana.groupsToChars);
     const katakanaGroups = Object.values(katakana.groupsToChars);
 
-    const updateSelections = (letters: string[], addOnly?: boolean) => {
-        const updatedSelections = [...selections];
+    const updateKanaSelections = (letters: string[], addOnly?: boolean) => {
+        const updatedSelections = [...kanaSelections];
 
         letters.forEach(letter => {
-            if (selections.includes(letter)) {
+            if (kanaSelections.includes(letter)) {
                 if (!addOnly) {
                     const letterIndex = updatedSelections.findIndex(selection => selection === letter);
                     updatedSelections.splice(letterIndex, 1);
@@ -35,7 +33,7 @@ const KanaSelection = () : JSX.Element => {
             }
         });
 
-        setSelections(updatedSelections);
+        setKanaSelections(updatedSelections);
     };
 
     const searchFn = (_rawSearch: string, queries: string[]) => search(queries);
@@ -46,7 +44,7 @@ const KanaSelection = () : JSX.Element => {
     ];
 
     return (
-        <SelectionsContextProvider value = {{ selections, updateSelections }}>
+        <KanaSelectionsContextProvider value = {{ kanaSelections, updateKanaSelections }}>
             <ModeContextProvider value = {mode}>
                 <div className = "kana-selection-page">
                     <div className = "options-bar">
@@ -76,7 +74,7 @@ const KanaSelection = () : JSX.Element => {
                     </TabSet>
                 </div>
             </ModeContextProvider>
-        </SelectionsContextProvider>
+        </KanaSelectionsContextProvider>
     );
 };
 

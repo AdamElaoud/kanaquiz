@@ -1,5 +1,7 @@
 @use "../../../styles/index" as *;
 
+$stepIconPadding: 0.65rem;
+
 .step {
     align-items: center;
     display: flex;
@@ -10,7 +12,7 @@
     .icon {
         background-color: $darkGray;
         border-radius: 50%;
-        padding: 0.65rem;
+        padding: $stepIconPadding;
     }
 
     .title {

@@ -5,12 +5,12 @@ $searchResultsHeight: 25rem;
 
 .search {
     position: relative;
+    margin-bottom: $sectionSpacing;
     width: 45%;
 
     .search-form {
         display: flex;
         justify-content: center;
-        margin-bottom: $sectionSpacing;
     
         .search-input {
             @extend %padding;
