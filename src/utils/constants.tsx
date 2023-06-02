@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { CustomIconType, FontAwesomeIconType, StepConfig } from "@/common/types";
 import KanaQuiz from "@/pages/KanaQuiz";
 import KanaSelection from "@/pages/KanaSelection";
@@ -6,7 +7,11 @@ import QuizSelection from "@/pages/QuizSelection";
 import QuizSummary from "@/pages/QuizSummary";
 import { PageMapType, PageType, QuizType } from "@/types";
 
-// eslint-disable-next-line
+export const SCREEN_FILL_SIZE = 950; // pixel width at which contents will fill X% of the screen
+export const SCREEN_FILL_PERCENT = 100; // percentage contents should fill the screen for the above size
+export const SCREEN_PARTIAL_FILL_SIZE = 1440; // pixel width at which contents will fill only X% of the screen
+export const SCREEN_PARTIAL_FILL_PERCENT = 65; // percentage contents should fill the screen for the above size
+
 export const PAGE_STEPS: StepConfig[] = [
     {
         iconType: CustomIconType.Hiragana,
@@ -28,7 +33,6 @@ export const PAGE_STEPS: StepConfig[] = [
     },
 ];
 
-// eslint-disable-next-line
 export const PAGES: PageMapType = {
     KanaSelection: <KanaSelection />,
     QuizSelection: <QuizSelection />,
@@ -37,12 +41,9 @@ export const PAGES: PageMapType = {
     QuizRecap: <QuizRecap />
 };
 
-// eslint-disable-next-line
 export const ENGLISH_DELIMITERS = [" ", ",", ", "];
-// eslint-disable-next-line
 export const JAPANESE_DELIMITERS = ["　", "、"];
 
-// eslint-disable-next-line
 export const QUIZ_TYPE_ICONS = {
     [QuizType.MultipleChoice]: FontAwesomeIconType.NumberList,
     [QuizType.MultipleChoiceReverse]: FontAwesomeIconType.NumberList,
@@ -50,7 +51,6 @@ export const QUIZ_TYPE_ICONS = {
     [QuizType.WriteTheAnswerX3]: FontAwesomeIconType.Pencil,
 };
 
-// eslint-disable-next-line
 export const QUIZ_TYPE_TITLES = {
     [QuizType.MultipleChoice]: "Multiple Choice",
     [QuizType.MultipleChoiceReverse]: "Multiple Choice - Reverse",
@@ -58,7 +58,6 @@ export const QUIZ_TYPE_TITLES = {
     [QuizType.WriteTheAnswerX3]: "Write the Answer x3",
 };
 
-// eslint-disable-next-line
 export const QUIZ_TYPE_MINI_TITLES = {
     [QuizType.MultipleChoice]: "Choice",
     [QuizType.MultipleChoiceReverse]: "Choice Reverse",
@@ -66,7 +65,6 @@ export const QUIZ_TYPE_MINI_TITLES = {
     [QuizType.WriteTheAnswerX3]: "Write x3",
 };
 
-// eslint-disable-next-line
 export const QUIZ_TYPES = [
     { 
         key: 0,
