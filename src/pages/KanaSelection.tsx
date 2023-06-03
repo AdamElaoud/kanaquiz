@@ -8,7 +8,7 @@ import { ModeContextProvider } from "@/hooks/useMode";
 import { KanaSelectionsContextProvider } from "@/hooks/useKanaSelections";
 import useLocalStorage from "@/common/hooks/useLocalStorage";
 import "./KanaSelection.scss";
-import { ENGLISH_DELIMITERS, JAPANESE_DELIMITERS, SCREEN_FILL_PERCENT, SCREEN_FILL_SIZE, SCREEN_PARTIAL_FILL_PERCENT, SCREEN_PARTIAL_FILL_SIZE } from "@/utils/constants";
+import { ENGLISH_DELIMITERS, JAPANESE_DELIMITERS, SCREEN_FILL_SIZE, SCREEN_PARTIAL_FILL_SIZE } from "@/utils/constants";
 import useDynamicWidth from "@/common/hooks/useDynamicWidth";
 
 const KanaSelection = () : JSX.Element => {
