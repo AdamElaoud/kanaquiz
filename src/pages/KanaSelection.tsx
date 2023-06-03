@@ -13,10 +13,11 @@ import { ENGLISH_DELIMITERS, JAPANESE_DELIMITERS } from "@/utils/constants";
 const KanaSelection = () : JSX.Element => {
     const [kanaSelections, setKanaSelections] = useLocalStorage<string[]>("kana-selections", []);
     const [mode, setMode] = useState<Mode>(Mode.Kana);
-    const { hiragana, katakana, search } = useKanaDictionary();
+    const { hiragana, katakana, lookalikes, search } = useKanaDictionary();
 
     const hiraganaGroups = Object.values(hiragana.groupsToChars);
     const katakanaGroups = Object.values(katakana.groupsToChars);
+    const lookalikesGroups = Object.values(lookalikes.groupsToChars);
 
     const updateKanaSelections = (letters: string[], addOnly?: boolean) => {
         const updatedSelections = [...kanaSelections];
@@ -67,6 +68,12 @@ const KanaSelection = () : JSX.Element => {
                         </Tab>
                         <Tab title = "カ Katakana" tabID = {1}>
                             {katakanaGroups.map(group =>
+                                // key is first Kana in group
+                                <KanaButtonRow key = {group[0][Mode.Kana]} row = {group}/>
+                            )}
+                        </Tab>
+                        <Tab title = "Lookalikes" tabID = {2}>
+                            {lookalikesGroups.map(group =>
                                 // key is first Kana in group
                                 <KanaButtonRow key = {group[0][Mode.Kana]} row = {group}/>
                             )}

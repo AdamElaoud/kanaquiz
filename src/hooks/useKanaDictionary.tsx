@@ -2,6 +2,7 @@ import KanaButtonRow from "@/components/kana-button-row/KanaButtonRow";
 import { Mode } from "@/types";
 import { charsToGroups as hiraganaCharsToGroups, groupsToChars as hiraganaGroupsToChars } from "@/utils/hiragana";
 import { charsToGroups as kataKanaCharsToGroups, groupsToChars as katakanaGroupsToChars } from "@/utils/katakana";
+import { groupsToChars as lookalikeGroupsToChars } from "@/utils/lookalikes";
 
 const useKanaDictionary = () => {
     const search = (queries: string[]) => {
@@ -25,7 +26,7 @@ const useKanaDictionary = () => {
 
         const uniqueSearchResults = [...(new Set([...hiraganaSearchResults, ...katakanaSearchResults]))];
 
-        const allKanaGroups = { ...hiraganaGroupsToChars, ...katakanaGroupsToChars };
+        const allKanaGroups = { ...hiraganaGroupsToChars, ...katakanaGroupsToChars, ...lookalikeGroupsToChars };
 
         const kanaGroups = uniqueSearchResults.map(result => allKanaGroups[result]);
 
@@ -43,6 +44,9 @@ const useKanaDictionary = () => {
         katakana: {
             groupsToChars: katakanaGroupsToChars,
             charsToGroups: kataKanaCharsToGroups
+        },
+        lookalikes: {
+            groupsToChars: lookalikeGroupsToChars
         },
         search
     };
