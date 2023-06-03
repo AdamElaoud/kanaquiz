@@ -16,7 +16,7 @@ $stepIconPadding: 0.65rem;
     }
 
     .title {
-        margin-top: 0.25rem;
+        margin-top: 0.1rem;
         text-align: center;
     }
 
@@ -29,6 +29,14 @@ $stepIconPadding: 0.65rem;
     &.complete {
         .icon {
             background-color: $complete;
+        }
+    }
+}
+
+@media (max-width: $sizeWidthThreshhold) {
+    .step {
+        .title {
+            font-size: $miniFontSize;
         }
     }
 }

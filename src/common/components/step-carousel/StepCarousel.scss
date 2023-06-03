@@ -1,6 +1,7 @@
 @use "../../../styles/" as *;
 
 $buttonSpacing: 2%;
+$stepTitleMargin: 1rem;
 
 .step-carousel {
     @include padding(2);
@@ -34,7 +35,7 @@ $buttonSpacing: 2%;
 
         .step-text {
             font-weight: $fontWeightBold;
-            margin-top: 1rem;
+            margin-top: $stepTitleMargin;
             text-align: center;
         }
     }
@@ -48,8 +49,11 @@ $buttonSpacing: 2%;
             font-size: $smallFontSize;
         }
     
-        .step-text {
-            font-size: $smallFontSize;
+        .steps-content {
+            .step-text {
+                font-size: $smallFontSize;
+                margin-top: calc($stepTitleMargin / 3);
+            }
         }
     }
 }
