@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useFocusTarget = () => {
+const useFocusTarget = () : HTMLElement | null => {
     const [nextFocusTarget, setNextFocusTarget] = useState<HTMLElement | null>(null);
 
     useEffect(() => {

@@ -1,7 +1,7 @@
 import { useState, useLayoutEffect } from "react";
 import { WindowSize } from "../types";
 
-const useWindowSize = () => {
+const useWindowSize = () : WindowSize => {
     const [size, setSize] = useState<WindowSize>([0, 0]);
 
     useLayoutEffect(() => {

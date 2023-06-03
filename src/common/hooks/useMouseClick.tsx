@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useMouseClick = () => {
+const useMouseClick = () : HTMLElement | null => {
     const [mouseClickTarget, setMouseClickTarget] = useState<HTMLElement | null>(null);
 
     useEffect(() => {
