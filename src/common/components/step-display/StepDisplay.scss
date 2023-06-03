@@ -1,6 +1,10 @@
 @use "../../../styles/index" as *;
 @use "./Step.scss" as *;
 
+$barHeight: 0.2rem;
+$barSideMargin: 1rem;
+$barWidth: 4rem;
+
 .step-display {
     align-items: flex-start;
     display: flex;
@@ -12,15 +16,13 @@
         padding: $stepIconPadding;
     }
 
-    $barHeight: 0.2rem;
-    $barSideMargin: 1rem;
     .bar {
         background-color: $lightBlack;
         height: $barHeight;
         margin-top: calc(($largeIconSize / 2) - ($barHeight / 2));
         margin-left: $barSideMargin;
         margin-right: $barSideMargin;
-        width: 4rem;
+        width: $barWidth;
 
         &.active {
             background-color: $active;
@@ -28,6 +30,16 @@
 
         &.complete {
             background-color: $complete;
+        }
+    }
+}
+
+@media (max-width: $sizeWidthThreshhold) {
+    .step-display {
+        .bar {
+            margin-left: calc($barSideMargin / 4);
+            margin-right: calc($barSideMargin / 4);
+            width: calc($barWidth / 4);
         }
     }
 }
