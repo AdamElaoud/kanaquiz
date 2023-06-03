@@ -22,7 +22,7 @@ export type ReactFormOnSubmitEvent = React.FormEvent<HTMLFormElement>;
 export type ReactSetState<T> = React.Dispatch<React.SetStateAction<T>>;
 export type CSSStyles = React.CSSProperties;
 
-export type windowSize = [width: number, height: number];
+export type WindowSize = [width: number, height: number];
 
 export interface ToggleButtonConfig {
     className?: string,

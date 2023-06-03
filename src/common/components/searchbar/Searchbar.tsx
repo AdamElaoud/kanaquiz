@@ -2,6 +2,7 @@ import { ReactFormOnSubmitEvent, ReactInputOnChangeEvent, ReactNode } from "@/co
 import { useState, useRef } from "react";
 import "./Searchbar.scss";
 import "@/styles/_index.scss";
+import useMouseClick from "@/common/hooks/useMouseClick";
 
 interface Props {
     delimiters?: string[],
@@ -16,8 +17,9 @@ const Searchbar = (props: Props) : JSX.Element => {
     
     const [searchText, setSearchText] = useState<string>("");
     const [searchResults, setSearchResults] = useState<ReactNode[]>([]);
-    const [showResults, setShowResults] = useState<boolean>(false);
     const searchResultsRef = useRef<HTMLDivElement>(null);
+    const searchInputRef = useRef<HTMLInputElement>(null);
+    const clickTarget = useMouseClick();
 
     const onSearchChange = (event: ReactInputOnChangeEvent) => {
         const rawSearch = event.target.value;
@@ -31,12 +33,17 @@ const Searchbar = (props: Props) : JSX.Element => {
         const results = searchFn(rawSearch, cleanQueries(queries, delimiters));
 
         setSearchResults(results);
-        setShowResults(results.length > 0);
     };
 
     const onSubmit = (event: ReactFormOnSubmitEvent) => {
         event.preventDefault();
     };
+
+    const hasResults = searchResults.length > 0;
+    const searchInputIsTarget = searchInputRef.current?.contains(clickTarget);
+    const searchResultsIsTarget = searchResultsRef.current?.contains(clickTarget);
+    
+    const showResults = (searchInputIsTarget && hasResults) || searchResultsIsTarget;
 
     const inputClasses = showResults ? "search-input showing-results" : "search-input";
 
@@ -49,10 +56,10 @@ const Searchbar = (props: Props) : JSX.Element => {
                     name = "searchbar"
                     type = "search"
                     role = "search"
+                    ref = {searchInputRef}
                     placeholder = {placeholder}
                     value = {searchText}
                     onChange = {onSearchChange}
-                    onFocus = {() => setShowResults(searchResults.length > 0)}
                 />
             </form>
             {showResults &&
@@ -60,6 +67,7 @@ const Searchbar = (props: Props) : JSX.Element => {
                 <div
                     className = "search-results-container"
                     ref = {searchResultsRef}
+                    tabIndex = {-1} // tabIndex is required for a div to be focusable
                 >
                     <div className = "search-results">
                         {searchResults}

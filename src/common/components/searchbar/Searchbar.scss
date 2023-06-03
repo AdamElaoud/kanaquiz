@@ -32,7 +32,7 @@ $searchResultsHeight: 25rem;
         background-color: $mediumGray;
         border-bottom-left-radius: $borderRadius;
         border-bottom-right-radius: $borderRadius;
-        bottom: calc($sectionSpacing - $searchResultsHeight);
+        bottom: -$searchResultsHeight;
         height: $searchResultsHeight;
         max-width: 100%;
         position: absolute;
