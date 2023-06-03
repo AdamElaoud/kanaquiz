@@ -1,4 +1,4 @@
-import { ReactFormOnSubmitEvent, ReactInputOnChangeEvent, ReactNode } from "@/common/types";
+import { CSSStyles, ReactFormOnSubmitEvent, ReactInputOnChangeEvent, ReactNode } from "@/common/types";
 import { useState, useRef } from "react";
 import "./Searchbar.scss";
 import "@/styles/_index.scss";
@@ -7,13 +7,14 @@ import useMouseClick from "@/common/hooks/useMouseClick";
 interface Props {
     delimiters?: string[],
     placeholder?: string,
-    searchFn: (rawSearch: string, queries: string[]) => ReactNode[]
+    searchFn: (rawSearch: string, queries: string[]) => ReactNode[],
+    style?: CSSStyles
 };
 
 const DEFAULT_DELIMITER = [" "];
 
 const Searchbar = (props: Props) : JSX.Element => {
-    const { delimiters = DEFAULT_DELIMITER, placeholder = "", searchFn } = props;
+    const { delimiters = DEFAULT_DELIMITER, placeholder = "", searchFn, style } = props;
     
     const [searchText, setSearchText] = useState<string>("");
     const [searchResults, setSearchResults] = useState<ReactNode[]>([]);
@@ -48,7 +49,7 @@ const Searchbar = (props: Props) : JSX.Element => {
     const inputClasses = showResults ? "search-input showing-results" : "search-input";
 
     return (
-        <div className = "search">
+        <div className = "search" style = {style}>
             <form className = "search-form" role = "search" onSubmit = {onSubmit}>
                 <label className = "visually-hidden" htmlFor = "searchbar">Search for Kana</label>
                 <input

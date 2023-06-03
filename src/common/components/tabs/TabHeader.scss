@@ -1,15 +1,17 @@
 @use "../../../styles//index" as *;
 
 $tabHeaderBorderRadius: 1.5rem;
-$tabHeaderHeight: 4rem;
-$tabHeaderWidth: 16rem;
+$tabHeaderHeight: 3.5rem;
+$tabHeaderWidth: 11rem;
 
 .tab-header {
     align-items: center;
     background-color: $lightGray;
+    border-right: 1px solid $mediumBlack;
     border-top-left-radius: $tabHeaderBorderRadius;
     border-top-right-radius: $tabHeaderBorderRadius;
     display: flex;
+    font-size: $smallFontSize;
     height: $tabHeaderHeight;
     justify-content: center;
     width: $tabHeaderWidth;

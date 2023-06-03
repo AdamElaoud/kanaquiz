@@ -11,6 +11,8 @@
         flex-direction: row;
         height: $tabHeaderHeight;
         left: 0;
+        max-width: 100%;
+        overflow-x: auto;
         position: absolute;
         top: 0;
     }

@@ -9,10 +9,11 @@ $sectionMargin: 5rem;
     flex-direction: column;
     height: 100%;
 
+    $optionsBarHeight: 5rem;
     .options-bar {
         align-items: center;
         display: flex;
-        height: 5rem;
+        height: $optionsBarHeight;
         justify-content: center;
         margin-bottom: $sectionSpacing;
         position: relative;
@@ -20,7 +21,7 @@ $sectionMargin: 5rem;
 
         .button {
             position: absolute;
-            right: 0;
+            right: calc(($optionsBarHeight - $mediumIconSize - $padding) / 2);
         }
     }
 
