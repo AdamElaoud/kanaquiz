@@ -9,9 +9,9 @@ $borderThickness: 5px;
     border: $borderThickness solid $darkGray;
     display: flex;
     flex-direction: column;
-    height: 20rem;
+    height: 100%;
     justify-content: flex-start;
-    width: 20rem;
+    width: 100%;
 
     &:hover {
         cursor: pointer;

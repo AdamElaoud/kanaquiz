@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { ReactNode } from "@/common/types";
 import { createContext, useContext } from "react";
 
@@ -8,7 +9,6 @@ type KanaSelectionsContextType = {
 
 const KanaSelectionsContext = createContext<KanaSelectionsContextType>({} as KanaSelectionsContextType);
 
-// eslint-disable-next-line
 export const useKanaSelections = () => {
     const context = useContext(KanaSelectionsContext);
 
@@ -34,5 +34,4 @@ export const KanaSelectionsContextProvider = (props: Props) => {
     );
 };
 
-// eslint-disable-next-line
 export default useKanaSelections;

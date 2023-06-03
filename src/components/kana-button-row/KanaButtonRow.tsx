@@ -13,7 +13,7 @@ interface Props {
 const KanaButtonRow = (props: Props) : JSX.Element => {
     const { row } = props;
     
-    const mode = useMode();
+    const { mode } = useMode();
     const { updateKanaSelections } = useKanaSelections();
 
     const selectEntireRow = () => {

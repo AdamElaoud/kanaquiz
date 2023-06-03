@@ -1,5 +1,3 @@
-import { FontAwesomeIconType, Size } from "@/common/types";
-import { Button } from "@/common/components";
 import "./QuizSelection.scss";
 import QuizTypeCard from "@/components/quiz-type/QuizTypeCard";
 import { useState } from "react";
@@ -28,10 +26,6 @@ const QuizSelection = () : JSX.Element => {
     return (
         <QuizSelectionsContextProvider value = {{ quizSelections, updateQuizSelections }}>
             <div className = "quiz-selection-page">
-                <div className = "options-bar">
-                    <Button iconType = {FontAwesomeIconType.Gear} iconSize = {Size.Medium} onClick = {() => console.log("settings!")} />
-                </div>
-
                 <div className = "quiz-types">
                     {QUIZ_TYPES.map(quizType => <QuizTypeCard {...quizType}/>)}
                 </div>

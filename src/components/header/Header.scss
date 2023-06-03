@@ -1,0 +1,23 @@
+@use "../../styles/index" as *;
+
+$optionsBarHeight: 5rem;
+.header {
+    align-items: center;
+    display: flex;
+    height: $optionsBarHeight;
+    justify-content: center;
+    margin-bottom: $sectionSpacing;
+    position: relative;
+    width: 100%;
+
+    .logo {
+        position: absolute;
+        left: calc(($optionsBarHeight - $mediumIconSize - $padding) / 2);
+        color: white;
+    }
+
+    .button {
+        position: absolute;
+        right: calc(($optionsBarHeight - $mediumIconSize - $padding) / 2);
+    }
+}

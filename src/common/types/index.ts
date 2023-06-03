@@ -56,7 +56,7 @@ export enum FontAwesomeIconType {
     ArrowRight = "arrowRight",
     ClipboardQuestion = "clipboardQuestion",
     Check = "check",
-    Doho = "dojo",
+    Dojo = "dojo",
     FlagCheckered = "flagCheckered",
     Gear = "gear",
     NumberList = "numberList",

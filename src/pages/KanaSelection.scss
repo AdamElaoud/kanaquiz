@@ -6,23 +6,7 @@
     flex-direction: column;
     height: 100%;
 
-    $optionsBarHeight: 5rem;
-    .options-bar {
-        align-items: center;
-        display: flex;
-        height: $optionsBarHeight;
-        justify-content: center;
-        margin-bottom: $sectionSpacing;
-        position: relative;
-        width: 100%;
-
-        .button {
-            position: absolute;
-            right: calc(($optionsBarHeight - $mediumIconSize - $padding) / 2);
-        }
-    }
-
     .selection-tabset {
-        height: 80%;
+        height: 85%;
     }
 }

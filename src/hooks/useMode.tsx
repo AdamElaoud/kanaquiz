@@ -1,10 +1,15 @@
-import { ReactNode } from "@/common/types";
+/* eslint-disable */
+import { ReactNode, ReactSetState } from "@/common/types";
 import { Mode } from "@/types";
 import { createContext, useContext } from "react";
 
-const ModeContext = createContext<Mode>(Mode.Kana);
+type ModeContextType = {
+    mode: Mode,
+    setMode: ReactSetState<Mode>
+};
 
-// eslint-disable-next-line
+const ModeContext = createContext<ModeContextType>({} as ModeContextType);
+
 export const useMode = () => {
     const context = useContext(ModeContext);
 
@@ -17,7 +22,7 @@ export const useMode = () => {
 
 interface Props {
     children: ReactNode,
-    value: Mode
+    value: ModeContextType
 };
 
 export const ModeContextProvider = (props: Props) => {
@@ -30,5 +35,4 @@ export const ModeContextProvider = (props: Props) => {
     );
 };
 
-// eslint-disable-next-line
 export default useMode;

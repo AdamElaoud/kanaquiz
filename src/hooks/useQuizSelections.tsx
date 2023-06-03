@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { ReactNode } from "@/common/types";
 import { QuizType } from "@/types";
 import { createContext, useContext } from "react";
@@ -9,7 +10,6 @@ type QuizSelectionsContextType = {
 
 const QuizSelectionsContext = createContext<QuizSelectionsContextType>({} as QuizSelectionsContextType);
 
-// eslint-disable-next-line
 export const useQuizSelections = () => {
     const context = useContext(QuizSelectionsContext);
 
@@ -35,5 +35,4 @@ export const QuizSelectionsContextProvider = (props: Props) => {
     );
 };
 
-// eslint-disable-next-line
 export default useQuizSelections;

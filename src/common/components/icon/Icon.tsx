@@ -5,6 +5,7 @@ import "./Icon.scss";
 
 interface Props {
     className?: string,
+    onClick?: () => void,
     size?: Size,
     type: IconType
 };
@@ -12,7 +13,7 @@ interface Props {
 const DEFAULT_ICON_SIZE = Size.Medium;
 
 const Icon = (props: Props) : JSX.Element => {
-    const { className, type, size = DEFAULT_ICON_SIZE } = props;
+    const { className, onClick, size = DEFAULT_ICON_SIZE, type } = props;
     
     const classes = ["icon", size];
     if (className) classes.push(className);
@@ -21,14 +22,16 @@ const Icon = (props: Props) : JSX.Element => {
         const fontAwesomeIconType = FontAwesomeIconMap[type];
 
         return (
-          <FontAwesomeIcon className = {classes.join(" ")} icon = {fontAwesomeIconType} />
+            <span className = {classes.join(" ")} onClick = {onClick}>
+                <FontAwesomeIcon icon = {fontAwesomeIconType} />
+            </span>
         );
         
     } else if (isCustomIconType(type)) {
         const customIconType = CustomIconMap[type];
 
         return (
-            <div className = {classes.join(" ")}>
+            <div className = {classes.join(" ")} onClick = {onClick}>
                 {customIconType}
             </div>
         );

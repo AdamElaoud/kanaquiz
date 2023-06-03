@@ -16,7 +16,7 @@ export const PAGE_STEPS: StepConfig[] = [
     {
         iconType: CustomIconType.Hiragana,
         ID: PageType.KanaSelect,
-        text: "Select the Kana for your quiz!",
+        text: "Select Kana for your quiz!",
         title: "Kana"
     },
     {
