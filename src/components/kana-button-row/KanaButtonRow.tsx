@@ -1,4 +1,4 @@
-import { Mode } from "@/types";
+import { KanaButtonProps, Mode } from "@/types";
 import KanaButton from "./KanaButton";
 import { Button } from "@/common/components";
 import "./KanaButtonRow.scss";
@@ -26,7 +26,15 @@ const KanaButtonRow = (props: Props) : JSX.Element => {
             <Button className = 'select-all-button' onClick = {selectEntireRow} iconType = {FontAwesomeIconType.ArrowRight} />
 
             {row.map(letters => {
-                const kanaButtonProps = { key: letters[Mode.Kana], letters, mode };
+                const kanaButtonProps: Pick<KanaButtonProps, keyof KanaButtonProps> & { key: string } = {
+                    key: letters[Mode.Kana],
+                    letters,
+                    mode
+                };
+                
+                if (letters[Mode.Kana].length > 1)
+                    kanaButtonProps.className = "wide-button";
+
                 return <KanaButton {...kanaButtonProps} />;
             })}
         </div>

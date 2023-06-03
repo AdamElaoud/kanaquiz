@@ -38,3 +38,9 @@ export type CharsToGroups = {
 export type GroupsToChars = {
     [key: string]: string[][]
 };
+
+export interface KanaButtonProps {
+    className?: string,
+    letters: string[],
+    mode: Mode,
+};
