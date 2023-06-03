@@ -24,12 +24,6 @@ html {
         input {
             font-size: $smallFontSize;
             outline: transparent;
-
-            &::-webkit-search-cancel-button {
-                &:hover {
-                    cursor: pointer;
-                }
-            }
         }
 
         ::-webkit-scrollbar {
@@ -51,11 +45,6 @@ html {
         ::-webkit-scrollbar-thumb {
             background-color: $mediumBlack;
             border-radius: $scrollBarBorderRadius;
-            
-            &:hover {
-                background-color: $darkBlack;
-                cursor: pointer;
-            }
         }
     }
 }
@@ -87,6 +76,27 @@ html {
     
         .page-carousel {
             height: 15%;
+        }
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    html {        
+        body {    
+            input {
+                &::-webkit-search-cancel-button {
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            ::-webkit-scrollbar-thumb {                
+                &:hover {
+                    background-color: $darkBlack;
+                    cursor: pointer;
+                }
+            }
         }
     }
 }

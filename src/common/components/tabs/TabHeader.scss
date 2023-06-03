@@ -16,13 +16,17 @@ $tabHeaderWidth: 10rem;
     justify-content: center;
     width: $tabHeaderWidth;
     
-    &:hover {
-        background-color: $mediumGray;
-        cursor: pointer;
-    }
-    
     &.active {
         background-color: $darkGray;
         font-weight: $fontWeightBold;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .tab-header {
+        &:hover {
+            background-color: $mediumGray;
+            cursor: pointer;
+        }
     }
 }

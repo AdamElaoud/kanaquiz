@@ -13,15 +13,19 @@ $borderThickness: 5px;
     justify-content: flex-start;
     width: 100%;
 
-    &:hover {
-        cursor: pointer;
-    }
-
     &.is-selected {
         border: $borderThickness solid $active;
     }
 
     input {
         text-align: center;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .quiz-type {
+        &:hover {
+            cursor: pointer;
+        }
     }
 }

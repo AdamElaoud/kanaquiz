@@ -8,13 +8,17 @@
     display: flex;
     justify-content: center;
 
-    &:hover {
-        cursor: pointer;
-        background-color: $lightBlack;
-    }
-
     &:disabled {
         cursor: auto;
         background-color: $darkGray;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .button {
+        &:hover {
+            cursor: pointer;
+            background-color: $lightBlack;
+        }
     }
 }

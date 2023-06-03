@@ -13,11 +13,6 @@
         @extend %padding;
         font-size: $smallFontSize;
         font-weight: $fontWeightNormal;
-        
-        &:hover {
-            background-color: $mediumGray;
-            cursor: pointer;
-        }
 
         &.active {
             background-color: $darkGray;
@@ -31,5 +26,16 @@
 
     .right {
         margin-left: calc($borderThickness / 2);
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .toggle {
+        .toggle-button {
+            &:hover {
+                background-color: $mediumGray;
+                cursor: pointer;
+            }
+        }
     }
 }
