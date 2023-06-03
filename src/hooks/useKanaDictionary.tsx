@@ -6,7 +6,9 @@ import { groupsToChars as lookalikeGroupsToChars } from "@/utils/lookalikes";
 
 const useKanaDictionary = () => {
     const search = (queries: string[]) => {
-        const hiraganaSearchResults = queries.reduce((searchResults: string[], query: string) => {
+        const normalizedQueries = queries.map(query => query.toLocaleLowerCase());
+
+        const hiraganaSearchResults = normalizedQueries.reduce((searchResults: string[], query: string) => {
             const groups: string[] = hiraganaCharsToGroups[query];
 
             if (groups)
@@ -15,7 +17,7 @@ const useKanaDictionary = () => {
             return searchResults;
         }, []);
 
-        const katakanaSearchResults = queries.reduce((searchResults: string[], query: string) => {
+        const katakanaSearchResults = normalizedQueries.reduce((searchResults: string[], query: string) => {
             const groups: string[] = kataKanaCharsToGroups[query];
 
             if (groups)
