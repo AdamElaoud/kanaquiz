@@ -30,9 +30,9 @@ export interface ToggleButtonConfig {
     text: string
 };
 
-export type StepState = (stepState: { prevStepID?: number | string, prevStepTitle?: number | string, newStepID?: number | string, newStepTitle?: number | string }) => void;
+export type StepState = (stepState: { prevStepID: number | string, prevStepTitle: number | string, newStepID: number | string, newStepTitle: number | string }) => void;
 
-export type TabState = (tabState: { prevTabID?: number, prevTabTitle?: string, newTabID?: number, newTabTitle?: string }) => void;
+export type TabState = (tabState: { prevTabID: number, prevTabTitle: string, newTabID: number, newTabTitle: string }) => void;
 
 export interface StepConfig {
     className?: string,

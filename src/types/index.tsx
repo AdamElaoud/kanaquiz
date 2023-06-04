@@ -27,6 +27,12 @@ export enum PageType {
     QuizRecap = "QuizRecap"
 };
 
+export enum TabID {
+    Hiragana = 0,
+    Katakana = 1,
+    Lookalikes = 2
+};
+
 export type PageMapType = {
     [key in PageType]: ReactNode;
 };
