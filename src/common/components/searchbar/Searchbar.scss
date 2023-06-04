@@ -11,12 +11,18 @@ $searchResultsHeight: 25rem;
     .search-form {
         display: flex;
         justify-content: center;
+
+        input::placeholder {
+            color: $darkModeTextColor;
+            opacity: 0.5;
+        }
     
         .search-input {
             @extend %padding;
             @extend %rounded-border;
-            background-color: $lightGray;
+            background-color: $navyBlack;
             border: none;
+            color: $darkModeTextColor;
             height: $inputHeight;
             width: 100%;
             
@@ -28,8 +34,9 @@ $searchResultsHeight: 25rem;
     }
     
     .search-results-container {
+        @include box-shadow();
         @extend %padding;
-        background-color: $mediumGray;
+        background-color: $navyBlack;
         border-bottom-left-radius: $borderRadius;
         border-bottom-right-radius: $borderRadius;
         bottom: -$searchResultsHeight;

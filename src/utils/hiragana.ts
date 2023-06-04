@@ -46,7 +46,7 @@ export const charsToGroups: CharsToGroups = {
     "せ": ["h_s", "la_7"], "se": ["h_s", "la_7"],
     "そ": ["h_s"], "so": ["h_s"],
     "た": ["h_t"], "ta": ["h_t"],
-    "ち": ["h_t"], "chi": ["h_t"],
+    "ち": ["h_t", "la_6"], "chi": ["h_t", "la_6"],
     "つ": ["h_t", "la_8"], "tsu": ["h_t", "la_8"],
     "て": ["h_t"], "te": ["h_t"],
     "と": ["h_t"], "to": ["h_t"],

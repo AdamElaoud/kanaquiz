@@ -1,31 +1,27 @@
 @use "../../../styles/index" as *;
 
 .toggle {
-    @include padding(0.25);
+    @include padding(0.5);
     @extend %rounded-border;
     align-items: center;
-    background-color: $lightGray;
-    border: $borderThickness solid $lightGray;
+    background-color: $navyBlack;
+    border: $borderThickness solid $navyBlack;
     display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
     
     .toggle-button {
         @extend %rounded-border;
         @extend %padding;
+        background-color: $trueGray;
         font-size: $smallFontSize;
         font-weight: $fontWeightNormal;
 
         &.active {
-            background-color: $darkGray;
+            background-color: $active;
+            color: $lightModeTextColor;
             font-weight: $fontWeightBold;
         }
-    }
-
-    .left {
-        margin-right: calc($borderThickness / 2);
-    }
-
-    .right {
-        margin-left: calc($borderThickness / 2);
     }
 }
 
@@ -33,8 +29,14 @@
     .toggle {
         .toggle-button {
             &:hover {
-                background-color: $mediumGray;
+                background-color: $active;
+                color: $lightModeTextColor;
                 cursor: pointer;
+            }
+
+            &.active {
+                background-color: $active;
+                color: $lightModeTextColor;
             }
         }
     }

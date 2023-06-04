@@ -1,18 +1,21 @@
 @use "../../styles/index" as *;
 
+$quizTypeCardBorderThickness: $borderThickness;
+
 $borderThickness: 5px;
 .quiz-type {
     @include padding(3);
+    @include box-shadow(0px, 0px, 6px, 1px, rgba(125, 125, 125, 0.4));
     @extend %rounded-border;
     align-items: center;
-    background-color: $darkGray;
-    border: $borderThickness solid $darkGray;
+    background-color: $navyBlack;
+    border: $quizTypeCardBorderThickness solid $navyBlack;
     display: flex;
     flex-direction: column;
     height: 90%;
     justify-content: space-between;
     width: 50%;
-    
+    // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     .quiz-type-header {
         align-items: center;
         display: flex;
@@ -25,19 +28,19 @@ $borderThickness: 5px;
             width: $iconSize;
 
             &.crimson {
-                background-color: crimson;
+                background-color: $crimson;
             }
 
             &.lightgreen {
-                background-color: lightgreen;
+                background-color: $complete;
             }
 
             &.lightskyblue {
-                background-color: lightskyblue;
+                background-color: $active;
             }
 
             &.gold {
-                background-color: gold;
+                background-color: $gold;
             }
         }
 
@@ -58,21 +61,22 @@ $borderThickness: 5px;
         align-items: center;
         display: flex;
         flex-direction: column;
-
+        
         .amount {
             font-size: $smallFontSize;
             margin-bottom: 0.25rem;
         }
-
+        
         input {
             @extend %rounded-border;
             border: none;
+            font-weight: $fontWeightBold;
             text-align: center;
         }
     }
     
     &.is-selected {
-        border: $borderThickness solid $active;
+        border: $quizTypeCardBorderThickness solid $active;
     }
 }
 

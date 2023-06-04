@@ -6,8 +6,8 @@ $tabHeaderWidth: 10rem;
 
 .tab-header {
     align-items: center;
-    background-color: $lightGray;
-    border-right: 1px solid $mediumBlack;
+    background-color: $trueGray;
+    border-right: 1px solid $richBlack;
     border-top-left-radius: $tabHeaderBorderRadius;
     border-top-right-radius: $tabHeaderBorderRadius;
     display: flex;
@@ -17,7 +17,7 @@ $tabHeaderWidth: 10rem;
     width: $tabHeaderWidth;
     
     &.active {
-        background-color: $darkGray;
+        background-color: $navyBlack;
         font-weight: $fontWeightBold;
     }
 }
@@ -25,8 +25,14 @@ $tabHeaderWidth: 10rem;
 @media (hover: hover) and (pointer: fine) {
     .tab-header {
         &:hover {
-            background-color: $mediumGray;
+            background-color: $active;
+            color: $lightModeTextColor;
             cursor: pointer;
+        }
+
+        &.active {
+            background-color: $navyBlack;
+            color: $darkModeTextColor;
         }
     }
 }

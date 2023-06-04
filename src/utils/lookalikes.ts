@@ -6,7 +6,7 @@ export const groupsToChars: GroupsToChars = {
     "la_3": [ ["れ", "re", "h_re"], ["ね", "ne", "h_ne"], ["わ", "wa", "h_wa"] ],
     "la_4": [ ["ア", "a", "k_a"], ["ヤ", "ya", "k_ya"] ],
     "la_5": [ ["め", "me", "h_me"], ["ぬ", "nu", "h_nu"] ],
-    "la_6": [ ["き", "ki", "h_ki"], ["さ", "sa", "h_sa"], ["ら", "ra", "h_ra"] ],
+    "la_6": [ ["き", "ki", "h_ki"], ["さ", "sa", "h_sa"], ["ち", "chi", "h_chi"], ["ら", "ra", "h_ra"] ],
     "la_7": [ ["せ", "se", "h_se"], ["サ", "sa", "k_sa"] ],
     "la_8": [ ["う", "u", "h_u"], ["つ", "tsu", "h_tsu"] ],
     "la_9": [ ["に", "ni", "h_ni"], ["こ", "ko", "h_ko"] ],

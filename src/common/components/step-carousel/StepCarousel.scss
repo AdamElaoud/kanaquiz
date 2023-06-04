@@ -1,28 +1,19 @@
 @use "../../../styles/" as *;
 
-$buttonSpacing: 2%;
 $stepTitleMargin: 1rem;
 
 .step-carousel {
     @include padding(2);
     @extend %rounded-border;
     align-items: center;
-    background-color: $mediumGray;
+    background-color: $navyBlack;
     display: flex;
     height: 12rem;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     
     button {
         font-size: $mediumFontSize;
-    }
-
-    .back-button {
-        margin-right: $buttonSpacing
-    }
-
-    .next-button {
-        margin-left: $buttonSpacing;
     }
 
     .steps-content {

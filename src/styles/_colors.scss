@@ -1,46 +1,18 @@
-$textColor: #000;
+$lightModeTextColor: #000;
+$darkModeTextColor: #ffffff;
 
-$lightGray: #f1f1f1;
-$mediumGray: #dfdfdf;
-$darkGray: #c0c0c0;
+$richBlack: #010818; // screen background
+$navyBlack: #06152a; // secondary item background
+$trueGray: #1f2939; // primary item background
 
-$lightBlack: #818181;
-$mediumBlack: #353535;
-$darkBlack: #1e1e1e;
+$lightActive: #47e2ff;
+$active: #00b5e7;
 
-$active: #8dbdff;
-$complete: #7bbf6a;
+$complete: #39d71a;
 
+$gold: #ffc403;
+$unsaturatedGold: #ffc544;
 
-// PALETTES
-$screenBackground: #010818;
-$darkItemBackground: #041122;
-$lightItemBackground: #1a222f;
-
-$screenBackground: #1a1c28;
-$darkItemBackground: #23283b;
-$lightItemBackground: #2a2c41;
-
-$screenBackground: #010818;
-$darkItemBackground: #1b2330;
-// $lightItemBackground: ;
-
-$screenBackground: #040a2c;
-$darkItemBackground: #1a1d46;
-// $lightItemBackground: ;
-
-$screenBackground: #0d1015;
-$darkItemBackground: #14171C;
-$lightItemBackground: #272A31;
-
-$screenBackground: #17181a;
-$darkItemBackground: #242529;
-// $lightItemBackground: ;
-
-// $screenBackground: ;
-// $darkItemBackground: ;
-// $lightItemBackground: ;
-
-// $screenBackground: ;
-// $darkItemBackground: ;
-// $lightItemBackground: ;
+$crimson: #b9000b;
+$trueRed: #ee0f2d;
+$peach: #ff5652;

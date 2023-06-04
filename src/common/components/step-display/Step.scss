@@ -10,7 +10,7 @@ $stepIconPadding: 0.65rem;
     width: $largeIconSize + 1rem;
 
     .icon {
-        background-color: $darkGray;
+        background-color: $trueGray;
         border-radius: 50%;
         padding: $stepIconPadding;
     }
@@ -23,12 +23,14 @@ $stepIconPadding: 0.65rem;
     &.active {
         .icon {
             background-color: $active;
+            color: $lightModeTextColor;
         }
     }
-
+    
     &.complete {
         .icon {
             background-color: $complete;
+            color: $lightModeTextColor;
         }
     }
 }

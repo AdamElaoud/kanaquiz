@@ -1,9 +1,6 @@
 @use "../../styles/index" as *;
 @use "./KanaButton.scss" as *;
 
-$buttonHeight: 3rem;
-$wideKanaButtonWidth: 6rem;
-$kanaButtonWidth: 4rem;
 $selectAllButtonWidth: 3rem;
 $selectAllButtonMargin: 1.5rem;
 $maxButtonsPerRow: 8;
@@ -14,15 +11,6 @@ $maxButtonsPerRow: 8;
     justify-content: flex-start;
     margin-top: 0.25rem;
     margin-bottom: 0.25rem;
-
-    .button {
-        height: $buttonHeight;
-        width: $kanaButtonWidth;
-
-        &.wide-button {
-            min-width: $wideKanaButtonWidth;
-        }
-    }
 
     .select-all-button {
         margin-right: $selectAllButtonMargin;

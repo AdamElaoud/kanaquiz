@@ -1,10 +1,28 @@
+@use "../../styles/index" as *;
+
 $kanaButtonMargin: 0.25rem;
+$buttonHeight: 3rem;
+$wideKanaButtonWidth: 6rem;
+$kanaButtonWidth: 4rem;
 
 .kana-button {
+    height: $buttonHeight;
     margin-left: $kanaButtonMargin;
     margin-right: $kanaButtonMargin;
+    min-width: $kanaButtonWidth;
+    width: $kanaButtonWidth;
+
+        
+    &.wide-button {
+        min-width: $wideKanaButtonWidth;
+    }
 
     &.is-selected {
-        background-color: gold;
+        background-color: $active;
+        color: $lightModeTextColor;
+    }
+
+    &.is-kana {
+        font-family: 'Noto Sans JP', sans-serif !important;
     }
 }

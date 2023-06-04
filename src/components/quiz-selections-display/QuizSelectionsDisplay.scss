@@ -4,7 +4,7 @@
     @extend %padding;
     @extend %rounded-border;
     align-items: center;
-    background-color: $mediumGray;
+    background-color: $navyBlack;
     display: flex;
     justify-content: center;
     margin-top: $sectionSpacing;
@@ -12,29 +12,25 @@
 
     .crimson {
         .icon {
-            background-color: crimson;
+            background-color: $crimson;
         }
     }
 
     .lightgreen {
         .icon {
-            background-color: lightgreen;
+            background-color: $complete;
         }
     }
 
     .lightskyblue {
         .icon {
-            background-color: lightskyblue;
+            background-color: $active;
         }
     }
 
     .gold {
         .icon {
-            background-color: gold;
+            background-color: $gold;
         }
-    }
-
-    .flag-step {
-        background-color: transparent;
     }
 }

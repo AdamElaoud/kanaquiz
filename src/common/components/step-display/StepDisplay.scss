@@ -11,13 +11,14 @@ $barWidth: 4rem;
     font-size: $smallFontSize;
 
     .flag-step {
-        background-color: $darkGray;
+        background-color: transparent;
         border-radius: 50%;
+        color: $darkModeTextColor;
         padding: $stepIconPadding;
     }
 
     .bar {
-        background-color: $lightBlack;
+        background-color: $darkModeTextColor;
         height: $barHeight;
         margin-top: calc(($largeIconSize / 2) - ($barHeight / 2));
         margin-left: $barSideMargin;

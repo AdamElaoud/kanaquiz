@@ -4,13 +4,13 @@
     @extend %padding;
     @extend %rounded-border;
     align-items: center;
-    background-color: $lightGray;
+    background-color: $trueGray;
     display: flex;
     justify-content: center;
 
     &:disabled {
         cursor: auto;
-        background-color: $darkGray;
+        background-color: $richBlack;
     }
 }
 
@@ -18,7 +18,14 @@
     .button {
         &:hover {
             cursor: pointer;
-            background-color: $lightBlack;
+            background-color: $gold;
+            color: $lightModeTextColor;
+        }
+        
+        &:disabled {
+            cursor: auto;
+            background-color: $richBlack;
+            color: $darkModeTextColor;
         }
     }
 }

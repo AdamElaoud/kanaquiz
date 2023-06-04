@@ -1,4 +1,5 @@
 @use "./values" as *;
+@use "./colors" as *;
 
 .visually-hidden {
     display: none;
@@ -16,3 +17,23 @@ $halfPadding: calc($padding / 2);
 @mixin padding($multiplier: 1) {
     padding: calc($halfPadding * $multiplier) calc($padding * $multiplier) calc($halfPadding * $multiplier) calc($padding * $multiplier);
 }
+
+@mixin box-shadow(
+    $xOffset: 0px,
+    $yOffset: 5px,
+    $blurRadius: 15px,
+    $spreadRadius: 0px,
+    $color: rgba(255, 255, 255, 0.1),
+    $inset: false
+) {
+    @if $inset {
+      -webkit-box-shadow: inset $xOffset $yOffset $blurRadius $spreadRadius $color;
+      -moz-box-shadow: inset $xOffset $yOffset $blurRadius $spreadRadius $color;
+      box-shadow:inset $xOffset $yOffset $blurRadius $spreadRadius $color;
+
+    } @else {
+      -webkit-box-shadow: $xOffset $yOffset $blurRadius $spreadRadius $color;
+      -moz-box-shadow: $xOffset $yOffset $blurRadius $spreadRadius $color;
+      box-shadow: $xOffset $yOffset $blurRadius $spreadRadius $color;
+    }
+  }

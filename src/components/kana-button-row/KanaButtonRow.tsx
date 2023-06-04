@@ -2,7 +2,6 @@ import { KanaButtonProps, Mode } from "@/types";
 import KanaButton from "./KanaButton";
 import { Button } from "@/common/components";
 import "./KanaButtonRow.scss";
-import useMode from "@/hooks/useMode";
 import useKanaSelections from "@/hooks/useKanaSelections";
 import { FontAwesomeIconType } from "@/common/types";
 
@@ -13,7 +12,6 @@ interface Props {
 const KanaButtonRow = (props: Props) : JSX.Element => {
     const { row } = props;
     
-    const { mode } = useMode();
     const { updateKanaSelections } = useKanaSelections();
 
     const selectEntireRow = () => {
@@ -29,7 +27,6 @@ const KanaButtonRow = (props: Props) : JSX.Element => {
                 const kanaButtonProps: Pick<KanaButtonProps, keyof KanaButtonProps> & { key: string } = {
                     key: letters[Mode.Kana],
                     letters,
-                    mode
                 };
                 
                 if (letters[Mode.Kana].length > 1)

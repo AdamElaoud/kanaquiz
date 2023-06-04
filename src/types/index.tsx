@@ -52,6 +52,5 @@ export type QuizSelectionData = {
 
 export interface KanaButtonProps {
     className?: string,
-    letters: string[],
-    mode: Mode,
+    letters: string[]
 };

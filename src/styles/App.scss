@@ -1,6 +1,7 @@
 @use "./index" as *;
 @use "../components/header/Header.scss" as *;
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;300;400;500;600;700&display=swap');
 
 * {
     box-sizing: border-box;
@@ -8,9 +9,9 @@
 }
 
 html {
-    background-color: $mediumBlack;
+    background-color: $richBlack;
     font-size: 10px; // sets 1 rem = 10px instead of 16px
-    color: $textColor;
+    color: $darkModeTextColor;
     
     body {
         font-size: $mediumFontSize;
@@ -18,7 +19,7 @@ html {
         
         button {
             border: none;
-            color: $textColor;
+            color: $darkModeTextColor;
             font-size: $mediumFontSize;
         }
 
@@ -33,9 +34,10 @@ html {
             display: none;
         }
 
+        $scrollbarThickness: 10px;
         ::-webkit-scrollbar {
-            width: 12px;
-            height: 12px;
+            width: $scrollbarThickness;
+            height: $scrollbarThickness;
         }
 
         ::-webkit-scrollbar-corner {
@@ -44,13 +46,13 @@ html {
 
         $scrollBarBorderRadius: 0.5rem;
         ::-webkit-scrollbar-track {
-            background-color: $lightBlack;
+            background-color: $trueGray;
             border-radius: $scrollBarBorderRadius;
             margin: 0.75rem;
         }
 
         ::-webkit-scrollbar-thumb {
-            background-color: $mediumBlack;
+            background-color: $richBlack;
             border-radius: $scrollBarBorderRadius;
         }
     }
@@ -100,7 +102,7 @@ html {
 
             ::-webkit-scrollbar-thumb {                
                 &:hover {
-                    background-color: $darkBlack;
+                    background-color: $richBlack;
                     cursor: pointer;
                 }
             }

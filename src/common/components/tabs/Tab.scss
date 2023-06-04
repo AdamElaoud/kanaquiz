@@ -1,3 +1,5 @@
+@use "../../../styles/index" as *;
+
 .tab {
     padding: 2rem;
     height: 100%;
@@ -5,4 +7,10 @@
     flex-direction: column;
     overflow-y: auto;
     row-gap: 0.2rem;
+}
+
+@media (max-width: $sizeWidthThreshhold) {
+    .tab {
+        padding: 0.75rem;
+    }
 }
