@@ -8,7 +8,7 @@ interface Props {
     complete?: boolean,
     iconType?: IconType,
     showCheckOnComplete?: boolean,
-    title: string,
+    title: number | string,
 };
 
 const DEFAULT_ICON_TYPE = CustomIconType.Blank;
