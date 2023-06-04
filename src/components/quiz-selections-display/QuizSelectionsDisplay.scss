@@ -10,6 +10,30 @@
     margin-top: $sectionSpacing;
     width: 100%;
 
+    .crimson {
+        .icon {
+            background-color: crimson;
+        }
+    }
+
+    .lightgreen {
+        .icon {
+            background-color: lightgreen;
+        }
+    }
+
+    .lightskyblue {
+        .icon {
+            background-color: lightskyblue;
+        }
+    }
+
+    .gold {
+        .icon {
+            background-color: gold;
+        }
+    }
+
     .flag-step {
         background-color: transparent;
     }

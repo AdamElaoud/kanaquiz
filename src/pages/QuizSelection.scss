@@ -12,16 +12,22 @@ $sectionMargin: 5rem;
     .quiz-types {
         @extend %rounded-border;
         display: grid;
-        gap: 1rem;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         height: 80%;
-        padding: 1rem;
         width: 100%;
 
         .quiz-type {
             align-self: center;
             justify-self: center;
+        }
+    }
+}
+
+@media (max-width: $sizeWidthThreshhold) {
+    .quiz-selection-page {
+        .quiz-types {
+            gap: 1rem;
         }
     }
 }

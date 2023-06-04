@@ -35,11 +35,12 @@ export type StepState = (stepState: { prevStepID?: number | string, prevStepTitl
 export type TabState = (tabState: { prevTabID?: number, prevTabTitle?: string, newTabID?: number, newTabTitle?: string }) => void;
 
 export interface StepConfig {
+    className?: string,
     iconType?: IconType
     // NOTE: stepIDs should be unique and NOT generated from array index
     ID: number | string,
     text?: string,
-    title: string,
+    title: number | string,
 };
 
 export enum CustomIconType {

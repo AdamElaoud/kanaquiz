@@ -13,7 +13,7 @@ const StepDisplay = (props: Props) : JSX.Element => {
     const { activeStepIndex, displayFlagAtEnd, showCheckOnComplete, steps } = props;
 
     const stepDisplay = steps.reduce((stepDisplay: ReactNode[], step, index) => {
-        const { iconType, ID, title } = step;
+        const { className, iconType, ID, title } = step;
 
         // need explicit check for undefined as 0 is falsey
         const active = activeStepIndex !== undefined ? index === activeStepIndex : false;
@@ -21,6 +21,7 @@ const StepDisplay = (props: Props) : JSX.Element => {
 
         const stepProps = {
             active,
+            className,
             complete,
             iconType,
             key: ID,
@@ -33,7 +34,7 @@ const StepDisplay = (props: Props) : JSX.Element => {
             if (active) barClasses.push("active");
             if (complete) barClasses.push("complete");
 
-            stepDisplay.push(<div className = {barClasses.join(" ")} key = {`${ID}-bar`}></div>);
+            stepDisplay.push(<div className = {barClasses.join(" ")} key = {`${ID}-bar`}/>);
         }
 
         stepDisplay.push(<Step {...stepProps}/>);
@@ -42,9 +43,9 @@ const StepDisplay = (props: Props) : JSX.Element => {
     }, []);
 
     if (displayFlagAtEnd) {
-        stepDisplay.push(<div className = "bar" key = "flag-bar"></div>);
+        stepDisplay.push(<div className = "bar" key = "flag-bar"/>);
         stepDisplay.push(
-            <div className = "flag-step">
+            <div className = "flag-step" key = "flag">
                 <Icon type = {FontAwesomeIconType.FlagCheckered} />
             </div>
         );

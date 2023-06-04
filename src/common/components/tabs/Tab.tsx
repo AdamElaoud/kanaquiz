@@ -1,7 +1,7 @@
 import { CSSStyles, IconType, ReactNode, Size } from "@/common/types";
 import "./Tab.scss";
 import useWindowSize from "@/common/hooks/useWindowSize";
-import { SCREEN_FILL_SIZE } from "@/utils/constants";
+import { SCREEN_FILL_WIDTH } from "@/utils/constants";
 
 export interface TabProps {
     children: ReactNode,
@@ -21,7 +21,7 @@ const Tab = (props: TabProps) : JSX.Element => {
     const classes = className ? `tab ${className}`: "tab";
 
     const style: CSSStyles = {
-        flexWrap: windowWidth <= SCREEN_FILL_SIZE * 1.75 ? "nowrap" : "wrap"
+        flexWrap: windowWidth <= SCREEN_FILL_WIDTH * 1.75 ? "nowrap" : "wrap"
     };
     
     return (

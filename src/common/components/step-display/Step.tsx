@@ -4,6 +4,7 @@ import "./Step.scss";
 
 interface Props {
     active?: boolean,
+    className?: string,
     complete?: boolean,
     iconType?: IconType,
     showCheckOnComplete?: boolean,
@@ -13,10 +14,11 @@ interface Props {
 const DEFAULT_ICON_TYPE = CustomIconType.Blank;
 
 const Step = (props: Props) : JSX.Element => {
-    const { active, complete, iconType = DEFAULT_ICON_TYPE, showCheckOnComplete, title } = props;
+    const { active, className, complete, iconType = DEFAULT_ICON_TYPE, showCheckOnComplete, title } = props;
 
     const classes = ["step"];
     if (active) classes.push("active");
+    if (className) classes.push(className);
     if (complete) classes.push("complete");
 
     const evaluatedIconType = showCheckOnComplete && complete ? FontAwesomeIconType.Check : iconType;

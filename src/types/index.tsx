@@ -39,6 +39,11 @@ export type GroupsToChars = {
     [key: string]: string[][]
 };
 
+export type QuizSelectionData = {
+    type: QuizType,
+    amount: number
+};
+
 export interface KanaButtonProps {
     className?: string,
     letters: string[],

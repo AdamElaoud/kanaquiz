@@ -18,13 +18,19 @@ html {
         
         button {
             border: none;
-            color: #000000;
+            color: $textColor;
             font-size: $mediumFontSize;
         }
 
         input {
             font-size: $smallFontSize;
             outline: transparent;
+        }
+
+        input[type = number]::-webkit-inner-spin-button, 
+        input[type = number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none; 
+            display: none;
         }
 
         ::-webkit-scrollbar {

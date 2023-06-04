@@ -1,23 +1,32 @@
 import "./QuizSelection.scss";
 import QuizTypeCard from "@/components/quiz-type/QuizTypeCard";
-import { useState } from "react";
-import { QuizType } from "@/types";
+import { QuizSelectionData, QuizType } from "@/types";
 import { QuizSelectionsContextProvider } from "@/hooks/useQuizSelections";
 import QuizSelectionsDisplay from "@/components/quiz-selections-display/QuizSelectionsDisplay";
-import { QUIZ_TYPES } from "@/utils/constants";
+import { DEFAULT_QUESTION_AMOUNT, QUIZ_TYPES } from "@/utils/constants";
+import useLocalStorage from "@/common/hooks/useLocalStorage";
 
 const QuizSelection = () : JSX.Element => {
-    const [quizSelections, setQuizSelections] = useState<QuizType[]>([QuizType.MultipleChoice]);
+    const [quizSelections, setQuizSelections] = useLocalStorage<QuizSelectionData[]>("quiz-selections", [{
+        type: QuizType.MultipleChoice,
+        amount: DEFAULT_QUESTION_AMOUNT
+    }]);
 
-    const updateQuizSelections = (quizType: QuizType) => {
+    const updateQuizSelections = (quizType: QuizType, amount: number) => {
         const updatedSelections = [...quizSelections];
 
-        if (quizSelections.includes(quizType)) {
-            const quizTypeIndex = updatedSelections.findIndex(selection => selection === quizType);
-            updatedSelections.splice(quizTypeIndex, 1);
+        const quizSelection = quizSelections.find(selection => selection.type === quizType);
+
+        if (quizSelection) {
+            const quizSelectionIndex = updatedSelections.findIndex(selection => selection.type === quizType);
+
+            if (quizSelection.amount !== amount)
+                updatedSelections[quizSelectionIndex].amount = amount;
+            else
+                updatedSelections.splice(quizSelectionIndex, 1);
 
         } else {
-            updatedSelections.push(quizType);
+            updatedSelections.push({ type: quizType, amount });
         }
 
         setQuizSelections(updatedSelections);
@@ -26,7 +35,7 @@ const QuizSelection = () : JSX.Element => {
     return (
         <QuizSelectionsContextProvider value = {{ quizSelections, updateQuizSelections }}>
             <div className = "quiz-selection-page">
-                <div className = "quiz-types">
+                <div className = "quiz-types" >
                     {QUIZ_TYPES.map(quizType => <QuizTypeCard {...quizType}/>)}
                 </div>
 

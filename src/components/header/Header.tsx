@@ -1,15 +1,16 @@
 import { Button, Icon, Toggle } from "@/common/components";
 import "./Header.scss";
-import { FontAwesomeIconType, Side, Size, ToggleButtonConfig } from "@/common/types";
+import { CSSStyles, FontAwesomeIconType, Side, Size, ToggleButtonConfig } from "@/common/types";
 import { Mode } from "@/types";
 import useMode from "@/hooks/useMode";
 
 interface Props {
     showToggle: boolean
+    style?: CSSStyles
 };
 
 const Header = (props: Props) : JSX.Element => {
-    const { showToggle } = props;
+    const { showToggle, style } = props;
     
     const { mode, setMode } = useMode();
 
@@ -21,7 +22,7 @@ const Header = (props: Props) : JSX.Element => {
     const defaultActiveSide = mode === Mode.Kana ? Side.Left : Side.Right;
 
     return (
-        <div className = "header">
+        <div className = "header" style = {style}>
             <Icon className = "logo" type = {FontAwesomeIconType.Torii} />
             {showToggle && <Toggle buttons = {toggleButtons} defaultActiveSide = {defaultActiveSide}/>}
             <Button

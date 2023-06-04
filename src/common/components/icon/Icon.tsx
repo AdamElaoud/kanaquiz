@@ -1,19 +1,20 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CustomIconMap, FontAwesomeIconMap } from "./IconTypes";
-import { IconType, Size, isCustomIconType, isFontAwesomeIconType } from "@/common/types";
+import { CSSStyles, IconType, Size, isCustomIconType, isFontAwesomeIconType } from "@/common/types";
 import "./Icon.scss";
 
 interface Props {
     className?: string,
     onClick?: () => void,
     size?: Size,
+    style?: CSSStyles,
     type: IconType
 };
 
 const DEFAULT_ICON_SIZE = Size.Medium;
 
 const Icon = (props: Props) : JSX.Element => {
-    const { className, onClick, size = DEFAULT_ICON_SIZE, type } = props;
+    const { className, onClick, size = DEFAULT_ICON_SIZE, style, type } = props;
     
     const classes = ["icon", size];
     if (className) classes.push(className);
@@ -22,7 +23,7 @@ const Icon = (props: Props) : JSX.Element => {
         const fontAwesomeIconType = FontAwesomeIconMap[type];
 
         return (
-            <span className = {classes.join(" ")} onClick = {onClick}>
+            <span className = {classes.join(" ")} onClick = {onClick} style = {style}>
                 <FontAwesomeIcon icon = {fontAwesomeIconType} />
             </span>
         );
@@ -31,7 +32,7 @@ const Icon = (props: Props) : JSX.Element => {
         const customIconType = CustomIconMap[type];
 
         return (
-            <div className = {classes.join(" ")} onClick = {onClick}>
+            <div className = {classes.join(" ")} onClick = {onClick} style = {style}>
                 {customIconType}
             </div>
         );

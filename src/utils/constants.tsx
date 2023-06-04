@@ -7,10 +7,19 @@ import QuizSelection from "@/pages/QuizSelection";
 import QuizSummary from "@/pages/QuizSummary";
 import { PageMapType, PageType, QuizType } from "@/types";
 
-export const SCREEN_FILL_SIZE = 950; // pixel width at which contents will fill X% of the screen
+// this value is expected to match the SCSS $sizeWidthThreshhold variable in _values.scss
+export const SCREEN_WIDTH_THRESHHOLD = 600;
+// this value is expected to match the SCSS $sizeHeightThreshhold variable in _values.scss
+export const SCREEN_HEIGHT_THRESHHOLD = 950;
+
+export const SCREEN_FILL_WIDTH = 950; // pixel width at which contents will fill X% of the screen
 export const SCREEN_FILL_PERCENT = 100; // percentage contents should fill the screen for the above size
-export const SCREEN_PARTIAL_FILL_SIZE = 1440; // pixel width at which contents will fill only X% of the screen
+export const SCREEN_PARTIAL_FILL_WIDTH = 1440; // pixel width at which contents will fill only X% of the screen
 export const SCREEN_PARTIAL_FILL_PERCENT = 65; // percentage contents should fill the screen for the above size
+
+export const DEFAULT_QUESTION_AMOUNT = 10;
+export const MINIMUM_QUESTION_AMOUNT = 1;
+export const MAXIMUM_QUESTION_AMOUNT = 50;
 
 export const PAGE_STEPS: StepConfig[] = [
     {
@@ -63,6 +72,20 @@ export const QUIZ_TYPE_MINI_TITLES = {
     [QuizType.MultipleChoiceReverse]: "Choice Reverse",
     [QuizType.WriteTheAnswer]: "Write",
     [QuizType.WriteTheAnswerX3]: "Write x3",
+};
+
+export const QUIZ_TYPE_DESCRIPTIONS = {
+    [QuizType.MultipleChoice]: "Choose the matching romaji for the kana",
+    [QuizType.MultipleChoiceReverse]: "Choose the matching kana for the romaji",
+    [QuizType.WriteTheAnswer]: "Write the matching romaji for the kana",
+    [QuizType.WriteTheAnswerX3]: "Write the matching romaji for 3 kana",
+};
+
+export const QUIZ_TYPE_COLOR_CLASSNAMES = {
+    [QuizType.MultipleChoice]: 'crimson',
+    [QuizType.MultipleChoiceReverse]: 'lightskyblue',
+    [QuizType.WriteTheAnswer]: 'lightgreen',
+    [QuizType.WriteTheAnswerX3]: 'gold',
 };
 
 export const QUIZ_TYPES = [

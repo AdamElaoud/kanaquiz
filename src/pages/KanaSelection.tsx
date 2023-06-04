@@ -5,7 +5,7 @@ import KanaButtonRow from "@/components/kana-button-row/KanaButtonRow";
 import { KanaSelectionsContextProvider } from "@/hooks/useKanaSelections";
 import useLocalStorage from "@/common/hooks/useLocalStorage";
 import "./KanaSelection.scss";
-import { ENGLISH_DELIMITERS, JAPANESE_DELIMITERS, SCREEN_FILL_SIZE, SCREEN_PARTIAL_FILL_SIZE } from "@/utils/constants";
+import { ENGLISH_DELIMITERS, JAPANESE_DELIMITERS, SCREEN_FILL_WIDTH, SCREEN_PARTIAL_FILL_WIDTH } from "@/utils/constants";
 import useDynamicWidth from "@/common/hooks/useDynamicWidth";
 
 
@@ -14,9 +14,9 @@ const KanaSelection = () : JSX.Element => {
     const [kanaSelections, setKanaSelections] = useLocalStorage<string[]>("kana-selections", []);
     const { hiragana, katakana, lookalikes, search } = useKanaDictionary();
     const dynamicSearchBarWidth = useDynamicWidth(
-        SCREEN_PARTIAL_FILL_SIZE,
+        SCREEN_PARTIAL_FILL_WIDTH,
         50,
-        SCREEN_FILL_SIZE,
+        SCREEN_FILL_WIDTH,
         90
     );
 
