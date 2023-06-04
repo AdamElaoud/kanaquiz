@@ -2,7 +2,7 @@
 
 $borderThickness: 5px;
 .quiz-type {
-    @include padding(1);
+    @include padding(3);
     @extend %rounded-border;
     align-items: center;
     background-color: $darkGray;
@@ -61,6 +61,7 @@ $borderThickness: 5px;
 
         .amount {
             font-size: $smallFontSize;
+            margin-bottom: 0.25rem;
         }
 
         input {
@@ -85,6 +86,7 @@ $borderThickness: 5px;
 
 @media (max-width: $sizeWidthThreshhold) {
     .quiz-type {
+        @include padding(1);
         height: 100%;
         width: 100%;
 
