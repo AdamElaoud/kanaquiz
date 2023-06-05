@@ -25,4 +25,8 @@ $kanaButtonWidth: 4rem;
     &.is-kana {
         font-family: 'Noto Sans JP', sans-serif !important;
     }
+
+    &.is-search-target {
+        border: $borderThickness solid $gold;
+    }
 }

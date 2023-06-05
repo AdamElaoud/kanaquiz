@@ -6,11 +6,13 @@ import useKanaSelections from "@/hooks/useKanaSelections";
 import { FontAwesomeIconType } from "@/common/types";
 
 interface Props {
-    row: string[][]
+    row: string[][],
+    groupID: string,
+    searchQueries?: string[]
 };
 
 const KanaButtonRow = (props: Props) : JSX.Element => {
-    const { row } = props;
+    const { row, groupID, searchQueries } = props;
     
     const { kanaSelections, updateKanaSelections } = useKanaSelections();
 
@@ -27,11 +29,15 @@ const KanaButtonRow = (props: Props) : JSX.Element => {
             <Button className = 'select-all-button' onClick = {selectEntireRow} iconType = {FontAwesomeIconType.ArrowRight} />
 
             {row.map(letters => {
+                const baseKey = `${letters[Mode.ID]}-${groupID}`;
+                const key = searchQueries ? `search-result-${baseKey}` : baseKey;
+
                 const kanaButtonProps: Pick<KanaButtonProps, keyof KanaButtonProps> & { key: string } = {
-                    key: letters[Mode.Kana],
-                    letters,
+                    key,
+                    isSearchTarget: searchQueries?.includes(letters[Mode.Kana]) || searchQueries?.includes(letters[Mode.Romaji]),
+                    letters
                 };
-                
+
                 if (letters[Mode.Kana].length > 1)
                     kanaButtonProps.className = "wide-button";
 

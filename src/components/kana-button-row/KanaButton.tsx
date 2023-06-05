@@ -5,7 +5,7 @@ import useKanaSelections from "@/hooks/useKanaSelections";
 import useMode from "@/hooks/useMode";
 
 const KanaButton = (props: KanaButtonProps) : JSX.Element => {
-    const { className, letters } = props;
+    const { className, isSearchTarget, letters } = props;
 
     const { kanaSelections, updateKanaSelections } = useKanaSelections();
     const { mode } = useMode();
@@ -16,6 +16,7 @@ const KanaButton = (props: KanaButtonProps) : JSX.Element => {
     if (isSelected) classes.push("is-selected");
     if (className) classes.push(className);
     if (mode === Mode.Kana) classes.push("is-kana");
+    if (isSearchTarget) classes.push("is-search-target");
 
     return (
         <Button className = {classes.join(" ")} onClick = {() => updateKanaSelections([letters[Mode.ID]])}>

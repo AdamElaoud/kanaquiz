@@ -20,6 +20,10 @@ const KanaSelection = () : JSX.Element => {
     const hiraganaGroups = Object.values(hiragana.groupsToChars);
     const katakanaGroups = Object.values(katakana.groupsToChars);
     const lookalikesGroups = Object.values(lookalikes.groupsToChars);
+    
+    const hiraganaGroupIDs = Object.keys(hiragana.groupsToChars);
+    const katakanaGroupIDs = Object.keys(katakana.groupsToChars);
+    const lookalikesGroupIDs = Object.keys(lookalikes.groupsToChars);
 
     const updateKanaSelections = (letters: string[], addOnly?: boolean) => {
         const updatedSelections = [...kanaSelections];
@@ -57,22 +61,22 @@ const KanaSelection = () : JSX.Element => {
 
                 <TabSet className = "selection-tabset" onTabChange = {onTabChange} startingTabID = {selectedTabID}>
                     <Tab title = "ひ Hiragana" tabID = {TabID.Hiragana}>
-                        {hiraganaGroups.map(group =>
-                            // key is first Kana in group
-                            <KanaButtonRow key = {group[0][Mode.Kana]} row = {group}/>
-                        )}
+                        {hiraganaGroups.map((group, index) => {
+                            const groupID = hiraganaGroupIDs[index];
+                            return <KanaButtonRow key = {groupID} row = {group} groupID = {groupID}/>
+                        })}
                     </Tab>
                     <Tab title = "カ Katakana" tabID = {TabID.Katakana}>
-                        {katakanaGroups.map(group =>
-                            // key is first Kana in group
-                            <KanaButtonRow key = {group[0][Mode.Kana]} row = {group}/>
-                        )}
+                        {katakanaGroups.map((group, index) => {
+                            const groupID = katakanaGroupIDs[index];
+                            return <KanaButtonRow key = {groupID} row = {group} groupID = {groupID}/>
+                        })}
                     </Tab>
                     <Tab title = "Look-Alikes" tabID = {TabID.Lookalikes}>
-                        {lookalikesGroups.map(group =>
-                            // key is first Kana in group
-                            <KanaButtonRow key = {group[0][Mode.Kana]} row = {group}/>
-                        )}
+                        {lookalikesGroups.map((group, index) => {
+                            const groupID = lookalikesGroupIDs[index];
+                            return <KanaButtonRow key = {groupID} row = {group} groupID = {groupID}/>
+                        })}
                     </Tab>
                 </TabSet>
             </div>

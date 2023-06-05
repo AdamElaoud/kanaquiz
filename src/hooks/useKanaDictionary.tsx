@@ -32,10 +32,10 @@ const useKanaDictionary = () => {
 
         const kanaGroups = uniqueSearchResults.map(result => allKanaGroups[result]);
 
-        return kanaGroups.map(group =>
-            // key is first Kana in group
-            <KanaButtonRow key = {group[0][Mode.Kana]} row = {group}/>
-        );
+        return kanaGroups.map((group, index) => {
+            const groupID = uniqueSearchResults[index];
+            return <KanaButtonRow key = {groupID} row = {group} groupID = {groupID} searchQueries = {normalizedQueries}/>
+        });
     };
 
     return {
