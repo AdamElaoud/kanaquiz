@@ -1,5 +1,4 @@
 import KanaButtonRow from "@/components/kana-button-row/KanaButtonRow";
-import { Mode } from "@/types";
 import { charsToGroups as hiraganaCharsToGroups, groupsToChars as hiraganaGroupsToChars } from "@/utils/hiragana";
 import { charsToGroups as kataKanaCharsToGroups, groupsToChars as katakanaGroupsToChars } from "@/utils/katakana";
 import { groupsToChars as lookalikeGroupsToChars } from "@/utils/lookalikes";

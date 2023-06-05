@@ -1,6 +1,6 @@
 import { TabSet, Tab, Searchbar } from "@/common/components";
 import useKanaDictionary from "@/hooks/useKanaDictionary";
-import { Mode, TabID } from "@/types";
+import { TabID } from "@/types";
 import KanaButtonRow from "@/components/kana-button-row/KanaButtonRow";
 import { KanaSelectionsContextProvider } from "@/hooks/useKanaSelections";
 import useLocalStorage from "@/common/hooks/useLocalStorage";
