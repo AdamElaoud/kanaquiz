@@ -15,12 +15,7 @@ const KanaSelection = () : JSX.Element => {
     const [selectedTabID, setSelectedTabID] = useLocalStorage<number>("kana-selections-tab", TabID.Hiragana);
     const [kanaSelections, setKanaSelections] = useLocalStorage<string[]>("kana-selections", []);
     const { hiragana, katakana, lookalikes, search } = useKanaDictionary();
-    const dynamicSearchBarWidth = useDynamicWidth(
-        SCREEN_PARTIAL_FILL_WIDTH,
-        50,
-        SCREEN_FILL_WIDTH,
-        90
-    );
+    const dynamicSearchBarWidth = useDynamicWidth(SCREEN_PARTIAL_FILL_WIDTH, 50, SCREEN_FILL_WIDTH, 90);
 
     const hiraganaGroups = Object.values(hiragana.groupsToChars);
     const katakanaGroups = Object.values(katakana.groupsToChars);

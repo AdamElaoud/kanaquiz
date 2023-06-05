@@ -12,11 +12,14 @@ interface Props {
 const KanaButtonRow = (props: Props) : JSX.Element => {
     const { row } = props;
     
-    const { updateKanaSelections } = useKanaSelections();
+    const { kanaSelections, updateKanaSelections } = useKanaSelections();
 
     const selectEntireRow = () => {
         const allLetters = row.map(letters => letters[Mode.ID]);
-        updateKanaSelections(allLetters);
+
+        const allSelected = row.every(letters => kanaSelections.includes(letters[Mode.ID]));
+
+        updateKanaSelections(allLetters, !allSelected);
     };
 
     return (
