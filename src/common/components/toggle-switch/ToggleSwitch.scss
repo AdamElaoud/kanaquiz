@@ -3,6 +3,7 @@
 $toggleButtonSize: $mediumIconSize;
 $paddingMultiplier: 0.5;
 $toggleSwitchWidth: calc($toggleButtonSize * 3);
+$toggleSwitchPadding: calc($padding * $paddingMultiplier);
 
 .toggle-switch {
     @include padding($paddingMultiplier);
@@ -15,7 +16,6 @@ $toggleSwitchWidth: calc($toggleButtonSize * 3);
     transition: all 0.3s ease-in-out;
     width: $toggleSwitchWidth;
 
-    $toggleSwitchPadding: calc($padding * $paddingMultiplier);
     .toggle-switch-button {
         border-radius: 50%;
         height: $toggleButtonSize;
@@ -24,7 +24,7 @@ $toggleSwitchWidth: calc($toggleButtonSize * 3);
         width: $toggleButtonSize;
     }
 
-    &.enabled {
+    &.activated {
         background-color: $active;
 
         .toggle-switch-button {
@@ -32,9 +32,45 @@ $toggleSwitchWidth: calc($toggleButtonSize * 3);
         }
     }
     
-    &.disabled {
+    &.deactivated {
         .toggle-switch-button {
             left: $toggleSwitchPadding;
+        }
+    }
+
+    &.disabled {
+        background-color: $richBlack;
+
+        .toggle-switch-button {
+            background-color: $trueGray;
+            left: $toggleSwitchPadding;
+        }
+    }
+}
+
+$smallToggleButtonSize: $smallIconSize;
+$smallToggleSwitchWidth: calc($smallToggleButtonSize * 3);
+
+@media (max-width: $sizeWidthThreshhold) {
+    .toggle-switch {
+        height: calc($smallToggleButtonSize * 1.5);
+        width: $smallToggleSwitchWidth;
+
+        .toggle-switch-button {
+            height: $smallToggleButtonSize;
+            width: $smallToggleButtonSize;
+        }
+
+        &.activated {
+            .toggle-switch-button {
+                left: calc($smallToggleSwitchWidth - $toggleSwitchPadding - $smallToggleButtonSize);
+            }
+        }
+        
+        &.deactivated {
+            .toggle-switch-button {
+                left: $toggleSwitchPadding;
+            }
         }
     }
 }
@@ -44,6 +80,14 @@ $toggleSwitchWidth: calc($toggleButtonSize * 3);
         .toggle-switch-button {
             &:hover {
                 cursor: pointer;
+            }
+        }
+
+        &.disabled {
+            .toggle-switch-button {
+                &:hover {
+                    cursor: auto;
+                }
             }
         }
     }

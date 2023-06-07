@@ -21,10 +21,11 @@ $stepTitleMargin: 1rem;
         display: flex;
         flex-direction: column;
         height: 100%;
-        justify-content: center;
+        justify-content: space-evenly;
         width: 50%;
 
         .step-text {
+            color: $unsaturatedGold;
             font-weight: $fontWeightBold;
             margin-top: $stepTitleMargin;
             text-align: center;

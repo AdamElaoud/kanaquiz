@@ -10,6 +10,7 @@ import {
     faMagnifyingGlass,
     faPencil,
     faPlay,
+    faQuestion,
     faToriiGate,
     faVihara,
     faXmark
@@ -27,6 +28,7 @@ export const FontAwesomeIconMap: FontAwesomeIconMapType = {
     "pencil": faPencil,
     "play": faPlay,
     "search": faMagnifyingGlass,
+    "question": faQuestion,
     "torii": faToriiGate,
     "x": faXmark,
 };

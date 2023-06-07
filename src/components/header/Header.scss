@@ -1,23 +1,32 @@
 @use "../../common/styles/index" as *;
 
-$optionsBarHeight: 5rem;
+$headerHeight: 5rem;
+$headerSpacing: calc($sectionSpacing / 3);
 .header {
     align-items: center;
     display: flex;
-    height: $optionsBarHeight;
+    height: $headerHeight;
     justify-content: center;
-    margin-bottom: $sectionSpacing;
+    margin-bottom: $headerSpacing;
     position: relative;
     width: 100%;
 
     .logo {
+        align-items: center;
+        display: flex;
+        font-weight: $fontWeightBold;
         position: absolute;
-        left: calc(($optionsBarHeight - $mediumIconSize - $padding) / 2);
+        left: calc(($headerHeight - $mediumIconSize - $padding) / 2);
         color: white;
+
+        .icon {
+            margin-right: 0.5rem;
+            margin-bottom: 0.25rem;
+        }
     }
 
     .button {
         position: absolute;
-        right: calc(($optionsBarHeight - $mediumIconSize - $padding) / 2);
+        right: calc(($headerHeight - $mediumIconSize - $padding) / 2);
     }
 }

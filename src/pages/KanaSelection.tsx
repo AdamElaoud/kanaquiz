@@ -1,13 +1,14 @@
-import { TabSet, Tab, Searchbar } from "@/common/components";
+import { TabSet, Tab, Searchbar, ToggleButton } from "@/common/components";
 import useKanaDictionary from "@/hooks/useKanaDictionary";
-import { TabID } from "@/types";
+import { Mode, TabID } from "@/types";
 import KanaButtonRow from "@/components/kana-button-row/KanaButtonRow";
 import { KanaSelectionsContextProvider } from "@/hooks/useKanaSelections";
 import useLocalStorage from "@/common/hooks/useLocalStorage";
 import "./KanaSelection.scss";
 import { ENGLISH_DELIMITERS, JAPANESE_DELIMITERS, SCREEN_FILL_WIDTH, SCREEN_PARTIAL_FILL_WIDTH } from "@/utils/constants";
 import useDynamicWidth from "@/common/hooks/useDynamicWidth";
-import { TabState } from "@/common/types";
+import { Side, TabState, ToggleButtonConfig } from "@/common/types";
+import useMode from "@/hooks/useMode";
 
 
 
@@ -16,6 +17,7 @@ const KanaSelection = () : JSX.Element => {
     const [kanaSelections, setKanaSelections] = useLocalStorage<string[]>("kana-selections", []);
     const { hiragana, katakana, lookalikes, search } = useKanaDictionary();
     const dynamicSearchBarWidth = useDynamicWidth(SCREEN_PARTIAL_FILL_WIDTH, 50, SCREEN_FILL_WIDTH, 90);
+    const { mode, setMode } = useMode();
 
     const hiraganaGroups = Object.values(hiragana.groupsToChars);
     const katakanaGroups = Object.values(katakana.groupsToChars);
@@ -49,9 +51,18 @@ const KanaSelection = () : JSX.Element => {
         setSelectedTabID(newTabID);
     };
 
+    const toggleButtons: [ToggleButtonConfig, ToggleButtonConfig] = [
+        { text: 'Show Kana', onClick: () => setMode(Mode.Kana) },
+        { text: 'Show Romaji', onClick: () => setMode(Mode.Romaji) }
+    ];
+
+    const defaultActiveSide = mode === Mode.Kana ? Side.Left : Side.Right;
+
     return (
         <KanaSelectionsContextProvider value = {{ kanaSelections, updateKanaSelections }}>
             <div className = "kana-selection-page">
+                <ToggleButton buttons = {toggleButtons} defaultActiveSide = {defaultActiveSide}/>
+
                 <Searchbar
                     searchFn = {searchFn}
                     delimiters = {[...ENGLISH_DELIMITERS, ...JAPANESE_DELIMITERS]}

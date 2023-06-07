@@ -6,7 +6,11 @@
     flex-direction: column;
     height: 100%;
 
+    .search, .toggle-button {
+        margin-bottom: calc($sectionSpacing / 1.25);
+    }
+
     .selection-tabset {
-        height: 85%;
+        height: 75%;
     }
 }

@@ -15,7 +15,10 @@ $halfPadding: calc($padding / 2);
 }
 
 @mixin padding($multiplier: 1) {
-    padding: calc($halfPadding * $multiplier) calc($padding * $multiplier) calc($halfPadding * $multiplier) calc($padding * $multiplier);
+    $updatedHalfPadding: calc($halfPadding * $multiplier);
+    $updatedPadding :calc($padding * $multiplier);
+
+    padding: $updatedHalfPadding $updatedPadding $updatedHalfPadding $updatedPadding;
 }
 
 @mixin box-shadow(

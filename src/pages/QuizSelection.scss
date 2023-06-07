@@ -14,7 +14,7 @@ $sectionMargin: 5rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        height: 80%;
+        height: 75%;
         width: 100%;
 
         .quiz-type {
@@ -24,16 +24,32 @@ $sectionMargin: 5rem;
     }
 
     .quiz-selection-status {
-        @include padding(0.5);
         @extend %rounded-border;
         align-items: center;
         background-color: $navyBlack;
         display: flex;
         flex-direction: column;
-        height: 17%;
-        justify-content: space-between;
-        margin-top: calc($sectionSpacing / 3);
-        width: 100%;
+        height: 13rem;
+        justify-content: space-evenly;
+        margin-top: calc($sectionSpacing * 2);
+        width: 40%;
+
+        .endless-mode-toggle {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+
+            .endless-mode-text {
+                margin-left: 1.75rem;
+                margin-right: 0.75rem;
+            }
+
+            .endless-mode-help {
+                background-color: $trueGray;
+                font-size: 1.25rem;
+            }
+        }
     }
 }
 
@@ -42,6 +58,20 @@ $sectionMargin: 5rem;
         .quiz-types {
             gap: 1rem;
             padding: 0.75rem;
+        }
+
+        .quiz-selection-status {
+            @include padding(2.5);
+            height: 10rem;
+            justify-content: space-between;
+            margin-top: calc($sectionSpacing / 2);
+            width: 100%;
+
+            .endless-mode-toggle {
+                .endless-mode-text {
+                    font-size: $smallFontSize;
+                }
+            }
         }
     }
 }

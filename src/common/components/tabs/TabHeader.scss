@@ -10,6 +10,7 @@ $tabHeaderWidth: 10rem;
     border-right: 1px solid $richBlack;
     border-top-left-radius: $tabHeaderBorderRadius;
     border-top-right-radius: $tabHeaderBorderRadius;
+    color: $nonFocusedDarkModeTextColor;
     display: flex;
     font-size: $smallFontSize;
     height: $tabHeaderHeight;
@@ -18,6 +19,7 @@ $tabHeaderWidth: 10rem;
     
     &.active {
         background-color: $navyBlack;
+        color: $darkModeTextColor;
         font-weight: $fontWeightBold;
     }
 }

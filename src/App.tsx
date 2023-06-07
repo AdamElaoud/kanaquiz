@@ -1,5 +1,5 @@
 import { StepCarousel } from '@/common/components';
-import { ReactNode, StepState } from '@/common/types';
+import { StepState } from '@/common/types';
 import { useState, useLayoutEffect } from "react";
 import '@/styles/App.scss';
 import { Mode, PageType } from '@/types';
@@ -11,7 +11,7 @@ import Header from './components/header/Header';
 
 const App = () : JSX.Element => {
     const [mode, setMode] = useState<Mode>(Mode.Kana);
-    const [page, setPage] = useState<ReactNode>(PAGES[PageType.KanaSelect]);
+    const [page, setPage] = useState<PageType>(PageType.KanaSelect);
     const [windowWidth, windowHeight] = useWindowSize();
     const dynamicWidth = useDynamicWidth(
         SCREEN_PARTIAL_FILL_WIDTH,
@@ -27,7 +27,7 @@ const App = () : JSX.Element => {
     }, []);
 
     const onStepChange: StepState = ({ newStepID }) => {
-        setPage(PAGES[newStepID as PageType]);
+        setPage(newStepID as PageType);
     };
 
     // window innerheight & innerwidth is used instead
@@ -40,10 +40,10 @@ const App = () : JSX.Element => {
     return (
         <ModeContextProvider value = {{ mode, setMode }}>
             <div className = "app" style = {appStyle}>
-                <Header showToggle = {page === PAGES[PageType.KanaSelect]} style = {dynamicWidth}/>
+                <Header style = {dynamicWidth}/>
 
                 <div className = "page" style = {dynamicWidth}>
-                    {page}
+                    {PAGES[page]}
                 </div>
                 
                 <StepCarousel

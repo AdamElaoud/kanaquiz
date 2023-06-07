@@ -61,17 +61,10 @@ export const QUIZ_TYPE_ICONS = {
 };
 
 export const QUIZ_TYPE_TITLES = {
-    [QuizType.MultipleChoice]: "Multiple Choice",
-    [QuizType.MultipleChoiceReverse]: "Multiple Choice - Reverse",
+    [QuizType.MultipleChoice]: "Multiple Choice\nen ➜ jp",
+    [QuizType.MultipleChoiceReverse]: "Multiple Choice\njp ➜ en",
     [QuizType.WriteTheAnswer]: "Write the Answer",
     [QuizType.WriteTheAnswerX3]: "Write the Answer x3",
-};
-
-export const QUIZ_TYPE_MINI_TITLES = {
-    [QuizType.MultipleChoice]: "Choice",
-    [QuizType.MultipleChoiceReverse]: "Choice Reverse",
-    [QuizType.WriteTheAnswer]: "Write",
-    [QuizType.WriteTheAnswerX3]: "Write x3",
 };
 
 export const QUIZ_TYPE_DESCRIPTIONS = {

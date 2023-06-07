@@ -1,6 +1,6 @@
 @use "../../styles/index" as *;
 
-.toggle {
+.toggle-button {
     @include padding(0.5);
     @extend %rounded-border;
     align-items: center;
@@ -10,10 +10,11 @@
     justify-content: space-between;
     gap: 0.75rem;
     
-    .toggle-button {
+    .toggle-button-item {
         @extend %rounded-border;
         @extend %padding;
         background-color: $trueGray;
+        color: $nonFocusedDarkModeTextColor;
         font-size: $smallFontSize;
         font-weight: $fontWeightNormal;
 
@@ -26,12 +27,13 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-    .toggle {
-        .toggle-button {
+    .toggle-button {
+        .toggle-button-item {
             &:hover {
-                background-color: $active;
+                background-color: $gold;
                 color: $lightModeTextColor;
                 cursor: pointer;
+                font-weight: $fontWeightBold;
             }
 
             &.active {

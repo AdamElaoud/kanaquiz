@@ -65,7 +65,7 @@ html {
     justify-content: flex-start;
 
     .page {
-        height: calc(90% - $optionsBarHeight - $sectionSpacing);
+        height: calc(90% - $headerHeight - $headerSpacing);
     }
 
     .page-carousel {
@@ -78,9 +78,9 @@ html {
 }
 
 @media (max-height: $sizeHeightThreshhold) {
-    .app {
+    .app {        
         .page {
-            height: calc(85% - $optionsBarHeight - $sectionSpacing);
+            height: calc(85% - $headerHeight - $headerSpacing);
         }
     
         .page-carousel {

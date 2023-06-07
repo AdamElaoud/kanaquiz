@@ -2,6 +2,7 @@ import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { CustomIconMap, FontAwesomeIconMap } from "../components/icon/IconTypes";
 
 export enum Size {
+    Mini = "mini",
     Small = "sm",
     Medium = "md",
     Large = "lg"
@@ -64,6 +65,7 @@ export enum FontAwesomeIconType {
     Pencil = "pencil",
     Play = "play",
     Search = "search",
+    Question = "question",
     Torii = "torii",
     X = "x"
 };

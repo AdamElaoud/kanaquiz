@@ -5,7 +5,6 @@ $searchResultsHeight: 25rem;
 
 .search {
     position: relative;
-    margin-bottom: $sectionSpacing;
     width: 45%;
 
     .search-form {
@@ -13,8 +12,7 @@ $searchResultsHeight: 25rem;
         justify-content: center;
 
         input::placeholder {
-            color: $darkModeTextColor;
-            opacity: 0.5;
+            color: $nonFocusedDarkModeTextColor;
         }
     
         .search-input {

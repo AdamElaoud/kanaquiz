@@ -5,11 +5,10 @@ $quizTypeCardBorderThickness: $borderThickness;
 $borderThickness: 5px;
 .quiz-type {
     @include padding(3);
-    @include box-shadow(0px, 0px, 6px, 1px, rgba(125, 125, 125, 0.4));
     @extend %rounded-border;
     align-items: center;
     background-color: $navyBlack;
-    border: $quizTypeCardBorderThickness solid $navyBlack;
+    border: $quizTypeCardBorderThickness solid rgba(255, 255, 255, 0.05);
     display: flex;
     flex-direction: column;
     height: 90%;
@@ -50,6 +49,7 @@ $borderThickness: 5px;
             font-weight: $fontWeightBold;
             margin-top: 1rem;
             text-align: center;
+            white-space: pre;
         }
     }
 
@@ -95,8 +95,12 @@ $borderThickness: 5px;
 }
 
 @media (max-width: $sizeWidthThreshhold) {
+    $mobileQuizTypeVerticalPadding: 1.25rem;
+
     .quiz-type {
-        @include padding(1);
+        @include padding();
+        padding-top: $mobileQuizTypeVerticalPadding;
+        padding-bottom: $mobileQuizTypeVerticalPadding;
         height: 100%;
         width: 100%;
 

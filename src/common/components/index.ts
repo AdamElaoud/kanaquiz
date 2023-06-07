@@ -20,6 +20,6 @@ export {
     Tab,
     TabHeader,
     TabSet,
-    ToggleButton as Toggle,
+    ToggleButton,
     ToggleSwitch
 };

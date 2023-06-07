@@ -8,6 +8,12 @@
     font-weight: $fontWeightSuperBold;
     justify-content: center;
 
+    &.mini {
+        font-size: 1.25rem;
+        height: $miniIconSize;
+        width: $miniIconSize;
+    }
+
     &.sm {
         height: $smallIconSize;
         width: $smallIconSize;

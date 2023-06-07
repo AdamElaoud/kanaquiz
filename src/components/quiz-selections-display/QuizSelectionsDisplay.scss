@@ -2,8 +2,11 @@
 
 .quiz-selections-display {
     align-items: center;
+    color: $trueRed;
     display: flex;
     flex-direction: column;
+    font-weight: $fontWeightBold;
+    height: 3rem;
     justify-content: center;
     width: 100%;
 

@@ -2,28 +2,33 @@ import { useState } from "react";
 import "./ToggleSwitch.scss";
 
 interface Props {
-    onDisable?: () => void,
-    onEnable: () => void,
-    startDisabled?: boolean,
+    disabled?: boolean,
+    onDeactivate?: () => void,
+    onActivate: () => void,
+    startDeactivated?: boolean
 };
 
-const ToggleSwitch = (props: Props) : JSX.Element => {
-    const { onDisable, onEnable, startDisabled } = props;
 
-    const [enabled, setEnabled] = useState(!startDisabled);
+const ToggleSwitch = (props: Props) : JSX.Element => {
+    const { disabled, onDeactivate, onActivate, startDeactivated } = props;
+
+    const [activated, setActivated] = useState(!disabled && !startDeactivated);
 
     const onToggle = () => {
-        if (!enabled)
-            onEnable();
-        else if (onDisable)
-            onDisable();
-
-        setEnabled(currentStatus => !currentStatus);
+        if (!disabled) {
+            if (!activated)
+                onActivate();
+            else if (onDeactivate)
+                onDeactivate();
+    
+            setActivated(currentStatus => !currentStatus);
+        }
     };
 
     const classes = ["toggle-switch"];
-    if (enabled) classes.push("enabled");
-    else classes.push("disabled");
+    if (activated) classes.push("activated");
+    else classes.push("deactivated");
+    if (disabled) classes.push("disabled");
 
     return (
         <div className = {classes.join(" ")}>

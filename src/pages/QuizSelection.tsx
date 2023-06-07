@@ -5,7 +5,8 @@ import { QuizSelectionsContextProvider } from "@/hooks/useQuizSelections";
 import QuizSelectionsDisplay from "@/components/quiz-selections-display/QuizSelectionsDisplay";
 import { DEFAULT_QUESTION_AMOUNT, QUIZ_TYPES } from "@/utils/constants";
 import useLocalStorage from "@/common/hooks/useLocalStorage";
-import { ToggleSwitch } from "@/common/components";
+import { Icon, ToggleSwitch } from "@/common/components";
+import { FontAwesomeIconType, Size } from "@/common/types";
 
 const QuizSelection = () : JSX.Element => {
     const [quizSelections, setQuizSelections] = useLocalStorage<QuizSelectionData[]>("quiz-selections", [{
@@ -41,7 +42,12 @@ const QuizSelection = () : JSX.Element => {
                 </div>
 
                 <div className = "quiz-selection-status">
-                    <ToggleSwitch onEnable = {() => console.log("enabled!")}/>
+                    <span className = "endless-mode-toggle">
+                        <ToggleSwitch onActivate = {() => console.log("enabled!")}/>
+                        <span className = "endless-mode-text">Endless Mode</span>
+                        <Icon className = "endless-mode-help" type = {FontAwesomeIconType.Question}/>
+                    </span>
+
                     <QuizSelectionsDisplay />
                 </div>
             </div>

@@ -17,11 +17,11 @@ const Toggle = (props: Props) : JSX.Element => {
 
     const [leftButton, rightButton] = buttons;
 
-    const leftButtonClasses = ["left", "toggle-button"];
+    const leftButtonClasses = ["left", "toggle-button-item"];
     if (activeSide === Side.Left) leftButtonClasses.push("active")
     if (leftButton.className) leftButtonClasses.push(leftButton.className);
 
-    const rightButtonClasses = ["right", "toggle-button"];
+    const rightButtonClasses = ["right", "toggle-button-item"];
     if (activeSide === Side.Right) rightButtonClasses.push("active")
     if (rightButton.className) rightButtonClasses.push(rightButton.className);
 
@@ -33,7 +33,7 @@ const Toggle = (props: Props) : JSX.Element => {
         }
     };
 
-    const toggleClasses = className ? `toggle ${className}` : "toggle";
+    const toggleClasses = className ? `toggle-button ${className}` : "toggle-button";
 
     return (
         <div className = {toggleClasses}>
