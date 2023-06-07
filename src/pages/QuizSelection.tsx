@@ -5,6 +5,7 @@ import { QuizSelectionsContextProvider } from "@/hooks/useQuizSelections";
 import QuizSelectionsDisplay from "@/components/quiz-selections-display/QuizSelectionsDisplay";
 import { DEFAULT_QUESTION_AMOUNT, QUIZ_TYPES } from "@/utils/constants";
 import useLocalStorage from "@/common/hooks/useLocalStorage";
+import { ToggleSwitch } from "@/common/components";
 
 const QuizSelection = () : JSX.Element => {
     const [quizSelections, setQuizSelections] = useLocalStorage<QuizSelectionData[]>("quiz-selections", [{
@@ -39,7 +40,10 @@ const QuizSelection = () : JSX.Element => {
                     {QUIZ_TYPES.map(quizType => <QuizTypeCard {...quizType}/>)}
                 </div>
 
-                <QuizSelectionsDisplay />
+                <div className = "quiz-selection-status">
+                    <ToggleSwitch onEnable = {() => console.log("enabled!")}/>
+                    <QuizSelectionsDisplay />
+                </div>
             </div>
         </QuizSelectionsContextProvider>
     );

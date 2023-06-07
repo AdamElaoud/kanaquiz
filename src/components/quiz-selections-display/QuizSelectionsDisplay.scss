@@ -1,36 +1,41 @@
 @use "../../styles/index" as *;
 
 .quiz-selections-display {
-    @extend %padding;
-    @extend %rounded-border;
     align-items: center;
-    background-color: $navyBlack;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin-top: $sectionSpacing;
     width: 100%;
 
-    .crimson {
-        .icon {
-            background-color: $crimson;
+    .step-display {
+        :not(.flag-step) {
+            .icon {
+                color: $lightModeTextColor;
+            }
         }
-    }
 
-    .lightgreen {
-        .icon {
-            background-color: $complete;
+        .crimson {
+            .icon {
+                background-color: $crimson;
+            }
         }
-    }
-
-    .lightskyblue {
-        .icon {
-            background-color: $active;
+    
+        .lightgreen {
+            .icon {
+                background-color: $complete;
+            }
         }
-    }
-
-    .gold {
-        .icon {
-            background-color: $gold;
+    
+        .lightskyblue {
+            .icon {
+                background-color: $active;
+            }
+        }
+    
+        .gold {
+            .icon {
+                background-color: $gold;
+            }
         }
     }
 }

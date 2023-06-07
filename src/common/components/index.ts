@@ -7,7 +7,8 @@ import StepDisplay from "./step-display/StepDisplay";
 import Tab from "./tabs/Tab";
 import TabHeader from "./tabs/TabHeader";
 import TabSet from "./tabs/TabSet";
-import Toggle from "./toggle/Toggle";
+import ToggleButton from "./toggle-button/ToggleButton";
+import ToggleSwitch from "./toggle-switch/ToggleSwitch";
 
 export {
     Button,
@@ -19,5 +20,6 @@ export {
     Tab,
     TabHeader,
     TabSet,
-    Toggle
+    ToggleButton as Toggle,
+    ToggleSwitch
 };

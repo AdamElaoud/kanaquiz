@@ -1,0 +1,50 @@
+@use "../../../styles/index" as *;
+
+$toggleButtonSize: $mediumIconSize;
+$paddingMultiplier: 0.5;
+$toggleSwitchWidth: calc($toggleButtonSize * 3);
+
+.toggle-switch {
+    @include padding($paddingMultiplier);
+    align-items: center;
+    background-color: $trueGray;
+    border-radius: calc($borderRadius * 1.75);
+    display: flex;
+    height: calc($toggleButtonSize * 1.5);
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    width: $toggleSwitchWidth;
+
+    $toggleSwitchPadding: calc($padding * $paddingMultiplier);
+    .toggle-switch-button {
+        border-radius: 50%;
+        height: $toggleButtonSize;
+        position: absolute;
+        transition: all 0.3s ease-in-out;
+        width: $toggleButtonSize;
+    }
+
+    &.enabled {
+        background-color: $active;
+
+        .toggle-switch-button {
+            left: calc($toggleSwitchWidth - $toggleSwitchPadding - $toggleButtonSize);
+        }
+    }
+    
+    &.disabled {
+        .toggle-switch-button {
+            left: $toggleSwitchPadding;
+        }
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .toggle-switch {
+        .toggle-switch-button {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

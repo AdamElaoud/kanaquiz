@@ -1,6 +1,6 @@
 import { ReactButtonOnClickEvent, ReactButtonOnClick, ToggleButtonConfig, Side } from "@/common/types";
 import { useState } from "react";
-import "./Toggle.scss";
+import "./ToggleButton.scss";
 
 interface Props {
     buttons: [ToggleButtonConfig, ToggleButtonConfig],

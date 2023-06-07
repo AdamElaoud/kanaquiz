@@ -23,6 +23,7 @@ $borderThickness: 5px;
         
         $iconSize: 8rem;
         .icon {
+            color: $lightModeTextColor;
             font-size: 3rem;
             height: $iconSize;
             width: $iconSize;
@@ -83,7 +84,12 @@ $borderThickness: 5px;
 @media (hover: hover) and (pointer: fine) {
     .quiz-type {
         &:hover {
+            border: $quizTypeCardBorderThickness solid $gold;
             cursor: pointer;
+        }
+
+        &.is-selected {
+            border: $quizTypeCardBorderThickness solid $active;
         }
     }
 }
