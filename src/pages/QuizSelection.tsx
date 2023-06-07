@@ -6,7 +6,7 @@ import QuizSelectionsDisplay from "@/components/quiz-selections-display/QuizSele
 import { DEFAULT_QUESTION_AMOUNT, QUIZ_TYPES } from "@/utils/constants";
 import useLocalStorage from "@/common/hooks/useLocalStorage";
 import { Icon, ToggleSwitch } from "@/common/components";
-import { FontAwesomeIconType, Size } from "@/common/types";
+import { FontAwesomeIconType } from "@/common/types";
 
 const QuizSelection = () : JSX.Element => {
     const [quizSelections, setQuizSelections] = useLocalStorage<QuizSelectionData[]>("quiz-selections", [{
