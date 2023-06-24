@@ -13,6 +13,11 @@ export enum Side {
     Right = 'right'
 };
 
+export enum Direction {
+    Up = 1,
+    Down = -1
+};
+
 export type ReactButtonOnClick = React.MouseEventHandler<HTMLButtonElement>;
 export type ReactButtonOnClickEvent = React.MouseEvent<HTMLButtonElement, MouseEvent>;
 export type ReactNode = React.ReactNode;
@@ -22,18 +27,21 @@ export type ReactInputOnChangeEvent = React.ChangeEvent<HTMLInputElement>;
 export type ReactFormOnSubmitEvent = React.FormEvent<HTMLFormElement>;
 export type ReactSetState<T> = React.Dispatch<React.SetStateAction<T>>;
 export type CSSStyles = React.CSSProperties;
+export type ReactRef<T> = React.RefObject<T>;
 
 export type WindowSize = [width: number, height: number];
 
 export interface ToggleButtonConfig {
     className?: string,
-    onClick: ReactButtonOnClick,
-    text: string
+    content: string | ReactElement,
+    onClick: ReactButtonOnClick
 };
 
-export type StepState = (stepState: { prevStepID: number | string, prevStepTitle: number | string, newStepID: number | string, newStepTitle: number | string }) => void;
+export type StepState = { prevStepID: number | string, prevStepTitle: number | string, newStepID: number | string, newStepTitle: number | string };
 
-export type TabState = (tabState: { prevTabID: number, prevTabTitle: string, newTabID: number, newTabTitle: string }) => void;
+export type TabState = { prevTabID: number, prevTabTitle: string, newTabID: number, newTabTitle: string };
+
+export type InputState = { prevValue: number, newValue: number };
 
 export interface StepConfig {
     className?: string,
@@ -46,11 +54,16 @@ export interface StepConfig {
 
 export enum CustomIconType {
     Blank = "blank",
-    Hiragana = "hiragana",
-    Katakana = "katakana"
+    JPFlag = "jpFlag",
+    Kana = "kana",
+    USFlag = "usFlag",
 };
 export type CustomIconMapType = {
-    [key in CustomIconType]: string;
+    [key in CustomIconType]: {
+        isImage: boolean,
+        src?: string,
+        text: string
+    };
 };
 
 export enum FontAwesomeIconType {
@@ -59,6 +72,7 @@ export enum FontAwesomeIconType {
     ClipboardQuestion = "clipboardQuestion",
     Check = "check",
     Dojo = "dojo",
+    Down = "down",
     FlagCheckered = "flagCheckered",
     Gear = "gear",
     NumberList = "numberList",
@@ -67,6 +81,7 @@ export enum FontAwesomeIconType {
     Search = "search",
     Question = "question",
     Torii = "torii",
+    Up = "up",
     X = "x"
 };
 export type FontAwesomeIconMapType = {

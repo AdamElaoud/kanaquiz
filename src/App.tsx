@@ -11,7 +11,7 @@ import Header from './components/header/Header';
 
 const App = () : JSX.Element => {
     const [mode, setMode] = useState<Mode>(Mode.Kana);
-    const [page, setPage] = useState<PageType>(PageType.KanaSelect);
+    const [page, setPage] = useState<PageType>(PageType.QuizSelect);
     const [windowWidth, windowHeight] = useWindowSize();
     const dynamicWidth = useDynamicWidth(
         SCREEN_PARTIAL_FILL_WIDTH,
@@ -26,7 +26,7 @@ const App = () : JSX.Element => {
 
     }, []);
 
-    const onStepChange: StepState = ({ newStepID }) => {
+    const onStepChange = ({ newStepID }: StepState) => {
         setPage(newStepID as PageType);
     };
 
@@ -43,7 +43,7 @@ const App = () : JSX.Element => {
                 <Header style = {dynamicWidth}/>
 
                 <div className = "page" style = {dynamicWidth}>
-                    {PAGES[page]}
+                    {PAGES[page]()}
                 </div>
                 
                 <StepCarousel

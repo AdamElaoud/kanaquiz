@@ -5,7 +5,7 @@ import KanaSelection from "@/pages/KanaSelection";
 import QuizRecap from "@/pages/QuizRecap";
 import QuizSelection from "@/pages/QuizSelection";
 import QuizSummary from "@/pages/QuizSummary";
-import { PageMapType, PageType, QuizType } from "@/types";
+import { PageMapType, PageType } from "@/types";
 
 // this value is expected to match the SCSS $sizeWidthThreshhold variable in _values.scss
 export const SCREEN_WIDTH_THRESHHOLD = 600;
@@ -23,87 +23,57 @@ export const MAXIMUM_QUESTION_AMOUNT = 50;
 
 export const PAGE_STEPS: StepConfig[] = [
     {
-        iconType: CustomIconType.Hiragana,
-        ID: PageType.KanaSelect,
-        text: "Select Kana to practice!",
-        title: "Kana"
-    },
-    {
         iconType: FontAwesomeIconType.ClipboardQuestion,
         ID: PageType.QuizSelect,
-        text: "Select your quiz types!",
         title: "Quiz"
+    },
+    {
+        iconType: CustomIconType.Kana,
+        ID: PageType.KanaSelect,
+        title: "Kana"
     },
     {
         iconType: FontAwesomeIconType.Play,
         ID: PageType.QuizSummary,
-        text: "Quiz summary",
         title: "Go!"
     },
 ];
 
 export const PAGES: PageMapType = {
-    KanaSelection: <KanaSelection />,
-    QuizSelection: <QuizSelection />,
-    KanaQuiz: <KanaQuiz />,
-    QuizSummary: <QuizSummary />,
-    QuizRecap: <QuizRecap />
+    KanaSelection: () => <KanaSelection />,
+    QuizSelection: () => <QuizSelection />,
+    KanaQuiz: () => <KanaQuiz />,
+    QuizSummary: () => <QuizSummary />,
+    QuizRecap: () => <QuizRecap />
 };
 
 export const ENGLISH_DELIMITERS = [" ", ",", ", "];
 export const JAPANESE_DELIMITERS = ["　", "、"];
 
-export const QUIZ_TYPE_ICONS = {
-    [QuizType.MultipleChoice]: FontAwesomeIconType.NumberList,
-    [QuizType.MultipleChoiceReverse]: FontAwesomeIconType.NumberList,
-    [QuizType.WriteTheAnswer]: FontAwesomeIconType.Pencil,
-    [QuizType.WriteTheAnswerX3]: FontAwesomeIconType.Pencil,
-};
+// export const QUIZ_TYPE_ICONS = {
+//     [QuizTopic.MultipleChoice]: FontAwesomeIconType.NumberList,
+//     [QuizTopic.MultipleChoiceReverse]: FontAwesomeIconType.NumberList,
+//     [QuizTopic.WriteTheAnswer]: FontAwesomeIconType.Pencil,
+//     [QuizTopic.WriteTheAnswerX3]: FontAwesomeIconType.Pencil,
+// };
 
-export const QUIZ_TYPE_TITLES = {
-    [QuizType.MultipleChoice]: "Multiple Choice\nen ➜ jp",
-    [QuizType.MultipleChoiceReverse]: "Multiple Choice\njp ➜ en",
-    [QuizType.WriteTheAnswer]: "Write the Answer",
-    [QuizType.WriteTheAnswerX3]: "Write the Answer x3",
-};
+// export const QUIZ_TYPE_TITLES = {
+//     [QuizTopic.MultipleChoice]: "Multiple Choice\nen ➜ jp",
+//     [QuizTopic.MultipleChoiceReverse]: "Multiple Choice\njp ➜ en",
+//     [QuizTopic.WriteTheAnswer]: "Write the Answer",
+//     [QuizTopic.WriteTheAnswerX3]: "Write the Answer x3",
+// };
 
-export const QUIZ_TYPE_DESCRIPTIONS = {
-    [QuizType.MultipleChoice]: "Choose the matching romaji for the kana",
-    [QuizType.MultipleChoiceReverse]: "Choose the matching kana for the romaji",
-    [QuizType.WriteTheAnswer]: "Write the matching romaji for the kana",
-    [QuizType.WriteTheAnswerX3]: "Write the matching romaji for 3 kana",
-};
+// export const QUIZ_TYPE_DESCRIPTIONS = {
+//     [QuizTopic.MultipleChoice]: "Choose the matching romaji for the kana",
+//     [QuizTopic.MultipleChoiceReverse]: "Choose the matching kana for the romaji",
+//     [QuizTopic.WriteTheAnswer]: "Write the matching romaji for the kana",
+//     [QuizTopic.WriteTheAnswerX3]: "Write the matching romaji for 3 kana",
+// };
 
-export const QUIZ_TYPE_COLOR_CLASSNAMES = {
-    [QuizType.MultipleChoice]: 'crimson',
-    [QuizType.MultipleChoiceReverse]: 'lightskyblue',
-    [QuizType.WriteTheAnswer]: 'lightgreen',
-    [QuizType.WriteTheAnswerX3]: 'gold',
-};
-
-export const QUIZ_TYPES = [
-    { 
-        key: 0,
-        iconType: FontAwesomeIconType.NumberList,
-        title: QUIZ_TYPE_TITLES[QuizType.MultipleChoice],
-        quizType: QuizType.MultipleChoice
-    },
-    {
-        key: 1,
-        iconType: FontAwesomeIconType.NumberList,
-        title: QUIZ_TYPE_TITLES[QuizType.MultipleChoiceReverse],
-        quizType: QuizType.MultipleChoiceReverse
-    },
-    {
-        key: 2,
-        iconType: FontAwesomeIconType.Pencil,
-        title: QUIZ_TYPE_TITLES[QuizType.WriteTheAnswer],
-        quizType: QuizType.WriteTheAnswer
-    },
-    {
-        key: 3,
-        iconType: FontAwesomeIconType.Pencil,
-        title: QUIZ_TYPE_TITLES[QuizType.WriteTheAnswerX3],
-        quizType: QuizType.WriteTheAnswerX3
-    }
-];
+// export const QUIZ_TYPE_COLOR_CLASSNAMES = {
+//     [QuizTopic.MultipleChoice]: 'crimson',
+//     [QuizTopic.MultipleChoiceReverse]: 'lightskyblue',
+//     [QuizTopic.WriteTheAnswer]: 'lightgreen',
+//     [QuizTopic.WriteTheAnswerX3]: 'gold',
+// };

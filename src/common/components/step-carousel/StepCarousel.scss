@@ -6,7 +6,7 @@ $stepTitleMargin: 1rem;
     @include padding(2);
     @extend %rounded-border;
     align-items: center;
-    background-color: $navyBlack;
+    background-color: $darkNavy;
     display: flex;
     height: 12rem;
     justify-content: space-around;
@@ -21,8 +21,12 @@ $stepTitleMargin: 1rem;
         display: flex;
         flex-direction: column;
         height: 100%;
-        justify-content: space-evenly;
+        justify-content: center;
         width: 50%;
+        
+        &:has(.step-text) {
+            justify-content: space-evenly;
+        }
 
         .step-text {
             color: $unsaturatedGold;

@@ -6,6 +6,7 @@ import useMouseClick from "@/common/hooks/useMouseClick";
 
 interface Props {
     delimiters?: string[],
+    nonBlurTargets?: HTMLElement[] | undefined,
     placeholder?: string,
     searchFn: (rawSearch: string, queries: string[]) => ReactNode[],
     style?: CSSStyles
@@ -14,7 +15,13 @@ interface Props {
 const DEFAULT_DELIMITER = [" "];
 
 const Searchbar = (props: Props) : JSX.Element => {
-    const { delimiters = DEFAULT_DELIMITER, placeholder = "", searchFn, style } = props;
+    const {
+        delimiters = DEFAULT_DELIMITER,
+        nonBlurTargets,
+        placeholder = "",
+        searchFn,
+        style
+    } = props;
     
     const [searchText, setSearchText] = useState<string>("");
     const [searchResults, setSearchResults] = useState<ReactNode[]>([]);
@@ -43,8 +50,12 @@ const Searchbar = (props: Props) : JSX.Element => {
     const hasResults = searchResults.length > 0;
     const searchInputIsTarget = searchInputRef.current?.contains(clickTarget);
     const searchResultsIsTarget = searchResultsRef.current?.contains(clickTarget);
+
+    let nonBlurTargetIsTarget = false;
+    if (nonBlurTargets)
+        nonBlurTargetIsTarget = nonBlurTargets.some(nonBlurTarget => nonBlurTarget.contains(clickTarget));
     
-    const showResults = (searchInputIsTarget && hasResults) || searchResultsIsTarget;
+    const showResults = (searchInputIsTarget && hasResults) || searchResultsIsTarget || nonBlurTargetIsTarget;
 
     const inputClasses = showResults ? "search-input showing-results" : "search-input";
 

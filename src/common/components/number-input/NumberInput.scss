@@ -1,0 +1,74 @@
+@use "../../styles/index" as *;
+
+.number-input {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    .number-input-title {
+        margin-bottom: 0.25rem;
+    }
+
+    .number-input-content {
+        align-items: center;
+        display: flex;
+        
+        input {
+            @extend %rounded-border;
+            border: none;
+            font-weight: $fontWeightBold;
+            text-align: center;
+        }
+
+        input[type = number]::-webkit-inner-spin-button, 
+        input[type = number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none; 
+            display: none;
+        }
+    }
+
+    .icon {
+        color: $active;
+    }
+
+    &.sm, &.mini {
+        .number-input-title, input {
+            font-size: $miniFontSize;
+        }
+    }
+    
+    &.md {
+        .number-input-title, input {
+            font-size: $smallFontSize;
+        }
+    }
+    
+    &.lg {
+        .number-input-title, input {
+            font-size: $mediumFontSize;
+        }
+    }
+}
+
+@media (max-width: $sizeWidthThreshhold) {
+    .number-input {    
+        .number-input-title {
+            font-size: $miniFontSize;
+        }
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .number-input {
+        .icon {
+            &:hover {
+                cursor: pointer;
+                color: $gold;
+            }
+            
+            &:disabled {
+                cursor: auto;
+            }
+        }
+    }
+}

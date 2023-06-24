@@ -2,76 +2,47 @@
 @use "../common/components/tabs/TabHeader.scss" as *;
 @use "../common/components/searchbar/Searchbar.scss" as *;
 
-$sectionMargin: 5rem;
 .quiz-selection-page {
     align-items: center;
     display: flex;
     flex-direction: column;
     height: 100%;
+    row-gap: 4rem;
 
-    .quiz-types {
-        @extend %rounded-border;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        height: 75%;
-        width: 100%;
-
-        .quiz-type {
-            align-self: center;
-            justify-self: center;
-        }
-    }
-
-    .quiz-selection-status {
-        @extend %rounded-border;
+    .welcome-message {
         align-items: center;
-        background-color: $navyBlack;
         display: flex;
         flex-direction: column;
-        height: 13rem;
-        justify-content: space-evenly;
-        margin-top: calc($sectionSpacing * 2);
-        width: 40%;
+        justify-content: center;
 
-        .endless-mode-toggle {
-            align-items: center;
-            display: flex;
-            justify-content: center;
+        .welcome-title {
+            font-size: $largeFontSize;
+        }
+
+        .call-to-action {
+            font-size: $smallFontSize;
+            margin-top: $sectionSpacing;
+        }
+    }
+
+    .quiz-options {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+
+        .quiz-selection-section {
             width: 100%;
-
-            .endless-mode-text {
-                margin-left: 1.75rem;
-                margin-right: 0.75rem;
-            }
-
-            .endless-mode-help {
-                background-color: $trueGray;
-                font-size: 1.25rem;
+    
+            .direction-indicator {
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
             }
         }
     }
-}
 
-@media (max-width: $sizeWidthThreshhold) {
-    .quiz-selection-page {
-        .quiz-types {
-            gap: 1rem;
-            padding: 0.75rem;
-        }
-
-        .quiz-selection-status {
-            @include padding(2.5);
-            height: 10rem;
-            justify-content: space-between;
-            margin-top: calc($sectionSpacing / 2);
-            width: 100%;
-
-            .endless-mode-toggle {
-                .endless-mode-text {
-                    font-size: $smallFontSize;
-                }
-            }
-        }
+    .number-input-title {
+        font-size: $smallFontSize;
     }
 }

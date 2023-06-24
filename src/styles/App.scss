@@ -28,12 +28,6 @@ html {
             outline: transparent;
         }
 
-        input[type = number]::-webkit-inner-spin-button, 
-        input[type = number]::-webkit-outer-spin-button { 
-            -webkit-appearance: none; 
-            display: none;
-        }
-
         $scrollbarThickness: 10px;
         ::-webkit-scrollbar {
             width: $scrollbarThickness;
@@ -65,12 +59,12 @@ html {
     justify-content: flex-start;
 
     .page {
-        height: calc(90% - $headerHeight - $headerSpacing);
+        height: calc(92% - $headerHeight - $headerSpacing);
     }
 
     .page-carousel {
         bottom: 0;
-        height: 10%;
+        height: 8%;
         position: absolute;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
@@ -80,11 +74,11 @@ html {
 @media (max-height: $sizeHeightThreshhold) {
     .app {        
         .page {
-            height: calc(85% - $headerHeight - $headerSpacing);
+            height: calc(88% - $headerHeight - $headerSpacing);
         }
     
         .page-carousel {
-            height: 15%;
+            height: 12%;
         }
     }
 }

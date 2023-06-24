@@ -1,11 +1,11 @@
 /* eslint-disable */
 import { ReactNode } from "@/common/types";
-import { QuizSelectionData, QuizType } from "@/types";
+import { QuizSelectionData } from "@/types";
 import { createContext, useContext } from "react";
 
 type QuizSelectionsContextType = {
-    quizSelections: QuizSelectionData[],
-    updateQuizSelections: (quizType: QuizType, amount: number) => void
+    quizSelections: QuizSelectionData,
+    updateQuizSelections: (quizSelectionData: QuizSelectionData) => void
 };
 
 const QuizSelectionsContext = createContext<QuizSelectionsContextType>({} as QuizSelectionsContextType);

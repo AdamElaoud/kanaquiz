@@ -20,7 +20,7 @@
     .tab-content {
         @extend %rounded-border;
         @extend %padding;
-        background-color: $navyBlack;
+        background-color: $darkNavy;
         border-top-left-radius: 0;
         display: flex;
         flex-direction: column;

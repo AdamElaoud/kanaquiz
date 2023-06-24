@@ -1,16 +1,16 @@
 import { ReactButtonOnClickEvent, ReactButtonOnClick, ToggleButtonConfig, Side } from "@/common/types";
-import { useState } from "react";
+import { useState, forwardRef } from "react";
 import "./ToggleButton.scss";
 
 interface Props {
     buttons: [ToggleButtonConfig, ToggleButtonConfig],
     className?: string,
-    defaultActiveSide?: Side
+    defaultActiveSide?: Side,
 };
 
 const DEFAULT_ACTIVE_SIDE = Side.Left;
 
-const Toggle = (props: Props) : JSX.Element => {
+const ToggleButton = forwardRef((props: Props, ref: React.ForwardedRef<HTMLDivElement>) : JSX.Element => {
     const { buttons, className, defaultActiveSide = DEFAULT_ACTIVE_SIDE } = props;
 
     const [activeSide, setActiveSide] = useState(defaultActiveSide);
@@ -36,15 +36,15 @@ const Toggle = (props: Props) : JSX.Element => {
     const toggleClasses = className ? `toggle-button ${className}` : "toggle-button";
 
     return (
-        <div className = {toggleClasses}>
+        <div className = {toggleClasses} ref = {ref}>
             <button className = {leftButtonClasses.join(" ")} onClick = {onClick(leftButton.onClick, Side.Left)}>
-                {leftButton.text}
+                {leftButton.content}
             </button>
             <button className = {rightButtonClasses.join(" ")} onClick = {onClick(rightButton.onClick, Side.Right)}>
-                {rightButton.text}
+                {rightButton.content}
             </button>
         </div>
     );
-};
+});
 
-export default Toggle;
+export default ToggleButton;

@@ -5,7 +5,11 @@ const useLocalStorage = <T,>(key: string, initialValue: T): [T, ReactSetState<T>
     const [storedValue, setStoredValue] = useState<T>(() => {
         try {
             const item = localStorage.getItem(key);
-            return item ? JSON.parse(item) : initialValue;
+
+            if (item) return JSON.parse(item);
+
+            localStorage.setItem(key, JSON.stringify(initialValue));
+            return initialValue;
 
         } catch (error) {
             console.log(error);

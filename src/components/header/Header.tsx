@@ -1,6 +1,6 @@
-import { Button, Icon } from "@/common/components";
+import { Icon } from "@/common/components";
 import "./Header.scss";
-import { CSSStyles, FontAwesomeIconType, Size } from "@/common/types";
+import { CSSStyles, FontAwesomeIconType } from "@/common/types";
 
 interface Props {
     style?: CSSStyles
@@ -16,11 +16,7 @@ const Header = (props: Props) : JSX.Element => {
                 Kana Quiz
             </span>
 
-            <Button
-                iconType = {FontAwesomeIconType.Gear}
-                iconSize = {Size.Medium}
-                onClick = {() => console.log("settings!")}
-            />
+            {/* <ToggleSwitch onActivate = {() => console.log("darkmode activated!")}/> */}
         </div>
     );
 };

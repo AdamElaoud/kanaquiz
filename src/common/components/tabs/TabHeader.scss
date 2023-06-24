@@ -18,7 +18,7 @@ $tabHeaderWidth: 10rem;
     width: $tabHeaderWidth;
     
     &.active {
-        background-color: $navyBlack;
+        background-color: $darkNavy;
         color: $darkModeTextColor;
         font-weight: $fontWeightBold;
     }
@@ -33,7 +33,7 @@ $tabHeaderWidth: 10rem;
         }
 
         &.active {
-            background-color: $navyBlack;
+            background-color: $darkNavy;
             color: $darkModeTextColor;
         }
     }

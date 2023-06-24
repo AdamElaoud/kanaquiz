@@ -14,6 +14,12 @@ $halfPadding: calc($padding / 2);
     padding: $halfPadding $padding $halfPadding $padding;
 }
 
+@mixin rounded-border($multiplier: 1) {
+    $updatedBorderRadius: calc($borderRadius * $multiplier);
+
+    border-radius: $updatedBorderRadius;
+}
+
 @mixin padding($multiplier: 1) {
     $updatedHalfPadding: calc($halfPadding * $multiplier);
     $updatedPadding :calc($padding * $multiplier);

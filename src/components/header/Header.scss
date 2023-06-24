@@ -20,12 +20,13 @@ $headerSpacing: calc($sectionSpacing / 3);
         color: white;
 
         .icon {
+            color: $crimson;
             margin-right: 0.5rem;
             margin-bottom: 0.25rem;
         }
     }
 
-    .button {
+    .toggle-switch {
         position: absolute;
         right: calc(($headerHeight - $mediumIconSize - $padding) / 2);
     }

@@ -6,7 +6,7 @@ import "./TabSet.scss";
 interface Props {
     children: ReactElement[],
     className?: string
-    onTabChange?: TabState,
+    onTabChange?: (tabState: TabState) => void,
     startingTabID?: number,
 };
 

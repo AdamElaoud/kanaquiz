@@ -26,6 +26,10 @@ $stepIconPadding: 0.65rem;
             background-color: $active;
             color: $lightModeTextColor;
         }
+
+        .title {
+            color: $darkModeTextColor;
+        }
     }
     
     &.complete {

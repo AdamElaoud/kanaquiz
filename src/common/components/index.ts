@@ -1,5 +1,7 @@
 import Button from "./button/Button";
+import HelpTooltip from "./help-tooltip/HelpTooltip";
 import Icon from "./icon/Icon";
+import NumberInput from "./number-input/NumberInput";
 import Searchbar from "./searchbar/Searchbar";
 import Step from "./step-display/Step";
 import StepCarousel from "./step-carousel/StepCarousel";
@@ -12,7 +14,9 @@ import ToggleSwitch from "./toggle-switch/ToggleSwitch";
 
 export {
     Button,
+    HelpTooltip,
     Icon,
+    NumberInput,
     Searchbar,
     Step,
     StepCarousel,

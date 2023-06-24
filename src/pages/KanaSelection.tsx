@@ -5,19 +5,17 @@ import KanaButtonRow from "@/components/kana-button-row/KanaButtonRow";
 import { KanaSelectionsContextProvider } from "@/hooks/useKanaSelections";
 import useLocalStorage from "@/common/hooks/useLocalStorage";
 import "./KanaSelection.scss";
-import { ENGLISH_DELIMITERS, JAPANESE_DELIMITERS, SCREEN_FILL_WIDTH, SCREEN_PARTIAL_FILL_WIDTH } from "@/utils/constants";
-import useDynamicWidth from "@/common/hooks/useDynamicWidth";
+import { ENGLISH_DELIMITERS, JAPANESE_DELIMITERS } from "@/utils/constants";
 import { Side, TabState, ToggleButtonConfig } from "@/common/types";
 import useMode from "@/hooks/useMode";
-
-
+import { useRef } from "react";
 
 const KanaSelection = () : JSX.Element => {
     const [selectedTabID, setSelectedTabID] = useLocalStorage<number>("kana-selections-tab", TabID.Hiragana);
     const [kanaSelections, setKanaSelections] = useLocalStorage<string[]>("kana-selections", []);
     const { hiragana, katakana, lookalikes, search } = useKanaDictionary();
-    const dynamicSearchBarWidth = useDynamicWidth(SCREEN_PARTIAL_FILL_WIDTH, 50, SCREEN_FILL_WIDTH, 90);
     const { mode, setMode } = useMode();
+    const toggleRef = useRef<HTMLDivElement>(null);
 
     const hiraganaGroups = Object.values(hiragana.groupsToChars);
     const katakanaGroups = Object.values(katakana.groupsToChars);
@@ -47,13 +45,13 @@ const KanaSelection = () : JSX.Element => {
 
     const searchFn = (_rawSearch: string, queries: string[]) => search(queries);
 
-    const onTabChange: TabState = ({ newTabID }) => {
+    const onTabChange = ({ newTabID }: TabState) => {
         setSelectedTabID(newTabID);
     };
 
-    const toggleButtons: [ToggleButtonConfig, ToggleButtonConfig] = [
-        { text: 'Show Kana', onClick: () => setMode(Mode.Kana) },
-        { text: 'Show Romaji', onClick: () => setMode(Mode.Romaji) }
+    const displayModeToggleButtons: [ToggleButtonConfig, ToggleButtonConfig] = [
+        { content: 'Kana', onClick: () => setMode(Mode.Kana) },
+        { content: 'Romaji', onClick: () => setMode(Mode.Romaji) }
     ];
 
     const defaultActiveSide = mode === Mode.Kana ? Side.Left : Side.Right;
@@ -61,14 +59,21 @@ const KanaSelection = () : JSX.Element => {
     return (
         <KanaSelectionsContextProvider value = {{ kanaSelections, updateKanaSelections }}>
             <div className = "kana-selection-page">
-                <ToggleButton buttons = {toggleButtons} defaultActiveSide = {defaultActiveSide}/>
+                <div className = "call-to-action">
+                    Select the Kana you would like to practice!
+                </div>
 
-                <Searchbar
-                    searchFn = {searchFn}
-                    delimiters = {[...ENGLISH_DELIMITERS, ...JAPANESE_DELIMITERS]}
-                    placeholder = "Search for Kana"
-                    style = {dynamicSearchBarWidth}
-                />
+                <div className = "actions-bar">
+                    <Searchbar
+                        searchFn = {searchFn}
+                        delimiters = {[...ENGLISH_DELIMITERS, ...JAPANESE_DELIMITERS]}
+                        placeholder = "Search for Kana"
+                        nonBlurTargets = {toggleRef.current ? [toggleRef.current] : []}
+                    />
+
+                    <ToggleButton ref = {toggleRef} buttons = {displayModeToggleButtons} defaultActiveSide = {defaultActiveSide}/>
+                </div>
+
 
                 <TabSet className = "selection-tabset" onTabChange = {onTabChange} startingTabID = {selectedTabID}>
                     <Tab title = "ひ Hiragana" tabID = {TabID.Hiragana}>

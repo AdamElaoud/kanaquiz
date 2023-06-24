@@ -18,7 +18,7 @@ $searchResultsHeight: 25rem;
         .search-input {
             @extend %padding;
             @extend %rounded-border;
-            background-color: $navyBlack;
+            background-color: $darkNavy;
             border: none;
             color: $darkModeTextColor;
             height: $inputHeight;
@@ -34,7 +34,7 @@ $searchResultsHeight: 25rem;
     .search-results-container {
         @include box-shadow();
         @extend %padding;
-        background-color: $navyBlack;
+        background-color: $darkNavy;
         border-bottom-left-radius: $borderRadius;
         border-bottom-right-radius: $borderRadius;
         bottom: -$searchResultsHeight;

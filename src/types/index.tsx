@@ -12,11 +12,19 @@ export enum Mode {
     ID = 2
 };
 
-export enum QuizType {
-    MultipleChoice = "multiple-choice",
-    MultipleChoiceReverse = "multiple-choice-reverse",
-    WriteTheAnswer = "write-the-answer",
-    WriteTheAnswerX3 = "write-the-answer-x3",
+export enum QuizTopic {
+    Kana = "Kana",
+    Words = "Words"
+};
+
+export enum QuizDirection {
+    ENtoJP = "EN-to-JP",
+    JPtoEN = "JP-to-EN"
+};
+
+export enum QuizFormat {
+    MultipleChoice = "Multiple-Choice",
+    WriteTheAnswer = "Write-the-Answer",
 };
 
 export enum PageType {
@@ -34,7 +42,7 @@ export enum TabID {
 };
 
 export type PageMapType = {
-    [key in PageType]: ReactNode;
+    [key in PageType]: () => ReactNode;
 };
 
 export type CharsToGroups = {
@@ -46,8 +54,10 @@ export type GroupsToChars = {
 };
 
 export type QuizSelectionData = {
-    type: QuizType,
-    amount: number
+    amount: number,
+    direction: QuizDirection,
+    format: QuizFormat,
+    topic: QuizTopic
 };
 
 export interface KanaButtonProps {

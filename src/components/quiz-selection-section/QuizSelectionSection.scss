@@ -1,0 +1,35 @@
+@use "../../common/styles/index" as *;
+
+$quizSelectionSectionHeight: 6rem;
+
+.quiz-selection-section {
+    @extend %rounded-border;
+    @extend %padding;
+    align-items: center;
+    background-color: $darkNavy;
+    display: flex;
+    height: $quizSelectionSectionHeight;
+    justify-content: space-between;
+    padding-right: calc($padding / 2);
+    
+    .toggle-button {
+        background-color: $lightNavy;
+        display: flex;
+        justify-content: space-evenly;
+        width: 58%;
+        
+        .toggle-button-item {
+            background-color: $lightNavy;
+            width: 50%;
+        }
+    }
+    
+    .section-title {
+        align-items: center;
+        display: flex;
+
+        .help-tooltip {
+            margin-left: 0.5rem;
+        }
+    }
+}

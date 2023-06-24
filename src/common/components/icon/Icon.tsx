@@ -29,11 +29,13 @@ const Icon = (props: Props) : JSX.Element => {
         );
         
     } else if (isCustomIconType(type)) {
-        const customIconType = CustomIconMap[type];
+        const { isImage, src, text } = CustomIconMap[type];
+
+        const content = isImage ? <img src = {src} alt = {text}/> : text
 
         return (
             <div className = {classes.join(" ")} onClick = {onClick} style = {style}>
-                {customIconType}
+                {content}
             </div>
         );
 

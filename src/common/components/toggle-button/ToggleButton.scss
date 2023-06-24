@@ -1,19 +1,19 @@
 @use "../../styles/index" as *;
 
 .toggle-button {
-    @include padding(0.5);
-    @extend %rounded-border;
+    @include rounded-border(1.5);
     align-items: center;
-    background-color: $navyBlack;
-    border: $borderThickness solid $navyBlack;
+    background-color: $darkNavy;
+    border: $borderThickness solid $darkNavy;
     display: flex;
-    justify-content: space-between;
     gap: 0.75rem;
+    justify-content: space-between;
+    padding: calc($padding / 2);
     
     .toggle-button-item {
         @extend %rounded-border;
         @extend %padding;
-        background-color: $trueGray;
+        background-color: $darkNavy;
         color: $nonFocusedDarkModeTextColor;
         font-size: $smallFontSize;
         font-weight: $fontWeightNormal;

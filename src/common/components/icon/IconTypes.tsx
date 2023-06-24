@@ -2,6 +2,8 @@ import { CustomIconMapType, FontAwesomeIconMapType, } from "@/common/types";
 import {
     faAngleLeft,
     faAngleRight,
+    faCaretDown,
+    faCaretUp,
     faCheck,
     faClipboardQuestion,
     faFlagCheckered,
@@ -22,6 +24,7 @@ export const FontAwesomeIconMap: FontAwesomeIconMapType = {
     "check": faCheck,
     "clipboardQuestion": faClipboardQuestion,
     "dojo": faVihara,
+    "down": faCaretDown,
     "flagCheckered": faFlagCheckered,
     "gear": faGear,
     "numberList": faListOl,
@@ -30,11 +33,27 @@ export const FontAwesomeIconMap: FontAwesomeIconMapType = {
     "search": faMagnifyingGlass,
     "question": faQuestion,
     "torii": faToriiGate,
+    "up": faCaretUp,
     "x": faXmark,
 };
 
 export const CustomIconMap: CustomIconMapType = {
-    "hiragana": "ひ",
-    "katakana": "カ",
-    "blank": ""
+    blank: {
+        isImage: false,
+        text: ""
+    },
+    kana: {
+        isImage: false,
+        text: "ひ"
+    },
+    jpFlag: {
+        isImage: true,
+        src: "icon-images/japan.png",
+        text: "Japanese"
+    },
+    usFlag: {
+        isImage: true,
+        src: "icon-images/united-states.png",
+        text: "English"
+    },
 };

@@ -6,7 +6,7 @@ import { useState } from "react";
 interface Props {
     className?: string,
     displayFlagAtEnd?: boolean,
-    onStepChange?: StepState,
+    onStepChange?: (stepState: StepState) => void,
     showCheckOnComplete?: boolean,
     startingStepID?: number,
     steps: StepConfig[],
@@ -57,6 +57,8 @@ const StepCarousel = (props: Props) : JSX.Element => {
     let classes = "step-carousel";
     if (className) classes += ` ${className}`;
 
+    const stepText = steps[activeStepIndex].text;
+
     return (
         <div className = {classes} style = {style}>
             <Button
@@ -75,9 +77,9 @@ const StepCarousel = (props: Props) : JSX.Element => {
                     displayFlagAtEnd = {displayFlagAtEnd}
                     showCheckOnComplete = {showCheckOnComplete}
                 />
-                <div className = "step-text">
-                    {steps[activeStepIndex].text}
-                </div>
+                {stepText && <div className = "step-text">
+                    {stepText}
+                </div>}
             </div>
 
             <Button
