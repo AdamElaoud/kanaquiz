@@ -28,6 +28,7 @@ const Searchbar = (props: Props) : JSX.Element => {
     const searchResultsRef = useRef<HTMLDivElement>(null);
     const searchInputRef = useRef<HTMLInputElement>(null);
     const clickTarget = useMouseClick();
+    const showResults = useRef<boolean>(false);
 
     const onSearchChange = (event: ReactInputOnChangeEvent) => {
         const rawSearch = event.target.value;
@@ -55,9 +56,11 @@ const Searchbar = (props: Props) : JSX.Element => {
     if (nonBlurTargets)
         nonBlurTargetIsTarget = nonBlurTargets.some(nonBlurTarget => nonBlurTarget.contains(clickTarget));
     
-    const showResults = (searchInputIsTarget && hasResults) || searchResultsIsTarget || nonBlurTargetIsTarget;
+    showResults.current = (searchInputIsTarget && hasResults)
+        || searchResultsIsTarget
+        || (nonBlurTargetIsTarget && showResults.current);
 
-    const inputClasses = showResults ? "search-input showing-results" : "search-input";
+    const inputClasses = showResults.current ? "search-input showing-results" : "search-input";
 
     return (
         <div className = "search" style = {style}>
@@ -74,7 +77,7 @@ const Searchbar = (props: Props) : JSX.Element => {
                     onChange = {onSearchChange}
                 />
             </form>
-            {showResults &&
+            {showResults.current &&
                 // container is necessary to add space between scrollbar and side of element
                 <div
                     className = "search-results-container"

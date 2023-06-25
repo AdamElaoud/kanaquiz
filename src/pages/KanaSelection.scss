@@ -9,7 +9,7 @@
 
     .call-to-action {
         font-size: $smallFontSize;
-        margin-bottom: $sectionSpacing;
+        margin-bottom: calc($sectionSpacing / 2);
     }
 
     .actions-bar {
