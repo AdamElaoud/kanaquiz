@@ -1,0 +1,27 @@
+{
+    "name": "Kana Quiz",
+    "background_color": "#010818",
+    "display": "standalone",
+    "description": "Master Hiragana and Katakana!",
+    "start_url": ".",
+    "serviceworker": {
+
+    },
+    "icons": [
+        {
+            "src": "pwa/pwa864.png",
+            "sizes": "864x864",
+            "type": "image/png"
+        },
+        {
+            "src": "pwa/pwa516.png",
+            "sizes": "516x516",
+            "type": "image/png"
+        },
+        {
+            "src": "pwa/pwa96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        }
+    ]
+}
