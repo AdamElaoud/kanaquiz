@@ -53,6 +53,16 @@ export type GroupsToChars = {
     [key: string]: string[][]
 };
 
+export type Word = {
+    definition: string,
+    kana: string,
+    type: "hiragana" | "katakana"
+};
+
+export type HiraganaWord = Word & { type: "hiragana" };
+
+export type KatakanaWord = Word & { type: "katakana" };
+
 export type QuizSelectionData = {
     amount: number,
     direction: QuizDirection,
