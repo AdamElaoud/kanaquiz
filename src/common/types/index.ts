@@ -25,6 +25,7 @@ export type ReactElement = React.ReactElement;
 export type ReactFragment = React.ReactFragment;
 export type ReactInputOnChangeEvent = React.ChangeEvent<HTMLInputElement>;
 export type ReactFormOnSubmitEvent = React.FormEvent<HTMLFormElement>;
+export type ReactKeyboardEvent = React.KeyboardEvent;
 export type ReactSetState<T> = React.Dispatch<React.SetStateAction<T>>;
 export type ReactForwardedRef<T> = React.ForwardedRef<T>;
 export type ReactMutableRef<T> = React.MutableRefObject<T>;

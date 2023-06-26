@@ -1,4 +1,4 @@
-import { CSSStyles, FontAwesomeIconType, MouseClickState, ReactFormOnSubmitEvent, ReactInputOnChangeEvent, ReactNode, Size } from "@/common/types";
+import { CSSStyles, FontAwesomeIconType, MouseClickState, ReactFormOnSubmitEvent, ReactInputOnChangeEvent, ReactKeyboardEvent, ReactNode, Size } from "@/common/types";
 import { useState, useRef } from "react";
 import "./Searchbar.scss";
 import "@/styles/_index.scss";
@@ -110,6 +110,12 @@ const Searchbar = (props: Props) : JSX.Element => {
         event.preventDefault();
     };
 
+    const onInputKeyDown = (event: ReactKeyboardEvent) => {
+        // prevent input from clearing content on Enter press
+        if (event.key === "Enter")
+            event.preventDefault();
+    };
+
     const clearSearchbar = () => {
         setSearchText("");
         setSearchResults([]);
@@ -132,6 +138,7 @@ const Searchbar = (props: Props) : JSX.Element => {
                     placeholder = {placeholder}
                     value = {searchText}
                     onChange = {onSearchChange}
+                    onKeyDown = {onInputKeyDown}
                 />
                 <Button
                     onClick = {clearSearchbar}
