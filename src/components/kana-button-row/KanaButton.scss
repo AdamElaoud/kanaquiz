@@ -28,6 +28,11 @@ $kanaButtonWidth: 4rem;
 
     &.is-search-target {
         border: $borderThickness solid $gold;
+        width: calc($kanaButtonWidth + ($borderThickness * 2));
+
+        &.wide-button {
+            width: calc($wideKanaButtonWidth + ($borderThickness * 2));
+        }
     }
 }
 

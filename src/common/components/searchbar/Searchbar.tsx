@@ -56,15 +56,23 @@ const Searchbar = (props: Props) : JSX.Element => {
     };
 
     useMouseClick(onMouseClick);
-    useKeyDown([{
-        eventKeys: new Set(["Escape"]),
-        responseFn: () => {
-            if (!alwaysShowResults)
-                setShowResults(false);
+    useKeyDown([
+        {
+            eventKeys: new Set(["Escape"]),
+            responseFn: (event: KeyboardEvent) => {
+                // prevent default behavior of clearing search input on "Escape"
+                event.preventDefault();
 
-            searchInputRef.current?.focus();
+                if (!alwaysShowResults) {
+                    setShowResults(false);
+                    searchInputRef.current?.focus();
+                }
+
+                if (openInModal && modalIsOpen)
+                    setModalIsOpen(false);
+            }
         }
-    }]);
+    ]);
 
     const onSearchChange = (event: ReactInputOnChangeEvent) => {
         const rawSearch = event.target.value;
@@ -102,6 +110,12 @@ const Searchbar = (props: Props) : JSX.Element => {
         event.preventDefault();
     };
 
+    const clearSearchbar = () => {
+        setSearchText("");
+        setSearchResults([]);
+        setShowResults(false);
+    };
+
     const classes = showResults ? "search-form showing-results" : "search-form";
 
     const search = (
@@ -119,7 +133,11 @@ const Searchbar = (props: Props) : JSX.Element => {
                     value = {searchText}
                     onChange = {onSearchChange}
                 />
-                <Button onClick = {() => setSearchText("")} className = "clear-search-button" iconType = {FontAwesomeIconType.X}/>
+                <Button
+                    onClick = {clearSearchbar}
+                    className = "clear-search-button"
+                    iconType = {FontAwesomeIconType.X}
+                />
             </form>
 
             {showResults &&
@@ -149,7 +167,7 @@ const Searchbar = (props: Props) : JSX.Element => {
                     {showButtonText && "Search"}
                 </Button>
 
-                <Modal open = {modalIsOpen} onClose = {() => setModalIsOpen(false)}>
+                <Modal open = {modalIsOpen} onClose = {() => { setModalIsOpen(false); clearSearchbar(); }}>
                     {search}
                 </Modal>
             </>

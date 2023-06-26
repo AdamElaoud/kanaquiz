@@ -58,6 +58,8 @@ const KanaSelection = () : JSX.Element => {
 
     const defaultActiveSide = mode === Mode.Kana ? Side.Left : Side.Right;
 
+    const inMobileDeviceThreshhold = windowWidth < SCREEN_WIDTH_THRESHHOLD;
+
     return (
         <KanaSelectionsContextProvider value = {{ kanaSelections, updateKanaSelections }}>
             <div className = "kana-selection-page">
@@ -71,8 +73,9 @@ const KanaSelection = () : JSX.Element => {
                         delimiters = {[...ENGLISH_DELIMITERS, ...JAPANESE_DELIMITERS]}
                         placeholder = "Search for Kana"
                         nonBlurTargets = {toggleRef.current ? [toggleRef.current] : []}
-                        openInModal = {windowWidth < SCREEN_WIDTH_THRESHHOLD}
-                        showButtonText = {windowWidth < SCREEN_WIDTH_THRESHHOLD}
+                        openInModal = {inMobileDeviceThreshhold}
+                        showButtonText = {inMobileDeviceThreshhold}
+                        alwaysShowResults = {inMobileDeviceThreshhold}
                     />
 
                     <ToggleButton ref = {toggleRef} buttons = {displayModeToggleButtons} defaultActiveSide = {defaultActiveSide}/>
