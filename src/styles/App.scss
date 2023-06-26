@@ -50,7 +50,7 @@ html {
         }
 
         ::-webkit-scrollbar-thumb {
-            background-color: $richBlack;
+            background-color: $active;
             border-radius: $scrollBarBorderRadius;
         }
     }
@@ -61,15 +61,17 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
+    position: relative;
+    
     .page {
         height: calc(92% - $headerHeight - $headerSpacing);
+        overflow-y: auto;
     }
 
     .page-carousel {
         bottom: 0;
         height: 8%;
-        position: absolute;
+        position: sticky;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
     }
@@ -78,11 +80,11 @@ html {
 @media (max-height: $sizeHeightThreshhold) {
     .app {        
         .page {
-            height: calc(88% - $headerHeight - $headerSpacing);
+            height: calc(82% - $headerHeight - $headerSpacing);
         }
     
         .page-carousel {
-            height: 12%;
+            height: 18%;
         }
     }
 }

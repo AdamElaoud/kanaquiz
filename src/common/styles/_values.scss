@@ -23,5 +23,7 @@ $padding: 1rem;
 $overlayZIndex: 1;
 $modalZIndex: 2;
 
+// this value is expected to match the SCREEN_WIDTH_THRESHHOLD variable in constants.tsx
 $sizeWidthThreshhold: 600px;
+// this value is expected to match the SCREEN_HEIGHT_THRESHHOLD variable in constants.tsx
 $sizeHeightThreshhold: 950px;
