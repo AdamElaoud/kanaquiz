@@ -11,6 +11,8 @@ import { PageMapType, PageType } from "@/types";
 export const SCREEN_WIDTH_THRESHHOLD = 600;
 // this value is expected to match the SCSS $sizeHeightThreshhold variable in _values.scss
 export const SCREEN_HEIGHT_THRESHHOLD = 950;
+// this value is expected to match the SCSS $landscapeMobileHeightThreshhold variable in _values.scss
+export const LANDSCAPE_MOBILE_SCREEN_HEIGHT_THRESHHOLD = 550;
 
 export const SCREEN_FILL_WIDTH = 950; // pixel width at which contents will fill X% of the screen
 export const SCREEN_FILL_PERCENT = 100; // percentage contents should fill the screen for the above size

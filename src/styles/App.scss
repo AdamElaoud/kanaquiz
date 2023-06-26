@@ -80,6 +80,18 @@ html {
 @media (max-height: $sizeHeightThreshhold) {
     .app {        
         .page {
+            height: calc(88% - $headerHeight - $headerSpacing);
+        }
+    
+        .page-carousel {
+            height: 12%;
+        }
+    }
+}
+
+@media (max-height: $landscapeMobileHeightThreshhold) {
+    .app {        
+        .page {
             height: calc(82% - $headerHeight - $headerSpacing);
         }
     
