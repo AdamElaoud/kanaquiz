@@ -52,8 +52,8 @@ const KanaSelection = () : JSX.Element => {
     };
 
     const displayModeToggleButtons: [ToggleButtonConfig, ToggleButtonConfig] = [
-        { content: 'Show Kana', onClick: () => setMode(Mode.Kana) },
-        { content: 'Show Romaji', onClick: () => setMode(Mode.Romaji) }
+        { content: 'Kana', onClick: () => setMode(Mode.Kana) },
+        { content: 'Romaji', onClick: () => setMode(Mode.Romaji) }
     ];
 
     const defaultActiveSide = mode === Mode.Kana ? Side.Left : Side.Right;
