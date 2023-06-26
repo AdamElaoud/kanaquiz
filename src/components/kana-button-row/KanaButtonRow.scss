@@ -18,3 +18,13 @@ $maxButtonsPerRow: 8;
         width: $selectAllButtonWidth;
     }
 }
+
+@media (hover: hover) and (pointer: fine) {
+    .button-row {
+        .select-all-button {
+            &:hover {
+                color: $lightModeTextColor
+            }
+        }
+    }
+}

@@ -16,6 +16,19 @@ $stepTitleMargin: 1rem;
         font-size: $mediumFontSize;
     }
 
+    $iconSpaceAdjustment: calc($mediumIconSize * -0.35);
+    .back-button {
+        .icon {
+            margin: 0 $iconSpaceAdjustment;
+        }
+    }
+
+    .next-button {
+        .icon {
+            margin: 0 $iconSpaceAdjustment;
+        }
+    }
+
     .steps-content {
         align-items: center;
         display: flex;

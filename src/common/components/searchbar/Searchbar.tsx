@@ -1,25 +1,36 @@
-import { CSSStyles, ReactFormOnSubmitEvent, ReactInputOnChangeEvent, ReactNode } from "@/common/types";
+import { CSSStyles, FontAwesomeIconType, MouseClickState, ReactFormOnSubmitEvent, ReactInputOnChangeEvent, ReactNode, Size } from "@/common/types";
 import { useState, useRef } from "react";
 import "./Searchbar.scss";
 import "@/styles/_index.scss";
 import useMouseClick from "@/common/hooks/useMouseClick";
+import { Button, Icon, Modal } from "..";
+import useKeyDown from "@/common/hooks/useKeyDown";
 
 interface Props {
     delimiters?: string[],
+    alwaysShowResults?: boolean,
     nonBlurTargets?: HTMLElement[] | undefined,
+    openInModal?: boolean,
     placeholder?: string,
     searchFn: (rawSearch: string, queries: string[]) => ReactNode[],
+    showButtonText?: boolean,
     style?: CSSStyles
 };
 
-const DEFAULT_DELIMITER = [" "];
+const DEFAULT_DELIMITERS = [" ", ","];
+const DEFAULT_NEVER_CLOSE_RESULTS = false;
+const DEFAULT_OPEN_IN_MODAL = false;
+const DEFAULT_SHOW_BUTTON_TEXT = false;
 
 const Searchbar = (props: Props) : JSX.Element => {
     const {
-        delimiters = DEFAULT_DELIMITER,
+        delimiters = DEFAULT_DELIMITERS,
+        alwaysShowResults = DEFAULT_NEVER_CLOSE_RESULTS,
         nonBlurTargets,
+        openInModal = DEFAULT_OPEN_IN_MODAL,
         placeholder = "",
         searchFn,
+        showButtonText = DEFAULT_SHOW_BUTTON_TEXT,
         style
     } = props;
     
@@ -27,8 +38,33 @@ const Searchbar = (props: Props) : JSX.Element => {
     const [searchResults, setSearchResults] = useState<ReactNode[]>([]);
     const searchResultsRef = useRef<HTMLDivElement>(null);
     const searchInputRef = useRef<HTMLInputElement>(null);
-    const clickTarget = useMouseClick();
-    const showResults = useRef<boolean>(false);
+    const [showResults, setShowResults] = useState<boolean>(false);
+    const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
+    
+    const onMouseClick = ({ nextClickTarget }: MouseClickState) => {
+        if (!alwaysShowResults) {
+            const hasResults = searchResults.length > 0;
+            const searchInputIsTarget = searchInputRef.current?.contains(nextClickTarget) || searchInputRef.current === document.activeElement;
+            const searchResultsIsTarget = searchResultsRef.current?.contains(nextClickTarget);
+        
+            let nonBlurTargetIsTarget = false;
+            if (nonBlurTargets)
+                nonBlurTargetIsTarget = nonBlurTargets.some(nonBlurTarget => nonBlurTarget.contains(nextClickTarget));
+            
+            setShowResults(showing => (searchInputIsTarget && hasResults) || searchResultsIsTarget || (nonBlurTargetIsTarget && showing));
+        }
+    };
+
+    useMouseClick(onMouseClick);
+    useKeyDown([{
+        eventKeys: new Set(["Escape"]),
+        responseFn: () => {
+            if (!alwaysShowResults)
+                setShowResults(false);
+
+            searchInputRef.current?.focus();
+        }
+    }]);
 
     const onSearchChange = (event: ReactInputOnChangeEvent) => {
         const rawSearch = event.target.value;
@@ -41,33 +77,40 @@ const Searchbar = (props: Props) : JSX.Element => {
 
         const results = searchFn(rawSearch, cleanQueries(queries, delimiters));
 
-        setSearchResults(results);
+        const hasResults = results.length > 0;
+        if (hasResults || rawSearch !== "") {
+            setShowResults(true);
+
+            if (!hasResults && rawSearch !== "")
+                setSearchResults([
+                    <span className = "no-results" key = "no-results">
+                        <Icon type = {FontAwesomeIconType.X}/>
+                        No results found
+                    </span>
+                ]);
+            else
+                setSearchResults(results);
+
+        } else {
+            setShowResults(false);
+            setSearchResults([]);
+        }
+
     };
 
     const onSubmit = (event: ReactFormOnSubmitEvent) => {
         event.preventDefault();
     };
 
-    const hasResults = searchResults.length > 0;
-    const searchInputIsTarget = searchInputRef.current?.contains(clickTarget);
-    const searchResultsIsTarget = searchResultsRef.current?.contains(clickTarget);
+    const classes = showResults ? "search-form showing-results" : "search-form";
 
-    let nonBlurTargetIsTarget = false;
-    if (nonBlurTargets)
-        nonBlurTargetIsTarget = nonBlurTargets.some(nonBlurTarget => nonBlurTarget.contains(clickTarget));
-    
-    showResults.current = (searchInputIsTarget && hasResults)
-        || searchResultsIsTarget
-        || (nonBlurTargetIsTarget && showResults.current);
-
-    const inputClasses = showResults.current ? "search-input showing-results" : "search-input";
-
-    return (
+    const search = (
         <div className = "search" style = {style}>
-            <form className = "search-form" role = "search" onSubmit = {onSubmit}>
+            <form className = {classes} role = "search" onSubmit = {onSubmit}>
+                <Icon className = "search-icon" type = {FontAwesomeIconType.Search}/>
                 <label className = "visually-hidden" htmlFor = "searchbar">Search for Kana</label>
                 <input
-                    className = {inputClasses}
+                    className = "search-input"
                     name = "searchbar"
                     type = "search"
                     role = "search"
@@ -76,13 +119,15 @@ const Searchbar = (props: Props) : JSX.Element => {
                     value = {searchText}
                     onChange = {onSearchChange}
                 />
+                <Button onClick = {() => setSearchText("")} className = "clear-search-button" iconType = {FontAwesomeIconType.X}/>
             </form>
-            {showResults.current &&
-                // container is necessary to add space between scrollbar and side of element
-                <div
+
+            {showResults &&
+                <div // container is necessary to add space between scrollbar and side of element
                     className = "search-results-container"
                     ref = {searchResultsRef}
                     tabIndex = {-1} // tabIndex is required for a div to be focusable
+                    style = {{ bottom: `-${searchResultsRef.current?.offsetHeight}` }}
                 >
                     <div className = "search-results">
                         {searchResults}
@@ -91,6 +136,27 @@ const Searchbar = (props: Props) : JSX.Element => {
             }
         </div>
     );
+
+    if (openInModal) {
+        return (
+            <>
+                <Button
+                    className = "open-modal-button"
+                    onClick = {() => setModalIsOpen(true)}
+                    iconType = {FontAwesomeIconType.Search}
+                    iconSize = {Size.Small}
+                >
+                    {showButtonText && "Search"}
+                </Button>
+
+                <Modal open = {modalIsOpen} onClose = {() => setModalIsOpen(false)}>
+                    {search}
+                </Modal>
+            </>
+        );
+    }
+
+    return search;
 };
 
 const buildRegexFromDelimiters = (delimiters: string[]) : RegExp => {

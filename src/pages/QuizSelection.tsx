@@ -110,7 +110,7 @@ const DirectionIndicator = ({ direction }: DirectionIndicatorProps) => {
     
     return (
         <span className = "direction-indicator">
-            {leftIcon} ➜ {rightIcon}
+            {leftIcon} <span className = "direction-arrow">➜</span> {rightIcon}
         </span>
     );
 };

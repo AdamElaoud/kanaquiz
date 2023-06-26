@@ -30,3 +30,14 @@ $kanaButtonWidth: 4rem;
         border: $borderThickness solid $gold;
     }
 }
+
+@media (hover: hover) and (pointer: fine) {
+    .kana-button {
+        &.is-selected {
+            &:hover {
+                cursor: pointer;
+                background-color: $lightActive;
+            }
+        }
+    }
+}

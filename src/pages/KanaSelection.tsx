@@ -5,14 +5,16 @@ import KanaButtonRow from "@/components/kana-button-row/KanaButtonRow";
 import { KanaSelectionsContextProvider } from "@/hooks/useKanaSelections";
 import useLocalStorage from "@/common/hooks/useLocalStorage";
 import "./KanaSelection.scss";
-import { ENGLISH_DELIMITERS, JAPANESE_DELIMITERS } from "@/utils/constants";
+import { ENGLISH_DELIMITERS, JAPANESE_DELIMITERS, SCREEN_WIDTH_THRESHHOLD } from "@/utils/constants";
 import { Side, TabState, ToggleButtonConfig } from "@/common/types";
 import useMode from "@/hooks/useMode";
 import { useRef } from "react";
+import useWindowSize from "@/common/hooks/useWindowSize";
 
 const KanaSelection = () : JSX.Element => {
     const [selectedTabID, setSelectedTabID] = useLocalStorage<number>("kana-selections-tab", TabID.Hiragana);
     const [kanaSelections, setKanaSelections] = useLocalStorage<string[]>("kana-selections", []);
+    const [windowWidth] = useWindowSize();
     const { hiragana, katakana, lookalikes, search } = useKanaDictionary();
     const { mode, setMode } = useMode();
     const toggleRef = useRef<HTMLDivElement>(null);
@@ -50,8 +52,8 @@ const KanaSelection = () : JSX.Element => {
     };
 
     const displayModeToggleButtons: [ToggleButtonConfig, ToggleButtonConfig] = [
-        { content: 'Kana', onClick: () => setMode(Mode.Kana) },
-        { content: 'Romaji', onClick: () => setMode(Mode.Romaji) }
+        { content: 'Show Kana', onClick: () => setMode(Mode.Kana) },
+        { content: 'Show Romaji', onClick: () => setMode(Mode.Romaji) }
     ];
 
     const defaultActiveSide = mode === Mode.Kana ? Side.Left : Side.Right;
@@ -69,6 +71,8 @@ const KanaSelection = () : JSX.Element => {
                         delimiters = {[...ENGLISH_DELIMITERS, ...JAPANESE_DELIMITERS]}
                         placeholder = "Search for Kana"
                         nonBlurTargets = {toggleRef.current ? [toggleRef.current] : []}
+                        openInModal = {windowWidth < SCREEN_WIDTH_THRESHHOLD}
+                        showButtonText = {windowWidth < SCREEN_WIDTH_THRESHHOLD}
                     />
 
                     <ToggleButton ref = {toggleRef} buttons = {displayModeToggleButtons} defaultActiveSide = {defaultActiveSide}/>

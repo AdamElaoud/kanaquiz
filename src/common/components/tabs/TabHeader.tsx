@@ -18,7 +18,8 @@ const TabHeader = (props: Props) : JSX.Element => {
     if (isActiveTab) classes += " active"
 
     return (
-        <div className = {classes} onClick = {changeTab(tabID)}>
+        // tabIndex is required for a div to be focusable
+        <div className = {classes} onClick = {changeTab(tabID)} tabIndex = {0}>
             {icon && <Icon size = {iconSize} type = {icon} />}
             {title && title}
         </div>

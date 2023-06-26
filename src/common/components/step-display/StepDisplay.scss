@@ -20,7 +20,7 @@ $barWidth: 4rem;
     .bar {
         background-color: $darkModeTextColor;
         height: $barHeight;
-        margin-top: calc(($largeIconSize / 2) - ($barHeight / 2));
+        margin-top: calc(($mediumIconSize / 2) - ($barHeight / 2));
         margin-left: $barSideMargin;
         margin-right: $barSideMargin;
         width: $barWidth;

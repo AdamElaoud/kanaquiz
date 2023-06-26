@@ -4,11 +4,10 @@
     @include rounded-border(1.5);
     align-items: center;
     background-color: $darkNavy;
-    border: $borderThickness solid $darkNavy;
     display: flex;
     gap: 0.75rem;
     justify-content: space-between;
-    padding: calc($padding / 2);
+    padding: calc($padding * 0.65);
     
     .toggle-button-item {
         @extend %rounded-border;
@@ -33,7 +32,6 @@
                 background-color: $gold;
                 color: $lightModeTextColor;
                 cursor: pointer;
-                font-weight: $fontWeightBold;
             }
 
             &.active {

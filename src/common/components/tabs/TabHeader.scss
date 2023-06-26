@@ -27,7 +27,7 @@ $tabHeaderWidth: 10rem;
 @media (hover: hover) and (pointer: fine) {
     .tab-header {
         &:hover {
-            background-color: $active;
+            background-color: $gold;
             color: $lightModeTextColor;
             cursor: pointer;
         }

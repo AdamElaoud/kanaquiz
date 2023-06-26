@@ -1,6 +1,7 @@
 import Button from "./button/Button";
 import HelpTooltip from "./help-tooltip/HelpTooltip";
 import Icon from "./icon/Icon";
+import Modal from "./modal/Modal";
 import NumberInput from "./number-input/NumberInput";
 import Searchbar from "./searchbar/Searchbar";
 import Step from "./step-display/Step";
@@ -16,6 +17,7 @@ export {
     Button,
     HelpTooltip,
     Icon,
+    Modal,
     NumberInput,
     Searchbar,
     Step,

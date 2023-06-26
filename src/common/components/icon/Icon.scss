@@ -15,16 +15,19 @@
     }
 
     &.sm {
+        font-size: $smallFontSize;
         height: $smallIconSize;
         width: $smallIconSize;
     }
     
     &.md {
+        font-size: $mediumFontSize;
         height: $mediumIconSize;
         width: $mediumIconSize;
     }
     
     &.lg {
+        font-size: $largeFontSize;
         height: $largeIconSize;
         width: $largeIconSize;
     }

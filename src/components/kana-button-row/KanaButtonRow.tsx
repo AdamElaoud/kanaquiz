@@ -3,7 +3,7 @@ import KanaButton from "./KanaButton";
 import { Button } from "@/common/components";
 import "./KanaButtonRow.scss";
 import useKanaSelections from "@/hooks/useKanaSelections";
-import { FontAwesomeIconType } from "@/common/types";
+import { FontAwesomeIconType, Size } from "@/common/types";
 
 interface Props {
     row: string[][],
@@ -26,7 +26,12 @@ const KanaButtonRow = (props: Props) : JSX.Element => {
 
     return (
         <div className = "button-row">
-            <Button className = 'select-all-button' onClick = {selectEntireRow} iconType = {FontAwesomeIconType.ArrowRight} />
+            <Button
+                className = 'select-all-button'
+                onClick = {selectEntireRow}
+                iconType = {FontAwesomeIconType.ArrowRight}
+                iconSize = {Size.Small}
+            />
 
             {row.map(letters => {
                 const baseKey = `${letters[Mode.ID]}-${groupID}`;

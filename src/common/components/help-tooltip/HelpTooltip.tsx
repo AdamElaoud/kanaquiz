@@ -1,4 +1,4 @@
-import { FontAwesomeIconType } from "@/common/types";
+import { FontAwesomeIconType, Size } from "@/common/types";
 import "./HelpTooltip.scss";
 import { Icon } from "..";
 
@@ -16,7 +16,7 @@ const HelpTooltip = (props: Props) : JSX.Element => {
     console.log(tooltip);
 
     return (
-        <Icon className = "help-tooltip" type = {FontAwesomeIconType.Question}/>
+        <Icon className = "help-tooltip" type = {FontAwesomeIconType.Question} size = {Size.Small}/>
     );
 };
 

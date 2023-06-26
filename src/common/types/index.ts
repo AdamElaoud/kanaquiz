@@ -26,6 +26,8 @@ export type ReactFragment = React.ReactFragment;
 export type ReactInputOnChangeEvent = React.ChangeEvent<HTMLInputElement>;
 export type ReactFormOnSubmitEvent = React.FormEvent<HTMLFormElement>;
 export type ReactSetState<T> = React.Dispatch<React.SetStateAction<T>>;
+export type ReactForwardedRef<T> = React.ForwardedRef<T>;
+export type ReactMutableRef<T> = React.MutableRefObject<T>;
 export type CSSStyles = React.CSSProperties;
 export type ReactRef<T> = React.RefObject<T>;
 
@@ -42,6 +44,13 @@ export type StepState = { prevStepID: number | string, prevStepTitle: number | s
 export type TabState = { prevTabID: number, prevTabTitle: string, newTabID: number, newTabTitle: string };
 
 export type InputState = { prevValue: number, newValue: number };
+
+export type MouseClickState = { event: MouseEvent, previousClickTarget: HTMLElement | null, nextClickTarget: HTMLElement };
+
+export interface EventSubscription {
+    eventKeys: Set<string>,
+    responseFn: (event: KeyboardEvent) => void
+};
 
 export interface StepConfig {
     className?: string,

@@ -9,7 +9,7 @@
 
     .call-to-action {
         font-size: $smallFontSize;
-        margin-bottom: calc($sectionSpacing / 2);
+        margin-bottom: $sectionSpacing;
     }
 
     .actions-bar {
@@ -17,16 +17,35 @@
         align-items: center;
         display: flex;
         column-gap: calc($sectionSpacing / 2);
-        justify-content: space-between;
+        justify-content: space-around;
         margin-bottom: calc($sectionSpacing / 1.25);
         width: 100%;
 
-        .search {
-            flex-grow: 1;
+        .open-modal-button {
+            @include padding(1.5);
+            font-size: $smallFontSize;
+            height: 90%;
+        }
+
+        .toggle-button {
+            height: 100%;
         }
     }
 
     .selection-tabset {
         height: 75%;
+    }
+}
+
+@media (min-width: $sizeWidthThreshhold) {
+    .kana-selection-page {
+        .actions-bar {
+            padding: 0;
+            justify-content: space-between;
+
+            .search {
+                flex-grow: 1;
+            }
+        }
     }
 }

@@ -5,8 +5,9 @@
     @extend %rounded-border;
     align-items: center;
     background-color: $trueGray;
+    column-gap: 0.5rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 
     &:disabled {
         cursor: auto;
