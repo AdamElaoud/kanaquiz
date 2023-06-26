@@ -112,8 +112,11 @@ const Searchbar = (props: Props) : JSX.Element => {
 
     const onInputKeyDown = (event: ReactKeyboardEvent) => {
         // prevent input from clearing content on Enter press
-        if (event.key === "Enter")
+        if (event.key === "Enter") {
             event.preventDefault();
+            // blur to hide mobile keyboards on submission
+            searchInputRef.current?.blur();
+        }
     };
 
     const clearSearchbar = () => {
