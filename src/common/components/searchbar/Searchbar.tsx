@@ -59,17 +59,11 @@ const Searchbar = (props: Props) : JSX.Element => {
     useKeyDown([
         {
             eventKeys: new Set(["Escape"]),
-            responseFn: (event: KeyboardEvent) => {
-                // prevent default behavior of clearing search input on "Escape"
-                event.preventDefault();
-
+            responseFn: () => {
                 if (!alwaysShowResults) {
                     setShowResults(false);
                     searchInputRef.current?.focus();
                 }
-
-                if (openInModal && modalIsOpen)
-                    setModalIsOpen(false);
             }
         }
     ]);
@@ -111,12 +105,13 @@ const Searchbar = (props: Props) : JSX.Element => {
     };
 
     const onInputKeyDown = (event: ReactKeyboardEvent) => {
-        if (event.key === "Enter") {
-            // prevent input from clearing content on Enter press
+        // prevent input from clearing content on Enter press
+        if (event.key === "Enter" || event.key === "Escape")
             event.preventDefault();
-            // blur to hide mobile keyboards on submission
+
+        // blur to hide mobile keyboards on submission
+        if (event.key === "Enter")
             searchInputRef.current?.blur();
-        }
     };
 
     const clearSearchbar = () => {
@@ -146,7 +141,8 @@ const Searchbar = (props: Props) : JSX.Element => {
                 <Button
                     onClick = {clearSearchbar}
                     className = "clear-search-button"
-                    iconType = {FontAwesomeIconType.X}
+                    iconType = {FontAwesomeIconType.Delete}
+                    iconSize = {Size.Small}
                 />
             </form>
 

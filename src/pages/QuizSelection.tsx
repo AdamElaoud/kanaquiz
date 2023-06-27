@@ -47,7 +47,7 @@ const QuizSelection = () : JSX.Element => {
 
     const formatToggleButtons: [ToggleButtonConfig, ToggleButtonConfig] = [
         { content: "Write", onClick: () => updateQuizSelectionField("format", QuizFormat.WriteTheAnswer) },
-        { content: "Choice", onClick: () => updateQuizSelectionField("format", QuizFormat.MultipleChoice) }
+        { content: "Choose", onClick: () => updateQuizSelectionField("format", QuizFormat.MultipleChoice) }
     ];
 
     const wordsIsSelectedTopic = quizSelections.topic === QuizTopic.Words;
@@ -74,7 +74,7 @@ const QuizSelection = () : JSX.Element => {
                     activeButton = {wordsIsSelectedTopic ? Side.Right : undefined}
                 />
                 <QuizSelectionSection
-                    title = "Format"
+                    title = "Answer"
                     buttons = {formatToggleButtons}
                     defaultActiveSide = {defaultFormatSide}
                     helpTooltip = "blank"

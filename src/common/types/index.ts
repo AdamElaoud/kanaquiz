@@ -82,6 +82,7 @@ export enum FontAwesomeIconType {
     Book = "book",
     ClipboardQuestion = "clipboardQuestion",
     Check = "check",
+    Delete = "delete",
     Dojo = "dojo",
     Down = "down",
     FlagCheckered = "flagCheckered",

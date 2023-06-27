@@ -7,6 +7,7 @@ import {
     faCaretUp,
     faCheck,
     faClipboardQuestion,
+    faTrash,
     faFlagCheckered,
     faGear,
     faListOl,
@@ -16,7 +17,7 @@ import {
     faQuestion,
     faToriiGate,
     faVihara,
-    faXmark
+    faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 
 export const FontAwesomeIconMap: FontAwesomeIconMapType = {
@@ -25,6 +26,7 @@ export const FontAwesomeIconMap: FontAwesomeIconMapType = {
     "book": faBook,
     "check": faCheck,
     "clipboardQuestion": faClipboardQuestion,
+    "delete": faTrash,
     "dojo": faVihara,
     "down": faCaretDown,
     "flagCheckered": faFlagCheckered,

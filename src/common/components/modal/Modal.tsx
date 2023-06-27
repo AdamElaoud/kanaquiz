@@ -1,8 +1,9 @@
 import useWindowSize from "@/common/hooks/useWindowSize";
 import "./Modal.scss";
-import { CSSStyles, MouseClickState, ReactNode } from "@/common/types";
+import { CSSStyles, FontAwesomeIconType, MouseClickState, ReactNode } from "@/common/types";
 import useMouseClick from "@/common/hooks/useMouseClick";
 import { useRef, useEffect } from "react";
+import { Button } from "..";
 
 interface Props {
     children: ReactNode,
@@ -63,6 +64,7 @@ const Modal = (props: Props) : JSX.Element => {
 
     return (
         <dialog ref = {modalRef} className = "modal" style = {{ ...defaultStyle, ...style }} onClose = {onClose}>
+            <Button className = "close-modal-button" onClick = {() => modalRef.current?.close()} iconType = {FontAwesomeIconType.X} />
             {children}
         </dialog>
     );
