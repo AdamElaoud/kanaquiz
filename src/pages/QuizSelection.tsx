@@ -98,21 +98,3 @@ const QuizSelection = () : JSX.Element => {
 };
 
 export default QuizSelection;
-
-interface DirectionIndicatorProps {
-    direction: QuizDirection
-};
-
-const DirectionIndicator = ({ direction }: DirectionIndicatorProps) => {
-    const usFlagIcon = <Icon type = {CustomIconType.USFlag} />;
-    const jpFlagIcon = <Icon type = {CustomIconType.JPFlag} />
-
-    const leftIcon = direction === QuizDirection.ENtoJP ? usFlagIcon : jpFlagIcon;
-    const rightIcon = direction === QuizDirection.ENtoJP ? jpFlagIcon : usFlagIcon;
-    
-    return (
-        <span className = "direction-indicator">
-            {leftIcon} <span className = "direction-arrow">➜</span> {rightIcon}
-        </span>
-    );
-};
