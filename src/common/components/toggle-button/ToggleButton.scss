@@ -25,14 +25,13 @@
     }
 
     &.disabled {
-        background-color: $mediumGray;
-
+        opacity: $disabledOpacity;
+        
         .toggle-button-item {
-            background-color: $richGray;
-
+            opacity: $disabledOpacity;
+            
             &.active {
-                background-color: $disabled;
-                color: $nonFocusedDarkModeTextColor
+                opacity: $disabledOpacity;
             }
         }
     }

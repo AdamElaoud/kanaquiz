@@ -28,4 +28,6 @@ $sizeWidthThreshhold: 600px;
 // this value is expected to match the SCREEN_HEIGHT_THRESHHOLD variable in constants.tsx
 $sizeHeightThreshhold: 950px;
 // this value is expected to match the LANDSCAPE_MOBILE_SCREEN_HEIGHT_THRESHHOLD variable in constants.tsx
-$landscapeMobileHeightThreshhold: 550px
+$landscapeMobileHeightThreshhold: 550px;
+
+$disabledOpacity: 0.5;
