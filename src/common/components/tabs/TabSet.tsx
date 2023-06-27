@@ -13,7 +13,13 @@ interface Props {
 const TabSet = (props: Props) : JSX.Element => {
     const { children, className, onTabChange, startingTabID = children[0].props.tabID } = props;
 
-    const [activeTabID, setActiveTabID] = useState<number>(startingTabID);
+    const [activeTabID, setActiveTabID] = useState<number>(() => {
+        const allTabIDs: Set<number> = new Set(Children.map(children, tab => tab.props.tabID));
+        if (allTabIDs.has(startingTabID))
+            return startingTabID
+        else
+            return children[0].props.tabID;
+    });
 
     const tabHeaderData = useMemo(() => {
         return Children.map(children, (tab: ReactElement) => {
