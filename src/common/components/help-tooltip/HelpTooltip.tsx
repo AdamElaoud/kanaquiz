@@ -16,7 +16,7 @@ const HelpTooltip = (props: Props) : JSX.Element => {
     console.log(tooltip);
 
     return (
-        <Icon className = "help-tooltip" type = {FontAwesomeIconType.Question} size = {Size.Small}/>
+        <Icon className = "help-tooltip" type = {FontAwesomeIconType.Question} size = {Size.Mini}/>
     );
 };
 

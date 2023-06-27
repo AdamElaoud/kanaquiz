@@ -5,7 +5,7 @@ import { HelpTooltip, ToggleButton } from "@/common/components";
 interface Props {
     buttons: [ToggleButtonConfig, ToggleButtonConfig],
     defaultActiveSide: Side,
-    helpTooltip?: string // coming soon,
+    helpTooltip?: string
     title: string
 };
 

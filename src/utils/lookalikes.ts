@@ -10,6 +10,5 @@ export const groupsToChars: GroupsToChars = {
     "la_7": [ ["せ", "se", "h_se"], ["サ", "sa", "k_sa"] ],
     "la_8": [ ["う", "u", "h_u"], ["つ", "tsu", "h_tsu"] ],
     "la_9": [ ["に", "ni", "h_ni"], ["こ", "ko", "h_ko"] ],
-    // add to chars to group
     "la_10": [ ["い", "i", "h_i"], ["け", "ke", "h_ke"] ],
 };

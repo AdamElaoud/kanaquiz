@@ -1,8 +1,7 @@
 import "./QuizSelection.scss";
 import { QuizDirection, QuizFormat, QuizSelectionData, QuizTopic } from "@/types";
-import { QuizSelectionsContextProvider } from "@/hooks/useQuizSelections";
-import { DEFAULT_QUESTION_AMOUNT, MAXIMUM_QUESTION_AMOUNT, MINIMUM_QUESTION_AMOUNT, SCREEN_FILL_WIDTH, SCREEN_PARTIAL_FILL_WIDTH } from "@/utils/constants";
-import useLocalStorage from "@/common/hooks/useLocalStorage";
+import useQuizSelections from "@/hooks/useQuizSelections";
+import { MAXIMUM_QUESTION_AMOUNT, MINIMUM_QUESTION_AMOUNT, SCREEN_FILL_WIDTH, SCREEN_PARTIAL_FILL_WIDTH } from "@/utils/constants";
 import { Icon, NumberInput } from "@/common/components";
 import { CustomIconType, InputState, Side, Size, ToggleButtonConfig } from "@/common/types";
 import QuizSelectionSection from "@/components/quiz-selection-section/QuizSelectionSection";
@@ -10,19 +9,10 @@ import useDynamicWidth from "@/common/hooks/useDynamicWidth";
 
 const QuizSelection = () : JSX.Element => {
     const dynamicQuizOptionsWidth = useDynamicWidth(SCREEN_PARTIAL_FILL_WIDTH, 33, SCREEN_FILL_WIDTH, 90);
-    const [quizSelections, setQuizSelections] = useLocalStorage<QuizSelectionData>("quiz-selections", {
-        amount: DEFAULT_QUESTION_AMOUNT,
-        direction: QuizDirection.JPtoEN,
-        format: QuizFormat.MultipleChoice,
-        topic: QuizTopic.Kana
-    });
-    
-    const updateQuizSelections = (quizSelectionData: QuizSelectionData) => {
-        setQuizSelections(quizSelectionData);
-    };
+    const { quizSelections, updateQuizSelections } = useQuizSelections();
 
     const updateQuizSelectionField = (fieldName: keyof QuizSelectionData, fieldData: QuizDirection | QuizFormat | QuizTopic) => {
-        setQuizSelections(currentSelections => ({ ...currentSelections, [fieldName]: fieldData }))
+        updateQuizSelections({ ...quizSelections, [fieldName]: fieldData })
     };
     
     const { direction, format, topic } = quizSelections;
@@ -53,45 +43,43 @@ const QuizSelection = () : JSX.Element => {
     ];
 
     return (
-        <QuizSelectionsContextProvider value = {{ quizSelections, updateQuizSelections }}>
-            <div className = "quiz-selection-page">
-                <div className = "welcome-message">
-                    <span className = "welcome-title" >Welcome to Kana Quiz!</span>
-                    <span className = "call-to-action">Please select how you would like to study</span>
-                </div>
-                
-                <div className = "quiz-options" style = {dynamicQuizOptionsWidth}>
-                    <QuizSelectionSection
-                        title = "Topic"
-                        buttons = {topicToggleButtons}
-                        defaultActiveSide = {defaultTopicSide}
-                    />
-                    <QuizSelectionSection
-                        title = "Direction"
-                        buttons = {directionToggleButtons}
-                        defaultActiveSide = {defaultDirectionSide}
-                        helpTooltip = "blank"
-                    />
-                    <QuizSelectionSection
-                        title = "Format"
-                        buttons = {formatToggleButtons}
-                        defaultActiveSide = {defaultFormatSide}
-                        helpTooltip = "blank" 
-                    />
-                </div>
-
-                <NumberInput
-                    defaultValue={quizSelections.amount}
-                    max = {MAXIMUM_QUESTION_AMOUNT}
-                    min = {MINIMUM_QUESTION_AMOUNT}
-                    name = "question-amount"
-                    onChange = {({ newValue }: InputState) =>
-                        setQuizSelections(currentSelections => ({ ...currentSelections, amount: newValue }))}
-                    title = "Question Amount"
-                    size = {Size.Large}
+        <div className = "quiz-selection-page">
+            <div className = "welcome-message">
+                <span className = "welcome-title" >Welcome to Kana Quiz!</span>
+                <span className = "call-to-action">Please select how you would like to study</span>
+            </div>
+            
+            <div className = "quiz-options" style = {dynamicQuizOptionsWidth}>
+                <QuizSelectionSection
+                    title = "Topic"
+                    buttons = {topicToggleButtons}
+                    defaultActiveSide = {defaultTopicSide}
+                />
+                <QuizSelectionSection
+                    title = "Direction"
+                    buttons = {directionToggleButtons}
+                    defaultActiveSide = {defaultDirectionSide}
+                    helpTooltip = "blank"
+                />
+                <QuizSelectionSection
+                    title = "Format"
+                    buttons = {formatToggleButtons}
+                    defaultActiveSide = {defaultFormatSide}
+                    helpTooltip = "blank" 
                 />
             </div>
-        </QuizSelectionsContextProvider>
+
+            <NumberInput
+                defaultValue={quizSelections.amount}
+                max = {MAXIMUM_QUESTION_AMOUNT}
+                min = {MINIMUM_QUESTION_AMOUNT}
+                name = "question-amount"
+                onChange = {({ newValue }: InputState) =>
+                    updateQuizSelections({ ...quizSelections, amount: newValue })}
+                title = "Question Amount"
+                size = {Size.Large}
+            />
+        </div>
     );
 };
 

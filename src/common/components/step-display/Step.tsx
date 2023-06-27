@@ -25,7 +25,7 @@ const Step = (props: Props) : JSX.Element => {
 
     return (
         <div className = {classes.join(" ")}>
-            <Icon type = {evaluatedIconType} size = {Size.Medium} />
+            <Icon type = {evaluatedIconType} size = {Size.Small} />
             <span className = "title">
                 {title}
             </span>

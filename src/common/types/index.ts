@@ -79,6 +79,7 @@ export type CustomIconMapType = {
 export enum FontAwesomeIconType {
     ArrowLeft = "arrowLeft",
     ArrowRight = "arrowRight",
+    Book = "book",
     ClipboardQuestion = "clipboardQuestion",
     Check = "check",
     Dojo = "dojo",

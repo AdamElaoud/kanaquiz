@@ -53,8 +53,6 @@ const Modal = (props: Props) : JSX.Element => {
 
     }, [open]);
 
-    console.log('open :>> ', open);
-
     const defaultStyle = {
         // the modal's height is set to 0px when it is closed to provide a clear indication of
         // the actual space the modal takes up on the screen. This setup is used by the

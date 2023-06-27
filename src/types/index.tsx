@@ -28,11 +28,12 @@ export enum QuizFormat {
 };
 
 export enum PageType {
-    KanaSelect = "KanaSelection",
-    QuizSelect = "QuizSelection",
     KanaQuiz = "KanaQuiz",
+    KanaSelect = "KanaSelection",
+    QuizRecap = "QuizRecap",
+    QuizSelect = "QuizSelection",
     QuizSummary = "QuizSummary",
-    QuizRecap = "QuizRecap"
+    WordSelect = "WordSelect"
 };
 
 export enum TabID {

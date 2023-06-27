@@ -2,6 +2,7 @@ import { CustomIconMapType, FontAwesomeIconMapType, } from "@/common/types";
 import {
     faAngleLeft,
     faAngleRight,
+    faBook,
     faCaretDown,
     faCaretUp,
     faCheck,
@@ -21,6 +22,7 @@ import {
 export const FontAwesomeIconMap: FontAwesomeIconMapType = {
     "arrowLeft": faAngleLeft,
     "arrowRight": faAngleRight,
+    "book": faBook,
     "check": faCheck,
     "clipboardQuestion": faClipboardQuestion,
     "dojo": faVihara,

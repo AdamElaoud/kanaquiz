@@ -9,7 +9,7 @@
     justify-content: center;
 
     &.mini {
-        font-size: 1.25rem;
+        font-size: $miniFontSize;
         height: $miniIconSize;
         width: $miniIconSize;
     }
