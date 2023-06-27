@@ -36,7 +36,6 @@ const Searchbar = (props: Props) : JSX.Element => {
     
     const [searchText, setSearchText] = useState<string>("");
     const [searchResults, setSearchResults] = useState<ReactNode[]>([]);
-    const searchContainerRef = useRef<HTMLDivElement>(null);
     const searchInputRef = useRef<HTMLInputElement>(null);
     const searchResultsRef = useRef<HTMLDivElement>(null);
     const [showResults, setShowResults] = useState<boolean>(false);
@@ -112,8 +111,8 @@ const Searchbar = (props: Props) : JSX.Element => {
     };
 
     const onInputKeyDown = (event: ReactKeyboardEvent) => {
-        // prevent input from clearing content on Enter press
         if (event.key === "Enter") {
+            // prevent input from clearing content on Enter press
             event.preventDefault();
             // blur to hide mobile keyboards on submission
             searchInputRef.current?.blur();
@@ -129,7 +128,7 @@ const Searchbar = (props: Props) : JSX.Element => {
     const classes = showResults ? "search-form showing-results" : "search-form";
 
     const search = (
-        <div className = "search" ref = {searchContainerRef} style = {style}>
+        <div className = "search" style = {style}>
             <form className = {classes} role = "search" onSubmit = {onSubmit}>
                 <Icon className = "search-icon" type = {FontAwesomeIconType.Search}/>
                 <label className = "visually-hidden" htmlFor = "searchbar">Search for Kana</label>
@@ -156,7 +155,7 @@ const Searchbar = (props: Props) : JSX.Element => {
                     className = "search-results-container"
                     ref = {searchResultsRef}
                     tabIndex = {-1} // tabIndex is required for a div to be focusable
-                    style = {{ bottom: `-${searchResultsRef.current?.offsetHeight}` }}
+                    style = {{ position: openInModal ? "static" : "absolute" }}
                 >
                     <div className = "search-results">
                         {searchResults}
@@ -165,15 +164,6 @@ const Searchbar = (props: Props) : JSX.Element => {
             }
         </div>
     );
-
-    let modalHeight: string;
-    if (modalIsOpen && searchContainerRef.current)
-        if (searchResultsRef.current)
-            modalHeight = `${searchContainerRef.current.offsetHeight + searchResultsRef.current.offsetHeight}px`;
-        else
-            modalHeight = `${searchContainerRef.current.offsetHeight}px`;
-    else
-        modalHeight = "0px";
 
     if (openInModal) {
         return (
@@ -190,7 +180,6 @@ const Searchbar = (props: Props) : JSX.Element => {
                 <Modal
                     open = {modalIsOpen}
                     onClose = {() => { setModalIsOpen(false); clearSearchbar(); }}
-                    style = {{ height: modalHeight }}
                 >
                     {search}
                 </Modal>
