@@ -1,5 +1,6 @@
 {
     "name": "Kana Quiz",
+    "short_name": "Kana",
     "background_color": "#010818",
     "display": "standalone",
     "description": "Master Hiragana and Katakana!",
