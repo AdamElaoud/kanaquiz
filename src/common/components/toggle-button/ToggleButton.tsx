@@ -1,19 +1,27 @@
 import { ReactButtonOnClickEvent, ReactButtonOnClick, ToggleButtonConfig, Side, ReactForwardedRef } from "@/common/types";
-import { useState, forwardRef } from "react";
+import { useState, forwardRef, useEffect } from "react";
 import "./ToggleButton.scss";
 
 interface Props {
+    activeButton?: Side,
     buttons: [ToggleButtonConfig, ToggleButtonConfig],
     className?: string,
     defaultActiveSide?: Side,
+    disabled?: boolean
 };
 
 const DEFAULT_ACTIVE_SIDE = Side.Left;
+const DEFAULT_DISABLED = false;
 
 const ToggleButton = forwardRef((props: Props, ref?: ReactForwardedRef<HTMLDivElement>) : JSX.Element => {
-    const { buttons, className, defaultActiveSide = DEFAULT_ACTIVE_SIDE } = props;
+    const { activeButton, buttons, className, defaultActiveSide = DEFAULT_ACTIVE_SIDE || activeButton, disabled = DEFAULT_DISABLED } = props;
 
     const [activeSide, setActiveSide] = useState(defaultActiveSide);
+
+    useEffect(() => {
+        if (activeButton)
+            setActiveSide(activeButton);
+    }, [activeButton]);
 
     const [leftButton, rightButton] = buttons;
 
@@ -27,16 +35,18 @@ const ToggleButton = forwardRef((props: Props, ref?: ReactForwardedRef<HTMLDivEl
 
 
     const onClick = (sideOnClick: ReactButtonOnClick, side: Side) => (event: ReactButtonOnClickEvent) => {
-        if (side !== activeSide) {
+        if (!disabled && side !== activeSide) {
             setActiveSide(side);
             sideOnClick(event);
         }
     };
 
-    const toggleClasses = className ? `toggle-button ${className}` : "toggle-button";
+    const toggleButtonClasses = ["toggle-button"];
+    if (disabled) toggleButtonClasses.push("disabled");
+    if (className) toggleButtonClasses.push(className);
 
     return (
-        <div className = {toggleClasses} ref = {ref}>
+        <div className = {toggleButtonClasses.join(" ")} ref = {ref}>
             <button className = {leftButtonClasses.join(" ")} onClick = {onClick(leftButton.onClick, Side.Left)}>
                 {leftButton.content}
             </button>

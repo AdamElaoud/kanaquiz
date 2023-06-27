@@ -23,20 +23,35 @@
             font-weight: $fontWeightBold;
         }
     }
+
+    &.disabled {
+        background-color: $mediumGray;
+
+        .toggle-button-item {
+            background-color: $richGray;
+
+            &.active {
+                background-color: $disabled;
+                color: $nonFocusedDarkModeTextColor
+            }
+        }
+    }
 }
 
 @media (hover: hover) and (pointer: fine) {
     .toggle-button {
-        .toggle-button-item {
-            &:hover {
-                background-color: $gold;
-                color: $lightModeTextColor;
-                cursor: pointer;
-            }
-
-            &.active {
-                background-color: $active;
-                color: $lightModeTextColor;
+        &:not(.disabled) {
+            .toggle-button-item {
+                &:hover {
+                    background-color: $gold;
+                    color: $lightModeTextColor;
+                    cursor: pointer;
+                }
+    
+                &.active {
+                    background-color: $active;
+                    color: $lightModeTextColor;
+                }
             }
         }
     }

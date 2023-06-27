@@ -19,7 +19,7 @@ export const SCREEN_FILL_PERCENT = 100; // percentage contents should fill the s
 export const SCREEN_PARTIAL_FILL_WIDTH = 1440; // pixel width at which contents will fill only X% of the screen
 export const SCREEN_PARTIAL_FILL_PERCENT = 65; // percentage contents should fill the screen for the above size
 
-export const DEFAULT_QUESTION_AMOUNT = 10;
+export const DEFAULT_QUESTION_AMOUNT = 20;
 export const MINIMUM_QUESTION_AMOUNT = 1;
 export const MAXIMUM_QUESTION_AMOUNT = 50;
 

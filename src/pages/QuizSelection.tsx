@@ -23,7 +23,15 @@ const QuizSelection = () : JSX.Element => {
 
     const topicToggleButtons: [ToggleButtonConfig, ToggleButtonConfig] = [
         { content: "Kana", onClick: () => updateQuizSelectionField("topic", QuizTopic.Kana) },
-        { content: "Words", onClick: () => updateQuizSelectionField("topic", QuizTopic.Words) }
+        {
+            content: "Words",
+            onClick: () => updateQuizSelections({
+                ...quizSelections,
+                topic: QuizTopic.Words,
+                direction: QuizDirection.JPtoEN,
+                format: QuizFormat.WriteTheAnswer 
+            })
+        }
     ];
 
     const directionToggleButtons: [ToggleButtonConfig, ToggleButtonConfig] = [
@@ -41,6 +49,8 @@ const QuizSelection = () : JSX.Element => {
         { content: "Write", onClick: () => updateQuizSelectionField("format", QuizFormat.WriteTheAnswer) },
         { content: "Choice", onClick: () => updateQuizSelectionField("format", QuizFormat.MultipleChoice) }
     ];
+
+    const wordsIsSelectedTopic = quizSelections.topic === QuizTopic.Words;
 
     return (
         <div className = "quiz-selection-page">
@@ -60,12 +70,16 @@ const QuizSelection = () : JSX.Element => {
                     buttons = {directionToggleButtons}
                     defaultActiveSide = {defaultDirectionSide}
                     helpTooltip = "blank"
+                    disabled = {wordsIsSelectedTopic}
+                    activeButton = {wordsIsSelectedTopic ? Side.Right : undefined}
                 />
                 <QuizSelectionSection
                     title = "Format"
                     buttons = {formatToggleButtons}
                     defaultActiveSide = {defaultFormatSide}
-                    helpTooltip = "blank" 
+                    helpTooltip = "blank"
+                    disabled = {wordsIsSelectedTopic}
+                    activeButton = {wordsIsSelectedTopic ? Side.Left : undefined}
                 />
             </div>
 

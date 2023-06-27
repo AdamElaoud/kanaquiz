@@ -3,14 +3,18 @@ import "./QuizSelectionSection.scss";
 import { HelpTooltip, ToggleButton } from "@/common/components";
 
 interface Props {
+    activeButton?: Side,
     buttons: [ToggleButtonConfig, ToggleButtonConfig],
     defaultActiveSide: Side,
+    disabled?: boolean,
     helpTooltip?: string
     title: string
 };
 
+const DEFAULT_DISABLED = false;
+
 const QuizSelectionSection = (props: Props) : JSX.Element => {
-    const { buttons, defaultActiveSide, helpTooltip, title } = props;
+    const { activeButton, buttons, defaultActiveSide, disabled = DEFAULT_DISABLED, helpTooltip, title } = props;
 
     return (
         <div className = "quiz-selection-section">
@@ -19,7 +23,7 @@ const QuizSelectionSection = (props: Props) : JSX.Element => {
                 {helpTooltip && <HelpTooltip tooltip = {helpTooltip}/>}
             </span>
             
-            <ToggleButton buttons = {buttons} defaultActiveSide = {defaultActiveSide}/>
+            <ToggleButton activeButton = {activeButton} buttons = {buttons} defaultActiveSide = {defaultActiveSide} disabled = {disabled}/>
         </div>
     );
 };

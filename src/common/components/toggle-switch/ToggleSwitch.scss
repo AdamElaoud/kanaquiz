@@ -8,7 +8,7 @@ $toggleSwitchPadding: calc($padding * $paddingMultiplier);
 .toggle-switch {
     @include padding($paddingMultiplier);
     align-items: center;
-    background-color: $trueGray;
+    background-color: $richGray;
     border-radius: calc($borderRadius * 1.75);
     display: flex;
     height: calc($toggleButtonSize * 1.5);
@@ -42,7 +42,7 @@ $toggleSwitchPadding: calc($padding * $paddingMultiplier);
         background-color: $richBlack;
 
         .toggle-switch-button {
-            background-color: $trueGray;
+            background-color: $richGray;
             left: $toggleSwitchPadding;
         }
     }
