@@ -11,7 +11,7 @@
 
     &:disabled {
         cursor: auto;
-        background-color: $richBlack;
+        opacity: $disabledOpacity;
     }
 }
 
@@ -25,7 +25,7 @@
         
         &:disabled {
             cursor: auto;
-            background-color: $richBlack;
+            background-color: $richGray;
             color: $darkModeTextColor;
         }
     }

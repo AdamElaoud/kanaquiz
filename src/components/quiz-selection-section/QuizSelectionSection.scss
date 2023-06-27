@@ -1,4 +1,5 @@
 @use "../../common/styles/index" as *;
+@use "../../common/components/toggle-button/ToggleButton.scss" as *;
 
 $quizSelectionSectionHeight: 6rem;
 
@@ -16,10 +17,12 @@ $quizSelectionSectionHeight: 6rem;
         background-color: $lightNavy;
         display: flex;
         justify-content: space-evenly;
+        max-height: calc(3rem + ($toggleButtonPadding * 2));
         width: 58%;
         
         .toggle-button-item {
             background-color: $lightNavy;
+            max-height: calc(2rem + ($padding));
             width: 50%;
         }
     }

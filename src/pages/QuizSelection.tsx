@@ -36,11 +36,11 @@ const QuizSelection = () : JSX.Element => {
 
     const directionToggleButtons: [ToggleButtonConfig, ToggleButtonConfig] = [
         {
-            content: <DirectionIndicator direction = {QuizDirection.ENtoJP}/>,
+            content: <Icon type = {CustomIconType.USFlag} size = {Size.Small}/>,
             onClick: () => updateQuizSelectionField("direction", QuizDirection.ENtoJP)
         },
         {
-            content: <DirectionIndicator direction = {QuizDirection.JPtoEN}/>,
+            content: <Icon type = {CustomIconType.JPFlag} size = {Size.Small}/>,
             onClick: () => updateQuizSelectionField("direction", QuizDirection.JPtoEN)
         }
     ];
@@ -66,7 +66,7 @@ const QuizSelection = () : JSX.Element => {
                     defaultActiveSide = {defaultTopicSide}
                 />
                 <QuizSelectionSection
-                    title = "Direction"
+                    title = "Prompt"
                     buttons = {directionToggleButtons}
                     defaultActiveSide = {defaultDirectionSide}
                     helpTooltip = "blank"

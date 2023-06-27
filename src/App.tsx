@@ -77,7 +77,7 @@ const App = () : JSX.Element => {
         {
             iconType: FontAwesomeIconType.ClipboardQuestion,
             ID: PageType.QuizSummary,
-            title: "Go!"
+            title: "Review"
         },
     ];
 
