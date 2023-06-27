@@ -36,8 +36,9 @@ const Searchbar = (props: Props) : JSX.Element => {
     
     const [searchText, setSearchText] = useState<string>("");
     const [searchResults, setSearchResults] = useState<ReactNode[]>([]);
-    const searchResultsRef = useRef<HTMLDivElement>(null);
+    const searchContainerRef = useRef<HTMLDivElement>(null);
     const searchInputRef = useRef<HTMLInputElement>(null);
+    const searchResultsRef = useRef<HTMLDivElement>(null);
     const [showResults, setShowResults] = useState<boolean>(false);
     const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
     
@@ -128,7 +129,7 @@ const Searchbar = (props: Props) : JSX.Element => {
     const classes = showResults ? "search-form showing-results" : "search-form";
 
     const search = (
-        <div className = "search" style = {style}>
+        <div className = "search" ref = {searchContainerRef} style = {style}>
             <form className = {classes} role = "search" onSubmit = {onSubmit}>
                 <Icon className = "search-icon" type = {FontAwesomeIconType.Search}/>
                 <label className = "visually-hidden" htmlFor = "searchbar">Search for Kana</label>
@@ -165,6 +166,15 @@ const Searchbar = (props: Props) : JSX.Element => {
         </div>
     );
 
+    let modalHeight: string;
+    if (modalIsOpen && searchContainerRef.current)
+        if (searchResultsRef.current)
+            modalHeight = `${searchContainerRef.current.offsetHeight + searchResultsRef.current.offsetHeight}px`;
+        else
+            modalHeight = `${searchContainerRef.current.offsetHeight}px`;
+    else
+        modalHeight = "0px";
+
     if (openInModal) {
         return (
             <>
@@ -177,7 +187,11 @@ const Searchbar = (props: Props) : JSX.Element => {
                     {showButtonText && "Search"}
                 </Button>
 
-                <Modal open = {modalIsOpen} onClose = {() => { setModalIsOpen(false); clearSearchbar(); }}>
+                <Modal
+                    open = {modalIsOpen}
+                    onClose = {() => { setModalIsOpen(false); clearSearchbar(); }}
+                    style = {{ height: modalHeight }}
+                >
                     {search}
                 </Modal>
             </>

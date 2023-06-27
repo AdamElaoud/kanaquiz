@@ -18,7 +18,7 @@ const Modal = (props: Props) : JSX.Element => {
     const [, windowHeight] = useWindowSize();
     
     const onMouseClick = ({ event }: MouseClickState) => {
-        if (modalRef.current && open) {
+        if (open && modalRef.current && modalRef.current.style.height !== "0px") {
             const modalContentBounds = modalRef.current?.getBoundingClientRect();
     
             const { clientX, clientY } = event;
@@ -30,9 +30,8 @@ const Modal = (props: Props) : JSX.Element => {
             const wasOpenedViaKeyboard = clientX === 0 && clientY === 0;
             const clickedOutsideModal = clientX < left || clientX > right || clientY < top || clientY > bottom
     
-            if (!wasOpenedViaKeyboard && clickedOutsideModal) {
+            if (!wasOpenedViaKeyboard && clickedOutsideModal)
                 modalRef.current?.close();
-            }
         }
     };
 
@@ -47,19 +46,25 @@ const Modal = (props: Props) : JSX.Element => {
         // this results in a followup update to the "open" prop which will trigger
         // this useEffect and may unecessarily call the showModal() or close() functions
         // if they have already been called
-        if (open)
+        if (open && isClosed)
             modalRef.current?.showModal();
         else if (!isClosed)
             modalRef.current?.close();
 
     }, [open]);
 
-    const positionStyle = {
+    console.log('open :>> ', open);
+
+    const defaultStyle = {
+        // the modal's height is set to 0px when it is closed to provide a clear indication of
+        // the actual space the modal takes up on the screen. This setup is used by the
+        // onMouseClick function to restrict checks to only when the modal is visible on the screen
+        height: open ? "fit-content" : "0px",
         marginTop: `${windowHeight * 0.15}px`,
     };
 
     return (
-        <dialog ref = {modalRef} className = "modal" style = {{ ...positionStyle, ...style }} onClose = {onClose}>
+        <dialog ref = {modalRef} className = "modal" style = {{ ...defaultStyle, ...style }} onClose = {onClose}>
             {children}
         </dialog>
     );
