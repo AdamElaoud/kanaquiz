@@ -9,11 +9,14 @@ import { Side, TabState, ToggleButtonConfig } from "@/common/types";
 import useMode from "@/hooks/useMode";
 import { useRef } from "react";
 import useWindowSize from "@/common/hooks/useWindowSize";
+import Badge from "@/components/badge/Badge";
+import useKanaSelections from "@/hooks/useKanaSelections";
 
 const KanaSelection = () : JSX.Element => {
     const [selectedTabID, setSelectedTabID] = useLocalStorage<number>(KANA_SELECTION_TAB_STORAGE_KEY, TabID.Hiragana);
     const [windowWidth] = useWindowSize();
     const { hiragana, katakana, lookalikes, search } = useKanaDictionary();
+    const { kanaSelections } = useKanaSelections();
     const { mode, setMode } = useMode();
     const toggleRef = useRef<HTMLDivElement>(null);
 
@@ -24,6 +27,24 @@ const KanaSelection = () : JSX.Element => {
     const hiraganaGroupIDs = Object.keys(hiragana.groupsToChars);
     const katakanaGroupIDs = Object.keys(katakana.groupsToChars);
     const lookalikesGroupIDs = Object.keys(lookalikes.groupsToChars);
+
+    const hiraganaChars = new Set(hiraganaGroups.flat().map(letter => letter[Mode.ID]));
+    const hiraganaCount = kanaSelections.reduce((count, selection) => {
+        if (hiraganaChars.has(selection)) return count + 1;
+        return count;
+    }, 0);
+
+    const katakanaChars = new Set(katakanaGroups.flat().map(letter => letter[Mode.ID]));
+    const katakanaCount = kanaSelections.reduce((count, selection) => {
+        if (katakanaChars.has(selection)) return count + 1;
+        return count;
+    }, 0);
+
+    const lookalikesChars = new Set(lookalikesGroups.flat().map(letter => letter[Mode.ID]));
+    const lookalikesCount = kanaSelections.reduce((count, selection) => {
+        if (lookalikesChars.has(selection)) return count + 1;
+        return count;
+    }, 0);
 
     const searchFn = (_rawSearch: string, queries: string[]) => search(queries);
 
@@ -62,19 +83,19 @@ const KanaSelection = () : JSX.Element => {
 
 
             <TabSet className = "selection-tabset" onTabChange = {onTabChange} startingTabID = {selectedTabID}>
-                <Tab title = "ひ Hiragana" tabID = {TabID.Hiragana}>
+                <Tab title = {<TitleWithBadge title = "Hiragana" count = {hiraganaCount}/>} tabID = {TabID.Hiragana}>
                     {hiraganaGroups.map((group, index) => {
                         const groupID = hiraganaGroupIDs[index];
                         return <KanaButtonRow key = {groupID} row = {group} groupID = {groupID}/>
                     })}
                 </Tab>
-                <Tab title = "カ Katakana" tabID = {TabID.Katakana}>
+                <Tab title = {<TitleWithBadge title = "Katakana" count = {katakanaCount}/>} tabID = {TabID.Katakana}>
                     {katakanaGroups.map((group, index) => {
                         const groupID = katakanaGroupIDs[index];
                         return <KanaButtonRow key = {groupID} row = {group} groupID = {groupID}/>
                     })}
                 </Tab>
-                <Tab title = "Look-Alikes" tabID = {TabID.Lookalikes}>
+                <Tab title = {<TitleWithBadge title = "Similar" count = {lookalikesCount}/>} tabID = {TabID.Lookalikes}>
                     {lookalikesGroups.map((group, index) => {
                         const groupID = lookalikesGroupIDs[index];
                         return <KanaButtonRow key = {groupID} row = {group} groupID = {groupID}/>
@@ -86,3 +107,22 @@ const KanaSelection = () : JSX.Element => {
 };
 
 export default KanaSelection;
+
+interface TitleWithBadgeProps {
+    title: string,
+    count: number
+};
+
+const TitleWithBadge = (props: TitleWithBadgeProps) : JSX.Element => {
+    const { title, count } = props;
+
+    if (count > 0)
+        return (
+            <>
+                <Badge value = {count}/>
+                {title}
+            </>
+        );
+
+    return <>{title}</>;
+};

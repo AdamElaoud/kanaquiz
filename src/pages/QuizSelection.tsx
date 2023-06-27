@@ -52,8 +52,6 @@ const QuizSelection = () : JSX.Element => {
 
     const wordsIsSelectedTopic = quizSelections.topic === QuizTopic.Words;
 
-    console.log('wordsIsSelectedTopic :>> ', wordsIsSelectedTopic);
-
     return (
         <div className = "quiz-selection-page">
             <div className = "welcome-message">

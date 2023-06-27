@@ -1,0 +1,24 @@
+@use "../../common/styles/index" as *;
+
+$badgeSize: calc($smallFontSize + 0.5rem);
+.badge {
+    align-items: center;
+    background-color: $gold;
+    border-radius: 50%;
+    color: $lightModeTextColor;
+    display: flex;
+    font-size: $smallFontSize;
+    font-weight: $fontWeightSuperBold;
+    height: $badgeSize;
+    justify-content: center;
+    padding: calc($padding / 2);
+    width: $badgeSize;
+
+    &.two-digits {
+        font-size: $miniFontSize;
+    }
+
+    &.three-or-more-digits {
+        font-size: $microFontSize;
+    }
+}

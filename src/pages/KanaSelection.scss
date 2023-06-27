@@ -35,6 +35,12 @@
     .selection-tabset {
         height: 75%;
         min-height: 20rem;
+
+        .tab-header {
+            .badge {
+                margin-right: 0.5rem;
+            }
+        }
     }
 }
 

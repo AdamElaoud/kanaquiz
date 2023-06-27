@@ -1,4 +1,4 @@
-import { CSSStyles, IconType, ReactNode, Size } from "@/common/types";
+import { CSSStyles, IconType, ReactElement, ReactNode, Size } from "@/common/types";
 import "./Tab.scss";
 import useWindowSize from "@/common/hooks/useWindowSize";
 import { SCREEN_FILL_WIDTH } from "@/utils/constants";
@@ -10,7 +10,7 @@ export interface TabProps {
     iconSize?: Size,
     // NOTE: tabIDs should be unique and NOT generated from array index
     tabID: number,
-    title?: string,
+    title?: string | ReactElement,
 };
 
 const Tab = (props: TabProps) : JSX.Element => {
