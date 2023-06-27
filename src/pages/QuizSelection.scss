@@ -1,6 +1,7 @@
 @use "../common/styles/index" as *;
 @use "../common/components/tabs/TabHeader.scss" as *;
 @use "../common/components/searchbar/Searchbar.scss" as *;
+@use "../common/components/toggle-button/ToggleButton.scss" as *;
 
 .quiz-selection-page {
     align-items: center;
@@ -34,23 +35,23 @@
         .quiz-selection-section {
             width: 100%;
     
-            .direction-indicator {
-                align-items: center;
+            .toggle-button {
+                background-color: $lightNavy;
                 display: flex;
-                justify-content: space-between;
+                justify-content: space-evenly;
+                max-height: calc(3rem + ($toggleButtonPadding * 2));
+                width: 100%;
+                
+                .toggle-button-item {
+                    background-color: $lightNavy;
+                    max-height: calc(2rem + ($padding));
+                    width: 50%;
 
-                .icon {
-                    height: 2.25rem;
-                }
-
-                .direction-arrow {
-                    margin: 0 0.35rem;
+                    &.active {
+                        background-color: $active;
+                    }
                 }
             }
         }
-    }
-
-    .number-input-title {
-        font-size: $smallFontSize;
     }
 }

@@ -2,9 +2,9 @@ import "./QuizSelection.scss";
 import { QuizDirection, QuizFormat, QuizSelectionData, QuizTopic } from "@/types";
 import useQuizSelections from "@/hooks/useQuizSelections";
 import { MAXIMUM_QUESTION_AMOUNT, MINIMUM_QUESTION_AMOUNT, SCREEN_FILL_WIDTH, SCREEN_PARTIAL_FILL_WIDTH } from "@/utils/constants";
-import { Icon, NumberInput } from "@/common/components";
+import { Icon, NumberInput, ToggleButton } from "@/common/components";
 import { CustomIconType, InputState, Side, Size, ToggleButtonConfig } from "@/common/types";
-import QuizSelectionSection from "@/components/quiz-selection-section/QuizSelectionSection";
+import SelectionSection from "@/components/quiz-selection-section/SelectionSection";
 import useDynamicWidth from "@/common/hooks/useDynamicWidth";
 
 const QuizSelection = () : JSX.Element => {
@@ -52,6 +52,8 @@ const QuizSelection = () : JSX.Element => {
 
     const wordsIsSelectedTopic = quizSelections.topic === QuizTopic.Words;
 
+    console.log('wordsIsSelectedTopic :>> ', wordsIsSelectedTopic);
+
     return (
         <div className = "quiz-selection-page">
             <div className = "welcome-message">
@@ -60,39 +62,39 @@ const QuizSelection = () : JSX.Element => {
             </div>
             
             <div className = "quiz-options" style = {dynamicQuizOptionsWidth}>
-                <QuizSelectionSection
-                    title = "Topic"
-                    buttons = {topicToggleButtons}
-                    defaultActiveSide = {defaultTopicSide}
-                />
-                <QuizSelectionSection
-                    title = "Prompt"
-                    buttons = {directionToggleButtons}
-                    defaultActiveSide = {defaultDirectionSide}
-                    helpTooltip = "blank"
-                    disabled = {wordsIsSelectedTopic}
-                    activeButton = {wordsIsSelectedTopic ? Side.Right : undefined}
-                />
-                <QuizSelectionSection
-                    title = "Answer"
-                    buttons = {formatToggleButtons}
-                    defaultActiveSide = {defaultFormatSide}
-                    helpTooltip = "blank"
-                    disabled = {wordsIsSelectedTopic}
-                    activeButton = {wordsIsSelectedTopic ? Side.Left : undefined}
-                />
+                <SelectionSection title = "Topic">
+                    <ToggleButton buttons = {topicToggleButtons} defaultActiveSide = {defaultTopicSide}/>
+                </SelectionSection>
+                <SelectionSection title = "Prompt" helpTooltip = "blank">
+                    <ToggleButton
+                        // changing a component's key forces it to remount, allowing us to dynamically
+                        // reset the value of the selected option via the defaultActiveSide prop
+                        key = {`direction-selection-${quizSelections.topic}`}
+                        buttons = {directionToggleButtons}
+                        defaultActiveSide = {wordsIsSelectedTopic ? Side.Right : defaultDirectionSide}
+                        disabled = {wordsIsSelectedTopic}
+                    />
+                </SelectionSection>
+                <SelectionSection title = "Answer" helpTooltip = "blank">
+                    <ToggleButton
+                        key = {`format-selection-${quizSelections.topic}`}
+                        buttons = {formatToggleButtons}
+                        defaultActiveSide = {wordsIsSelectedTopic ? Side.Left : defaultFormatSide}
+                        disabled = {wordsIsSelectedTopic}
+                    />
+                </SelectionSection>
+                <SelectionSection title = "Questions">
+                    <NumberInput
+                        defaultValue={quizSelections.amount}
+                        max = {MAXIMUM_QUESTION_AMOUNT}
+                        min = {MINIMUM_QUESTION_AMOUNT}
+                        name = "question-amount"
+                        onChange = {({ newValue }: InputState) =>
+                            updateQuizSelections({ ...quizSelections, amount: newValue })}
+                        size = {Size.Large}
+                    />
+                </SelectionSection>
             </div>
-
-            <NumberInput
-                defaultValue={quizSelections.amount}
-                max = {MAXIMUM_QUESTION_AMOUNT}
-                min = {MINIMUM_QUESTION_AMOUNT}
-                name = "question-amount"
-                onChange = {({ newValue }: InputState) =>
-                    updateQuizSelections({ ...quizSelections, amount: newValue })}
-                title = "Question Amount"
-                size = {Size.Large}
-            />
         </div>
     );
 };
