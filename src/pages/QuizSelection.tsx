@@ -67,8 +67,6 @@ const QuizSelection = () : JSX.Element => {
                 </SelectionSection>
                 <SelectionSection title = "Direction" helpTooltip = "blank">
                     <DirectionToggle 
-                        // changing a component's key forces it to remount, allowing us to dynamically
-                        // reset the value of the selected option via the defaultActiveSide prop
                         key = {`direction-selection-${quizSelections.topic}`}
                         content = {directionToggleButtons}
                         defaultPointDirection = {wordsIsSelectedTopic ? Side.Left : defaultDirection}

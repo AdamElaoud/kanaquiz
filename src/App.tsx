@@ -104,8 +104,6 @@ const App = () : JSX.Element => {
                         </div>
                         
                         <StepCarousel
-                            // changing a component's key forces it to remount, allowing us to dynamically
-                            // reset the value of the selected option via the startingStepID prop
                             key = {carouselKey.toString()}
                             className = "page-carousel"
                             steps = {PAGE_STEPS}

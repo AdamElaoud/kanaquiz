@@ -178,6 +178,8 @@ const Searchbar = (props: Props) : JSX.Element => {
                 </Button>
 
                 <Modal
+                    // changing a component's key forces it to remount, allowing us to dynamically
+                    // reset the value of the selected option via the startingStepID prop
                     key = {modalIsOpen ? "open" : "closed"}
                     initialFocusTarget = {searchInputRef}
                     onClose = {() => { setModalIsOpen(false); clearSearchbar(); }}
