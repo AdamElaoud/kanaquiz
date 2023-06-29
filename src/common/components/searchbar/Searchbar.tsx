@@ -139,7 +139,7 @@ const Searchbar = (props: Props) : JSX.Element => {
                     onKeyDown = {onInputKeyDown}
                 />
                 <Button
-                    onClick = {clearSearchbar}
+                    onClick = {() => { clearSearchbar(); searchInputRef.current?.focus(); }}
                     className = "clear-search-button"
                     iconType = {FontAwesomeIconType.Delete}
                     iconSize = {Size.Small}
@@ -174,6 +174,7 @@ const Searchbar = (props: Props) : JSX.Element => {
                 </Button>
 
                 <Modal
+                    initialFocusTarget = {searchInputRef}
                     open = {modalIsOpen}
                     onClose = {() => { setModalIsOpen(false); clearSearchbar(); }}
                 >

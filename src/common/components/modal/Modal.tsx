@@ -1,19 +1,20 @@
 import useWindowSize from "@/common/hooks/useWindowSize";
 import "./Modal.scss";
-import { CSSStyles, FontAwesomeIconType, MouseClickState, ReactNode } from "@/common/types";
+import { CSSStyles, FontAwesomeIconType, MouseClickState, ReactNode, ReactRef } from "@/common/types";
 import useMouseClick from "@/common/hooks/useMouseClick";
 import { useRef, useEffect } from "react";
 import { Button } from "..";
 
 interface Props {
     children: ReactNode,
+    initialFocusTarget?: ReactRef<HTMLElement>,
     onClose?: () => void,
     open: boolean,
     style?: CSSStyles
 };
 
 const Modal = (props: Props) : JSX.Element => {
-    const { children, open, onClose, style } = props;
+    const { children, initialFocusTarget, open, onClose, style } = props;
 
     const modalRef = useRef<HTMLDialogElement>(null);
     const [, windowHeight] = useWindowSize();
@@ -47,12 +48,17 @@ const Modal = (props: Props) : JSX.Element => {
         // this results in a followup update to the "open" prop which will trigger
         // this useEffect and may unecessarily call the showModal() or close() functions
         // if they have already been called
-        if (open && isClosed)
+        if (open && isClosed) {
             modalRef.current?.showModal();
-        else if (!isClosed)
-            modalRef.current?.close();
 
-    }, [open]);
+            if (initialFocusTarget)
+                initialFocusTarget.current?.focus();
+
+        } else if (!isClosed) {
+            modalRef.current?.close();
+        }
+
+    }, [initialFocusTarget, open]);
 
     const defaultStyle = {
         // the modal's height is set to 0px when it is closed to provide a clear indication of
