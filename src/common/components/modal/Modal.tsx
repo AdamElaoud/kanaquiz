@@ -2,25 +2,28 @@ import useWindowSize from "@/common/hooks/useWindowSize";
 import "./Modal.scss";
 import { CSSStyles, FontAwesomeIconType, MouseClickState, ReactNode, ReactRef } from "@/common/types";
 import useMouseClick from "@/common/hooks/useMouseClick";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import { Button } from "..";
 
 interface Props {
     children: ReactNode,
+    defaultOpen?: boolean,
     initialFocusTarget?: ReactRef<HTMLElement>,
     onClose?: () => void,
-    open: boolean,
     style?: CSSStyles
 };
 
+const DEFAULT_OPEN = false;
+
 const Modal = (props: Props) : JSX.Element => {
-    const { children, initialFocusTarget, open, onClose, style } = props;
+    const { children, defaultOpen = DEFAULT_OPEN, initialFocusTarget, onClose, style } = props;
 
     const modalRef = useRef<HTMLDialogElement>(null);
     const [, windowHeight] = useWindowSize();
     
     const onMouseClick = ({ event }: MouseClickState) => {
-        if (open && modalRef.current && modalRef.current.style.height !== "0px") {
+        const isOpen = modalRef.current?.hasAttribute("open");
+        if (isOpen && modalRef.current && modalRef.current.style.height !== "0px") {
             const modalContentBounds = modalRef.current?.getBoundingClientRect();
     
             const { clientX, clientY } = event;
@@ -39,32 +42,20 @@ const Modal = (props: Props) : JSX.Element => {
 
     useMouseClick(onMouseClick);
 
-    useEffect(() => {
-        const isClosed = !modalRef.current?.hasAttribute("open");
+    const isClosed = !modalRef.current?.hasAttribute("open");
+    if (defaultOpen && isClosed) {
+        modalRef.current?.showModal();
 
-        // due to the fact that the modal can close via the "onMouseClick" function
-        // or via the default "close on Escape" behavior, the manager of the "open"
-        // prop must sync itself with the modal state via the onClose prop. However,
-        // this results in a followup update to the "open" prop which will trigger
-        // this useEffect and may unecessarily call the showModal() or close() functions
-        // if they have already been called
-        if (open && isClosed) {
-            modalRef.current?.showModal();
+        if (initialFocusTarget)
+            initialFocusTarget.current?.focus();
 
-            if (initialFocusTarget)
-                initialFocusTarget.current?.focus();
-
-        } else if (!isClosed) {
-            modalRef.current?.close();
-        }
-
-    }, [initialFocusTarget, open]);
+    }
 
     const defaultStyle = {
         // the modal's height is set to 0px when it is closed to provide a clear indication of
         // the actual space the modal takes up on the screen. This setup is used by the
         // onMouseClick function to restrict checks to only when the modal is visible on the screen
-        height: open ? "fit-content" : "0px",
+        height: defaultOpen ? "fit-content" : "0px",
         marginTop: `${windowHeight * 0.15}px`,
     };
 

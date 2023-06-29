@@ -76,7 +76,7 @@ const QuizSelection = () : JSX.Element => {
                         onToggle = {onDirectionChange}
                     />
                 </SelectionSection>
-                <SelectionSection title = "Response" helpTooltip = "blank">
+                <SelectionSection title = "Answer" helpTooltip = "blank">
                     <ToggleButton
                         key = {`format-selection-${quizSelections.topic}`}
                         buttons = {formatToggleButtons}

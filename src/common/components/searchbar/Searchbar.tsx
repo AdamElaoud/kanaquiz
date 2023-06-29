@@ -174,9 +174,10 @@ const Searchbar = (props: Props) : JSX.Element => {
                 </Button>
 
                 <Modal
+                    key = {modalIsOpen ? "open" : "closed"}
                     initialFocusTarget = {searchInputRef}
-                    open = {modalIsOpen}
                     onClose = {() => { setModalIsOpen(false); clearSearchbar(); }}
+                    defaultOpen = {modalIsOpen}
                 >
                     {search}
                 </Modal>
