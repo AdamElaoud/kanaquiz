@@ -1,0 +1,28 @@
+@use "../../common/styles/index" as *;
+
+.direction-toggle {
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+
+    .icon {
+        color: $active;
+    }
+
+    &.disabled {
+        opacity: $disabledOpacity;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .direction-toggle {
+        &:not(.disabled) {
+            .icon {
+                &:hover {
+                    color: $gold;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

@@ -3,9 +3,10 @@ import { QuizDirection, QuizFormat, QuizSelectionData, QuizTopic } from "@/types
 import useQuizSelections from "@/hooks/useQuizSelections";
 import { MAXIMUM_QUESTION_AMOUNT, MINIMUM_QUESTION_AMOUNT, SCREEN_FILL_WIDTH, SCREEN_PARTIAL_FILL_WIDTH } from "@/utils/constants";
 import { Icon, NumberInput, ToggleButton } from "@/common/components";
-import { CustomIconType, InputState, Side, Size, ToggleButtonConfig } from "@/common/types";
+import { CustomIconType, InputState, Side, Size, ItemConfig, ToggleButtonConfig } from "@/common/types";
 import SelectionSection from "@/components/quiz-selection-section/SelectionSection";
 import useDynamicWidth from "@/common/hooks/useDynamicWidth";
+import DirectionToggle from "@/components/direction-toggle/DirectionToggle";
 
 const QuizSelection = () : JSX.Element => {
     const dynamicQuizOptionsWidth = useDynamicWidth(SCREEN_PARTIAL_FILL_WIDTH, 33, SCREEN_FILL_WIDTH, 90);
@@ -17,7 +18,7 @@ const QuizSelection = () : JSX.Element => {
     
     const { direction, format, topic } = quizSelections;
 
-    const defaultDirectionSide = direction === QuizDirection.ENtoJP ? Side.Left : Side.Right;
+    const defaultDirection = direction === QuizDirection.ENtoJP ? Side.Right : Side.Left;
     const defaultFormatSide = format === QuizFormat.WriteTheAnswer ? Side.Left : Side.Right;
     const defaultTopicSide = topic === QuizTopic.Kana ? Side.Left : Side.Right;
 
@@ -34,16 +35,17 @@ const QuizSelection = () : JSX.Element => {
         }
     ];
 
-    const directionToggleButtons: [ToggleButtonConfig, ToggleButtonConfig] = [
-        {
-            content: <Icon type = {CustomIconType.USFlag} size = {Size.Small}/>,
-            onClick: () => updateQuizSelectionField("direction", QuizDirection.ENtoJP)
-        },
-        {
-            content: <Icon type = {CustomIconType.JPFlag} size = {Size.Small}/>,
-            onClick: () => updateQuizSelectionField("direction", QuizDirection.JPtoEN)
-        }
+    const directionToggleButtons: [ItemConfig, ItemConfig] = [
+        { content: <Icon type = {CustomIconType.USFlag} /> }, 
+        { content: <Icon type = {CustomIconType.JPFlag} /> }
     ];
+
+    const onDirectionChange = (newDirection: Side) => {
+        if (newDirection === Side.Left)
+            updateQuizSelectionField("direction", QuizDirection.JPtoEN);
+        else
+            updateQuizSelectionField("direction", QuizDirection.ENtoJP)
+    };
 
     const formatToggleButtons: [ToggleButtonConfig, ToggleButtonConfig] = [
         { content: "Write", onClick: () => updateQuizSelectionField("format", QuizFormat.WriteTheAnswer) },
@@ -63,17 +65,18 @@ const QuizSelection = () : JSX.Element => {
                 <SelectionSection title = "Topic">
                     <ToggleButton buttons = {topicToggleButtons} defaultActiveSide = {defaultTopicSide}/>
                 </SelectionSection>
-                <SelectionSection title = "Prompt" helpTooltip = "blank">
-                    <ToggleButton
+                <SelectionSection title = "Direction" helpTooltip = "blank">
+                    <DirectionToggle 
                         // changing a component's key forces it to remount, allowing us to dynamically
                         // reset the value of the selected option via the defaultActiveSide prop
                         key = {`direction-selection-${quizSelections.topic}`}
-                        buttons = {directionToggleButtons}
-                        defaultActiveSide = {wordsIsSelectedTopic ? Side.Right : defaultDirectionSide}
+                        content = {directionToggleButtons}
+                        defaultPointDirection = {wordsIsSelectedTopic ? Side.Left : defaultDirection}
                         disabled = {wordsIsSelectedTopic}
+                        onToggle = {onDirectionChange}
                     />
                 </SelectionSection>
-                <SelectionSection title = "Answer" helpTooltip = "blank">
+                <SelectionSection title = "Response" helpTooltip = "blank">
                     <ToggleButton
                         key = {`format-selection-${quizSelections.topic}`}
                         buttons = {formatToggleButtons}

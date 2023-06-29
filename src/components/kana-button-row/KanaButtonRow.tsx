@@ -29,7 +29,7 @@ const KanaButtonRow = (props: Props) : JSX.Element => {
             <Button
                 className = 'select-all-button'
                 onClick = {selectEntireRow}
-                iconType = {FontAwesomeIconType.ArrowRight}
+                iconType = {FontAwesomeIconType.AngleRight}
                 iconSize = {Size.Small}
             />
 

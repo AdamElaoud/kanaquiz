@@ -13,6 +13,7 @@ $maxButtonsPerRow: 8;
     margin-bottom: 0.25rem;
 
     .select-all-button {
+        background-color: $lightNavy;
         color: $nonFocusedDarkModeTextColor;
         margin-right: $selectAllButtonMargin;
         width: $selectAllButtonWidth;

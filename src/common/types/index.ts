@@ -20,6 +20,8 @@ export enum Direction {
 
 export type ReactButtonOnClick = React.MouseEventHandler<HTMLButtonElement>;
 export type ReactButtonOnClickEvent = React.MouseEvent<HTMLButtonElement, MouseEvent>;
+export type ReactDivOnClick = React.MouseEventHandler<HTMLDivElement>;
+export type ReactDivOnClickEvent = React.MouseEvent<HTMLDivElement, MouseEvent>;
 export type ReactNode = React.ReactNode;
 export type ReactElement = React.ReactElement;
 export type ReactFragment = React.ReactFragment;
@@ -29,16 +31,20 @@ export type ReactKeyboardEvent = React.KeyboardEvent;
 export type ReactSetState<T> = React.Dispatch<React.SetStateAction<T>>;
 export type ReactForwardedRef<T> = React.ForwardedRef<T>;
 export type ReactMutableRef<T> = React.MutableRefObject<T>;
-export type CSSStyles = React.CSSProperties;
 export type ReactRef<T> = React.RefObject<T>;
+export type CSSStyles = React.CSSProperties;
 
 export type WindowSize = [width: number, height: number];
 
-export interface ToggleButtonConfig {
+export interface ItemConfig {
     className?: string,
     content: string | ReactElement,
-    onClick: ReactButtonOnClick
+    onClick?: () => void
 };
+
+export type ToggleButtonConfig = Pick<ItemConfig, "className" | "content"> & { onClick: () => void };
+
+export type PlainFn = () => void;
 
 export type StepState = { prevStepID: number | string, prevStepTitle: number | string, newStepID: number | string, newStepTitle: number | string };
 
@@ -77,11 +83,15 @@ export type CustomIconMapType = {
 };
 
 export enum FontAwesomeIconType {
+    AngleLeft = "angleLeft",
+    AngleRight = "angleRight",
     ArrowLeft = "arrowLeft",
     ArrowRight = "arrowRight",
     Book = "book",
     ClipboardQuestion = "clipboardQuestion",
     Check = "check",
+    CircleArrowLeft = "circleArrowLeft",
+    CircleArrowRight = "circleArrowRight",
     Delete = "delete",
     Dojo = "dojo",
     Down = "down",

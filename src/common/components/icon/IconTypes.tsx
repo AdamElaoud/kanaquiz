@@ -2,10 +2,14 @@ import { CustomIconMapType, FontAwesomeIconMapType, } from "@/common/types";
 import {
     faAngleLeft,
     faAngleRight,
+    faArrowLeft,
+    faArrowRight,
     faBook,
     faCaretDown,
     faCaretUp,
     faCheck,
+    faCircleArrowLeft,
+    faCircleArrowRight,
     faClipboardQuestion,
     faTrash,
     faFlagCheckered,
@@ -21,10 +25,14 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const FontAwesomeIconMap: FontAwesomeIconMapType = {
-    "arrowLeft": faAngleLeft,
-    "arrowRight": faAngleRight,
+    "angleLeft": faAngleLeft,
+    "angleRight": faAngleRight,
+    "arrowLeft": faArrowLeft,
+    "arrowRight": faArrowRight,
     "book": faBook,
     "check": faCheck,
+    "circleArrowLeft": faCircleArrowLeft,
+    "circleArrowRight": faCircleArrowRight,
     "clipboardQuestion": faClipboardQuestion,
     "delete": faTrash,
     "dojo": faVihara,

@@ -55,3 +55,24 @@
         }
     }
 }
+
+@media (hover: hover) and (pointer: fine) {
+    .quiz-selection-page {
+        .toggle-button {
+            &:not(.disabled) {
+                .toggle-button-item {
+                    &:hover {
+                        background-color: $gold;
+                        color: $lightModeTextColor;
+                        cursor: pointer;
+                    }
+        
+                    &.active {
+                        background-color: $active;
+                        color: $lightModeTextColor;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,9 +1,8 @@
-import { ReactButtonOnClickEvent, ReactButtonOnClick, ToggleButtonConfig, Side, ReactForwardedRef } from "@/common/types";
-import { useState, forwardRef, useEffect } from "react";
+import { Side, ReactForwardedRef, PlainFn, ToggleButtonConfig } from "@/common/types";
+import { useState, forwardRef } from "react";
 import "./ToggleButton.scss";
 
 interface Props {
-    activeButton?: Side,
     buttons: [ToggleButtonConfig, ToggleButtonConfig],
     className?: string,
     defaultActiveSide?: Side,
@@ -14,30 +13,30 @@ const DEFAULT_ACTIVE_SIDE = Side.Left;
 const DEFAULT_DISABLED = false;
 
 const ToggleButton = forwardRef((props: Props, ref?: ReactForwardedRef<HTMLDivElement>) : JSX.Element => {
-    const { activeButton, buttons, className, defaultActiveSide = DEFAULT_ACTIVE_SIDE || activeButton, disabled = DEFAULT_DISABLED } = props;
+    const {
+        buttons,
+        className,
+        defaultActiveSide = DEFAULT_ACTIVE_SIDE,
+        disabled = DEFAULT_DISABLED
+    } = props;
 
     const [activeSide, setActiveSide] = useState(defaultActiveSide);
 
-    useEffect(() => {
-        if (activeButton)
-            setActiveSide(activeButton);
-    }, [activeButton]);
-
     const [leftButton, rightButton] = buttons;
 
-    const leftButtonClasses = ["left", "toggle-button-item"];
+    const leftButtonClasses = ["toggle-button-item"];
     if (activeSide === Side.Left) leftButtonClasses.push("active")
     if (leftButton.className) leftButtonClasses.push(leftButton.className);
 
-    const rightButtonClasses = ["right", "toggle-button-item"];
+    const rightButtonClasses = ["toggle-button-item"];
     if (activeSide === Side.Right) rightButtonClasses.push("active")
     if (rightButton.className) rightButtonClasses.push(rightButton.className);
 
 
-    const onClick = (sideOnClick: ReactButtonOnClick, side: Side) => (event: ReactButtonOnClickEvent) => {
+    const onClick = (sideOnClick: PlainFn, side: Side) => () => {
         if (!disabled && side !== activeSide) {
             setActiveSide(side);
-            sideOnClick(event);
+            sideOnClick();
         }
     };
 

@@ -8,7 +8,7 @@ interface Props {
     displayFlagAtEnd?: boolean,
     onStepChange?: (stepState: StepState) => void,
     showCheckOnComplete?: boolean,
-    startingStepID?: number,
+    startingStepID?: number | string,
     steps: StepConfig[],
     style: CSSStyles
 };
@@ -64,7 +64,7 @@ const StepCarousel = (props: Props) : JSX.Element => {
             <Button
                 className = "back-button"
                 onClick = {previousStep}
-                iconType = {FontAwesomeIconType.ArrowLeft}
+                iconType = {FontAwesomeIconType.AngleLeft}
                 disabled = {activeStepIndex === 0}
             >
                 Back
@@ -85,7 +85,7 @@ const StepCarousel = (props: Props) : JSX.Element => {
             <Button
                 className = "next-button"
                 onClick = {nextStep}
-                iconType = {FontAwesomeIconType.ArrowRight}
+                iconType = {FontAwesomeIconType.AngleRight}
                 iconSide = {Side.Right}
                 disabled = {activeStepIndex === steps.length - 1}
             >

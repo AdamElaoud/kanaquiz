@@ -23,9 +23,9 @@ const Icon = (props: Props) : JSX.Element => {
         const fontAwesomeIconType = FontAwesomeIconMap[type];
 
         return (
-            <span className = {classes.join(" ")} onClick = {onClick} style = {style}>
+            <div className = {classes.join(" ")} onClick = {onClick} style = {style}>
                 <FontAwesomeIcon icon = {fontAwesomeIconType} />
-            </span>
+            </div>
         );
         
     } else if (isCustomIconType(type)) {
