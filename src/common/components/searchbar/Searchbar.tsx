@@ -112,6 +112,10 @@ const Searchbar = (props: Props) : JSX.Element => {
         // blur to hide mobile keyboards on submission
         if (event.key === "Enter")
             searchInputRef.current?.blur();
+
+        // if user presses escape in modal, close the modal
+        if (event.key === "Escape" && modalIsOpen)
+            setModalIsOpen(false);
     };
 
     const clearSearchbar = () => {

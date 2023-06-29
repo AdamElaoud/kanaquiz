@@ -23,7 +23,7 @@ const Modal = (props: Props) : JSX.Element => {
     
     const onMouseClick = ({ event }: MouseClickState) => {
         const isOpen = modalRef.current?.hasAttribute("open");
-        if (isOpen && modalRef.current && modalRef.current.style.height !== "0px") {
+        if (isOpen && modalRef.current) {
             const modalContentBounds = modalRef.current?.getBoundingClientRect();
     
             const { clientX, clientY } = event;
@@ -48,14 +48,9 @@ const Modal = (props: Props) : JSX.Element => {
 
         if (initialFocusTarget)
             initialFocusTarget.current?.focus();
-
     }
 
     const defaultStyle = {
-        // the modal's height is set to 0px when it is closed to provide a clear indication of
-        // the actual space the modal takes up on the screen. This setup is used by the
-        // onMouseClick function to restrict checks to only when the modal is visible on the screen
-        height: defaultOpen ? "fit-content" : "0px",
         marginTop: `${windowHeight * 0.15}px`,
     };
 
