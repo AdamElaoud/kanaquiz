@@ -28,14 +28,10 @@ const Modal = (props: Props) : JSX.Element => {
     
             const { clientX, clientY } = event;
             const { top, right, bottom, left } = modalContentBounds;
-
-            // when a button is "clicked" via the Enter key, the corresponding MouseEvent
-            // that is fired attributes its clientX and clientY to be 0 which will
-            // cause this condition to fail prompting the modal to instantly close
-            const wasOpenedViaKeyboard = clientX === 0 && clientY === 0;
+            
             const clickedOutsideModal = clientX < left || clientX > right || clientY < top || clientY > bottom
     
-            if (!wasOpenedViaKeyboard && clickedOutsideModal)
+            if (clickedOutsideModal)
                 modalRef.current?.close();
         }
     };
