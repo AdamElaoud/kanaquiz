@@ -13,6 +13,7 @@ import { QuizSelectionsContextProvider } from './hooks/useQuizSelections';
 import { KanaSelectionsContextProvider } from './hooks/useKanaSelections';
 
 const App = () : JSX.Element => {
+    const [carouselKey, resetCarousel] = useState<boolean>(false);
     const [mode, setMode] = useState<Mode>(Mode.Kana);
     const [page, setPage] = useState<PageType>(PageType.QuizSelect);
     const [kanaSelections, setKanaSelections] = useLocalStorage<string[]>(KANA_SELECTION_STORAGE_KEY, []);
@@ -93,18 +94,25 @@ const App = () : JSX.Element => {
             <KanaSelectionsContextProvider value = {{ kanaSelections, updateKanaSelections }}>
                 <QuizSelectionsContextProvider value = {{ quizSelections, updateQuizSelections }}>
                     <div className = "app" style = {appStyle}>
-                        <Header style = {dynamicWidth}/>
+                        <Header
+                            style = {dynamicWidth}
+                            onClick = {() => { setPage(PageType.QuizSelect); resetCarousel(state => !state); }}
+                        />
 
                         <div className = "page" style = {dynamicWidth}>
                             {PAGES[page]()}
                         </div>
                         
                         <StepCarousel
+                            // changing a component's key forces it to remount, allowing us to dynamically
+                            // reset the value of the selected option via the startingStepID prop
+                            key = {carouselKey.toString()}
                             className = "page-carousel"
                             steps = {PAGE_STEPS}
                             onStepChange = {onStepChange}
                             showCheckOnComplete = {true}
                             style = {dynamicWidth}
+                            startingStepID = {PAGE_STEPS[0].ID}
                         />
                     </div>
                 </QuizSelectionsContextProvider>

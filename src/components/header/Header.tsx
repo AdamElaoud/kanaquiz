@@ -3,14 +3,15 @@ import "./Header.scss";
 import { CSSStyles, FontAwesomeIconType } from "@/common/types";
 
 interface Props {
+    onClick?: () => void,
     style?: CSSStyles
 };
 
 const Header = (props: Props) : JSX.Element => {
-    const { style } = props;
+    const { onClick, style } = props;
 
     return (
-        <div className = "header" style = {style}>
+        <div className = "header" style = {style} onClick = {onClick}>
             <span className = "logo">
                 <Icon type = {FontAwesomeIconType.Torii} />
                 Kana Quiz
