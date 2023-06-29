@@ -1,6 +1,6 @@
-import { Direction, FontAwesomeIconType, IconType, InputState, ReactInputOnChangeEvent, Size } from "@/common/types";
+import { Direction, FontAwesomeIconType, IconType, InputState, ReactInputOnChangeEvent, ReactKeyboardEvent, Size } from "@/common/types";
 import "./NumberInput.scss";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Icon } from "..";
 
 interface Props {
@@ -38,6 +38,7 @@ const NumberInput = (props: Props) => {
 
 
     const [value, setValue] = useState<number>(defaultValue);
+    const inputRef = useRef<HTMLInputElement>(null);
 
     const onInputChange = (event: ReactInputOnChangeEvent) => {
         const input = parseInt(event.target.value);
@@ -70,6 +71,12 @@ const NumberInput = (props: Props) => {
         setValue(prevValue => prevValue + direction);
     };
 
+    const onInputKeyDown = (event: ReactKeyboardEvent) => {
+        // blur to hide mobile keyboards on submission
+        if (event.key === "Enter")
+            inputRef.current?.blur();
+    };
+
     return (
         <div className = {`number-input ${size}`}>
             {title && <span className = "number-input-title">{title}</span>}
@@ -80,12 +87,14 @@ const NumberInput = (props: Props) => {
                 <label className = "visually-hidden" htmlFor = {`${name}-input`}>Amount of questions for {name}</label>
                 <input
                     name = {`${name}-input`}
+                    ref = {inputRef}
                     type = "number"
                     min = {min}
                     max = {max}
                     role = "input"
                     value = {value}
                     onChange = {onInputChange}
+                    onKeyDown = {onInputKeyDown}
                 />
                 
                 {showButtons && <Icon type = {buttonIcons[1]} onClick = {onClickButton(Direction.Up)} size = {size}/>}

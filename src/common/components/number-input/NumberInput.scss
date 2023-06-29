@@ -15,7 +15,9 @@
         
         input {
             @extend %rounded-border;
-            border: none;
+            background-color: $darkNavy;
+            border: $borderThickness solid $lightNavy;
+            color: $darkModeTextColor;
             font-weight: $fontWeightBold;
             text-align: center;
         }
