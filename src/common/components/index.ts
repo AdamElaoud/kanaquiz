@@ -5,7 +5,7 @@ import Modal from "./modal/Modal";
 import NumberInput from "./number-input/NumberInput";
 import Searchbar from "./searchbar/Searchbar";
 import Step from "./step-display/Step";
-import StepCarousel from "./step-carousel/StepCarousel";
+import StepWizard from "./step-carousel/StepWizard";
 import StepDisplay from "./step-display/StepDisplay";
 import Tab from "./tabs/Tab";
 import TabHeader from "./tabs/TabHeader";
@@ -21,7 +21,7 @@ export {
     NumberInput,
     Searchbar,
     Step,
-    StepCarousel,
+    StepWizard as StepCarousel,
     StepDisplay,
     Tab,
     TabHeader,

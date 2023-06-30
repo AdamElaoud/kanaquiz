@@ -2,7 +2,7 @@
 
 $stepTitleMargin: 1rem;
 
-.step-carousel {
+.step-wizard {
     @include padding(2);
     @extend %rounded-border;
     align-items: center;
@@ -52,7 +52,7 @@ $stepTitleMargin: 1rem;
 }
 
 @media (max-width: $sizeWidthThreshhold) {
-    .step-carousel {
+    .step-wizard {
         @include padding(0.5);
 
         button {

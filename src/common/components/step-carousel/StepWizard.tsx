@@ -1,5 +1,5 @@
 import { CSSStyles, FontAwesomeIconType, Side, StepConfig, StepState } from "@/common/types";
-import "./StepCarousel.scss";
+import "./StepWizard.scss";
 import { Button, StepDisplay } from "..";
 import { useState } from "react";
 
@@ -15,7 +15,7 @@ interface Props {
 
 const DEFAULT_STARTING_STEP_INDEX = 0;
 
-const StepCarousel = (props: Props) : JSX.Element => {
+const StepWizard = (props: Props) : JSX.Element => {
     const { className, displayFlagAtEnd, onStepChange, showCheckOnComplete, steps, startingStepID = steps[0].ID, style } = props;
 
     const [activeStepIndex, setActiveStepIndex] = useState<number>(() => {
@@ -54,7 +54,7 @@ const StepCarousel = (props: Props) : JSX.Element => {
         setActiveStepIndex(currentStepIndex => currentStepIndex - 1);
     };
 
-    let classes = "step-carousel";
+    let classes = "step-wizard";
     if (className) classes += ` ${className}`;
 
     const stepText = steps[activeStepIndex].text;
@@ -95,4 +95,4 @@ const StepCarousel = (props: Props) : JSX.Element => {
     );
 };
 
-export default StepCarousel;
+export default StepWizard;
