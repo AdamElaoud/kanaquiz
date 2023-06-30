@@ -24,6 +24,7 @@ $maxButtonsPerRow: 8;
     .button-row {
         .select-all-button {
             &:hover {
+                background-color: $gold;
                 color: $lightModeTextColor
             }
         }

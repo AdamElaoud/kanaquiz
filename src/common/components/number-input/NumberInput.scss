@@ -1,5 +1,7 @@
 @use "../../styles/index" as *;
 
+$numberInputMaxWidth: 5rem;
+
 .number-input {
     align-items: center;
     display: flex;
@@ -19,6 +21,7 @@
             border: $borderThickness solid $lightNavy;
             color: $darkModeTextColor;
             font-weight: $fontWeightBold;
+            max-width: $numberInputMaxWidth;
             text-align: center;
         }
 

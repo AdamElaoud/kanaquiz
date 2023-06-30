@@ -11,14 +11,14 @@ const Header = (props: Props) : JSX.Element => {
     const { onClick, style } = props;
 
     return (
-        <div className = "header" style = {style} onClick = {onClick}>
+        <header className = "header" style = {style} onClick = {onClick}>
             <span className = "logo">
                 <Icon type = {FontAwesomeIconType.Torii} />
                 Kana Quiz
             </span>
 
             {/* <ToggleSwitch onActivate = {() => console.log("darkmode activated!")}/> */}
-        </div>
+        </header>
     );
 };
 

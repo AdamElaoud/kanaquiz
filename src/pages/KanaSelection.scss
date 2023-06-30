@@ -111,6 +111,15 @@
 @media (hover: hover) and (pointer: fine) {
     .kana-selection-page {
         .selection-tabset {
+            .tab-header {
+                &:not(.active):hover {
+                    .badge {
+                        background-color: $lightNavy;
+                        color: $darkModeTextColor;
+                    }
+                }
+            }
+
             .tab {
                 .tab-button-row {
                     .button {
