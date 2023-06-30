@@ -61,8 +61,6 @@ const KanaSelection = () : JSX.Element => {
 
     const inMobileDeviceThreshhold = windowWidth < SCREEN_WIDTH_THRESHHOLD;
 
-    console.log('hiraganaGroups :>> ', hiraganaGroups.flat());
-
     return (
         <div className = "kana-selection-page">
             <div className = "call-to-action">

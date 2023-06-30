@@ -20,7 +20,7 @@ const Modal = (props: Props) : JSX.Element => {
 
     const modalRef = useRef<HTMLDialogElement>(null);
     const [, windowHeight] = useWindowSize();
-    
+
     const onMouseClick = ({ event }: MouseClickState) => {
         const isOpen = modalRef.current?.hasAttribute("open");
         if (isOpen && modalRef.current) {
@@ -36,7 +36,7 @@ const Modal = (props: Props) : JSX.Element => {
         }
     };
 
-    useMouseClick(onMouseClick);
+    useMouseClick(onMouseClick, modalRef.current);
 
     const isClosed = !modalRef.current?.hasAttribute("open");
     if (defaultOpen && isClosed) {

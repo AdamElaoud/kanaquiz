@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { MouseClickState } from "../types";
 
-const useMouseClick = (onMouseClick?: (mouseClickState: MouseClickState) => void) : MouseEvent | null => {
+const useMouseClick = (onMouseClick?: (mouseClickState: MouseClickState) => void, scope?: HTMLElement | null) : MouseEvent | null => {
     const [mouseClick, setMouseClick] = useState<MouseEvent | null>(null);
 
     useEffect(() => {
@@ -15,10 +15,19 @@ const useMouseClick = (onMouseClick?: (mouseClickState: MouseClickState) => void
             setMouseClick(event);
         };
 
-        window.addEventListener('click', updateNextFocusTarget);
+        if (scope)
+            scope.addEventListener('click', updateNextFocusTarget);
+        else
+            window.addEventListener('click', updateNextFocusTarget);
 
-        return () => window.removeEventListener('click', updateNextFocusTarget);
-    }, [mouseClick, onMouseClick]);
+        return () => {
+            if (scope)
+                scope.removeEventListener('click', updateNextFocusTarget);
+            else
+                window.removeEventListener('click', updateNextFocusTarget);
+        };
+        
+    }, [mouseClick, onMouseClick, scope]);
     
     return mouseClick;
 }

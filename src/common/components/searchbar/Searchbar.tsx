@@ -40,7 +40,7 @@ const Searchbar = (props: Props) : JSX.Element => {
     const searchResultsRef = useRef<HTMLDivElement>(null);
     const [showResults, setShowResults] = useState<boolean>(false);
     const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
-    
+
     const onMouseClick = ({ nextClickTarget }: MouseClickState) => {
         if (!alwaysShowResults) {
             const hasResults = searchResults.length > 0;
@@ -66,7 +66,7 @@ const Searchbar = (props: Props) : JSX.Element => {
                 }
             }
         }
-    ]);
+    ], searchInputRef.current);
 
     const onSearchChange = (event: ReactInputOnChangeEvent) => {
         const rawSearch = event.target.value;
