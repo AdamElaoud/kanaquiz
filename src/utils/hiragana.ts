@@ -69,7 +69,7 @@ export const charsToGroups: CharsToGroups = {
     "ゆ": ["h_y"], "yu": ["h_y"],
     "よ": ["h_y"], "yo": ["h_y"],
     "ら": ["h_r", "la_6"], "ra": ["h_r", "la_6"],
-    "り": ["h_r"], "ri": ["h_r"],
+    "り": ["h_r", "la_10"], "ri": ["h_r", "la_10"],
     "る": ["h_r"], "ru": ["h_r"],
     "れ": ["h_r", "la_3"], "re": ["h_r", "la_3"],
     "ろ": ["h_r"], "ro": ["h_r"],
