@@ -76,3 +76,5 @@ export interface KanaButtonProps {
     isSearchTarget?: boolean,
     letters: string[]
 };
+
+export type UpdateKanaSelectionsFn = (letters: string[], addOnly?: boolean, deleteOnly?: boolean) => void;

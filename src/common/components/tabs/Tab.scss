@@ -1,8 +1,12 @@
 @use "../../styles/index" as *;
 
+$tabPadding: 2rem;
+$tabMobilePadding: 0.75rem;
+
 .tab {
-    padding: 2rem;
+    padding: $tabPadding;
     height: 100%;
+    column-gap: 0.5rem;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
@@ -11,6 +15,6 @@
 
 @media (max-width: $sizeWidthThreshhold) {
     .tab {
-        padding: 0.75rem;
+        padding: $tabMobilePadding;
     }
 }

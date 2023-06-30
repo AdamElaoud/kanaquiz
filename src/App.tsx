@@ -36,7 +36,7 @@ const App = () : JSX.Element => {
 
     }, []);
 
-    const updateKanaSelections = (letters: string[], addOnly?: boolean) => {
+    const updateKanaSelections = (letters: string[], addOnly?: boolean, deleteOnly?: boolean) => {
         const updatedSelections = [...kanaSelections];
 
         letters.forEach(letter => {
@@ -47,7 +47,8 @@ const App = () : JSX.Element => {
                 }
     
             } else {
-                updatedSelections.push(letter);
+                if (!deleteOnly)
+                    updatedSelections.push(letter);
             }
         });
 

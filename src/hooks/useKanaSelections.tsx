@@ -1,10 +1,11 @@
 /* eslint-disable */
 import { ReactNode } from "@/common/types";
+import { UpdateKanaSelectionsFn } from "@/types";
 import { createContext, useContext } from "react";
 
 type KanaSelectionsContextType = {
     kanaSelections: string[],
-    updateKanaSelections: (letter: string[], addOnly?: boolean) => void
+    updateKanaSelections: UpdateKanaSelectionsFn
 };
 
 const KanaSelectionsContext = createContext<KanaSelectionsContextType>({} as KanaSelectionsContextType);

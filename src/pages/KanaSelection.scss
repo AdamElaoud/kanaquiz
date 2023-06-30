@@ -1,5 +1,6 @@
 @use "../common/styles/index" as *;
 @use "../common/components/searchbar/Searchbar.scss" as *;
+@use "../common/components/tabs/Tab.scss" as *;
 
 .kana-selection-page {
     align-items: center;
@@ -13,12 +14,12 @@
     }
 
     .actions-bar {
-        @include padding(0.5);
         align-items: center;
         display: flex;
         column-gap: calc($sectionSpacing / 2);
-        justify-content: space-evenly;
+        justify-content: space-between;
         margin-bottom: calc($sectionSpacing / 1.25);
+        padding: 0;
         width: 100%;
 
         .open-modal-button {
@@ -29,6 +30,10 @@
 
         .toggle-button {
             height: 100%;
+        }
+
+        .search {
+            flex-grow: 1;
         }
     }
 
@@ -41,17 +46,81 @@
                 margin-right: 0.5rem;
             }
         }
+
+        .tab {
+            padding-top: calc($tabPadding * 2.5);
+            position: relative;
+
+            .tab-button-row {
+                align-items: center;
+                display: flex;
+                justify-content: flex-start;
+                position: absolute;
+                top: calc($tabPadding / 2);
+                width: calc(100% - ($tabPadding * 2));
+    
+                .button {
+                    font-size: $smallFontSize;
+                    padding-top: 0.25rem;
+                    padding-bottom: 0.25rem;
+                }
+
+                .select-all-button {
+                    background-color: $lightNavy;
+                    margin-right: 0.5rem;
+                }
+                
+                .clear-all-button {
+                    background-color: $darkCrimson;
+                    margin-left : 0.5rem;
+                }
+            }
+        }
     }
 }
 
-@media (min-width: $sizeWidthThreshhold) {
+@media (max-width: $sizeWidthThreshhold) {
     .kana-selection-page {
         .actions-bar {
-            padding: 0;
-            justify-content: space-between;
+            @include padding(0.5);
+            justify-content: space-evenly;
+        }
 
-            .search {
-                flex-grow: 1;
+        .selection-tabset {
+            .tab {
+                padding-top: calc($tabMobilePadding * 4.5);
+    
+                .tab-button-row {
+                    justify-content: space-evenly;
+                    top: calc($tabMobilePadding / 2);
+                    width: calc(100% - ($tabMobilePadding * 2));
+
+                    .select-all-button {
+                        margin-right: 0;
+                    }
+                    
+                    .clear-all-button {
+                        margin-left : 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .kana-selection-page {
+        .selection-tabset {
+            .tab {
+                .tab-button-row {
+                    .button {
+                        &:hover {
+                            cursor: pointer;
+                            background-color: $gold;
+                            color: $lightModeTextColor;
+                        }
+                    }
+                }
             }
         }
     }
