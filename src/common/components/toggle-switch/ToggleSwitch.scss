@@ -1,6 +1,6 @@
 @use "../../styles/index" as *;
 
-$toggleButtonSize: $mediumIconSize;
+$toggleButtonSize: $miniIconSize;
 $paddingMultiplier: 0.5;
 $toggleSwitchWidth: calc($toggleButtonSize * 3);
 $toggleSwitchPadding: calc($padding * $paddingMultiplier);
@@ -48,7 +48,7 @@ $toggleSwitchPadding: calc($padding * $paddingMultiplier);
     }
 }
 
-$smallToggleButtonSize: $smallIconSize;
+$smallToggleButtonSize: $miniIconSize;
 $smallToggleSwitchWidth: calc($smallToggleButtonSize * 3);
 
 @media (max-width: $sizeWidthThreshhold) {

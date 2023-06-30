@@ -4,7 +4,7 @@ import KanaSelection from "@/pages/KanaSelection";
 import QuizRecap from "@/pages/QuizRecap";
 import QuizSelection from "@/pages/QuizSelection";
 import QuizSummary from "@/pages/QuizSummary";
-import WordSelect from "@/pages/WordSelect";
+import WordSelection from "@/pages/WordSelection";
 import { PageMapType } from "@/types";
 
 // this value is expected to match the SCSS $sizeWidthThreshhold variable in _values.scss
@@ -29,12 +29,13 @@ export const PAGES: PageMapType = {
     QuizRecap: () => <QuizRecap />,
     QuizSelection: () => <QuizSelection />,
     QuizSummary: () => <QuizSummary />,
-    WordSelect: () => <WordSelect />
+    WordSelection: () => <WordSelection />
 };
 
 export const ENGLISH_DELIMITERS = [" ", ",", ", "];
 export const JAPANESE_DELIMITERS = ["　", "、"];
 
-export const QUIZ_SELECTION_STORAGE_KEY = "quiz-selections";
 export const KANA_SELECTION_STORAGE_KEY = "kana-selections";
+export const QUIZ_SELECTION_STORAGE_KEY = "quiz-selections";
+export const WORD_SELECTION_STORAGE_KEY = "word-selections";
 export const KANA_SELECTION_TAB_STORAGE_KEY = "kana-selections-tab";

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { EventSubscription } from "../types";
 
-const useKeyDown = (subscriptions: EventSubscription[], scope?: HTMLElement | null) : KeyboardEvent | null => {
+const useKeyDown = (subscriptions: EventSubscription[], scope: HTMLElement = document.body) : KeyboardEvent | null => {
     const [keyPressed, setKeyPressed] = useState<KeyboardEvent | null>(null);
 
     useEffect(() => {
@@ -13,17 +13,9 @@ const useKeyDown = (subscriptions: EventSubscription[], scope?: HTMLElement | nu
             setKeyPressed(event);
         };
 
-        if (scope)
-            scope.addEventListener('keydown', respondToEvent);
-        else
-            window.addEventListener('keydown', respondToEvent);
+        scope.addEventListener('keydown', respondToEvent);
 
-        return () => {
-            if (scope)
-                scope.removeEventListener('keydown', respondToEvent);
-            else
-                window.removeEventListener('keydown', respondToEvent);
-        };
+        return () => scope.removeEventListener('keydown', respondToEvent);
 
     }, [scope, subscriptions]);
     

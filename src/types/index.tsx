@@ -33,7 +33,7 @@ export enum PageType {
     QuizRecap = "QuizRecap",
     QuizSelect = "QuizSelection",
     QuizSummary = "QuizSummary",
-    WordSelect = "WordSelect"
+    WordSelection = "WordSelection"
 };
 
 export enum TabID {
@@ -69,6 +69,11 @@ export type QuizSelectionData = {
     direction: QuizDirection,
     format: QuizFormat,
     topic: QuizTopic
+};
+
+export type WordSelectionData = {
+    allHiragana: boolean,
+    allKatakana: boolean
 };
 
 export interface KanaButtonProps {

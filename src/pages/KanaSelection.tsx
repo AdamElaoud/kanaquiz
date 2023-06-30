@@ -82,7 +82,7 @@ const KanaSelection = () : JSX.Element => {
             </div>
 
 
-            <TabSet className = "selection-tabset" onTabChange = {onTabChange} startingTabID = {selectedTabID}>
+            <TabSet className = "kana-selection-tabset" onTabChange = {onTabChange} startingTabID = {selectedTabID}>
                 <Tab title = {<TitleWithBadge title = "Hiragana" count = {hiraganaCount}/>} tabID = {TabID.Hiragana}>
                     <>
                         <TabButtonRow groups = {hiraganaGroups.flat()} updateKanaSelections = {updateKanaSelections}/>

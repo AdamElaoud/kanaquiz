@@ -30,6 +30,11 @@ html {
         input {
             font-size: $smallFontSize;
             outline: transparent;
+
+            &[type=number] {
+                // removes firefox custom arrows in number inputs
+                -moz-appearance: textfield;
+            }
         }
 
         $scrollbarThickness: 3px;

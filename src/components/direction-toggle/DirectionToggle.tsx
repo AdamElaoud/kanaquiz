@@ -52,11 +52,12 @@ const DirectionToggle = (props: Props) : JSX.Element => {
             <div className = {leftItemClasses.join(" ")} onClick = {leftItem.onClick}>
                 {leftItem.content}
             </div>
-            <Icon
-                onClick = {onClick}
-                size = {Size.Large}
-                type = {pointDirection === Side.Left ? FontAwesomeIconType.CircleArrowLeft : FontAwesomeIconType.CircleArrowRight}
-            />
+            <button className = "direction-toggle-button" onClick = {onClick} disabled = {disabled}>
+                <Icon
+                    size = {Size.Large}
+                    type = {pointDirection === Side.Left ? FontAwesomeIconType.CircleArrowLeft : FontAwesomeIconType.CircleArrowRight}
+                />
+            </button>
             <div className = {rightItemClasses.join(" ")} onClick = {rightItem.onClick}>
                 {rightItem.content}
             </div>

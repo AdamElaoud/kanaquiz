@@ -4,7 +4,6 @@ import "./Searchbar.scss";
 import "@/styles/_index.scss";
 import useMouseClick from "@/common/hooks/useMouseClick";
 import { Button, Icon, Modal } from "..";
-import useKeyDown from "@/common/hooks/useKeyDown";
 
 interface Props {
     delimiters?: string[],
@@ -56,17 +55,6 @@ const Searchbar = (props: Props) : JSX.Element => {
     };
 
     useMouseClick(onMouseClick);
-    useKeyDown([
-        {
-            eventKeys: new Set(["Escape"]),
-            responseFn: () => {
-                if (!alwaysShowResults) {
-                    setShowResults(false);
-                    searchInputRef.current?.focus();
-                }
-            }
-        }
-    ], searchInputRef.current);
 
     const onSearchChange = (event: ReactInputOnChangeEvent) => {
         const rawSearch = event.target.value;
@@ -109,13 +97,20 @@ const Searchbar = (props: Props) : JSX.Element => {
         if (event.key === "Enter" || event.key === "Escape")
             event.preventDefault();
 
-        // blur to hide mobile keyboards on submission
+            // blur to hide mobile keyboards on submission
         if (event.key === "Enter")
             searchInputRef.current?.blur();
 
         // if user presses escape in modal, close the modal
-        if (event.key === "Escape" && modalIsOpen)
-            setModalIsOpen(false);
+        if (event.key === "Escape") {
+            if (!alwaysShowResults) {
+                setShowResults(false);
+                searchInputRef.current?.focus();
+            }
+
+            if (modalIsOpen)
+                setModalIsOpen(false);
+        }
     };
 
     const clearSearchbar = () => {

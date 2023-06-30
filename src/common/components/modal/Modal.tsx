@@ -1,7 +1,6 @@
 import useWindowSize from "@/common/hooks/useWindowSize";
 import "./Modal.scss";
-import { CSSStyles, FontAwesomeIconType, MouseClickState, ReactNode, ReactRef } from "@/common/types";
-import useMouseClick from "@/common/hooks/useMouseClick";
+import { CSSStyles, FontAwesomeIconType, ReactMouseEvent, ReactNode, ReactRef } from "@/common/types";
 import { useRef } from "react";
 import { Button } from "..";
 
@@ -21,8 +20,9 @@ const Modal = (props: Props) : JSX.Element => {
     const modalRef = useRef<HTMLDialogElement>(null);
     const [, windowHeight] = useWindowSize();
 
-    const onMouseClick = ({ event }: MouseClickState) => {
+    const onClick = (event: ReactMouseEvent) => {
         const isOpen = modalRef.current?.hasAttribute("open");
+        
         if (isOpen && modalRef.current) {
             const modalContentBounds = modalRef.current?.getBoundingClientRect();
     
@@ -35,8 +35,6 @@ const Modal = (props: Props) : JSX.Element => {
                 modalRef.current?.close();
         }
     };
-
-    useMouseClick(onMouseClick, modalRef.current);
 
     const isClosed = !modalRef.current?.hasAttribute("open");
     if (defaultOpen && isClosed) {
@@ -51,7 +49,13 @@ const Modal = (props: Props) : JSX.Element => {
     };
 
     return (
-        <dialog ref = {modalRef} className = "modal" style = {{ ...defaultStyle, ...style }} onClose = {onClose}>
+        <dialog
+            ref = {modalRef}
+            className = "modal"
+            style = {{ ...defaultStyle, ...style }}
+            onClose = {onClose}
+            onClick = {onClick}
+        >
             <Button className = "close-modal-button" onClick = {() => modalRef.current?.close()} iconType = {FontAwesomeIconType.X} />
             {children}
         </dialog>

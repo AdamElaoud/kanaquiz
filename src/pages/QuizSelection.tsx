@@ -3,7 +3,7 @@ import { QuizDirection, QuizFormat, QuizSelectionData, QuizTopic } from "@/types
 import useQuizSelections from "@/hooks/useQuizSelections";
 import { MAXIMUM_QUESTION_AMOUNT, MINIMUM_QUESTION_AMOUNT, SCREEN_FILL_WIDTH, SCREEN_PARTIAL_FILL_WIDTH } from "@/utils/constants";
 import { Icon, NumberInput, ToggleButton } from "@/common/components";
-import { CustomIconType, InputState, Side, Size, ItemConfig, ToggleButtonConfig } from "@/common/types";
+import { CustomIconType, InputState, Side, Size, ItemConfig, ToggleButtonConfig, ReactFormOnSubmitEvent } from "@/common/types";
 import SelectionSection from "@/components/quiz-selection-section/SelectionSection";
 import useDynamicWidth from "@/common/hooks/useDynamicWidth";
 import DirectionToggle from "@/components/direction-toggle/DirectionToggle";
@@ -14,6 +14,10 @@ const QuizSelection = () : JSX.Element => {
 
     const updateQuizSelectionField = (fieldName: keyof QuizSelectionData, fieldData: QuizDirection | QuizFormat | QuizTopic) => {
         updateQuizSelections({ ...quizSelections, [fieldName]: fieldData })
+    };
+
+    const onSubmit = (event: ReactFormOnSubmitEvent) => {
+        event.preventDefault();
     };
     
     const { direction, format, topic } = quizSelections;
@@ -61,7 +65,7 @@ const QuizSelection = () : JSX.Element => {
                 <span className = "call-to-action">Please select how you would like to study</span>
             </div>
             
-            <div className = "quiz-options" style = {dynamicQuizOptionsWidth}>
+            <form className = "quiz-options" style = {dynamicQuizOptionsWidth} onSubmit = {onSubmit}>
                 <SelectionSection title = "Topic">
                     <ToggleButton buttons = {topicToggleButtons} defaultActiveSide = {defaultTopicSide}/>
                 </SelectionSection>
@@ -93,7 +97,7 @@ const QuizSelection = () : JSX.Element => {
                         size = {Size.Large}
                     />
                 </SelectionSection>
-            </div>
+            </form>
         </div>
     );
 };

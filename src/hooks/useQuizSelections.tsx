@@ -13,8 +13,7 @@ const QuizSelectionsContext = createContext<QuizSelectionsContextType>({} as Qui
 export const useQuizSelections = () => {
     const context = useContext(QuizSelectionsContext);
 
-    // need explicit check for undefined as [] is falsey
-    if (context === undefined)
+    if (!context)
         throw "useQuizSelections must be used within a QuizSelectionsContextProvider!";
 
     return context;

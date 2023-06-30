@@ -1,20 +1,22 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CustomIconMap, FontAwesomeIconMap } from "./IconTypes";
-import { CSSStyles, IconType, Size, isCustomIconType, isFontAwesomeIconType } from "@/common/types";
+import { CSSStyles, IconType, ReactKeyboardEvent, Size, isCustomIconType, isFontAwesomeIconType } from "@/common/types";
 import "./Icon.scss";
 
 interface Props {
     className?: string,
     onClick?: () => void,
+    onKeyDown?: (event: ReactKeyboardEvent) => void,
     size?: Size,
     style?: CSSStyles,
+    tabIndex?: number,
     type: IconType
 };
 
 const DEFAULT_ICON_SIZE = Size.Medium;
 
 const Icon = (props: Props) : JSX.Element => {
-    const { className, onClick, size = DEFAULT_ICON_SIZE, style, type } = props;
+    const { className, onClick, onKeyDown, size = DEFAULT_ICON_SIZE, style, tabIndex, type } = props;
     
     const classes = ["icon", size];
     if (className) classes.push(className);
@@ -23,7 +25,7 @@ const Icon = (props: Props) : JSX.Element => {
         const fontAwesomeIconType = FontAwesomeIconMap[type];
 
         return (
-            <div className = {classes.join(" ")} onClick = {onClick} style = {style}>
+            <div className = {classes.join(" ")} onClick = {onClick} onKeyDown = {onKeyDown} style = {style} tabIndex = {tabIndex}>
                 <FontAwesomeIcon icon = {fontAwesomeIconType} />
             </div>
         );
@@ -34,7 +36,7 @@ const Icon = (props: Props) : JSX.Element => {
         const content = isImage ? <img src = {src} alt = {text}/> : text
 
         return (
-            <div className = {classes.join(" ")} onClick = {onClick} style = {style}>
+            <div className = {classes.join(" ")} onClick = {onClick} onKeyDown = {onKeyDown} style = {style} tabIndex = {tabIndex}>
                 {content}
             </div>
         );

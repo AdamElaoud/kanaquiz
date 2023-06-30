@@ -37,7 +37,7 @@
         }
     }
 
-    .selection-tabset {
+    .kana-selection-tabset {
         height: 75%;
         min-height: 20rem;
 
@@ -86,7 +86,7 @@
             justify-content: space-evenly;
         }
 
-        .selection-tabset {
+        .kana-selection-tabset {
             .tab {
                 padding-top: calc($tabMobilePadding * 4.5);
     
@@ -110,7 +110,7 @@
 
 @media (hover: hover) and (pointer: fine) {
     .kana-selection-page {
-        .selection-tabset {
+        .kana-selection-tabset {
             .tab-header {
                 &:not(.active):hover {
                     .badge {

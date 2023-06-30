@@ -13,8 +13,7 @@ const ModeContext = createContext<ModeContextType>({} as ModeContextType);
 export const useMode = () => {
     const context = useContext(ModeContext);
 
-    // need explicit check for undefined as Mode.Kana = 0, which is falsey
-    if (context === undefined)
+    if (!context)
         throw "useMode must be used within a ModeContextProvider!";
 
     return context;

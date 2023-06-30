@@ -22,6 +22,7 @@ export type ReactButtonOnClick = React.MouseEventHandler<HTMLButtonElement>;
 export type ReactButtonOnClickEvent = React.MouseEvent<HTMLButtonElement, MouseEvent>;
 export type ReactDivOnClick = React.MouseEventHandler<HTMLDivElement>;
 export type ReactDivOnClickEvent = React.MouseEvent<HTMLDivElement, MouseEvent>;
+export type ReactMouseEvent = React.MouseEvent;
 export type ReactNode = React.ReactNode;
 export type ReactElement = React.ReactElement;
 export type ReactFragment = React.ReactFragment;

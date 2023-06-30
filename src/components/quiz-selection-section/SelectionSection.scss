@@ -1,6 +1,7 @@
 @use "../../common/styles/index" as *;
 
 $quizSelectionSectionHeight: 6rem;
+$quizSelectionSectionContentWidth: 58%;
 
 .quiz-selection-section {
     @extend %rounded-border;
@@ -13,7 +14,7 @@ $quizSelectionSectionHeight: 6rem;
     padding-right: calc($padding / 2);
 
     .section-content {
-        width: 58%;
+        width: $quizSelectionSectionContentWidth;
     }
     
     .section-title {

@@ -1,0 +1,38 @@
+@use "../common/styles/index" as *;
+@use "../components/quiz-selection-section/SelectionSection.scss" as *;
+
+.word-selection-page {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    row-gap: 3rem;
+
+    .call-to-action {
+        font-size: $smallFontSize;
+        margin-bottom: $sectionSpacing;
+    }
+
+    .word-options {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+
+        .word-group-section {
+            @extend %rounded-border;
+            @extend %padding;
+            align-items: center;
+            background-color: $darkNavy;
+            display: flex;
+            height: $quizSelectionSectionHeight;
+            justify-content: space-between;
+            width: 100%;
+
+            .word-group-title {
+                text-align: center;
+                width: 77%;;
+            }
+        }
+    }
+}

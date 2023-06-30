@@ -5,8 +5,18 @@
     display: flex;
     justify-content: space-evenly;
 
-    .icon {
-        color: $active;
+    .direction-toggle-button {
+        align-items: center;
+        background-color: transparent;
+        border-radius: 50%;
+        display: flex;
+        height: $largeIconSize;
+        justify-content: center;
+        width: $largeIconSize;
+
+        .icon {
+            color: $active;
+        }
     }
 
     &.disabled {

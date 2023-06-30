@@ -12,7 +12,9 @@ $headerSpacing: calc($sectionSpacing / 3);
     width: 100%;
 
     .logo {
+        @include padding(0.5);
         align-items: center;
+        background-color: transparent;
         display: flex;
         font-weight: $fontWeightBold;
         position: absolute;

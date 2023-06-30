@@ -13,8 +13,7 @@ const KanaSelectionsContext = createContext<KanaSelectionsContextType>({} as Kan
 export const useKanaSelections = () => {
     const context = useContext(KanaSelectionsContext);
 
-    // need explicit check for undefined as [] is falsey
-    if (context === undefined)
+    if (!context)
         throw "useKanaSelections must be used within a KanaSelectionsContextProvider!";
 
     return context;

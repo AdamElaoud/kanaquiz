@@ -46,10 +46,10 @@ const ToggleButton = forwardRef((props: Props, ref?: ReactForwardedRef<HTMLDivEl
 
     return (
         <div className = {toggleButtonClasses.join(" ")} ref = {ref}>
-            <button className = {leftButtonClasses.join(" ")} onClick = {onClick(leftButton.onClick, Side.Left)}>
+            <button className = {leftButtonClasses.join(" ")} disabled = {disabled} onClick = {onClick(leftButton.onClick, Side.Left)}>
                 {leftButton.content}
             </button>
-            <button className = {rightButtonClasses.join(" ")} onClick = {onClick(rightButton.onClick, Side.Right)}>
+            <button className = {rightButtonClasses.join(" ")} disabled = {disabled} onClick = {onClick(rightButton.onClick, Side.Right)}>
                 {rightButton.content}
             </button>
         </div>

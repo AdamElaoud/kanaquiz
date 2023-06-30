@@ -2,8 +2,8 @@ import { StepCarousel } from '@/common/components';
 import { CustomIconType, FontAwesomeIconType, StepConfig, StepState } from '@/common/types';
 import { useState, useLayoutEffect } from "react";
 import '@/styles/App.scss';
-import { Mode, PageType, QuizDirection, QuizFormat, QuizSelectionData, QuizTopic } from '@/types';
-import { SCREEN_PARTIAL_FILL_WIDTH, SCREEN_FILL_WIDTH, PAGES, SCREEN_FILL_PERCENT, SCREEN_PARTIAL_FILL_PERCENT, QUIZ_SELECTION_STORAGE_KEY, DEFAULT_QUESTION_AMOUNT, KANA_SELECTION_STORAGE_KEY } from './utils/constants';
+import { Mode, PageType, QuizDirection, QuizFormat, QuizSelectionData, QuizTopic, WordSelectionData } from '@/types';
+import { SCREEN_PARTIAL_FILL_WIDTH, SCREEN_FILL_WIDTH, PAGES, SCREEN_FILL_PERCENT, SCREEN_PARTIAL_FILL_PERCENT, QUIZ_SELECTION_STORAGE_KEY, DEFAULT_QUESTION_AMOUNT, KANA_SELECTION_STORAGE_KEY, WORD_SELECTION_STORAGE_KEY } from './utils/constants';
 import useDynamicWidth from './common/hooks/useDynamicWidth';
 import useWindowSize from './common/hooks/useWindowSize';
 import { ModeContextProvider } from './hooks/useMode';
@@ -11,6 +11,7 @@ import Header from './components/header/Header';
 import useLocalStorage from './common/hooks/useLocalStorage';
 import { QuizSelectionsContextProvider } from './hooks/useQuizSelections';
 import { KanaSelectionsContextProvider } from './hooks/useKanaSelections';
+import { WordSelectionsContextProvider } from './hooks/useWordSelections';
 
 const App = () : JSX.Element => {
     const [carouselKey, resetCarousel] = useState<boolean>(false);
@@ -22,6 +23,10 @@ const App = () : JSX.Element => {
         direction: QuizDirection.JPtoEN,
         format: QuizFormat.MultipleChoice,
         topic: QuizTopic.Kana
+    });
+    const [wordSelections, setWordSelections] = useLocalStorage<WordSelectionData>(WORD_SELECTION_STORAGE_KEY, {
+        allHiragana: true,
+        allKatakana: true
     });
     const [windowWidth, windowHeight] = useWindowSize();
     const dynamicWidth = useDynamicWidth(
@@ -59,6 +64,10 @@ const App = () : JSX.Element => {
         setQuizSelections(quizSelectionData);
     };
 
+    const updateWordSelections = (wordSelectionData: WordSelectionData) => {
+        setWordSelections(wordSelectionData);
+    };
+
     const onStepChange = ({ newStepID }: StepState) => {
         setPage(newStepID as PageType);
     };
@@ -73,7 +82,7 @@ const App = () : JSX.Element => {
         },
         {
             iconType: kanaIsSelectedTopic ? CustomIconType.Kana : FontAwesomeIconType.Book,
-            ID: kanaIsSelectedTopic ? PageType.KanaSelect : PageType.WordSelect,
+            ID: kanaIsSelectedTopic ? PageType.KanaSelect : PageType.WordSelection,
             title: kanaIsSelectedTopic ? "Kana" : "Words"
         },
         {
@@ -94,26 +103,28 @@ const App = () : JSX.Element => {
         <ModeContextProvider value = {{ mode, setMode }}>
             <KanaSelectionsContextProvider value = {{ kanaSelections, updateKanaSelections }}>
                 <QuizSelectionsContextProvider value = {{ quizSelections, updateQuizSelections }}>
-                    <div className = "app" style = {appStyle}>
-                        <Header
-                            style = {dynamicWidth}
-                            onClick = {() => { setPage(PageType.QuizSelect); resetCarousel(state => !state); }}
-                        />
+                    <WordSelectionsContextProvider value = {{ wordSelections, updateWordSelections }}>
+                        <div className = "app" style = {appStyle}>
+                            <Header
+                                style = {dynamicWidth}
+                                onClick = {() => { setPage(PageType.QuizSelect); resetCarousel(state => !state); }}
+                            />
 
-                        <div className = "page" style = {dynamicWidth}>
-                            {PAGES[page]()}
+                            <div className = "page" style = {dynamicWidth}>
+                                {PAGES[page]()}
+                            </div>
+                            
+                            <StepCarousel
+                                key = {carouselKey.toString()}
+                                className = "page-carousel"
+                                steps = {PAGE_STEPS}
+                                onStepChange = {onStepChange}
+                                showCheckOnComplete = {true}
+                                style = {dynamicWidth}
+                                startingStepID = {PAGE_STEPS[0].ID}
+                            />
                         </div>
-                        
-                        <StepCarousel
-                            key = {carouselKey.toString()}
-                            className = "page-carousel"
-                            steps = {PAGE_STEPS}
-                            onStepChange = {onStepChange}
-                            showCheckOnComplete = {true}
-                            style = {dynamicWidth}
-                            startingStepID = {PAGE_STEPS[0].ID}
-                        />
-                    </div>
+                    </WordSelectionsContextProvider>
                 </QuizSelectionsContextProvider>
             </KanaSelectionsContextProvider>
         </ModeContextProvider>
