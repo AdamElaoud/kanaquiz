@@ -48,7 +48,7 @@ $toggleSwitchPadding: calc($padding * $paddingMultiplier);
     }
 }
 
-$smallToggleButtonSize: $miniIconSize;
+$smallToggleButtonSize: calc($miniIconSize * 0.85);
 $smallToggleSwitchWidth: calc($smallToggleButtonSize * 3);
 
 @media (max-width: $sizeWidthThreshhold) {
