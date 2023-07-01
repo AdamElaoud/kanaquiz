@@ -32,3 +32,13 @@ $headerSpacing: calc($sectionSpacing / 3);
         right: calc(($headerHeight - $mediumIconSize - $padding) / 2);
     }
 }
+
+@media (hover: hover) and (pointer: fine) {
+    .header {
+        .logo {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
