@@ -12,6 +12,7 @@ $stepIconPadding: 0.65rem;
     .icon {
         background-color: $richGray;
         border-radius: 50%;
+        opacity: 0.75;
         padding: $stepIconPadding;
     }
 
@@ -25,10 +26,12 @@ $stepIconPadding: 0.65rem;
         .icon {
             background-color: $active;
             color: $lightModeTextColor;
+            opacity: 1;
         }
-
+        
         .title {
             color: $darkModeTextColor;
+            font-weight: $fontWeightBold;
         }
     }
     
@@ -36,6 +39,7 @@ $stepIconPadding: 0.65rem;
         .icon {
             background-color: $complete;
             color: $lightModeTextColor;
+            opacity: 1;
         }
     }
 }
