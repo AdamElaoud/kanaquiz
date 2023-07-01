@@ -10,12 +10,12 @@ interface Props {
     iconSize?: Size,
     isActiveTab: boolean,
     changeTab: (newTabIndex: number) => () => void,
-    tabID: number,
+    tabIndex: number,
     title?: string
 };
 
 const TabHeader = (props: Props) : JSX.Element => {
-    const { icon, iconSize, isActiveTab, changeTab, tabID, title } = props;
+    const { icon, iconSize, isActiveTab, changeTab, tabIndex: tabID, title } = props;
 
     let classes = "tab-header";
     if (isActiveTab) classes += " active"

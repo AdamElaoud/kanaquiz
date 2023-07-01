@@ -49,7 +49,7 @@ const KanaSelection = () : JSX.Element => {
 
     const searchFn = (_rawSearch: string, queries: string[]) => search(queries);
 
-    const onTabChange = ({ newTabID }: TabState) => {
+    const onTabChange = ({ newTabIndex: newTabID }: TabState) => {
         setSelectedTabID(newTabID);
     };
 

@@ -21,7 +21,9 @@ const StepWizard = (props: Props) : JSX.Element => {
     const { className, displayFlagAtEnd, onStepChange, showCheckOnComplete, steps, startingStepID = steps[0].ID, style } = props;
 
     const [activeStepIndex, setActiveStepIndex] = useState<number>(() => {
-        return steps.findIndex(step => step.ID === startingStepID) || DEFAULT_STARTING_STEP_INDEX;
+        const stepIndex = steps.findIndex(step => step.ID === startingStepID);
+
+        return stepIndex === -1 ? DEFAULT_STARTING_STEP_INDEX : stepIndex;
     });
 
     const nextStep = () => {

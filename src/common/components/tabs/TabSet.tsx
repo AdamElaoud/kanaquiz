@@ -12,43 +12,45 @@ interface Props {
     startingTabID?: number,
 };
 
+const DEFAULT_STARTING_TAB_INDEX = 0;
+
 const TabSet = (props: Props) : JSX.Element => {
     const { children, className, onTabChange, startingTabID = children[0].props.tabID } = props;
 
-    const [activeTabID, setActiveTabID] = useState<number>(() => {
-        const allTabIDs: Set<number> = new Set(Children.map(children, tab => tab.props.tabID));
-        if (allTabIDs.has(startingTabID))
-            return startingTabID
-        else
-            return children[0].props.tabID;
+    const [activeTabIndex, setActiveTabIndex] = useState<number>(() => {
+        const tabIDs = Children.map(children, tab => tab.props.tabID);
+
+        const tabIndex = tabIDs.findIndex(ID => ID === startingTabID);
+
+        return tabIndex === -1 ? DEFAULT_STARTING_TAB_INDEX : tabIndex;
     });
 
     const tabHeaderData = useMemo(() => {
-        return Children.map(children, (tab: ReactElement) => {
+        return Children.map(children, (tab: ReactElement, index: number) => {
             const { icon, iconSize, tabID, title } = tab.props;
 
             return {
                 ...(icon && { icon }),
                 ...(iconSize && { iconSize }),
                 key: tabID,
-                tabID,
+                tabIndex: index,
                 ...(title && { title }),
             };
         });
 
     }, [children]);
 
-    const onTabHeaderClick = (newTabID: number) => () => {
-        if (newTabID !== activeTabID) {
+    const onTabHeaderClick = (newTabIndex: number) => () => {
+        if (newTabIndex !== activeTabIndex) {
             if (onTabChange)
                 onTabChange({
-                    prevTabID: activeTabID,
-                    prevTabTitle: tabHeaderData[activeTabID].title,
-                    newTabID: newTabID,
-                    newTabTitle: tabHeaderData[newTabID].title
+                    prevTabIndex: activeTabIndex,
+                    prevTabTitle: tabHeaderData[activeTabIndex].title,
+                    newTabIndex: newTabIndex,
+                    newTabTitle: tabHeaderData[newTabIndex].title
                 });
     
-            setActiveTabID(newTabID);
+            setActiveTabIndex(newTabIndex);
         }
     };
 
@@ -58,10 +60,10 @@ const TabSet = (props: Props) : JSX.Element => {
     return (
         <div className = {classes}>
             <nav className = "tab-headers">
-                {tabHeaderData.map(data => <TabHeader changeTab = {onTabHeaderClick} isActiveTab = {activeTabID === data.tabID} {...data}/>)}
+                {tabHeaderData.map(data => <TabHeader changeTab = {onTabHeaderClick} isActiveTab = {activeTabIndex === data.tabIndex} {...data}/>)}
             </nav>
             <main className = "tab-content">
-                {children[activeTabID]}
+                {children[activeTabIndex]}
             </main>
         </div>
     );

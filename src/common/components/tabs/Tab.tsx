@@ -10,7 +10,7 @@ export interface TabProps {
     icon?: IconType,
     iconSize?: Size,
     // NOTE: tabIDs should be unique and NOT generated from array index
-    tabID: number,
+    tabID: number | string,
     title?: string | ReactElement,
 };
 

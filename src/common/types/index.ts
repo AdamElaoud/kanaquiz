@@ -50,7 +50,7 @@ export type PlainFn = () => void;
 
 export type StepState = { prevStepID: number | string, prevStepTitle: number | string, newStepID: number | string, newStepTitle: number | string };
 
-export type TabState = { prevTabID: number, prevTabTitle: string, newTabID: number, newTabTitle: string };
+export type TabState = { prevTabIndex: number, prevTabTitle: string, newTabIndex: number, newTabTitle: string };
 
 export type InputState = { prevValue: number, newValue: number };
 
