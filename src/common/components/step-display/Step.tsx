@@ -1,5 +1,7 @@
 import { CustomIconType, FontAwesomeIconType, IconType, Size } from "@/common/types";
+
 import { Icon } from "..";
+
 import "./Step.scss";
 
 interface Props {

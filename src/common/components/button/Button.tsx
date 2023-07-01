@@ -1,6 +1,8 @@
 import { IconType, ReactNode, Side, Size } from "@/common/types";
-import "./Button.scss";
+
 import Icon from "../icon/Icon";
+
+import "./Button.scss";
 
 interface Props {
     children?: ReactNode,

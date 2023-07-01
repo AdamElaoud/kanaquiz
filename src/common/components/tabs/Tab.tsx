@@ -1,7 +1,8 @@
-import { CSSStyles, IconType, ReactElement, ReactNode, Size } from "@/common/types";
-import "./Tab.scss";
 import useWindowSize from "@/common/hooks/useWindowSize";
+import { CSSStyles, IconType, ReactElement, ReactNode, Size } from "@/common/types";
 import { SCREEN_FILL_WIDTH } from "@/utils/constants";
+
+import "./Tab.scss";
 
 export interface TabProps {
     children: ReactNode,

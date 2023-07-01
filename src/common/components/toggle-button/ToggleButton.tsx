@@ -1,5 +1,6 @@
-import { Side, ReactForwardedRef, PlainFn, ToggleButtonConfig } from "@/common/types";
-import { useState, forwardRef } from "react";
+import { PlainFn, ReactForwardedRef, Side, ToggleButtonConfig } from "@/common/types";
+import { forwardRef, useState } from "react";
+
 import "./ToggleButton.scss";
 
 interface Props {

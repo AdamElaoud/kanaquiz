@@ -1,12 +1,13 @@
-import "./QuizSelection.scss";
-import { QuizDirection, QuizFormat, QuizSelectionData, QuizTopic } from "@/types";
-import useQuizSelections from "@/hooks/useQuizSelections";
-import { MAXIMUM_QUESTION_AMOUNT, MINIMUM_QUESTION_AMOUNT, SCREEN_FILL_WIDTH, SCREEN_PARTIAL_FILL_WIDTH } from "@/utils/constants";
 import { Icon, NumberInput, ToggleButton } from "@/common/components";
-import { CustomIconType, InputState, Side, Size, ItemConfig, ToggleButtonConfig, ReactFormOnSubmitEvent } from "@/common/types";
-import SelectionSection from "@/components/quiz-selection-section/SelectionSection";
 import useDynamicWidth from "@/common/hooks/useDynamicWidth";
+import { CustomIconType, InputState, ItemConfig, ReactFormOnSubmitEvent, Side, Size, ToggleButtonConfig } from "@/common/types";
 import DirectionToggle from "@/components/direction-toggle/DirectionToggle";
+import SelectionSection from "@/components/quiz-selection-section/SelectionSection";
+import useQuizSelections from "@/hooks/useQuizSelections";
+import { QuizDirection, QuizFormat, QuizSelectionData, QuizTopic } from "@/types";
+import { MAXIMUM_QUESTION_AMOUNT, MINIMUM_QUESTION_AMOUNT, SCREEN_FILL_WIDTH, SCREEN_PARTIAL_FILL_WIDTH } from "@/utils/constants";
+
+import "./QuizSelection.scss";
 
 const QuizSelection = () : JSX.Element => {
     const dynamicQuizOptionsWidth = useDynamicWidth(SCREEN_PARTIAL_FILL_WIDTH, 33, SCREEN_FILL_WIDTH, 90);

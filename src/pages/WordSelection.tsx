@@ -1,9 +1,10 @@
 import { ToggleSwitch } from "@/common/components";
-import "./WordSelection.scss";
-import useWordSelections from "@/hooks/useWordSelections";
 import useDynamicWidth from "@/common/hooks/useDynamicWidth";
-import { SCREEN_FILL_WIDTH, SCREEN_PARTIAL_FILL_WIDTH } from "@/utils/constants";
 import { ReactFormOnSubmitEvent } from "@/common/types";
+import useWordSelections from "@/hooks/useWordSelections";
+import { SCREEN_FILL_WIDTH, SCREEN_PARTIAL_FILL_WIDTH } from "@/utils/constants";
+
+import "./WordSelection.scss";
 
 const WordSelection = () : JSX.Element => {
     const dynamicWordOptionsWidth = useDynamicWidth(SCREEN_PARTIAL_FILL_WIDTH, 33, SCREEN_FILL_WIDTH, 90);

@@ -1,5 +1,7 @@
 import { FontAwesomeIconType, ReactNode, StepConfig } from "@/common/types";
+
 import { Icon, Step } from "..";
+
 import "./StepDisplay.scss"
 
 interface Props {

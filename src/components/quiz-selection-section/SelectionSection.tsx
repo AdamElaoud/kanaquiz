@@ -1,6 +1,7 @@
-import { ReactElement } from "@/common/types";
-import "./SelectionSection.scss";
 import { HelpTooltip } from "@/common/components";
+import { ReactElement } from "@/common/types";
+
+import "./SelectionSection.scss";
 
 interface Props {
     children: ReactElement,

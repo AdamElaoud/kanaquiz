@@ -1,6 +1,8 @@
 import { FontAwesomeIconType, Size } from "@/common/types";
-import "./HelpTooltip.scss";
+
 import { Icon } from "..";
+
+import "./HelpTooltip.scss";
 
 interface Props {
     disabled?: boolean,

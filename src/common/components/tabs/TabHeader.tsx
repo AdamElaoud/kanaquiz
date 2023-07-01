@@ -1,7 +1,9 @@
 import { IconType, Size } from "@/common/types";
-import Icon from "../icon/Icon";
-import "./TabHeader.scss";
 import { onEnterPress } from "@/common/utils/utils";
+
+import Icon from "../icon/Icon";
+
+import "./TabHeader.scss";
 
 interface Props {
     icon?: IconType,

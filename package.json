@@ -4,6 +4,53 @@
   "version": "1.0.0",
   "homepage": "https://adamelaoud.github.io/",
   "type": "module",
+  "vsc-organize-imports": {
+    "formatOnSave": false,
+    "groups": [
+      {
+        "groups": [
+          "global"
+        ],
+        "sortBy": "path",
+        "emptyLines": true
+      }, 
+      {
+        "groups": [
+          "globalDirect"
+        ],
+        "sortBy": "path",
+        "emptyLines": true
+      },
+      {
+        "groups": [
+          "absolute"
+        ],
+        "sortBy": "path",
+        "emptyLines": true
+      },
+      {
+        "groups": [
+          "absoluteDirect"
+        ],
+        "sortBy": "path",
+        "emptyLines": true
+      },
+      {
+        "groups": [
+          "relative"
+        ],
+        "sortBy": "path",
+        "emptyLines": true
+      },
+      {
+        "groups": [
+          "relativeDirect"
+        ],
+        "sortBy": "path",
+        "emptyLines": true
+      }
+    ]
+  },
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",

@@ -1,9 +1,11 @@
-import { KanaButtonProps, Mode } from "@/types";
-import KanaButton from "./KanaButton";
 import { Button } from "@/common/components";
-import "./KanaButtonRow.scss";
-import useKanaSelections from "@/hooks/useKanaSelections";
 import { FontAwesomeIconType, Size } from "@/common/types";
+import useKanaSelections from "@/hooks/useKanaSelections";
+import { KanaButtonProps, Mode } from "@/types";
+
+import KanaButton from "./KanaButton";
+
+import "./KanaButtonRow.scss";
 
 interface Props {
     row: string[][],

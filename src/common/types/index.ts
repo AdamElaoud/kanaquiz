@@ -1,4 +1,5 @@
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
+
 import { CustomIconMap, FontAwesomeIconMap } from "../components/icon/IconTypes";
 
 export enum Size {

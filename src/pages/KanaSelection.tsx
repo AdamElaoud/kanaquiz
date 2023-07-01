@@ -1,16 +1,17 @@
-import { TabSet, Tab, Searchbar, ToggleButton, Button } from "@/common/components";
-import useKanaDictionary from "@/hooks/useKanaDictionary";
-import { Mode, TabID, UpdateKanaSelectionsFn } from "@/types";
-import KanaButtonRow from "@/components/kana-button-row/KanaButtonRow";
+import { Button, Searchbar, Tab, TabSet, ToggleButton } from "@/common/components";
 import useLocalStorage from "@/common/hooks/useLocalStorage";
-import "./KanaSelection.scss";
-import { ENGLISH_DELIMITERS, JAPANESE_DELIMITERS, KANA_SELECTION_TAB_STORAGE_KEY, SCREEN_WIDTH_THRESHHOLD } from "@/utils/constants";
-import { FontAwesomeIconType, Side, Size, TabState, ToggleButtonConfig } from "@/common/types";
-import useMode from "@/hooks/useMode";
-import { useRef } from "react";
 import useWindowSize from "@/common/hooks/useWindowSize";
+import { FontAwesomeIconType, Side, Size, TabState, ToggleButtonConfig } from "@/common/types";
 import Badge from "@/components/badge/Badge";
+import KanaButtonRow from "@/components/kana-button-row/KanaButtonRow";
+import useKanaDictionary from "@/hooks/useKanaDictionary";
 import useKanaSelections from "@/hooks/useKanaSelections";
+import useMode from "@/hooks/useMode";
+import { Mode, TabID, UpdateKanaSelectionsFn } from "@/types";
+import { ENGLISH_DELIMITERS, JAPANESE_DELIMITERS, KANA_SELECTION_TAB_STORAGE_KEY, SCREEN_WIDTH_THRESHHOLD } from "@/utils/constants";
+import { useRef } from "react";
+
+import "./KanaSelection.scss";
 
 const KanaSelection = () : JSX.Element => {
     const [selectedTabID, setSelectedTabID] = useLocalStorage<number>(KANA_SELECTION_TAB_STORAGE_KEY, TabID.Hiragana);

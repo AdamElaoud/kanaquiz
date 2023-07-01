@@ -1,7 +1,9 @@
 import { Direction, FontAwesomeIconType, IconType, InputState, ReactInputOnChangeEvent, ReactKeyboardEvent, Size } from "@/common/types";
-import "./NumberInput.scss";
 import { useRef, useState } from "react";
+
 import { Icon } from "..";
+
+import "./NumberInput.scss";
 
 interface Props {
     buttonIcons?: [downIcon: IconType, upIcon: IconType],

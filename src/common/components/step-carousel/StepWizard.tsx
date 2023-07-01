@@ -1,7 +1,9 @@
 import { CSSStyles, FontAwesomeIconType, Side, StepConfig, StepState } from "@/common/types";
-import "./StepWizard.scss";
-import { Button, StepDisplay } from "..";
 import { useState } from "react";
+
+import { Button, StepDisplay } from "..";
+
+import "./StepWizard.scss";
 
 interface Props {
     className?: string,

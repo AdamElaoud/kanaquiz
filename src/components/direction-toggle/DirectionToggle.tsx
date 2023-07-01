@@ -1,7 +1,8 @@
-import { FontAwesomeIconType, Side, ItemConfig, Size } from "@/common/types";
-import { useState } from "react";
-import "./DirectionToggle.scss";
 import { Icon } from "@/common/components";
+import { FontAwesomeIconType, ItemConfig, Side, Size } from "@/common/types";
+import { useState } from "react";
+
+import "./DirectionToggle.scss";
 
 interface Props {
     className?: string,

@@ -1,9 +1,12 @@
-import { CSSStyles, FontAwesomeIconType, MouseClickState, ReactFormOnSubmitEvent, ReactInputOnChangeEvent, ReactKeyboardEvent, ReactNode, Size } from "@/common/types";
-import { useState, useRef } from "react";
-import "./Searchbar.scss";
-import "@/styles/_index.scss";
 import useMouseClick from "@/common/hooks/useMouseClick";
+import { CSSStyles, FontAwesomeIconType, MouseClickState, ReactFormOnSubmitEvent, ReactInputOnChangeEvent, ReactKeyboardEvent, ReactNode, Size } from "@/common/types";
+import { useRef, useState } from "react";
+
+import "@/styles/_index.scss";
+
 import { Button, Icon, Modal } from "..";
+
+import "./Searchbar.scss";
 
 interface Props {
     delimiters?: string[],

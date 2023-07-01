@@ -1,5 +1,5 @@
 import { ReactSetState } from "@/common/types";
-import { useState, useCallback } from "react";
+import { useCallback, useState } from "react";
 
 const useLocalStorage = <T,>(key: string, initialValue: T): [T, ReactSetState<T>] => {
     const [storedValue, setStoredValue] = useState<T>(() => {

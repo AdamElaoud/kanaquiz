@@ -1,8 +1,10 @@
 import useWindowSize from "@/common/hooks/useWindowSize";
-import "./Modal.scss";
 import { CSSStyles, FontAwesomeIconType, ReactMouseEvent, ReactNode, ReactRef } from "@/common/types";
 import { useRef } from "react";
+
 import { Button } from "..";
+
+import "./Modal.scss";
 
 interface Props {
     children: ReactNode,

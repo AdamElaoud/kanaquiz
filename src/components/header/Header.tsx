@@ -1,6 +1,7 @@
 import { Icon } from "@/common/components";
-import "./Header.scss";
 import { CSSStyles, FontAwesomeIconType } from "@/common/types";
+
+import "./Header.scss";
 
 interface Props {
     onClick?: () => void,

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const useFocusTarget = (scope: HTMLElement = document.body) : HTMLElement | null => {
     const [nextFocusTarget, setNextFocusTarget] = useState<HTMLElement | null>(null);

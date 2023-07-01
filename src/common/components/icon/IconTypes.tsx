@@ -11,7 +11,6 @@ import {
     faCircleArrowLeft,
     faCircleArrowRight,
     faClipboardQuestion,
-    faTrash,
     faFlagCheckered,
     faGear,
     faListOl,
@@ -20,6 +19,7 @@ import {
     faPlay,
     faQuestion,
     faToriiGate,
+    faTrash,
     faVihara,
     faXmark,
 } from "@fortawesome/free-solid-svg-icons";
