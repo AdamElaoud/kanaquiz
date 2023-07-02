@@ -25,11 +25,13 @@ const WordSelection = () : JSX.Element => {
                     title = "Hiragana Words"
                     onActivate = {() => updateWordSelections({ ...wordSelections, allHiragana: true })}
                     onDeactivate = {() => updateWordSelections({ ...wordSelections, allHiragana: false })}
+                    startDeactivated = {!wordSelections.allHiragana}
                 />
                 <WordGroupSection
                     title = "Katakana Words"
                     onActivate = {() => updateWordSelections({ ...wordSelections, allKatakana: true })}
                     onDeactivate = {() => updateWordSelections({ ...wordSelections, allKatakana: false })}
+                    startDeactivated = {!wordSelections.allKatakana}
                 />
             </form>
         </div>

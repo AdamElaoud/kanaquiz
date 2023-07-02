@@ -5,17 +5,20 @@ import "./WordGroupSection.scss";
 interface Props {
     onActivate: () => void;
     onDeactivate: () => void;
+    startDeactivated: boolean,
     title: string;
 };
 
 const WordGroupSection = (props: Props): JSX.Element => {
-    const { onActivate, onDeactivate, title } = props;
+    const { onActivate, onDeactivate, startDeactivated, title } = props;
 
     return (
         <div className="word-group-section">
             <ToggleSwitch
                 onActivate={onActivate}
-                onDeactivate={onDeactivate} />
+                onDeactivate={onDeactivate}
+                startDeactivated = {startDeactivated}
+            />
             <span className="word-group-title">
                 {title}
             </span>
