@@ -1,11 +1,9 @@
+@use "../styles/index" as *;
 @use "../common/styles/index" as *;
 @use "../components/quiz-selection-section/SelectionSection.scss" as *;
 
 .word-selection-page {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+    @extend %page;
     row-gap: 3rem;
 
     .call-to-action {

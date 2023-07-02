@@ -1,4 +1,4 @@
-import { ReactNode } from "@/common/types";
+import { ReactElement, ReactNode } from "@/common/types";
 
 // potential future color theming
 export enum Theme {
@@ -46,12 +46,17 @@ export type PageMapType = {
     [key in PageType]: () => ReactNode;
 };
 
+export type SummaryMapType = 
+    Record<QuizTopic, string> &
+    Record<QuizDirection, () => ReactElement> &
+    Record<QuizFormat, () => ReactElement>;
+
 export type CharsToGroups = {
     [key: string]: string[]
 };
 
 export type GroupsToChars = {
-    [key: string]: string[][]
+    [key: string]: [string, string, string][]
 };
 
 export type Word = {
@@ -78,8 +83,9 @@ export type WordSelectionData = {
 
 export interface KanaButtonProps {
     className?: string,
+    disableOnClick?: boolean,
     isSearchTarget?: boolean,
-    letters: string[]
+    letters: [string, string, string]
 };
 
 export type UpdateKanaSelectionsFn = (letters: string[], addOnly?: boolean, deleteOnly?: boolean) => void;

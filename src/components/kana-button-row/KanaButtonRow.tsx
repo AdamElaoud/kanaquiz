@@ -8,13 +8,16 @@ import KanaButton from "./KanaButton";
 import "./KanaButtonRow.scss";
 
 interface Props {
-    row: string[][],
+    hideSelectAllButton?: boolean,
     groupID: string,
+    row: [string, string, string][],
     searchQueries?: string[]
 };
 
+const DEFAULT_HIDE_SELECT_ALL_BUTTON = false;
+
 const KanaButtonRow = (props: Props) : JSX.Element => {
-    const { row, groupID, searchQueries } = props;
+    const { hideSelectAllButton = DEFAULT_HIDE_SELECT_ALL_BUTTON, groupID, row, searchQueries } = props;
     
     const { kanaSelections, updateKanaSelections } = useKanaSelections();
 
@@ -28,12 +31,12 @@ const KanaButtonRow = (props: Props) : JSX.Element => {
 
     return (
         <div className = "button-row">
-            <Button
+            {!hideSelectAllButton && <Button
                 className = 'select-all-button'
                 onClick = {selectEntireRow}
                 iconType = {FontAwesomeIconType.AngleRight}
                 iconSize = {Size.Small}
-            />
+            />}
 
             {row.map(letters => {
                 const baseKey = `${letters[Mode.ID]}-${groupID}`;

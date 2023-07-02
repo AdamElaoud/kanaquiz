@@ -1,0 +1,27 @@
+@use "../../common/styles/index" as *;
+
+$summaryItemHeight: 3.5rem;
+$summaryItemContentHeight: 3.25rem;
+
+.summary-item {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    height: $summaryItemHeight;
+    width: 100%;
+
+    .summary-item-content {
+        @include padding(0.25);
+        @extend %rounded-border;
+        align-items: center;
+        background-color: $lightNavy;
+        display: flex;
+        height: $summaryItemContentHeight;
+        justify-content: center;
+        width: 50%;
+        
+        .icon {
+            color: $active;
+        }
+    }
+}

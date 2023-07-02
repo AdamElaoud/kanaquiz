@@ -6,7 +6,7 @@ import { KanaButtonProps, Mode } from "@/types";
 import "./KanaButton.scss";
 
 const KanaButton = (props: KanaButtonProps) : JSX.Element => {
-    const { className, isSearchTarget, letters } = props;
+    const { className, disableOnClick, isSearchTarget, letters } = props;
 
     const { kanaSelections, updateKanaSelections } = useKanaSelections();
     const { mode } = useMode();
@@ -19,8 +19,13 @@ const KanaButton = (props: KanaButtonProps) : JSX.Element => {
     if (mode === Mode.Kana) classes.push("is-kana");
     if (isSearchTarget) classes.push("is-search-target");
 
+    const onClick = () => {
+        if (!disableOnClick)
+            updateKanaSelections([letters[Mode.ID]]);
+    };
+
     return (
-        <Button className = {classes.join(" ")} onClick = {() => updateKanaSelections([letters[Mode.ID]])}>
+        <Button className = {classes.join(" ")} onClick = {onClick}>
             {letters[mode]}
         </Button>
     );

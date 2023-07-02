@@ -1,6 +1,8 @@
 @use "../../styles/index" as *;
 
+$toggleButtonItemHeight: 2rem;
 $toggleButtonPadding: calc($padding * 0.65);
+$toggleButtonHeight: calc($toggleButtonItemHeight + $padding + ($toggleButtonPadding * 2));
 
 .toggle-button {
     @include rounded-border(1.5);

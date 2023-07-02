@@ -1,10 +1,10 @@
-import { Icon } from "@/common/components";
+import { Button } from "@/common/components";
 import { CSSStyles, FontAwesomeIconType } from "@/common/types";
 
 import "./Header.scss";
 
 interface Props {
-    onClick?: () => void,
+    onClick: () => void,
     style?: CSSStyles
 };
 
@@ -13,10 +13,9 @@ const Header = (props: Props) : JSX.Element => {
 
     return (
         <header className = "header" style = {style}>
-            <button className = "logo" tabIndex = {0} onClick = {onClick}>
-                <Icon type = {FontAwesomeIconType.Torii} />
+            <Button className = "logo" onClick = {onClick} iconType = {FontAwesomeIconType.Torii}>
                 Kana Quiz
-            </button>
+            </Button>
 
             {/* <ToggleSwitch onActivate = {() => console.log("darkmode activated!")}/> */}
         </header>

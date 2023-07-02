@@ -1,13 +1,11 @@
+@use "../styles/index" as *;
 @use "../common/styles/index" as *;
 @use "../common/components/tabs/TabHeader.scss" as *;
 @use "../common/components/searchbar/Searchbar.scss" as *;
 @use "../common/components/toggle-button/ToggleButton.scss" as *;
 
 .quiz-selection-page {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+    @extend %page;
     row-gap: 3rem;
 
     .welcome-message {

@@ -1,5 +1,11 @@
 import { CharsToGroups, GroupsToChars } from "@/types";
 
+export const groupIDs: string[] = [
+    "k_base", "k_k", "k_s", "k_t", "k_n", "k_h", "k_m", "k_y", "k_r", "k_w", "k_g", "k_z", "k_d", "k_b",
+    "k_p", "k_ky", "k_sy", "k_ty", "k_ny", "k_hy", "k_my", "k_ry", "k_gy", "k_jy", "k_by", "k_py",
+    "k_special_f", "k_special_w", "k_special_v", "k_special_tsu", "k_special_e", "k_special_t"
+];
+
 export const groupsToChars: GroupsToChars = {
     "k_base": [ ["ア", "a", "k_a"], ["イ", "i", "k_i"], ["ウ", "u", "k_u"], ["エ", "e", "k_e"], ["オ", "o", "k_o"] ],
     "k_k": [ ["カ", "ka", "k_ka"], ["キ", "ki", "k_ki"], ["ク", "ku", "k_ku"], ["ケ", "ke", "k_ke"], ["コ", "ko", "k_ko"] ],

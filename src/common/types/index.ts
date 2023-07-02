@@ -99,11 +99,13 @@ export enum FontAwesomeIconType {
     Down = "down",
     FlagCheckered = "flagCheckered",
     Gear = "gear",
+    Keyboard = "keyboard",
     NumberList = "numberList",
     Pencil = "pencil",
     Play = "play",
     Search = "search",
     Question = "question",
+    Tap = "tap",
     Torii = "torii",
     Up = "up",
     X = "x"

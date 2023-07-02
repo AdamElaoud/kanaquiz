@@ -1,0 +1,19 @@
+@use "../../common/styles/index" as *;
+
+.word-selection {
+    align-items: center;
+    display: flex;
+
+    .icon {
+        color: $lightModeTextColor;
+        margin-right: 1rem;
+    }
+    
+    .check {
+        background-color: $complete;
+    }
+
+    .x {
+        background-color: $crimson;
+    }
+}
