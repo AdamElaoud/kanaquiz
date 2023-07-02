@@ -1,0 +1,61 @@
+@use "../../common/styles/index" as *;
+@use "../../common/components/tabs/Tab.scss" as *;
+
+.tab-button-row {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    top: calc($tabPadding / 2);
+    width: calc(100% - ($tabPadding * 2));
+
+    .button {
+        font-size: $smallFontSize;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+    }
+
+    .select-all-button {
+        background-color: $lightNavy;
+        margin-right: 0.5rem;
+    }
+    
+    .clear-all-button {
+        background-color: $darkCrimson;
+        margin-left : 0.5rem;
+    }
+}
+
+@media (max-width: $sizeWidthThreshhold) {
+    .tab {
+        padding-top: calc($tabMobilePadding * 4.5);
+
+        .tab-button-row {
+            justify-content: space-evenly;
+            top: calc($tabMobilePadding / 2);
+            width: calc(100% - ($tabMobilePadding * 2));
+
+            .select-all-button {
+                margin-right: 0;
+            }
+            
+            .clear-all-button {
+                margin-left : 0;
+            }
+        }
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .tab {
+        .tab-button-row {
+            .button {
+                &:hover {
+                    cursor: pointer;
+                    background-color: $gold;
+                    color: $lightModeTextColor;
+                }
+            }
+        }
+    }
+}

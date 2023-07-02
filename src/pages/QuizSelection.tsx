@@ -2,7 +2,7 @@ import { Icon, NumberInput, ToggleButton } from "@/common/components";
 import useDynamicWidth from "@/common/hooks/useDynamicWidth";
 import { CustomIconType, InputState, ItemConfig, ReactFormOnSubmitEvent, Side, Size, ToggleButtonConfig } from "@/common/types";
 import DirectionToggle from "@/components/direction-toggle/DirectionToggle";
-import SelectionSection from "@/components/quiz-selection-section/SelectionSection";
+import QuizSelectionSection from "@/components/quiz-selection-section/QuizSelectionSection";
 import useQuizSelections from "@/hooks/useQuizSelections";
 import { QuizDirection, QuizFormat, QuizSelectionData, QuizTopic } from "@/types";
 import { MAXIMUM_QUESTION_AMOUNT, MINIMUM_QUESTION_AMOUNT, SCREEN_FILL_WIDTH, SCREEN_PARTIAL_FILL_WIDTH } from "@/utils/constants";
@@ -67,10 +67,10 @@ const QuizSelection = () : JSX.Element => {
             </div>
             
             <form className = "quiz-options" style = {dynamicQuizOptionsWidth} onSubmit = {onSubmit}>
-                <SelectionSection title = "Topic">
+                <QuizSelectionSection title = "Topic">
                     <ToggleButton buttons = {topicToggleButtons} defaultActiveSide = {defaultTopicSide}/>
-                </SelectionSection>
-                <SelectionSection title = "Direction" helpTooltip = "blank">
+                </QuizSelectionSection>
+                <QuizSelectionSection title = "Direction" helpTooltip = "blank">
                     <DirectionToggle 
                         key = {`direction-selection-${quizSelections.topic}`}
                         content = {directionToggleButtons}
@@ -78,16 +78,16 @@ const QuizSelection = () : JSX.Element => {
                         disabled = {wordsIsSelectedTopic}
                         onToggle = {onDirectionChange}
                     />
-                </SelectionSection>
-                <SelectionSection title = "Answer" helpTooltip = "blank">
+                </QuizSelectionSection>
+                <QuizSelectionSection title = "Answer" helpTooltip = "blank">
                     <ToggleButton
                         key = {`format-selection-${quizSelections.topic}`}
                         buttons = {formatToggleButtons}
                         defaultActiveSide = {wordsIsSelectedTopic ? Side.Left : defaultFormatSide}
                         disabled = {wordsIsSelectedTopic}
                     />
-                </SelectionSection>
-                <SelectionSection title = "Questions">
+                </QuizSelectionSection>
+                <QuizSelectionSection title = "Questions">
                     <NumberInput
                         defaultValue={quizSelections.amount}
                         max = {MAXIMUM_QUESTION_AMOUNT}
@@ -97,7 +97,7 @@ const QuizSelection = () : JSX.Element => {
                             updateQuizSelections({ ...quizSelections, amount: newValue })}
                         size = {Size.Large}
                     />
-                </SelectionSection>
+                </QuizSelectionSection>
             </form>
         </div>
     );

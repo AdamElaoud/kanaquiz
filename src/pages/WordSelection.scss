@@ -1,6 +1,6 @@
 @use "../styles/index" as *;
 @use "../common/styles/index" as *;
-@use "../components/quiz-selection-section/SelectionSection.scss" as *;
+@use "../components/quiz-selection-section/QuizSelectionSection.scss" as *;
 
 .word-selection-page {
     @extend %page;
@@ -16,21 +16,5 @@
         display: flex;
         flex-direction: column;
         row-gap: 1rem;
-
-        .word-group-section {
-            @extend %rounded-border;
-            @extend %padding;
-            align-items: center;
-            background-color: $darkNavy;
-            display: flex;
-            height: $quizSelectionSectionHeight;
-            justify-content: space-between;
-            width: 100%;
-
-            .word-group-title {
-                text-align: center;
-                width: 77%;;
-            }
-        }
     }
 }

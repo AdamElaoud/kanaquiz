@@ -1,7 +1,7 @@
 import { HelpTooltip } from "@/common/components";
 import { ReactElement } from "@/common/types";
 
-import "./SelectionSection.scss";
+import "./QuizSelectionSection.scss";
 
 interface Props {
     children: ReactElement,
@@ -9,7 +9,7 @@ interface Props {
     title: string
 };
 
-const SelectionSection = (props: Props) : JSX.Element => {
+const QuizSelectionSection = (props: Props) : JSX.Element => {
     const {
         children,
         helpTooltip,
@@ -30,4 +30,4 @@ const SelectionSection = (props: Props) : JSX.Element => {
     );
 };
 
-export default SelectionSection;
+export default QuizSelectionSection;

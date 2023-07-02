@@ -1,14 +1,20 @@
-import { Button, Searchbar, Tab, TabSet, ToggleButton } from "@/common/components";
+import { Searchbar, Tab, TabSet, ToggleButton } from "@/common/components";
 import useLocalStorage from "@/common/hooks/useLocalStorage";
 import useWindowSize from "@/common/hooks/useWindowSize";
-import { FontAwesomeIconType, Side, Size, TabState, ToggleButtonConfig } from "@/common/types";
-import Badge from "@/components/badge/Badge";
+import { Side, TabState, ToggleButtonConfig } from "@/common/types";
 import KanaButtonRow from "@/components/kana-button-row/KanaButtonRow";
+import TabButtonRow from "@/components/tab-button-row/TabButtonRow";
+import TitleWithBadge from "@/components/title-with-badge/TitleWithBadge";
 import useKanaDictionary from "@/hooks/useKanaDictionary";
 import useKanaSelections from "@/hooks/useKanaSelections";
 import useMode from "@/hooks/useMode";
-import { Mode, TabID, UpdateKanaSelectionsFn } from "@/types";
-import { ENGLISH_DELIMITERS, JAPANESE_DELIMITERS, KANA_SELECTION_TAB_STORAGE_KEY, SCREEN_WIDTH_THRESHHOLD } from "@/utils/constants";
+import { Mode, TabID } from "@/types";
+import {
+    ENGLISH_DELIMITERS,
+    JAPANESE_DELIMITERS,
+    KANA_SELECTION_TAB_STORAGE_KEY,
+    SCREEN_WIDTH_THRESHHOLD
+} from "@/utils/constants";
 import { useRef } from "react";
 
 import "./KanaSelection.scss";
@@ -117,52 +123,3 @@ const KanaSelection = () : JSX.Element => {
 };
 
 export default KanaSelection;
-
-interface TitleWithBadgeProps {
-    title: string,
-    count: number
-};
-
-const TitleWithBadge = (props: TitleWithBadgeProps) : JSX.Element => {
-    const { title, count } = props;
-
-    if (count > 0)
-        return (
-            <>
-                <Badge value = {count}/>
-                {title}
-            </>
-        );
-
-    return <>{title}</>;
-};
-
-interface TabButtonRowProps {
-    groups: string[][],
-    updateKanaSelections: UpdateKanaSelectionsFn
-};
-
-const TabButtonRow = (props: TabButtonRowProps) : JSX.Element => {
-    const { groups, updateKanaSelections } = props;
-
-    return (
-        <div className = "tab-button-row">
-            <Button
-                className = "select-all-button"
-                iconType = {FontAwesomeIconType.Check}
-                iconSize = {Size.Mini}
-                onClick = {() => updateKanaSelections(groups.map(letters => letters[Mode.ID]), true)}
-            >
-                Select All
-            </Button>
-            <Button
-                className = "clear-all-button"
-                iconType = {FontAwesomeIconType.Delete}
-                iconSize = {Size.Mini}
-                onClick = {() => updateKanaSelections(groups.map(letters => letters[Mode.ID]), false, true)}
-            >
-                Clear All
-            </Button>
-        </div>
-    );
-};

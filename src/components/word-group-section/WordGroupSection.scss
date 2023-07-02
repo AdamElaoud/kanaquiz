@@ -1,0 +1,18 @@
+@use "../../common/styles/index" as *;
+@use "../quiz-selection-section/QuizSelectionSection.scss" as *;
+
+.word-group-section {
+    @extend %rounded-border;
+    @extend %padding;
+    align-items: center;
+    background-color: $darkNavy;
+    display: flex;
+    height: $quizSelectionSectionHeight;
+    justify-content: space-between;
+    width: 100%;
+
+    .word-group-title {
+        text-align: center;
+        width: 77%;;
+    }
+}

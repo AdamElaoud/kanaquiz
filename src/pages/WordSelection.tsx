@@ -1,6 +1,6 @@
-import { ToggleSwitch } from "@/common/components";
 import useDynamicWidth from "@/common/hooks/useDynamicWidth";
 import { ReactFormOnSubmitEvent } from "@/common/types";
+import WordGroupSection from "@/components/word-group-section/WordGroupSection";
 import useWordSelections from "@/hooks/useWordSelections";
 import { SCREEN_FILL_WIDTH, SCREEN_PARTIAL_FILL_WIDTH } from "@/utils/constants";
 
@@ -38,24 +38,3 @@ const WordSelection = () : JSX.Element => {
 
 export default WordSelection;
 
-interface WordGroupSectionProps {
-    onActivate: () => void,
-    onDeactivate: () => void,
-    title: string
-};
-
-const WordGroupSection = (props: WordGroupSectionProps) : JSX.Element => {
-    const { onActivate, onDeactivate, title } = props;
-
-    return (
-        <div className = "word-group-section" >
-            <ToggleSwitch
-                onActivate = {onActivate}
-                onDeactivate = {onDeactivate}
-            />
-            <span className = "word-group-title">
-                {title}
-            </span>
-        </div>
-    );
-};
