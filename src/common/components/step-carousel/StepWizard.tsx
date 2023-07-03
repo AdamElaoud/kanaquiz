@@ -92,18 +92,18 @@ const StepWizard = (props: Props) : JSX.Element => {
 
     const stepText = steps[activeStepIndex].text;
 
+    const isOnFirstStep = activeStepIndex === 0;
     const isOnLastStep = activeStepIndex === steps.length - 1;
 
     return (
         <div className = {stepWizardClasses.join(" ")} style = {style}>
-            <Button
+            {!isOnFirstStep && <Button
                 className = "back-button"
                 onClick = {goToPreviousStep}
                 iconType = {FontAwesomeIconType.AngleLeft}
-                disabled = {activeStepIndex === 0}
             >
                 Back
-            </Button>
+            </Button>}
 
             <div className = "steps-content">
                 <StepDisplay

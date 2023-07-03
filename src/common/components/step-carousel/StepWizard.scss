@@ -9,7 +9,8 @@ $stepTitleMargin: 1rem;
     background-color: $darkNavy;
     display: flex;
     height: 12rem;
-    justify-content: space-around;
+    justify-content: center;
+    position: relative;
     width: 100%;
     
     button {
@@ -19,12 +20,18 @@ $stepTitleMargin: 1rem;
 
     $iconSpaceAdjustment: calc($mediumIconSize * -0.35);
     .back-button {
+        position: absolute;
+        left: calc($padding * 2);
+
         .icon {
             margin: 0 $iconSpaceAdjustment;
         }
     }
 
     .next-button {
+        position: absolute;
+        right: calc($padding * 2);
+
         &.blocked-by-condition {
             background-color: $crimson;
             opacity: $disabledOpacity;
@@ -62,6 +69,14 @@ $stepTitleMargin: 1rem;
 
         button {
             font-size: $smallFontSize;
+        }
+
+        .back-button {
+            left: $padding;
+        }
+    
+        .next-button {
+            right: $padding;
         }
     
         .steps-content {
