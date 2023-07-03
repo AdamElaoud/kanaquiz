@@ -71,16 +71,20 @@ const QuizSummary = () : JSX.Element => {
                 <div className = "topic-selections">
                     {topicIsKana && <ToggleButton buttons = {displayModeToggleButtons} defaultActiveSide = {defaultActiveSide}/>}
                     <div className = {topicSelectionItemsClasses.join(" ")}>
-                        {topicIsKana && selectionGroups.map((group, index) => {
-                            const groupID = selectionGroupIDs[index];
-                            return <KanaButtonRow
-                                key = {groupID}
-                                disableOnClick = {true}
-                                row = {group}
-                                groupID = {groupID}
-                                hideSelectAllButton = {true}
-                            />;
-                        })}
+                        {topicIsKana && <div className = "kana-selections-container">
+                            {/* // container is necessary to add space between scrollbar and side of element */}
+                            {selectionGroups.map((group, index) => {
+                                const groupID = selectionGroupIDs[index];
+                                return <KanaButtonRow
+                                    key = {groupID}
+                                    disableOnClick = {true}
+                                    row = {group}
+                                    groupID = {groupID}
+                                    hideSelectAllButton = {true}
+                                />;
+                            })}
+
+                        </div>}
                         {!topicIsKana && <>
                             <WordSelectionDisplay isChecked = {wordSelections.allHiragana} title = "Hiragana Words"/>
                             <WordSelectionDisplay isChecked = {wordSelections.allKatakana} title = "Katakana Words"/>

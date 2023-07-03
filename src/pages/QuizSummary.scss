@@ -23,7 +23,7 @@ $summaryTitleHeight: calc($mediumFontSize + ($sectionSpacing / 2));
         @extend %padding;
         background-color: $darkNavy;
         max-height: 45%;
-        min-height: 25%;
+        min-height: 15%;
 
         .summary-title {
             margin-bottom: calc($sectionSpacing / 2);
@@ -57,20 +57,27 @@ $summaryTitleHeight: calc($mediumFontSize + ($sectionSpacing / 2));
             }
 
             .topic-selections-items {
+                @extend %rounded-border;
+                @extend %padding;
+                background-color: $lightNavy;
                 column-gap: 0.5rem;
                 display: flex;
                 flex-direction: column;
                 flex-wrap: nowrap;
                 height: calc(100% - $sectionSpacing);
                 justify-content: center;
-                overflow-y: auto;
                 row-gap: 0.75rem;
                 width: 100%;
                 
                 &.topic-is-kana {
                     height: calc(100% - $toggleButtonHeight - $sectionSpacing);
-                    justify-content: flex-start;
+                }
+                
+                .kana-selections-container {
+                    display: flex;
+                    flex-direction: column;
                     row-gap: 0.2rem;
+                    overflow-y: auto;
                 }
             }
         }
@@ -80,6 +87,8 @@ $summaryTitleHeight: calc($mediumFontSize + ($sectionSpacing / 2));
 @media (max-width: $sizeWidthThreshhold) {
     .quiz-summary-page {
         .selections-summary {
+            min-height: 25%;
+            
             &:has(.topic-selections-items.topic-is-kana) {
                 min-height: 35%;
             }
