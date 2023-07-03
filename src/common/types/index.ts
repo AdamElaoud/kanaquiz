@@ -63,6 +63,7 @@ export interface EventSubscription {
 
 export interface StepConfig {
     className?: string,
+    blockNextStep?: (stepState: StepState) => boolean,
     iconType?: IconType
     // NOTE: stepIDs should be unique and NOT generated from array index
     ID: number | string,

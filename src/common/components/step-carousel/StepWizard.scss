@@ -25,6 +25,11 @@ $stepTitleMargin: 1rem;
     }
 
     .next-button {
+        &.blocked-by-condition {
+            background-color: $crimson;
+            opacity: $disabledOpacity;
+        }
+
         .icon {
             margin: 0 $iconSpaceAdjustment;
         }

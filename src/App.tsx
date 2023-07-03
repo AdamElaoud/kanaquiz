@@ -86,7 +86,7 @@ const App = () : JSX.Element => {
 
     const kanaIsSelectedTopic = quizSelections.topic === QuizTopic.Kana;
 
-    const PAGE_STEPS: StepConfig[] = [
+    const pageSteps: StepConfig[] = [
         {
             iconType: FontAwesomeIconType.Pencil,
             ID: PageType.QuizSelect,
@@ -95,7 +95,8 @@ const App = () : JSX.Element => {
         {
             iconType: kanaIsSelectedTopic ? CustomIconType.Kana : FontAwesomeIconType.Book,
             ID: kanaIsSelectedTopic ? PageType.KanaSelect : PageType.WordSelection,
-            title: kanaIsSelectedTopic ? "Kana" : "Words"
+            title: kanaIsSelectedTopic ? "Kana" : "Words",
+            blockNextStep: () => kanaSelections.length === 0
         },
         {
             iconType: FontAwesomeIconType.ClipboardQuestion,
@@ -103,6 +104,16 @@ const App = () : JSX.Element => {
             title: "Review"
         },
     ];
+
+    const wizardCompleteConfig = {
+        text: "Start",
+        onComplete: () => setPage(PageType.KanaQuiz)
+    };
+
+    const isInQuiz = page === PageType.KanaQuiz || page === PageType.QuizRecap;
+
+    const pageClasses = ["page"];
+    if (isInQuiz) pageClasses.push("is-in-quiz");
 
     // window innerheight & innerwidth is used instead
     // of 100vw and 100vw to account for browser elements
@@ -122,19 +133,20 @@ const App = () : JSX.Element => {
                                 onClick = {() => { setPage(PageType.QuizSelect); resetCarousel(state => !state); }}
                             />
 
-                            <div className = "page" style = {dynamicWidth}>
+                            <div className = {pageClasses.join(" ")} style = {dynamicWidth}>
                                 {PAGES[page]()}
                             </div>
                             
-                            <StepCarousel
+                            {!isInQuiz && <StepCarousel
                                 key = {carouselKey.toString()}
                                 className = "page-carousel"
-                                steps = {PAGE_STEPS}
+                                completeConfig = {wizardCompleteConfig}
+                                steps = {pageSteps}
                                 onStepChange = {onStepChange}
                                 showCheckOnComplete = {true}
                                 style = {dynamicWidth}
-                                startingStepID = {PAGE_STEPS[0].ID}
-                            />
+                                startingStepID = {pageSteps[0].ID}
+                            />}
                         </div>
                     </WordSelectionsContextProvider>
                 </QuizSelectionsContextProvider>
