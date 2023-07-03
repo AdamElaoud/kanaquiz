@@ -1,7 +1,7 @@
 import { Button } from "@/common/components";
 import { FontAwesomeIconType, Size } from "@/common/types";
 import useKanaSelections from "@/hooks/useKanaSelections";
-import { KanaButtonProps, Mode } from "@/types";
+import { KanaButtonProps, KanaLetters, Mode } from "@/types";
 
 import KanaButton from "./KanaButton";
 
@@ -10,7 +10,7 @@ interface Props {
     disableOnClick?: boolean,
     hideSelectAllButton?: boolean,
     groupID: string,
-    row: [string, string, string][],
+    row: KanaLetters[],
     searchQueries?: string[]
 };
 

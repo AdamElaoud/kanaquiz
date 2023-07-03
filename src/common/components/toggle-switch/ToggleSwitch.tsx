@@ -1,11 +1,12 @@
+import { PlainFn } from "@/common/types";
 import { useState } from "react";
 
 import "./ToggleSwitch.scss";
 
 interface Props {
     disabled?: boolean,
-    onDeactivate?: () => void,
-    onActivate: () => void,
+    onDeactivate?: PlainFn,
+    onActivate: PlainFn,
     startDeactivated?: boolean
 };
 

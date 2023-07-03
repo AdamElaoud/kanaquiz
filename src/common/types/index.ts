@@ -41,18 +41,22 @@ export type WindowSize = [width: number, height: number];
 export interface ItemConfig {
     className?: string,
     content: string | ReactElement,
-    onClick?: () => void
+    onClick?: PlainFn
 };
 
-export type ToggleButtonConfig = Pick<ItemConfig, "className" | "content"> & { onClick: () => void };
+export type ToggleButtonConfig = Pick<ItemConfig, "className" | "content"> & { onClick: PlainFn };
 
 export type PlainFn = () => void;
+
+export type GenericFn<T, V> = (...args: T[]) => V;
 
 export type StepState = { prevStepID: number | string, prevStepTitle: number | string, newStepID: number | string, newStepTitle: number | string };
 
 export type TabState = { prevTabIndex: number, prevTabTitle: string, newTabIndex: number, newTabTitle: string };
 
-export type InputState = { prevValue: number, newValue: number };
+export type NumberInputState = { prevValue: number, newValue: number };
+
+export type TextInputState = { prevValue: string, newValue: string };
 
 export type MouseClickState = { event: MouseEvent, previousClickTarget: HTMLElement | null, nextClickTarget: HTMLElement };
 
@@ -64,6 +68,7 @@ export interface EventSubscription {
 export interface StepConfig {
     className?: string,
     blockNextStep?: (stepState: StepState) => boolean,
+    nextStepBlockedWarning?: () => string, // "you must fulfill all conditions on this step to continue || you still have unfulfilled conditions on this step"
     iconType?: IconType
     // NOTE: stepIDs should be unique and NOT generated from array index
     ID: number | string,

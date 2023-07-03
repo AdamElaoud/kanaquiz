@@ -96,7 +96,8 @@ const App = () : JSX.Element => {
             iconType: kanaIsSelectedTopic ? CustomIconType.Kana : FontAwesomeIconType.Book,
             ID: kanaIsSelectedTopic ? PageType.KanaSelect : PageType.WordSelection,
             title: kanaIsSelectedTopic ? "Kana" : "Words",
-            blockNextStep: () => kanaSelections.length === 0
+            blockNextStep: () => kanaIsSelectedTopic && kanaSelections.length < 3
+                || !kanaIsSelectedTopic && (!wordSelections.allHiragana && !wordSelections.allKatakana)
         },
         {
             iconType: FontAwesomeIconType.ClipboardQuestion,

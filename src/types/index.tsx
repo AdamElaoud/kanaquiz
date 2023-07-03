@@ -48,17 +48,20 @@ export type PageMapType = {
 
 export type SummaryMapType =  Record<QuizTopic | QuizDirection | QuizFormat, () => ReactElement>;
 
+export type KanaLetters = [string, string, string];
+
 export type CharsToGroups = {
     [key: string]: string[]
 };
 
 export type GroupsToChars = {
-    [key: string]: [string, string, string][]
+    [key: string]: KanaLetters[]
 };
 
 export type Word = {
     definition: string,
     kana: string,
+    romaji: string[],
     type: "hiragana" | "katakana"
 };
 
@@ -78,11 +81,18 @@ export type WordSelectionData = {
     allKatakana: boolean
 };
 
+export type Question = {
+    answer: string | string[],
+    choices?: KanaLetters,
+    prompt: string,
+    context?: string
+};
+
 export interface KanaButtonProps {
     className?: string,
     disableOnClick?: boolean,
     isSearchTarget?: boolean,
-    letters: [string, string, string]
+    letters: KanaLetters
 };
 
 export type UpdateKanaSelectionsFn = (letters: string[], addOnly?: boolean, deleteOnly?: boolean) => void;

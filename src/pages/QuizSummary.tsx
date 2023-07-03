@@ -4,19 +4,18 @@ import { Side, ToggleButtonConfig } from "@/common/types";
 import KanaButtonRow from "@/components/kana-button-row/KanaButtonRow";
 import SummaryItem from "@/components/summary-item/SummaryItem";
 import WordSelectionDisplay from "@/components/word-selection-display/WordSelectionDisplay";
-import useKanaDictionary from "@/hooks/useKanaDictionary";
 import useKanaSelections from "@/hooks/useKanaSelections";
 import useMode from "@/hooks/useMode";
 import useQuizSelections from "@/hooks/useQuizSelections";
 import useWordSelections from "@/hooks/useWordSelections";
 import { Mode, QuizTopic } from "@/types";
 import { SCREEN_FILL_WIDTH, SCREEN_PARTIAL_FILL_WIDTH, SUMMARY_DISPLAY } from "@/utils/constants";
+import { getRowsFromSelections } from "@/utils/utils";
 
 import "./QuizSummary.scss";
 
 const QuizSummary = () : JSX.Element => {
     const dynamicSummaryWidth = useDynamicWidth(SCREEN_PARTIAL_FILL_WIDTH, 33, SCREEN_FILL_WIDTH, 90);
-    const { getRowsFromSelections } = useKanaDictionary();
     const { quizSelections } = useQuizSelections();
     const { kanaSelections } = useKanaSelections();
     const { wordSelections } = useWordSelections();
@@ -51,7 +50,7 @@ const QuizSummary = () : JSX.Element => {
                     <SummaryItem title = "Topic">
                         {SUMMARY_DISPLAY[quizSelections.topic]()}
                     </SummaryItem>
-                    <SummaryItem title = "Direction">
+                    <SummaryItem title = "Translate">
                         {SUMMARY_DISPLAY[quizSelections.direction]()}
                     </SummaryItem>
                     <SummaryItem title = "Answer">

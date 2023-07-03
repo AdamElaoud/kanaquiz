@@ -1,0 +1,102 @@
+@use "../common/styles/index" as *;
+@use "../styles/index" as *;
+
+$quizStatusHeight: 3rem;
+$quizStatusSpacing: calc($sectionSpacing * 2);
+$promptHeight: 13rem;
+$promptFontSize: 4rem;
+$answerInputHeight: 5rem;
+$answerInputWidth: 7rem;
+
+.kana-quiz-page {
+    @extend %page;
+    row-gap: 2rem;
+
+    .quiz-status {
+        align-items: center;
+        column-gap: 3rem;
+        display: flex;
+        font-size: $largeFontSize;
+        height: $quizStatusHeight;
+        justify-content: center;
+        margin-bottom: $quizStatusSpacing;
+
+        .status-number {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+
+            .icon {
+                margin-right: 0.5rem;
+            }
+
+            .correct {
+                background-color: $complete;
+            }
+
+            .incorrect {
+                background-color: $crimson;
+            }
+
+            .remaining {
+                background-color: $active;
+            }
+        }
+    }
+
+    .prompt-and-answer-input {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: calc(40% - $quizStatusHeight - $quizStatusSpacing); // adjust on PC?
+        row-gap: 3rem;
+
+        .prompt {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            height: $promptHeight;
+            justify-content: center;
+            row-gap: 0.5rem;
+            
+            .prompt-question {
+                @extend %rounded-border;
+                @include padding(3);
+                border: $borderThickness solid $lightNavy;
+                font-size: $promptFontSize;
+                font-weight: $fontWeightBold;
+
+                &.large-word {
+                    font-size: calc($promptFontSize - 0.65rem);
+                }
+            }
+
+            .prompt-context {
+                font-size: $smallFontSize;
+                font-style: italic;
+            }
+        }
+    
+        .answer-input {
+            align-items: center;
+            column-gap: 1rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            row-gap: 1rem;
+
+            .choice-button {
+                font-size: $largeFontSize;
+                height: $answerInputHeight;
+                width: $answerInputWidth;
+            }
+
+            input {
+                font-size: $largeFontSize;
+                height: $answerInputHeight;
+                width: $answerInputWidth;
+            }
+        }
+    }
+
+}

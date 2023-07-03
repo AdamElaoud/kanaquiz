@@ -1,5 +1,5 @@
 import useWindowSize from "@/common/hooks/useWindowSize";
-import { CSSStyles, FontAwesomeIconType, ReactMouseEvent, ReactNode, ReactRef } from "@/common/types";
+import { CSSStyles, FontAwesomeIconType, PlainFn, ReactMouseEvent, ReactNode, ReactRef } from "@/common/types";
 import { useRef } from "react";
 
 import { Button } from "..";
@@ -10,7 +10,7 @@ interface Props {
     children: ReactNode,
     defaultOpen?: boolean,
     initialFocusTarget?: ReactRef<HTMLElement>,
-    onClose?: () => void,
+    onClose?: PlainFn,
     style?: CSSStyles
 };
 

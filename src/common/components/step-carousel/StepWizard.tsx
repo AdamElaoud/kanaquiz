@@ -1,4 +1,4 @@
-import { CSSStyles, FontAwesomeIconType, Side, StepConfig, StepState } from "@/common/types";
+import { CSSStyles, FontAwesomeIconType, PlainFn, Side, StepConfig, StepState } from "@/common/types";
 import { useState } from "react";
 
 import { Button, StepDisplay } from "..";
@@ -10,7 +10,7 @@ interface Props {
     displayFlagAtEnd?: boolean,
     completeConfig: {
         text?: string,
-        onComplete: () => void
+        onComplete: PlainFn
     },
     onStepChange?: (stepState: StepState) => void,
     showCheckOnComplete?: boolean,

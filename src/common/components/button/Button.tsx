@@ -1,4 +1,4 @@
-import { IconType, ReactNode, Side, Size } from "@/common/types";
+import { IconType, PlainFn, ReactNode, Side, Size } from "@/common/types";
 
 import Icon from "../icon/Icon";
 
@@ -11,7 +11,7 @@ interface Props {
     iconType?: IconType,
     iconSide?: Side,
     iconSize?: Size,
-    onClick: () => void
+    onClick: PlainFn
 };
 
 const DEFAULT_ICON_SIDE = Side.Left;

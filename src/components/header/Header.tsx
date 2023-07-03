@@ -1,10 +1,10 @@
 import { Button } from "@/common/components";
-import { CSSStyles, FontAwesomeIconType } from "@/common/types";
+import { CSSStyles, FontAwesomeIconType, PlainFn } from "@/common/types";
 
 import "./Header.scss";
 
 interface Props {
-    onClick: () => void,
+    onClick: PlainFn,
     style?: CSSStyles
 };
 

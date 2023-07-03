@@ -1,6 +1,6 @@
 import { Icon, NumberInput, ToggleButton } from "@/common/components";
 import useDynamicWidth from "@/common/hooks/useDynamicWidth";
-import { CustomIconType, InputState, ItemConfig, ReactFormOnSubmitEvent, Side, Size, ToggleButtonConfig } from "@/common/types";
+import { CustomIconType, NumberInputState, ItemConfig, ReactFormOnSubmitEvent, Side, Size, ToggleButtonConfig } from "@/common/types";
 import DirectionToggle from "@/components/direction-toggle/DirectionToggle";
 import QuizSelectionSection from "@/components/quiz-selection-section/QuizSelectionSection";
 import useQuizSelections from "@/hooks/useQuizSelections";
@@ -70,7 +70,7 @@ const QuizSelection = () : JSX.Element => {
                 <QuizSelectionSection title = "Topic">
                     <ToggleButton buttons = {topicToggleButtons} defaultActiveSide = {defaultTopicSide}/>
                 </QuizSelectionSection>
-                <QuizSelectionSection title = "Direction" helpTooltip = "blank">
+                <QuizSelectionSection title = "Translate" helpTooltip = "blank">
                     <DirectionToggle 
                         key = {`direction-selection-${quizSelections.topic}`}
                         content = {directionToggleButtons}
@@ -93,7 +93,7 @@ const QuizSelection = () : JSX.Element => {
                         max = {MAXIMUM_QUESTION_AMOUNT}
                         min = {MINIMUM_QUESTION_AMOUNT}
                         name = "question-amount"
-                        onChange = {({ newValue }: InputState) =>
+                        onChange = {({ newValue }: NumberInputState) =>
                             updateQuizSelections({ ...quizSelections, amount: newValue })}
                         size = {Size.Large}
                     />

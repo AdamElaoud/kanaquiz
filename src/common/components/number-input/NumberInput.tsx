@@ -1,4 +1,5 @@
-import { Direction, FontAwesomeIconType, IconType, InputState, ReactInputOnChangeEvent, ReactKeyboardEvent, Size } from "@/common/types";
+import { Direction, FontAwesomeIconType, IconType, NumberInputState, ReactInputOnChangeEvent, Size } from "@/common/types";
+import { onEnterPress } from "@/common/utils/utils";
 import { useRef, useState } from "react";
 
 import { Icon } from "..";
@@ -11,7 +12,7 @@ interface Props {
     max?: number,
     min?: number,
     name: string,
-    onChange: (inputState: InputState) => void,
+    onChange: (inputState: NumberInputState) => void,
     showButtons?: boolean,
     showFlareOnInvalidInput?: boolean,
     size?: Size,
@@ -73,11 +74,8 @@ const NumberInput = (props: Props) => {
         setValue(prevValue => prevValue + direction);
     };
 
-    const onInputKeyDown = (event: ReactKeyboardEvent) => {
-        // blur to hide mobile keyboards on submission
-        if (event.key === "Enter")
-            inputRef.current?.blur();
-    };
+    // blur to hide mobile keyboards on submission
+    const hideKeyboard = () => inputRef.current?.blur();
 
     return (
         <div className = {`number-input ${size}`}>
@@ -86,7 +84,7 @@ const NumberInput = (props: Props) => {
             <div className = "number-input-content">
                 {showButtons && <Icon type = {buttonIcons[0]} onClick = {onClickButton(Direction.Down)} size = {size}/>}
 
-                <label className = "visually-hidden" htmlFor = {`${name}-input`}>Amount of questions for {name}</label>
+                <label className = "visually-hidden" htmlFor = {`${name}-input`}>{`Number input for ${name}`}</label>
                 <input
                     name = {`${name}-input`}
                     ref = {inputRef}
@@ -96,7 +94,7 @@ const NumberInput = (props: Props) => {
                     role = "input"
                     value = {value}
                     onChange = {onInputChange}
-                    onKeyDown = {onInputKeyDown}
+                    onKeyDown = {onEnterPress(hideKeyboard)}
                 />
                 
                 {showButtons && <Icon type = {buttonIcons[1]} onClick = {onClickButton(Direction.Up)} size = {size}/>}

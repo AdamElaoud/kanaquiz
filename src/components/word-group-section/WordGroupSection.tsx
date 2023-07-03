@@ -1,10 +1,11 @@
 import { ToggleSwitch } from "@/common/components";
 
 import "./WordGroupSection.scss";
+import { PlainFn } from "@/common/types";
 
 interface Props {
-    onActivate: () => void;
-    onDeactivate: () => void;
+    onActivate: PlainFn;
+    onDeactivate: PlainFn;
     startDeactivated: boolean,
     title: string;
 };

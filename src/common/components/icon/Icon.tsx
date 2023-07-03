@@ -1,4 +1,4 @@
-import { CSSStyles, IconType, isCustomIconType, isFontAwesomeIconType, ReactKeyboardEvent, Size } from "@/common/types";
+import { CSSStyles, IconType, isCustomIconType, isFontAwesomeIconType, PlainFn, ReactKeyboardEvent, Size } from "@/common/types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { CustomIconMap, FontAwesomeIconMap } from "./IconTypes";
@@ -7,7 +7,7 @@ import "./Icon.scss";
 
 interface Props {
     className?: string,
-    onClick?: () => void,
+    onClick?: PlainFn,
     onKeyDown?: (event: ReactKeyboardEvent) => void,
     size?: Size,
     style?: CSSStyles,

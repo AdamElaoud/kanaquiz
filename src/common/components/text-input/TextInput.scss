@@ -1,0 +1,46 @@
+@use "../../styles/index" as *;
+
+.text-input {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    .text-input-title {
+        margin-bottom: 0.25rem;
+    }
+
+    input {
+        @extend %rounded-border;
+        background-color: $darkNavy;
+        border: $borderThickness solid $lightNavy;
+        color: $darkModeTextColor;
+        font-weight: $fontWeightBold;
+        text-align: center;
+    }
+
+    &.sm, &.mini {
+        .text-input-title, input {
+            font-size: $miniFontSize;
+        }
+    }
+    
+    &.md {
+        .text-input-title, input {
+            font-size: $smallFontSize;
+        }
+    }
+    
+    &.lg {
+        .text-input-title, input {
+            font-size: $mediumFontSize;
+        }
+    }
+}
+
+@media (max-width: $sizeWidthThreshhold) {
+    .text-input {    
+        .text-input-title {
+            font-size: $miniFontSize;
+        }
+    }
+}
