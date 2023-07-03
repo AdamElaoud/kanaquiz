@@ -48,6 +48,8 @@ const KanaQuiz = () : JSX.Element => {
 
             if (currentInputIndex !== textInputRefs.current.length - 1)
                 textInputRefs.current[currentInputIndex + 1].focus();
+            else
+                textInputRefs.current[currentInputIndex].blur();
         }
     }, 400);
 
