@@ -49,7 +49,7 @@ const QuizSummary = () : JSX.Element => {
                 </div>
                 <div className = "summary-items">
                     <SummaryItem title = "Topic">
-                        {SUMMARY_DISPLAY[quizSelections.topic]}
+                        {SUMMARY_DISPLAY[quizSelections.topic]()}
                     </SummaryItem>
                     <SummaryItem title = "Direction">
                         {SUMMARY_DISPLAY[quizSelections.direction]()}

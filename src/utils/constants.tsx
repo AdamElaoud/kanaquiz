@@ -35,8 +35,16 @@ export const PAGES: PageMapType = {
 };
 
 export const SUMMARY_DISPLAY: SummaryMapType = {
-    [QuizTopic.Kana]: "Kana",
-    [QuizTopic.Words]: "Words",
+    [QuizTopic.Kana]: () => 
+        <>
+            <Icon type = {CustomIconType.Kana} />
+            Kana
+        </>,
+    [QuizTopic.Words]: () => 
+        <>
+            <Icon type = {FontAwesomeIconType.Book} />
+            Words
+        </>,
     [QuizDirection.ENtoJP]: () => 
         <>
             <Icon type = {CustomIconType.USFlag} />

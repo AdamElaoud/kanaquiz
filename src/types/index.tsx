@@ -47,7 +47,7 @@ export type PageMapType = {
 };
 
 export type SummaryMapType = 
-    Record<QuizTopic, string> &
+    Record<QuizTopic, () => ReactElement> &
     Record<QuizDirection, () => ReactElement> &
     Record<QuizFormat, () => ReactElement>;
 
