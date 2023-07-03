@@ -46,10 +46,7 @@ export type PageMapType = {
     [key in PageType]: () => ReactNode;
 };
 
-export type SummaryMapType = 
-    Record<QuizTopic, () => ReactElement> &
-    Record<QuizDirection, () => ReactElement> &
-    Record<QuizFormat, () => ReactElement>;
+export type SummaryMapType =  Record<QuizTopic | QuizDirection | QuizFormat, () => ReactElement>;
 
 export type CharsToGroups = {
     [key: string]: string[]

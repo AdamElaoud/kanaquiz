@@ -1,17 +1,29 @@
 import { StepCarousel } from '@/common/components';
 import { CustomIconType, FontAwesomeIconType, StepConfig, StepState } from '@/common/types';
-import { useState, useLayoutEffect } from "react";
-import '@/styles/App.scss';
 import { Mode, PageType, QuizDirection, QuizFormat, QuizSelectionData, QuizTopic, WordSelectionData } from '@/types';
-import { SCREEN_PARTIAL_FILL_WIDTH, SCREEN_FILL_WIDTH, PAGES, SCREEN_FILL_PERCENT, SCREEN_PARTIAL_FILL_PERCENT, QUIZ_SELECTION_STORAGE_KEY, DEFAULT_QUESTION_AMOUNT, KANA_SELECTION_STORAGE_KEY, WORD_SELECTION_STORAGE_KEY } from './utils/constants';
+import { useLayoutEffect, useState } from "react";
+
+import '@/styles/App.scss';
+
 import useDynamicWidth from './common/hooks/useDynamicWidth';
-import useWindowSize from './common/hooks/useWindowSize';
-import { ModeContextProvider } from './hooks/useMode';
-import Header from './components/header/Header';
 import useLocalStorage from './common/hooks/useLocalStorage';
-import { QuizSelectionsContextProvider } from './hooks/useQuizSelections';
+import useWindowSize from './common/hooks/useWindowSize';
+import Header from './components/header/Header';
 import { KanaSelectionsContextProvider } from './hooks/useKanaSelections';
+import { ModeContextProvider } from './hooks/useMode';
+import { QuizSelectionsContextProvider } from './hooks/useQuizSelections';
 import { WordSelectionsContextProvider } from './hooks/useWordSelections';
+import {
+    DEFAULT_QUESTION_AMOUNT,
+    KANA_SELECTION_STORAGE_KEY,
+    PAGES,
+    QUIZ_SELECTION_STORAGE_KEY,
+    SCREEN_FILL_PERCENT,
+    SCREEN_FILL_WIDTH,
+    SCREEN_PARTIAL_FILL_PERCENT,
+    SCREEN_PARTIAL_FILL_WIDTH,
+    WORD_SELECTION_STORAGE_KEY
+} from './utils/constants';
 
 const App = () : JSX.Element => {
     const [carouselKey, resetCarousel] = useState<boolean>(false);
