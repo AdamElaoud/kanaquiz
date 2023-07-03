@@ -5,8 +5,15 @@ import { KanaButtonProps, Mode } from "@/types";
 
 import "./KanaButton.scss";
 
+const DEFAULT_DISABLE_ON_CLICK = false;
+
 const KanaButton = (props: KanaButtonProps) : JSX.Element => {
-    const { className, disableOnClick, isSearchTarget, letters } = props;
+    const {
+        className,
+        disableOnClick = DEFAULT_DISABLE_ON_CLICK,
+        isSearchTarget,
+        letters 
+    } = props;
 
     const { kanaSelections, updateKanaSelections } = useKanaSelections();
     const { mode } = useMode();
@@ -18,6 +25,7 @@ const KanaButton = (props: KanaButtonProps) : JSX.Element => {
     if (className) classes.push(className);
     if (mode === Mode.Kana) classes.push("is-kana");
     if (isSearchTarget) classes.push("is-search-target");
+    if (disableOnClick) classes.push("disable-on-click");
 
     const onClick = () => {
         if (!disableOnClick)

@@ -6,18 +6,25 @@ import { KanaButtonProps, Mode } from "@/types";
 import KanaButton from "./KanaButton";
 
 import "./KanaButtonRow.scss";
-
 interface Props {
+    disableOnClick?: boolean,
     hideSelectAllButton?: boolean,
     groupID: string,
     row: [string, string, string][],
     searchQueries?: string[]
 };
 
+const DEFAULT_DISABLE_ON_CLICK = false;
 const DEFAULT_HIDE_SELECT_ALL_BUTTON = false;
 
 const KanaButtonRow = (props: Props) : JSX.Element => {
-    const { hideSelectAllButton = DEFAULT_HIDE_SELECT_ALL_BUTTON, groupID, row, searchQueries } = props;
+    const {
+        disableOnClick = DEFAULT_DISABLE_ON_CLICK,
+        hideSelectAllButton = DEFAULT_HIDE_SELECT_ALL_BUTTON,
+        groupID,
+        row,
+        searchQueries
+    } = props;
     
     const { kanaSelections, updateKanaSelections } = useKanaSelections();
 
@@ -44,6 +51,7 @@ const KanaButtonRow = (props: Props) : JSX.Element => {
 
                 const kanaButtonProps: Pick<KanaButtonProps, keyof KanaButtonProps> & { key: string } = {
                     key,
+                    disableOnClick,
                     isSearchTarget: searchQueries?.includes(letters[Mode.Kana]) || searchQueries?.includes(letters[Mode.Romaji]),
                     letters
                 };

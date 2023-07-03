@@ -73,7 +73,13 @@ const QuizSummary = () : JSX.Element => {
                     <div className = {topicSelectionItemsClasses.join(" ")}>
                         {topicIsKana && selectionGroups.map((group, index) => {
                             const groupID = selectionGroupIDs[index];
-                            return <KanaButtonRow key = {groupID} row = {group} groupID = {groupID} hideSelectAllButton = {true}/>
+                            return <KanaButtonRow
+                                key = {groupID}
+                                disableOnClick = {true}
+                                row = {group}
+                                groupID = {groupID}
+                                hideSelectAllButton = {true}
+                            />;
                         })}
                         {!topicIsKana && <>
                             <WordSelectionDisplay isChecked = {wordSelections.allHiragana} title = "Hiragana Words"/>

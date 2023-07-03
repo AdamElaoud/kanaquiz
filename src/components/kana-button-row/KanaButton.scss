@@ -39,9 +39,15 @@ $kanaButtonWidth: 4rem;
 @media (hover: hover) and (pointer: fine) {
     .kana-button {
         &.is-selected {
-            &:hover {
+            &:not(.disable-on-click):hover {
                 cursor: pointer;
                 background-color: $lightActive;
+            }
+        }
+
+        &.disable-on-click {
+            &:hover {
+                cursor: auto;
             }
         }
     }
