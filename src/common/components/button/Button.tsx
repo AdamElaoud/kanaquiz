@@ -1,6 +1,5 @@
+import { Icon } from "@/common/components";
 import { IconType, PlainFn, ReactNode, Side, Size } from "@/common/types";
-
-import Icon from "../icon/Icon";
 
 import "./Button.scss";
 

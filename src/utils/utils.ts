@@ -11,15 +11,14 @@ import {
     WordSelectionData
 } from "@/types";
 import {
-    groupsToChars as hiraganaGroupsToChars,
-    groupIDs as hiraganaGroupIDs
+    groupIDs as hiraganaGroupIDs,
+    groupsToChars as hiraganaGroupsToChars
 } from "@/utils/hiragana";
 import {
-    groupsToChars as katakanaGroupsToChars,
-    groupIDs as katakanaGroupIDs
+    groupIDs as katakanaGroupIDs,
+    groupsToChars as katakanaGroupsToChars
 } from "@/utils/katakana";
-
-import { allWords, hiraganaWords, katakanaWords } from "./words";
+import { allWords, hiraganaWords, katakanaWords } from "@/utils/words";
 
 export const getGroupAndLettersInTargetGroupFromID = (
     ID: string,

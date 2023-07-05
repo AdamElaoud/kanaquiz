@@ -1,7 +1,6 @@
+import { GenericFn } from "@/common/types";
 import { debounce } from "debounce";
 import { useEffect, useMemo, useRef } from "react";
-
-import { GenericFn } from "../types";
 
 const useDebounce = <T, V>(callbackFn: GenericFn<T, V>, delay = 1000) => {
     const callbackRef = useRef<GenericFn<T, V>>(callbackFn);

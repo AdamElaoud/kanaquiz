@@ -1,4 +1,4 @@
-import { ReactKeyboardEvent } from "../types";
+import { ReactKeyboardEvent } from "@/common/types";
 
 export const onEnterPress = (responseFn?: (event: ReactKeyboardEvent) => void) => (event: ReactKeyboardEvent) => {
     if (responseFn && event.key === "Enter")

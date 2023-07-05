@@ -1,11 +1,11 @@
 import { Button } from "@/common/components";
 import { FontAwesomeIconType, Size } from "@/common/types";
+import KanaButton from "@/components/kana-button-row/KanaButton";
 import useKanaSelections from "@/hooks/useKanaSelections";
 import { KanaButtonProps, KanaLetters, Mode } from "@/types";
 
-import KanaButton from "./KanaButton";
-
 import "./KanaButtonRow.scss";
+
 interface Props {
     disableOnClick?: boolean,
     hideSelectAllButton?: boolean,

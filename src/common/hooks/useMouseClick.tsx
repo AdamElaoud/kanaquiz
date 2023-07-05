@@ -1,6 +1,5 @@
+import { MouseClickState } from "@/common/types";
 import { useEffect, useState } from "react";
-
-import { MouseClickState } from "../types";
 
 const useMouseClick = (onMouseClick?: (mouseClickState: MouseClickState) => void, scope: HTMLElement = document.body) : MouseEvent | null => {
     const [mouseClick, setMouseClick] = useState<MouseEvent | null>(null);

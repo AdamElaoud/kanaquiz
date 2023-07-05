@@ -1,7 +1,6 @@
+import { Icon } from "@/common/components";
 import { IconType, Size } from "@/common/types";
 import { onEnterPress } from "@/common/utils/utils";
-
-import Icon from "../icon/Icon";
 
 import "./TabHeader.scss";
 

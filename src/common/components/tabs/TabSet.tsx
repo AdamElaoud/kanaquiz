@@ -1,7 +1,6 @@
+import { TabHeader } from "@/common/components";
 import { ReactElement, TabState } from "@/common/types";
 import { Children, useMemo, useState } from "react";
-
-import TabHeader from "./TabHeader";
 
 import "./TabSet.scss";
 

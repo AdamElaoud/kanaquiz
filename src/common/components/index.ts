@@ -1,18 +1,18 @@
-import Button from "./button/Button";
-import HelpTooltip from "./help-tooltip/HelpTooltip";
-import Icon from "./icon/Icon";
-import Modal from "./modal/Modal";
-import NumberInput from "./number-input/NumberInput";
-import Searchbar from "./searchbar/Searchbar";
-import Step from "./step-display/Step";
-import StepWizard from "./step-carousel/StepWizard";
-import StepDisplay from "./step-display/StepDisplay";
-import Tab from "./tabs/Tab";
-import TabHeader from "./tabs/TabHeader";
-import TabSet from "./tabs/TabSet";
-import TextInput from "./text-input/TextInput";
-import ToggleButton from "./toggle-button/ToggleButton";
-import ToggleSwitch from "./toggle-switch/ToggleSwitch";
+import Button from "@/common/components/button/Button";
+import HelpTooltip from "@/common/components/help-tooltip/HelpTooltip";
+import Icon from "@/common/components/icon/Icon";
+import Modal from "@/common/components/modal/Modal";
+import NumberInput from "@/common/components/number-input/NumberInput";
+import Searchbar from "@/common/components/searchbar/Searchbar";
+import Step from "@/common/components/step-display/Step";
+import StepWizard from "@/common/components/step-carousel/StepWizard";
+import StepDisplay from "@/common/components/step-display/StepDisplay";
+import Tab from "@/common/components/tabs/Tab";
+import TabHeader from "@/common/components/tabs/TabHeader";
+import TabSet from "@/common/components/tabs/TabSet";
+import TextInput from "@/common/components/text-input/TextInput";
+import ToggleButton from "@/common/components/toggle-button/ToggleButton";
+import ToggleSwitch from "@/common/components/toggle-switch/ToggleSwitch";
 
 export {
     Button,

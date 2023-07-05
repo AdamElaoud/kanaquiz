@@ -1,5 +1,5 @@
-import { CSSStyles } from "../types";
-import useWindowSize from "./useWindowSize";
+import useWindowSize from "@/common/hooks/useWindowSize";
+import { CSSStyles } from "@/common/types";
 
 const useDynamicWidth = (partialFillSize: number, partialFillPercent: number, fillSize: number, fillPercent: number) : CSSStyles => {
     const [windowWidth] = useWindowSize();

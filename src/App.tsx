@@ -1,18 +1,14 @@
 import { StepCarousel } from '@/common/components';
+import useDynamicWidth from '@/common/hooks/useDynamicWidth';
+import useLocalStorage from '@/common/hooks/useLocalStorage';
+import useWindowSize from '@/common/hooks/useWindowSize';
 import { CustomIconType, FontAwesomeIconType, StepConfig, StepState } from '@/common/types';
+import Header from '@/components/header/Header';
+import { KanaSelectionsContextProvider } from '@/hooks/useKanaSelections';
+import { ModeContextProvider } from '@/hooks/useMode';
+import { QuizSelectionsContextProvider } from '@/hooks/useQuizSelections';
+import { WordSelectionsContextProvider } from '@/hooks/useWordSelections';
 import { Mode, PageType, QuizDirection, QuizFormat, QuizSelectionData, QuizTopic, WordSelectionData } from '@/types';
-import { useLayoutEffect, useState } from "react";
-
-import '@/styles/App.scss';
-
-import useDynamicWidth from './common/hooks/useDynamicWidth';
-import useLocalStorage from './common/hooks/useLocalStorage';
-import useWindowSize from './common/hooks/useWindowSize';
-import Header from './components/header/Header';
-import { KanaSelectionsContextProvider } from './hooks/useKanaSelections';
-import { ModeContextProvider } from './hooks/useMode';
-import { QuizSelectionsContextProvider } from './hooks/useQuizSelections';
-import { WordSelectionsContextProvider } from './hooks/useWordSelections';
 import {
     DEFAULT_QUESTION_AMOUNT,
     KANA_SELECTION_STORAGE_KEY,
@@ -23,7 +19,10 @@ import {
     SCREEN_PARTIAL_FILL_PERCENT,
     SCREEN_PARTIAL_FILL_WIDTH,
     WORD_SELECTION_STORAGE_KEY
-} from './utils/constants';
+} from '@/utils/constants';
+import { useLayoutEffect, useState } from "react";
+
+import '@/styles/App.scss';
 
 const App = () : JSX.Element => {
     const [carouselKey, resetCarousel] = useState<boolean>(false);

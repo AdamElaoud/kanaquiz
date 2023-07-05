@@ -1,5 +1,7 @@
 import { Button, Icon } from "@/common/components";
+import useDebounce from "@/common/hooks/useDebounce";
 import { FontAwesomeIconType, Size, TextInputState } from "@/common/types";
+import ChoiceInputRow from "@/components/choice-row/ChoiceInputRow";
 import useKanaSelections from "@/hooks/useKanaSelections";
 import useQuizSelections from "@/hooks/useQuizSelections";
 import useWordSelections from "@/hooks/useWordSelections";
@@ -8,8 +10,6 @@ import { generateQuestions } from "@/utils/utils";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import "./KanaQuiz.scss";
-import ChoiceInputRow from "@/components/choice-row/ChoiceInputRow";
-import useDebounce from "@/common/hooks/useDebounce";
 
 const KanaQuiz = () : JSX.Element => {
     const { quizSelections } = useQuizSelections();

@@ -1,6 +1,5 @@
+import { EventSubscription } from "@/common/types";
 import { useEffect, useState } from "react";
-
-import { EventSubscription } from "../types";
 
 const useKeyDown = (subscriptions: EventSubscription[], scope: HTMLElement = document.body) : KeyboardEvent | null => {
     const [keyPressed, setKeyPressed] = useState<KeyboardEvent | null>(null);

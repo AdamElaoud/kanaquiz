@@ -1,7 +1,6 @@
+import { CustomIconMap, FontAwesomeIconMap } from "@/common/components/icon/IconTypes";
 import { CSSStyles, IconType, isCustomIconType, isFontAwesomeIconType, PlainFn, ReactKeyboardEvent, Size } from "@/common/types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import { CustomIconMap, FontAwesomeIconMap } from "./IconTypes";
 
 import "./Icon.scss";
 
