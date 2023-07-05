@@ -1,6 +1,6 @@
+import { CustomIconMap, FontAwesomeIconMap } from "@/common/components/icon/IconTypes";
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
-
-import { CustomIconMap, FontAwesomeIconMap } from "../components/icon/IconTypes";
+import { Id, ToastContent, ToastOptions } from "react-toastify";
 
 export enum Size {
     Mini = "mini",
@@ -49,6 +49,8 @@ export type ToggleButtonConfig = Pick<ItemConfig, "className" | "content"> & { o
 export type PlainFn = () => void;
 
 export type GenericFn<T, V> = (...args: T[]) => V;
+
+export type NotificationFn = (content: ToastContent, options?: ToastOptions) => Id;
 
 export type StepState = { prevStepID: number | string, prevStepTitle: number | string, newStepID: number | string, newStepTitle: number | string };
 
