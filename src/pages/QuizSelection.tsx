@@ -96,6 +96,7 @@ const QuizSelection = () : JSX.Element => {
                         onChange = {({ newValue }: NumberInputState) =>
                             updateQuizSelections({ ...quizSelections, amount: newValue })}
                         size = {Size.Large}
+                        showFlareOnInvalidInput = {true}
                     />
                 </QuizSelectionSection>
             </form>

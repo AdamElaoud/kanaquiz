@@ -76,3 +76,9 @@ export const KANA_SELECTION_STORAGE_KEY = "kana-selections";
 export const QUIZ_SELECTION_STORAGE_KEY = "quiz-selections";
 export const WORD_SELECTION_STORAGE_KEY = "word-selections";
 export const KANA_SELECTION_TAB_STORAGE_KEY = "kana-selections-tab";
+
+export const ORIENTATION_ERROR = "This app is not designed to be used in landscape mode on mobile devices. Please rotate your device to portrait mode.";
+export const ORIENTATION_ERROR_ID = "orientation-error";
+
+export const NOT_ENOUGH_KANA = "You must select at least 3 Kana to continue";
+export const NOT_ENOUGH_WORDS = "You must select at least 1 word group to continue";

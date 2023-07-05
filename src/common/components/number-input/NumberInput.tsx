@@ -5,6 +5,8 @@ import { useRef, useState } from "react";
 import { Icon } from "..";
 
 import "./NumberInput.scss";
+import useNotification from "@/common/hooks/useNotification";
+import { NUMBER_INPUT_MAXIMUM, NUMBER_INPUT_MAXIMUM_ID, NUMBER_INPUT_MINIMUM_ID } from "@/common/utils/constants";
 
 interface Props {
     buttonIcons?: [downIcon: IconType, upIcon: IconType],
@@ -39,27 +41,29 @@ const NumberInput = (props: Props) => {
         title
     } = props;
 
-
     const [value, setValue] = useState<number>(defaultValue);
     const inputRef = useRef<HTMLInputElement>(null);
+    const { error } = useNotification();
 
     const onInputChange = (event: ReactInputOnChangeEvent) => {
         const input = parseInt(event.target.value);
 
         if (input !== value) {
             if (min && input < min) {
-                if (showFlareOnInvalidInput) console.log("value too low warning flare!");
+                if (showFlareOnInvalidInput)
+                    error(NUMBER_INPUT_MAXIMUM(min), { toastId: NUMBER_INPUT_MINIMUM_ID });
 
                 return;
             }
             
             if (max && input > max) {
-                if (showFlareOnInvalidInput) console.log("value too high warning flare!");
+                if (showFlareOnInvalidInput)
+                    error(NUMBER_INPUT_MAXIMUM(max), { toastId: NUMBER_INPUT_MAXIMUM_ID });
                 
                 return;
             }
 
-            onChange({ prevValue: value, newValue: input });
+            onChange({ prevValue: value, newValue: input || min || 0 });
             setValue(input);
         }
     };
@@ -67,8 +71,19 @@ const NumberInput = (props: Props) => {
     const onClickButton = (direction: Direction) => () => {
         const newValue = value + direction;
 
-        if (min && newValue < min) return;
-        if (max && newValue > max) return;
+        if (min && newValue < min) {
+            if (showFlareOnInvalidInput)
+                    error(NUMBER_INPUT_MAXIMUM(min), { toastId: NUMBER_INPUT_MINIMUM_ID });
+
+            return;
+        };
+
+        if (max && newValue > max) {
+                if (showFlareOnInvalidInput)
+                    error(NUMBER_INPUT_MAXIMUM(max), { toastId: NUMBER_INPUT_MAXIMUM_ID });
+                
+                return;
+            }
 
         onChange({ prevValue: value, newValue });
         setValue(prevValue => prevValue + direction);

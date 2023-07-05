@@ -40,22 +40,27 @@ export const NotificationCenter = (props: ToastContainerProps) : JSX.Element => 
 
 export const useNotification = () => {
     const notify: NotificationFn = useCallback((content, options) : Id  => toast(content, options), []);
+
     const error: NotificationFn = useCallback((content, options) : Id  => toast.error(content, {
         icon: () => <Icon type = {FontAwesomeIconType.Error} size = {Size.Large}/>,
         ...options
     }), []);
+    
     const info: NotificationFn = useCallback((content, options) : Id  => toast.info(content, {
         icon: () => <Icon type = {FontAwesomeIconType.Info} size = {Size.Large}/>,
         ...options
     }), []);
+    
     const success: NotificationFn = useCallback((content, options) : Id  => toast.success(content, {
         icon: () => <Icon type = {FontAwesomeIconType.CircleCheck} size = {Size.Large}/>,
         ...options
     }), []);
+    
     const warning: NotificationFn = useCallback((content, options) : Id  => toast.warn(content, {
         icon: () => <Icon type = {FontAwesomeIconType.Warning} size = {Size.Large}/>,
         ...options
     }), []);
+    
 
     const update = (id: Id, options?: UpdateOptions) => toast.update(id, options);
     const dismissOne = (id: Id) => toast.dismiss(id);

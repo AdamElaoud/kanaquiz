@@ -32,6 +32,7 @@ html {
             outline: transparent;
 
             &[type=number] {
+                appearance: auto;
                 // removes firefox custom arrows in number inputs
                 -moz-appearance: textfield;
             }

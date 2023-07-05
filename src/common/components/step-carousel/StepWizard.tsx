@@ -4,6 +4,8 @@ import { useState } from "react";
 import { Button, StepDisplay } from "..";
 
 import "./StepWizard.scss";
+import useNotification from "@/common/hooks/useNotification";
+import { DEFAULT_STEP_WIZARD_NEXT_STEP_BLOCKED, STEP_WIZARD_NEXT_STEP_BLOCKED_ID } from "@/common/utils/constants";
 
 interface Props {
     className?: string,
@@ -38,6 +40,7 @@ const StepWizard = (props: Props) : JSX.Element => {
 
         return stepIndex === -1 ? DEFAULT_STARTING_STEP_INDEX : stepIndex;
     });
+    const { error } = useNotification();
 
     const activeStep = steps[activeStepIndex];
     const nextStep = steps[activeStepIndex + 1];
@@ -49,23 +52,25 @@ const StepWizard = (props: Props) : JSX.Element => {
     }) : false;
 
     const goToNextStep = () => {
-        if (!nextStepIsDisabledFromCondition) {
-            if (onStepChange) {
-                const activeStep = steps[activeStepIndex];
-                const nextStep = steps[activeStepIndex + 1];
-    
-                onStepChange({
-                    prevStepID: activeStep.ID, 
-                    prevStepTitle: activeStep.title,
-                    newStepID: nextStep?.ID,
-                    newStepTitle: nextStep?.title
-                });
-            }
-    
-            setActiveStepIndex(currentStepIndex => currentStepIndex + 1);
+        if (nextStepIsDisabledFromCondition) {
+            const errorMsg = activeStep.nextStepBlockedError?.() || DEFAULT_STEP_WIZARD_NEXT_STEP_BLOCKED
+            error(errorMsg, { toastId: STEP_WIZARD_NEXT_STEP_BLOCKED_ID });
+            return;
         }
 
-        // show error flare
+        if (onStepChange) {
+            const activeStep = steps[activeStepIndex];
+            const nextStep = steps[activeStepIndex + 1];
+
+            onStepChange({
+                prevStepID: activeStep.ID, 
+                prevStepTitle: activeStep.title,
+                newStepID: nextStep?.ID,
+                newStepTitle: nextStep?.title
+            });
+        }
+
+        setActiveStepIndex(currentStepIndex => currentStepIndex + 1);
     };
 
     const goToPreviousStep = () => {

@@ -35,7 +35,11 @@ export type ReactSetState<T> = React.Dispatch<React.SetStateAction<T>>;
 export type ReactForwardedRef<T> = React.ForwardedRef<T>;
 export type ReactMutableRef<T> = React.MutableRefObject<T>;
 export type ReactRef<T> = React.RefObject<T>;
+
 export type CSSStyles = React.CSSProperties;
+
+export type HTMLEvent = keyof HTMLElementEventMap;
+export type WindowEvent = keyof WindowEventMap;
 
 export type WindowSize = [width: number, height: number];
 
@@ -71,7 +75,7 @@ export interface EventSubscription {
 export interface StepConfig {
     className?: string,
     blockNextStep?: (stepState: StepState) => boolean,
-    nextStepBlockedWarning?: () => string, // "you must fulfill all conditions on this step to continue || you still have unfulfilled conditions on this step"
+    nextStepBlockedError?: () => string,
     iconType?: IconType
     // NOTE: stepIDs should be unique and NOT generated from array index
     ID: number | string,

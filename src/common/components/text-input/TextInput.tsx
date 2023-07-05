@@ -1,5 +1,7 @@
+import useNotification from "@/common/hooks/useNotification";
 import { ReactInputOnChangeEvent, Size, TextInputState } from "@/common/types";
 import { onEnterPress } from "@/common/utils/utils";
+import { TEXT_INPUT_INVALID_ID } from "@/common/utils/constants";
 import { useRef, useState } from "react";
 
 import "./TextInput.scss";
@@ -11,7 +13,7 @@ interface Props {
     showFlareOnInvalidInput?: boolean,
     size?: Size,
     title?: string,
-    validator?: (value: string) => boolean
+    validator?: (value: string) => { valid: boolean, errorMsg: string }
 };
 
 const DEFAULT_INITIAL_VALUE = "";
@@ -29,16 +31,19 @@ const TextInput = (props: Props) => {
         validator
     } = props;
 
-
     const [value, setValue] = useState<string>(defaultValue);
     const inputRef = useRef<HTMLInputElement>(null);
+    const { error } = useNotification();
 
     const onInputChange = (event: ReactInputOnChangeEvent) => {
         const input = event.target.value;
 
         if (input !== value) {
-            if (validator && !validator(input)) {
-                if (showFlareOnInvalidInput) console.log("value invalid warning flare!");
+            if (validator) {
+                const { valid, errorMsg } = validator(input);
+
+                if (!valid && showFlareOnInvalidInput)
+                    error(errorMsg, { toastId: TEXT_INPUT_INVALID_ID })
 
                 return;
             }
