@@ -1,12 +1,12 @@
 import { CustomIconMap, FontAwesomeIconMap } from "@/common/components/icon/IconTypes";
-import { CSSStyles, IconType, isCustomIconType, isFontAwesomeIconType, PlainFn, ReactKeyboardEvent, Size } from "@/common/types";
+import { CSSStyles, IconType, isCustomIconType, isFontAwesomeIconType, ReactDivOnClickEvent, ReactKeyboardEvent, Size } from "@/common/types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./Icon.scss";
 
 interface Props {
     className?: string,
-    onClick?: PlainFn,
+    onClick?: (event: ReactDivOnClickEvent) => void,
     onKeyDown?: (event: ReactKeyboardEvent) => void,
     size?: Size,
     style?: CSSStyles,

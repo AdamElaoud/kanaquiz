@@ -1,0 +1,38 @@
+@use "sass:color" as color;
+@use "../styles/index" as *;
+
+:root {
+    --toastify-color-info: #{color.adjust($active, $saturation: $notificationSaturationDrop)};
+    --toastify-color-success: #{color.adjust($complete, $saturation: $notificationSaturationDrop)};
+    --toastify-color-warning: #{color.adjust($gold, $saturation: $notificationSaturationDrop)};
+    --toastify-color-error: #{color.adjust($crimson, $saturation: $notificationSaturationDrop)};
+
+    --toastify-toast-min-height: 5rem;
+}
+
+.Toastify__toast-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+
+    .Toastify__toast {
+        @extend %rounded-border;
+        align-items: center;
+        display: flex;
+        max-height: 12rem;
+
+        .Toastify__toast-body {
+            padding: 0;
+        }
+    }
+}
+
+
+$ToastContainerDefaultWidthThreshhold: 480px;
+@media (max-width: $ToastContainerDefaultWidthThreshhold) {
+    .Toastify__toast-container {
+        top: 1em;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

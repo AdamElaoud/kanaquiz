@@ -23,6 +23,7 @@ export type ReactButtonOnClick = React.MouseEventHandler<HTMLButtonElement>;
 export type ReactButtonOnClickEvent = React.MouseEvent<HTMLButtonElement, MouseEvent>;
 export type ReactDivOnClick = React.MouseEventHandler<HTMLDivElement>;
 export type ReactDivOnClickEvent = React.MouseEvent<HTMLDivElement, MouseEvent>;
+export type ReactOnClickEvent = React.MouseEvent<HTMLElement, MouseEvent>;
 export type ReactMouseEvent = React.MouseEvent;
 export type ReactNode = React.ReactNode;
 export type ReactElement = React.ReactElement;
@@ -102,11 +103,14 @@ export enum FontAwesomeIconType {
     Check = "check",
     CircleArrowLeft = "circleArrowLeft",
     CircleArrowRight = "circleArrowRight",
+    CircleCheck = "circleCheck",
     Delete = "delete",
     Dojo = "dojo",
     Down = "down",
+    Error = "error",
     FlagCheckered = "flagCheckered",
     Gear = "gear",
+    Info = "info",
     Keyboard = "keyboard",
     NumberList = "numberList",
     Pencil = "pencil",
@@ -116,6 +120,7 @@ export enum FontAwesomeIconType {
     Tap = "tap",
     Torii = "torii",
     Up = "up",
+    Warning = "warning",
     X = "x"
 };
 export type FontAwesomeIconMapType = {

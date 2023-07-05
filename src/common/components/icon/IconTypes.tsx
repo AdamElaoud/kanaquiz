@@ -10,6 +10,9 @@ import {
     faCheck,
     faCircleArrowLeft,
     faCircleArrowRight,
+    faCircleCheck,
+    faCircleExclamation,
+    faCircleInfo,
     faClipboardQuestion,
     faFlagCheckered,
     faGear,
@@ -22,6 +25,7 @@ import {
     faQuestion,
     faToriiGate,
     faTrash,
+    faTriangleExclamation,
     faVihara,
     faXmark,
 } from "@fortawesome/free-solid-svg-icons";
@@ -35,6 +39,9 @@ export const FontAwesomeIconMap: FontAwesomeIconMapType = {
     "check": faCheck,
     "circleArrowLeft": faCircleArrowLeft,
     "circleArrowRight": faCircleArrowRight,
+    "circleCheck": faCircleCheck,
+    "error": faCircleExclamation,
+    "info": faCircleInfo,
     "clipboardQuestion": faClipboardQuestion,
     "delete": faTrash,
     "dojo": faVihara,
@@ -50,6 +57,7 @@ export const FontAwesomeIconMap: FontAwesomeIconMapType = {
     "tap": faHandPointer,
     "torii": faToriiGate,
     "up": faCaretUp,
+    "warning": faTriangleExclamation,
     "x": faXmark,
 };
 
