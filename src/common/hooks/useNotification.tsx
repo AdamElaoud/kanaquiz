@@ -19,7 +19,7 @@ export const NotificationCenter = (props: ToastContainerProps) : JSX.Element => 
 
     return (
         <ToastContainer
-            autoClose = {2000}
+            autoClose = {5000}
             closeButton = {ToastCloseButton}
             closeOnClick
             draggable

@@ -1,12 +1,12 @@
+import useNotification from "@/common/hooks/useNotification";
 import { Direction, FontAwesomeIconType, IconType, NumberInputState, ReactInputOnChangeEvent, Size } from "@/common/types";
+import { NUMBER_INPUT_MAXIMUM, NUMBER_INPUT_MAXIMUM_ID, NUMBER_INPUT_MINIMUM, NUMBER_INPUT_MINIMUM_ID } from "@/common/utils/constants";
 import { onEnterPress } from "@/common/utils/utils";
 import { useRef, useState } from "react";
 
 import { Icon } from "..";
 
 import "./NumberInput.scss";
-import useNotification from "@/common/hooks/useNotification";
-import { NUMBER_INPUT_MAXIMUM, NUMBER_INPUT_MAXIMUM_ID, NUMBER_INPUT_MINIMUM_ID } from "@/common/utils/constants";
 
 interface Props {
     buttonIcons?: [downIcon: IconType, upIcon: IconType],
@@ -51,7 +51,7 @@ const NumberInput = (props: Props) => {
         if (input !== value) {
             if (min && input < min) {
                 if (showFlareOnInvalidInput)
-                    error(NUMBER_INPUT_MAXIMUM(min), { toastId: NUMBER_INPUT_MINIMUM_ID });
+                    error(NUMBER_INPUT_MINIMUM(min), { toastId: NUMBER_INPUT_MINIMUM_ID });
 
                 return;
             }
@@ -73,7 +73,7 @@ const NumberInput = (props: Props) => {
 
         if (min && newValue < min) {
             if (showFlareOnInvalidInput)
-                    error(NUMBER_INPUT_MAXIMUM(min), { toastId: NUMBER_INPUT_MINIMUM_ID });
+                    error(NUMBER_INPUT_MINIMUM(min), { toastId: NUMBER_INPUT_MINIMUM_ID });
 
             return;
         };

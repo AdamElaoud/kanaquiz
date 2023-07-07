@@ -1,7 +1,7 @@
 import useNotification from "@/common/hooks/useNotification";
 import { ReactInputOnChangeEvent, Size, TextInputState } from "@/common/types";
-import { onEnterPress } from "@/common/utils/utils";
 import { TEXT_INPUT_INVALID_ID } from "@/common/utils/constants";
+import { onEnterPress } from "@/common/utils/utils";
 import { useRef, useState } from "react";
 
 import "./TextInput.scss";

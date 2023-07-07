@@ -1,11 +1,11 @@
+import useNotification from "@/common/hooks/useNotification";
 import { CSSStyles, FontAwesomeIconType, PlainFn, Side, StepConfig, StepState } from "@/common/types";
+import { DEFAULT_STEP_WIZARD_NEXT_STEP_BLOCKED, STEP_WIZARD_NEXT_STEP_BLOCKED_ID } from "@/common/utils/constants";
 import { useState } from "react";
 
 import { Button, StepDisplay } from "..";
 
 import "./StepWizard.scss";
-import useNotification from "@/common/hooks/useNotification";
-import { DEFAULT_STEP_WIZARD_NEXT_STEP_BLOCKED, STEP_WIZARD_NEXT_STEP_BLOCKED_ID } from "@/common/utils/constants";
 
 interface Props {
     className?: string,
