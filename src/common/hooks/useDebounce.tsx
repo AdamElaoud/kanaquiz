@@ -1,18 +1,13 @@
 import { GenericFn } from "@/common/types";
 import { debounce } from "debounce";
-import { useEffect, useMemo, useRef } from "react";
+import { useCallback, useMemo } from "react";
 
 const useDebounce = <T, V>(callbackFn: GenericFn<T, V>, delay = 1000) => {
-    const callbackRef = useRef<GenericFn<T, V>>(callbackFn);
-
-  useEffect(() => {
-    callbackRef.current = callbackFn;
-    
-  }, [callbackFn]);
+  const memoizedCallback = useCallback(callbackFn, [callbackFn]);
 
   const debouncedCallbackFn = useMemo(() => {
-    return debounce((...args: T[]) => callbackRef.current(...args), delay);
-  }, [delay]);
+    return debounce((...args: T[]) => memoizedCallback(...args), delay);
+  }, [delay, memoizedCallback]);
 
   return debouncedCallbackFn;
 };
