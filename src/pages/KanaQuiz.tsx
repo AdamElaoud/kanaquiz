@@ -42,7 +42,6 @@ const KanaQuiz = () : JSX.Element => {
     }, [isMultChoice]);
 
     const onInputChange = useDebounce<TextInputState, void>(({ newValue }) => {
-        // if user input is at least 2 characters long, focus next input
         if (newValue.length > 0) {
             const currentInputIndex = textInputRefs.current?.findIndex(ele => ele === document.activeElement);
 

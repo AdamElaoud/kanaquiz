@@ -9,7 +9,7 @@ import "./TextInput.scss";
 interface Props {
     defaultValue?: string,
     name: string,
-    onChange?: (inputState: TextInputState) => void,
+    onChange: (inputState: TextInputState) => void | string,
     showFlareOnInvalidInput?: boolean,
     size?: Size,
     title?: string,
@@ -48,10 +48,9 @@ const TextInput = (props: Props) => {
                 return;
             }
 
-            if (onChange)
-                onChange({ prevValue: value, newValue: input });
+            const handledValue = onChange({ prevValue: value, newValue: input });
 
-            setValue(input);
+            setValue(handledValue || input);
         }
     };
 

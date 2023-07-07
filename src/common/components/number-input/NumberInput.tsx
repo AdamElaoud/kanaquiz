@@ -14,7 +14,7 @@ interface Props {
     max?: number,
     min?: number,
     name: string,
-    onChange: (inputState: NumberInputState) => void,
+    onChange: (inputState: NumberInputState) => void | number,
     showButtons?: boolean,
     showFlareOnInvalidInput?: boolean,
     size?: Size,
@@ -63,8 +63,8 @@ const NumberInput = (props: Props) => {
                 return;
             }
 
-            onChange({ prevValue: value, newValue: input || min || 0 });
-            setValue(input);
+            const handledValue = onChange({ prevValue: value, newValue: input || min || defaultValue|| 0 });
+            setValue(handledValue || input);
         }
     };
 
@@ -79,14 +79,14 @@ const NumberInput = (props: Props) => {
         };
 
         if (max && newValue > max) {
-                if (showFlareOnInvalidInput)
-                    error(NUMBER_INPUT_MAXIMUM(max), { toastId: NUMBER_INPUT_MAXIMUM_ID });
-                
-                return;
-            }
+            if (showFlareOnInvalidInput)
+                error(NUMBER_INPUT_MAXIMUM(max), { toastId: NUMBER_INPUT_MAXIMUM_ID });
+            
+            return;
+        }
 
-        onChange({ prevValue: value, newValue });
-        setValue(prevValue => prevValue + direction);
+        const handledValue = onChange({ prevValue: value, newValue });
+        setValue(prevValue => handledValue || (prevValue + direction));
     };
 
     // blur to hide mobile keyboards on submission
