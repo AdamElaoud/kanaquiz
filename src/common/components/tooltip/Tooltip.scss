@@ -1,0 +1,19 @@
+@use "../../styles/index" as *;
+
+// need to combine classes for increased specificity
+// to override poorly structured defaults
+.react-tooltip.tooltip {
+    @include padding(1.75);
+    @extend %rounded-border;
+    background-color: $lightBlack;
+    font-size: $tooltipFontSize;
+    max-width: max(20vw, 20rem);
+    opacity: 1;
+
+    $arrowSize: 1rem;
+    .tooltip-arrow {
+        width: $arrowSize;
+        height: $arrowSize;
+        transform: rotate(45deg);
+    }
+}

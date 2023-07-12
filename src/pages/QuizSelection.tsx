@@ -57,6 +57,9 @@ const QuizSelection = () : JSX.Element => {
         { content: "Choose", onClick: () => updateQuizSelectionField("format", QuizFormat.MultipleChoice) }
     ];
 
+    const directionTooltip = 'when studying words, translation direction is locked to "Japanese to English"';
+    const formatTooltip = 'when studying words, answer format is locked to "Write"';
+
     const wordsIsSelectedTopic = quizSelections.topic === QuizTopic.Words;
 
     return (
@@ -70,7 +73,7 @@ const QuizSelection = () : JSX.Element => {
                 <QuizSelectionSection title = "Topic">
                     <ToggleButton buttons = {topicToggleButtons} defaultActiveSide = {defaultTopicSide}/>
                 </QuizSelectionSection>
-                <QuizSelectionSection title = "Translate" helpTooltip = "blank">
+                <QuizSelectionSection title = "Translate" helpTooltip = {directionTooltip}>
                     <DirectionToggle 
                         key = {`direction-selection-${quizSelections.topic}`}
                         content = {directionToggleButtons}
@@ -79,7 +82,7 @@ const QuizSelection = () : JSX.Element => {
                         onToggle = {onDirectionChange}
                     />
                 </QuizSelectionSection>
-                <QuizSelectionSection title = "Answer" helpTooltip = "blank">
+                <QuizSelectionSection title = "Answer" helpTooltip = {formatTooltip}>
                     <ToggleButton
                         key = {`format-selection-${quizSelections.topic}`}
                         buttons = {formatToggleButtons}

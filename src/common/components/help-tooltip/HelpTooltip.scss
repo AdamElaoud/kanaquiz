@@ -3,4 +3,8 @@
 .help-tooltip {
     background-color: $richGray;
     font-size: 1.25rem;
+
+    &.disabled {
+        opacity: $disabledOpacity;
+    }
 }

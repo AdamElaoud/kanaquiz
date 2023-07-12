@@ -1,4 +1,4 @@
-import { StepCarousel } from '@/common/components';
+import { StepWizard } from '@/common/components';
 import useDynamicWidth from '@/common/hooks/useDynamicWidth';
 import useLocalStorage from '@/common/hooks/useLocalStorage';
 import useNotification, { NotificationCenter } from '@/common/hooks/useNotification';
@@ -136,7 +136,7 @@ const App = () : JSX.Element => {
                                     {PAGES[page]()}
                                 </div>
                                 
-                                {!isInQuiz && <StepCarousel
+                                {!isInQuiz && <StepWizard
                                     key = {carouselKey.toString()}
                                     className = "page-carousel"
                                     completeConfig = {wizardCompleteConfig}

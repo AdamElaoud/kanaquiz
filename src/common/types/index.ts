@@ -19,6 +19,21 @@ export enum Direction {
     Down = -1
 };
 
+export enum Position {
+    BottomCenter = "bottom",
+    BottomEnd = "bottom-end",
+    BottomStart = "bottom-start",
+    LeftCenter = "left",
+    LeftEnd = "left-end",
+    LeftStart = "left-start",
+    RightCenter = "right",
+    RightEnd = "right-end",
+    RightStart = "right-start",
+    TopCenter = "top",
+    TopEnd = "top-end",
+    TopStart = "top-start",
+}
+
 export type ReactButtonOnClick = React.MouseEventHandler<HTMLButtonElement>;
 export type ReactButtonOnClickEvent = React.MouseEvent<HTMLButtonElement, MouseEvent>;
 export type ReactDivOnClick = React.MouseEventHandler<HTMLDivElement>;

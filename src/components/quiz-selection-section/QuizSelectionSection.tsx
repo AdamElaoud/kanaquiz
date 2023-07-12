@@ -20,7 +20,7 @@ const QuizSelectionSection = (props: Props) : JSX.Element => {
         <div className = "quiz-selection-section">
             <span className = "section-title">
                 <span>{title}</span>
-                {helpTooltip && <HelpTooltip tooltip = {helpTooltip}/>}
+                {helpTooltip && <HelpTooltip id = {`${title}-help-tooltip`} tooltip = {helpTooltip}/>}
             </span>
             
             <span className = "section-content">

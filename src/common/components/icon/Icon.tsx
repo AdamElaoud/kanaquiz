@@ -6,6 +6,7 @@ import "./Icon.scss";
 
 interface Props {
     className?: string,
+    id?: string,
     onClick?: (event: ReactDivOnClickEvent) => void,
     onKeyDown?: (event: ReactKeyboardEvent) => void,
     size?: Size,
@@ -17,7 +18,7 @@ interface Props {
 const DEFAULT_ICON_SIZE = Size.Medium;
 
 const Icon = (props: Props) : JSX.Element => {
-    const { className, onClick, onKeyDown, size = DEFAULT_ICON_SIZE, style, tabIndex, type } = props;
+    const { className, id, onClick, onKeyDown, size = DEFAULT_ICON_SIZE, style, tabIndex, type } = props;
     
     const classes = ["icon", size];
     if (className) classes.push(className);
@@ -26,7 +27,7 @@ const Icon = (props: Props) : JSX.Element => {
         const fontAwesomeIconType = FontAwesomeIconMap[type];
 
         return (
-            <div className = {classes.join(" ")} onClick = {onClick} onKeyDown = {onKeyDown} style = {style} tabIndex = {tabIndex}>
+            <div id = {id} className = {classes.join(" ")} onClick = {onClick} onKeyDown = {onKeyDown} style = {style} tabIndex = {tabIndex}>
                 <FontAwesomeIcon icon = {fontAwesomeIconType} />
             </div>
         );
@@ -37,7 +38,7 @@ const Icon = (props: Props) : JSX.Element => {
         const content = isImage ? <img src = {src} alt = {text}/> : text
 
         return (
-            <div className = {classes.join(" ")} onClick = {onClick} onKeyDown = {onKeyDown} style = {style} tabIndex = {tabIndex}>
+            <div id = {id} className = {classes.join(" ")} onClick = {onClick} onKeyDown = {onKeyDown} style = {style} tabIndex = {tabIndex}>
                 {content}
             </div>
         );
