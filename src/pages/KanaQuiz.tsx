@@ -54,11 +54,9 @@ const KanaQuiz = () : JSX.Element => {
 
     const checkAnswer = (response: string) => () => {
         if (response === activeQuestion.answer) {
-            console.log("correct!");
             setCorrectCount(count => count + 1);
 
         } else {
-            console.log("incorrect!");
             setIncorrectCount(count => count + 1);
         }
     };

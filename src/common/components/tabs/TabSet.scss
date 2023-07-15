@@ -1,30 +1,5 @@
-@use "../../styles/index" as *;
-@use "./TabHeader.scss" as *;
-
 .tabset {
     height: 100%;
     position: relative;
     width: 100%;
-    
-    .tab-headers {
-        display: flex;
-        flex-direction: row;
-        height: $tabHeaderHeight;
-        left: 0;
-        max-width: 100%;
-        overflow-x: auto;
-        position: absolute;
-        top: 0;
-    }
-
-    .tab-content {
-        @extend %rounded-border;
-        @extend %padding;
-        background-color: $darkNavy;
-        border-top-left-radius: 0;
-        display: flex;
-        flex-direction: column;
-        height: calc(100% - $tabHeaderHeight);
-        margin-top: $tabHeaderHeight;
-    }
 }

@@ -1,70 +1,64 @@
-import { TabHeader } from "@/common/components";
-import { ReactElement, TabState } from "@/common/types";
-import { Children, useMemo, useState } from "react";
+import { BasicID, PlainFn, ReactNode, TabConfig, TabState } from "@/common/types";
+import { createContext, useState } from "react";
 
 import "./TabSet.scss";
 
+type TabSetContextType = {
+    activeTabIndex: number,
+    onTabHeaderClick: (newTabIndex: number) => PlainFn,
+    tabs: TabConfig[]
+};
+
+export const TabSetContext = createContext<TabSetContextType>({} as TabSetContextType);
+
 interface Props {
-    children: ReactElement[],
-    className?: string
+    children: ReactNode,
+    className?: string,
     onTabChange?: (tabState: TabState) => void,
-    startingTabID?: number,
+    startingTabID?: BasicID,
+    tabs: TabConfig[]
 };
 
 const DEFAULT_STARTING_TAB_INDEX = 0;
 
-const TabSet = (props: Props) : JSX.Element => {
-    const { children, className, onTabChange, startingTabID = children[0].props.tabID } = props;
+const TabSet = (props: Props) => {
+    const { children, className, onTabChange, startingTabID, tabs } = props;
 
     const [activeTabIndex, setActiveTabIndex] = useState<number>(() => {
-        const tabIDs = Children.map(children, tab => tab.props.tabID);
-
-        const tabIndex = tabIDs.findIndex(ID => ID === startingTabID);
+        const tabIndex = tabs.findIndex(tab => tab.ID === startingTabID);
 
         return tabIndex === -1 ? DEFAULT_STARTING_TAB_INDEX : tabIndex;
     });
-
-    const tabHeaderData = useMemo(() => {
-        return Children.map(children, (tab: ReactElement, index: number) => {
-            const { icon, iconSize, tabID, title } = tab.props;
-
-            return {
-                ...(icon && { icon }),
-                ...(iconSize && { iconSize }),
-                key: tabID,
-                tabIndex: index,
-                ...(title && { title }),
-            };
-        });
-
-    }, [children]);
 
     const onTabHeaderClick = (newTabIndex: number) => () => {
         if (newTabIndex !== activeTabIndex) {
             if (onTabChange)
                 onTabChange({
                     prevTabIndex: activeTabIndex,
-                    prevTabTitle: tabHeaderData[activeTabIndex].title,
+                    prevTabTitle: tabs[activeTabIndex].title,
                     newTabIndex: newTabIndex,
-                    newTabTitle: tabHeaderData[newTabIndex].title
+                    newTabTitle: tabs[newTabIndex].title
                 });
     
             setActiveTabIndex(newTabIndex);
         }
     };
 
-    let classes = "tabset";
-    if (className) classes += ` ${className}`;
+    const value: TabSetContextType = {
+        activeTabIndex,
+        onTabHeaderClick,
+        tabs
+    };
+
+    const classes = ["tabset"];
+    if (className) classes.push(className);
 
     return (
-        <div className = {classes}>
-            <nav className = "tab-headers">
-                {tabHeaderData.map(data => <TabHeader changeTab = {onTabHeaderClick} isActiveTab = {activeTabIndex === data.tabIndex} {...data}/>)}
-            </nav>
-            <main className = "tab-content">
-                {children[activeTabIndex]}
-            </main>
-        </div>
+        <TabSetContext.Provider value = {value}>
+            <div className = {classes.join(" ")}>
+                {children}
+            </div>
+        </TabSetContext.Provider>
     );
 };
 

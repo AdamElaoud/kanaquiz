@@ -1,0 +1,34 @@
+@use "../../styles/index" as *;
+@use "./TabHeader.scss" as *;
+
+$tabPadding: 2rem;
+$tabMobilePadding: 0.75rem;
+
+.tab-content {
+    @extend %rounded-border;
+    @extend %padding;
+    background-color: $darkNavy;
+    border-top-left-radius: 0;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - $tabHeaderHeight);
+    margin-top: $tabHeaderHeight;
+
+    .tab {
+        padding: $tabPadding;
+        height: 100%;
+        column-gap: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        row-gap: 0.2rem;
+    }
+}
+
+@media (max-width: $sizeWidthThreshhold) {
+    .tab-content {
+        .tab {
+            padding: $tabMobilePadding;
+        }
+    }
+}

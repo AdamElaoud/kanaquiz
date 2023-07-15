@@ -8,8 +8,8 @@ import Searchbar from "@/common/components/searchbar/Searchbar";
 import StepWizard from "@/common/components/step-carousel/StepWizard";
 import Step from "@/common/components/step-display/Step";
 import StepDisplay from "@/common/components/step-display/StepDisplay";
-import Tab from "@/common/components/tabs/Tab";
-import TabHeader from "@/common/components/tabs/TabHeader";
+import TabContent from "@/common/components/tabs/TabContent";
+import TabHeaders from "@/common/components/tabs/TabHeaders";
 import TabSet from "@/common/components/tabs/TabSet";
 import TextInput from "@/common/components/text-input/TextInput";
 import ToggleButton from "@/common/components/toggle-button/ToggleButton";
@@ -27,8 +27,8 @@ export {
     Step,
     StepDisplay,
     StepWizard,
-    Tab,
-    TabHeader,
+    TabContent,
+    TabHeaders,
     TabSet,
     TextInput,
     ToggleButton,

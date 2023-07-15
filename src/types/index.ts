@@ -1,4 +1,4 @@
-import { ReactElement, ReactNode } from "@/common/types";
+import { ReactElementFn, ReactNodeFn } from "@/common/types";
 
 // potential future color theming
 export enum Theme {
@@ -43,10 +43,10 @@ export enum TabID {
 };
 
 export type PageMapType = {
-    [key in PageType]: () => ReactNode;
+    [key in PageType]: ReactNodeFn;
 };
 
-export type SummaryMapType =  Record<QuizTopic | QuizDirection | QuizFormat, () => ReactElement>;
+export type SummaryMapType =  Record<QuizTopic | QuizDirection | QuizFormat, ReactElementFn>;
 
 export type KanaLetters = [string, string, string];
 

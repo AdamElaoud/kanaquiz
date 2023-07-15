@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { ReactNode } from "@/common/types";
 import { WordSelectionData } from "@/types";
 import { createContext } from "react";

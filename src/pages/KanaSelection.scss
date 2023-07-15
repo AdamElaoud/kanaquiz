@@ -1,7 +1,7 @@
 @use "../styles/index" as *;
 @use "../common/styles/index" as *;
 @use "../common/components/searchbar/Searchbar.scss" as *;
-@use "../common/components/tabs/Tab.scss" as *;
+@use "../common/components/tabs/TabContent.scss" as *;
 
 .kana-selection-page {
     @extend %page;

@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { ReactNode } from "@/common/types";
 import { UpdateKanaSelectionsFn } from "@/types";
 import { createContext } from "react";

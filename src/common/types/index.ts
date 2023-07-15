@@ -58,6 +58,31 @@ export type WindowEvent = keyof WindowEventMap;
 
 export type WindowSize = [width: number, height: number];
 
+export interface EventSubscription {
+    eventKeys: Set<string>,
+    responseFn: (event: KeyboardEvent) => void
+};
+
+export interface StepConfig {
+    className?: string,
+    blockNextStep?: (stepState: StepState) => boolean,
+    nextStepBlockedError?: () => string,
+    iconType?: IconType
+    // NOTE: stepIDs should be unique and NOT generated from array index
+    ID: BasicID,
+    text?: string,
+    title: BasicID,
+};
+
+export interface TabConfig {
+    className?: string,
+    content: ReactNodeFn,
+    iconType?: IconType,
+    iconSize?: Size,
+    // NOTE: tabIDs should be unique and NOT generated from array index
+    ID: BasicID,
+    title?: string | ReactElementFn
+};
 export interface ItemConfig {
     className?: string,
     content: string | ReactElement,
@@ -70,33 +95,23 @@ export type PlainFn = () => void;
 
 export type GenericFn<T, V> = (...args: T[]) => V;
 
+export type ReactNodeFn = () => ReactNode;
+
+export type ReactElementFn = () => ReactElement;
+
 export type NotificationFn = (content: ToastContent, options?: ToastOptions) => Id;
 
-export type StepState = { prevStepID: number | string, prevStepTitle: number | string, newStepID: number | string, newStepTitle: number | string };
+export type StepState = { prevStepID: BasicID, prevStepTitle: BasicID, newStepID: BasicID, newStepTitle: BasicID };
 
-export type TabState = { prevTabIndex: number, prevTabTitle: string, newTabIndex: number, newTabTitle: string };
+export type TabState = { prevTabIndex: number, prevTabTitle?: string | ReactElementFn, newTabIndex: number, newTabTitle?: string | ReactElementFn };
+
+export type BasicID = number | string;
 
 export type NumberInputState = { prevValue: number, newValue: number };
 
 export type TextInputState = { prevValue: string, newValue: string };
 
 export type MouseClickState = { event: MouseEvent, previousClickTarget: HTMLElement | null, nextClickTarget: HTMLElement };
-
-export interface EventSubscription {
-    eventKeys: Set<string>,
-    responseFn: (event: KeyboardEvent) => void
-};
-
-export interface StepConfig {
-    className?: string,
-    blockNextStep?: (stepState: StepState) => boolean,
-    nextStepBlockedError?: () => string,
-    iconType?: IconType
-    // NOTE: stepIDs should be unique and NOT generated from array index
-    ID: number | string,
-    text?: string,
-    title: number | string,
-};
 
 export enum CustomIconType {
     Blank = "blank",

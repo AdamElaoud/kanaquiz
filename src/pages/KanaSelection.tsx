@@ -1,7 +1,7 @@
-import { Searchbar, Tab, TabSet, ToggleButton } from "@/common/components";
+import { Searchbar, TabContent, TabHeaders, TabSet, ToggleButton } from "@/common/components";
 import useLocalStorage from "@/common/hooks/useLocalStorage";
 import useWindowSize from "@/common/hooks/useWindowSize";
-import { Side, TabState, ToggleButtonConfig } from "@/common/types";
+import { Side, TabConfig, TabState, ToggleButtonConfig } from "@/common/types";
 import KanaButtonRow from "@/components/kana-button-row/KanaButtonRow";
 import TabButtonRow from "@/components/tab-button-row/TabButtonRow";
 import TitleWithBadge from "@/components/title-with-badge/TitleWithBadge";
@@ -59,6 +59,42 @@ const KanaSelection = () : JSX.Element => {
         setSelectedTabID(newTabID);
     };
 
+    const pageTabs: TabConfig[] = [
+        {
+            title: () => <TitleWithBadge title = "Hiragana" count = {hiraganaCount}/>,
+            ID: TabID.Hiragana,
+            content: () => <>
+                <TabButtonRow groups = {hiraganaGroups.flat()} updateKanaSelections = {updateKanaSelections}/>
+                {hiraganaGroups.map((group, index) => {
+                    const groupID = hiraganaGroupIDs[index];
+                    return <KanaButtonRow key = {groupID} row = {group} groupID = {groupID}/>
+                })}
+            </>
+        },
+        {
+            title: () => <TitleWithBadge title = "Katakana" count = {katakanaCount}/>,
+            ID: TabID.Katakana,
+            content: () => <>
+                <TabButtonRow groups = {katakanaGroups.flat()} updateKanaSelections = {updateKanaSelections}/>
+                {katakanaGroups.map((group, index) => {
+                    const groupID = katakanaGroupIDs[index];
+                    return <KanaButtonRow key = {groupID} row = {group} groupID = {groupID}/>
+                })}
+            </>
+        },
+        {
+            title: () => <TitleWithBadge title = "Similar" count = {lookalikesCount}/>,
+            ID: TabID.Lookalikes,
+            content: () => <>
+                <TabButtonRow groups = {lookalikesGroups.flat()} updateKanaSelections = {updateKanaSelections}/>
+                {lookalikesGroups.map((group, index) => {
+                    const groupID = lookalikesGroupIDs[index];
+                    return <KanaButtonRow key = {groupID} row = {group} groupID = {groupID}/>
+                })}
+            </>
+        },
+    ];
+
     const displayModeToggleButtons: [ToggleButtonConfig, ToggleButtonConfig] = [
         { content: 'Kana', onClick: () => setMode(Mode.Kana) },
         { content: 'Romaji', onClick: () => setMode(Mode.Romaji) }
@@ -88,35 +124,14 @@ const KanaSelection = () : JSX.Element => {
                 <ToggleButton ref = {toggleRef} buttons = {displayModeToggleButtons} defaultActiveSide = {defaultActiveSide}/>
             </div>
 
-
-            <TabSet className = "kana-selection-tabset" onTabChange = {onTabChange} startingTabID = {selectedTabID}>
-                <Tab title = {<TitleWithBadge title = "Hiragana" count = {hiraganaCount}/>} tabID = {TabID.Hiragana}>
-                    <>
-                        <TabButtonRow groups = {hiraganaGroups.flat()} updateKanaSelections = {updateKanaSelections}/>
-                        {hiraganaGroups.map((group, index) => {
-                            const groupID = hiraganaGroupIDs[index];
-                            return <KanaButtonRow key = {groupID} row = {group} groupID = {groupID}/>
-                        })}
-                    </>
-                </Tab>
-                <Tab title = {<TitleWithBadge title = "Katakana" count = {katakanaCount}/>} tabID = {TabID.Katakana}>
-                    <>
-                        <TabButtonRow groups = {katakanaGroups.flat()} updateKanaSelections = {updateKanaSelections}/>
-                        {katakanaGroups.map((group, index) => {
-                            const groupID = katakanaGroupIDs[index];
-                            return <KanaButtonRow key = {groupID} row = {group} groupID = {groupID}/>
-                        })}
-                    </>
-                </Tab>
-                <Tab title = {<TitleWithBadge title = "Similar" count = {lookalikesCount}/>} tabID = {TabID.Lookalikes}>
-                    <>
-                        <TabButtonRow groups = {lookalikesGroups.flat()} updateKanaSelections = {updateKanaSelections}/>
-                        {lookalikesGroups.map((group, index) => {
-                            const groupID = lookalikesGroupIDs[index];
-                            return <KanaButtonRow key = {groupID} row = {group} groupID = {groupID}/>
-                        })}
-                    </>
-                </Tab>
+            <TabSet
+                className = "kana-selection-tabset"
+                tabs = {pageTabs}
+                onTabChange = {onTabChange}
+                startingTabID = {selectedTabID}
+            >
+                <TabHeaders />
+                <TabContent />
             </TabSet>
         </div>
     );

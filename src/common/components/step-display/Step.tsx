@@ -1,4 +1,4 @@
-import { CustomIconType, FontAwesomeIconType, IconType, Size } from "@/common/types";
+import { BasicID, CustomIconType, FontAwesomeIconType, IconType, Size } from "@/common/types";
 
 import { Icon } from "..";
 
@@ -10,7 +10,7 @@ interface Props {
     complete?: boolean,
     iconType?: IconType,
     showCheckOnComplete?: boolean,
-    title: number | string,
+    title: BasicID,
 };
 
 const DEFAULT_ICON_TYPE = CustomIconType.Blank;

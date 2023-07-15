@@ -1,5 +1,5 @@
 import useNotification from "@/common/hooks/useNotification";
-import { CSSStyles, FontAwesomeIconType, PlainFn, Side, StepConfig, StepState } from "@/common/types";
+import { BasicID, CSSStyles, FontAwesomeIconType, PlainFn, Side, StepConfig, StepState } from "@/common/types";
 import { DEFAULT_STEP_WIZARD_NEXT_STEP_BLOCKED, STEP_WIZARD_NEXT_STEP_BLOCKED_ID } from "@/common/utils/constants";
 import { useState } from "react";
 
@@ -16,7 +16,7 @@ interface Props {
     },
     onStepChange?: (stepState: StepState) => void,
     showCheckOnComplete?: boolean,
-    startingStepID?: number | string,
+    startingStepID?: BasicID,
     steps: StepConfig[],
     style: CSSStyles
 };
@@ -31,7 +31,7 @@ const StepWizard = (props: Props) : JSX.Element => {
         onStepChange,
         showCheckOnComplete,
         steps,
-        startingStepID = steps[0].ID,
+        startingStepID,
         style
     } = props;
 
