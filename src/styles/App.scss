@@ -78,7 +78,7 @@ html {
         }
     }
 
-    .page-carousel {
+    .page-wizard {
         bottom: 0;
         height: 8%;
         position: sticky;
@@ -97,23 +97,24 @@ html {
             }
         }
     
-        .page-carousel {
+        .page-wizard {
             height: 12%;
         }
     }
 }
 
 @media (max-height: $landscapeMobileHeightThreshhold) {
-    .app {        
+    .app {
         .page {
             height: calc(82% - $headerHeight - $headerSpacing);
+            margin-bottom: 2%;
 
             &.is-in-quiz {
                 height: 100%;
             }
         }
     
-        .page-carousel {
+        .page-wizard {
             height: 18%;
         }
     }

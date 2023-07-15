@@ -138,7 +138,7 @@ const App = () : JSX.Element => {
                                 
                                 {!isInQuiz && <StepWizard
                                     key = {carouselKey.toString()}
-                                    className = "page-carousel"
+                                    className = "page-wizard"
                                     completeConfig = {wizardCompleteConfig}
                                     steps = {pageSteps}
                                     onStepChange = {onStepChange}

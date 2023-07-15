@@ -23,7 +23,7 @@ $summaryTitleHeight: calc($mediumFontSize + ($sectionSpacing / 2));
         @extend %padding;
         background-color: $darkNavy;
         max-height: max(45%, 23.5rem);
-        min-height: 15%;
+        min-height: max(15%, 20rem);
 
         .summary-title {
             margin-bottom: calc($sectionSpacing / 2);
