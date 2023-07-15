@@ -91,6 +91,7 @@ export type Question = {
 export interface KanaButtonProps {
     className?: string,
     disableOnClick?: boolean,
+    id: string,
     isSearchTarget?: boolean,
     letters: KanaLetters
 };

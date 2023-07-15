@@ -4,7 +4,7 @@
 :root {
     --toastify-color-info: #{color.adjust($active, $saturation: $notificationSaturationDrop)};
     --toastify-color-success: #{color.adjust($complete, $saturation: $notificationSaturationDrop)};
-    --toastify-color-warning: #{color.adjust($gold, $saturation: $notificationSaturationDrop)};
+    --toastify-color-warning: #{color.adjust($gold, $saturation: calc($notificationSaturationDrop - 10%))};
     --toastify-color-error: #{color.adjust($crimson, $saturation: $notificationSaturationDrop)};
 
     --toastify-toast-min-height: 5rem;

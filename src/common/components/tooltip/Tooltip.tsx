@@ -1,11 +1,11 @@
 import { CSSStyles, Position, ReactElement } from "@/common/types";
-import { Tooltip as ReactTooltip, removeStyle } from "react-tooltip";
+import { Tooltip as ReactTooltip, removeStyle, ITooltip } from "react-tooltip";
 
 import "./Tooltip.scss";
 
 interface Props {
-    anchorSelector?: string,
-    children?: string | ReactElement,
+    anchorSelector: string,
+    children: string | ReactElement,
     className?: string,
     delayHide?: number,
     delayShow?: number,
@@ -57,12 +57,12 @@ const Tooltip = (props: Props) : JSX.Element => {
     const tooltipClasses = ['tooltip'];
     if (className) tooltipClasses.push(className);
 
-    const tooltipProps = {
+    const tooltipProps: ITooltip = {
         anchorSelect: anchorSelector,
         className: tooltipClasses.join(" "),
         classNameArrow: "tooltip-arrow",
         clickable: interactable,
-        closeOnEsc: true,
+        closeOnEsc: openOnClick,
         delayHide,
         delayShow,
         float: followMouse,
@@ -86,3 +86,31 @@ const Tooltip = (props: Props) : JSX.Element => {
 removeStyle();
 
 export default Tooltip;
+
+
+/**
+ * Requirements:
+ * 
+ * - position
+ * - showDelay
+ * - hideDelay
+ * - delay (for both)
+ * - showAnimation
+ * - hideAnimation
+ * - animation (for both)
+ * - show via:
+ *     - hover
+ *     - click (mouse, pointer, touch)
+ *     - press and hold (set delay - useLongPress?)
+ * - interactable
+ * - hideArrow
+ * - isOpen
+ * - gap / offset
+ * - className
+ * - style
+ * - disabled
+ * - closeOnEsc
+ * - anchor (HTMLElement | ReactRef<HTMLElement> ?)
+ * - children (content)
+ * 
+ */

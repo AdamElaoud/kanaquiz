@@ -1,4 +1,4 @@
-import { Button } from "@/common/components";
+import { Button, Tooltip } from "@/common/components";
 import useKanaSelections from "@/hooks/useKanaSelections";
 import useMode from "@/hooks/useMode";
 import { KanaButtonProps, Mode } from "@/types";
@@ -11,6 +11,7 @@ const KanaButton = (props: KanaButtonProps) : JSX.Element => {
     const {
         className,
         disableOnClick = DEFAULT_DISABLE_ON_CLICK,
+        id,
         isSearchTarget,
         letters 
     } = props;
@@ -32,10 +33,17 @@ const KanaButton = (props: KanaButtonProps) : JSX.Element => {
             updateKanaSelections([letters[Mode.ID]]);
     };
 
+    const oppositeMode = mode === Mode.Kana ? Mode.Romaji : Mode.Kana;
+
     return (
-        <Button className = {classes.join(" ")} onClick = {onClick}>
-            {letters[mode]}
-        </Button>
+        <>
+            <Button id = {id} className = {classes.join(" ")} onClick = {onClick}>
+                {letters[mode]}
+            </Button>
+            <Tooltip anchorSelector = {`#${id}`} delayShow = {500}>
+                {letters[oppositeMode]}
+            </Tooltip>
+        </>
     );
 };
 

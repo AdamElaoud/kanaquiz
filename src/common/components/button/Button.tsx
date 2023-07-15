@@ -10,6 +10,7 @@ interface Props {
     iconType?: IconType,
     iconSide?: Side,
     iconSize?: Size,
+    id?: string,
     onClick: PlainFn
 };
 
@@ -17,14 +18,14 @@ const DEFAULT_ICON_SIDE = Side.Left;
 const DEFAULT_DISABLED_SETTING = false;
 
 const Button = (props: Props) : JSX.Element => {
-    const { children, className, disabled, iconType, iconSide = DEFAULT_ICON_SIDE, iconSize, onClick } = props;
+    const { children, className, disabled, iconType, iconSide = DEFAULT_ICON_SIDE, iconSize, id, onClick } = props;
 
     const classes = className ? `button ${className}` : "button";
 
     const displayIcon = iconType && <Icon size = {iconSize} type = {iconType} />;
 
     return (
-        <button className = {classes} disabled = {disabled || DEFAULT_DISABLED_SETTING} onClick = {onClick}>
+        <button id = {id} className = {classes} disabled = {disabled || DEFAULT_DISABLED_SETTING} onClick = {onClick}>
             {iconSide === Side.Left && displayIcon}
             {children}
             {iconSide === Side.Right && displayIcon}

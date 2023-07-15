@@ -52,6 +52,7 @@ const KanaButtonRow = (props: Props) : JSX.Element => {
                 const kanaButtonProps: Pick<KanaButtonProps, keyof KanaButtonProps> & { key: string } = {
                     key,
                     disableOnClick,
+                    id: key,
                     isSearchTarget: searchQueries?.includes(letters[Mode.Kana]) || searchQueries?.includes(letters[Mode.Romaji]),
                     letters
                 };
