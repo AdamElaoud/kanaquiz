@@ -1,4 +1,4 @@
-import { NotificationCenter, StepWizard } from '@/common/components';
+import { Modal, NotificationCenter, StepWizard } from '@/common/components';
 import useDynamicWidth from '@/common/hooks/useDynamicWidth';
 import useLocalStorage from '@/common/hooks/useLocalStorage';
 import useNotification from '@/common/hooks/useNotification';
@@ -6,12 +6,13 @@ import useWindowSize from '@/common/hooks/useWindowSize';
 import { CustomIconType, FontAwesomeIconType, StepConfig, StepState } from '@/common/types';
 import { isMobileDevice } from '@/common/utils/utils';
 import Header from '@/components/header/Header';
+import WelcomeMessage from '@/components/welcome-message/WelcomeMessage';
 import KanaSelectionsProvider from '@/contexts/KanaSelectionsContext';
 import ModeProvider from '@/contexts/ModeContext';
 import QuizSelectionsProvider from '@/contexts/QuizSelectionsContext';
 import WordSelectionsProvider from '@/contexts/WordSelectionsContext';
 import { Mode, PageType, QuizDirection, QuizFormat, QuizSelectionData, QuizTopic, WordSelectionData } from '@/types';
-import { DEFAULT_QUESTION_AMOUNT, KANA_SELECTION_STORAGE_KEY, NOT_ENOUGH_KANA, NOT_ENOUGH_WORDS, ORIENTATION_WARNING, ORIENTATION_WARNING_ID, PAGES, QUIZ_SELECTION_STORAGE_KEY, SCREEN_FILL_PERCENT, SCREEN_FILL_WIDTH, SCREEN_PARTIAL_FILL_PERCENT, SCREEN_PARTIAL_FILL_WIDTH, WORD_SELECTION_STORAGE_KEY } from '@/utils/constants';
+import { DEFAULT_QUESTION_AMOUNT, KANA_SELECTION_STORAGE_KEY, NOT_ENOUGH_KANA, NOT_ENOUGH_WORDS, ORIENTATION_WARNING, ORIENTATION_WARNING_ID, PAGES, QUIZ_SELECTION_STORAGE_KEY, SCREEN_FILL_PERCENT, SCREEN_FILL_WIDTH, SCREEN_PARTIAL_FILL_PERCENT, SCREEN_PARTIAL_FILL_WIDTH, SHOWN_WELCOME_MESSAGE_KEY, WORD_SELECTION_STORAGE_KEY } from '@/utils/constants';
 import { useLayoutEffect, useState } from "react";
 
 import '@/styles/App.scss';
@@ -20,6 +21,7 @@ const App = () : JSX.Element => {
     const [carouselKey, resetCarousel] = useState<boolean>(false);
     const [mode, setMode] = useState<Mode>(Mode.Kana);
     const [page, setPage] = useState<PageType>(PageType.QuizSelect);
+    const [shownWelcomeMessage, setShownWelcomeMessage] = useLocalStorage<boolean>(SHOWN_WELCOME_MESSAGE_KEY, false);
     const [kanaSelections, setKanaSelections] = useLocalStorage<string[]>(KANA_SELECTION_STORAGE_KEY, []);
     const [quizSelections, setQuizSelections] = useLocalStorage<QuizSelectionData>(QUIZ_SELECTION_STORAGE_KEY, {
         amount: DEFAULT_QUESTION_AMOUNT,
@@ -79,6 +81,8 @@ const App = () : JSX.Element => {
         setWordSelections(wordSelectionData);
     };
 
+    const onComplete = () => setShownWelcomeMessage(true);
+
     const onStepChange = ({ newStepID }: StepState) => {
         setPage(newStepID as PageType);
     };
@@ -126,6 +130,9 @@ const App = () : JSX.Element => {
     return (
         <>
             <NotificationCenter />
+            <Modal key = {`${shownWelcomeMessage}`} defaultOpen = {!shownWelcomeMessage} hideCloseButton = {true} onClose = {onComplete}>
+                <WelcomeMessage onComplete = {onComplete}/>
+            </Modal>
             <ModeProvider value = {{ mode, setMode }}>
                 <KanaSelectionsProvider value = {{ kanaSelections, updateKanaSelections }}>
                     <QuizSelectionsProvider value = {{ quizSelections, updateQuizSelections }}>
@@ -141,7 +148,7 @@ const App = () : JSX.Element => {
                                 </div>
                                 
                                 {!isInQuiz && <StepWizard
-                                    key = {carouselKey.toString()}
+                                    key = {`${carouselKey}`}
                                     className = "page-wizard"
                                     completeConfig = {wizardCompleteConfig}
                                     steps = {pageSteps}

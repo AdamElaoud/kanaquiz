@@ -9,6 +9,7 @@ import "./Modal.scss";
 interface Props {
     children: ReactNode,
     defaultOpen?: boolean,
+    hideCloseButton?: boolean,
     initialFocusTarget?: ReactRef<HTMLElement>,
     onClose?: PlainFn,
     style?: CSSStyles
@@ -17,7 +18,7 @@ interface Props {
 const DEFAULT_OPEN = false;
 
 const Modal = (props: Props) : JSX.Element => {
-    const { children, defaultOpen = DEFAULT_OPEN, initialFocusTarget, onClose, style } = props;
+    const { children, defaultOpen = DEFAULT_OPEN, hideCloseButton, initialFocusTarget, onClose, style } = props;
 
     const modalRef = useRef<HTMLDialogElement>(null);
     const [, windowHeight] = useWindowSize();
@@ -58,7 +59,7 @@ const Modal = (props: Props) : JSX.Element => {
             onClose = {onClose}
             onClick = {onClick}
         >
-            <Button className = "close-modal-button" onClick = {() => modalRef.current?.close()} iconType = {FontAwesomeIconType.X} />
+            {!hideCloseButton && <Button className = "close-modal-button" onClick = {() => modalRef.current?.close()} iconType = {FontAwesomeIconType.X} />}
             {children}
         </dialog>
     );

@@ -1,0 +1,49 @@
+@use "../../common/styles/index" as *;
+
+$welcomeMessageSpacing: calc($sectionSpacing * 1.5);
+
+.welcome-message-modal {
+    @include padding(3);
+    @extend %rounded-border;
+    align-items: center;
+    background-color: $darkNavy;
+    color: $darkModeTextColor;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    row-gap: 2.5rem;
+    text-align: center;
+    width: fit-content;
+    
+    .welcome-message-title {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        font-size: $largeFontSize;
+        font-weight: $fontWeightBold;
+        margin-bottom: $welcomeMessageSpacing;
+
+        $iconFontSize: 4rem;
+        $iconSize: 6rem;
+        .icon {
+            color: $crimson;
+            font-size: $iconFontSize;
+            height: $iconSize;
+            width: $iconSize;
+        }
+    }
+
+    .welcome-message-get-started {
+        color: $gold;
+    }
+
+    .close-welcome-message-button {
+        margin-top: $welcomeMessageSpacing;
+        font-weight: $fontWeightBold;
+
+        &:not(:hover) {
+            background-color: $active;
+            color: $lightModeTextColor
+        }
+    }
+}
