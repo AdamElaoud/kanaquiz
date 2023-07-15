@@ -41,15 +41,16 @@ const App = () : JSX.Element => {
     const { warning, dismissOne } = useNotification();
 
     useLayoutEffect(() => {
+        if (isMobileDevice() && screen.orientation.type.includes("portrait"))
+            dismissOne(ORIENTATION_WARNING_ID);
+            
         if (isMobileDevice() && screen.orientation.type.includes("landscape"))
             warning(ORIENTATION_WARNING, { autoClose: false, toastId: ORIENTATION_WARNING_ID });
 
-        if (isMobileDevice() && screen.orientation.type.includes("portrait"))
-            dismissOne(ORIENTATION_WARNING_ID);
-    
-    // effect should only fire once on mount
+    // a render is triggered on rotation due to the useWindowSize and useDynamicWidth hooks
+    // this recalculation is desired only when the value of the screen orientation type has changed
     // eslint-disable-next-line
-    }, []);
+    }, [screen.orientation.type]);
 
     const updateKanaSelections = (letters: string[], addOnly?: boolean, deleteOnly?: boolean) => {
         const updatedSelections = [...kanaSelections];
