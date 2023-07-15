@@ -1,6 +1,14 @@
+@use "../common/styles/index" as *;
+
 %page {
     align-items: center;
     display: flex;
     flex-direction: column;
     height: 100%;
+}
+
+%call-to-action {
+    color: $unsaturatedGold;
+    font-size: $smallFontSize;
+    margin-bottom: $sectionSpacing;
 }

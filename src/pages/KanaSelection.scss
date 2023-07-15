@@ -7,8 +7,7 @@
     @extend %page;
 
     .call-to-action {
-        font-size: $smallFontSize;
-        margin-bottom: $sectionSpacing;
+        @extend %call-to-action;
     }
 
     .actions-bar {

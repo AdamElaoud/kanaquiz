@@ -9,7 +9,8 @@ $summaryTitleHeight: calc($mediumFontSize + ($sectionSpacing / 2));
     row-gap: 2rem;
 
     .call-to-action {
-        font-size: $smallFontSize;
+        @extend %call-to-action;
+        margin-bottom: 0;
     }
 
     .summary-title {

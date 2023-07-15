@@ -27,10 +27,13 @@
 @media (hover: hover) and (pointer: fine) {
     .direction-toggle {
         &:not(.disabled) {
-            .icon {
+            .direction-toggle-button {
+                cursor: pointer;
+                
                 &:hover {
-                    color: $gold;
-                    cursor: pointer;
+                    .icon {
+                        color: $gold;
+                    }
                 }
             }
         }

@@ -7,8 +7,7 @@
     row-gap: 3rem;
 
     .call-to-action {
-        font-size: $smallFontSize;
-        margin-bottom: $sectionSpacing;
+        @extend %call-to-action;
     }
 
     .word-options {

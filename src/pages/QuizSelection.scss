@@ -1,3 +1,4 @@
+@use "sass:color" as color;
 @use "../styles/index" as *;
 @use "../common/styles/index" as *;
 @use "../common/components/tabs/TabHeader.scss" as *;
@@ -19,8 +20,7 @@
         }
 
         .call-to-action {
-            font-size: $smallFontSize;
-            margin-top: $sectionSpacing;
+            @extend %call-to-action;
         }
     }
 
