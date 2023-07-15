@@ -87,3 +87,17 @@ $stepTitleMargin: 1rem;
         }
     }
 }
+
+@media (hover: hover) and (pointer: fine) {
+    .step-wizard {
+        .next-button {
+            &:hover {
+                &.blocked-by-condition {
+                    color: $darkModeTextColor;
+                    background-color: $crimson;
+                    opacity: $disabledOpacity;
+                }
+            }
+        }
+    }
+}
