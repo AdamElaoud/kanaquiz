@@ -11,7 +11,7 @@ import { ModeContextProvider } from '@/hooks/useMode';
 import { QuizSelectionsContextProvider } from '@/hooks/useQuizSelections';
 import { WordSelectionsContextProvider } from '@/hooks/useWordSelections';
 import { Mode, PageType, QuizDirection, QuizFormat, QuizSelectionData, QuizTopic, WordSelectionData } from '@/types';
-import { DEFAULT_QUESTION_AMOUNT, KANA_SELECTION_STORAGE_KEY, NOT_ENOUGH_KANA, NOT_ENOUGH_WORDS, ORIENTATION_ERROR, ORIENTATION_ERROR_ID, PAGES, QUIZ_SELECTION_STORAGE_KEY, SCREEN_FILL_PERCENT, SCREEN_FILL_WIDTH, SCREEN_PARTIAL_FILL_PERCENT, SCREEN_PARTIAL_FILL_WIDTH, WORD_SELECTION_STORAGE_KEY } from '@/utils/constants';
+import { DEFAULT_QUESTION_AMOUNT, KANA_SELECTION_STORAGE_KEY, NOT_ENOUGH_KANA, NOT_ENOUGH_WORDS, ORIENTATION_WARNING, ORIENTATION_WARNING_ID, PAGES, QUIZ_SELECTION_STORAGE_KEY, SCREEN_FILL_PERCENT, SCREEN_FILL_WIDTH, SCREEN_PARTIAL_FILL_PERCENT, SCREEN_PARTIAL_FILL_WIDTH, WORD_SELECTION_STORAGE_KEY } from '@/utils/constants';
 import { useLayoutEffect, useState } from "react";
 
 import '@/styles/App.scss';
@@ -38,15 +38,18 @@ const App = () : JSX.Element => {
         SCREEN_FILL_WIDTH,
         SCREEN_FILL_PERCENT
     );
-    const { error, dismissOne } = useNotification();
+    const { warning, dismissOne } = useNotification();
 
     useLayoutEffect(() => {
-        if (isMobileDevice() && screen.orientation.type.includes("landscape"))
-            error(ORIENTATION_ERROR, { autoClose: false, closeButton: false, toastId: ORIENTATION_ERROR_ID });
+        if (isMobileDevice(true) && screen.orientation.type.includes("landscape"))
+            warning(ORIENTATION_WARNING, { autoClose: false, toastId: ORIENTATION_WARNING_ID });
 
-        if (isMobileDevice() && screen.orientation.type.includes("portrait"))
-            dismissOne(ORIENTATION_ERROR_ID);
-    });
+        if (isMobileDevice(true) && screen.orientation.type.includes("portrait"))
+            dismissOne(ORIENTATION_WARNING_ID);
+    
+    // effect should only fire once on mount
+    // eslint-disable-next-line
+    }, []);
 
     const updateKanaSelections = (letters: string[], addOnly?: boolean, deleteOnly?: boolean) => {
         const updatedSelections = [...kanaSelections];
