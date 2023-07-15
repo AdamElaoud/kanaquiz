@@ -41,10 +41,10 @@ const App = () : JSX.Element => {
     const { warning, dismissOne } = useNotification();
 
     useLayoutEffect(() => {
-        if (isMobileDevice(true) && screen.orientation.type.includes("landscape"))
+        if (isMobileDevice() && screen.orientation.type.includes("landscape"))
             warning(ORIENTATION_WARNING, { autoClose: false, toastId: ORIENTATION_WARNING_ID });
 
-        if (isMobileDevice(true) && screen.orientation.type.includes("portrait"))
+        if (isMobileDevice() && screen.orientation.type.includes("portrait"))
             dismissOne(ORIENTATION_WARNING_ID);
     
     // effect should only fire once on mount
