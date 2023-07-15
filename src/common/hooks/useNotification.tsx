@@ -1,44 +1,9 @@
-/* eslint-disable */
 import { Icon } from "@/common/components";
-import useDynamicWidth from "@/common/hooks/useDynamicWidth";
 import { FontAwesomeIconType, NotificationFn, Size } from "@/common/types";
-import { SCREEN_FILL_WIDTH, SCREEN_PARTIAL_FILL_WIDTH } from "@/utils/constants";
 import { useCallback } from "react";
-import { CloseButtonProps, Id, toast, ToastContainer, ToastContainerProps, UpdateOptions } from "react-toastify";
+import { Id, toast, UpdateOptions } from "react-toastify";
 
-import 'react-toastify/dist/ReactToastify.css';
-
-import "./NotificationCenter.scss";
-
-const ToastCloseButton = ({ closeToast }: CloseButtonProps) : JSX.Element => {
-    return <Icon type = {FontAwesomeIconType.X} onClick = {closeToast} size = {Size.Large} />;
-};
-
-export const NotificationCenter = (props: ToastContainerProps) : JSX.Element => {
-    const dynamicWidth = useDynamicWidth(SCREEN_PARTIAL_FILL_WIDTH, 33, SCREEN_FILL_WIDTH, 90);
-
-    return (
-        <ToastContainer
-            autoClose = {5000}
-            closeButton = {ToastCloseButton}
-            closeOnClick
-            draggable
-            draggablePercent = {35}
-            hideProgressBar = {false}
-            limit = {4}
-            newestOnTop = {false}
-            pauseOnFocusLoss
-            pauseOnHover
-            position = "top-center"
-            rtl = {false}
-            style = {dynamicWidth}
-            theme = "colored"
-            {...props}
-        />
-    );
-};
-
-export const useNotification = () => {
+const useNotification = () => {
     const notify: NotificationFn = useCallback((content, options) : Id  => toast(content, options), []);
 
     const error: NotificationFn = useCallback((content, options) : Id  => toast.error(content, {

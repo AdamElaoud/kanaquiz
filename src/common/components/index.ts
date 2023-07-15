@@ -2,6 +2,7 @@ import Button from "@/common/components/button/Button";
 import HelpTooltip from "@/common/components/help-tooltip/HelpTooltip";
 import Icon from "@/common/components/icon/Icon";
 import Modal from "@/common/components/modal/Modal";
+import NotificationCenter from "@/common/components/notification-center/NotificationCenter";
 import NumberInput from "@/common/components/number-input/NumberInput";
 import Searchbar from "@/common/components/searchbar/Searchbar";
 import StepWizard from "@/common/components/step-carousel/StepWizard";
@@ -20,6 +21,7 @@ export {
     HelpTooltip,
     Icon,
     Modal,
+    NotificationCenter,
     NumberInput,
     Searchbar,
     Step,

@@ -1,5 +1,5 @@
 @use "sass:color" as color;
-@use "../styles/index" as *;
+@use "../../styles/index" as *;
 
 :root {
     --toastify-color-info: #{color.adjust($active, $saturation: $notificationSaturationDrop)};

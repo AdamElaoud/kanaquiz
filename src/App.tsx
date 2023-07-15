@@ -1,15 +1,15 @@
-import { StepWizard } from '@/common/components';
+import { NotificationCenter, StepWizard } from '@/common/components';
 import useDynamicWidth from '@/common/hooks/useDynamicWidth';
 import useLocalStorage from '@/common/hooks/useLocalStorage';
-import useNotification, { NotificationCenter } from '@/common/hooks/useNotification';
+import useNotification from '@/common/hooks/useNotification';
 import useWindowSize from '@/common/hooks/useWindowSize';
 import { CustomIconType, FontAwesomeIconType, StepConfig, StepState } from '@/common/types';
 import { isMobileDevice } from '@/common/utils/utils';
 import Header from '@/components/header/Header';
-import { KanaSelectionsContextProvider } from '@/hooks/useKanaSelections';
-import { ModeContextProvider } from '@/hooks/useMode';
-import { QuizSelectionsContextProvider } from '@/hooks/useQuizSelections';
-import { WordSelectionsContextProvider } from '@/hooks/useWordSelections';
+import KanaSelectionsProvider from '@/contexts/KanaSelectionsContext';
+import ModeProvider from '@/contexts/ModeContext';
+import QuizSelectionsProvider from '@/contexts/QuizSelectionsContext';
+import WordSelectionsProvider from '@/contexts/WordSelectionsContext';
 import { Mode, PageType, QuizDirection, QuizFormat, QuizSelectionData, QuizTopic, WordSelectionData } from '@/types';
 import { DEFAULT_QUESTION_AMOUNT, KANA_SELECTION_STORAGE_KEY, NOT_ENOUGH_KANA, NOT_ENOUGH_WORDS, ORIENTATION_WARNING, ORIENTATION_WARNING_ID, PAGES, QUIZ_SELECTION_STORAGE_KEY, SCREEN_FILL_PERCENT, SCREEN_FILL_WIDTH, SCREEN_PARTIAL_FILL_PERCENT, SCREEN_PARTIAL_FILL_WIDTH, WORD_SELECTION_STORAGE_KEY } from '@/utils/constants';
 import { useLayoutEffect, useState } from "react";
@@ -126,10 +126,10 @@ const App = () : JSX.Element => {
     return (
         <>
             <NotificationCenter />
-            <ModeContextProvider value = {{ mode, setMode }}>
-                <KanaSelectionsContextProvider value = {{ kanaSelections, updateKanaSelections }}>
-                    <QuizSelectionsContextProvider value = {{ quizSelections, updateQuizSelections }}>
-                        <WordSelectionsContextProvider value = {{ wordSelections, updateWordSelections }}>
+            <ModeProvider value = {{ mode, setMode }}>
+                <KanaSelectionsProvider value = {{ kanaSelections, updateKanaSelections }}>
+                    <QuizSelectionsProvider value = {{ quizSelections, updateQuizSelections }}>
+                        <WordSelectionsProvider value = {{ wordSelections, updateWordSelections }}>
                             <div className = "app" style = {appStyle}>
                                 <Header
                                     style = {dynamicWidth}
@@ -151,10 +151,10 @@ const App = () : JSX.Element => {
                                     startingStepID = {pageSteps[0].ID}
                                 />}
                             </div>
-                        </WordSelectionsContextProvider>
-                    </QuizSelectionsContextProvider>
-                </KanaSelectionsContextProvider>
-            </ModeContextProvider>
+                        </WordSelectionsProvider>
+                    </QuizSelectionsProvider>
+                </KanaSelectionsProvider>
+            </ModeProvider>
         </>
     );
 };
