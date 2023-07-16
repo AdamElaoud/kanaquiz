@@ -130,7 +130,12 @@ const App = () : JSX.Element => {
     return (
         <>
             <NotificationCenter />
-            <Modal key = {`${shownWelcomeMessage}`} defaultOpen = {!shownWelcomeMessage} hideCloseButton = {true} onClose = {onComplete}>
+            <Modal
+                key = {`${shownWelcomeMessage}`}
+                defaultOpen = {!shownWelcomeMessage}
+                hideCloseButton = {true}
+                onClose = {onComplete}
+            >
                 <WelcomeMessage onComplete = {onComplete}/>
             </Modal>
             <ModeProvider value = {{ mode, setMode }}>
