@@ -97,7 +97,13 @@ const NumberInput = (props: Props) => {
             {title && <span className = "number-input-title">{title}</span>}
 
             <div className = "number-input-content">
-                {showButtons && <Icon type = {buttonIcons[0]} onClick = {onClickButton(Direction.Down)} size = {size}/>}
+                {showButtons && <Icon
+                    tabIndex = {0}
+                    type = {buttonIcons[0]}
+                    onClick = {onClickButton(Direction.Down)}
+                    onKeyDown = {onEnterPress(onClickButton(Direction.Down))}
+                    size = {size}
+                />}
 
                 <label className = "visually-hidden" htmlFor = {`${name}-input`}>{`Number input for ${name}`}</label>
                 <input
@@ -112,7 +118,13 @@ const NumberInput = (props: Props) => {
                     onKeyDown = {onEnterPress(hideKeyboard)}
                 />
                 
-                {showButtons && <Icon type = {buttonIcons[1]} onClick = {onClickButton(Direction.Up)} size = {size}/>}
+                {showButtons && <Icon
+                    tabIndex = {0} 
+                    type = {buttonIcons[1]}
+                    onClick = {onClickButton(Direction.Up)}
+                    onKeyDown = {onEnterPress(onClickButton(Direction.Up))}
+                    size = {size}
+                />}
             </div>
         </div>
     );

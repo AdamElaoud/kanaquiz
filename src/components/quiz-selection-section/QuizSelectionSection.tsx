@@ -19,8 +19,8 @@ const QuizSelectionSection = (props: Props) : JSX.Element => {
     return (
         <div className = "quiz-selection-section">
             <span className = "section-title">
-                <span>{title}</span>
-                {helpTooltip && <HelpTooltip id = {`${title}-help-tooltip`} tooltip = {helpTooltip}/>}
+                <span className = "section-title-text">{title}</span>
+                {helpTooltip && <HelpTooltip tooltip = {helpTooltip}/>}
             </span>
             
             <span className = "section-content">

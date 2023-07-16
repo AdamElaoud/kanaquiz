@@ -7,7 +7,7 @@
     width: 90%;
 
     &::backdrop {
-        background-color: rgba(0, 0, 0, 0.85);
+        background-color: $backdropColor;
     }
 
     .close-modal-button {
