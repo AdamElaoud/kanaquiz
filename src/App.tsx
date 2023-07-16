@@ -13,11 +13,12 @@ import QuizSelectionsProvider from '@/contexts/QuizSelectionsContext';
 import WordSelectionsProvider from '@/contexts/WordSelectionsContext';
 import { Mode, PageType, QuizDirection, QuizFormat, QuizSelectionData, QuizTopic, WordSelectionData } from '@/types';
 import { DEFAULT_QUESTION_AMOUNT, KANA_SELECTION_STORAGE_KEY, NOT_ENOUGH_KANA, NOT_ENOUGH_WORDS, ORIENTATION_WARNING, ORIENTATION_WARNING_ID, PAGES, QUIZ_SELECTION_STORAGE_KEY, SCREEN_FILL_PERCENT, SCREEN_FILL_WIDTH, SCREEN_PARTIAL_FILL_PERCENT, SCREEN_PARTIAL_FILL_WIDTH, SHOWN_WELCOME_MESSAGE_KEY, WORD_SELECTION_STORAGE_KEY } from '@/utils/constants';
-import { useLayoutEffect, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 
 import '@/styles/App.scss';
 
 const App = () : JSX.Element => {
+    const pageRef = useRef<HTMLDivElement>(null);
     const [carouselKey, resetCarousel] = useState<boolean>(false);
     const [mode, setMode] = useState<Mode>(Mode.Kana);
     const [page, setPage] = useState<PageType>(PageType.QuizSelect);
@@ -85,6 +86,7 @@ const App = () : JSX.Element => {
 
     const onStepChange = ({ newStepID }: StepState) => {
         setPage(newStepID as PageType);
+        pageRef.current?.scroll(0, 0);
     };
 
     const kanaIsSelectedTopic = quizSelections.topic === QuizTopic.Kana;
@@ -148,7 +150,7 @@ const App = () : JSX.Element => {
                                     onClick = {() => { setPage(PageType.QuizSelect); resetCarousel(state => !state); }}
                                 />
 
-                                <div className = {pageClasses.join(" ")} style = {dynamicWidth}>
+                                <div ref = {pageRef} className = {pageClasses.join(" ")} style = {dynamicWidth}>
                                     {PAGES[page]()}
                                 </div>
                                 
