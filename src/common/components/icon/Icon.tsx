@@ -1,6 +1,7 @@
 import { CustomIconMap, FontAwesomeIconMap } from "@/common/components/icon/IconTypes";
-import { CSSStyles, IconType, isCustomIconType, isFontAwesomeIconType, ReactDivOnClickEvent, ReactKeyboardEvent, Size } from "@/common/types";
+import { CSSStyles, IconType, isCustomIconType, isFontAwesomeIconType, ReactDivOnClickEvent, ReactForwardedRef, ReactKeyboardEvent, Size } from "@/common/types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { forwardRef } from "react";
 
 import "./Icon.scss";
 
@@ -17,7 +18,7 @@ interface Props {
 
 const DEFAULT_ICON_SIZE = Size.Medium;
 
-const Icon = (props: Props) : JSX.Element => {
+const Icon = forwardRef((props: Props, ref?: ReactForwardedRef<HTMLDivElement>) : JSX.Element => {
     const { className, id, onClick, onKeyDown, size = DEFAULT_ICON_SIZE, style, tabIndex, type } = props;
     
     const classes = ["icon", size];
@@ -27,7 +28,7 @@ const Icon = (props: Props) : JSX.Element => {
         const fontAwesomeIconType = FontAwesomeIconMap[type];
 
         return (
-            <div id = {id} className = {classes.join(" ")} onClick = {onClick} onKeyDown = {onKeyDown} style = {style} tabIndex = {tabIndex}>
+            <div id = {id} ref = {ref} className = {classes.join(" ")} onClick = {onClick} onKeyDown = {onKeyDown} style = {style} tabIndex = {tabIndex}>
                 <FontAwesomeIcon icon = {fontAwesomeIconType} />
             </div>
         );
@@ -38,7 +39,7 @@ const Icon = (props: Props) : JSX.Element => {
         const content = isImage ? <img src = {src} alt = {text}/> : text
 
         return (
-            <div id = {id} className = {classes.join(" ")} onClick = {onClick} onKeyDown = {onKeyDown} style = {style} tabIndex = {tabIndex}>
+            <div id = {id} ref = {ref} className = {classes.join(" ")} onClick = {onClick} onKeyDown = {onKeyDown} style = {style} tabIndex = {tabIndex}>
                 {content}
             </div>
         );
@@ -47,6 +48,6 @@ const Icon = (props: Props) : JSX.Element => {
         throw "Invalid Icon type supplied!";
     }
 
-};
+});
 
 export default Icon;

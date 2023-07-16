@@ -2,7 +2,7 @@
 
 // need to combine classes for increased specificity
 // to override poorly structured defaults
-.react-tooltip.tooltip {
+.tooltip {
     @include padding(1.75);
     @include box-shadow();
     @extend %rounded-border;
@@ -12,10 +12,7 @@
     opacity: 1;
     width: max-content;
 
-    $arrowSize: 1rem;
     .tooltip-arrow {
-        width: $arrowSize;
-        height: $arrowSize;
-        transform: rotate(45deg);
+        fill: $lightBlack;
     }
 }

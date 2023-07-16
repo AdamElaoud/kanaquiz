@@ -1,4 +1,6 @@
 import { Button, Tooltip } from "@/common/components";
+import TooltipContent from "@/common/components/tooltip/TooltipContent";
+import TooltipTrigger from "@/common/components/tooltip/TooltipTrigger";
 import useKanaSelections from "@/hooks/useKanaSelections";
 import useMode from "@/hooks/useMode";
 import { KanaButtonProps, Mode } from "@/types";
@@ -11,7 +13,6 @@ const KanaButton = (props: KanaButtonProps) : JSX.Element => {
     const {
         className,
         disableOnClick = DEFAULT_DISABLE_ON_CLICK,
-        id,
         isSearchTarget,
         letters 
     } = props;
@@ -22,11 +23,11 @@ const KanaButton = (props: KanaButtonProps) : JSX.Element => {
     const isSelected = letters.some(char => kanaSelections.includes(char));
 
     const classes = ["kana-button"];
-    if (isSelected) classes.push("is-selected");
     if (className) classes.push(className);
-    if (mode === Mode.Kana) classes.push("is-kana");
-    if (isSearchTarget) classes.push("is-search-target");
     if (disableOnClick) classes.push("disable-on-click");
+    if (isSearchTarget) classes.push("is-search-target");
+    if (isSelected) classes.push("is-selected");
+    if (mode === Mode.Kana) classes.push("is-kana");
 
     const onClick = () => {
         if (!disableOnClick)
@@ -36,14 +37,17 @@ const KanaButton = (props: KanaButtonProps) : JSX.Element => {
     const oppositeMode = mode === Mode.Kana ? Mode.Romaji : Mode.Kana;
 
     return (
-        <>
-            <Button id = {id} className = {classes.join(" ")} onClick = {onClick}>
-                {letters[mode]}
-            </Button>
-            <Tooltip anchorSelector = {`#${id}`} delayShow = {500}>
+        <Tooltip holdDelay = {750} toggleOnClick = {false}>
+            <TooltipTrigger tabIndex = {-1}>
+                <Button className = {classes.join(" ")} onClick = {onClick}>
+                    {letters[mode]}
+                </Button>
+            </TooltipTrigger>
+            
+            <TooltipContent>
                 {letters[oppositeMode]}
-            </Tooltip>
-        </>
+            </TooltipContent>
+        </Tooltip>
     );
 };
 

@@ -1,116 +1,131 @@
-import { CSSStyles, Position, ReactElement } from "@/common/types";
-import { Tooltip as ReactTooltip, removeStyle, ITooltip } from "react-tooltip";
+import { Position, ReactElement, ReactRef } from "@/common/types";
+import {
+    UseFloatingReturn,
+    arrow,
+    autoUpdate,
+    flip,
+    offset,
+    shift,
+    useClick,
+    useDismiss,
+    useFloating,
+    useFocus,
+    useHover,
+    useInteractions,
+    useRole
+} from "@floating-ui/react";
+import { useRef, useState, createContext } from "react";
 
-import "./Tooltip.scss";
+type TooltipContextType = {
+    arrowRef: ReactRef<SVGSVGElement>,
+    getFloatingProps: (userProps?: React.HTMLProps<HTMLElement>) => Record<string, unknown>,
+    getItemProps: (userProps?: React.HTMLProps<HTMLElement>) => Record<string, unknown>,
+    getReferenceProps: (userProps?: React.HTMLProps<Element>) => Record<string, unknown>,
+    open: boolean,
+    setOpen: (open: boolean) => void,
+} & UseFloatingReturn;
+
+export const TooltipContext = createContext<TooltipContextType>({} as TooltipContextType);
 
 interface Props {
-    anchorSelector: string,
-    children: string | ReactElement,
-    className?: string,
-    delayHide?: number,
-    delayShow?: number,
+    children: ReactElement[],
+    defaultOpen?: boolean,
     disabled?: boolean,
-    followMouse?: boolean,
     gap?: number,
-    hideArrow?: boolean,
-    interactable?: boolean,
+    hideDelay?: number,
+    holdDelay?: number,
     isOpen?: boolean,
+    onOpenChange?: (open: boolean) => void,
     openOnClick?: boolean,
     position?: Position,
-    renderFn?: (tooltipState: { content: string | null, activeAnchor: HTMLElement | null }) => string | ReactElement,
-    style?: CSSStyles
+    showDelay?: number,
+    toggleOnClick?: boolean
 };
 
-// open on: 
-// PC - click, hover
-// mobile - click, click and hold
-
-// defaults:
-// PC - hover
-// mobile - click
-
-
+const DEFAULT_HIDE_DELAY = 100;
+const DEFAULT_GAP = 14;
+const DEFAULT_OPEN = false;
+const DEFAULT_OPEN_ON_CLICK = false;
 const DEFAULT_POSITION = Position.TopCenter;
-const DEFAULT_DELAY_SHOW = 100;
-const DEFAULT_DELAY_HIDE = 100;
-const DEFAULT_GAP = 12;
+const DEFAULT_SHOW_DELAY = 100;
+const DEFAULT_TOGGLE_ON_CLICK = true;
 
 const Tooltip = (props: Props) : JSX.Element => {
     const {
-        anchorSelector,
         children,
-        className,
-        delayHide = DEFAULT_DELAY_HIDE,
-        delayShow = DEFAULT_DELAY_SHOW,
+        defaultOpen = DEFAULT_OPEN,
         disabled,
-        followMouse,
         gap = DEFAULT_GAP,
-        hideArrow,
-        interactable,
-        isOpen,
-        openOnClick,
+        hideDelay = DEFAULT_HIDE_DELAY,
+        holdDelay,
+        isOpen: controlledOpen,
+        onOpenChange: setControlledOpen,
+        openOnClick = DEFAULT_OPEN_ON_CLICK,
         position = DEFAULT_POSITION,
-        renderFn,
-        style
+        showDelay = DEFAULT_SHOW_DELAY,
+        toggleOnClick = DEFAULT_TOGGLE_ON_CLICK
     } = props;
 
-    const tooltipClasses = ['tooltip'];
-    if (className) tooltipClasses.push(className);
+    const arrowRef = useRef<SVGSVGElement>(null);
+    const [uncontrolledOpen, setUncontrolledOpen] = useState<boolean>(defaultOpen);
 
-    const tooltipProps: ITooltip = {
-        anchorSelect: anchorSelector,
-        className: tooltipClasses.join(" "),
-        classNameArrow: "tooltip-arrow",
-        clickable: interactable,
-        closeOnEsc: openOnClick,
-        delayHide,
-        delayShow,
-        float: followMouse,
-        hidden: disabled,
-        isOpen,
-        noArrow: hideArrow,
-        offset: gap,
-        openOnClick, // totally broken - weird stuff with openOnClick (position lost???)
-        place: position,
-        render: renderFn,
-        style
+    const open = controlledOpen ?? uncontrolledOpen;
+    const setOpen = setControlledOpen ?? setUncontrolledOpen;
+
+    const floatingData = useFloating({
+        middleware: [offset(gap), flip(), shift(), arrow({ element: arrowRef })],
+        onOpenChange: (state) => setOpen(state),
+        open,
+        placement: position,
+        whileElementsMounted: autoUpdate,
+    });
+
+    const { context } = floatingData;
+
+    const baselineEnabled = !controlledOpen && !disabled;
+
+    // show delay must be set to 0 or undefined to allow for hold delays to take effect
+    // this seems to be a bug in floating UI (floating-ui.react.esm.js : onMouseEnter)
+    const  parsedShowDelay = holdDelay ? 0 : showDelay;
+
+    const hover = useHover(context, {
+        delay: { open: parsedShowDelay, close: hideDelay },
+        // disable hovering if opening on click
+        enabled: baselineEnabled && !openOnClick,
+        // if a hold delay is provided, allow hover events for mobile devices as well
+        mouseOnly: !holdDelay,
+        move: false,
+        restMs: holdDelay
+    });
+    const focus = useFocus(context, { enabled: baselineEnabled });
+    const click = useClick(context, {
+        // click is used to provide open on click for PC and baseline
+        // functionality for mobile devices. If a hold delay is provided,
+        // mobile devices will get their events from hover events
+        enabled: baselineEnabled && !holdDelay,
+        // because this is always left enabled to provide basline mobile
+        // functionality, ignore the mouse unless explicitly enabling openOnClick
+        ignoreMouse: !openOnClick,
+        toggle: toggleOnClick
+    });
+    const dismiss = useDismiss(context);
+    const role = useRole(context, { role: "tooltip" });
+
+    const interactions = useInteractions([hover, focus, click, dismiss, role]);
+
+    const value: TooltipContextType = {
+        arrowRef,
+        open,
+        setOpen,
+        ...interactions,
+        ...floatingData
     };
 
     return (
-        <ReactTooltip {...tooltipProps} >
+        <TooltipContext.Provider value = {value}>
             {children}
-        </ReactTooltip>
+        </TooltipContext.Provider>
     );
 };
 
-removeStyle();
-
 export default Tooltip;
-
-
-/**
- * Requirements:
- * 
- * - position
- * - showDelay
- * - hideDelay
- * - delay (for both)
- * - showAnimation
- * - hideAnimation
- * - animation (for both)
- * - show via:
- *     - hover
- *     - click (mouse, pointer, touch)
- *     - press and hold (set delay - useLongPress?)
- * - interactable
- * - hideArrow
- * - isOpen
- * - gap / offset
- * - className
- * - style
- * - disabled
- * - closeOnEsc
- * - anchor (HTMLElement | ReactRef<HTMLElement> ?)
- * - children (content)
- * 
- */
