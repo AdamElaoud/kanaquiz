@@ -1,4 +1,4 @@
-import { Position, ReactElement, ReactRef } from "@/common/types";
+import { PlainFn, Position, ReactElement, ReactRef } from "@/common/types";
 import {
     UseFloatingReturn,
     arrow,
@@ -14,14 +14,17 @@ import {
     useInteractions,
     useRole
 } from "@floating-ui/react";
-import { useRef, useState, createContext } from "react";
+import { useRef, useState, createContext, PointerEventHandler, PointerEvent } from "react";
 
 type TooltipContextType = {
     arrowRef: ReactRef<SVGSVGElement>,
     getFloatingProps: (userProps?: React.HTMLProps<HTMLElement>) => Record<string, unknown>,
     getItemProps: (userProps?: React.HTMLProps<HTMLElement>) => Record<string, unknown>,
     getReferenceProps: (userProps?: React.HTMLProps<Element>) => Record<string, unknown>,
+    onPointerDown: PointerEventHandler,
     open: boolean,
+    onTouchStart: PlainFn,
+    onTouchEnd: PlainFn,
     setOpen: (open: boolean) => void,
 } & UseFloatingReturn;
 
@@ -66,8 +69,21 @@ const Tooltip = (props: Props) : JSX.Element => {
         toggleOnClick = DEFAULT_TOGGLE_ON_CLICK
     } = props;
 
+    const pointerType = useRef<string | null>(null);
+    const isTouching = useRef<boolean>(false);
     const arrowRef = useRef<SVGSVGElement>(null);
-    const [uncontrolledOpen, setUncontrolledOpen] = useState<boolean>(defaultOpen);
+    const [uncontrolledOpen, setUncontrolledOpenState] = useState<boolean>(defaultOpen);
+    
+    const isPressAndHoldEnabled = !!holdDelay;
+
+    const setUncontrolledOpen = (open: boolean) => {
+        // if trying to open tooltip from a touch point, but touching has already ended
+        // from the user lifting their finger up before the tooltip delay has shown, return
+        if (open && isPressAndHoldEnabled && pointerType.current === "touch" && !isTouching.current) 
+            return;
+
+        setUncontrolledOpenState(open);
+    };
 
     const open = controlledOpen ?? uncontrolledOpen;
     const setOpen = setControlledOpen ?? setUncontrolledOpen;
@@ -85,7 +101,7 @@ const Tooltip = (props: Props) : JSX.Element => {
     const baselineEnabled = !controlledOpen && !disabled;
 
     // show delay must be set to 0 or undefined to allow for hold delays to take effect
-    // this seems to be a bug in floating UI (floating-ui.react.esm.js : onMouseEnter)
+    // on touch events (if an event is not a mouse event, delays default to 0 ms)
     const  parsedShowDelay = holdDelay ? 0 : showDelay;
 
     const hover = useHover(context, {
@@ -111,13 +127,32 @@ const Tooltip = (props: Props) : JSX.Element => {
     const dismiss = useDismiss(context);
     const role = useRole(context, { role: "tooltip" });
 
-    const interactions = useInteractions([hover, focus, click, dismiss, role]);
+    const { getReferenceProps, ...restOfInteractions } = useInteractions([hover, focus, click, dismiss, role]);
+
+    const { onPointerDown: referenceOnPointerDown } = getReferenceProps();
+
+    const onPointerDown = (event: PointerEvent<Element>) => {
+        pointerType.current = event.pointerType;
+        (referenceOnPointerDown as (event: PointerEvent) => void)(event);
+    };
+
+    const onTouchStart = () => isTouching.current = true;
+    const onTouchEnd = () => {
+        if (isPressAndHoldEnabled)
+            setUncontrolledOpenState(false);
+
+        isTouching.current = false;
+    };
 
     const value: TooltipContextType = {
         arrowRef,
         open,
         setOpen,
-        ...interactions,
+        onTouchStart,
+        onTouchEnd,
+        onPointerDown,
+        getReferenceProps,
+        ...restOfInteractions,
         ...floatingData
     };
 

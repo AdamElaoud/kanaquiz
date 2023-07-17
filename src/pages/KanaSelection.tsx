@@ -9,13 +9,8 @@ import useKanaDictionary from "@/hooks/useKanaDictionary";
 import useKanaSelections from "@/hooks/useKanaSelections";
 import useMode from "@/hooks/useMode";
 import { Mode, TabID } from "@/types";
-import {
-    ENGLISH_DELIMITERS,
-    JAPANESE_DELIMITERS,
-    KANA_SELECTION_TAB_STORAGE_KEY,
-    SCREEN_WIDTH_THRESHHOLD
-} from "@/utils/constants";
-import { useRef } from "react";
+import { ENGLISH_DELIMITERS, JAPANESE_DELIMITERS, KANA_SELECTION_TAB_STORAGE_KEY, SCREEN_WIDTH_THRESHHOLD } from "@/utils/constants";
+import { useMemo, useRef } from "react";
 
 import "./KanaSelection.scss";
 
@@ -59,7 +54,7 @@ const KanaSelection = () : JSX.Element => {
         setSelectedTabID(newTabID);
     };
 
-    const pageTabs: TabConfig[] = [
+    const pageTabs: TabConfig[] = useMemo(() => [
         {
             title: () => <TitleWithBadge title = "Hiragana" count = {hiraganaCount}/>,
             ID: TabID.Hiragana,
@@ -93,7 +88,18 @@ const KanaSelection = () : JSX.Element => {
                 })}
             </>
         },
-    ];
+    ], [
+        hiraganaCount,
+        hiraganaGroupIDs,
+        hiraganaGroups,
+        katakanaCount,
+        katakanaGroupIDs,
+        katakanaGroups,
+        lookalikesCount,
+        lookalikesGroupIDs,
+        lookalikesGroups,
+        updateKanaSelections
+    ]);
 
     const displayModeToggleButtons: [ToggleButtonConfig, ToggleButtonConfig] = [
         { content: 'Kana', onClick: () => setMode(Mode.Kana) },

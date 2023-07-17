@@ -7,17 +7,23 @@ interface Props {
     tabIndex?: number
 };
 
-const DEFAULT_TAB_INDEX = 0;
+const
+DEFAULT_TAB_INDEX = 0;
 
 const TooltipTrigger = (props: Props) : JSX.Element => {
     const { children, tabIndex = DEFAULT_TAB_INDEX } = props;
 
-    const { refs, getReferenceProps } = useTooltip();
-
-    // TODO: add press and hold logic here for mobile
+    const { getReferenceProps, onPointerDown, onTouchStart, onTouchEnd, refs } = useTooltip();
 
     return (
-        <div tabIndex = {tabIndex} ref = {refs.setReference} {...getReferenceProps()}>
+        <div
+            tabIndex = {tabIndex}
+            ref = {refs.setReference}
+            {...getReferenceProps()}
+            onPointerDown = {onPointerDown}
+            onTouchStart = {onTouchStart}
+            onTouchEnd = {onTouchEnd}
+        >
             {children}
         </div>
     );

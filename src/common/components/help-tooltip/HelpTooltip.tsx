@@ -22,8 +22,8 @@ const HelpTooltip = (props: Props) : JSX.Element => {
     return (
         <>
             <Tooltip>
-                <TooltipTrigger>
-                    <Icon className = {helpTooltipClasses.join(" ")} type = {FontAwesomeIconType.Question} size = {Size.Mini}/>
+                <TooltipTrigger tabIndex = {-1}>
+                    <Icon tabIndex = {0} className = {helpTooltipClasses.join(" ")} type = {FontAwesomeIconType.Question} size = {Size.Mini}/>
                 </TooltipTrigger>
                 <TooltipContent>
                     {tooltip}
