@@ -78,7 +78,7 @@ export const WORD_SELECTION_STORAGE_KEY = "word-selections";
 export const KANA_SELECTION_TAB_STORAGE_KEY = "kana-selections-tab";
 export const SHOWN_WELCOME_MESSAGE_KEY = "shown-welcome-message";
 
-export const ORIENTATION_WARNING = "This app was designed to be used in portrait mode. Please rotate your device to portrait mode for the best experience.";
+export const ORIENTATION_WARNING = "This app was designed to be used in portrait mode. Please rotate your device for the best experience.";
 export const ORIENTATION_WARNING_ID = "orientation-warning";
 
 export const NOT_ENOUGH_KANA = "You must select at least 3 Kana to continue";
