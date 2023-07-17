@@ -37,7 +37,7 @@ const KanaButton = (props: KanaButtonProps) : JSX.Element => {
     const oppositeMode = mode === Mode.Kana ? Mode.Romaji : Mode.Kana;
 
     return (
-        <Tooltip holdDelay = {250} toggleOnClick = {false}>
+        <Tooltip holdDelay = {100} toggleOnClick = {false}>
             <TooltipTrigger tabIndex = {-1}>
                 <Button className = {classes.join(" ")} onClick = {onClick}>
                     {letters[mode]}
