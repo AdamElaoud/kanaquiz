@@ -16,7 +16,7 @@ const TooltipTrigger = (props: Props) : JSX.Element => {
     const { getReferenceProps, onPointerDown, onTouchStart, onTouchEnd, refs } = useTooltip();
 
     return (
-        <div
+        <span
             tabIndex = {tabIndex}
             ref = {refs.setReference}
             {...getReferenceProps()}
@@ -25,7 +25,7 @@ const TooltipTrigger = (props: Props) : JSX.Element => {
             onTouchEnd = {onTouchEnd}
         >
             {children}
-        </div>
+        </span>
     );
 };
 

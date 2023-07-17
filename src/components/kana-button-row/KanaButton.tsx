@@ -1,6 +1,4 @@
-import { Button, Tooltip } from "@/common/components";
-import TooltipContent from "@/common/components/tooltip/TooltipContent";
-import TooltipTrigger from "@/common/components/tooltip/TooltipTrigger";
+import { Button, Tooltip, TooltipContent, TooltipTrigger } from "@/common/components";
 import useKanaSelections from "@/hooks/useKanaSelections";
 import useMode from "@/hooks/useMode";
 import { KanaButtonProps, Mode } from "@/types";

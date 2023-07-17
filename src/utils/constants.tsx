@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { Icon } from "@/common/components";
+import { Icon, LinkText } from "@/common/components";
 import { CustomIconType, FontAwesomeIconType, Size } from "@/common/types";
 import KanaQuiz from "@/pages/KanaQuiz";
 import KanaSelection from "@/pages/KanaSelection";
@@ -83,3 +83,11 @@ export const ORIENTATION_WARNING_ID = "orientation-warning";
 
 export const NOT_ENOUGH_KANA = "You must select at least 3 Kana to continue";
 export const NOT_ENOUGH_WORDS = "You must select at least 1 word group to continue";
+
+export const DIRECTION_TOOLTIP = 'when studying words, translation direction is locked to "Japanese to English"';
+export const FORMAT_TOOLTIP = 'when studying words, answer format is locked to "Write"';
+
+export const HIRAGANA_TOOLTIP = () => <span>" ひ ら が な " <LinkText link = "https://en.wikipedia.org/wiki/Hiragana">learn more</LinkText></span>
+
+//"[ひらがな] A phonetic lettering syllabary that is part of the Japanese writing system."
+export const KATAKANA_TOOLTIP = () => <span>" カ タ カ ナ " <LinkText link = "https://en.wikipedia.org/wiki/Katakana">learn more</LinkText></span>

@@ -19,6 +19,7 @@ import '@/styles/App.scss';
 
 const App = () : JSX.Element => {
     const pageRef = useRef<HTMLDivElement>(null);
+    const closeModalButtonRef = useRef<HTMLButtonElement>(null);
     const [carouselKey, resetCarousel] = useState<boolean>(false);
     const [mode, setMode] = useState<Mode>(Mode.Kana);
     const [page, setPage] = useState<PageType>(PageType.QuizSelect);
@@ -137,8 +138,9 @@ const App = () : JSX.Element => {
                 defaultOpen = {!shownWelcomeMessage}
                 hideCloseButton = {true}
                 onClose = {onComplete}
+                initialFocusTarget = {closeModalButtonRef}
             >
-                <WelcomeMessage onComplete = {onComplete}/>
+                <WelcomeMessage ref = {closeModalButtonRef} onComplete = {onComplete}/>
             </Modal>
             <ModeProvider value = {{ mode, setMode }}>
                 <KanaSelectionsProvider value = {{ kanaSelections, updateKanaSelections }}>

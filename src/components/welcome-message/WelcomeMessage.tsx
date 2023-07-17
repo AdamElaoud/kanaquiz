@@ -1,5 +1,7 @@
-import { Button, Icon } from "@/common/components";
-import { FontAwesomeIconType, PlainFn } from "@/common/types";
+import { Button, Icon, TooltipText } from "@/common/components";
+import { FontAwesomeIconType, PlainFn, ReactForwardedRef } from "@/common/types";
+import { HIRAGANA_TOOLTIP, KATAKANA_TOOLTIP } from "@/utils/constants";
+import { forwardRef } from "react";
 
 import "./WelcomeMessage.scss";
 
@@ -7,7 +9,7 @@ interface Props {
     onComplete: PlainFn
 };
 
-const WelcomeMessage = (props: Props) : JSX.Element => {
+const WelcomeMessage = forwardRef((props: Props, ref: ReactForwardedRef<HTMLButtonElement>) : JSX.Element => {
     const { onComplete } = props;
 
     return (
@@ -18,7 +20,7 @@ const WelcomeMessage = (props: Props) : JSX.Element => {
             </div>
 
             <span>
-                We help you master Japanese hiragana and katakana.
+                We help you master Japanese <TooltipText tooltip = {HIRAGANA_TOOLTIP()}>hiragana</TooltipText> and <TooltipText tooltip = {KATAKANA_TOOLTIP()}>katakana</TooltipText>.
             </span>
 
             <span>
@@ -29,11 +31,11 @@ const WelcomeMessage = (props: Props) : JSX.Element => {
                 Let's get started!
             </span>
 
-            <Button className = "close-welcome-message-button" onClick = {onComplete}>
+            <Button ref = {ref} className = "close-welcome-message-button" onClick = {onComplete}>
                 Start a quiz!
             </Button>
         </div>
     );
-};
+});
 
 export default WelcomeMessage;

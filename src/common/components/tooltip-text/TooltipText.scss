@@ -1,0 +1,8 @@
+@use "../../styles/index" as *;
+
+.tooltip-text {
+    color: $active;
+    text-decoration: underline;
+    text-decoration-color: $active;
+    text-decoration-thickness: 3px;
+}

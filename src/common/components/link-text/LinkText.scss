@@ -1,0 +1,13 @@
+@use "../../styles/index" as *;
+
+.link-text {
+    color: $active;
+    display: flex;
+    text-decoration: underline;
+    text-decoration-color: $active;
+    text-decoration-thickness: 3px;
+
+    a {
+        color: $active;
+    }
+}

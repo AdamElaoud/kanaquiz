@@ -1,8 +1,6 @@
-import TooltipContent from "@/common/components/tooltip/TooltipContent";
-import TooltipTrigger from "@/common/components/tooltip/TooltipTrigger";
 import { FontAwesomeIconType, Size } from "@/common/types";
 
-import { Icon, Tooltip } from "..";
+import { Icon, Tooltip, TooltipContent, TooltipTrigger } from "..";
 
 import "./HelpTooltip.scss";
 

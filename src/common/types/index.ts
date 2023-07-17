@@ -147,6 +147,7 @@ export enum FontAwesomeIconType {
     Info = "info",
     Keyboard = "keyboard",
     NumberList = "numberList",
+    OpenLink = "openLink",
     Pencil = "pencil",
     Play = "play",
     Search = "search",

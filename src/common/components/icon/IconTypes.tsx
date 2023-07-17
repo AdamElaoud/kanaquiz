@@ -26,6 +26,7 @@ import {
     faToriiGate,
     faTrash,
     faTriangleExclamation,
+    faUpRightFromSquare,
     faVihara,
     faXmark,
 } from "@fortawesome/free-solid-svg-icons";
@@ -50,6 +51,7 @@ export const FontAwesomeIconMap: FontAwesomeIconMapType = {
     "gear": faGear,
     "keyboard": faKeyboard,
     "numberList": faListOl,
+    "openLink": faUpRightFromSquare,
     "pencil": faPencil,
     "play": faPlay,
     "search": faMagnifyingGlass,

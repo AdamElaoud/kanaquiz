@@ -1,11 +1,11 @@
 import { Icon, NumberInput, ToggleButton } from "@/common/components";
 import useDynamicWidth from "@/common/hooks/useDynamicWidth";
-import { CustomIconType, NumberInputState, ItemConfig, ReactFormOnSubmitEvent, Side, Size, ToggleButtonConfig } from "@/common/types";
+import { CustomIconType, ItemConfig, NumberInputState, ReactFormOnSubmitEvent, Side, Size, ToggleButtonConfig } from "@/common/types";
 import DirectionToggle from "@/components/direction-toggle/DirectionToggle";
 import QuizSelectionSection from "@/components/quiz-selection-section/QuizSelectionSection";
 import useQuizSelections from "@/hooks/useQuizSelections";
 import { QuizDirection, QuizFormat, QuizSelectionData, QuizTopic } from "@/types";
-import { MAXIMUM_QUESTION_AMOUNT, MINIMUM_QUESTION_AMOUNT, SCREEN_FILL_WIDTH, SCREEN_PARTIAL_FILL_WIDTH } from "@/utils/constants";
+import { DIRECTION_TOOLTIP, FORMAT_TOOLTIP, MAXIMUM_QUESTION_AMOUNT, MINIMUM_QUESTION_AMOUNT, SCREEN_FILL_WIDTH, SCREEN_PARTIAL_FILL_WIDTH } from "@/utils/constants";
 
 import "./QuizSelection.scss";
 
@@ -57,9 +57,6 @@ const QuizSelection = () : JSX.Element => {
         { content: "Choose", onClick: () => updateQuizSelectionField("format", QuizFormat.MultipleChoice) }
     ];
 
-    const directionTooltip = 'when studying words, translation direction is locked to "Japanese to English"';
-    const formatTooltip = 'when studying words, answer format is locked to "Write"';
-
     const wordsIsSelectedTopic = quizSelections.topic === QuizTopic.Words;
 
     return (
@@ -73,7 +70,7 @@ const QuizSelection = () : JSX.Element => {
                 <QuizSelectionSection title = "Topic">
                     <ToggleButton buttons = {topicToggleButtons} defaultActiveSide = {defaultTopicSide}/>
                 </QuizSelectionSection>
-                <QuizSelectionSection title = "Translate" helpTooltip = {directionTooltip}>
+                <QuizSelectionSection title = "Translate" helpTooltip = {DIRECTION_TOOLTIP}>
                     <DirectionToggle 
                         key = {`direction-selection-${quizSelections.topic}`}
                         content = {directionToggleButtons}
@@ -82,7 +79,7 @@ const QuizSelection = () : JSX.Element => {
                         onToggle = {onDirectionChange}
                     />
                 </QuizSelectionSection>
-                <QuizSelectionSection title = "Answer" helpTooltip = {formatTooltip}>
+                <QuizSelectionSection title = "Answer" helpTooltip = {FORMAT_TOOLTIP}>
                     <ToggleButton
                         key = {`format-selection-${quizSelections.topic}`}
                         buttons = {formatToggleButtons}
