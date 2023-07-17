@@ -139,7 +139,7 @@ const Tooltip = (props: Props) : JSX.Element => {
     const onTouchStart = () => isTouching.current = true;
     const onTouchEnd = () => {
         if (isPressAndHoldEnabled)
-            setUncontrolledOpenState(false);
+            setTimeout(() => setUncontrolledOpenState(false), hideDelay);
 
         isTouching.current = false;
     };
