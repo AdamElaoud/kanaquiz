@@ -21,7 +21,7 @@ const NotificationCenter = (props: ToastContainerProps) : JSX.Element => {
             closeButton = {ToastCloseButton}
             closeOnClick
             draggable
-            draggablePercent = {35}
+            draggablePercent = {25}
             hideProgressBar = {false}
             limit = {4}
             newestOnTop = {false}
