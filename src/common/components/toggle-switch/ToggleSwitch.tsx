@@ -1,5 +1,5 @@
-import { PlainFn } from "@/common/types";
-import { useState } from "react";
+import { PlainFn, ReactForwardedRef } from "@/common/types";
+import { forwardRef, useState } from "react";
 
 import "./ToggleSwitch.scss";
 
@@ -11,7 +11,7 @@ interface Props {
 };
 
 
-const ToggleSwitch = (props: Props) : JSX.Element => {
+const ToggleSwitch = forwardRef((props: Props, ref: ReactForwardedRef<HTMLButtonElement>) : JSX.Element => {
     const { disabled, onDeactivate, onActivate, startDeactivated } = props;
 
     const [activated, setActivated] = useState(!disabled && !startDeactivated);
@@ -34,9 +34,9 @@ const ToggleSwitch = (props: Props) : JSX.Element => {
 
     return (
         <div className = {classes.join(" ")}>
-            <button className = "toggle-switch-button" onClick = {onToggle}/>
+            <button ref = {ref} className = "toggle-switch-button" onClick = {onToggle}/>
         </div>
     );
-};
+});
 
 export default ToggleSwitch;

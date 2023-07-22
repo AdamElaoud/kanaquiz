@@ -5,11 +5,12 @@ import "./Header.scss";
 
 interface Props {
     onClick: PlainFn,
+    openSettings: PlainFn
     style?: CSSStyles
 };
 
 const Header = (props: Props) : JSX.Element => {
-    const { onClick, style } = props;
+    const { openSettings, onClick, style } = props;
 
     return (
         <header className = "header" style = {style}>
@@ -17,7 +18,9 @@ const Header = (props: Props) : JSX.Element => {
                 Kana Quiz
             </Button>
 
-            {/* <ToggleSwitch onActivate = {() => console.log("darkmode activated!")}/> */}
+            <div className = "header-actions">
+                <Button iconType = {FontAwesomeIconType.Gear} onClick = {openSettings}/>
+            </div>
         </header>
     );
 };

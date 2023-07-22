@@ -18,7 +18,7 @@ $headerSpacing: calc($sectionSpacing / 3);
         display: flex;
         font-weight: $fontWeightBold;
         position: absolute;
-        left: calc(($headerHeight - $mediumIconSize - $padding) / 2);
+        left: 0;
         color: white;
 
         .icon {
@@ -27,9 +27,13 @@ $headerSpacing: calc($sectionSpacing / 3);
         }
     }
 
-    .toggle-switch {
+    .header-actions {
         position: absolute;
-        right: calc(($headerHeight - $mediumIconSize - $padding) / 2);
+        right: 0;
+
+        .button {
+            background-color: transparent;
+        }
     }
 }
 
@@ -38,6 +42,16 @@ $headerSpacing: calc($sectionSpacing / 3);
         .logo {
             &:hover {
                 cursor: pointer;
+            }
+        }
+
+        .header-actions {
+            .button {
+                &:hover {
+                    cursor: pointer;
+                    background-color: transparent;
+                    color: $gold;
+                }
             }
         }
     }

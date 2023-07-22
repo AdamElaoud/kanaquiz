@@ -1,28 +1,20 @@
 @use "../../common/styles/index" as *;
+@use "../../styles/index" as *;
 
 $welcomeMessageSpacing: calc($sectionSpacing * 1.5);
 
 .welcome-message-modal {
-    @include padding(2.75);
-    @extend %rounded-border;
-    align-items: center;
-    background-color: $darkNavy;
-    color: $darkModeTextColor;
-    display: flex;
-    flex-direction: column;
-    max-height: 70vh;
-    margin: auto;
-    overflow-y: auto;
+    @extend %modal;
     row-gap: 2.5rem;
     text-align: center;
-    width: fit-content;
     
     .welcome-message-title {
         align-items: center;
+        color: $gold;
         display: flex;
         flex-direction: column;
         font-size: $largeFontSize;
-        font-weight: $fontWeightBold;
+        font-weight: $fontWeightSuperBold;
         margin-bottom: $welcomeMessageSpacing;
 
         $iconFontSize: 4rem;

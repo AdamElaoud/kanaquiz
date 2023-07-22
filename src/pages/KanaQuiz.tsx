@@ -4,6 +4,7 @@ import { FontAwesomeIconType, Size, TextInputState } from "@/common/types";
 import ChoiceInputRow from "@/components/choice-row/ChoiceInputRow";
 import useKanaSelections from "@/hooks/useKanaSelections";
 import useQuizSelections from "@/hooks/useQuizSelections";
+import useSettings from "@/hooks/useSettings";
 import useWordSelections from "@/hooks/useWordSelections";
 import { QuizFormat } from "@/types";
 import { generateQuestions } from "@/utils/utils";
@@ -15,11 +16,15 @@ const KanaQuiz = () : JSX.Element => {
     const { quizSelections } = useQuizSelections();
     const { kanaSelections } = useKanaSelections();
     const { wordSelections } = useWordSelections();
+    const { showDefinitions } = useSettings();
     const [correctCount, setCorrectCount] = useState<number>(0);
     const [incorrectCount, setIncorrectCount] = useState<number>(0);
     const textInputRefs = useRef<HTMLInputElement[]>([]);
 
-    const remainingQuestions = quizSelections.amount - correctCount - incorrectCount;
+    // this casting is protected by the step wizard. The user will not be 
+    // allowed to reach this point unless a valid quiz question amount
+    // number was supplied
+    const remainingQuestions = quizSelections.amount as number - correctCount - incorrectCount;
     const activeQuestionIndex = correctCount + incorrectCount;
 
     const questions = useMemo(() => 
@@ -87,7 +92,7 @@ const KanaQuiz = () : JSX.Element => {
                         {activeQuestion.prompt}
                     </div>
 
-                    {activeQuestion.context && <div className = "prompt-context">
+                    {showDefinitions && activeQuestion.context && <div className = "prompt-context">
                         {activeQuestion.context}
                     </div>}
                 </div>

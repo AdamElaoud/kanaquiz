@@ -3,8 +3,9 @@
 .modal {
     background-color: transparent;
     border: none;
+    overflow: visible;
     padding: 0;
-    width: 90%;
+    width: fit-content;
 
     &::backdrop {
         background-color: $backdropColor;
@@ -15,5 +16,17 @@
         position: fixed;
         top: $padding;
         right: $padding;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .modal {
+        .close-modal-button {
+            &:hover {
+                cursor: pointer;
+                background-color: transparent;
+                color: $gold;
+            }
+        }
     }
 }

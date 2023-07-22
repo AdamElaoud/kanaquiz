@@ -1,0 +1,47 @@
+@use "../../common/styles/index" as *;
+@use "../../styles/index" as *;
+
+$settingsSpacing: calc($sectionSpacing * 3);
+
+.settings-modal {
+    @extend %modal;
+    
+    .settings-title {
+        align-items: center;
+        display: flex;
+        font-size: $largeFontSize;
+        font-weight: $fontWeightSuperBold;
+        margin-bottom: $settingsSpacing;
+    }
+
+    .setting-options {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    .clear-storage {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+
+        .clear-storage-button {
+            background-color: $active;
+            color: $lightModeTextColor;
+            margin-right: 1rem;
+        }
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .settings-modal {
+        .clear-storage {
+            .clear-storage-button {
+                &:hover {
+                    background-color: $gold;
+                }
+            }
+        }
+    }
+}

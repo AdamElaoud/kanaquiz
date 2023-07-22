@@ -10,6 +10,7 @@
     font-size: $tooltipFontSize;
     max-width: max(20vw, 20rem);
     opacity: 1;
+    text-align: center;
     width: max-content;
 
     .tooltip-arrow {

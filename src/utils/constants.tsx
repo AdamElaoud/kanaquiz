@@ -77,15 +77,24 @@ export const QUIZ_SELECTION_STORAGE_KEY = "quiz-selections";
 export const WORD_SELECTION_STORAGE_KEY = "word-selections";
 export const KANA_SELECTION_TAB_STORAGE_KEY = "kana-selections-tab";
 export const SHOWN_WELCOME_MESSAGE_KEY = "shown-welcome-message";
+export const SETTINGS_KEY = "settings";
+
+export const LOCAL_STORAGE_EVENT_NAME = "storage";
+export const GLOBAL_KEY = "global";
 
 export const ORIENTATION_WARNING = "This app was designed to be used in portrait mode. Please rotate your device for the best experience.";
 export const ORIENTATION_WARNING_ID = "orientation-warning";
 
-export const NOT_ENOUGH_KANA = "You must select at least 3 Kana to continue";
-export const NOT_ENOUGH_WORDS = "You must select at least 1 word group to continue";
+export const NOT_ENOUGH_KANA = "You must select at least 3 Kana to continue.";
+export const NOT_ENOUGH_WORDS = "You must select at least 1 word group to continue.";
+export const NOT_ENOUGH_QUESTIONS = "You must set a question amount to continue.";
+
+export const STORAGE_CLEARED = "Stored data successfully cleared!"
+export const STORAGE_CLEARED_ID = "storage-cleared";
 
 export const DIRECTION_TOOLTIP = 'when studying words, translation direction is locked to "Japanese to English"';
 export const FORMAT_TOOLTIP = 'when studying words, answer format is locked to "Write"';
+export const CLEAR_STORED_DATA_TOOLTIP = "Kana Quiz stores small amounts of data on your device. We keep track of things like your last quiz preferences for your convenience.";
 
 export const HIRAGANA_TOOLTIP = () => <span>" ひ ら が な " <LinkText link = "https://en.wikipedia.org/wiki/Hiragana">learn more</LinkText></span>
 

@@ -69,8 +69,13 @@ export type HiraganaWord = Word & { type: "hiragana" };
 
 export type KatakanaWord = Word & { type: "katakana" };
 
+export type SettingsData = {
+    showDefinitions: boolean,
+    showRotationWarning: boolean
+};
+
 export type QuizSelectionData = {
-    amount: number,
+    amount: number | "",
     direction: QuizDirection,
     format: QuizFormat,
     topic: QuizTopic

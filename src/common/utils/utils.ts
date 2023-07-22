@@ -5,6 +5,11 @@ export const onEnterPress = (responseFn?: (event: ReactKeyboardEvent) => void) =
         responseFn(event);
 };
 
+export const onEscapePress = (responseFn?: (event: ReactKeyboardEvent) => void) => (event: ReactKeyboardEvent) => {
+    if (responseFn && event.key === "Escape")
+        responseFn(event);
+};
+
 export const isMobileDevice = (isDevMode = false) : boolean => {
     if (isDevMode)
         return Math.min(window.screen.width, window.screen.height) < 768 || navigator.userAgent.indexOf("Mobi") > -1;

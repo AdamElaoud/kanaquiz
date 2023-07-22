@@ -100,7 +100,7 @@ const Searchbar = (props: Props) : JSX.Element => {
         if (event.key === "Enter" || event.key === "Escape")
             event.preventDefault();
 
-            // blur to hide mobile keyboards on submission
+        // blur to hide mobile keyboards on submission
         if (event.key === "Enter")
             searchInputRef.current?.blur();
 

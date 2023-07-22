@@ -5,7 +5,14 @@ import DirectionToggle from "@/components/direction-toggle/DirectionToggle";
 import QuizSelectionSection from "@/components/quiz-selection-section/QuizSelectionSection";
 import useQuizSelections from "@/hooks/useQuizSelections";
 import { QuizDirection, QuizFormat, QuizSelectionData, QuizTopic } from "@/types";
-import { DIRECTION_TOOLTIP, FORMAT_TOOLTIP, MAXIMUM_QUESTION_AMOUNT, MINIMUM_QUESTION_AMOUNT, SCREEN_FILL_WIDTH, SCREEN_PARTIAL_FILL_WIDTH } from "@/utils/constants";
+import {
+    DIRECTION_TOOLTIP,
+    FORMAT_TOOLTIP,
+    MAXIMUM_QUESTION_AMOUNT,
+    MINIMUM_QUESTION_AMOUNT,
+    SCREEN_FILL_WIDTH,
+    SCREEN_PARTIAL_FILL_WIDTH
+} from "@/utils/constants";
 
 import "./QuizSelection.scss";
 
@@ -21,7 +28,7 @@ const QuizSelection = () : JSX.Element => {
         event.preventDefault();
     };
     
-    const { direction, format, topic } = quizSelections;
+    const { amount, direction, format, topic } = quizSelections;
 
     const defaultDirection = direction === QuizDirection.ENtoJP ? Side.Right : Side.Left;
     const defaultFormatSide = format === QuizFormat.WriteTheAnswer ? Side.Left : Side.Right;
@@ -57,7 +64,7 @@ const QuizSelection = () : JSX.Element => {
         { content: "Choose", onClick: () => updateQuizSelectionField("format", QuizFormat.MultipleChoice) }
     ];
 
-    const wordsIsSelectedTopic = quizSelections.topic === QuizTopic.Words;
+    const wordsIsSelectedTopic = topic === QuizTopic.Words;
 
     return (
         <div className = "quiz-selection-page">
@@ -70,26 +77,29 @@ const QuizSelection = () : JSX.Element => {
                 <QuizSelectionSection title = "Topic">
                     <ToggleButton buttons = {topicToggleButtons} defaultActiveSide = {defaultTopicSide}/>
                 </QuizSelectionSection>
+
                 <QuizSelectionSection title = "Translate" helpTooltip = {DIRECTION_TOOLTIP}>
                     <DirectionToggle 
-                        key = {`direction-selection-${quizSelections.topic}`}
+                        key = {`direction-selection-${topic}`}
                         content = {directionToggleButtons}
                         defaultPointDirection = {wordsIsSelectedTopic ? Side.Left : defaultDirection}
                         disabled = {wordsIsSelectedTopic}
                         onToggle = {onDirectionChange}
                     />
                 </QuizSelectionSection>
+
                 <QuizSelectionSection title = "Answer" helpTooltip = {FORMAT_TOOLTIP}>
                     <ToggleButton
-                        key = {`format-selection-${quizSelections.topic}`}
+                        key = {`format-selection-${topic}`}
                         buttons = {formatToggleButtons}
                         defaultActiveSide = {wordsIsSelectedTopic ? Side.Left : defaultFormatSide}
                         disabled = {wordsIsSelectedTopic}
                     />
                 </QuizSelectionSection>
+
                 <QuizSelectionSection title = "Questions">
                     <NumberInput
-                        defaultValue={quizSelections.amount}
+                        defaultValue = {amount}
                         max = {MAXIMUM_QUESTION_AMOUNT}
                         min = {MINIMUM_QUESTION_AMOUNT}
                         name = "question-amount"

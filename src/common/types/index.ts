@@ -34,6 +34,12 @@ export enum Position {
     TopStart = "top-start",
 }
 
+export enum CloseMethod {
+    XButton = "x-button",
+    Escape = "escape",
+    ClickBackdrop = "click-backdrop",
+};
+
 export type ReactButtonOnClick = React.MouseEventHandler<HTMLButtonElement>;
 export type ReactButtonOnClickEvent = React.MouseEvent<HTMLButtonElement, MouseEvent>;
 export type ReactDivOnClick = React.MouseEventHandler<HTMLDivElement>;
@@ -57,6 +63,13 @@ export type HTMLEvent = keyof HTMLElementEventMap;
 export type WindowEvent = keyof WindowEventMap;
 
 export type WindowSize = [width: number, height: number];
+
+export type EventHandling = {
+    dispatch?: boolean,
+    listen?: boolean,
+    listenGlobal?: boolean,
+    scope?: HTMLElement
+};
 
 export interface EventSubscription {
     eventKeys: Set<string>,
@@ -107,7 +120,7 @@ export type TabState = { prevTabIndex: number, prevTabTitle?: string | ReactElem
 
 export type BasicID = number | string;
 
-export type NumberInputState = { prevValue: number, newValue: number };
+export type NumberInputState = { prevValue: number | "", newValue: number | "" };
 
 export type TextInputState = { prevValue: string, newValue: string };
 
@@ -119,6 +132,7 @@ export enum CustomIconType {
     Kana = "kana",
     USFlag = "usFlag",
 };
+
 export type CustomIconMapType = {
     [key in CustomIconType]: {
         isImage: boolean,
@@ -158,6 +172,7 @@ export enum FontAwesomeIconType {
     Warning = "warning",
     X = "x"
 };
+
 export type FontAwesomeIconMapType = {
     [key in FontAwesomeIconType]: IconDefinition;
 };

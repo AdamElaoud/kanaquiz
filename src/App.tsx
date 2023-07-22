@@ -6,13 +6,32 @@ import useWindowSize from '@/common/hooks/useWindowSize';
 import { CustomIconType, FontAwesomeIconType, StepConfig, StepState } from '@/common/types';
 import { isMobileDevice } from '@/common/utils/utils';
 import Header from '@/components/header/Header';
+import Settings from '@/components/settings/Settings';
 import WelcomeMessage from '@/components/welcome-message/WelcomeMessage';
 import KanaSelectionsProvider from '@/contexts/KanaSelectionsContext';
 import ModeProvider from '@/contexts/ModeContext';
 import QuizSelectionsProvider from '@/contexts/QuizSelectionsContext';
+import SettingsProvider from '@/contexts/SettingsContext';
 import WordSelectionsProvider from '@/contexts/WordSelectionsContext';
-import { Mode, PageType, QuizDirection, QuizFormat, QuizSelectionData, QuizTopic, WordSelectionData } from '@/types';
-import { DEFAULT_QUESTION_AMOUNT, KANA_SELECTION_STORAGE_KEY, NOT_ENOUGH_KANA, NOT_ENOUGH_WORDS, ORIENTATION_WARNING, ORIENTATION_WARNING_ID, PAGES, QUIZ_SELECTION_STORAGE_KEY, SCREEN_FILL_PERCENT, SCREEN_FILL_WIDTH, SCREEN_PARTIAL_FILL_PERCENT, SCREEN_PARTIAL_FILL_WIDTH, SHOWN_WELCOME_MESSAGE_KEY, WORD_SELECTION_STORAGE_KEY } from '@/utils/constants';
+import { Mode, PageType, QuizDirection, QuizFormat, QuizSelectionData, QuizTopic, SettingsData, WordSelectionData } from '@/types';
+import {
+    DEFAULT_QUESTION_AMOUNT,
+    KANA_SELECTION_STORAGE_KEY,
+    NOT_ENOUGH_KANA,
+    NOT_ENOUGH_QUESTIONS,
+    NOT_ENOUGH_WORDS,
+    ORIENTATION_WARNING,
+    ORIENTATION_WARNING_ID,
+    PAGES,
+    QUIZ_SELECTION_STORAGE_KEY,
+    SCREEN_FILL_PERCENT,
+    SCREEN_FILL_WIDTH,
+    SCREEN_PARTIAL_FILL_PERCENT,
+    SCREEN_PARTIAL_FILL_WIDTH,
+    SETTINGS_KEY,
+    SHOWN_WELCOME_MESSAGE_KEY,
+    WORD_SELECTION_STORAGE_KEY
+} from '@/utils/constants';
 import { useLayoutEffect, useRef, useState } from "react";
 
 import '@/styles/App.scss';
@@ -20,21 +39,28 @@ import '@/styles/App.scss';
 const App = () : JSX.Element => {
     const pageRef = useRef<HTMLDivElement>(null);
     const closeModalButtonRef = useRef<HTMLButtonElement>(null);
-    const [carouselKey, resetCarousel] = useState<boolean>(false);
+    const settingOptionRef = useRef<HTMLButtonElement>(null);
+    const [wizardKey, resetWizard] = useState<boolean>(false);
+    const [pageKey, resetPage] = useState<boolean>(false);
     const [mode, setMode] = useState<Mode>(Mode.Kana);
     const [page, setPage] = useState<PageType>(PageType.QuizSelect);
+    const [showSettings, setShowSettings] = useState<boolean>(false);
+    const [settings, setSettings] = useLocalStorage<SettingsData>(SETTINGS_KEY, {
+        showDefinitions: true,
+        showRotationWarning: true
+    }, { listenGlobal: true });
     const [shownWelcomeMessage, setShownWelcomeMessage] = useLocalStorage<boolean>(SHOWN_WELCOME_MESSAGE_KEY, false);
-    const [kanaSelections, setKanaSelections] = useLocalStorage<string[]>(KANA_SELECTION_STORAGE_KEY, []);
+    const [kanaSelections, setKanaSelections] = useLocalStorage<string[]>(KANA_SELECTION_STORAGE_KEY, [], { listenGlobal: true });
     const [quizSelections, setQuizSelections] = useLocalStorage<QuizSelectionData>(QUIZ_SELECTION_STORAGE_KEY, {
         amount: DEFAULT_QUESTION_AMOUNT,
         direction: QuizDirection.JPtoEN,
         format: QuizFormat.MultipleChoice,
         topic: QuizTopic.Kana
-    });
+    }, { listenGlobal: true });
     const [wordSelections, setWordSelections] = useLocalStorage<WordSelectionData>(WORD_SELECTION_STORAGE_KEY, {
         allHiragana: true,
         allKatakana: true
-    });
+    }, { listenGlobal: true });
     const [windowWidth, windowHeight] = useWindowSize();
     const dynamicWidth = useDynamicWidth(
         SCREEN_PARTIAL_FILL_WIDTH,
@@ -45,10 +71,12 @@ const App = () : JSX.Element => {
     const { warning, dismissOne } = useNotification();
 
     useLayoutEffect(() => {
-        if (isMobileDevice() && screen.orientation.type.includes("portrait"))
+        const isRotationWarningEnabled = settings.showRotationWarning && isMobileDevice();
+
+        if (isRotationWarningEnabled && screen.orientation.type.includes("portrait"))
             dismissOne(ORIENTATION_WARNING_ID);
             
-        if (isMobileDevice() && screen.orientation.type.includes("landscape"))
+        if (isRotationWarningEnabled && screen.orientation.type.includes("landscape"))
             warning(ORIENTATION_WARNING, { autoClose: false, toastId: ORIENTATION_WARNING_ID });
 
     // a render is triggered on rotation due to the useWindowSize and useDynamicWidth hooks
@@ -96,7 +124,9 @@ const App = () : JSX.Element => {
         {
             iconType: FontAwesomeIconType.Pencil,
             ID: PageType.QuizSelect,
-            title: "Quiz"
+            title: "Quiz",
+            blockNextStep: () => quizSelections.amount === "",
+            nextStepBlockedError: () => NOT_ENOUGH_QUESTIONS
         },
         {
             iconType: kanaIsSelectedTopic ? CustomIconType.Kana : FontAwesomeIconType.Book,
@@ -133,8 +163,9 @@ const App = () : JSX.Element => {
     return (
         <>
             <NotificationCenter />
+
             <Modal
-                key = {`${shownWelcomeMessage}`}
+                key = {`welcome-${shownWelcomeMessage}`}
                 defaultOpen = {!shownWelcomeMessage}
                 hideCloseButton = {true}
                 onClose = {onComplete}
@@ -142,35 +173,53 @@ const App = () : JSX.Element => {
             >
                 <WelcomeMessage ref = {closeModalButtonRef} onComplete = {onComplete}/>
             </Modal>
-            <ModeProvider value = {{ mode, setMode }}>
-                <KanaSelectionsProvider value = {{ kanaSelections, updateKanaSelections }}>
-                    <QuizSelectionsProvider value = {{ quizSelections, updateQuizSelections }}>
-                        <WordSelectionsProvider value = {{ wordSelections, updateWordSelections }}>
-                            <div className = "app" style = {appStyle}>
-                                <Header
-                                    style = {dynamicWidth}
-                                    onClick = {() => { setPage(PageType.QuizSelect); resetCarousel(state => !state); }}
-                                />
 
-                                <div ref = {pageRef} className = {pageClasses.join(" ")} style = {dynamicWidth}>
-                                    {PAGES[page]()}
+            <Modal
+                key = {`settings-${showSettings}`}
+                defaultOpen = {showSettings}
+                onClose = {(closeMethod) => { console.log(closeMethod); setShowSettings(false); }}
+                initialFocusTarget = {settingOptionRef}
+            >
+                <Settings
+                    ref = {settingOptionRef}
+                    settings = {settings}
+                    setSettings = {setSettings}
+                    onClearStorage = {() => { resetPage(state => !state); setShowSettings(false); }}
+                />
+            </Modal>
+
+            <SettingsProvider value = {settings}>
+                <ModeProvider value = {{ mode, setMode }}>
+                    <KanaSelectionsProvider value = {{ kanaSelections, updateKanaSelections }}>
+                        <QuizSelectionsProvider value = {{ quizSelections, updateQuizSelections }}>
+                            <WordSelectionsProvider value = {{ wordSelections, updateWordSelections }}>
+                                <div className = "app" style = {appStyle}>
+                                    <Header
+                                        style = {dynamicWidth}
+                                        onClick = {() => { setPage(PageType.QuizSelect); resetWizard(state => !state); }}
+                                        openSettings = {() => setShowSettings(true)}
+                                    />
+
+                                    <div key = {`page-${pageKey}`} ref = {pageRef} className = {pageClasses.join(" ")} style = {dynamicWidth}>
+                                        {PAGES[page]()}
+                                    </div>
+                                    
+                                    {!isInQuiz && <StepWizard
+                                        key = {`wizard-${wizardKey}`}
+                                        className = "page-wizard"
+                                        completeConfig = {wizardCompleteConfig}
+                                        steps = {pageSteps}
+                                        onStepChange = {onStepChange}
+                                        showCheckOnComplete = {true}
+                                        style = {dynamicWidth}
+                                        startingStepID = {pageSteps[0].ID}
+                                    />}
                                 </div>
-                                
-                                {!isInQuiz && <StepWizard
-                                    key = {`${carouselKey}`}
-                                    className = "page-wizard"
-                                    completeConfig = {wizardCompleteConfig}
-                                    steps = {pageSteps}
-                                    onStepChange = {onStepChange}
-                                    showCheckOnComplete = {true}
-                                    style = {dynamicWidth}
-                                    startingStepID = {pageSteps[0].ID}
-                                />}
-                            </div>
-                        </WordSelectionsProvider>
-                    </QuizSelectionsProvider>
-                </KanaSelectionsProvider>
-            </ModeProvider>
+                            </WordSelectionsProvider>
+                        </QuizSelectionsProvider>
+                    </KanaSelectionsProvider>
+                </ModeProvider>
+            </SettingsProvider>
         </>
     );
 };

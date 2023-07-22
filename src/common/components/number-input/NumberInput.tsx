@@ -10,7 +10,7 @@ import "./NumberInput.scss";
 
 interface Props {
     buttonIcons?: [downIcon: IconType, upIcon: IconType],
-    defaultValue?: number,
+    defaultValue?: number | "",
     max?: number,
     min?: number,
     name: string,
@@ -41,7 +41,7 @@ const NumberInput = (props: Props) => {
         title
     } = props;
 
-    const [value, setValue] = useState<number>(defaultValue);
+    const [value, setValue] = useState<number | "">(defaultValue);
     const inputRef = useRef<HTMLInputElement>(null);
     const { error } = useNotification();
 
@@ -49,27 +49,27 @@ const NumberInput = (props: Props) => {
         const input = parseInt(event.target.value);
 
         if (input !== value) {
-            if (min && input < min) {
+            if (min && !isNaN(input) && input < min) {
                 if (showFlareOnInvalidInput)
                     error(NUMBER_INPUT_MINIMUM(min), { toastId: NUMBER_INPUT_MINIMUM_ID });
 
                 return;
             }
             
-            if (max && input > max) {
+            if (max && !isNaN(input) && input > max) {
                 if (showFlareOnInvalidInput)
                     error(NUMBER_INPUT_MAXIMUM(max), { toastId: NUMBER_INPUT_MAXIMUM_ID });
                 
                 return;
             }
 
-            const handledValue = onChange({ prevValue: value, newValue: input || min || defaultValue|| 0 });
-            setValue(handledValue || input);
+            const handledValue = onChange({ prevValue: value, newValue: input || "" });
+            setValue(handledValue || input || "");
         }
     };
 
     const onClickButton = (direction: Direction) => () => {
-        const newValue = value + direction;
+        const newValue = value === "" ? direction : value + direction;
 
         if (min && newValue < min) {
             if (showFlareOnInvalidInput)
@@ -86,7 +86,7 @@ const NumberInput = (props: Props) => {
         }
 
         const handledValue = onChange({ prevValue: value, newValue });
-        setValue(prevValue => handledValue || (prevValue + direction));
+        setValue(prevValue => handledValue || (prevValue === "" ? direction : prevValue + direction));
     };
 
     // blur to hide mobile keyboards on submission

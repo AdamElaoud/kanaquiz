@@ -92,7 +92,10 @@ export const generateQuestions = (
             return letters;
         });
 
-        const prompts: KanaLetters[] = getSeveralRandomElementsFromArray(selectionLetters, amount);
+        // this casting is protected by the step wizard. The user will not be 
+        // allowed to reach this point unless a valid quiz question amount
+        // number was supplied
+        const prompts: KanaLetters[] = getSeveralRandomElementsFromArray(selectionLetters, amount as number);
 
         return prompts.map(prompt => ({
             answer: prompt[responseMode],
@@ -110,7 +113,10 @@ export const generateQuestions = (
                 ? hiraganaWords
                 : katakanaWords;
 
-        const prompts: Word[] = getSeveralRandomElementsFromArray(selectionWords, amount);
+        // this casting is protected by the step wizard. The user will not be 
+        // allowed to reach this point unless a valid quiz question amount
+        // number was supplied
+        const prompts: Word[] = getSeveralRandomElementsFromArray(selectionWords, amount as number);
 
         return prompts.map(prompt => ({
             answer: prompt.romaji,
