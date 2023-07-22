@@ -2,7 +2,7 @@ import { GroupsToChars } from "@/types";
 
 export const groupsToChars: GroupsToChars = {
     "la_1": [ ["シ", "shi", "k_shi"], ["ツ", "tsu", "k_tsu"], ["ソ", "so", "k_so"], ["ン", "n", "k_n"], ["ノ", "no", "k_no"], ["メ", "me", "k_me"] ],
-    "la_2": [ ["ウ", "u", "k_u"], ["フ", "fu", "k_fu"], ["ワ", "wa", "k_wa"], ["ラ", "ra", "k_ra"], ["ス", "su", "k_su"], ["ヌ", "nu", "k_nu"], ["ヲ", "wo", "k_wo"] ],
+    "la_2": [ ["ウ", "u", "k_u"], ["ワ", "wa", "k_wa"], ["フ", "fu", "k_fu"], ["ラ", "ra", "k_ra"], ["ヲ", "wo", "k_wo"], ["ヌ", "nu", "k_nu"], ["ス", "su", "k_su"] ],
     "la_3": [ ["れ", "re", "h_re"], ["ね", "ne", "h_ne"], ["わ", "wa", "h_wa"] ],
     "la_4": [ ["ア", "a", "k_a"], ["ヤ", "ya", "k_ya"], ["マ", "ma", "k_ma"] ],
     "la_5": [ ["め", "me", "h_me"], ["ぬ", "nu", "h_nu"] ],
