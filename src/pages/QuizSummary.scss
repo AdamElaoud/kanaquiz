@@ -24,7 +24,6 @@ $summaryTitleHeight: calc($mediumFontSize + ($sectionSpacing / 2));
         @extend %padding;
         background-color: $darkNavy;
         max-height: max(45%, 23.5rem);
-        min-height: max(15%, 20rem);
 
         .summary-title {
             margin-bottom: calc($sectionSpacing / 2);
@@ -65,13 +64,12 @@ $summaryTitleHeight: calc($mediumFontSize + ($sectionSpacing / 2));
                 display: flex;
                 flex-direction: column;
                 flex-wrap: nowrap;
-                height: calc(100% - $sectionSpacing);
                 justify-content: center;
                 row-gap: 0.75rem;
                 width: 100%;
                 
                 &.topic-is-kana {
-                    height: calc(100% - $toggleButtonHeight - $sectionSpacing);
+                    max-height: calc(100% - $toggleButtonHeight - $sectionSpacing);
                 }
                 
                 .kana-selections-container {
