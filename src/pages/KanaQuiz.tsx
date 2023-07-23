@@ -17,9 +17,12 @@ const KanaQuiz = () : JSX.Element => {
     const { kanaSelections } = useKanaSelections();
     const { wordSelections } = useWordSelections();
     const { showDefinitions } = useSettings();
+    const [multChoiceResponse, setMultChoiceResponse] = useState<string>("");
+    const [writeResponses, setWriteResponses] = useState<string[]>([]);
     const [correctCount, setCorrectCount] = useState<number>(0);
     const [incorrectCount, setIncorrectCount] = useState<number>(0);
     const textInputRefs = useRef<HTMLInputElement[]>([]);
+    const submitButtonRef = useRef<HTMLButtonElement>(null);
 
     // this casting is protected by the step wizard. The user will not be 
     // allowed to reach this point unless a valid quiz question amount
@@ -44,12 +47,18 @@ const KanaQuiz = () : JSX.Element => {
             textInputRefs.current[0].focus();
         }
 
-    }, [isMultChoice]);
+    }, [isMultChoice, activeQuestionIndex]);
 
     const onInputChange = useDebounce<TextInputState, void>(({ newValue }) => {
-        if (newValue.length > 0) {
-            const currentInputIndex = textInputRefs.current?.findIndex(ele => ele === document.activeElement);
+        const currentInputIndex = textInputRefs.current?.findIndex(ele => ele === document.activeElement);
 
+        setWriteResponses(currentResponses => {
+            const copy = [...currentResponses];
+            copy[currentInputIndex] = newValue;
+            return copy;
+        });
+
+        if (newValue.length > 0) {
             if (currentInputIndex !== textInputRefs.current.length - 1)
                 textInputRefs.current[currentInputIndex + 1].focus();
             else
@@ -57,15 +66,43 @@ const KanaQuiz = () : JSX.Element => {
         }
     }, 400);
 
-    const checkAnswer = (response: string) => () => {
-        if (response === activeQuestion.answer) {
-            setCorrectCount(count => count + 1);
+    const checkAnswer = () => {
+        if (isMultChoice) {
+            if (multChoiceResponse === activeQuestion.answer)
+                setCorrectCount(count => count + 1);
+            else
+                setIncorrectCount(count => count + 1);
+    
+            setMultChoiceResponse("");
 
         } else {
-            setIncorrectCount(count => count + 1);
+            const writeResponse = writeResponses.join(",");
+            const answer = typeof activeQuestion.answer !== "string" ? activeQuestion.answer.join(",") : activeQuestion.answer;
+            
+            if (writeResponse === answer)
+                setCorrectCount(count => count + 1);
+            else
+                setIncorrectCount(count => count + 1);
+
+            setWriteResponses([]);
+            textInputRefs.current.forEach(input => input.value = "");
+            textInputRefs.current[0].focus();
         }
     };
 
+    const makeSelection = (choice: string) => () => {
+        const isSelection = choice === multChoiceResponse;
+
+        if (isSelection) setMultChoiceResponse("");
+        else setMultChoiceResponse(choice);
+    };
+
+    const submitIsEnabled =
+        (isMultChoice && multChoiceResponse) ||
+        (!isMultChoice && writeResponses.length === activeQuestion.answer.length && writeResponses.every(response => response !== ""))
+
+    console.log('submitIsEnabled :>> ', submitIsEnabled);
+    
     const promptQuestionClasses = ["prompt-question"];
     if (activeQuestion.prompt.length > 7) promptQuestionClasses.push("large-word");
 
@@ -99,14 +136,23 @@ const KanaQuiz = () : JSX.Element => {
 
                 <div className = "answer-input">
                     {isMultChoice && activeQuestion.choices?.map(choice => {
+                        const isSelection = choice === multChoiceResponse;
+
+                        const buttonClasses = ["choice-button"];
+                        if (isSelection) buttonClasses.push("is-selection");
+
                         return (
-                            <Button key = {choice} className = "choice-button" onClick = {checkAnswer(choice)}>
+                            <Button key = {choice} className = {buttonClasses.join(" ")} onClick = {makeSelection(choice)}>
                                 {choice}
                             </Button>
                         );
                     })}
                     {!isMultChoice && <ChoiceInputRow answers = {activeQuestion.answer} onChange = {onInputChange}/>}
                 </div>
+
+                <Button ref = {submitButtonRef} className = "submit-choice-button" onClick = {checkAnswer} disabled = {!submitIsEnabled}>
+                    SUBMIT
+                </Button>
             </div>
         </div>
     );

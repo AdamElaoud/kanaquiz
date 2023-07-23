@@ -107,7 +107,7 @@ const StepWizard = (props: Props) : JSX.Element => {
                 onClick = {goToPreviousStep}
                 iconType = {FontAwesomeIconType.AngleLeft}
             >
-                Back
+                BACK
             </Button>}
 
             <div className = "steps-content">
@@ -128,7 +128,7 @@ const StepWizard = (props: Props) : JSX.Element => {
                 iconType = {FontAwesomeIconType.AngleRight}
                 iconSide = {Side.Right}
             >
-                {isOnLastStep && completeConfig.text ? completeConfig.text : "Next"}
+                {isOnLastStep && completeConfig.text ? completeConfig.text : "NEXT"}
             </Button>
         </div>
     );

@@ -1,13 +1,11 @@
 import { ReactKeyboardEvent } from "@/common/types";
 
-export const onEnterPress = (responseFn?: (event: ReactKeyboardEvent) => void) => (event: ReactKeyboardEvent) => {
-    if (responseFn && event.key === "Enter")
-        responseFn(event);
+export const onEnterPress = (responseFn: (event: ReactKeyboardEvent) => void) => (event: ReactKeyboardEvent) => {
+    if (event.key === "Enter") responseFn(event);
 };
 
-export const onEscapePress = (responseFn?: (event: ReactKeyboardEvent) => void) => (event: ReactKeyboardEvent) => {
-    if (responseFn && event.key === "Escape")
-        responseFn(event);
+export const onEscapePress = (responseFn: (event: ReactKeyboardEvent) => void) => (event: ReactKeyboardEvent) => {
+    if (event.key === "Escape") responseFn(event);
 };
 
 export const isMobileDevice = (isDevMode = false) : boolean => {

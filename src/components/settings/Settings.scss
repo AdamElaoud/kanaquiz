@@ -27,6 +27,7 @@ $settingsSpacing: calc($sectionSpacing * 3);
         margin-top: 2rem;
 
         .clear-storage-button {
+            @include button-press($active);
             background-color: $active;
             color: $lightModeTextColor;
             margin-right: 1rem;
@@ -39,6 +40,7 @@ $settingsSpacing: calc($sectionSpacing * 3);
         .clear-storage {
             .clear-storage-button {
                 &:hover {
+                    @include button-press($gold);
                     background-color: $gold;
                 }
             }

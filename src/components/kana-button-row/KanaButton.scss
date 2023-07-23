@@ -23,6 +23,15 @@ $kanaButtonWidth: 4rem;
         color: $lightModeTextColor;
     }
 
+    &.disable-on-click {
+        // can't @extend %disable-button-press in media query, so direct paste
+        box-shadow: none;
+
+        &:active {
+            transform: none;
+        }
+    }
+
     &.is-kana {
         font-family: 'Noto Sans JP', sans-serif !important;
     }

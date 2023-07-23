@@ -40,13 +40,13 @@ const Settings = forwardRef((props: Props, ref: ReactForwardedRef<HTMLButtonElem
             <div className = "setting-options">
                 <SettingOption
                     ref = {ref}
-                    title = "Show Word Definitions"
+                    title = "Show word definitions"
                     onEnable = {() => setSettings(currentSettings => ({ ...currentSettings, showDefinitions: true }))}
                     onDisable = {() => setSettings(currentSettings => ({ ...currentSettings, showDefinitions: false }))}
                     startDeactivated = {settings.showDefinitions === false}
                 />
                 {isMobileDevice() && <SettingOption
-                    title = "Show Rotation Warning"
+                    title = "Show rotation warning"
                     onEnable = {() => setSettings(currentSettings => ({ ...currentSettings, showRotationWarning: true }))}
                     onDisable = {() => setSettings(currentSettings => ({ ...currentSettings, showRotationWarning: false }))}
                     startDeactivated = {settings.showRotationWarning === false}

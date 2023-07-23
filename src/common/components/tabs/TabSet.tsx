@@ -32,13 +32,12 @@ const TabSet = (props: Props) => {
 
     const onTabHeaderClick = (newTabIndex: number) => () => {
         if (newTabIndex !== activeTabIndex) {
-            if (onTabChange)
-                onTabChange({
-                    prevTabIndex: activeTabIndex,
-                    prevTabTitle: tabs[activeTabIndex].title,
-                    newTabIndex: newTabIndex,
-                    newTabTitle: tabs[newTabIndex].title
-                });
+            onTabChange?.({
+                prevTabIndex: activeTabIndex,
+                prevTabTitle: tabs[activeTabIndex].title,
+                newTabIndex: newTabIndex,
+                newTabTitle: tabs[newTabIndex].title
+            });
     
             setActiveTabIndex(newTabIndex);
         }

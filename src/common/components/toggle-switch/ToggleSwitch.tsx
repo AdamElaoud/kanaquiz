@@ -20,8 +20,8 @@ const ToggleSwitch = forwardRef((props: Props, ref: ReactForwardedRef<HTMLButton
         if (!disabled) {
             if (!activated)
                 onActivate();
-            else if (onDeactivate)
-                onDeactivate();
+            else
+                onDeactivate?.();
     
             setActivated(currentStatus => !currentStatus);
         }

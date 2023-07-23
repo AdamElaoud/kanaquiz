@@ -86,7 +86,7 @@ export const generateQuestions = (
         const responseMode = isJPtoEN ? Mode.Romaji : Mode.Kana;
         const promptMode = isJPtoEN ? Mode.Kana : Mode.Romaji;
 
-        const selectionLetters = kanaSelections.map(selection => {
+        const selectionLetters: KanaLetters[] = kanaSelections.map(selection => {
             const { letters } = getGroupAndLettersFromID(selection);
 
             return letters;

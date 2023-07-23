@@ -9,8 +9,7 @@ const useMouseClick = (onMouseClick?: (mouseClickState: MouseClickState) => void
             const previousClickTarget = mouseClick ? mouseClick.target as HTMLElement : null;
             const nextClickTarget = event.target as HTMLElement;
 
-            if (onMouseClick)
-                onMouseClick({ event, previousClickTarget, nextClickTarget });
+            onMouseClick?.({ event, previousClickTarget, nextClickTarget });
 
             setMouseClick(event);
         };

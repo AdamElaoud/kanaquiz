@@ -86,9 +86,17 @@ $answerInputWidth: 7rem;
             row-gap: 1rem;
 
             .choice-button {
+                @include button-press($lightNavy);
+                background-color: $lightNavy;
                 font-size: $largeFontSize;
                 height: $answerInputHeight;
                 width: $answerInputWidth;
+
+                &.is-selection {
+                    @include button-press($active);
+                    background-color: $active;
+                    color: $lightModeTextColor;
+                }
             }
 
             input {
@@ -97,6 +105,48 @@ $answerInputWidth: 7rem;
                 width: $answerInputWidth;
             }
         }
-    }
 
+        .submit-choice-button {
+            @include button-press($active);
+            background-color: $active;
+            color: $lightModeTextColor;
+            font-weight: $fontWeightBold;
+            width: 15rem;
+        }
+    }
+}
+
+@media (max-height: $landscapeMobileHeightThreshhold) {
+    .kana-quiz-page {    
+        .quiz-status {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .kana-quiz-page {
+        .prompt-and-answer-input {
+            .answer-input {
+                .choice-button {
+                    &:not(.is-selection):hover {
+                        @include button-press($gold);
+                        background-color: $gold;
+                    }
+
+                    &:hover {
+                        @include button-press($lightActive);
+                        background-color: $lightActive;
+                    }
+                }
+            }
+
+            .submit-choice-button {
+                &:hover {
+                    @include button-press($gold);
+                    background-color: $gold;
+                }
+            }
+        }
+    }
 }

@@ -63,9 +63,9 @@ const Modal = (props: Props) : JSX.Element => {
             ref = {modalRef}
             className = "modal"
             style = {{ ...defaultStyle, ...style }}
-            onClose = {(...args) => { console.log(...args); if (onClose) onClose(closeMethod.current); }}
+            onClose = {() => onClose?.(closeMethod.current)}
             onClick = {onClick}
-            onCancel = {(...args) => { console.log(...args); if (onClose) onClose(CloseMethod.Escape); }}
+            onCancel = {() => onClose?.(CloseMethod.Escape)}
         >
             {!hideCloseButton && <Button
                 className = "close-modal-button"

@@ -144,7 +144,7 @@ const App = () : JSX.Element => {
     ];
 
     const wizardCompleteConfig = {
-        text: "Start",
+        text: "START",
         onComplete: () => setPage(PageType.KanaQuiz)
     };
 
