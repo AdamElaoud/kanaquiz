@@ -89,7 +89,7 @@ export const NOT_ENOUGH_KANA = "You must select at least 3 Kana to continue.";
 export const NOT_ENOUGH_WORDS = "You must select at least 1 word group to continue.";
 export const NOT_ENOUGH_QUESTIONS = "You must set a question amount to continue.";
 
-export const STORAGE_CLEARED = "Stored data successfully cleared!"
+export const STORAGE_CLEARED = "All data successfully cleared!"
 export const STORAGE_CLEARED_ID = "storage-cleared";
 
 export const DIRECTION_TOOLTIP = 'when studying words, translation direction is locked to "Japanese to English"';
