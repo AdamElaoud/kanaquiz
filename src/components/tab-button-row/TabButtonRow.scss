@@ -15,11 +15,13 @@
     }
 
     .select-all-button {
+        @include button-press($lightNavy);
         background-color: $lightNavy;
         margin-right: 0.5rem;
     }
     
     .clear-all-button {
+        @include button-press($darkCrimson);
         background-color: $darkCrimson;
         margin-left : 0.5rem;
     }
@@ -50,6 +52,7 @@
         .tab-button-row {
             .button {
                 &:hover {
+                    @include button-press($gold);
                     cursor: pointer;
                     background-color: $gold;
                     color: $lightModeTextColor;

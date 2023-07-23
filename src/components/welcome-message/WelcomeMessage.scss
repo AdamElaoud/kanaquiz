@@ -31,6 +31,7 @@ $welcomeMessageSpacing: calc($sectionSpacing * 1.5);
     }
 
     .close-welcome-message-button {
+        @include button-press($active);
         background-color: $active;
         color: $lightModeTextColor;
         margin-top: $welcomeMessageSpacing;
@@ -42,6 +43,7 @@ $welcomeMessageSpacing: calc($sectionSpacing * 1.5);
     .welcome-message-modal {
         .close-welcome-message-button {
             &:hover {
+                @include button-press($gold);
                 background-color: $gold;
             }
         }

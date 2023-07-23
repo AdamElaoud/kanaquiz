@@ -12,6 +12,7 @@
     }
 
     .close-modal-button {
+        @extend %disable-button-press;
         background-color: transparent;
         position: fixed;
         top: $padding;

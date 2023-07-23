@@ -11,6 +11,7 @@
 
     .logo {
         @include padding(0.5);
+        @extend %disable-button-press;
         align-items: center;
         background-color: transparent;
         display: flex;
@@ -28,8 +29,9 @@
     .header-actions {
         position: absolute;
         right: 0;
-
+        
         .button {
+            @extend %disable-button-press;
             background-color: transparent;
         }
     }

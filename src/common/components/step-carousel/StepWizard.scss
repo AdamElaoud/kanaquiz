@@ -14,6 +14,7 @@ $stepTitleMargin: 1rem;
     width: 100%;
     
     button {
+        @include button-press($lightNavy);
         background-color: $lightNavy;
         font-size: $mediumFontSize;
     }
@@ -33,6 +34,7 @@ $stepTitleMargin: 1rem;
         right: calc($padding * 2);
 
         &.blocked-by-condition {
+            @include button-press($crimson);
             background-color: $crimson;
             opacity: $disabledOpacity;
         }

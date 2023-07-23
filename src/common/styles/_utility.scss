@@ -1,18 +1,6 @@
+@use "sass:color" as color;
 @use "./values" as *;
 @use "./colors" as *;
-
-.visually-hidden {
-    display: none;
-}
-
-%rounded-border {
-    border-radius: $borderRadius;
-}
-
-$halfPadding: calc($padding / 2);
-%padding {
-    padding: $halfPadding $padding $halfPadding $padding;
-}
 
 @mixin rounded-border($multiplier: 1) {
     $updatedBorderRadius: calc($borderRadius * $multiplier);
@@ -45,4 +33,37 @@ $halfPadding: calc($padding / 2);
       -moz-box-shadow: $xOffset $yOffset $blurRadius $spreadRadius $color;
       box-shadow: $xOffset $yOffset $blurRadius $spreadRadius $color;
     }
-  }
+}
+
+@mixin button-press($buttonColor: $richGray) {
+    $shadowColor: #{color.adjust($buttonColor, $lightness: -6%)};
+    $shadowHeight: 3px;
+
+    @include box-shadow($color: $shadowColor, $blurRadius: 0px, $yOffset: $shadowHeight);
+
+    &:active {
+        box-shadow: none;
+        transform: translateY($shadowHeight);
+    }
+}
+
+.visually-hidden {
+    display: none;
+}
+
+%rounded-border {
+    border-radius: $borderRadius;
+}
+
+$halfPadding: calc($padding / 2);
+%padding {
+    padding: $halfPadding $padding $halfPadding $padding;
+}
+
+%disable-button-press {
+    box-shadow: none;
+
+    &:active {
+        transform: none;
+    }
+}

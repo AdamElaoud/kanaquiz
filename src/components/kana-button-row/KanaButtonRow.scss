@@ -11,6 +11,7 @@ $selectAllButtonMargin: 1.5rem;
     margin-bottom: 0.25rem;
 
     .select-all-button {
+        @include button-press($lightNavy);
         background-color: $lightNavy;
         color: $nonFocusedDarkModeTextColor;
         margin-right: $selectAllButtonMargin;
@@ -22,6 +23,7 @@ $selectAllButtonMargin: 1.5rem;
     .button-row {
         .select-all-button {
             &:hover {
+                @include button-press($gold);
                 background-color: $gold;
                 color: $lightModeTextColor
             }

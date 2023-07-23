@@ -3,6 +3,7 @@
 .button {
     @extend %padding;
     @extend %rounded-border;
+    @include button-press();
     align-items: center;
     background-color: $richGray;
     column-gap: 0.5rem;
@@ -18,12 +19,14 @@
 @media (hover: hover) and (pointer: fine) {
     .button {
         &:hover {
+            @include button-press($gold);
             cursor: pointer;
             background-color: $gold;
             color: $lightModeTextColor;
         }
         
         &:disabled {
+            @include button-press($richGray);
             cursor: auto;
             background-color: $richGray;
             color: $darkModeTextColor;

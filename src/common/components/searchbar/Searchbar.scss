@@ -4,6 +4,7 @@ $inputHeight: 3rem;
 $maxSearchResultsHeight: 30rem;
 
 .open-modal-button {
+    @include button-press($darkNavy);
     background-color: $darkNavy;
 }
 
@@ -30,6 +31,7 @@ $maxSearchResultsHeight: 30rem;
 
         .clear-search-button {
             @include padding(0.5);
+            @extend %disable-button-press;
             background-color: transparent;
             margin-right: calc($padding * -0.75);
         }

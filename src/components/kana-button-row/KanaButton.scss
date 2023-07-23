@@ -18,6 +18,7 @@ $kanaButtonWidth: 4rem;
     }
 
     &.is-selected {
+        @include button-press($active);
         background-color: $active;
         color: $lightModeTextColor;
     }
@@ -40,12 +41,20 @@ $kanaButtonWidth: 4rem;
     .kana-button {
         &.is-selected {
             &:not(.disable-on-click):hover {
-                cursor: pointer;
+                @include button-press($lightActive);
                 background-color: $lightActive;
+                cursor: pointer;
             }
         }
 
         &.disable-on-click {
+            // can't @extend %disable-button-press in media query, so direct paste
+            box-shadow: none;
+
+            &:active {
+                transform: none;
+            }
+
             &:hover {
                 cursor: auto;
             }
