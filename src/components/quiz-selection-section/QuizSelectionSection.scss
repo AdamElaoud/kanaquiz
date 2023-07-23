@@ -1,6 +1,6 @@
 @use "../../common/styles/index" as *;
+@use "../../styles/index" as *;
 
-$quizSelectionSectionHeight: 6rem;
 $quizSelectionSectionContentWidth: 58%;
 
 .quiz-selection-section {

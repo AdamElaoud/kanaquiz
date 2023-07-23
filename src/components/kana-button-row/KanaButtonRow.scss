@@ -1,9 +1,7 @@
 @use "../../common/styles/index" as *;
-@use "./KanaButton.scss" as *;
 
 $selectAllButtonWidth: 3rem;
 $selectAllButtonMargin: 1.5rem;
-$maxButtonsPerRow: 8;
 
 .button-row {
     align-items: center;
