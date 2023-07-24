@@ -26,9 +26,9 @@
         }
         
         &:disabled {
-            @include button-press($richGray);
+            @include button-press($crimson);
             cursor: auto;
-            background-color: $richGray;
+            background-color: $crimson;
             color: $darkModeTextColor;
         }
     }

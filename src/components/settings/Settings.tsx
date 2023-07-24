@@ -10,13 +10,14 @@ import { forwardRef } from "react";
 import "./Settings.scss";
 
 interface Props {
+    isInQuiz: boolean,
     onClearStorage: PlainFn,
     settings: SettingsData,
     setSettings: ReactSetState<SettingsData>
 };
 
 const Settings = forwardRef((props: Props, ref: ReactForwardedRef<HTMLButtonElement>) : JSX.Element => {
-    const { onClearStorage, settings, setSettings } = props;
+    const { isInQuiz, onClearStorage, settings, setSettings } = props;
 
     const { success } = useNotification();
 
@@ -60,7 +61,7 @@ const Settings = forwardRef((props: Props, ref: ReactForwardedRef<HTMLButtonElem
                 />}
                 
                 <div className = "clear-storage">
-                    <Button className = "clear-storage-button" onClick = {clearStorage}>
+                    <Button className = "clear-storage-button" onClick = {clearStorage} disabled = {isInQuiz}>
                         Clear All Data
                     </Button>
                     <HelpTooltip tooltip = {CLEAR_STORED_DATA_TOOLTIP}/>

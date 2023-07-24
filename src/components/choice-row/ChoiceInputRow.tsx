@@ -4,14 +4,15 @@ import { TextInputState } from "@/common/types";
 interface Props {
     answers: string | string[],
     disabled: boolean,
-    onChange: (inputState: TextInputState) => void
+    onChange: (inputState: TextInputState) => void,
+    questionIndex: number
 };
 
 const ChoiceInputRow = (props: Props) : JSX.Element => {
-    const { answers, disabled, onChange } = props;
+    const { answers, disabled, onChange, questionIndex } = props;
 
     if (typeof answers === "string")
-        return <TextInput disabled = {disabled} name = {answers} onChange = {onChange}/>;
+        return <TextInput key = {questionIndex} disabled = {disabled} name = {answers} onChange = {onChange}/>;
 
     return (
         <>{answers.map((answer, index) => <TextInput key = {`${answer}-${index}`} disabled = {disabled} name = {answer} onChange = {onChange}/>)}</>

@@ -41,12 +41,9 @@ const KanaQuiz = () : JSX.Element => {
     const remainingQuestions = quizSelections.amount as number - correctCount - incorrectCount;
     const activeQuestionIndex = correctCount + incorrectCount;
 
-    const questions = useMemo(() => 
-        generateQuestions(
-            quizSelections,
-            kanaSelections,
-            wordSelections
-        ), [kanaSelections, quizSelections, wordSelections]);
+    // this value should only be generated on mount and should never be changed
+    // eslint-disable-next-line
+    const questions = useMemo(() => generateQuestions(quizSelections, kanaSelections, wordSelections), []);
 
     const activeQuestion = questions[activeQuestionIndex];
     const activeQuestionAnswer = typeof activeQuestion.answer === "string" ? activeQuestion.answer : activeQuestion.answer.join(" ");
@@ -61,7 +58,6 @@ const KanaQuiz = () : JSX.Element => {
     useEffect(() => {
         if (!isMultChoice) {
             textInputRefs.current = Array.from(document.querySelectorAll("input[type = text]"));
-            textInputRefs.current.forEach(input => input.value = "");
             textInputRefs.current[0].focus();
         }
 
@@ -158,12 +154,18 @@ const KanaQuiz = () : JSX.Element => {
                         if (isSelection) buttonClasses.push("is-selection");
 
                         return (
-                            <Button key = {choice} disabled = {showResult} className = {buttonClasses.join(" ")} onClick = {makeSelection(choice)}>
+                            <Button key = {`${activeQuestionIndex}-${choice}`} disabled = {showResult} className = {buttonClasses.join(" ")} onClick = {makeSelection(choice)}>
                                 {choice}
                             </Button>
                         );
                     })}
-                    {!isMultChoice && <ChoiceInputRow disabled = {showResult} answers = {activeQuestion.answer} onChange = {onInputChange}/>}
+                    {!isMultChoice &&
+                        <ChoiceInputRow
+                            questionIndex = {activeQuestionIndex}
+                            disabled = {showResult}
+                            answers = {activeQuestion.answer}
+                            onChange = {onInputChange}
+                        />}
                 </div>
             </div>
 

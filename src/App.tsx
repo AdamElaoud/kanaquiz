@@ -178,13 +178,14 @@ const App = () : JSX.Element => {
             <Modal
                 key = {`settings-${showSettings}`}
                 defaultOpen = {showSettings}
-                onClose = {(closeMethod) => { console.log(closeMethod); setShowSettings(false); }}
+                onClose = {() => setShowSettings(false)}
                 initialFocusTarget = {settingOptionRef}
             >
                 <Settings
                     ref = {settingOptionRef}
                     settings = {settings}
                     setSettings = {setSettings}
+                    isInQuiz = {isInQuiz}
                     onClearStorage = {() => { resetPage(state => !state); setShowSettings(false); }}
                 />
             </Modal>

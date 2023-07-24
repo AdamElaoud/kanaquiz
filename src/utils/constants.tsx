@@ -94,7 +94,7 @@ export const STORAGE_CLEARED_ID = "storage-cleared";
 
 export const DIRECTION_TOOLTIP = 'when studying words, translation direction is locked to "Japanese to English"';
 export const FORMAT_TOOLTIP = 'when studying words, answer format is locked to "Write"';
-export const CLEAR_STORED_DATA_TOOLTIP = "Kana Quiz stores small amounts of data on your device. We keep track of things like your last quiz preferences for your convenience.";
+export const CLEAR_STORED_DATA_TOOLTIP = "Kana Quiz keeps track of things like your last quiz preferences for your convenience. You cannot clear your data while in a quiz.";
 
 export const HIRAGANA_TOOLTIP = () => <span>" ひ ら が な " <LinkText link = "https://en.wikipedia.org/wiki/Hiragana">learn more</LinkText></span>
 
