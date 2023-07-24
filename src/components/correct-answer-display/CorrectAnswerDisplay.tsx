@@ -4,11 +4,12 @@ import "./CorrectAnswerDisplay.scss";
 
 interface Props {
     answer: string | string[],
-    answerDetails: string | string[]
+    answerDetails: string | string[],
+    questionIndex: number
 };
 
 const CorrectAnswerDisplay = (props: Props) : JSX.Element => {
-    const { answer, answerDetails } = props;
+    const { answer, answerDetails, questionIndex } = props;
 
     const answerIsWord = typeof answer !== "string";
 
@@ -24,7 +25,7 @@ const CorrectAnswerDisplay = (props: Props) : JSX.Element => {
                 </TooltipText>}
                 {answerIsWord && (answerDetails as string[]).map((details, index) => {
                     return (
-                        <TooltipText key = {`${details}-${index}`} tooltip = {details}>
+                        <TooltipText key = {`${questionIndex}-${details}-${index}`} tooltip = {details}>
                             {answer[index]}
                         </TooltipText>
                     );

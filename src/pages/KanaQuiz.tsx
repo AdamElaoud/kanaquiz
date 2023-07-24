@@ -182,7 +182,7 @@ const KanaQuiz = () : JSX.Element => {
                     Meaning: {activeQuestion.context}
                 </span>}
 
-                {!answerIsCorrect && <CorrectAnswerDisplay answer = {activeQuestion.answer} answerDetails = {activeQuestion.answerDetails}/>}
+                {!answerIsCorrect && <CorrectAnswerDisplay questionIndex = {activeQuestionIndex} answer = {activeQuestion.answer} answerDetails = {activeQuestion.answerDetails}/>}
 
                 <Button className = "next-question-button" onClick = {nextQuestion}>
                     NEXT QUESTION
