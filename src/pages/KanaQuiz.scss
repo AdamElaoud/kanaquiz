@@ -2,8 +2,8 @@
 @use "../styles/index" as *;
 
 $quizStatusHeight: 3rem;
-$quizStatusSpacing: calc($sectionSpacing * 2);
-$promptHeight: 13rem;
+$promptMinHeight: 11rem;
+$promptMaxHeight: 13rem;
 $promptFontSize: 4rem;
 $answerInputHeight: 5rem;
 $answerInputWidth: 7rem;
@@ -11,7 +11,7 @@ $answerInputWidth: 7rem;
 .kana-quiz-page {
     @extend %page;
     position: relative;
-    row-gap: 2rem;
+    row-gap: 3rem;
 
     .quiz-status {
         align-items: center;
@@ -20,7 +20,7 @@ $answerInputWidth: 7rem;
         font-size: $largeFontSize;
         height: $quizStatusHeight;
         justify-content: center;
-        margin-bottom: $quizStatusSpacing;
+        margin-bottom: $sectionSpacing;
 
         .status-number {
             align-items: center;
@@ -59,8 +59,9 @@ $answerInputWidth: 7rem;
             align-items: center;
             display: flex;
             flex-direction: column;
-            height: $promptHeight;
-            justify-content: center;
+            max-height: $promptMaxHeight;
+            min-height: $promptMinHeight;
+            justify-content: space-between;
             row-gap: 0.5rem;
             
             .prompt-question {
@@ -180,9 +181,15 @@ $answerInputWidth: 7rem;
 }
 
 @media (max-height: $landscapeMobileHeightThreshhold) {
-    .kana-quiz-page {    
+    .kana-quiz-page {
+        row-gap: 1.5rem;
+
         .quiz-status {
             margin-bottom: 0;
+        }
+
+        .prompt-and-answer-input {
+            row-gap: 1rem;
         }
     }
 }

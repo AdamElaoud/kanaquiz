@@ -85,7 +85,7 @@ const KanaQuiz = () : JSX.Element => {
             else
                 textInputRefs.current[currentInputIndex].blur();
         }
-    }, 400);
+    }, 550);
 
     const checkAnswer = () => {
         // only check answer if not already submitted

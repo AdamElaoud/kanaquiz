@@ -180,6 +180,7 @@ const Searchbar = (props: Props) : JSX.Element => {
                     initialFocusTarget = {searchInputRef}
                     onClose = {() => { setModalIsOpen(false); clearSearchbar(); }}
                     defaultOpen = {modalIsOpen}
+                    style = {{ width: "90%" }}
                 >
                     {search}
                 </Modal>
