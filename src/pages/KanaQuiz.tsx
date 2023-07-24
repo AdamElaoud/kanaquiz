@@ -45,15 +45,19 @@ const KanaQuiz = () : JSX.Element => {
     // eslint-disable-next-line
     const questions = useMemo(() => generateQuestions(quizSelections, kanaSelections, wordSelections), []);
 
+    
     const activeQuestion = questions[activeQuestionIndex];
-    const activeQuestionAnswer = typeof activeQuestion.answer === "string" ? activeQuestion.answer : activeQuestion.answer.join(" ");
+    const answerIsWord = typeof activeQuestion.answer !== "string";
+    // type cast is protected by check for answerIsWord, TypeScript is just stoopid
+    const activeQuestionAnswer = !answerIsWord ? activeQuestion.answer : (activeQuestion.answer as string[]).join(" ");
+    const activeQuestionAnswerSize = !answerIsWord ? 1 : activeQuestion.answer.length;
 
     const isMultChoice = quizSelections.format === QuizFormat.MultipleChoice;
 
     const submitIsEnabled = 
         !showResult && 
         ((isMultChoice && multChoiceResponse) ||
-        (!isMultChoice && writeResponses.length === activeQuestion.answer.length && writeResponses.every(response => response !== "")));
+        (!isMultChoice && writeResponses.length === activeQuestionAnswerSize && writeResponses.every(response => response !== "")));
 
     useEffect(() => {
         if (!isMultChoice) {
