@@ -60,7 +60,7 @@ export type GroupsToChars = {
 
 export type Word = {
     definition: string,
-    kana: string,
+    kana: string[],
     romaji: string[],
     type: "hiragana" | "katakana"
 };
@@ -70,6 +70,7 @@ export type HiraganaWord = Word & { type: "hiragana" };
 export type KatakanaWord = Word & { type: "katakana" };
 
 export type SettingsData = {
+    autoFocusNextInput: boolean,
     showDefinitions: boolean,
     showRotationWarning: boolean
 };
@@ -88,6 +89,7 @@ export type WordSelectionData = {
 
 export type Question = {
     answer: string | string[],
+    answerDetails: string | string[],
     choices?: KanaLetters,
     prompt: string,
     context?: string

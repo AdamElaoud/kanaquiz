@@ -17,11 +17,12 @@ $stepTitleMargin: 1rem;
         @include button-press($lightNavy);
         background-color: $lightNavy;
         font-size: $mediumFontSize;
+        font-weight: $fontWeightBold;
+        position: absolute;
     }
 
-    $iconSpaceAdjustment: calc($mediumIconSize * -0.35);
+    $iconSpaceAdjustment: calc($mediumIconSize * -0.4);
     .back-button {
-        position: absolute;
         left: calc($padding * 2);
 
         .icon {
@@ -30,7 +31,6 @@ $stepTitleMargin: 1rem;
     }
 
     .next-button {
-        position: absolute;
         right: calc($padding * 2);
 
         &.blocked-by-condition {

@@ -10,6 +10,7 @@ $answerInputWidth: 7rem;
 
 .kana-quiz-page {
     @extend %page;
+    position: relative;
     row-gap: 2rem;
 
     .quiz-status {
@@ -30,6 +31,10 @@ $answerInputWidth: 7rem;
                 margin-right: 0.5rem;
             }
 
+            .correct, .remaining {
+                color: $lightModeTextColor;
+            }
+
             .correct {
                 background-color: $complete;
             }
@@ -48,7 +53,6 @@ $answerInputWidth: 7rem;
         align-items: center;
         display: flex;
         flex-direction: column;
-        height: calc(40% - $quizStatusHeight - $quizStatusSpacing); // adjust on PC?
         row-gap: 3rem;
 
         .prompt {
@@ -69,11 +73,6 @@ $answerInputWidth: 7rem;
                 &.large-word {
                     font-size: calc($promptFontSize - 0.65rem);
                 }
-            }
-
-            .prompt-context {
-                font-size: $smallFontSize;
-                font-style: italic;
             }
         }
     
@@ -105,14 +104,78 @@ $answerInputWidth: 7rem;
                 width: $answerInputWidth;
             }
         }
+    }
 
-        .submit-choice-button {
-            @include button-press($active);
-            background-color: $active;
-            color: $lightModeTextColor;
-            font-weight: $fontWeightBold;
-            width: 15rem;
+    $buttonHorizontalPadding: 3rem;
+    .submit-choice-button {
+        @include button-press($active);
+        background-color: $active;
+        color: $lightModeTextColor;
+        font-weight: $fontWeightBold;
+        margin-bottom: $sectionSpacing;
+        padding-left: $buttonHorizontalPadding;
+        padding-right: $buttonHorizontalPadding;
+    }
+
+    .question-result {
+        @include padding(3);
+        background-color: $lightRed;
+        border-radius: $borderRadius $borderRadius 0 0;
+        bottom: 0;
+        color: $darkModeTextColor;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: fixed;
+        row-gap: 1rem;
+        width: 100%;
+
+        .question-result-title {
+            align-items: center;
+            display: flex;
+            font-size: $largeFontSize;
+            font-weight: $fontWeightSuperBold;
+
+            .icon {
+                background-color: $darkModeTextColor;
+                color: $lightRed;
+                margin-right: 0.75rem;
+            }
         }
+        
+        .next-question-button {
+            @include button-press($crimson);
+            align-items: center;
+            align-self: center;
+            background-color: $crimson;
+            font-weight: $fontWeightBold;
+            padding-left: $buttonHorizontalPadding;
+            padding-right: $buttonHorizontalPadding;
+            width: fit-content;
+        }
+
+        &.correct {
+            background-color: $lightComplete;
+            color: $lightModeTextColor;
+
+            .question-result-title {
+                .icon {
+                    background-color: $lightModeTextColor;
+                    color: $lightComplete;
+                }
+            }
+            
+            .next-question-button {
+                @include button-press($complete);
+                background-color: $complete;
+                color: $lightModeTextColor;
+            }
+        }
+    }
+
+    .prompt-context {
+        font-size: $smallFontSize;
+        font-style: italic;
     }
 }
 
@@ -142,6 +205,15 @@ $answerInputWidth: 7rem;
             }
 
             .submit-choice-button {
+                &:hover {
+                    @include button-press($gold);
+                    background-color: $gold;
+                }
+            }
+        }
+
+        .question-result {
+            .next-question-button {
                 &:hover {
                     @include button-press($gold);
                     background-color: $gold;

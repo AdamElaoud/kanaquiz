@@ -3,7 +3,10 @@ import { HiraganaWord, KatakanaWord, Word } from "@/types";
 export const allWords: Word[] = [
     {
         "definition": "this, this one",
-        "kana": "これ",
+        "kana": [
+            "こ",
+            "れ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ko",
@@ -12,7 +15,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "that, that one",
-        "kana": "それ",
+        "kana": [
+            "そ",
+            "れ"
+        ],
         "type": "hiragana",
         "romaji": [
             "so",
@@ -21,7 +27,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "when",
-        "kana": "いつ",
+        "kana": [
+            "い",
+            "つ"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -30,7 +39,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "do, make",
-        "kana": "する",
+        "kana": [
+            "す",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "su",
@@ -39,7 +51,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "become",
-        "kana": "なる",
+        "kana": [
+            "な",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "na",
@@ -48,7 +63,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "(not) yet, still",
-        "kana": "まだ",
+        "kana": [
+            "ま",
+            "だ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -57,7 +75,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "after",
-        "kana": "あと",
+        "kana": [
+            "あ",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -66,7 +87,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "so, that way",
-        "kana": "そう",
+        "kana": [
+            "そ",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "so",
@@ -75,7 +99,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "already, yet",
-        "kana": "もう",
+        "kana": [
+            "も",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "mo",
@@ -84,7 +111,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "often, well",
-        "kana": "よく",
+        "kana": [
+            "よ",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "yo",
@@ -93,7 +123,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "how, what",
-        "kana": "どう",
+        "kana": [
+            "ど",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -102,7 +135,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "like this, such",
-        "kana": "こう",
+        "kana": [
+            "こ",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "ko",
@@ -111,7 +147,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "where",
-        "kana": "どこ",
+        "kana": [
+            "ど",
+            "こ"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -120,7 +159,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "there",
-        "kana": "そこ",
+        "kana": [
+            "そ",
+            "こ"
+        ],
         "type": "hiragana",
         "romaji": [
             "so",
@@ -129,7 +171,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "what, which",
-        "kana": "どれ",
+        "kana": [
+            "ど",
+            "れ"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -138,7 +183,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "do, give",
-        "kana": "やる",
+        "kana": [
+            "や",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ya",
@@ -147,7 +195,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "be present, stay",
-        "kana": "いる",
+        "kana": [
+            "い",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -156,7 +207,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "here",
-        "kana": "ここ",
+        "kana": [
+            "こ",
+            "こ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ko",
@@ -165,7 +219,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "that (over there)",
-        "kana": "あれ",
+        "kana": [
+            "あ",
+            "れ"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -174,7 +231,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "side, vicinity",
-        "kana": "そば",
+        "kana": [
+            "そ",
+            "ば"
+        ],
         "type": "hiragana",
         "romaji": [
             "so",
@@ -183,7 +243,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "exist, there is",
-        "kana": "ある",
+        "kana": [
+            "あ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -192,7 +255,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "good (informal/spoken form)",
-        "kana": "いい",
+        "kana": [
+            "い",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -201,7 +267,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "sake, purpose",
-        "kana": "ため",
+        "kana": [
+            "た",
+            "め"
+        ],
         "type": "hiragana",
         "romaji": [
             "ta",
@@ -210,7 +279,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "last long, be durable",
-        "kana": "もつ",
+        "kana": [
+            "も",
+            "つ"
+        ],
         "type": "hiragana",
         "romaji": [
             "mo",
@@ -219,7 +291,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "give (to an inferior)",
-        "kana": "やる",
+        "kana": [
+            "や",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ya",
@@ -228,7 +303,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "another, again",
-        "kana": "もう",
+        "kana": [
+            "も",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "mo",
@@ -237,7 +315,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "first of all, to begin with",
-        "kana": "まず",
+        "kana": [
+            "ま",
+            "ず"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -246,7 +327,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "as is, still (in the current state)",
-        "kana": "まま",
+        "kana": [
+            "ま",
+            "ま"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -255,7 +339,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "free",
-        "kana": "ただ",
+        "kana": [
+            "た",
+            "だ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ta",
@@ -264,7 +351,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "be on, be switched on",
-        "kana": "つく",
+        "kana": [
+            "つ",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -273,7 +363,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "why",
-        "kana": "なぜ",
+        "kana": [
+            "な",
+            "ぜ"
+        ],
         "type": "hiragana",
         "romaji": [
             "na",
@@ -282,7 +375,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "comb",
-        "kana": "くし",
+        "kana": [
+            "く",
+            "し"
+        ],
         "type": "hiragana",
         "romaji": [
             "ku",
@@ -291,7 +387,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "if, in case of",
-        "kana": "もし",
+        "kana": [
+            "も",
+            "し"
+        ],
         "type": "hiragana",
         "romaji": [
             "mo",
@@ -300,7 +399,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "(one's own) uncle",
-        "kana": "おじ",
+        "kana": [
+            "お",
+            "じ"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -309,7 +411,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "(one's own) aunt",
-        "kana": "おば",
+        "kana": [
+            "お",
+            "ば"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -318,7 +423,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "again, also, or",
-        "kana": "また",
+        "kana": [
+            "ま",
+            "た"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -327,7 +435,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "pickpocket",
-        "kana": "すり",
+        "kana": [
+            "す",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "su",
@@ -336,7 +447,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "almost, nearly",
-        "kana": "ほぼ",
+        "kana": [
+            "ほ",
+            "ぼ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ho",
@@ -345,7 +459,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "foolish, stupid",
-        "kana": "ばか",
+        "kana": [
+            "ば",
+            "か"
+        ],
         "type": "hiragana",
         "romaji": [
             "ba",
@@ -354,7 +471,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "beard, moustache",
-        "kana": "ひげ",
+        "kana": [
+            "ひ",
+            "げ"
+        ],
         "type": "hiragana",
         "romaji": [
             "hi",
@@ -363,7 +483,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "trash",
-        "kana": "ごみ",
+        "kana": [
+            "ご",
+            "み"
+        ],
         "type": "hiragana",
         "romaji": [
             "go",
@@ -372,7 +495,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "well (interjection)",
-        "kana": "まあ",
+        "kana": [
+            "ま",
+            "あ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -381,7 +507,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "buckwheat noodles",
-        "kana": "そば",
+        "kana": [
+            "そ",
+            "ば"
+        ],
         "type": "hiragana",
         "romaji": [
             "so",
@@ -390,7 +519,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "glue, starch",
-        "kana": "のり",
+        "kana": [
+            "の",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "no",
@@ -399,7 +531,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "candy",
-        "kana": "あめ",
+        "kana": [
+            "あ",
+            "め"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -408,7 +543,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "rose",
-        "kana": "ばら",
+        "kana": [
+            "ば",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "ba",
@@ -417,7 +555,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "laces, string",
-        "kana": "ひも",
+        "kana": [
+            "ひ",
+            "も"
+        ],
         "type": "hiragana",
         "romaji": [
             "hi",
@@ -426,7 +567,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "scatter, sprinkle",
-        "kana": "まく",
+        "kana": [
+            "ま",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -435,7 +579,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "even more ~, even less ~",
-        "kana": "より",
+        "kana": [
+            "よ",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "yo",
@@ -444,7 +591,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "still, in addition",
-        "kana": "なお",
+        "kana": [
+            "な",
+            "お"
+        ],
         "type": "hiragana",
         "romaji": [
             "na",
@@ -453,7 +603,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "stingy, miser",
-        "kana": "けち",
+        "kana": [
+            "け",
+            "ち"
+        ],
         "type": "hiragana",
         "romaji": [
             "ke",
@@ -462,7 +615,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "scratch",
-        "kana": "かく",
+        "kana": [
+            "か",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "ka",
@@ -471,7 +627,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "inadvertently, carelessly",
-        "kana": "つい",
+        "kana": [
+            "つ",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -480,7 +639,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "ant",
-        "kana": "あり",
+        "kana": [
+            "あ",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -489,7 +651,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "peel (something)",
-        "kana": "むく",
+        "kana": [
+            "む",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "mu",
@@ -498,7 +663,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "get out of the way, step aside",
-        "kana": "どく",
+        "kana": [
+            "ど",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -507,7 +675,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "Welsh onion, green onion",
-        "kana": "ねぎ",
+        "kana": [
+            "ね",
+            "ぎ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ne",
@@ -516,7 +687,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "simply, merely",
-        "kana": "ただ",
+        "kana": [
+            "た",
+            "だ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ta",
@@ -525,7 +699,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "like that, that much",
-        "kana": "ああ",
+        "kana": [
+            "あ",
+            "あ"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -534,7 +711,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "be present, stay (humble)",
-        "kana": "おる",
+        "kana": [
+            "お",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -543,7 +723,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "look like, seem",
-        "kana": "よう",
+        "kana": [
+            "よ",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "yo",
@@ -552,7 +735,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "slightly, a little",
-        "kana": "やや",
+        "kana": [
+            "や",
+            "や"
+        ],
         "type": "hiragana",
         "romaji": [
             "ya",
@@ -561,7 +747,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "suddenly, unintentionally",
-        "kana": "ふと",
+        "kana": [
+            "ふ",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "fu",
@@ -570,7 +759,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "pour, fill, add",
-        "kana": "さす",
+        "kana": [
+            "さ",
+            "す"
+        ],
         "type": "hiragana",
         "romaji": [
             "sa",
@@ -579,7 +771,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "pour, serve (drinks)",
-        "kana": "つぐ",
+        "kana": [
+            "つ",
+            "ぐ"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -588,7 +783,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "well up",
-        "kana": "わく",
+        "kana": [
+            "わ",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "wa",
@@ -597,7 +795,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "sow (seeds)",
-        "kana": "まく",
+        "kana": [
+            "ま",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -606,7 +807,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "somewhere else, not one's own",
-        "kana": "よそ",
+        "kana": [
+            "よ",
+            "そ"
+        ],
         "type": "hiragana",
         "romaji": [
             "yo",
@@ -615,7 +819,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "rareness",
-        "kana": "まれ",
+        "kana": [
+            "ま",
+            "れ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -624,7 +831,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "row",
-        "kana": "こぐ",
+        "kana": [
+            "こ",
+            "ぐ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ko",
@@ -633,7 +843,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "collect, scoop up",
-        "kana": "くむ",
+        "kana": [
+            "く",
+            "む"
+        ],
         "type": "hiragana",
         "romaji": [
             "ku",
@@ -642,7 +855,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "waste, scrap",
-        "kana": "くず",
+        "kana": [
+            "く",
+            "ず"
+        ],
         "type": "hiragana",
         "romaji": [
             "ku",
@@ -651,7 +867,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "be caused by, be due to",
-        "kana": "よる",
+        "kana": [
+            "よ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "yo",
@@ -660,7 +879,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "wrinkle",
-        "kana": "しわ",
+        "kana": [
+            "し",
+            "わ"
+        ],
         "type": "hiragana",
         "romaji": [
             "shi",
@@ -669,7 +891,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "belly button",
-        "kana": "へそ",
+        "kana": [
+            "へ",
+            "そ"
+        ],
         "type": "hiragana",
         "romaji": [
             "he",
@@ -678,7 +903,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "make a fire (stove etc.)",
-        "kana": "たく",
+        "kana": [
+            "た",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "ta",
@@ -687,7 +915,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "cause, blame",
-        "kana": "せい",
+        "kana": [
+            "せ",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "se",
@@ -696,7 +927,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "better, preferable",
-        "kana": "まし",
+        "kana": [
+            "ま",
+            "し"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -705,7 +939,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "crack",
-        "kana": "ひび",
+        "kana": [
+            "ひ",
+            "び"
+        ],
         "type": "hiragana",
         "romaji": [
             "hi",
@@ -714,7 +951,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "no doubt, must",
-        "kana": "さぞ",
+        "kana": [
+            "さ",
+            "ぞ"
+        ],
         "type": "hiragana",
         "romaji": [
             "sa",
@@ -723,7 +963,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "be based on, depend on",
-        "kana": "よる",
+        "kana": [
+            "よ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "yo",
@@ -732,7 +975,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "run over",
-        "kana": "ひく",
+        "kana": [
+            "ひ",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "hi",
@@ -741,7 +987,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "seaweed",
-        "kana": "のり",
+        "kana": [
+            "の",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "no",
@@ -750,7 +999,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "octopus",
-        "kana": "たこ",
+        "kana": [
+            "た",
+            "こ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ta",
@@ -759,7 +1011,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "a cut of cloth",
-        "kana": "きれ",
+        "kana": [
+            "き",
+            "れ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ki",
@@ -768,7 +1023,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "fly (bug)",
-        "kana": "はえ",
+        "kana": [
+            "は",
+            "え"
+        ],
         "type": "hiragana",
         "romaji": [
             "ha",
@@ -777,7 +1035,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "quit, stop",
-        "kana": "よす",
+        "kana": [
+            "よ",
+            "す"
+        ],
         "type": "hiragana",
         "romaji": [
             "yo",
@@ -786,7 +1047,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "very small piece of dust, speck",
-        "kana": "ちり",
+        "kana": [
+            "ち",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "chi",
@@ -795,7 +1059,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "door",
-        "kana": "ドア",
+        "kana": [
+            "ド",
+            "ア"
+        ],
         "type": "katakana",
         "romaji": [
             "do",
@@ -804,7 +1071,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "dollar",
-        "kana": "ドル",
+        "kana": [
+            "ド",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "do",
@@ -813,7 +1083,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "bus",
-        "kana": "バス",
+        "kana": [
+            "バ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "ba",
@@ -822,7 +1095,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "eggplant",
-        "kana": "ナス",
+        "kana": [
+            "ナ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "na",
@@ -831,7 +1107,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "gas",
-        "kana": "ガス",
+        "kana": [
+            "ガ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "ga",
@@ -840,7 +1119,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "building",
-        "kana": "ビル",
+        "kana": [
+            "ビ",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "bi",
@@ -849,7 +1131,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "memo, note",
-        "kana": "メモ",
+        "kana": [
+            "メ",
+            "モ"
+        ],
         "type": "katakana",
         "romaji": [
             "me",
@@ -858,7 +1143,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "bread",
-        "kana": "パン",
+        "kana": [
+            "パ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "pa",
@@ -867,7 +1155,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "visa",
-        "kana": "ビザ",
+        "kana": [
+            "ビ",
+            "ザ"
+        ],
         "type": "katakana",
         "romaji": [
             "bi",
@@ -876,7 +1167,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "elastic, rubber",
-        "kana": "ゴム",
+        "kana": [
+            "ゴ",
+            "ム"
+        ],
         "type": "katakana",
         "romaji": [
             "go",
@@ -885,7 +1179,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "pen",
-        "kana": "ペン",
+        "kana": [
+            "ペ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "pe",
@@ -894,7 +1191,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "zero, none",
-        "kana": "ゼロ",
+        "kana": [
+            "ゼ",
+            "ロ"
+        ],
         "type": "katakana",
         "romaji": [
             "ze",
@@ -903,7 +1203,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "bell",
-        "kana": "ベル",
+        "kana": [
+            "ベ",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "be",
@@ -912,7 +1215,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "ham",
-        "kana": "ハム",
+        "kana": [
+            "ハ",
+            "ム"
+        ],
         "type": "katakana",
         "romaji": [
             "ha",
@@ -921,7 +1227,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "kiss",
-        "kana": "キス",
+        "kana": [
+            "キ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "ki",
@@ -930,7 +1239,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "cross, x-mark (on errors, mistakes etc.)",
-        "kana": "バツ",
+        "kana": [
+            "バ",
+            "ツ"
+        ],
         "type": "katakana",
         "romaji": [
             "ba",
@@ -939,7 +1251,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "squid",
-        "kana": "イカ",
+        "kana": [
+            "イ",
+            "カ"
+        ],
         "type": "katakana",
         "romaji": [
             "i",
@@ -948,7 +1263,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "professional",
-        "kana": "プロ",
+        "kana": [
+            "プ",
+            "ロ"
+        ],
         "type": "katakana",
         "romaji": [
             "pu",
@@ -957,7 +1275,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "dam",
-        "kana": "ダム",
+        "kana": [
+            "ダ",
+            "ム"
+        ],
         "type": "katakana",
         "romaji": [
             "da",
@@ -966,7 +1287,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "hairpin, pin",
-        "kana": "ピン",
+        "kana": [
+            "ピ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "pi",
@@ -975,7 +1299,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "demonstration",
-        "kana": "デモ",
+        "kana": [
+            "デ",
+            "モ"
+        ],
         "type": "katakana",
         "romaji": [
             "de",
@@ -984,7 +1311,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "mistake",
-        "kana": "ミス",
+        "kana": [
+            "ミ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "mi",
@@ -993,7 +1323,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "mom",
-        "kana": "ママ",
+        "kana": [
+            "マ",
+            "マ"
+        ],
         "type": "katakana",
         "romaji": [
             "ma",
@@ -1002,7 +1335,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "dad",
-        "kana": "パパ",
+        "kana": [
+            "パ",
+            "パ"
+        ],
         "type": "katakana",
         "romaji": [
             "pa",
@@ -1011,7 +1347,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "please",
-        "kana": "どうぞ",
+        "kana": [
+            "ど",
+            "う",
+            "ぞ"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -1021,7 +1361,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "give, offer (colloquial)",
-        "kana": "あげる",
+        "kana": [
+            "あ",
+            "げ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -1031,7 +1375,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "be given",
-        "kana": "くれる",
+        "kana": [
+            "く",
+            "れ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ku",
@@ -1041,7 +1389,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "very (colloquial)",
-        "kana": "とても",
+        "kana": [
+            "と",
+            "て",
+            "も"
+        ],
         "type": "hiragana",
         "romaji": [
             "to",
@@ -1051,7 +1403,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "you",
-        "kana": "あなた",
+        "kana": [
+            "あ",
+            "な",
+            "た"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -1061,7 +1417,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "always (colloquial)",
-        "kana": "いつも",
+        "kana": [
+            "い",
+            "つ",
+            "も"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -1071,7 +1431,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "everybody (colloquial)",
-        "kana": "みんな",
+        "kana": [
+            "み",
+            "ん",
+            "な"
+        ],
         "type": "hiragana",
         "romaji": [
             "mi",
@@ -1081,7 +1445,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "can do, be good at",
-        "kana": "できる",
+        "kana": [
+            "で",
+            "き",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "de",
@@ -1091,7 +1459,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "which (polite)",
-        "kana": "どちら",
+        "kana": [
+            "ど",
+            "ち",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -1101,7 +1473,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "fairly, rather",
-        "kana": "かなり",
+        "kana": [
+            "か",
+            "な",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "ka",
@@ -1111,7 +1487,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "receive",
-        "kana": "もらう",
+        "kana": [
+            "も",
+            "ら",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "mo",
@@ -1121,7 +1501,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "switch on, turn on",
-        "kana": "つける",
+        "kana": [
+            "つ",
+            "け",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -1131,7 +1515,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "bad (taste), distasteful",
-        "kana": "まずい",
+        "kana": [
+            "ま",
+            "ず",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -1141,7 +1529,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "over there",
-        "kana": "あそこ",
+        "kana": [
+            "あ",
+            "そ",
+            "こ"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -1151,7 +1543,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "these",
-        "kana": "これら",
+        "kana": [
+            "こ",
+            "れ",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "ko",
@@ -1161,7 +1557,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "(not) much",
-        "kana": "あまり",
+        "kana": [
+            "あ",
+            "ま",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -1171,7 +1571,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "here, this way (polite)",
-        "kana": "こちら",
+        "kana": [
+            "こ",
+            "ち",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "ko",
@@ -1181,7 +1585,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "how many, how old",
-        "kana": "いくつ",
+        "kana": [
+            "い",
+            "く",
+            "つ"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -1191,7 +1599,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "cousin",
-        "kana": "いとこ",
+        "kana": [
+            "い",
+            "と",
+            "こ"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -1201,7 +1613,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "tepid, lukewarm",
-        "kana": "ぬるい",
+        "kana": [
+            "ぬ",
+            "る",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "nu",
@@ -1211,7 +1627,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "tobacco, cigarette",
-        "kana": "たばこ",
+        "kana": [
+            "た",
+            "ば",
+            "こ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ta",
@@ -1221,7 +1641,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "in short, that is to say",
-        "kana": "つまり",
+        "kana": [
+            "つ",
+            "ま",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -1231,7 +1655,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "kettle",
-        "kana": "やかん",
+        "kana": [
+            "や",
+            "か",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "ya",
@@ -1241,7 +1669,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "there, that way (polite)",
-        "kana": "そちら",
+        "kana": [
+            "そ",
+            "ち",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "so",
@@ -1251,7 +1683,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "over there, that way (polite)",
-        "kana": "あちら",
+        "kana": [
+            "あ",
+            "ち",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -1261,7 +1697,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "as expected",
-        "kana": "やはり",
+        "kana": [
+            "や",
+            "は",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "ya",
@@ -1271,7 +1711,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "how much (money)",
-        "kana": "いくら",
+        "kana": [
+            "い",
+            "く",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -1281,7 +1725,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "who (polite)",
-        "kana": "どなた",
+        "kana": [
+            "ど",
+            "な",
+            "た"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -1291,7 +1739,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "good at",
-        "kana": "うまい",
+        "kana": [
+            "う",
+            "ま",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "u",
@@ -1301,7 +1753,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "some time, some day",
-        "kana": "いつか",
+        "kana": [
+            "い",
+            "つ",
+            "か"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -1311,7 +1767,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "apple",
-        "kana": "りんご",
+        "kana": [
+            "り",
+            "ん",
+            "ご"
+        ],
         "type": "hiragana",
         "romaji": [
             "ri",
@@ -1321,7 +1781,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "tangerine",
-        "kana": "みかん",
+        "kana": [
+            "み",
+            "か",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "mi",
@@ -1331,7 +1795,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "delicious, tasty",
-        "kana": "うまい",
+        "kana": [
+            "う",
+            "ま",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "u",
@@ -1341,7 +1809,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "intention, purpose",
-        "kana": "つもり",
+        "kana": [
+            "つ",
+            "も",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -1351,7 +1823,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "occasionally, sometimes",
-        "kana": "たまに",
+        "kana": [
+            "た",
+            "ま",
+            "に"
+        ],
         "type": "hiragana",
         "romaji": [
             "ta",
@@ -1361,7 +1837,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "cruel, awful",
-        "kana": "ひどい",
+        "kana": [
+            "ひ",
+            "ど",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "hi",
@@ -1371,7 +1851,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "grapes",
-        "kana": "ぶどう",
+        "kana": [
+            "ぶ",
+            "ど",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "bu",
@@ -1381,7 +1865,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "close (eyes)",
-        "kana": "つぶる",
+        "kana": [
+            "つ",
+            "ぶ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -1391,7 +1879,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "tight, tough",
-        "kana": "きつい",
+        "kana": [
+            "き",
+            "つ",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "ki",
@@ -1401,7 +1893,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "dishes to go with the rice",
-        "kana": "おかず",
+        "kana": [
+            "お",
+            "か",
+            "ず"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -1411,7 +1907,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "Japanese wheat noodles",
-        "kana": "うどん",
+        "kana": [
+            "う",
+            "ど",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "u",
@@ -1421,7 +1921,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "how",
-        "kana": "いかが",
+        "kana": [
+            "い",
+            "か",
+            "が"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -1431,7 +1935,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "itchy",
-        "kana": "かゆい",
+        "kana": [
+            "か",
+            "ゆ",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "ka",
@@ -1441,7 +1949,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "watermelon",
-        "kana": "すいか",
+        "kana": [
+            "す",
+            "い",
+            "か"
+        ],
         "type": "hiragana",
         "romaji": [
             "su",
@@ -1451,7 +1963,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "strawberry",
-        "kana": "いちご",
+        "kana": [
+            "い",
+            "ち",
+            "ご"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -1461,7 +1977,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "yawn",
-        "kana": "あくび",
+        "kana": [
+            "あ",
+            "く",
+            "び"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -1471,7 +1991,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "snoring",
-        "kana": "いびき",
+        "kana": [
+            "い",
+            "び",
+            "き"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -1481,7 +2005,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "spill (something)",
-        "kana": "こぼす",
+        "kana": [
+            "こ",
+            "ぼ",
+            "す"
+        ],
         "type": "hiragana",
         "romaji": [
             "ko",
@@ -1491,7 +2019,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "rat, mouse",
-        "kana": "ねずみ",
+        "kana": [
+            "ね",
+            "ず",
+            "み"
+        ],
         "type": "hiragana",
         "romaji": [
             "ne",
@@ -1501,7 +2033,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "sane, reasonable",
-        "kana": "まとも",
+        "kana": [
+            "ま",
+            "と",
+            "も"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -1511,7 +2047,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "sometime later, eventually",
-        "kana": "いずれ",
+        "kana": [
+            "い",
+            "ず",
+            "れ"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -1521,7 +2061,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "anyway",
-        "kana": "どうせ",
+        "kana": [
+            "ど",
+            "う",
+            "せ"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -1531,7 +2075,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "on the way, to take the opportunity",
-        "kana": "ついで",
+        "kana": [
+            "つ",
+            "い",
+            "で"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -1541,7 +2089,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "on purpose",
-        "kana": "わざと",
+        "kana": [
+            "わ",
+            "ざ",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "wa",
@@ -1551,7 +2103,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "nibble, bite",
-        "kana": "かじる",
+        "kana": [
+            "か",
+            "じ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ka",
@@ -1561,7 +2117,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "eyelid",
-        "kana": "まぶた",
+        "kana": [
+            "ま",
+            "ぶ",
+            "た"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -1571,7 +2131,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "boil",
-        "kana": "ゆでる",
+        "kana": [
+            "ゆ",
+            "で",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "yu",
@@ -1581,7 +2145,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "afternoon snack, refreshment",
-        "kana": "おやつ",
+        "kana": [
+            "お",
+            "や",
+            "つ"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -1591,7 +2159,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "just as expected, true to one's reputation",
-        "kana": "さすが",
+        "kana": [
+            "さ",
+            "す",
+            "が"
+        ],
         "type": "hiragana",
         "romaji": [
             "sa",
@@ -1601,7 +2173,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "rabbit, hare",
-        "kana": "うさぎ",
+        "kana": [
+            "う",
+            "さ",
+            "ぎ"
+        ],
         "type": "hiragana",
         "romaji": [
             "u",
@@ -1611,7 +2187,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "gargling",
-        "kana": "うがい",
+        "kana": [
+            "う",
+            "が",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "u",
@@ -1621,7 +2201,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "lining up neatly",
-        "kana": "ずらり",
+        "kana": [
+            "ず",
+            "ら",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "zu",
@@ -1631,7 +2215,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "popular with men/women",
-        "kana": "もてる",
+        "kana": [
+            "も",
+            "て",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "mo",
@@ -1641,7 +2229,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "feel run-down, weary",
-        "kana": "だるい",
+        "kana": [
+            "だ",
+            "る",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "da",
@@ -1651,7 +2243,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "treat",
-        "kana": "おごる",
+        "kana": [
+            "お",
+            "ご",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -1661,7 +2257,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "heel",
-        "kana": "かかと",
+        "kana": [
+            "か",
+            "か",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "ka",
@@ -1671,7 +2271,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "meager, marginal",
-        "kana": "わずか",
+        "kana": [
+            "わ",
+            "ず",
+            "か"
+        ],
         "type": "hiragana",
         "romaji": [
             "wa",
@@ -1681,7 +2285,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "at last, at length",
-        "kana": "ついに",
+        "kana": [
+            "つ",
+            "い",
+            "に"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -1691,7 +2299,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "frog",
-        "kana": "かえる",
+        "kana": [
+            "か",
+            "え",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ka",
@@ -1701,7 +2313,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "go off track, go out of line",
-        "kana": "ずれる",
+        "kana": [
+            "ず",
+            "れ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "zu",
@@ -1711,7 +2327,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "glare, stare",
-        "kana": "にらむ",
+        "kana": [
+            "に",
+            "ら",
+            "む"
+        ],
         "type": "hiragana",
         "romaji": [
             "ni",
@@ -1721,7 +2341,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "Japanese horseradish",
-        "kana": "わさび",
+        "kana": [
+            "わ",
+            "さ",
+            "び"
+        ],
         "type": "hiragana",
         "romaji": [
             "wa",
@@ -1731,7 +2355,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "tuna",
-        "kana": "まぐろ",
+        "kana": [
+            "ま",
+            "ぐ",
+            "ろ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -1741,7 +2369,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "cunning, sneaky",
-        "kana": "ずるい",
+        "kana": [
+            "ず",
+            "る",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "zu",
@@ -1751,7 +2383,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "sorry",
-        "kana": "ごめん",
+        "kana": [
+            "ご",
+            "め",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "go",
@@ -1761,7 +2397,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "crow, raven",
-        "kana": "からす",
+        "kana": [
+            "か",
+            "ら",
+            "す"
+        ],
         "type": "hiragana",
         "romaji": [
             "ka",
@@ -1771,7 +2411,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "problematic, troublesome",
-        "kana": "まずい",
+        "kana": [
+            "ま",
+            "ず",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -1781,7 +2425,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "avoid, dodge",
-        "kana": "よける",
+        "kana": [
+            "よ",
+            "け",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "yo",
@@ -1791,7 +2439,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "catch (a cold, etc.), come down with",
-        "kana": "かかる",
+        "kana": [
+            "か",
+            "か",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ka",
@@ -1801,7 +2453,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "do (honorific)",
-        "kana": "なさる",
+        "kana": [
+            "な",
+            "さ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "na",
@@ -1811,7 +2467,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "for no special reason, somehow",
-        "kana": "どうも",
+        "kana": [
+            "ど",
+            "う",
+            "も"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -1821,7 +2481,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "just like",
-        "kana": "まるで",
+        "kana": [
+            "ま",
+            "る",
+            "で"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -1831,7 +2495,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "even if, granting that",
-        "kana": "たとえ",
+        "kana": [
+            "た",
+            "と",
+            "え"
+        ],
         "type": "hiragana",
         "romaji": [
             "ta",
@@ -1841,7 +2509,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "soon, before long",
-        "kana": "やがて",
+        "kana": [
+            "や",
+            "が",
+            "て"
+        ],
         "type": "hiragana",
         "romaji": [
             "ya",
@@ -1851,7 +2523,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "never (in a million years)",
-        "kana": "まさか",
+        "kana": [
+            "ま",
+            "さ",
+            "か"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -1861,7 +2537,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "be (all) together, become complete",
-        "kana": "そろう",
+        "kana": [
+            "そ",
+            "ろ",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "so",
@@ -1871,7 +2551,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "approximately, about",
-        "kana": "およそ",
+        "kana": [
+            "お",
+            "よ",
+            "そ"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -1881,7 +2565,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "at least",
-        "kana": "せめて",
+        "kana": [
+            "せ",
+            "め",
+            "て"
+        ],
         "type": "hiragana",
         "romaji": [
             "se",
@@ -1891,7 +2579,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "if, if ever",
-        "kana": "もしも",
+        "kana": [
+            "も",
+            "し",
+            "も"
+        ],
         "type": "hiragana",
         "romaji": [
             "mo",
@@ -1901,7 +2593,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "summary, conclusion",
-        "kana": "まとめ",
+        "kana": [
+            "ま",
+            "と",
+            "め"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -1911,7 +2607,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "please (used in difficult situations)",
-        "kana": "どうか",
+        "kana": [
+            "ど",
+            "う",
+            "か"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -1921,7 +2621,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "deceive, cheat",
-        "kana": "だます",
+        "kana": [
+            "だ",
+            "ま",
+            "す"
+        ],
         "type": "hiragana",
         "romaji": [
             "da",
@@ -1931,7 +2635,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "run over, hit",
-        "kana": "はねる",
+        "kana": [
+            "は",
+            "ね",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ha",
@@ -1941,7 +2649,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "no matter how much",
-        "kana": "いくら",
+        "kana": [
+            "い",
+            "く",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -1951,7 +2663,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "accumulate, store up",
-        "kana": "たまる",
+        "kana": [
+            "た",
+            "ま",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ta",
@@ -1961,7 +2677,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "come off, peel",
-        "kana": "むける",
+        "kana": [
+            "む",
+            "け",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "mu",
@@ -1971,7 +2691,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "put (something) into a hole, frame etc.",
-        "kana": "はめる",
+        "kana": [
+            "は",
+            "め",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ha",
@@ -1981,7 +2705,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "bark, roar",
-        "kana": "ほえる",
+        "kana": [
+            "ほ",
+            "え",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ho",
@@ -1991,7 +2719,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "twist, turn",
-        "kana": "ひねる",
+        "kana": [
+            "ひ",
+            "ね",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "hi",
@@ -2001,7 +2733,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "stroke, pat",
-        "kana": "なでる",
+        "kana": [
+            "な",
+            "で",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "na",
@@ -2011,7 +2747,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "collect and store (something)",
-        "kana": "ためる",
+        "kana": [
+            "た",
+            "め",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ta",
@@ -2021,7 +2761,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "tear, tear off",
-        "kana": "ちぎる",
+        "kana": [
+            "ち",
+            "ぎ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "chi",
@@ -2031,7 +2775,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "rust, get rusty",
-        "kana": "さびる",
+        "kana": [
+            "さ",
+            "び",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "sa",
@@ -2041,7 +2789,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "chest of drawers, wardrobe",
-        "kana": "たんす",
+        "kana": [
+            "た",
+            "ん",
+            "す"
+        ],
         "type": "hiragana",
         "romaji": [
             "ta",
@@ -2051,7 +2803,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "send, hand over",
-        "kana": "よこす",
+        "kana": [
+            "よ",
+            "こ",
+            "す"
+        ],
         "type": "hiragana",
         "romaji": [
             "yo",
@@ -2061,7 +2817,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "dust",
-        "kana": "ほこり",
+        "kana": [
+            "ほ",
+            "こ",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "ho",
@@ -2071,7 +2831,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "be sharp",
-        "kana": "とがる",
+        "kana": [
+            "と",
+            "が",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "to",
@@ -2081,7 +2845,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "carefree, happy-go-lucky",
-        "kana": "のんき",
+        "kana": [
+            "の",
+            "ん",
+            "き"
+        ],
         "type": "hiragana",
         "romaji": [
             "no",
@@ -2091,7 +2859,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "ladder",
-        "kana": "はしご",
+        "kana": [
+            "は",
+            "し",
+            "ご"
+        ],
         "type": "hiragana",
         "romaji": [
             "ha",
@@ -2101,7 +2873,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "broom",
-        "kana": "ほうき",
+        "kana": [
+            "ほ",
+            "う",
+            "き"
+        ],
         "type": "hiragana",
         "romaji": [
             "ho",
@@ -2111,7 +2887,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "dare, boldly",
-        "kana": "あえて",
+        "kana": [
+            "あ",
+            "え",
+            "て"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -2121,7 +2901,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "connect (someone, something)",
-        "kana": "つなぐ",
+        "kana": [
+            "つ",
+            "な",
+            "ぐ"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -2131,7 +2915,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "for no reason",
-        "kana": "なぜか",
+        "kana": [
+            "な",
+            "ぜ",
+            "か"
+        ],
         "type": "hiragana",
         "romaji": [
             "na",
@@ -2141,7 +2929,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "peep, look in",
-        "kana": "のぞく",
+        "kana": [
+            "の",
+            "ぞ",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "no",
@@ -2151,7 +2943,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "with the help of, thanks to",
-        "kana": "おかげ",
+        "kana": [
+            "お",
+            "か",
+            "げ"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -2161,7 +2957,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "snack on",
-        "kana": "つまむ",
+        "kana": [
+            "つ",
+            "ま",
+            "む"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -2171,7 +2971,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "turn over",
-        "kana": "めくる",
+        "kana": [
+            "め",
+            "く",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "me",
@@ -2181,7 +2985,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "bullying",
-        "kana": "いじめ",
+        "kana": [
+            "い",
+            "じ",
+            "め"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -2191,7 +2999,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "rather",
-        "kana": "むしろ",
+        "kana": [
+            "む",
+            "し",
+            "ろ"
+        ],
         "type": "hiragana",
         "romaji": [
             "mu",
@@ -2201,7 +3013,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "how, in what way",
-        "kana": "いかに",
+        "kana": [
+            "い",
+            "か",
+            "に"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -2211,7 +3027,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "already, no longer",
-        "kana": "もはや",
+        "kana": [
+            "も",
+            "は",
+            "や"
+        ],
         "type": "hiragana",
         "romaji": [
             "mo",
@@ -2221,7 +3041,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "much more",
-        "kana": "まして",
+        "kana": [
+            "ま",
+            "し",
+            "て"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -2231,7 +3055,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "by far, quite a lot",
-        "kana": "よほど",
+        "kana": [
+            "よ",
+            "ほ",
+            "ど"
+        ],
         "type": "hiragana",
         "romaji": [
             "yo",
@@ -2241,7 +3069,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "free gift, discount",
-        "kana": "おまけ",
+        "kana": [
+            "お",
+            "ま",
+            "け"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -2251,7 +3083,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "room, leeway",
-        "kana": "ゆとり",
+        "kana": [
+            "ゆ",
+            "と",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "yu",
@@ -2261,7 +3097,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "faraway, remote",
-        "kana": "はるか",
+        "kana": [
+            "は",
+            "る",
+            "か"
+        ],
         "type": "hiragana",
         "romaji": [
             "ha",
@@ -2271,7 +3111,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "hardly, barely",
-        "kana": "ろくに",
+        "kana": [
+            "ろ",
+            "く",
+            "に"
+        ],
         "type": "hiragana",
         "romaji": [
             "ro",
@@ -2281,7 +3125,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "tranquil, peaceful",
-        "kana": "のどか",
+        "kana": [
+            "の",
+            "ど",
+            "か"
+        ],
         "type": "hiragana",
         "romaji": [
             "no",
@@ -2291,7 +3139,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "table with an electric heater and a coverlet",
-        "kana": "こたつ",
+        "kana": [
+            "こ",
+            "た",
+            "つ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ko",
@@ -2301,7 +3153,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "brittle, fragile",
-        "kana": "もろい",
+        "kana": [
+            "も",
+            "ろ",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "mo",
@@ -2311,7 +3167,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "round paper fan",
-        "kana": "うちわ",
+        "kana": [
+            "う",
+            "ち",
+            "わ"
+        ],
         "type": "hiragana",
         "romaji": [
             "u",
@@ -2321,7 +3181,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "file, put something in (a folder, file etc.)",
-        "kana": "とじる",
+        "kana": [
+            "と",
+            "じ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "to",
@@ -2331,7 +3195,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "bud",
-        "kana": "つぼみ",
+        "kana": [
+            "つ",
+            "ぼ",
+            "み"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -2341,7 +3209,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "once, at one time in the past",
-        "kana": "かつて",
+        "kana": [
+            "か",
+            "つ",
+            "て"
+        ],
         "type": "hiragana",
         "romaji": [
             "ka",
@@ -2351,7 +3223,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "hang (something) with a string, etc.",
-        "kana": "つるす",
+        "kana": [
+            "つ",
+            "る",
+            "す"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -2361,7 +3237,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "sitting cross-legged",
-        "kana": "あぐら",
+        "kana": [
+            "あ",
+            "ぐ",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -2371,7 +3251,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "slow, sluggish",
-        "kana": "のろい",
+        "kana": [
+            "の",
+            "ろ",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "no",
@@ -2381,7 +3265,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "swallow",
-        "kana": "つばめ",
+        "kana": [
+            "つ",
+            "ば",
+            "め"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -2391,7 +3279,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "scale",
-        "kana": "はかり",
+        "kana": [
+            "は",
+            "か",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "ha",
@@ -2401,7 +3293,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "imitate, mimic",
-        "kana": "まねる",
+        "kana": [
+            "ま",
+            "ね",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -2411,7 +3307,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "profit",
-        "kana": "もうけ",
+        "kana": [
+            "も",
+            "う",
+            "け"
+        ],
         "type": "hiragana",
         "romaji": [
             "mo",
@@ -2421,7 +3321,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "move out of the way, avoid",
-        "kana": "よける",
+        "kana": [
+            "よ",
+            "け",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "yo",
@@ -2431,7 +3335,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "seal, stamp",
-        "kana": "はんこ",
+        "kana": [
+            "は",
+            "ん",
+            "こ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ha",
@@ -2441,7 +3349,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "television",
-        "kana": "テレビ",
+        "kana": [
+            "テ",
+            "レ",
+            "ビ"
+        ],
         "type": "katakana",
         "romaji": [
             "te",
@@ -2451,7 +3363,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "class (in school)",
-        "kana": "クラス",
+        "kana": [
+            "ク",
+            "ラ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "ku",
@@ -2461,7 +3377,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "hotel",
-        "kana": "ホテル",
+        "kana": [
+            "ホ",
+            "テ",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "ho",
@@ -2471,7 +3391,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "test",
-        "kana": "テスト",
+        "kana": [
+            "テ",
+            "ス",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "te",
@@ -2481,7 +3405,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "postbox, mailbox",
-        "kana": "ポスト",
+        "kana": [
+            "ポ",
+            "ス",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "po",
@@ -2491,7 +3419,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "lunch",
-        "kana": "ランチ",
+        "kana": [
+            "ラ",
+            "ン",
+            "チ"
+        ],
         "type": "katakana",
         "romaji": [
             "ra",
@@ -2501,7 +3433,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "camera",
-        "kana": "カメラ",
+        "kana": [
+            "カ",
+            "メ",
+            "ラ"
+        ],
         "type": "katakana",
         "romaji": [
             "ka",
@@ -2511,7 +3447,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "golf",
-        "kana": "ゴルフ",
+        "kana": [
+            "ゴ",
+            "ル",
+            "フ"
+        ],
         "type": "katakana",
         "romaji": [
             "go",
@@ -2521,7 +3461,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "glass (material)",
-        "kana": "ガラス",
+        "kana": [
+            "ガ",
+            "ラ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "ga",
@@ -2531,7 +3475,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "radio",
-        "kana": "ラジオ",
+        "kana": [
+            "ラ",
+            "ジ",
+            "オ"
+        ],
         "type": "katakana",
         "romaji": [
             "ra",
@@ -2541,7 +3489,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "video",
-        "kana": "ビデオ",
+        "kana": [
+            "ビ",
+            "デ",
+            "オ"
+        ],
         "type": "katakana",
         "romaji": [
             "bi",
@@ -2551,7 +3503,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "shirt",
-        "kana": "シャツ",
+        "kana": [
+            "シャ",
+            "ツ"
+        ],
         "type": "katakana",
         "romaji": [
             "sha",
@@ -2560,7 +3515,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "gram",
-        "kana": "グラム",
+        "kana": [
+            "グ",
+            "ラ",
+            "ム"
+        ],
         "type": "katakana",
         "romaji": [
             "gu",
@@ -2570,7 +3529,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "software, program",
-        "kana": "ソフト",
+        "kana": [
+            "ソ",
+            "フ",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "so",
@@ -2580,7 +3543,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "toilet",
-        "kana": "トイレ",
+        "kana": [
+            "ト",
+            "イ",
+            "レ"
+        ],
         "type": "katakana",
         "romaji": [
             "to",
@@ -2590,7 +3557,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "wine",
-        "kana": "ワイン",
+        "kana": [
+            "ワ",
+            "イ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "wa",
@@ -2600,7 +3571,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "piano",
-        "kana": "ピアノ",
+        "kana": [
+            "ピ",
+            "ア",
+            "ノ"
+        ],
         "type": "katakana",
         "romaji": [
             "pi",
@@ -2610,7 +3585,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "tennis",
-        "kana": "テニス",
+        "kana": [
+            "テ",
+            "ニ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "te",
@@ -2620,7 +3599,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "button",
-        "kana": "ボタン",
+        "kana": [
+            "ボ",
+            "タ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "bo",
@@ -2630,7 +3613,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "drama",
-        "kana": "ドラマ",
+        "kana": [
+            "ド",
+            "ラ",
+            "マ"
+        ],
         "type": "katakana",
         "romaji": [
             "do",
@@ -2640,7 +3627,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "knife",
-        "kana": "ナイフ",
+        "kana": [
+            "ナ",
+            "イ",
+            "フ"
+        ],
         "type": "katakana",
         "romaji": [
             "na",
@@ -2650,7 +3641,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "motorcycle",
-        "kana": "バイク",
+        "kana": [
+            "バ",
+            "イ",
+            "ク"
+        ],
         "type": "katakana",
         "romaji": [
             "ba",
@@ -2660,7 +3655,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "pink",
-        "kana": "ピンク",
+        "kana": [
+            "ピ",
+            "ン",
+            "ク"
+        ],
         "type": "katakana",
         "romaji": [
             "pi",
@@ -2670,7 +3669,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "glass",
-        "kana": "グラス",
+        "kana": [
+            "グ",
+            "ラ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "gu",
@@ -2680,7 +3683,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "chart, graph",
-        "kana": "グラフ",
+        "kana": [
+            "グ",
+            "ラ",
+            "フ"
+        ],
         "type": "katakana",
         "romaji": [
             "gu",
@@ -2690,7 +3697,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "banana",
-        "kana": "バナナ",
+        "kana": [
+            "バ",
+            "ナ",
+            "ナ"
+        ],
         "type": "katakana",
         "romaji": [
             "ba",
@@ -2700,7 +3711,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "towel",
-        "kana": "タオル",
+        "kana": [
+            "タ",
+            "オ",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "ta",
@@ -2710,7 +3725,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "lemon",
-        "kana": "レモン",
+        "kana": [
+            "レ",
+            "モ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "re",
@@ -2720,7 +3739,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "tomato",
-        "kana": "トマト",
+        "kana": [
+            "ト",
+            "マ",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "to",
@@ -2730,7 +3753,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "milk",
-        "kana": "ミルク",
+        "kana": [
+            "ミ",
+            "ル",
+            "ク"
+        ],
         "type": "katakana",
         "romaji": [
             "mi",
@@ -2740,7 +3767,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "salad",
-        "kana": "サラダ",
+        "kana": [
+            "サ",
+            "ラ",
+            "ダ"
+        ],
         "type": "katakana",
         "romaji": [
             "sa",
@@ -2750,7 +3781,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "belt",
-        "kana": "ベルト",
+        "kana": [
+            "ベ",
+            "ル",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "be",
@@ -2760,7 +3795,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "dance, dancing",
-        "kana": "ダンス",
+        "kana": [
+            "ダ",
+            "ン",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "da",
@@ -2770,7 +3809,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "jam",
-        "kana": "ジャム",
+        "kana": [
+            "ジャ",
+            "ム"
+        ],
         "type": "katakana",
         "romaji": [
             "ja",
@@ -2779,7 +3821,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "ice cream (for short)",
-        "kana": "アイス",
+        "kana": [
+            "ア",
+            "イ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "a",
@@ -2789,7 +3835,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "formal dress",
-        "kana": "ドレス",
+        "kana": [
+            "ド",
+            "レ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "do",
@@ -2799,7 +3849,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "brush",
-        "kana": "ブラシ",
+        "kana": [
+            "ブ",
+            "ラ",
+            "シ"
+        ],
         "type": "katakana",
         "romaji": [
             "bu",
@@ -2809,7 +3863,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "website",
-        "kana": "サイト",
+        "kana": [
+            "サ",
+            "イ",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "sa",
@@ -2819,7 +3877,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "signature, autograph",
-        "kana": "サイン",
+        "kana": [
+            "サ",
+            "イ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "sa",
@@ -2829,7 +3891,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "tent",
-        "kana": "テント",
+        "kana": [
+            "テ",
+            "ン",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "te",
@@ -2839,7 +3905,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "pants, trousers",
-        "kana": "パンツ",
+        "kana": [
+            "パ",
+            "ン",
+            "ツ"
+        ],
         "type": "katakana",
         "romaji": [
             "pa",
@@ -2849,7 +3919,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "fan, admirer",
-        "kana": "ファン",
+        "kana": [
+            "ファ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "fa",
@@ -2858,7 +3931,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "best",
-        "kana": "ベスト",
+        "kana": [
+            "ベ",
+            "ス",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "be",
@@ -2868,7 +3945,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "hint, clue",
-        "kana": "ヒント",
+        "kana": [
+            "ヒ",
+            "ン",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "hi",
@@ -2878,7 +3959,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "quiz, quiz show",
-        "kana": "クイズ",
+        "kana": [
+            "ク",
+            "イ",
+            "ズ"
+        ],
         "type": "katakana",
         "romaji": [
             "ku",
@@ -2888,7 +3973,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "flat tire",
-        "kana": "パンク",
+        "kana": [
+            "パ",
+            "ン",
+            "ク"
+        ],
         "type": "katakana",
         "romaji": [
             "pa",
@@ -2898,7 +3987,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "part-time job (for short)",
-        "kana": "バイト",
+        "kana": [
+            "バ",
+            "イ",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "ba",
@@ -2908,7 +4001,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "level",
-        "kana": "レベル",
+        "kana": [
+            "レ",
+            "ベ",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "re",
@@ -2918,7 +4015,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "model",
-        "kana": "モデル",
+        "kana": [
+            "モ",
+            "デ",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "mo",
@@ -2928,7 +4029,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "type",
-        "kana": "タイプ",
+        "kana": [
+            "タ",
+            "イ",
+            "プ"
+        ],
         "type": "katakana",
         "romaji": [
             "ta",
@@ -2937,18 +4042,12 @@ export const allWords: Word[] = [
         ]
     },
     {
-        "definition": "class, category",
-        "kana": "クラス",
-        "type": "katakana",
-        "romaji": [
-            "ku",
-            "ra",
-            "su"
-        ]
-    },
-    {
         "definition": "club",
-        "kana": "クラブ",
+        "kana": [
+            "ク",
+            "ラ",
+            "ブ"
+        ],
         "type": "katakana",
         "romaji": [
             "ku",
@@ -2958,7 +4057,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "ink",
-        "kana": "インク",
+        "kana": [
+            "イ",
+            "ン",
+            "ク"
+        ],
         "type": "katakana",
         "romaji": [
             "i",
@@ -2968,7 +4071,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "plus, advantage",
-        "kana": "プラス",
+        "kana": [
+            "プ",
+            "ラ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "pu",
@@ -2978,7 +4085,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "plan",
-        "kana": "プラン",
+        "kana": [
+            "プ",
+            "ラ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "pu",
@@ -2988,7 +4099,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "rhythm",
-        "kana": "リズム",
+        "kana": [
+            "リ",
+            "ズ",
+            "ム"
+        ],
         "type": "katakana",
         "romaji": [
             "ri",
@@ -2998,7 +4113,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "lens",
-        "kana": "レンズ",
+        "kana": [
+            "レ",
+            "ン",
+            "ズ"
+        ],
         "type": "katakana",
         "romaji": [
             "re",
@@ -3008,7 +4127,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "microphone",
-        "kana": "マイク",
+        "kana": [
+            "マ",
+            "イ",
+            "ク"
+        ],
         "type": "katakana",
         "romaji": [
             "ma",
@@ -3018,7 +4141,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "tire",
-        "kana": "タイヤ",
+        "kana": [
+            "タ",
+            "イ",
+            "ヤ"
+        ],
         "type": "katakana",
         "romaji": [
             "ta",
@@ -3028,7 +4155,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "tempo, pace",
-        "kana": "テンポ",
+        "kana": [
+            "テ",
+            "ン",
+            "ポ"
+        ],
         "type": "katakana",
         "romaji": [
             "te",
@@ -3038,7 +4169,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "bench",
-        "kana": "ベンチ",
+        "kana": [
+            "ベ",
+            "ン",
+            "チ"
+        ],
         "type": "katakana",
         "romaji": [
             "be",
@@ -3048,7 +4183,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "pipe",
-        "kana": "パイプ",
+        "kana": [
+            "パ",
+            "イ",
+            "プ"
+        ],
         "type": "katakana",
         "romaji": [
             "pa",
@@ -3058,7 +4197,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "modern",
-        "kana": "モダン",
+        "kana": [
+            "モ",
+            "ダ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "mo",
@@ -3068,7 +4211,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "ribbon",
-        "kana": "リボン",
+        "kana": [
+            "リ",
+            "ボ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "ri",
@@ -3078,7 +4225,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "bucket",
-        "kana": "バケツ",
+        "kana": [
+            "バ",
+            "ケ",
+            "ツ"
+        ],
         "type": "katakana",
         "romaji": [
             "ba",
@@ -3088,7 +4239,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "paint",
-        "kana": "ペンキ",
+        "kana": [
+            "ペ",
+            "ン",
+            "キ"
+        ],
         "type": "katakana",
         "romaji": [
             "pe",
@@ -3098,7 +4253,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "guide",
-        "kana": "ガイド",
+        "kana": [
+            "ガ",
+            "イ",
+            "ド"
+        ],
         "type": "katakana",
         "romaji": [
             "ga",
@@ -3108,7 +4267,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "panda",
-        "kana": "パンダ",
+        "kana": [
+            "パ",
+            "ン",
+            "ダ"
+        ],
         "type": "katakana",
         "romaji": [
             "pa",
@@ -3118,7 +4281,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "down, malfunction",
-        "kana": "ダウン",
+        "kana": [
+            "ダ",
+            "ウ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "da",
@@ -3128,7 +4295,10 @@ export const allWords: Word[] = [
     },
     {
         "definition": "jazz",
-        "kana": "ジャズ",
+        "kana": [
+            "ジャ",
+            "ズ"
+        ],
         "type": "katakana",
         "romaji": [
             "ja",
@@ -3137,7 +4307,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "trousers, pants",
-        "kana": "ズボン",
+        "kana": [
+            "ズ",
+            "ボ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "zu",
@@ -3147,7 +4321,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "AIDS",
-        "kana": "エイズ",
+        "kana": [
+            "エ",
+            "イ",
+            "ズ"
+        ],
         "type": "katakana",
         "romaji": [
             "e",
@@ -3157,7 +4335,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "chicken",
-        "kana": "チキン",
+        "kana": [
+            "チ",
+            "キ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "chi",
@@ -3167,7 +4349,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "pliers, pincers",
-        "kana": "ペンチ",
+        "kana": [
+            "ペ",
+            "ン",
+            "チ"
+        ],
         "type": "katakana",
         "romaji": [
             "pe",
@@ -3177,7 +4363,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "chat, talk",
-        "kana": "しゃべる",
+        "kana": [
+            "しゃ",
+            "べ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "sha",
@@ -3187,7 +4377,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "how come",
-        "kana": "どうして",
+        "kana": [
+            "ど",
+            "う",
+            "し",
+            "て"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -3198,7 +4393,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "from now on, after this",
-        "kana": "これから",
+        "kana": [
+            "こ",
+            "れ",
+            "か",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "ko",
@@ -3209,7 +4409,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "almost, hardly",
-        "kana": "ほとんど",
+        "kana": [
+            "ほ",
+            "と",
+            "ん",
+            "ど"
+        ],
         "type": "hiragana",
         "romaji": [
             "ho",
@@ -3220,7 +4425,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "uncle",
-        "kana": "おじさん",
+        "kana": [
+            "お",
+            "じ",
+            "さ",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -3231,7 +4441,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "aunt",
-        "kana": "おばさん",
+        "kana": [
+            "お",
+            "ば",
+            "さ",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -3242,7 +4457,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "just, exactly",
-        "kana": "ちょうど",
+        "kana": [
+            "ちょ",
+            "う",
+            "ど"
+        ],
         "type": "hiragana",
         "romaji": [
             "cho",
@@ -3252,7 +4471,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "welcome (greeting)",
-        "kana": "ようこそ",
+        "kana": [
+            "よ",
+            "う",
+            "こ",
+            "そ"
+        ],
         "type": "hiragana",
         "romaji": [
             "yo",
@@ -3263,7 +4487,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "feast, treat",
-        "kana": "ごちそう",
+        "kana": [
+            "ご",
+            "ち",
+            "そ",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "go",
@@ -3274,7 +4503,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "I see, really",
-        "kana": "なるほど",
+        "kana": [
+            "な",
+            "る",
+            "ほ",
+            "ど"
+        ],
         "type": "hiragana",
         "romaji": [
             "na",
@@ -3285,7 +4519,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "as it is, just like that",
-        "kana": "そのまま",
+        "kana": [
+            "そ",
+            "の",
+            "ま",
+            "ま"
+        ],
         "type": "hiragana",
         "romaji": [
             "so",
@@ -3296,7 +4535,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "carrot",
-        "kana": "にんじん",
+        "kana": [
+            "に",
+            "ん",
+            "じ",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "ni",
@@ -3307,7 +4551,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "mischief, prank",
-        "kana": "いたずら",
+        "kana": [
+            "い",
+            "た",
+            "ず",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -3318,7 +4567,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "spill, overflow",
-        "kana": "こぼれる",
+        "kana": [
+            "こ",
+            "ぼ",
+            "れ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ko",
@@ -3329,7 +4583,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "all over, here and there",
-        "kana": "あちこち",
+        "kana": [
+            "あ",
+            "ち",
+            "こ",
+            "ち"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -3340,7 +4599,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "noisy, annoying",
-        "kana": "うるさい",
+        "kana": [
+            "う",
+            "る",
+            "さ",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "u",
@@ -3351,7 +4615,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "of course",
-        "kana": "もちろん",
+        "kana": [
+            "も",
+            "ち",
+            "ろ",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "mo",
@@ -3362,7 +4631,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "one's regards",
-        "kana": "よろしく",
+        "kana": [
+            "よ",
+            "ろ",
+            "し",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "yo",
@@ -3373,7 +4647,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "a lot, in large quantity",
-        "kana": "たくさん",
+        "kana": [
+            "た",
+            "く",
+            "さ",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "ta",
@@ -3384,7 +4663,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "OK, not bad",
-        "kana": "まあまあ",
+        "kana": [
+            "ま",
+            "あ",
+            "ま",
+            "あ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -3395,7 +4679,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "a little while, a while",
-        "kana": "しばらく",
+        "kana": [
+            "し",
+            "ば",
+            "ら",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "shi",
@@ -3406,7 +4695,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "knock, bang",
-        "kana": "どんどん",
+        "kana": [
+            "ど",
+            "ん",
+            "ど",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -3417,7 +4711,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "gather together, put in order",
-        "kana": "まとめる",
+        "kana": [
+            "ま",
+            "と",
+            "め",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -3428,7 +4727,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "rather, pretty",
-        "kana": "なかなか",
+        "kana": [
+            "な",
+            "か",
+            "な",
+            "か"
+        ],
         "type": "hiragana",
         "romaji": [
             "na",
@@ -3439,7 +4743,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "strange, peculiar",
-        "kana": "おかしい",
+        "kana": [
+            "お",
+            "か",
+            "し",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -3450,7 +4759,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "toy, plaything",
-        "kana": "おもちゃ",
+        "kana": [
+            "お",
+            "も",
+            "ちゃ",
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -3460,7 +4773,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "some moments, a while",
-        "kana": "ひととき",
+        "kana": [
+            "ひ",
+            "と",
+            "と",
+            "き"
+        ],
         "type": "hiragana",
         "romaji": [
             "hi",
@@ -3471,7 +4789,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "not easily, not readily",
-        "kana": "なかなか",
+        "kana": [
+            "な",
+            "か",
+            "な",
+            "か"
+        ],
         "type": "hiragana",
         "romaji": [
             "na",
@@ -3482,7 +4805,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "so much",
-        "kana": "そんなに",
+        "kana": [
+            "そ",
+            "ん",
+            "な",
+            "に"
+        ],
         "type": "hiragana",
         "romaji": [
             "so",
@@ -3493,7 +4821,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "hit, bump into",
-        "kana": "ぶつかる",
+        "kana": [
+            "ぶ",
+            "つ",
+            "か",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "bu",
@@ -3504,7 +4837,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "at all times, any time",
-        "kana": "いつでも",
+        "kana": [
+            "い",
+            "つ",
+            "で",
+            "も"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -3515,7 +4853,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "funny, comical",
-        "kana": "おかしい",
+        "kana": [
+            "お",
+            "か",
+            "し",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -3526,7 +4869,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "soon, it's about time",
-        "kana": "そろそろ",
+        "kana": [
+            "そ",
+            "ろ",
+            "そ",
+            "ろ"
+        ],
         "type": "hiragana",
         "romaji": [
             "so",
@@ -3537,7 +4885,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "trendy, fashionable",
-        "kana": "おしゃれ",
+        "kana": [
+            "お",
+            "しゃ",
+            "れ"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -3547,7 +4899,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "that much, such",
-        "kana": "あんなに",
+        "kana": [
+            "あ",
+            "ん",
+            "な",
+            "に"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -3558,7 +4915,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "correctly, properly",
-        "kana": "ちゃんと",
+        "kana": [
+            "ちゃ",
+            "ん",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "cha",
@@ -3568,7 +4929,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "take it easy",
-        "kana": "のんびり",
+        "kana": [
+            "の",
+            "ん",
+            "び",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "no",
@@ -3579,7 +4945,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "in any case, anyway",
-        "kana": "とにかく",
+        "kana": [
+            "と",
+            "に",
+            "か",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "to",
@@ -3590,7 +4961,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "wander, walk around",
-        "kana": "ぶらぶら",
+        "kana": [
+            "ぶ",
+            "ら",
+            "ぶ",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "bu",
@@ -3601,7 +4977,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "sparkling, glittering",
-        "kana": "きらきら",
+        "kana": [
+            "き",
+            "ら",
+            "き",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "ki",
@@ -3612,7 +4993,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "this much, such",
-        "kana": "こんなに",
+        "kana": [
+            "こ",
+            "ん",
+            "な",
+            "に"
+        ],
         "type": "hiragana",
         "romaji": [
             "ko",
@@ -3623,7 +5009,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "feel excited, feel nervous",
-        "kana": "どきどき",
+        "kana": [
+            "ど",
+            "き",
+            "ど",
+            "き"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -3634,7 +5025,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "smilingly, keep smiling",
-        "kana": "にこにこ",
+        "kana": [
+            "に",
+            "こ",
+            "に",
+            "こ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ni",
@@ -3645,7 +5041,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "shaky, unstable",
-        "kana": "ぐらぐら",
+        "kana": [
+            "ぐ",
+            "ら",
+            "ぐ",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "gu",
@@ -3656,7 +5057,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "all right",
-        "kana": "よろしい",
+        "kana": [
+            "よ",
+            "ろ",
+            "し",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "yo",
@@ -3667,7 +5073,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "as...as possible, if possible",
-        "kana": "なるべく",
+        "kana": [
+            "な",
+            "る",
+            "べ",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "na",
@@ -3678,7 +5089,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "be dizzy, lightheaded",
-        "kana": "ふらふら",
+        "kana": [
+            "ふ",
+            "ら",
+            "ふ",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "fu",
@@ -3689,7 +5105,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "glaring, blinding",
-        "kana": "ぎらぎら",
+        "kana": [
+            "ぎ",
+            "ら",
+            "ぎ",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "gi",
@@ -3700,7 +5121,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "finally, any moment",
-        "kana": "いよいよ",
+        "kana": [
+            "い",
+            "よ",
+            "い",
+            "よ"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -3711,7 +5137,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "not crowded",
-        "kana": "がらがら",
+        "kana": [
+            "が",
+            "ら",
+            "が",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "ga",
@@ -3722,7 +5153,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "quickly, rapidly",
-        "kana": "どんどん",
+        "kana": [
+            "ど",
+            "ん",
+            "ど",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -3733,7 +5169,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "hungry, starving",
-        "kana": "ぺこぺこ",
+        "kana": [
+            "ぺ",
+            "こ",
+            "ぺ",
+            "こ"
+        ],
         "type": "hiragana",
         "romaji": [
             "pe",
@@ -3744,7 +5185,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "fluently",
-        "kana": "ぺらぺら",
+        "kana": [
+            "ぺ",
+            "ら",
+            "ぺ",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "pe",
@@ -3755,7 +5201,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "very thirsty, very dry",
-        "kana": "からから",
+        "kana": [
+            "か",
+            "ら",
+            "か",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "ka",
@@ -3766,7 +5217,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "(not) that much, (not) so much",
-        "kana": "あんまり",
+        "kana": [
+            "あ",
+            "ん",
+            "ま",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -3777,7 +5233,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "all of a sudden, suddenly",
-        "kana": "いきなり",
+        "kana": [
+            "い",
+            "き",
+            "な",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -3788,7 +5249,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "pouring",
-        "kana": "ざあざあ",
+        "kana": [
+            "ざ",
+            "あ",
+            "ざ",
+            "あ"
+        ],
         "type": "hiragana",
         "romaji": [
             "za",
@@ -3799,7 +5265,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "tapping, patting",
-        "kana": "とんとん",
+        "kana": [
+            "と",
+            "ん",
+            "と",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "to",
@@ -3810,7 +5281,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "this and that, one thing or another",
-        "kana": "あれこれ",
+        "kana": [
+            "あ",
+            "れ",
+            "こ",
+            "れ"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -3821,7 +5297,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "finally, in the end",
-        "kana": "とうとう",
+        "kana": [
+            "と",
+            "う",
+            "と",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "to",
@@ -3832,7 +5313,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "every time, about everything",
-        "kana": "いちいち",
+        "kana": [
+            "い",
+            "ち",
+            "い",
+            "ち"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -3843,7 +5329,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "persistent",
-        "kana": "しつこい",
+        "kana": [
+            "し",
+            "つ",
+            "こ",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "shi",
@@ -3854,7 +5345,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "vacantly, absent-mindedly",
-        "kana": "ぼんやり",
+        "kana": [
+            "ぼ",
+            "ん",
+            "や",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "bo",
@@ -3865,7 +5361,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "selfish",
-        "kana": "わがまま",
+        "kana": [
+            "わ",
+            "が",
+            "ま",
+            "ま"
+        ],
         "type": "hiragana",
         "romaji": [
             "wa",
@@ -3876,7 +5377,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "now now, well well",
-        "kana": "まあまあ",
+        "kana": [
+            "ま",
+            "あ",
+            "ま",
+            "あ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -3887,7 +5393,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "mess around, fool around",
-        "kana": "ふざける",
+        "kana": [
+            "ふ",
+            "ざ",
+            "け",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "fu",
@@ -3898,7 +5409,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "be stunned in disappointment, be amazed at",
-        "kana": "あきれる",
+        "kana": [
+            "あ",
+            "き",
+            "れ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -3909,7 +5425,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "unfortunately",
-        "kana": "あいにく",
+        "kana": [
+            "あ",
+            "い",
+            "に",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -3920,7 +5441,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "wander, hover around",
-        "kana": "うろうろ",
+        "kana": [
+            "う",
+            "ろ",
+            "う",
+            "ろ"
+        ],
         "type": "hiragana",
         "romaji": [
             "u",
@@ -3931,7 +5457,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "make fun of, tease",
-        "kana": "からかう",
+        "kana": [
+            "か",
+            "ら",
+            "か",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "ka",
@@ -3942,7 +5473,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "shiny, glittering",
-        "kana": "ぴかぴか",
+        "kana": [
+            "ぴ",
+            "か",
+            "ぴ",
+            "か"
+        ],
         "type": "hiragana",
         "romaji": [
             "pi",
@@ -3953,7 +5489,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "dazzling, glaring",
-        "kana": "まぶしい",
+        "kana": [
+            "ま",
+            "ぶ",
+            "し",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -3964,7 +5505,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "in a mutter, mumble",
-        "kana": "ぶつぶつ",
+        "kana": [
+            "ぶ",
+            "つ",
+            "ぶ",
+            "つ"
+        ],
         "type": "hiragana",
         "romaji": [
             "bu",
@@ -3975,7 +5521,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "sneeze",
-        "kana": "くしゃみ",
+        "kana": [
+            "く",
+            "しゃ",
+            "み"
+        ],
         "type": "hiragana",
         "romaji": [
             "ku",
@@ -3985,7 +5535,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "be irritated",
-        "kana": "いらいら",
+        "kana": [
+            "い",
+            "ら",
+            "い",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -3996,7 +5551,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "slowly, sluggishly",
-        "kana": "のろのろ",
+        "kana": [
+            "の",
+            "ろ",
+            "の",
+            "ろ"
+        ],
         "type": "hiragana",
         "romaji": [
             "no",
@@ -4007,7 +5567,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "go numb, fall asleep",
-        "kana": "しびれる",
+        "kana": [
+            "し",
+            "び",
+            "れ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "shi",
@@ -4018,7 +5583,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "squat down",
-        "kana": "しゃがむ",
+        "kana": [
+            "しゃ",
+            "が",
+            "む"
+        ],
         "type": "hiragana",
         "romaji": [
             "sha",
@@ -4028,7 +5597,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "going out of one's way to do something",
-        "kana": "わざわざ",
+        "kana": [
+            "わ",
+            "ざ",
+            "わ",
+            "ざ"
+        ],
         "type": "hiragana",
         "romaji": [
             "wa",
@@ -4039,7 +5613,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "feel excited, be thrilled",
-        "kana": "わくわく",
+        "kana": [
+            "わ",
+            "く",
+            "わ",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "wa",
@@ -4050,7 +5629,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "somehow",
-        "kana": "どうにか",
+        "kana": [
+            "ど",
+            "う",
+            "に",
+            "か"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -4061,7 +5645,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "bow, kowtow",
-        "kana": "ぺこぺこ",
+        "kana": [
+            "ぺ",
+            "こ",
+            "ぺ",
+            "こ"
+        ],
         "type": "hiragana",
         "romaji": [
             "pe",
@@ -4072,7 +5661,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "baggy, too big",
-        "kana": "だぶだぶ",
+        "kana": [
+            "だ",
+            "ぶ",
+            "だ",
+            "ぶ"
+        ],
         "type": "hiragana",
         "romaji": [
             "da",
@@ -4083,7 +5677,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "flatter",
-        "kana": "おだてる",
+        "kana": [
+            "お",
+            "だ",
+            "て",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -4094,7 +5693,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "look down, lower one's eyes",
-        "kana": "うつむく",
+        "kana": [
+            "う",
+            "つ",
+            "む",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "u",
@@ -4105,7 +5709,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "by chance, accidentally",
-        "kana": "たまたま",
+        "kana": [
+            "た",
+            "ま",
+            "た",
+            "ま"
+        ],
         "type": "hiragana",
         "romaji": [
             "ta",
@@ -4116,7 +5725,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "Mister, middle-aged man",
-        "kana": "おじさん",
+        "kana": [
+            "お",
+            "じ",
+            "さ",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -4127,7 +5741,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "middle-aged woman",
-        "kana": "おばさん",
+        "kana": [
+            "お",
+            "ば",
+            "さ",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -4138,7 +5757,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "at most, at best",
-        "kana": "せいぜい",
+        "kana": [
+            "せ",
+            "い",
+            "ぜ",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "se",
@@ -4149,7 +5773,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "rice ball",
-        "kana": "おにぎり",
+        "kana": [
+            "お",
+            "に",
+            "ぎ",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -4160,7 +5789,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "round and round",
-        "kana": "ぐるぐる",
+        "kana": [
+            "ぐ",
+            "る",
+            "ぐ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "gu",
@@ -4171,7 +5805,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "hold on to (something)",
-        "kana": "つかまる",
+        "kana": [
+            "つ",
+            "か",
+            "ま",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -4182,7 +5821,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "pumpkin",
-        "kana": "かぼちゃ",
+        "kana": [
+            "か",
+            "ぼ",
+            "ちゃ",
+        ],
         "type": "hiragana",
         "romaji": [
             "ka",
@@ -4192,7 +5835,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "damp",
-        "kana": "じめじめ",
+        "kana": [
+            "じ",
+            "め",
+            "じ",
+            "め"
+        ],
         "type": "hiragana",
         "romaji": [
             "ji",
@@ -4203,7 +5851,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "staringly",
-        "kana": "じろじろ",
+        "kana": [
+            "じ",
+            "ろ",
+            "じ",
+            "ろ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ji",
@@ -4214,7 +5867,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "smooth, slippery",
-        "kana": "つるつる",
+        "kana": [
+            "つ",
+            "る",
+            "つ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -4225,7 +5883,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "pepper",
-        "kana": "こしょう",
+        "kana": [
+            "こ",
+            "しょ",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "ko",
@@ -4235,7 +5897,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "pork cutlet",
-        "kana": "とんかつ",
+        "kana": [
+            "と",
+            "ん",
+            "か",
+            "つ"
+        ],
         "type": "hiragana",
         "romaji": [
             "to",
@@ -4246,7 +5913,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "cucumber",
-        "kana": "きゅうり",
+        "kana": [
+            "きゅ",
+            "う",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "kyu",
@@ -4256,7 +5927,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "just in time, barely",
-        "kana": "ぎりぎり",
+        "kana": [
+            "ぎ",
+            "り",
+            "ぎ",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "gi",
@@ -4267,7 +5943,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "separately, discretely",
-        "kana": "ばらばら",
+        "kana": [
+            "ば",
+            "ら",
+            "ば",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "ba",
@@ -4278,7 +5959,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "shivering, trembling",
-        "kana": "ぶるぶる",
+        "kana": [
+            "ぶ",
+            "る",
+            "ぶ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "bu",
@@ -4289,7 +5975,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "smoothly, easily",
-        "kana": "すらすら",
+        "kana": [
+            "す",
+            "ら",
+            "す",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "su",
@@ -4300,7 +5991,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "(sleep) peacefully, soundly",
-        "kana": "すやすや",
+        "kana": [
+            "す",
+            "や",
+            "す",
+            "や"
+        ],
         "type": "hiragana",
         "romaji": [
             "su",
@@ -4311,7 +6007,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "with a rattling noise, unstable",
-        "kana": "がたがた",
+        "kana": [
+            "が",
+            "た",
+            "が",
+            "た"
+        ],
         "type": "hiragana",
         "romaji": [
             "ga",
@@ -4322,7 +6023,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "rough, gritty",
-        "kana": "ざらざら",
+        "kana": [
+            "ざ",
+            "ら",
+            "ざ",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "za",
@@ -4333,7 +6039,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "slimy",
-        "kana": "ぬるぬる",
+        "kana": [
+            "ぬ",
+            "る",
+            "ぬ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "nu",
@@ -4344,7 +6055,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "slowly, tardily",
-        "kana": "ぐずぐず",
+        "kana": [
+            "ぐ",
+            "ず",
+            "ぐ",
+            "ず"
+        ],
         "type": "hiragana",
         "romaji": [
             "gu",
@@ -4355,7 +6071,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "pleasantly warm",
-        "kana": "ぽかぽか",
+        "kana": [
+            "ぽ",
+            "か",
+            "ぽ",
+            "か"
+        ],
         "type": "hiragana",
         "romaji": [
             "po",
@@ -4366,7 +6087,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "exhausted",
-        "kana": "くたくた",
+        "kana": [
+            "く",
+            "た",
+            "く",
+            "た"
+        ],
         "type": "hiragana",
         "romaji": [
             "ku",
@@ -4377,7 +6103,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "smooth, silky",
-        "kana": "すべすべ",
+        "kana": [
+            "す",
+            "べ",
+            "す",
+            "べ"
+        ],
         "type": "hiragana",
         "romaji": [
             "su",
@@ -4388,7 +6119,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "grin to oneself",
-        "kana": "にやにや",
+        "kana": [
+            "に",
+            "や",
+            "に",
+            "や"
+        ],
         "type": "hiragana",
         "romaji": [
             "ni",
@@ -4399,7 +6135,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "excitedly",
-        "kana": "うきうき",
+        "kana": [
+            "う",
+            "き",
+            "う",
+            "き"
+        ],
         "type": "hiragana",
         "romaji": [
             "u",
@@ -4410,7 +6151,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "(laugh) out loud",
-        "kana": "げらげら",
+        "kana": [
+            "げ",
+            "ら",
+            "げ",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "ge",
@@ -4421,7 +6167,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "before long, sooner or later",
-        "kana": "そのうち",
+        "kana": [
+            "そ",
+            "の",
+            "う",
+            "ち"
+        ],
         "type": "hiragana",
         "romaji": [
             "so",
@@ -4432,7 +6183,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "unevenness, bumpiness",
-        "kana": "でこぼこ",
+        "kana": [
+            "で",
+            "こ",
+            "ぼ",
+            "こ"
+        ],
         "type": "hiragana",
         "romaji": [
             "de",
@@ -4443,7 +6199,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "stick together, sticky",
-        "kana": "べたべた",
+        "kana": [
+            "べ",
+            "た",
+            "べ",
+            "た"
+        ],
         "type": "hiragana",
         "romaji": [
             "be",
@@ -4454,7 +6215,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "suddenly, coming to a dead stop",
-        "kana": "ぴたりと",
+        "kana": [
+            "ぴ",
+            "た",
+            "り",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "pi",
@@ -4465,7 +6231,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "tickle",
-        "kana": "くすぐる",
+        "kana": [
+            "く",
+            "す",
+            "ぐ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ku",
@@ -4476,7 +6247,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "furiously angry, in a rage",
-        "kana": "かんかん",
+        "kana": [
+            "か",
+            "ん",
+            "か",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "ka",
@@ -4487,7 +6263,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "until now, until here",
-        "kana": "これまで",
+        "kana": [
+            "こ",
+            "れ",
+            "ま",
+            "で"
+        ],
         "type": "hiragana",
         "romaji": [
             "ko",
@@ -4498,7 +6279,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "razor",
-        "kana": "かみそり",
+        "kana": [
+            "か",
+            "み",
+            "そ",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "ka",
@@ -4509,7 +6295,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "sharply, significantly",
-        "kana": "がくんと",
+        "kana": [
+            "が",
+            "く",
+            "ん",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "ga",
@@ -4520,7 +6311,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "round and round, spin",
-        "kana": "くるくる",
+        "kana": [
+            "く",
+            "る",
+            "く",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ku",
@@ -4531,7 +6327,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "noisily, loudly",
-        "kana": "がやがや",
+        "kana": [
+            "が",
+            "や",
+            "が",
+            "や"
+        ],
         "type": "hiragana",
         "romaji": [
             "ga",
@@ -4542,7 +6343,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "each, respectively",
-        "kana": "それぞれ",
+        "kana": [
+            "そ",
+            "れ",
+            "ぞ",
+            "れ"
+        ],
         "type": "hiragana",
         "romaji": [
             "so",
@@ -4553,7 +6359,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "properly, neatly",
-        "kana": "きちんと",
+        "kana": [
+            "き",
+            "ち",
+            "ん",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "ki",
@@ -4564,7 +6375,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "at last, at long last",
-        "kana": "ようやく",
+        "kana": [
+            "よ",
+            "う",
+            "や",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "yo",
@@ -4575,7 +6391,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "so much, that much",
-        "kana": "それほど",
+        "kana": [
+            "そ",
+            "れ",
+            "ほ",
+            "ど"
+        ],
         "type": "hiragana",
         "romaji": [
             "so",
@@ -4586,7 +6407,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "increasingly, more and more",
-        "kana": "ますます",
+        "kana": [
+            "ま",
+            "す",
+            "ま",
+            "す"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -4597,7 +6423,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "at any rate, in any case",
-        "kana": "ともかく",
+        "kana": [
+            "と",
+            "も",
+            "か",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "to",
@@ -4608,7 +6439,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "often, frequently",
-        "kana": "しばしば",
+        "kana": [
+            "し",
+            "ば",
+            "し",
+            "ば"
+        ],
         "type": "hiragana",
         "romaji": [
             "shi",
@@ -4619,7 +6455,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "how much, how",
-        "kana": "どんなに",
+        "kana": [
+            "ど",
+            "ん",
+            "な",
+            "に"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -4630,7 +6471,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "come together, agree on",
-        "kana": "まとまる",
+        "kana": [
+            "ま",
+            "と",
+            "ま",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -4641,7 +6487,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "originally, by nature (colloquial)",
-        "kana": "もともと",
+        "kana": [
+            "も",
+            "と",
+            "も",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "mo",
@@ -4652,7 +6503,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "make (something) uniform, put (something) in order",
-        "kana": "そろえる",
+        "kana": [
+            "そ",
+            "ろ",
+            "え",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "so",
@@ -4663,7 +6519,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "connection, relationship",
-        "kana": "つながり",
+        "kana": [
+            "つ",
+            "な",
+            "が",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -4674,7 +6535,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "hit, strike (forcefully)",
-        "kana": "ぶつける",
+        "kana": [
+            "ぶ",
+            "つ",
+            "け",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "bu",
@@ -4685,7 +6551,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "happy (occasions), festive",
-        "kana": "めでたい",
+        "kana": [
+            "め",
+            "で",
+            "た",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "me",
@@ -4696,7 +6567,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "in a moment, suddenly",
-        "kana": "たちまち",
+        "kana": [
+            "た",
+            "ち",
+            "ま",
+            "ち"
+        ],
         "type": "hiragana",
         "romaji": [
             "ta",
@@ -4707,7 +6583,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "playing dirty, mean",
-        "kana": "ひきょう",
+        "kana": [
+            "ひ",
+            "きょ",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "hi",
@@ -4717,7 +6597,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "proverb, (common) saying",
-        "kana": "ことわざ",
+        "kana": [
+            "こ",
+            "と",
+            "わ",
+            "ざ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ko",
@@ -4728,7 +6613,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "wrong, must not",
-        "kana": "いけない",
+        "kana": [
+            "い",
+            "け",
+            "な",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -4739,7 +6629,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "whisper",
-        "kana": "ささやく",
+        "kana": [
+            "さ",
+            "さ",
+            "や",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "sa",
@@ -4750,7 +6645,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "hometown, birthplace (colloquial)",
-        "kana": "ふるさと",
+        "kana": [
+            "ふ",
+            "る",
+            "さ",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "fu",
@@ -4761,7 +6661,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "soft and fluffy",
-        "kana": "ふわふわ",
+        "kana": [
+            "ふ",
+            "わ",
+            "ふ",
+            "わ"
+        ],
         "type": "hiragana",
         "romaji": [
             "fu",
@@ -4772,7 +6677,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "stumble, trip on",
-        "kana": "つまずく",
+        "kana": [
+            "つ",
+            "ま",
+            "ず",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -4783,7 +6693,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "frequently, persistently",
-        "kana": "やたらに",
+        "kana": [
+            "や",
+            "た",
+            "ら",
+            "に"
+        ],
         "type": "hiragana",
         "romaji": [
             "ya",
@@ -4794,7 +6709,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "each, individually",
-        "kana": "めいめい",
+        "kana": [
+            "め",
+            "い",
+            "め",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "me",
@@ -4805,7 +6725,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "be torn off, come off",
-        "kana": "ちぎれる",
+        "kana": [
+            "ち",
+            "ぎ",
+            "れ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "chi",
@@ -4816,7 +6741,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "candle",
-        "kana": "ろうそく",
+        "kana": [
+            "ろ",
+            "う",
+            "そ",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "ro",
@@ -4827,7 +6757,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "rapidly, at once",
-        "kana": "にわかに",
+        "kana": [
+            "に",
+            "わ",
+            "か",
+            "に"
+        ],
         "type": "hiragana",
         "romaji": [
             "ni",
@@ -4838,7 +6773,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "smiling, beaming (face)",
-        "kana": "にこやか",
+        "kana": [
+            "に",
+            "こ",
+            "や",
+            "か"
+        ],
         "type": "hiragana",
         "romaji": [
             "ni",
@@ -4849,7 +6789,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "reluctantly, grudgingly",
-        "kana": "いやいや",
+        "kana": [
+            "い",
+            "や",
+            "い",
+            "や"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -4860,7 +6805,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "truly, deeply",
-        "kana": "つくづく",
+        "kana": [
+            "つ",
+            "く",
+            "づ",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -4871,7 +6821,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "deceive, gloss over",
-        "kana": "ごまかす",
+        "kana": [
+            "ご",
+            "ま",
+            "か",
+            "す"
+        ],
         "type": "hiragana",
         "romaji": [
             "go",
@@ -4882,7 +6837,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "bring about, lead to",
-        "kana": "もたらす",
+        "kana": [
+            "も",
+            "た",
+            "ら",
+            "す"
+        ],
         "type": "hiragana",
         "romaji": [
             "mo",
@@ -4893,7 +6853,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "looks like, apparently",
-        "kana": "どうやら",
+        "kana": [
+            "ど",
+            "う",
+            "や",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -4904,7 +6869,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "end",
-        "kana": "おしまい",
+        "kana": [
+            "お",
+            "し",
+            "ま",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -4915,7 +6885,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "indeed, as if",
-        "kana": "いかにも",
+        "kana": [
+            "い",
+            "か",
+            "に",
+            "も"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -4926,7 +6901,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "mutter, murmur",
-        "kana": "つぶやく",
+        "kana": [
+            "つ",
+            "ぶ",
+            "や",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -4937,7 +6917,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "be connected, be linked",
-        "kana": "つながる",
+        "kana": [
+            "つ",
+            "な",
+            "が",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -4948,7 +6933,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "bustle, be lively",
-        "kana": "にぎわう",
+        "kana": [
+            "に",
+            "ぎ",
+            "わ",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "ni",
@@ -4959,7 +6949,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "tower, rise high",
-        "kana": "そびえる",
+        "kana": [
+            "そ",
+            "び",
+            "え",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "so",
@@ -4970,7 +6965,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "for the time being, for a while",
-        "kana": "ひとまず",
+        "kana": [
+            "ひ",
+            "と",
+            "ま",
+            "ず"
+        ],
         "type": "hiragana",
         "romaji": [
             "hi",
@@ -4981,7 +6981,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "rumble",
-        "kana": "ごろごろ",
+        "kana": [
+            "ご",
+            "ろ",
+            "ご",
+            "ろ"
+        ],
         "type": "hiragana",
         "romaji": [
             "go",
@@ -4992,7 +6997,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "lightly fluttering, floating",
-        "kana": "ひらひら",
+        "kana": [
+            "ひ",
+            "ら",
+            "ひ",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "hi",
@@ -5003,7 +7013,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "gargle",
-        "kana": "がらがら",
+        "kana": [
+            "が",
+            "ら",
+            "が",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "ga",
@@ -5014,7 +7029,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "hard, solid",
-        "kana": "かちかち",
+        "kana": [
+            "か",
+            "ち",
+            "か",
+            "ち"
+        ],
         "type": "hiragana",
         "romaji": [
             "ka",
@@ -5025,7 +7045,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "plot, storyline",
-        "kana": "あらすじ",
+        "kana": [
+            "あ",
+            "ら",
+            "す",
+            "じ"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -5036,7 +7061,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "rustle",
-        "kana": "がさがさ",
+        "kana": [
+            "が",
+            "さ",
+            "が",
+            "さ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ga",
@@ -5047,7 +7077,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "guzzling, gulping",
-        "kana": "がぶがぶ",
+        "kana": [
+            "が",
+            "ぶ",
+            "が",
+            "ぶ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ga",
@@ -5058,7 +7093,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "sparklingly, glittering",
-        "kana": "きらりと",
+        "kana": [
+            "き",
+            "ら",
+            "り",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "ki",
@@ -5069,7 +7109,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "in one gulp",
-        "kana": "ごくんと",
+        "kana": [
+            "ご",
+            "く",
+            "ん",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "go",
@@ -5080,7 +7125,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "(jump or hop) lightly",
-        "kana": "ぴょんと",
+        "kana": [
+            "ぴょ",
+            "ん",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "pyo",
@@ -5090,7 +7139,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "in a fluttering motion",
-        "kana": "ひらりと",
+        "kana": [
+            "ひ",
+            "ら",
+            "り",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "hi",
@@ -5101,7 +7155,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "soon",
-        "kana": "もうじき",
+        "kana": [
+            "も",
+            "う",
+            "じ",
+            "き"
+        ],
         "type": "hiragana",
         "romaji": [
             "mo",
@@ -5112,7 +7171,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "repeatedly, constantly",
-        "kana": "しきりに",
+        "kana": [
+            "し",
+            "き",
+            "り",
+            "に"
+        ],
         "type": "hiragana",
         "romaji": [
             "shi",
@@ -5123,7 +7187,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "rough, rude",
-        "kana": "ぞんざい",
+        "kana": [
+            "ぞ",
+            "ん",
+            "ざ",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "zo",
@@ -5134,7 +7203,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "(laugh) loudly",
-        "kana": "からから",
+        "kana": [
+            "か",
+            "ら",
+            "か",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "ka",
@@ -5145,7 +7219,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "grandmother, old lady",
-        "kana": "ばあさん",
+        "kana": [
+            "ば",
+            "あ",
+            "さ",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "ba",
@@ -5156,7 +7235,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "flimsy, thin",
-        "kana": "ぺらぺら",
+        "kana": [
+            "ぺ",
+            "ら",
+            "ぺ",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "pe",
@@ -5167,7 +7251,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "katakana",
-        "kana": "カタカナ",
+        "kana": [
+            "カ",
+            "タ",
+            "カ",
+            "ナ"
+        ],
         "type": "katakana",
         "romaji": [
             "ka",
@@ -5178,7 +7267,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "system",
-        "kana": "システム",
+        "kana": [
+            "シ",
+            "ス",
+            "テ",
+            "ム"
+        ],
         "type": "katakana",
         "romaji": [
             "shi",
@@ -5189,7 +7283,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "chance",
-        "kana": "チャンス",
+        "kana": [
+            "チャ",
+            "ン",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "cha",
@@ -5199,7 +7297,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "personal computer",
-        "kana": "パソコン",
+        "kana": [
+            "パ",
+            "ソ",
+            "コ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "pa",
@@ -5210,7 +7313,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "handkerchief",
-        "kana": "ハンカチ",
+        "kana": [
+            "ハ",
+            "ン",
+            "カ",
+            "チ"
+        ],
         "type": "katakana",
         "romaji": [
             "ha",
@@ -5221,7 +7329,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "blouse",
-        "kana": "ブラウス",
+        "kana": [
+            "ブ",
+            "ラ",
+            "ウ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "bu",
@@ -5232,7 +7345,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "camping, camp",
-        "kana": "キャンプ",
+        "kana": [
+            "キャ",
+            "ン",
+            "プ"
+        ],
         "type": "katakana",
         "romaji": [
             "kya",
@@ -5242,7 +7359,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "tie, necktie",
-        "kana": "ネクタイ",
+        "kana": [
+            "ネ",
+            "ク",
+            "タ",
+            "イ"
+        ],
         "type": "katakana",
         "romaji": [
             "ne",
@@ -5253,7 +7375,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "orange",
-        "kana": "オレンジ",
+        "kana": [
+            "オ",
+            "レ",
+            "ン",
+            "ジ"
+        ],
         "type": "katakana",
         "romaji": [
             "o",
@@ -5264,7 +7391,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "text, textbook",
-        "kana": "テキスト",
+        "kana": [
+            "テ",
+            "キ",
+            "ス",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "te",
@@ -5275,7 +7407,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "album",
-        "kana": "アルバム",
+        "kana": [
+            "ア",
+            "ル",
+            "バ",
+            "ム"
+        ],
         "type": "katakana",
         "romaji": [
             "a",
@@ -5286,7 +7423,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "pachinko (Japanese pinball)",
-        "kana": "パチンコ",
+        "kana": [
+            "パ",
+            "チ",
+            "ン",
+            "コ"
+        ],
         "type": "katakana",
         "romaji": [
             "pa",
@@ -5297,7 +7439,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "drive",
-        "kana": "ドライブ",
+        "kana": [
+            "ド",
+            "ラ",
+            "イ",
+            "ブ"
+        ],
         "type": "katakana",
         "romaji": [
             "do",
@@ -5308,7 +7455,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "stereo",
-        "kana": "ステレオ",
+        "kana": [
+            "ス",
+            "テ",
+            "レ",
+            "オ"
+        ],
         "type": "katakana",
         "romaji": [
             "su",
@@ -5319,7 +7471,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "film",
-        "kana": "フィルム",
+        "kana": [
+            "フィ",
+            "ル",
+            "ム"
+        ],
         "type": "katakana",
         "romaji": [
             "fi",
@@ -5329,7 +7485,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "pajamas",
-        "kana": "パジャマ",
+        "kana": [
+            "パ",
+            "ジャ",
+            "マ"
+        ],
         "type": "katakana",
         "romaji": [
             "pa",
@@ -5339,7 +7499,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "playing cards",
-        "kana": "トランプ",
+        "kana": [
+            "ト",
+            "ラ",
+            "ン",
+            "プ"
+        ],
         "type": "katakana",
         "romaji": [
             "to",
@@ -5350,7 +7515,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "engine",
-        "kana": "エンジン",
+        "kana": [
+            "エ",
+            "ン",
+            "ジ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "e",
@@ -5361,7 +7531,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "idea",
-        "kana": "アイデア",
+        "kana": [
+            "ア",
+            "イ",
+            "デ",
+            "ア"
+        ],
         "type": "katakana",
         "romaji": [
             "a",
@@ -5372,7 +7547,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "minus, below zero",
-        "kana": "マイナス",
+        "kana": [
+            "マ",
+            "イ",
+            "ナ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "ma",
@@ -5383,7 +7563,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "comment",
-        "kana": "コメント",
+        "kana": [
+            "コ",
+            "メ",
+            "ン",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "ko",
@@ -5394,7 +7579,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "nylon",
-        "kana": "ナイロン",
+        "kana": [
+            "ナ",
+            "イ",
+            "ロ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "na",
@@ -5405,7 +7595,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "iron (for clothes)",
-        "kana": "アイロン",
+        "kana": [
+            "ア",
+            "イ",
+            "ロ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "a",
@@ -5416,7 +7611,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "gasoline",
-        "kana": "ガソリン",
+        "kana": [
+            "ガ",
+            "ソ",
+            "リ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "ga",
@@ -5427,7 +7627,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "point",
-        "kana": "ポイント",
+        "kana": [
+            "ポ",
+            "イ",
+            "ン",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "po",
@@ -5438,7 +7643,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "business",
-        "kana": "ビジネス",
+        "kana": [
+            "ビ",
+            "ジ",
+            "ネ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "bi",
@@ -5449,7 +7659,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "design",
-        "kana": "デザイン",
+        "kana": [
+            "デ",
+            "ザ",
+            "イ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "de",
@@ -5460,7 +7675,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "mass communication",
-        "kana": "マスコミ",
+        "kana": [
+            "マ",
+            "ス",
+            "コ",
+            "ミ"
+        ],
         "type": "katakana",
         "romaji": [
             "ma",
@@ -5471,7 +7691,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "stress",
-        "kana": "ストレス",
+        "kana": [
+            "ス",
+            "ト",
+            "レ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "su",
@@ -5482,7 +7707,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "jump",
-        "kana": "ジャンプ",
+        "kana": [
+            "ジャ",
+            "ン",
+            "プ"
+        ],
         "type": "katakana",
         "romaji": [
             "ja",
@@ -5492,7 +7721,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "celebrity",
-        "kana": "タレント",
+        "kana": [
+            "タ",
+            "レ",
+            "ン",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "ta",
@@ -5503,7 +7737,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "change, exchange",
-        "kana": "チェンジ",
+        "kana": [
+            "チェ",
+            "ン",
+            "ジ"
+        ],
         "type": "katakana",
         "romaji": [
             "che",
@@ -5513,7 +7751,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "idol",
-        "kana": "アイドル",
+        "kana": [
+            "ア",
+            "イ",
+            "ド",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "a",
@@ -5524,7 +7767,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "catalogue",
-        "kana": "カタログ",
+        "kana": [
+            "カ",
+            "タ",
+            "ロ",
+            "グ"
+        ],
         "type": "katakana",
         "romaji": [
             "ka",
@@ -5535,7 +7783,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "karaoke",
-        "kana": "カラオケ",
+        "kana": [
+            "カ",
+            "ラ",
+            "オ",
+            "ケ"
+        ],
         "type": "katakana",
         "romaji": [
             "ka",
@@ -5546,7 +7799,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "air-conditioning, air conditioner",
-        "kana": "エアコン",
+        "kana": [
+            "エ",
+            "ア",
+            "コ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "e",
@@ -5557,7 +7815,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "cabbage",
-        "kana": "キャベツ",
+        "kana": [
+            "キャ",
+            "ベ",
+            "ツ"
+        ],
         "type": "katakana",
         "romaji": [
             "kya",
@@ -5567,7 +7829,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "waist",
-        "kana": "ウエスト",
+        "kana": [
+            "ウ",
+            "エ",
+            "ス",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "u",
@@ -5578,7 +7845,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "style, figure",
-        "kana": "スタイル",
+        "kana": [
+            "ス",
+            "タ",
+            "イ",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "su",
@@ -5589,7 +7861,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "balance",
-        "kana": "バランス",
+        "kana": [
+            "バ",
+            "ラ",
+            "ン",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "ba",
@@ -5600,7 +7877,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "table tennis",
-        "kana": "ピンポン",
+        "kana": [
+            "ピ",
+            "ン",
+            "ポ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "pi",
@@ -5611,7 +7893,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "slide",
-        "kana": "スライド",
+        "kana": [
+            "ス",
+            "ラ",
+            "イ",
+            "ド"
+        ],
         "type": "katakana",
         "romaji": [
             "su",
@@ -5622,7 +7909,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "print",
-        "kana": "プリント",
+        "kana": [
+            "プ",
+            "リ",
+            "ン",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "pu",
@@ -5633,7 +7925,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "antenna",
-        "kana": "アンテナ",
+        "kana": [
+            "ア",
+            "ン",
+            "テ",
+            "ナ"
+        ],
         "type": "katakana",
         "romaji": [
             "a",
@@ -5644,7 +7941,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "table lamp, desk lamp",
-        "kana": "スタンド",
+        "kana": [
+            "ス",
+            "タ",
+            "ン",
+            "ド"
+        ],
         "type": "katakana",
         "romaji": [
             "su",
@@ -5655,7 +7957,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "tunnel",
-        "kana": "トンネル",
+        "kana": [
+            "ト",
+            "ン",
+            "ネ",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "to",
@@ -5666,7 +7973,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "steering wheel",
-        "kana": "ハンドル",
+        "kana": [
+            "ハ",
+            "ン",
+            "ド",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "ha",
@@ -5677,7 +7989,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "experienced person, veteran",
-        "kana": "ベテラン",
+        "kana": [
+            "ベ",
+            "テ",
+            "ラ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "be",
@@ -5688,7 +8005,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "vitamin",
-        "kana": "ビタミン",
+        "kana": [
+            "ビ",
+            "タ",
+            "ミ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "bi",
@@ -5699,7 +8021,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "marathon",
-        "kana": "マラソン",
+        "kana": [
+            "マ",
+            "ラ",
+            "ソ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "ma",
@@ -5710,7 +8037,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "organ (music)",
-        "kana": "オルガン",
+        "kana": [
+            "オ",
+            "ル",
+            "ガ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "o",
@@ -5721,7 +8053,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "Christ",
-        "kana": "キリスト",
+        "kana": [
+            "キ",
+            "リ",
+            "ス",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "ki",
@@ -5732,7 +8069,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "pride",
-        "kana": "プライド",
+        "kana": [
+            "プ",
+            "ラ",
+            "イ",
+            "ド"
+        ],
         "type": "katakana",
         "romaji": [
             "pu",
@@ -5743,7 +8085,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "intelligent person",
-        "kana": "インテリ",
+        "kana": [
+            "イ",
+            "ン",
+            "テ",
+            "リ"
+        ],
         "type": "katakana",
         "romaji": [
             "i",
@@ -5754,7 +8101,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "pistol",
-        "kana": "ピストル",
+        "kana": [
+            "ピ",
+            "ス",
+            "ト",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "pi",
@@ -5765,7 +8117,11 @@ export const allWords: Word[] = [
     },
     {
         "definition": "disco",
-        "kana": "ディスコ",
+        "kana": [
+            "ディ",
+            "ス",
+            "コ"
+        ],
         "type": "katakana",
         "romaji": [
             "di",
@@ -5775,7 +8131,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "boring, dull",
-        "kana": "つまらない",
+        "kana": [
+            "つ",
+            "ま",
+            "ら",
+            "な",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -5787,7 +8149,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "talkative, chatty",
-        "kana": "おしゃべり",
+        "kana": [
+            "お",
+            "しゃ",
+            "べ",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -5798,7 +8165,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "chatter, idle talk",
-        "kana": "おしゃべり",
+        "kana": [
+            "お",
+            "しゃ",
+            "べ",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -5809,7 +8181,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "worthless, trifling",
-        "kana": "くだらない",
+        "kana": [
+            "く",
+            "だ",
+            "ら",
+            "な",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "ku",
@@ -5821,7 +8199,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "by any means, really",
-        "kana": "どうしても",
+        "kana": [
+            "ど",
+            "う",
+            "し",
+            "て",
+            "も"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -5833,7 +8217,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "as (much) as possible",
-        "kana": "できるだけ",
+        "kana": [
+            "で",
+            "き",
+            "る",
+            "だ",
+            "け"
+        ],
         "type": "hiragana",
         "romaji": [
             "de",
@@ -5845,7 +8235,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "forever",
-        "kana": "いつまでも",
+        "kana": [
+            "い",
+            "つ",
+            "ま",
+            "で",
+            "も"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -5857,7 +8253,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "untidy, sloppy",
-        "kana": "だらしない",
+        "kana": [
+            "だ",
+            "ら",
+            "し",
+            "な",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "da",
@@ -5869,7 +8271,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "for now, for the time being",
-        "kana": "とりあえず",
+        "kana": [
+            "と",
+            "り",
+            "あ",
+            "え",
+            "ず"
+        ],
         "type": "hiragana",
         "romaji": [
             "to",
@@ -5881,7 +8289,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "can't stand, unbearable",
-        "kana": "たまらない",
+        "kana": [
+            "た",
+            "ま",
+            "ら",
+            "な",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "ta",
@@ -5893,7 +8307,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "tremendous",
-        "kana": "ものすごい",
+        "kana": [
+            "も",
+            "の",
+            "す",
+            "ご",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "mo",
@@ -5905,7 +8325,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "noisy, loud",
-        "kana": "やかましい",
+        "kana": [
+            "や",
+            "か",
+            "ま",
+            "し",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "ya",
@@ -5917,7 +8343,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "automatically, by oneself",
-        "kana": "ひとりでに",
+        "kana": [
+            "ひ",
+            "と",
+            "り",
+            "で",
+            "に"
+        ],
         "type": "hiragana",
         "romaji": [
             "hi",
@@ -5929,7 +8361,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "get tired, be worn out",
-        "kana": "くたびれる",
+        "kana": [
+            "く",
+            "た",
+            "び",
+            "れ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ku",
@@ -5941,7 +8379,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "lewd, nasty",
-        "kana": "いやらしい",
+        "kana": [
+            "い",
+            "や",
+            "ら",
+            "し",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -5953,7 +8397,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "in advance (formal)",
-        "kana": "あらかじめ",
+        "kana": [
+            "あ",
+            "ら",
+            "か",
+            "じ",
+            "め"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -5965,7 +8415,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "thankful, grateful",
-        "kana": "ありがたい",
+        "kana": [
+            "あ",
+            "り",
+            "が",
+            "た",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -5977,7 +8433,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "as it is, without any change",
-        "kana": "ありのまま",
+        "kana": [
+            "あ",
+            "り",
+            "の",
+            "ま",
+            "ま"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -5989,7 +8451,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "program booklet",
-        "kana": "プログラム",
+        "kana": [
+            "プ",
+            "ロ",
+            "グ",
+            "ラ",
+            "ム"
+        ],
         "type": "katakana",
         "romaji": [
             "pu",
@@ -6001,7 +8469,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "potato",
-        "kana": "ジャガイモ",
+        "kana": [
+            "ジャ",
+            "ガ",
+            "イ",
+            "モ"
+        ],
         "type": "katakana",
         "romaji": [
             "ja",
@@ -6012,7 +8485,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "apartment, residential building",
-        "kana": "マンション",
+        "kana": [
+            "マ",
+            "ン",
+            "ショ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "ma",
@@ -6023,7 +8501,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "part-time job",
-        "kana": "アルバイト",
+        "kana": [
+            "ア",
+            "ル",
+            "バ",
+            "イ",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "a",
@@ -6035,7 +8519,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "restaurant",
-        "kana": "レストラン",
+        "kana": [
+            "レ",
+            "ス",
+            "ト",
+            "ラ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "re",
@@ -6047,7 +8537,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "present",
-        "kana": "プレゼント",
+        "kana": [
+            "プ",
+            "レ",
+            "ゼ",
+            "ン",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "pu",
@@ -6059,7 +8555,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "Christmas",
-        "kana": "クリスマス",
+        "kana": [
+            "ク",
+            "リ",
+            "ス",
+            "マ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "ku",
@@ -6071,7 +8573,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "violin",
-        "kana": "バイオリン",
+        "kana": [
+            "バ",
+            "イ",
+            "オ",
+            "リ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "ba",
@@ -6083,7 +8591,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "channel",
-        "kana": "チャンネル",
+        "kana": [
+            "チャ",
+            "ン",
+            "ネ",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "cha",
@@ -6094,7 +8607,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "business shirt, dress shirt",
-        "kana": "ワイシャツ",
+        "kana": [
+            "ワ",
+            "イ",
+            "シャ",
+            "ツ"
+        ],
         "type": "katakana",
         "romaji": [
             "wa",
@@ -6105,7 +8623,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "hiking",
-        "kana": "ハイキング",
+        "kana": [
+            "ハ",
+            "イ",
+            "キ",
+            "ン",
+            "グ"
+        ],
         "type": "katakana",
         "romaji": [
             "ha",
@@ -6117,7 +8641,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "earrings",
-        "kana": "イヤリング",
+        "kana": [
+            "イ",
+            "ヤ",
+            "リ",
+            "ン",
+            "グ"
+        ],
         "type": "katakana",
         "romaji": [
             "i",
@@ -6129,7 +8659,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "frying pan",
-        "kana": "フライパン",
+        "kana": [
+            "フ",
+            "ラ",
+            "イ",
+            "パ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "fu",
@@ -6141,7 +8677,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "contest, competition",
-        "kana": "コンテスト",
+        "kana": [
+            "コ",
+            "ン",
+            "テ",
+            "ス",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "ko",
@@ -6153,7 +8695,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "amateur",
-        "kana": "アマチュア",
+        "kana": [
+            "ア",
+            "マ",
+            "チュ",
+            "ア"
+        ],
         "type": "katakana",
         "romaji": [
             "a",
@@ -6164,7 +8711,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "photographer",
-        "kana": "カメラマン",
+        "kana": [
+            "カ",
+            "メ",
+            "ラ",
+            "マ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "ka",
@@ -6176,7 +8729,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "strike",
-        "kana": "ストライキ",
+        "kana": [
+            "ス",
+            "ト",
+            "ラ",
+            "イ",
+            "キ"
+        ],
         "type": "katakana",
         "romaji": [
             "su",
@@ -6188,7 +8747,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "X-rays",
-        "kana": "レントゲン",
+        "kana": [
+            "レ",
+            "ン",
+            "ト",
+            "ゲ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "re",
@@ -6200,7 +8765,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "advice",
-        "kana": "アドバイス",
+        "kana": [
+            "ア",
+            "ド",
+            "バ",
+            "イ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "a",
@@ -6212,7 +8783,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "request",
-        "kana": "リクエスト",
+        "kana": [
+            "リ",
+            "ク",
+            "エ",
+            "ス",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "ri",
@@ -6224,7 +8801,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "cancellation",
-        "kana": "キャンセル",
+        "kana": [
+            "キャ",
+            "ン",
+            "セ",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "kya",
@@ -6235,7 +8817,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "sunglasses",
-        "kana": "サングラス",
+        "kana": [
+            "サ",
+            "ン",
+            "グ",
+            "ラ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "sa",
@@ -6247,7 +8835,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "jogging",
-        "kana": "ジョギング",
+        "kana": [
+            "ジョ",
+            "ギ",
+            "ン",
+            "グ"
+        ],
         "type": "katakana",
         "romaji": [
             "jo",
@@ -6258,7 +8851,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "accent, stress",
-        "kana": "アクセント",
+        "kana": [
+            "ア",
+            "ク",
+            "セ",
+            "ン",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "a",
@@ -6270,7 +8869,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "outlet",
-        "kana": "コンセント",
+        "kana": [
+            "コ",
+            "ン",
+            "セ",
+            "ン",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "ko",
@@ -6282,7 +8887,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "stupid, absurd",
-        "kana": "バカらしい",
+        "kana": [
+            "バ",
+            "カ",
+            "ら",
+            "し",
+            "い"
+        ],
         "type": "katakana",
         "romaji": [
             "ba",
@@ -6294,7 +8905,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "ground, (playing or sports) field",
-        "kana": "グラウンド",
+        "kana": [
+            "グ",
+            "ラ",
+            "ウ",
+            "ン",
+            "ド"
+        ],
         "type": "katakana",
         "romaji": [
             "gu",
@@ -6306,7 +8923,13 @@ export const allWords: Word[] = [
     },
     {
         "definition": "cheating",
-        "kana": "カンニング",
+        "kana": [
+            "カ",
+            "ン",
+            "ニ",
+            "ン",
+            "グ"
+        ],
         "type": "katakana",
         "romaji": [
             "ka",
@@ -6318,7 +8941,14 @@ export const allWords: Word[] = [
     },
     {
         "definition": "treat, host (a meal)",
-        "kana": "ごちそうする",
+        "kana": [
+            "ご",
+            "ち",
+            "そ",
+            "う",
+            "す",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "go",
@@ -6331,7 +8961,14 @@ export const allWords: Word[] = [
     },
     {
         "definition": "unthinkable, outrageous",
-        "kana": "とんでもない",
+        "kana": [
+            "と",
+            "ん",
+            "で",
+            "も",
+            "な",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "to",
@@ -6344,7 +8981,14 @@ export const allWords: Word[] = [
     },
     {
         "definition": "possibly, perhaps",
-        "kana": "もしかしたら",
+        "kana": [
+            "も",
+            "し",
+            "か",
+            "し",
+            "た",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "mo",
@@ -6357,7 +9001,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "messy, crumpled",
-        "kana": "くしゃくしゃ",
+        "kana": [
+            "く",
+            "しゃ",
+            "く",
+            "しゃ",
+        ],
         "type": "hiragana",
         "romaji": [
             "ku",
@@ -6368,7 +9017,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "soaking wet, soaked",
-        "kana": "びしょびしょ",
+        "kana": [
+            "び",
+            "しょ",
+            "び",
+            "しょ",
+        ],
         "type": "hiragana",
         "romaji": [
             "bi",
@@ -6379,7 +9033,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "packed, crammed",
-        "kana": "ぎゅうぎゅう",
+        "kana": [
+            "ぎゅ",
+            "う",
+            "ぎゅ",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "gyu",
@@ -6390,7 +9049,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "look around",
-        "kana": "きょろきょろ",
+        "kana": [
+            "きょ",
+            "ろ",
+            "きょ",
+            "ろ"
+        ],
         "type": "hiragana",
         "romaji": [
             "kyo",
@@ -6401,7 +9065,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "many times, repeatedly",
-        "kana": "じゃんじゃん",
+        "kana": [
+            "じゃ",
+            "ん",
+            "じゃ",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "ja",
@@ -6412,7 +9081,14 @@ export const allWords: Word[] = [
     },
     {
         "definition": "all over, everywhere",
-        "kana": "あちらこちら",
+        "kana": [
+            "あ",
+            "ち",
+            "ら",
+            "こ",
+            "ち",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -6425,7 +9101,14 @@ export const allWords: Word[] = [
     },
     {
         "definition": "possibly, by any chance",
-        "kana": "もしかすると",
+        "kana": [
+            "も",
+            "し",
+            "か",
+            "す",
+            "る",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "mo",
@@ -6438,7 +9121,14 @@ export const allWords: Word[] = [
     },
     {
         "definition": "silly, absurd",
-        "kana": "ばかばかしい",
+        "kana": [
+            "ば",
+            "か",
+            "ば",
+            "か",
+            "し",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "ba",
@@ -6451,7 +9141,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "jump, hop",
-        "kana": "ぴょんぴょん",
+        "kana": [
+            "ぴょ",
+            "ん",
+            "ぴょ",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "pyo",
@@ -6462,7 +9157,14 @@ export const allWords: Word[] = [
     },
     {
         "definition": "corn",
-        "kana": "とうもろこし",
+        "kana": [
+            "と",
+            "う",
+            "も",
+            "ろ",
+            "こ",
+            "し"
+        ],
         "type": "hiragana",
         "romaji": [
             "to",
@@ -6475,7 +9177,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "splashing, washing",
-        "kana": "じゃぶじゃぶ",
+        "kana": [
+            "じゃ",
+            "ぶ",
+            "じゃ",
+            "ぶ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ja",
@@ -6486,7 +9193,12 @@ export const allWords: Word[] = [
     },
     {
         "definition": "butterfly",
-        "kana": "ちょうちょう",
+        "kana": [
+            "ちょ",
+            "う",
+            "ちょ",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "cho",
@@ -6497,7 +9209,14 @@ export const allWords: Word[] = [
     },
     {
         "definition": "diamond",
-        "kana": "ダイヤモンド",
+        "kana": [
+            "ダ",
+            "イ",
+            "ヤ",
+            "モ",
+            "ン",
+            "ド"
+        ],
         "type": "katakana",
         "romaji": [
             "da",
@@ -6510,7 +9229,14 @@ export const allWords: Word[] = [
     },
     {
         "definition": "misprint",
-        "kana": "ミスプリント",
+        "kana": [
+            "ミ",
+            "ス",
+            "プ",
+            "リ",
+            "ン",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "mi",
@@ -6523,7 +9249,14 @@ export const allWords: Word[] = [
     },
     {
         "definition": "aluminum",
-        "kana": "アルミニウム",
+        "kana": [
+            "ア",
+            "ル",
+            "ミ",
+            "ニ",
+            "ウ",
+            "ム"
+        ],
         "type": "katakana",
         "romaji": [
             "a",
@@ -6536,7 +9269,16 @@ export const allWords: Word[] = [
     },
     {
         "definition": "gas station",
-        "kana": "ガソリンスタンド",
+        "kana": [
+            "ガ",
+            "ソ",
+            "リ",
+            "ン",
+            "ス",
+            "タ",
+            "ン",
+            "ド"
+        ],
         "type": "katakana",
         "romaji": [
             "ga",
@@ -6548,13 +9290,16 @@ export const allWords: Word[] = [
             "n",
             "do"
         ]
-    },
+    }
 ];
 
 export const hiraganaWords: HiraganaWord[] = [
     {
         "definition": "this, this one",
-        "kana": "これ",
+        "kana": [
+            "こ",
+            "れ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ko",
@@ -6563,7 +9308,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "that, that one",
-        "kana": "それ",
+        "kana": [
+            "そ",
+            "れ"
+        ],
         "type": "hiragana",
         "romaji": [
             "so",
@@ -6572,7 +9320,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "when",
-        "kana": "いつ",
+        "kana": [
+            "い",
+            "つ"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -6581,7 +9332,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "do, make",
-        "kana": "する",
+        "kana": [
+            "す",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "su",
@@ -6590,7 +9344,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "become",
-        "kana": "なる",
+        "kana": [
+            "な",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "na",
@@ -6599,7 +9356,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "(not) yet, still",
-        "kana": "まだ",
+        "kana": [
+            "ま",
+            "だ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -6608,7 +9368,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "after",
-        "kana": "あと",
+        "kana": [
+            "あ",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -6617,7 +9380,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "so, that way",
-        "kana": "そう",
+        "kana": [
+            "そ",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "so",
@@ -6626,7 +9392,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "already, yet",
-        "kana": "もう",
+        "kana": [
+            "も",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "mo",
@@ -6635,7 +9404,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "often, well",
-        "kana": "よく",
+        "kana": [
+            "よ",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "yo",
@@ -6644,7 +9416,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "how, what",
-        "kana": "どう",
+        "kana": [
+            "ど",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -6653,7 +9428,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "like this, such",
-        "kana": "こう",
+        "kana": [
+            "こ",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "ko",
@@ -6662,7 +9440,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "where",
-        "kana": "どこ",
+        "kana": [
+            "ど",
+            "こ"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -6671,7 +9452,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "there",
-        "kana": "そこ",
+        "kana": [
+            "そ",
+            "こ"
+        ],
         "type": "hiragana",
         "romaji": [
             "so",
@@ -6680,7 +9464,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "what, which",
-        "kana": "どれ",
+        "kana": [
+            "ど",
+            "れ"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -6689,7 +9476,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "do, give",
-        "kana": "やる",
+        "kana": [
+            "や",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ya",
@@ -6698,7 +9488,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "be present, stay",
-        "kana": "いる",
+        "kana": [
+            "い",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -6707,7 +9500,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "here",
-        "kana": "ここ",
+        "kana": [
+            "こ",
+            "こ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ko",
@@ -6716,7 +9512,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "that (over there)",
-        "kana": "あれ",
+        "kana": [
+            "あ",
+            "れ"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -6725,7 +9524,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "side, vicinity",
-        "kana": "そば",
+        "kana": [
+            "そ",
+            "ば"
+        ],
         "type": "hiragana",
         "romaji": [
             "so",
@@ -6734,7 +9536,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "exist, there is",
-        "kana": "ある",
+        "kana": [
+            "あ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -6743,7 +9548,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "good (informal/spoken form)",
-        "kana": "いい",
+        "kana": [
+            "い",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -6752,7 +9560,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "sake, purpose",
-        "kana": "ため",
+        "kana": [
+            "た",
+            "め"
+        ],
         "type": "hiragana",
         "romaji": [
             "ta",
@@ -6761,7 +9572,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "last long, be durable",
-        "kana": "もつ",
+        "kana": [
+            "も",
+            "つ"
+        ],
         "type": "hiragana",
         "romaji": [
             "mo",
@@ -6770,7 +9584,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "give (to an inferior)",
-        "kana": "やる",
+        "kana": [
+            "や",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ya",
@@ -6779,7 +9596,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "another, again",
-        "kana": "もう",
+        "kana": [
+            "も",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "mo",
@@ -6788,7 +9608,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "first of all, to begin with",
-        "kana": "まず",
+        "kana": [
+            "ま",
+            "ず"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -6797,7 +9620,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "as is, still (in the current state)",
-        "kana": "まま",
+        "kana": [
+            "ま",
+            "ま"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -6806,7 +9632,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "free",
-        "kana": "ただ",
+        "kana": [
+            "た",
+            "だ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ta",
@@ -6815,7 +9644,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "be on, be switched on",
-        "kana": "つく",
+        "kana": [
+            "つ",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -6824,7 +9656,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "why",
-        "kana": "なぜ",
+        "kana": [
+            "な",
+            "ぜ"
+        ],
         "type": "hiragana",
         "romaji": [
             "na",
@@ -6833,7 +9668,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "comb",
-        "kana": "くし",
+        "kana": [
+            "く",
+            "し"
+        ],
         "type": "hiragana",
         "romaji": [
             "ku",
@@ -6842,7 +9680,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "if, in case of",
-        "kana": "もし",
+        "kana": [
+            "も",
+            "し"
+        ],
         "type": "hiragana",
         "romaji": [
             "mo",
@@ -6851,7 +9692,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "(one's own) uncle",
-        "kana": "おじ",
+        "kana": [
+            "お",
+            "じ"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -6860,7 +9704,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "(one's own) aunt",
-        "kana": "おば",
+        "kana": [
+            "お",
+            "ば"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -6869,7 +9716,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "again, also, or",
-        "kana": "また",
+        "kana": [
+            "ま",
+            "た"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -6878,7 +9728,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "pickpocket",
-        "kana": "すり",
+        "kana": [
+            "す",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "su",
@@ -6887,7 +9740,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "almost, nearly",
-        "kana": "ほぼ",
+        "kana": [
+            "ほ",
+            "ぼ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ho",
@@ -6896,7 +9752,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "foolish, stupid",
-        "kana": "ばか",
+        "kana": [
+            "ば",
+            "か"
+        ],
         "type": "hiragana",
         "romaji": [
             "ba",
@@ -6905,7 +9764,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "beard, moustache",
-        "kana": "ひげ",
+        "kana": [
+            "ひ",
+            "げ"
+        ],
         "type": "hiragana",
         "romaji": [
             "hi",
@@ -6914,7 +9776,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "trash",
-        "kana": "ごみ",
+        "kana": [
+            "ご",
+            "み"
+        ],
         "type": "hiragana",
         "romaji": [
             "go",
@@ -6923,7 +9788,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "well (interjection)",
-        "kana": "まあ",
+        "kana": [
+            "ま",
+            "あ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -6932,7 +9800,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "buckwheat noodles",
-        "kana": "そば",
+        "kana": [
+            "そ",
+            "ば"
+        ],
         "type": "hiragana",
         "romaji": [
             "so",
@@ -6941,7 +9812,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "glue, starch",
-        "kana": "のり",
+        "kana": [
+            "の",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "no",
@@ -6950,7 +9824,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "candy",
-        "kana": "あめ",
+        "kana": [
+            "あ",
+            "め"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -6959,7 +9836,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "rose",
-        "kana": "ばら",
+        "kana": [
+            "ば",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "ba",
@@ -6968,7 +9848,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "laces, string",
-        "kana": "ひも",
+        "kana": [
+            "ひ",
+            "も"
+        ],
         "type": "hiragana",
         "romaji": [
             "hi",
@@ -6977,7 +9860,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "scatter, sprinkle",
-        "kana": "まく",
+        "kana": [
+            "ま",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -6986,7 +9872,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "even more ~, even less ~",
-        "kana": "より",
+        "kana": [
+            "よ",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "yo",
@@ -6995,7 +9884,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "still, in addition",
-        "kana": "なお",
+        "kana": [
+            "な",
+            "お"
+        ],
         "type": "hiragana",
         "romaji": [
             "na",
@@ -7004,7 +9896,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "stingy, miser",
-        "kana": "けち",
+        "kana": [
+            "け",
+            "ち"
+        ],
         "type": "hiragana",
         "romaji": [
             "ke",
@@ -7013,7 +9908,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "scratch",
-        "kana": "かく",
+        "kana": [
+            "か",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "ka",
@@ -7022,7 +9920,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "inadvertently, carelessly",
-        "kana": "つい",
+        "kana": [
+            "つ",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -7031,7 +9932,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "ant",
-        "kana": "あり",
+        "kana": [
+            "あ",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -7040,7 +9944,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "peel (something)",
-        "kana": "むく",
+        "kana": [
+            "む",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "mu",
@@ -7049,7 +9956,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "get out of the way, step aside",
-        "kana": "どく",
+        "kana": [
+            "ど",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -7058,7 +9968,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "Welsh onion, green onion",
-        "kana": "ねぎ",
+        "kana": [
+            "ね",
+            "ぎ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ne",
@@ -7067,7 +9980,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "simply, merely",
-        "kana": "ただ",
+        "kana": [
+            "た",
+            "だ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ta",
@@ -7076,7 +9992,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "like that, that much",
-        "kana": "ああ",
+        "kana": [
+            "あ",
+            "あ"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -7085,7 +10004,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "be present, stay (humble)",
-        "kana": "おる",
+        "kana": [
+            "お",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -7094,7 +10016,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "look like, seem",
-        "kana": "よう",
+        "kana": [
+            "よ",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "yo",
@@ -7103,7 +10028,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "slightly, a little",
-        "kana": "やや",
+        "kana": [
+            "や",
+            "や"
+        ],
         "type": "hiragana",
         "romaji": [
             "ya",
@@ -7112,7 +10040,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "suddenly, unintentionally",
-        "kana": "ふと",
+        "kana": [
+            "ふ",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "fu",
@@ -7121,7 +10052,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "pour, fill, add",
-        "kana": "さす",
+        "kana": [
+            "さ",
+            "す"
+        ],
         "type": "hiragana",
         "romaji": [
             "sa",
@@ -7130,7 +10064,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "pour, serve (drinks)",
-        "kana": "つぐ",
+        "kana": [
+            "つ",
+            "ぐ"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -7139,7 +10076,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "well up",
-        "kana": "わく",
+        "kana": [
+            "わ",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "wa",
@@ -7148,7 +10088,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "sow (seeds)",
-        "kana": "まく",
+        "kana": [
+            "ま",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -7157,7 +10100,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "somewhere else, not one's own",
-        "kana": "よそ",
+        "kana": [
+            "よ",
+            "そ"
+        ],
         "type": "hiragana",
         "romaji": [
             "yo",
@@ -7166,7 +10112,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "rareness",
-        "kana": "まれ",
+        "kana": [
+            "ま",
+            "れ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -7175,7 +10124,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "row",
-        "kana": "こぐ",
+        "kana": [
+            "こ",
+            "ぐ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ko",
@@ -7184,7 +10136,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "collect, scoop up",
-        "kana": "くむ",
+        "kana": [
+            "く",
+            "む"
+        ],
         "type": "hiragana",
         "romaji": [
             "ku",
@@ -7193,7 +10148,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "waste, scrap",
-        "kana": "くず",
+        "kana": [
+            "く",
+            "ず"
+        ],
         "type": "hiragana",
         "romaji": [
             "ku",
@@ -7202,7 +10160,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "be caused by, be due to",
-        "kana": "よる",
+        "kana": [
+            "よ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "yo",
@@ -7211,7 +10172,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "wrinkle",
-        "kana": "しわ",
+        "kana": [
+            "し",
+            "わ"
+        ],
         "type": "hiragana",
         "romaji": [
             "shi",
@@ -7220,7 +10184,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "belly button",
-        "kana": "へそ",
+        "kana": [
+            "へ",
+            "そ"
+        ],
         "type": "hiragana",
         "romaji": [
             "he",
@@ -7229,7 +10196,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "make a fire (stove etc.)",
-        "kana": "たく",
+        "kana": [
+            "た",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "ta",
@@ -7238,7 +10208,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "cause, blame",
-        "kana": "せい",
+        "kana": [
+            "せ",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "se",
@@ -7247,7 +10220,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "better, preferable",
-        "kana": "まし",
+        "kana": [
+            "ま",
+            "し"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -7256,7 +10232,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "crack",
-        "kana": "ひび",
+        "kana": [
+            "ひ",
+            "び"
+        ],
         "type": "hiragana",
         "romaji": [
             "hi",
@@ -7265,7 +10244,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "no doubt, must",
-        "kana": "さぞ",
+        "kana": [
+            "さ",
+            "ぞ"
+        ],
         "type": "hiragana",
         "romaji": [
             "sa",
@@ -7274,7 +10256,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "be based on, depend on",
-        "kana": "よる",
+        "kana": [
+            "よ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "yo",
@@ -7283,7 +10268,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "run over",
-        "kana": "ひく",
+        "kana": [
+            "ひ",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "hi",
@@ -7292,7 +10280,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "seaweed",
-        "kana": "のり",
+        "kana": [
+            "の",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "no",
@@ -7301,7 +10292,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "octopus",
-        "kana": "たこ",
+        "kana": [
+            "た",
+            "こ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ta",
@@ -7310,7 +10304,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "a cut of cloth",
-        "kana": "きれ",
+        "kana": [
+            "き",
+            "れ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ki",
@@ -7319,7 +10316,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "fly (bug)",
-        "kana": "はえ",
+        "kana": [
+            "は",
+            "え"
+        ],
         "type": "hiragana",
         "romaji": [
             "ha",
@@ -7328,7 +10328,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "quit, stop",
-        "kana": "よす",
+        "kana": [
+            "よ",
+            "す"
+        ],
         "type": "hiragana",
         "romaji": [
             "yo",
@@ -7337,7 +10340,10 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "very small piece of dust, speck",
-        "kana": "ちり",
+        "kana": [
+            "ち",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "chi",
@@ -7346,7 +10352,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "please",
-        "kana": "どうぞ",
+        "kana": [
+            "ど",
+            "う",
+            "ぞ"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -7356,7 +10366,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "give, offer (colloquial)",
-        "kana": "あげる",
+        "kana": [
+            "あ",
+            "げ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -7366,7 +10380,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "be given",
-        "kana": "くれる",
+        "kana": [
+            "く",
+            "れ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ku",
@@ -7376,7 +10394,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "very (colloquial)",
-        "kana": "とても",
+        "kana": [
+            "と",
+            "て",
+            "も"
+        ],
         "type": "hiragana",
         "romaji": [
             "to",
@@ -7386,7 +10408,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "you",
-        "kana": "あなた",
+        "kana": [
+            "あ",
+            "な",
+            "た"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -7396,7 +10422,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "always (colloquial)",
-        "kana": "いつも",
+        "kana": [
+            "い",
+            "つ",
+            "も"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -7406,7 +10436,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "everybody (colloquial)",
-        "kana": "みんな",
+        "kana": [
+            "み",
+            "ん",
+            "な"
+        ],
         "type": "hiragana",
         "romaji": [
             "mi",
@@ -7416,7 +10450,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "can do, be good at",
-        "kana": "できる",
+        "kana": [
+            "で",
+            "き",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "de",
@@ -7426,7 +10464,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "which (polite)",
-        "kana": "どちら",
+        "kana": [
+            "ど",
+            "ち",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -7436,7 +10478,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "fairly, rather",
-        "kana": "かなり",
+        "kana": [
+            "か",
+            "な",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "ka",
@@ -7446,7 +10492,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "receive",
-        "kana": "もらう",
+        "kana": [
+            "も",
+            "ら",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "mo",
@@ -7456,7 +10506,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "switch on, turn on",
-        "kana": "つける",
+        "kana": [
+            "つ",
+            "け",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -7466,7 +10520,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "bad (taste), distasteful",
-        "kana": "まずい",
+        "kana": [
+            "ま",
+            "ず",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -7476,7 +10534,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "over there",
-        "kana": "あそこ",
+        "kana": [
+            "あ",
+            "そ",
+            "こ"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -7486,7 +10548,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "these",
-        "kana": "これら",
+        "kana": [
+            "こ",
+            "れ",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "ko",
@@ -7496,7 +10562,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "(not) much",
-        "kana": "あまり",
+        "kana": [
+            "あ",
+            "ま",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -7506,7 +10576,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "here, this way (polite)",
-        "kana": "こちら",
+        "kana": [
+            "こ",
+            "ち",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "ko",
@@ -7516,7 +10590,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "how many, how old",
-        "kana": "いくつ",
+        "kana": [
+            "い",
+            "く",
+            "つ"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -7526,7 +10604,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "cousin",
-        "kana": "いとこ",
+        "kana": [
+            "い",
+            "と",
+            "こ"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -7536,7 +10618,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "tepid, lukewarm",
-        "kana": "ぬるい",
+        "kana": [
+            "ぬ",
+            "る",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "nu",
@@ -7546,7 +10632,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "tobacco, cigarette",
-        "kana": "たばこ",
+        "kana": [
+            "た",
+            "ば",
+            "こ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ta",
@@ -7556,7 +10646,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "in short, that is to say",
-        "kana": "つまり",
+        "kana": [
+            "つ",
+            "ま",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -7566,7 +10660,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "kettle",
-        "kana": "やかん",
+        "kana": [
+            "や",
+            "か",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "ya",
@@ -7576,7 +10674,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "there, that way (polite)",
-        "kana": "そちら",
+        "kana": [
+            "そ",
+            "ち",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "so",
@@ -7586,7 +10688,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "over there, that way (polite)",
-        "kana": "あちら",
+        "kana": [
+            "あ",
+            "ち",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -7596,7 +10702,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "as expected",
-        "kana": "やはり",
+        "kana": [
+            "や",
+            "は",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "ya",
@@ -7606,7 +10716,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "how much (money)",
-        "kana": "いくら",
+        "kana": [
+            "い",
+            "く",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -7616,7 +10730,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "who (polite)",
-        "kana": "どなた",
+        "kana": [
+            "ど",
+            "な",
+            "た"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -7626,7 +10744,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "good at",
-        "kana": "うまい",
+        "kana": [
+            "う",
+            "ま",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "u",
@@ -7636,7 +10758,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "some time, some day",
-        "kana": "いつか",
+        "kana": [
+            "い",
+            "つ",
+            "か"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -7646,7 +10772,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "apple",
-        "kana": "りんご",
+        "kana": [
+            "り",
+            "ん",
+            "ご"
+        ],
         "type": "hiragana",
         "romaji": [
             "ri",
@@ -7656,7 +10786,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "tangerine",
-        "kana": "みかん",
+        "kana": [
+            "み",
+            "か",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "mi",
@@ -7666,7 +10800,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "delicious, tasty",
-        "kana": "うまい",
+        "kana": [
+            "う",
+            "ま",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "u",
@@ -7676,7 +10814,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "intention, purpose",
-        "kana": "つもり",
+        "kana": [
+            "つ",
+            "も",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -7686,7 +10828,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "occasionally, sometimes",
-        "kana": "たまに",
+        "kana": [
+            "た",
+            "ま",
+            "に"
+        ],
         "type": "hiragana",
         "romaji": [
             "ta",
@@ -7696,7 +10842,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "cruel, awful",
-        "kana": "ひどい",
+        "kana": [
+            "ひ",
+            "ど",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "hi",
@@ -7706,7 +10856,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "grapes",
-        "kana": "ぶどう",
+        "kana": [
+            "ぶ",
+            "ど",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "bu",
@@ -7716,7 +10870,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "close (eyes)",
-        "kana": "つぶる",
+        "kana": [
+            "つ",
+            "ぶ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -7726,7 +10884,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "tight, tough",
-        "kana": "きつい",
+        "kana": [
+            "き",
+            "つ",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "ki",
@@ -7736,7 +10898,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "dishes to go with the rice",
-        "kana": "おかず",
+        "kana": [
+            "お",
+            "か",
+            "ず"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -7746,7 +10912,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "Japanese wheat noodles",
-        "kana": "うどん",
+        "kana": [
+            "う",
+            "ど",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "u",
@@ -7756,7 +10926,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "how",
-        "kana": "いかが",
+        "kana": [
+            "い",
+            "か",
+            "が"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -7766,7 +10940,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "itchy",
-        "kana": "かゆい",
+        "kana": [
+            "か",
+            "ゆ",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "ka",
@@ -7776,7 +10954,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "watermelon",
-        "kana": "すいか",
+        "kana": [
+            "す",
+            "い",
+            "か"
+        ],
         "type": "hiragana",
         "romaji": [
             "su",
@@ -7786,7 +10968,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "strawberry",
-        "kana": "いちご",
+        "kana": [
+            "い",
+            "ち",
+            "ご"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -7796,7 +10982,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "yawn",
-        "kana": "あくび",
+        "kana": [
+            "あ",
+            "く",
+            "び"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -7806,7 +10996,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "snoring",
-        "kana": "いびき",
+        "kana": [
+            "い",
+            "び",
+            "き"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -7816,7 +11010,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "spill (something)",
-        "kana": "こぼす",
+        "kana": [
+            "こ",
+            "ぼ",
+            "す"
+        ],
         "type": "hiragana",
         "romaji": [
             "ko",
@@ -7826,7 +11024,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "rat, mouse",
-        "kana": "ねずみ",
+        "kana": [
+            "ね",
+            "ず",
+            "み"
+        ],
         "type": "hiragana",
         "romaji": [
             "ne",
@@ -7836,7 +11038,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "sane, reasonable",
-        "kana": "まとも",
+        "kana": [
+            "ま",
+            "と",
+            "も"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -7846,7 +11052,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "sometime later, eventually",
-        "kana": "いずれ",
+        "kana": [
+            "い",
+            "ず",
+            "れ"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -7856,7 +11066,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "anyway",
-        "kana": "どうせ",
+        "kana": [
+            "ど",
+            "う",
+            "せ"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -7866,7 +11080,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "on the way, to take the opportunity",
-        "kana": "ついで",
+        "kana": [
+            "つ",
+            "い",
+            "で"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -7876,7 +11094,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "on purpose",
-        "kana": "わざと",
+        "kana": [
+            "わ",
+            "ざ",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "wa",
@@ -7886,7 +11108,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "nibble, bite",
-        "kana": "かじる",
+        "kana": [
+            "か",
+            "じ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ka",
@@ -7896,7 +11122,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "eyelid",
-        "kana": "まぶた",
+        "kana": [
+            "ま",
+            "ぶ",
+            "た"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -7906,7 +11136,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "boil",
-        "kana": "ゆでる",
+        "kana": [
+            "ゆ",
+            "で",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "yu",
@@ -7916,7 +11150,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "afternoon snack, refreshment",
-        "kana": "おやつ",
+        "kana": [
+            "お",
+            "や",
+            "つ"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -7926,7 +11164,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "just as expected, true to one's reputation",
-        "kana": "さすが",
+        "kana": [
+            "さ",
+            "す",
+            "が"
+        ],
         "type": "hiragana",
         "romaji": [
             "sa",
@@ -7936,7 +11178,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "rabbit, hare",
-        "kana": "うさぎ",
+        "kana": [
+            "う",
+            "さ",
+            "ぎ"
+        ],
         "type": "hiragana",
         "romaji": [
             "u",
@@ -7946,7 +11192,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "gargling",
-        "kana": "うがい",
+        "kana": [
+            "う",
+            "が",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "u",
@@ -7956,7 +11206,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "lining up neatly",
-        "kana": "ずらり",
+        "kana": [
+            "ず",
+            "ら",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "zu",
@@ -7966,7 +11220,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "popular with men/women",
-        "kana": "もてる",
+        "kana": [
+            "も",
+            "て",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "mo",
@@ -7976,7 +11234,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "feel run-down, weary",
-        "kana": "だるい",
+        "kana": [
+            "だ",
+            "る",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "da",
@@ -7986,7 +11248,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "treat",
-        "kana": "おごる",
+        "kana": [
+            "お",
+            "ご",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -7996,7 +11262,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "heel",
-        "kana": "かかと",
+        "kana": [
+            "か",
+            "か",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "ka",
@@ -8006,7 +11276,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "meager, marginal",
-        "kana": "わずか",
+        "kana": [
+            "わ",
+            "ず",
+            "か"
+        ],
         "type": "hiragana",
         "romaji": [
             "wa",
@@ -8016,7 +11290,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "at last, at length",
-        "kana": "ついに",
+        "kana": [
+            "つ",
+            "い",
+            "に"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -8026,7 +11304,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "frog",
-        "kana": "かえる",
+        "kana": [
+            "か",
+            "え",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ka",
@@ -8036,7 +11318,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "go off track, go out of line",
-        "kana": "ずれる",
+        "kana": [
+            "ず",
+            "れ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "zu",
@@ -8046,7 +11332,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "glare, stare",
-        "kana": "にらむ",
+        "kana": [
+            "に",
+            "ら",
+            "む"
+        ],
         "type": "hiragana",
         "romaji": [
             "ni",
@@ -8056,7 +11346,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "Japanese horseradish",
-        "kana": "わさび",
+        "kana": [
+            "わ",
+            "さ",
+            "び"
+        ],
         "type": "hiragana",
         "romaji": [
             "wa",
@@ -8066,7 +11360,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "tuna",
-        "kana": "まぐろ",
+        "kana": [
+            "ま",
+            "ぐ",
+            "ろ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -8076,7 +11374,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "cunning, sneaky",
-        "kana": "ずるい",
+        "kana": [
+            "ず",
+            "る",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "zu",
@@ -8086,7 +11388,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "sorry",
-        "kana": "ごめん",
+        "kana": [
+            "ご",
+            "め",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "go",
@@ -8096,7 +11402,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "crow, raven",
-        "kana": "からす",
+        "kana": [
+            "か",
+            "ら",
+            "す"
+        ],
         "type": "hiragana",
         "romaji": [
             "ka",
@@ -8106,7 +11416,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "problematic, troublesome",
-        "kana": "まずい",
+        "kana": [
+            "ま",
+            "ず",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -8116,7 +11430,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "avoid, dodge",
-        "kana": "よける",
+        "kana": [
+            "よ",
+            "け",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "yo",
@@ -8126,7 +11444,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "catch (a cold, etc.), come down with",
-        "kana": "かかる",
+        "kana": [
+            "か",
+            "か",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ka",
@@ -8136,7 +11458,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "do (honorific)",
-        "kana": "なさる",
+        "kana": [
+            "な",
+            "さ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "na",
@@ -8146,7 +11472,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "for no special reason, somehow",
-        "kana": "どうも",
+        "kana": [
+            "ど",
+            "う",
+            "も"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -8156,7 +11486,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "just like",
-        "kana": "まるで",
+        "kana": [
+            "ま",
+            "る",
+            "で"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -8166,7 +11500,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "even if, granting that",
-        "kana": "たとえ",
+        "kana": [
+            "た",
+            "と",
+            "え"
+        ],
         "type": "hiragana",
         "romaji": [
             "ta",
@@ -8176,7 +11514,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "soon, before long",
-        "kana": "やがて",
+        "kana": [
+            "や",
+            "が",
+            "て"
+        ],
         "type": "hiragana",
         "romaji": [
             "ya",
@@ -8186,7 +11528,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "never (in a million years)",
-        "kana": "まさか",
+        "kana": [
+            "ま",
+            "さ",
+            "か"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -8196,7 +11542,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "be (all) together, become complete",
-        "kana": "そろう",
+        "kana": [
+            "そ",
+            "ろ",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "so",
@@ -8206,7 +11556,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "approximately, about",
-        "kana": "およそ",
+        "kana": [
+            "お",
+            "よ",
+            "そ"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -8216,7 +11570,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "at least",
-        "kana": "せめて",
+        "kana": [
+            "せ",
+            "め",
+            "て"
+        ],
         "type": "hiragana",
         "romaji": [
             "se",
@@ -8226,7 +11584,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "if, if ever",
-        "kana": "もしも",
+        "kana": [
+            "も",
+            "し",
+            "も"
+        ],
         "type": "hiragana",
         "romaji": [
             "mo",
@@ -8236,7 +11598,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "summary, conclusion",
-        "kana": "まとめ",
+        "kana": [
+            "ま",
+            "と",
+            "め"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -8246,7 +11612,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "please (used in difficult situations)",
-        "kana": "どうか",
+        "kana": [
+            "ど",
+            "う",
+            "か"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -8256,7 +11626,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "deceive, cheat",
-        "kana": "だます",
+        "kana": [
+            "だ",
+            "ま",
+            "す"
+        ],
         "type": "hiragana",
         "romaji": [
             "da",
@@ -8266,7 +11640,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "run over, hit",
-        "kana": "はねる",
+        "kana": [
+            "は",
+            "ね",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ha",
@@ -8276,7 +11654,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "no matter how much",
-        "kana": "いくら",
+        "kana": [
+            "い",
+            "く",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -8286,7 +11668,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "accumulate, store up",
-        "kana": "たまる",
+        "kana": [
+            "た",
+            "ま",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ta",
@@ -8296,7 +11682,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "come off, peel",
-        "kana": "むける",
+        "kana": [
+            "む",
+            "け",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "mu",
@@ -8306,7 +11696,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "put (something) into a hole, frame etc.",
-        "kana": "はめる",
+        "kana": [
+            "は",
+            "め",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ha",
@@ -8316,7 +11710,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "bark, roar",
-        "kana": "ほえる",
+        "kana": [
+            "ほ",
+            "え",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ho",
@@ -8326,7 +11724,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "twist, turn",
-        "kana": "ひねる",
+        "kana": [
+            "ひ",
+            "ね",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "hi",
@@ -8336,7 +11738,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "stroke, pat",
-        "kana": "なでる",
+        "kana": [
+            "な",
+            "で",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "na",
@@ -8346,7 +11752,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "collect and store (something)",
-        "kana": "ためる",
+        "kana": [
+            "た",
+            "め",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ta",
@@ -8356,7 +11766,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "tear, tear off",
-        "kana": "ちぎる",
+        "kana": [
+            "ち",
+            "ぎ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "chi",
@@ -8366,7 +11780,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "rust, get rusty",
-        "kana": "さびる",
+        "kana": [
+            "さ",
+            "び",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "sa",
@@ -8376,7 +11794,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "chest of drawers, wardrobe",
-        "kana": "たんす",
+        "kana": [
+            "た",
+            "ん",
+            "す"
+        ],
         "type": "hiragana",
         "romaji": [
             "ta",
@@ -8386,7 +11808,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "send, hand over",
-        "kana": "よこす",
+        "kana": [
+            "よ",
+            "こ",
+            "す"
+        ],
         "type": "hiragana",
         "romaji": [
             "yo",
@@ -8396,7 +11822,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "dust",
-        "kana": "ほこり",
+        "kana": [
+            "ほ",
+            "こ",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "ho",
@@ -8406,7 +11836,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "be sharp",
-        "kana": "とがる",
+        "kana": [
+            "と",
+            "が",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "to",
@@ -8416,7 +11850,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "carefree, happy-go-lucky",
-        "kana": "のんき",
+        "kana": [
+            "の",
+            "ん",
+            "き"
+        ],
         "type": "hiragana",
         "romaji": [
             "no",
@@ -8426,7 +11864,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "ladder",
-        "kana": "はしご",
+        "kana": [
+            "は",
+            "し",
+            "ご"
+        ],
         "type": "hiragana",
         "romaji": [
             "ha",
@@ -8436,7 +11878,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "broom",
-        "kana": "ほうき",
+        "kana": [
+            "ほ",
+            "う",
+            "き"
+        ],
         "type": "hiragana",
         "romaji": [
             "ho",
@@ -8446,7 +11892,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "dare, boldly",
-        "kana": "あえて",
+        "kana": [
+            "あ",
+            "え",
+            "て"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -8456,7 +11906,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "connect (someone, something)",
-        "kana": "つなぐ",
+        "kana": [
+            "つ",
+            "な",
+            "ぐ"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -8466,7 +11920,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "for no reason",
-        "kana": "なぜか",
+        "kana": [
+            "な",
+            "ぜ",
+            "か"
+        ],
         "type": "hiragana",
         "romaji": [
             "na",
@@ -8476,7 +11934,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "peep, look in",
-        "kana": "のぞく",
+        "kana": [
+            "の",
+            "ぞ",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "no",
@@ -8486,7 +11948,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "with the help of, thanks to",
-        "kana": "おかげ",
+        "kana": [
+            "お",
+            "か",
+            "げ"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -8496,7 +11962,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "snack on",
-        "kana": "つまむ",
+        "kana": [
+            "つ",
+            "ま",
+            "む"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -8506,7 +11976,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "turn over",
-        "kana": "めくる",
+        "kana": [
+            "め",
+            "く",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "me",
@@ -8516,7 +11990,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "bullying",
-        "kana": "いじめ",
+        "kana": [
+            "い",
+            "じ",
+            "め"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -8526,7 +12004,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "rather",
-        "kana": "むしろ",
+        "kana": [
+            "む",
+            "し",
+            "ろ"
+        ],
         "type": "hiragana",
         "romaji": [
             "mu",
@@ -8536,7 +12018,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "how, in what way",
-        "kana": "いかに",
+        "kana": [
+            "い",
+            "か",
+            "に"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -8546,7 +12032,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "already, no longer",
-        "kana": "もはや",
+        "kana": [
+            "も",
+            "は",
+            "や"
+        ],
         "type": "hiragana",
         "romaji": [
             "mo",
@@ -8556,7 +12046,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "much more",
-        "kana": "まして",
+        "kana": [
+            "ま",
+            "し",
+            "て"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -8566,7 +12060,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "by far, quite a lot",
-        "kana": "よほど",
+        "kana": [
+            "よ",
+            "ほ",
+            "ど"
+        ],
         "type": "hiragana",
         "romaji": [
             "yo",
@@ -8576,7 +12074,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "free gift, discount",
-        "kana": "おまけ",
+        "kana": [
+            "お",
+            "ま",
+            "け"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -8586,7 +12088,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "room, leeway",
-        "kana": "ゆとり",
+        "kana": [
+            "ゆ",
+            "と",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "yu",
@@ -8596,7 +12102,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "faraway, remote",
-        "kana": "はるか",
+        "kana": [
+            "は",
+            "る",
+            "か"
+        ],
         "type": "hiragana",
         "romaji": [
             "ha",
@@ -8606,7 +12116,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "hardly, barely",
-        "kana": "ろくに",
+        "kana": [
+            "ろ",
+            "く",
+            "に"
+        ],
         "type": "hiragana",
         "romaji": [
             "ro",
@@ -8616,7 +12130,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "tranquil, peaceful",
-        "kana": "のどか",
+        "kana": [
+            "の",
+            "ど",
+            "か"
+        ],
         "type": "hiragana",
         "romaji": [
             "no",
@@ -8626,7 +12144,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "table with an electric heater and a coverlet",
-        "kana": "こたつ",
+        "kana": [
+            "こ",
+            "た",
+            "つ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ko",
@@ -8636,7 +12158,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "brittle, fragile",
-        "kana": "もろい",
+        "kana": [
+            "も",
+            "ろ",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "mo",
@@ -8646,7 +12172,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "round paper fan",
-        "kana": "うちわ",
+        "kana": [
+            "う",
+            "ち",
+            "わ"
+        ],
         "type": "hiragana",
         "romaji": [
             "u",
@@ -8656,7 +12186,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "file, put something in (a folder, file etc.)",
-        "kana": "とじる",
+        "kana": [
+            "と",
+            "じ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "to",
@@ -8666,7 +12200,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "bud",
-        "kana": "つぼみ",
+        "kana": [
+            "つ",
+            "ぼ",
+            "み"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -8676,7 +12214,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "once, at one time in the past",
-        "kana": "かつて",
+        "kana": [
+            "か",
+            "つ",
+            "て"
+        ],
         "type": "hiragana",
         "romaji": [
             "ka",
@@ -8686,7 +12228,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "hang (something) with a string, etc.",
-        "kana": "つるす",
+        "kana": [
+            "つ",
+            "る",
+            "す"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -8696,7 +12242,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "sitting cross-legged",
-        "kana": "あぐら",
+        "kana": [
+            "あ",
+            "ぐ",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -8706,7 +12256,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "slow, sluggish",
-        "kana": "のろい",
+        "kana": [
+            "の",
+            "ろ",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "no",
@@ -8716,7 +12270,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "swallow",
-        "kana": "つばめ",
+        "kana": [
+            "つ",
+            "ば",
+            "め"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -8726,7 +12284,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "scale",
-        "kana": "はかり",
+        "kana": [
+            "は",
+            "か",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "ha",
@@ -8736,7 +12298,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "imitate, mimic",
-        "kana": "まねる",
+        "kana": [
+            "ま",
+            "ね",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -8746,7 +12312,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "profit",
-        "kana": "もうけ",
+        "kana": [
+            "も",
+            "う",
+            "け"
+        ],
         "type": "hiragana",
         "romaji": [
             "mo",
@@ -8756,7 +12326,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "move out of the way, avoid",
-        "kana": "よける",
+        "kana": [
+            "よ",
+            "け",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "yo",
@@ -8766,7 +12340,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "seal, stamp",
-        "kana": "はんこ",
+        "kana": [
+            "は",
+            "ん",
+            "こ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ha",
@@ -8776,7 +12354,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "chat, talk",
-        "kana": "しゃべる",
+        "kana": [
+            "しゃ",
+            "べ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "sha",
@@ -8786,7 +12368,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "how come",
-        "kana": "どうして",
+        "kana": [
+            "ど",
+            "う",
+            "し",
+            "て"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -8797,7 +12384,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "from now on, after this",
-        "kana": "これから",
+        "kana": [
+            "こ",
+            "れ",
+            "か",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "ko",
@@ -8808,7 +12400,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "almost, hardly",
-        "kana": "ほとんど",
+        "kana": [
+            "ほ",
+            "と",
+            "ん",
+            "ど"
+        ],
         "type": "hiragana",
         "romaji": [
             "ho",
@@ -8819,7 +12416,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "uncle",
-        "kana": "おじさん",
+        "kana": [
+            "お",
+            "じ",
+            "さ",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -8830,7 +12432,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "aunt",
-        "kana": "おばさん",
+        "kana": [
+            "お",
+            "ば",
+            "さ",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -8841,7 +12448,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "just, exactly",
-        "kana": "ちょうど",
+        "kana": [
+            "ちょ",
+            "う",
+            "ど"
+        ],
         "type": "hiragana",
         "romaji": [
             "cho",
@@ -8851,7 +12462,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "welcome (greeting)",
-        "kana": "ようこそ",
+        "kana": [
+            "よ",
+            "う",
+            "こ",
+            "そ"
+        ],
         "type": "hiragana",
         "romaji": [
             "yo",
@@ -8862,7 +12478,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "feast, treat",
-        "kana": "ごちそう",
+        "kana": [
+            "ご",
+            "ち",
+            "そ",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "go",
@@ -8873,7 +12494,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "I see, really",
-        "kana": "なるほど",
+        "kana": [
+            "な",
+            "る",
+            "ほ",
+            "ど"
+        ],
         "type": "hiragana",
         "romaji": [
             "na",
@@ -8884,7 +12510,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "as it is, just like that",
-        "kana": "そのまま",
+        "kana": [
+            "そ",
+            "の",
+            "ま",
+            "ま"
+        ],
         "type": "hiragana",
         "romaji": [
             "so",
@@ -8895,7 +12526,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "carrot",
-        "kana": "にんじん",
+        "kana": [
+            "に",
+            "ん",
+            "じ",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "ni",
@@ -8906,7 +12542,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "mischief, prank",
-        "kana": "いたずら",
+        "kana": [
+            "い",
+            "た",
+            "ず",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -8917,7 +12558,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "spill, overflow",
-        "kana": "こぼれる",
+        "kana": [
+            "こ",
+            "ぼ",
+            "れ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ko",
@@ -8928,7 +12574,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "all over, here and there",
-        "kana": "あちこち",
+        "kana": [
+            "あ",
+            "ち",
+            "こ",
+            "ち"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -8939,7 +12590,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "noisy, annoying",
-        "kana": "うるさい",
+        "kana": [
+            "う",
+            "る",
+            "さ",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "u",
@@ -8950,7 +12606,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "of course",
-        "kana": "もちろん",
+        "kana": [
+            "も",
+            "ち",
+            "ろ",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "mo",
@@ -8961,7 +12622,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "one's regards",
-        "kana": "よろしく",
+        "kana": [
+            "よ",
+            "ろ",
+            "し",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "yo",
@@ -8972,7 +12638,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "a lot, in large quantity",
-        "kana": "たくさん",
+        "kana": [
+            "た",
+            "く",
+            "さ",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "ta",
@@ -8983,7 +12654,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "OK, not bad",
-        "kana": "まあまあ",
+        "kana": [
+            "ま",
+            "あ",
+            "ま",
+            "あ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -8994,7 +12670,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "a little while, a while",
-        "kana": "しばらく",
+        "kana": [
+            "し",
+            "ば",
+            "ら",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "shi",
@@ -9005,7 +12686,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "knock, bang",
-        "kana": "どんどん",
+        "kana": [
+            "ど",
+            "ん",
+            "ど",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -9016,7 +12702,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "gather together, put in order",
-        "kana": "まとめる",
+        "kana": [
+            "ま",
+            "と",
+            "め",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -9027,7 +12718,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "rather, pretty",
-        "kana": "なかなか",
+        "kana": [
+            "な",
+            "か",
+            "な",
+            "か"
+        ],
         "type": "hiragana",
         "romaji": [
             "na",
@@ -9038,7 +12734,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "strange, peculiar",
-        "kana": "おかしい",
+        "kana": [
+            "お",
+            "か",
+            "し",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -9049,7 +12750,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "toy, plaything",
-        "kana": "おもちゃ",
+        "kana": [
+            "お",
+            "も",
+            "ちゃ"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -9059,7 +12764,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "some moments, a while",
-        "kana": "ひととき",
+        "kana": [
+            "ひ",
+            "と",
+            "と",
+            "き"
+        ],
         "type": "hiragana",
         "romaji": [
             "hi",
@@ -9070,7 +12780,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "not easily, not readily",
-        "kana": "なかなか",
+        "kana": [
+            "な",
+            "か",
+            "な",
+            "か"
+        ],
         "type": "hiragana",
         "romaji": [
             "na",
@@ -9081,7 +12796,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "so much",
-        "kana": "そんなに",
+        "kana": [
+            "そ",
+            "ん",
+            "な",
+            "に"
+        ],
         "type": "hiragana",
         "romaji": [
             "so",
@@ -9092,7 +12812,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "hit, bump into",
-        "kana": "ぶつかる",
+        "kana": [
+            "ぶ",
+            "つ",
+            "か",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "bu",
@@ -9103,7 +12828,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "at all times, any time",
-        "kana": "いつでも",
+        "kana": [
+            "い",
+            "つ",
+            "で",
+            "も"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -9114,7 +12844,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "funny, comical",
-        "kana": "おかしい",
+        "kana": [
+            "お",
+            "か",
+            "し",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -9125,7 +12860,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "soon, it's about time",
-        "kana": "そろそろ",
+        "kana": [
+            "そ",
+            "ろ",
+            "そ",
+            "ろ"
+        ],
         "type": "hiragana",
         "romaji": [
             "so",
@@ -9136,7 +12876,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "trendy, fashionable",
-        "kana": "おしゃれ",
+        "kana": [
+            "お",
+            "しゃ",
+            "れ"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -9146,7 +12890,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "that much, such",
-        "kana": "あんなに",
+        "kana": [
+            "あ",
+            "ん",
+            "な",
+            "に"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -9157,7 +12906,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "correctly, properly",
-        "kana": "ちゃんと",
+        "kana": [
+            "ちゃ",
+            "ん",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "cha",
@@ -9167,7 +12920,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "take it easy",
-        "kana": "のんびり",
+        "kana": [
+            "の",
+            "ん",
+            "び",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "no",
@@ -9178,7 +12936,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "in any case, anyway",
-        "kana": "とにかく",
+        "kana": [
+            "と",
+            "に",
+            "か",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "to",
@@ -9189,7 +12952,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "wander, walk around",
-        "kana": "ぶらぶら",
+        "kana": [
+            "ぶ",
+            "ら",
+            "ぶ",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "bu",
@@ -9200,7 +12968,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "sparkling, glittering",
-        "kana": "きらきら",
+        "kana": [
+            "き",
+            "ら",
+            "き",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "ki",
@@ -9211,7 +12984,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "this much, such",
-        "kana": "こんなに",
+        "kana": [
+            "こ",
+            "ん",
+            "な",
+            "に"
+        ],
         "type": "hiragana",
         "romaji": [
             "ko",
@@ -9222,7 +13000,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "feel excited, feel nervous",
-        "kana": "どきどき",
+        "kana": [
+            "ど",
+            "き",
+            "ど",
+            "き"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -9233,7 +13016,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "smilingly, keep smiling",
-        "kana": "にこにこ",
+        "kana": [
+            "に",
+            "こ",
+            "に",
+            "こ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ni",
@@ -9244,7 +13032,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "shaky, unstable",
-        "kana": "ぐらぐら",
+        "kana": [
+            "ぐ",
+            "ら",
+            "ぐ",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "gu",
@@ -9255,7 +13048,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "all right",
-        "kana": "よろしい",
+        "kana": [
+            "よ",
+            "ろ",
+            "し",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "yo",
@@ -9266,7 +13064,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "as...as possible, if possible",
-        "kana": "なるべく",
+        "kana": [
+            "な",
+            "る",
+            "べ",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "na",
@@ -9277,7 +13080,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "be dizzy, lightheaded",
-        "kana": "ふらふら",
+        "kana": [
+            "ふ",
+            "ら",
+            "ふ",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "fu",
@@ -9288,7 +13096,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "glaring, blinding",
-        "kana": "ぎらぎら",
+        "kana": [
+            "ぎ",
+            "ら",
+            "ぎ",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "gi",
@@ -9299,7 +13112,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "finally, any moment",
-        "kana": "いよいよ",
+        "kana": [
+            "い",
+            "よ",
+            "い",
+            "よ"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -9310,7 +13128,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "not crowded",
-        "kana": "がらがら",
+        "kana": [
+            "が",
+            "ら",
+            "が",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "ga",
@@ -9321,7 +13144,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "quickly, rapidly",
-        "kana": "どんどん",
+        "kana": [
+            "ど",
+            "ん",
+            "ど",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -9332,7 +13160,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "hungry, starving",
-        "kana": "ぺこぺこ",
+        "kana": [
+            "ぺ",
+            "こ",
+            "ぺ",
+            "こ"
+        ],
         "type": "hiragana",
         "romaji": [
             "pe",
@@ -9343,7 +13176,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "fluently",
-        "kana": "ぺらぺら",
+        "kana": [
+            "ぺ",
+            "ら",
+            "ぺ",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "pe",
@@ -9354,7 +13192,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "very thirsty, very dry",
-        "kana": "からから",
+        "kana": [
+            "か",
+            "ら",
+            "か",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "ka",
@@ -9365,7 +13208,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "(not) that much, (not) so much",
-        "kana": "あんまり",
+        "kana": [
+            "あ",
+            "ん",
+            "ま",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -9376,7 +13224,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "all of a sudden, suddenly",
-        "kana": "いきなり",
+        "kana": [
+            "い",
+            "き",
+            "な",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -9387,7 +13240,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "pouring",
-        "kana": "ざあざあ",
+        "kana": [
+            "ざ",
+            "あ",
+            "ざ",
+            "あ"
+        ],
         "type": "hiragana",
         "romaji": [
             "za",
@@ -9398,7 +13256,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "tapping, patting",
-        "kana": "とんとん",
+        "kana": [
+            "と",
+            "ん",
+            "と",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "to",
@@ -9409,7 +13272,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "this and that, one thing or another",
-        "kana": "あれこれ",
+        "kana": [
+            "あ",
+            "れ",
+            "こ",
+            "れ"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -9420,7 +13288,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "finally, in the end",
-        "kana": "とうとう",
+        "kana": [
+            "と",
+            "う",
+            "と",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "to",
@@ -9431,7 +13304,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "every time, about everything",
-        "kana": "いちいち",
+        "kana": [
+            "い",
+            "ち",
+            "い",
+            "ち"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -9442,7 +13320,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "persistent",
-        "kana": "しつこい",
+        "kana": [
+            "し",
+            "つ",
+            "こ",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "shi",
@@ -9453,7 +13336,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "vacantly, absent-mindedly",
-        "kana": "ぼんやり",
+        "kana": [
+            "ぼ",
+            "ん",
+            "や",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "bo",
@@ -9464,7 +13352,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "selfish",
-        "kana": "わがまま",
+        "kana": [
+            "わ",
+            "が",
+            "ま",
+            "ま"
+        ],
         "type": "hiragana",
         "romaji": [
             "wa",
@@ -9475,7 +13368,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "now now, well well",
-        "kana": "まあまあ",
+        "kana": [
+            "ま",
+            "あ",
+            "ま",
+            "あ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -9486,7 +13384,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "mess around, fool around",
-        "kana": "ふざける",
+        "kana": [
+            "ふ",
+            "ざ",
+            "け",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "fu",
@@ -9497,7 +13400,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "be stunned in disappointment, be amazed at",
-        "kana": "あきれる",
+        "kana": [
+            "あ",
+            "き",
+            "れ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -9508,7 +13416,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "unfortunately",
-        "kana": "あいにく",
+        "kana": [
+            "あ",
+            "い",
+            "に",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -9519,7 +13432,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "wander, hover around",
-        "kana": "うろうろ",
+        "kana": [
+            "う",
+            "ろ",
+            "う",
+            "ろ"
+        ],
         "type": "hiragana",
         "romaji": [
             "u",
@@ -9530,7 +13448,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "make fun of, tease",
-        "kana": "からかう",
+        "kana": [
+            "か",
+            "ら",
+            "か",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "ka",
@@ -9541,7 +13464,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "shiny, glittering",
-        "kana": "ぴかぴか",
+        "kana": [
+            "ぴ",
+            "か",
+            "ぴ",
+            "か"
+        ],
         "type": "hiragana",
         "romaji": [
             "pi",
@@ -9552,7 +13480,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "dazzling, glaring",
-        "kana": "まぶしい",
+        "kana": [
+            "ま",
+            "ぶ",
+            "し",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -9563,7 +13496,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "in a mutter, mumble",
-        "kana": "ぶつぶつ",
+        "kana": [
+            "ぶ",
+            "つ",
+            "ぶ",
+            "つ"
+        ],
         "type": "hiragana",
         "romaji": [
             "bu",
@@ -9574,7 +13512,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "sneeze",
-        "kana": "くしゃみ",
+        "kana": [
+            "く",
+            "しゃ",
+            "み"
+        ],
         "type": "hiragana",
         "romaji": [
             "ku",
@@ -9584,7 +13526,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "be irritated",
-        "kana": "いらいら",
+        "kana": [
+            "い",
+            "ら",
+            "い",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -9595,7 +13542,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "slowly, sluggishly",
-        "kana": "のろのろ",
+        "kana": [
+            "の",
+            "ろ",
+            "の",
+            "ろ"
+        ],
         "type": "hiragana",
         "romaji": [
             "no",
@@ -9606,7 +13558,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "go numb, fall asleep",
-        "kana": "しびれる",
+        "kana": [
+            "し",
+            "び",
+            "れ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "shi",
@@ -9617,7 +13574,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "squat down",
-        "kana": "しゃがむ",
+        "kana": [
+            "しゃ",
+            "が",
+            "む"
+        ],
         "type": "hiragana",
         "romaji": [
             "sha",
@@ -9627,7 +13588,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "going out of one's way to do something",
-        "kana": "わざわざ",
+        "kana": [
+            "わ",
+            "ざ",
+            "わ",
+            "ざ"
+        ],
         "type": "hiragana",
         "romaji": [
             "wa",
@@ -9638,7 +13604,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "feel excited, be thrilled",
-        "kana": "わくわく",
+        "kana": [
+            "わ",
+            "く",
+            "わ",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "wa",
@@ -9649,7 +13620,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "somehow",
-        "kana": "どうにか",
+        "kana": [
+            "ど",
+            "う",
+            "に",
+            "か"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -9660,7 +13636,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "bow, kowtow",
-        "kana": "ぺこぺこ",
+        "kana": [
+            "ぺ",
+            "こ",
+            "ぺ",
+            "こ"
+        ],
         "type": "hiragana",
         "romaji": [
             "pe",
@@ -9671,7 +13652,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "baggy, too big",
-        "kana": "だぶだぶ",
+        "kana": [
+            "だ",
+            "ぶ",
+            "だ",
+            "ぶ"
+        ],
         "type": "hiragana",
         "romaji": [
             "da",
@@ -9682,7 +13668,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "flatter",
-        "kana": "おだてる",
+        "kana": [
+            "お",
+            "だ",
+            "て",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -9693,7 +13684,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "look down, lower one's eyes",
-        "kana": "うつむく",
+        "kana": [
+            "う",
+            "つ",
+            "む",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "u",
@@ -9704,7 +13700,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "by chance, accidentally",
-        "kana": "たまたま",
+        "kana": [
+            "た",
+            "ま",
+            "た",
+            "ま"
+        ],
         "type": "hiragana",
         "romaji": [
             "ta",
@@ -9715,7 +13716,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "Mister, middle-aged man",
-        "kana": "おじさん",
+        "kana": [
+            "お",
+            "じ",
+            "さ",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -9726,7 +13732,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "middle-aged woman",
-        "kana": "おばさん",
+        "kana": [
+            "お",
+            "ば",
+            "さ",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -9737,7 +13748,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "at most, at best",
-        "kana": "せいぜい",
+        "kana": [
+            "せ",
+            "い",
+            "ぜ",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "se",
@@ -9748,7 +13764,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "rice ball",
-        "kana": "おにぎり",
+        "kana": [
+            "お",
+            "に",
+            "ぎ",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -9759,7 +13780,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "round and round",
-        "kana": "ぐるぐる",
+        "kana": [
+            "ぐ",
+            "る",
+            "ぐ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "gu",
@@ -9770,7 +13796,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "hold on to (something)",
-        "kana": "つかまる",
+        "kana": [
+            "つ",
+            "か",
+            "ま",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -9781,7 +13812,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "pumpkin",
-        "kana": "かぼちゃ",
+        "kana": [
+            "か",
+            "ぼ",
+            "ちゃ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ka",
@@ -9791,7 +13826,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "damp",
-        "kana": "じめじめ",
+        "kana": [
+            "じ",
+            "め",
+            "じ",
+            "め"
+        ],
         "type": "hiragana",
         "romaji": [
             "ji",
@@ -9802,7 +13842,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "staringly",
-        "kana": "じろじろ",
+        "kana": [
+            "じ",
+            "ろ",
+            "じ",
+            "ろ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ji",
@@ -9813,7 +13858,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "smooth, slippery",
-        "kana": "つるつる",
+        "kana": [
+            "つ",
+            "る",
+            "つ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -9824,7 +13874,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "pepper",
-        "kana": "こしょう",
+        "kana": [
+            "こ",
+            "しょ",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "ko",
@@ -9834,7 +13888,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "pork cutlet",
-        "kana": "とんかつ",
+        "kana": [
+            "と",
+            "ん",
+            "か",
+            "つ"
+        ],
         "type": "hiragana",
         "romaji": [
             "to",
@@ -9845,7 +13904,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "cucumber",
-        "kana": "きゅうり",
+        "kana": [
+            "きゅ",
+            "う",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "kyu",
@@ -9855,7 +13918,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "just in time, barely",
-        "kana": "ぎりぎり",
+        "kana": [
+            "ぎ",
+            "り",
+            "ぎ",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "gi",
@@ -9866,7 +13934,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "separately, discretely",
-        "kana": "ばらばら",
+        "kana": [
+            "ば",
+            "ら",
+            "ば",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "ba",
@@ -9877,7 +13950,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "shivering, trembling",
-        "kana": "ぶるぶる",
+        "kana": [
+            "ぶ",
+            "る",
+            "ぶ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "bu",
@@ -9888,7 +13966,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "smoothly, easily",
-        "kana": "すらすら",
+        "kana": [
+            "す",
+            "ら",
+            "す",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "su",
@@ -9899,7 +13982,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "(sleep) peacefully, soundly",
-        "kana": "すやすや",
+        "kana": [
+            "す",
+            "や",
+            "す",
+            "や"
+        ],
         "type": "hiragana",
         "romaji": [
             "su",
@@ -9910,7 +13998,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "with a rattling noise, unstable",
-        "kana": "がたがた",
+        "kana": [
+            "が",
+            "た",
+            "が",
+            "た"
+        ],
         "type": "hiragana",
         "romaji": [
             "ga",
@@ -9921,7 +14014,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "rough, gritty",
-        "kana": "ざらざら",
+        "kana": [
+            "ざ",
+            "ら",
+            "ざ",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "za",
@@ -9932,7 +14030,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "slimy",
-        "kana": "ぬるぬる",
+        "kana": [
+            "ぬ",
+            "る",
+            "ぬ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "nu",
@@ -9943,7 +14046,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "slowly, tardily",
-        "kana": "ぐずぐず",
+        "kana": [
+            "ぐ",
+            "ず",
+            "ぐ",
+            "ず"
+        ],
         "type": "hiragana",
         "romaji": [
             "gu",
@@ -9954,7 +14062,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "pleasantly warm",
-        "kana": "ぽかぽか",
+        "kana": [
+            "ぽ",
+            "か",
+            "ぽ",
+            "か"
+        ],
         "type": "hiragana",
         "romaji": [
             "po",
@@ -9965,7 +14078,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "exhausted",
-        "kana": "くたくた",
+        "kana": [
+            "く",
+            "た",
+            "く",
+            "た"
+        ],
         "type": "hiragana",
         "romaji": [
             "ku",
@@ -9976,7 +14094,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "smooth, silky",
-        "kana": "すべすべ",
+        "kana": [
+            "す",
+            "べ",
+            "す",
+            "べ"
+        ],
         "type": "hiragana",
         "romaji": [
             "su",
@@ -9987,7 +14110,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "grin to oneself",
-        "kana": "にやにや",
+        "kana": [
+            "に",
+            "や",
+            "に",
+            "や"
+        ],
         "type": "hiragana",
         "romaji": [
             "ni",
@@ -9998,7 +14126,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "excitedly",
-        "kana": "うきうき",
+        "kana": [
+            "う",
+            "き",
+            "う",
+            "き"
+        ],
         "type": "hiragana",
         "romaji": [
             "u",
@@ -10009,7 +14142,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "(laugh) out loud",
-        "kana": "げらげら",
+        "kana": [
+            "げ",
+            "ら",
+            "げ",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "ge",
@@ -10020,7 +14158,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "before long, sooner or later",
-        "kana": "そのうち",
+        "kana": [
+            "そ",
+            "の",
+            "う",
+            "ち"
+        ],
         "type": "hiragana",
         "romaji": [
             "so",
@@ -10031,7 +14174,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "unevenness, bumpiness",
-        "kana": "でこぼこ",
+        "kana": [
+            "で",
+            "こ",
+            "ぼ",
+            "こ"
+        ],
         "type": "hiragana",
         "romaji": [
             "de",
@@ -10042,7 +14190,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "stick together, sticky",
-        "kana": "べたべた",
+        "kana": [
+            "べ",
+            "た",
+            "べ",
+            "た"
+        ],
         "type": "hiragana",
         "romaji": [
             "be",
@@ -10053,7 +14206,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "suddenly, coming to a dead stop",
-        "kana": "ぴたりと",
+        "kana": [
+            "ぴ",
+            "た",
+            "り",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "pi",
@@ -10064,7 +14222,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "tickle",
-        "kana": "くすぐる",
+        "kana": [
+            "く",
+            "す",
+            "ぐ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ku",
@@ -10075,7 +14238,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "furiously angry, in a rage",
-        "kana": "かんかん",
+        "kana": [
+            "か",
+            "ん",
+            "か",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "ka",
@@ -10086,7 +14254,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "until now, until here",
-        "kana": "これまで",
+        "kana": [
+            "こ",
+            "れ",
+            "ま",
+            "で"
+        ],
         "type": "hiragana",
         "romaji": [
             "ko",
@@ -10097,7 +14270,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "razor",
-        "kana": "かみそり",
+        "kana": [
+            "か",
+            "み",
+            "そ",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "ka",
@@ -10108,7 +14286,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "sharply, significantly",
-        "kana": "がくんと",
+        "kana": [
+            "が",
+            "く",
+            "ん",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "ga",
@@ -10119,7 +14302,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "round and round, spin",
-        "kana": "くるくる",
+        "kana": [
+            "く",
+            "る",
+            "く",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ku",
@@ -10130,7 +14318,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "noisily, loudly",
-        "kana": "がやがや",
+        "kana": [
+            "が",
+            "や",
+            "が",
+            "や"
+        ],
         "type": "hiragana",
         "romaji": [
             "ga",
@@ -10141,7 +14334,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "each, respectively",
-        "kana": "それぞれ",
+        "kana": [
+            "そ",
+            "れ",
+            "ぞ",
+            "れ"
+        ],
         "type": "hiragana",
         "romaji": [
             "so",
@@ -10152,7 +14350,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "properly, neatly",
-        "kana": "きちんと",
+        "kana": [
+            "き",
+            "ち",
+            "ん",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "ki",
@@ -10163,7 +14366,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "at last, at long last",
-        "kana": "ようやく",
+        "kana": [
+            "よ",
+            "う",
+            "や",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "yo",
@@ -10174,7 +14382,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "so much, that much",
-        "kana": "それほど",
+        "kana": [
+            "そ",
+            "れ",
+            "ほ",
+            "ど"
+        ],
         "type": "hiragana",
         "romaji": [
             "so",
@@ -10185,7 +14398,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "increasingly, more and more",
-        "kana": "ますます",
+        "kana": [
+            "ま",
+            "す",
+            "ま",
+            "す"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -10196,7 +14414,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "at any rate, in any case",
-        "kana": "ともかく",
+        "kana": [
+            "と",
+            "も",
+            "か",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "to",
@@ -10207,7 +14430,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "often, frequently",
-        "kana": "しばしば",
+        "kana": [
+            "し",
+            "ば",
+            "し",
+            "ば"
+        ],
         "type": "hiragana",
         "romaji": [
             "shi",
@@ -10218,7 +14446,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "how much, how",
-        "kana": "どんなに",
+        "kana": [
+            "ど",
+            "ん",
+            "な",
+            "に"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -10229,7 +14462,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "come together, agree on",
-        "kana": "まとまる",
+        "kana": [
+            "ま",
+            "と",
+            "ま",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ma",
@@ -10240,7 +14478,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "originally, by nature (colloquial)",
-        "kana": "もともと",
+        "kana": [
+            "も",
+            "と",
+            "も",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "mo",
@@ -10251,7 +14494,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "make (something) uniform, put (something) in order",
-        "kana": "そろえる",
+        "kana": [
+            "そ",
+            "ろ",
+            "え",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "so",
@@ -10262,7 +14510,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "connection, relationship",
-        "kana": "つながり",
+        "kana": [
+            "つ",
+            "な",
+            "が",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -10273,7 +14526,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "hit, strike (forcefully)",
-        "kana": "ぶつける",
+        "kana": [
+            "ぶ",
+            "つ",
+            "け",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "bu",
@@ -10284,7 +14542,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "happy (occasions), festive",
-        "kana": "めでたい",
+        "kana": [
+            "め",
+            "で",
+            "た",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "me",
@@ -10295,7 +14558,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "in a moment, suddenly",
-        "kana": "たちまち",
+        "kana": [
+            "た",
+            "ち",
+            "ま",
+            "ち"
+        ],
         "type": "hiragana",
         "romaji": [
             "ta",
@@ -10306,7 +14574,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "playing dirty, mean",
-        "kana": "ひきょう",
+        "kana": [
+            "ひ",
+            "きょ",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "hi",
@@ -10316,7 +14588,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "proverb, (common) saying",
-        "kana": "ことわざ",
+        "kana": [
+            "こ",
+            "と",
+            "わ",
+            "ざ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ko",
@@ -10327,7 +14604,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "wrong, must not",
-        "kana": "いけない",
+        "kana": [
+            "い",
+            "け",
+            "な",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -10338,7 +14620,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "whisper",
-        "kana": "ささやく",
+        "kana": [
+            "さ",
+            "さ",
+            "や",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "sa",
@@ -10349,7 +14636,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "hometown, birthplace (colloquial)",
-        "kana": "ふるさと",
+        "kana": [
+            "ふ",
+            "る",
+            "さ",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "fu",
@@ -10360,7 +14652,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "soft and fluffy",
-        "kana": "ふわふわ",
+        "kana": [
+            "ふ",
+            "わ",
+            "ふ",
+            "わ"
+        ],
         "type": "hiragana",
         "romaji": [
             "fu",
@@ -10371,7 +14668,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "stumble, trip on",
-        "kana": "つまずく",
+        "kana": [
+            "つ",
+            "ま",
+            "ず",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -10382,7 +14684,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "frequently, persistently",
-        "kana": "やたらに",
+        "kana": [
+            "や",
+            "た",
+            "ら",
+            "に"
+        ],
         "type": "hiragana",
         "romaji": [
             "ya",
@@ -10393,7 +14700,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "each, individually",
-        "kana": "めいめい",
+        "kana": [
+            "め",
+            "い",
+            "め",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "me",
@@ -10404,7 +14716,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "be torn off, come off",
-        "kana": "ちぎれる",
+        "kana": [
+            "ち",
+            "ぎ",
+            "れ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "chi",
@@ -10415,7 +14732,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "candle",
-        "kana": "ろうそく",
+        "kana": [
+            "ろ",
+            "う",
+            "そ",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "ro",
@@ -10426,7 +14748,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "rapidly, at once",
-        "kana": "にわかに",
+        "kana": [
+            "に",
+            "わ",
+            "か",
+            "に"
+        ],
         "type": "hiragana",
         "romaji": [
             "ni",
@@ -10437,7 +14764,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "smiling, beaming (face)",
-        "kana": "にこやか",
+        "kana": [
+            "に",
+            "こ",
+            "や",
+            "か"
+        ],
         "type": "hiragana",
         "romaji": [
             "ni",
@@ -10448,7 +14780,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "reluctantly, grudgingly",
-        "kana": "いやいや",
+        "kana": [
+            "い",
+            "や",
+            "い",
+            "や"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -10459,7 +14796,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "truly, deeply",
-        "kana": "つくづく",
+        "kana": [
+            "つ",
+            "く",
+            "づ",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -10470,7 +14812,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "deceive, gloss over",
-        "kana": "ごまかす",
+        "kana": [
+            "ご",
+            "ま",
+            "か",
+            "す"
+        ],
         "type": "hiragana",
         "romaji": [
             "go",
@@ -10481,7 +14828,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "bring about, lead to",
-        "kana": "もたらす",
+        "kana": [
+            "も",
+            "た",
+            "ら",
+            "す"
+        ],
         "type": "hiragana",
         "romaji": [
             "mo",
@@ -10492,7 +14844,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "looks like, apparently",
-        "kana": "どうやら",
+        "kana": [
+            "ど",
+            "う",
+            "や",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -10503,7 +14860,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "end",
-        "kana": "おしまい",
+        "kana": [
+            "お",
+            "し",
+            "ま",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -10514,7 +14876,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "indeed, as if",
-        "kana": "いかにも",
+        "kana": [
+            "い",
+            "か",
+            "に",
+            "も"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -10525,7 +14892,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "mutter, murmur",
-        "kana": "つぶやく",
+        "kana": [
+            "つ",
+            "ぶ",
+            "や",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -10536,7 +14908,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "be connected, be linked",
-        "kana": "つながる",
+        "kana": [
+            "つ",
+            "な",
+            "が",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -10547,7 +14924,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "bustle, be lively",
-        "kana": "にぎわう",
+        "kana": [
+            "に",
+            "ぎ",
+            "わ",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "ni",
@@ -10558,7 +14940,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "tower, rise high",
-        "kana": "そびえる",
+        "kana": [
+            "そ",
+            "び",
+            "え",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "so",
@@ -10569,7 +14956,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "for the time being, for a while",
-        "kana": "ひとまず",
+        "kana": [
+            "ひ",
+            "と",
+            "ま",
+            "ず"
+        ],
         "type": "hiragana",
         "romaji": [
             "hi",
@@ -10580,7 +14972,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "rumble",
-        "kana": "ごろごろ",
+        "kana": [
+            "ご",
+            "ろ",
+            "ご",
+            "ろ"
+        ],
         "type": "hiragana",
         "romaji": [
             "go",
@@ -10591,7 +14988,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "lightly fluttering, floating",
-        "kana": "ひらひら",
+        "kana": [
+            "ひ",
+            "ら",
+            "ひ",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "hi",
@@ -10602,7 +15004,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "gargle",
-        "kana": "がらがら",
+        "kana": [
+            "が",
+            "ら",
+            "が",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "ga",
@@ -10613,7 +15020,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "hard, solid",
-        "kana": "かちかち",
+        "kana": [
+            "か",
+            "ち",
+            "か",
+            "ち"
+        ],
         "type": "hiragana",
         "romaji": [
             "ka",
@@ -10624,7 +15036,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "plot, storyline",
-        "kana": "あらすじ",
+        "kana": [
+            "あ",
+            "ら",
+            "す",
+            "じ"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -10635,7 +15052,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "rustle",
-        "kana": "がさがさ",
+        "kana": [
+            "が",
+            "さ",
+            "が",
+            "さ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ga",
@@ -10646,7 +15068,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "guzzling, gulping",
-        "kana": "がぶがぶ",
+        "kana": [
+            "が",
+            "ぶ",
+            "が",
+            "ぶ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ga",
@@ -10657,7 +15084,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "sparklingly, glittering",
-        "kana": "きらりと",
+        "kana": [
+            "き",
+            "ら",
+            "り",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "ki",
@@ -10668,7 +15100,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "in one gulp",
-        "kana": "ごくんと",
+        "kana": [
+            "ご",
+            "く",
+            "ん",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "go",
@@ -10679,7 +15116,11 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "(jump or hop) lightly",
-        "kana": "ぴょんと",
+        "kana": [
+            "ぴょ",
+            "ん",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "pyo",
@@ -10689,7 +15130,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "in a fluttering motion",
-        "kana": "ひらりと",
+        "kana": [
+            "ひ",
+            "ら",
+            "り",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "hi",
@@ -10700,7 +15146,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "soon",
-        "kana": "もうじき",
+        "kana": [
+            "も",
+            "う",
+            "じ",
+            "き"
+        ],
         "type": "hiragana",
         "romaji": [
             "mo",
@@ -10711,7 +15162,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "repeatedly, constantly",
-        "kana": "しきりに",
+        "kana": [
+            "し",
+            "き",
+            "り",
+            "に"
+        ],
         "type": "hiragana",
         "romaji": [
             "shi",
@@ -10722,7 +15178,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "rough, rude",
-        "kana": "ぞんざい",
+        "kana": [
+            "ぞ",
+            "ん",
+            "ざ",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "zo",
@@ -10733,7 +15194,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "(laugh) loudly",
-        "kana": "からから",
+        "kana": [
+            "か",
+            "ら",
+            "か",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "ka",
@@ -10744,7 +15210,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "grandmother, old lady",
-        "kana": "ばあさん",
+        "kana": [
+            "ば",
+            "あ",
+            "さ",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "ba",
@@ -10755,7 +15226,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "flimsy, thin",
-        "kana": "ぺらぺら",
+        "kana": [
+            "ぺ",
+            "ら",
+            "ぺ",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "pe",
@@ -10766,7 +15242,13 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "boring, dull",
-        "kana": "つまらない",
+        "kana": [
+            "つ",
+            "ま",
+            "ら",
+            "な",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "tsu",
@@ -10778,7 +15260,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "talkative, chatty",
-        "kana": "おしゃべり",
+        "kana": [
+            "お",
+            "しゃ",
+            "べ",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -10789,7 +15276,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "chatter, idle talk",
-        "kana": "おしゃべり",
+        "kana": [
+            "お",
+            "しゃ",
+            "べ",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "o",
@@ -10800,7 +15292,13 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "worthless, trifling",
-        "kana": "くだらない",
+        "kana": [
+            "く",
+            "だ",
+            "ら",
+            "な",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "ku",
@@ -10812,7 +15310,13 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "by any means, really",
-        "kana": "どうしても",
+        "kana": [
+            "ど",
+            "う",
+            "し",
+            "て",
+            "も"
+        ],
         "type": "hiragana",
         "romaji": [
             "do",
@@ -10824,7 +15328,13 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "as (much) as possible",
-        "kana": "できるだけ",
+        "kana": [
+            "で",
+            "き",
+            "る",
+            "だ",
+            "け"
+        ],
         "type": "hiragana",
         "romaji": [
             "de",
@@ -10836,7 +15346,13 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "forever",
-        "kana": "いつまでも",
+        "kana": [
+            "い",
+            "つ",
+            "ま",
+            "で",
+            "も"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -10848,7 +15364,13 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "untidy, sloppy",
-        "kana": "だらしない",
+        "kana": [
+            "だ",
+            "ら",
+            "し",
+            "な",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "da",
@@ -10860,7 +15382,13 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "for now, for the time being",
-        "kana": "とりあえず",
+        "kana": [
+            "と",
+            "り",
+            "あ",
+            "え",
+            "ず"
+        ],
         "type": "hiragana",
         "romaji": [
             "to",
@@ -10872,7 +15400,13 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "can't stand, unbearable",
-        "kana": "たまらない",
+        "kana": [
+            "た",
+            "ま",
+            "ら",
+            "な",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "ta",
@@ -10884,7 +15418,13 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "tremendous",
-        "kana": "ものすごい",
+        "kana": [
+            "も",
+            "の",
+            "す",
+            "ご",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "mo",
@@ -10896,7 +15436,13 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "noisy, loud",
-        "kana": "やかましい",
+        "kana": [
+            "や",
+            "か",
+            "ま",
+            "し",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "ya",
@@ -10908,7 +15454,13 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "automatically, by oneself",
-        "kana": "ひとりでに",
+        "kana": [
+            "ひ",
+            "と",
+            "り",
+            "で",
+            "に"
+        ],
         "type": "hiragana",
         "romaji": [
             "hi",
@@ -10920,7 +15472,13 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "get tired, be worn out",
-        "kana": "くたびれる",
+        "kana": [
+            "く",
+            "た",
+            "び",
+            "れ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "ku",
@@ -10932,7 +15490,13 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "lewd, nasty",
-        "kana": "いやらしい",
+        "kana": [
+            "い",
+            "や",
+            "ら",
+            "し",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "i",
@@ -10944,7 +15508,13 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "in advance (formal)",
-        "kana": "あらかじめ",
+        "kana": [
+            "あ",
+            "ら",
+            "か",
+            "じ",
+            "め"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -10956,7 +15526,13 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "thankful, grateful",
-        "kana": "ありがたい",
+        "kana": [
+            "あ",
+            "り",
+            "が",
+            "た",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -10968,7 +15544,13 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "as it is, without any change",
-        "kana": "ありのまま",
+        "kana": [
+            "あ",
+            "り",
+            "の",
+            "ま",
+            "ま"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -10980,7 +15562,14 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "treat, host (a meal)",
-        "kana": "ごちそうする",
+        "kana": [
+            "ご",
+            "ち",
+            "そ",
+            "う",
+            "す",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "go",
@@ -10993,7 +15582,14 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "unthinkable, outrageous",
-        "kana": "とんでもない",
+        "kana": [
+            "と",
+            "ん",
+            "で",
+            "も",
+            "な",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "to",
@@ -11006,7 +15602,14 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "possibly, perhaps",
-        "kana": "もしかしたら",
+        "kana": [
+            "も",
+            "し",
+            "か",
+            "し",
+            "た",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "mo",
@@ -11019,7 +15622,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "messy, crumpled",
-        "kana": "くしゃくしゃ",
+        "kana": [
+            "く",
+            "しゃ",
+            "く",
+            "しゃ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ku",
@@ -11030,7 +15638,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "soaking wet, soaked",
-        "kana": "びしょびしょ",
+        "kana": [
+            "び",
+            "しょ",
+            "び",
+            "しょ"
+        ],
         "type": "hiragana",
         "romaji": [
             "bi",
@@ -11041,7 +15654,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "packed, crammed",
-        "kana": "ぎゅうぎゅう",
+        "kana": [
+            "ぎゅ",
+            "う",
+            "ぎゅ",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "gyu",
@@ -11052,7 +15670,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "look around",
-        "kana": "きょろきょろ",
+        "kana": [
+            "きょ",
+            "ろ",
+            "きょ",
+            "ろ"
+        ],
         "type": "hiragana",
         "romaji": [
             "kyo",
@@ -11063,7 +15686,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "many times, repeatedly",
-        "kana": "じゃんじゃん",
+        "kana": [
+            "じゃ",
+            "ん",
+            "じゃ",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "ja",
@@ -11074,7 +15702,14 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "all over, everywhere",
-        "kana": "あちらこちら",
+        "kana": [
+            "あ",
+            "ち",
+            "ら",
+            "こ",
+            "ち",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "a",
@@ -11087,7 +15722,14 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "possibly, by any chance",
-        "kana": "もしかすると",
+        "kana": [
+            "も",
+            "し",
+            "か",
+            "す",
+            "る",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "mo",
@@ -11100,7 +15742,14 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "silly, absurd",
-        "kana": "ばかばかしい",
+        "kana": [
+            "ば",
+            "か",
+            "ば",
+            "か",
+            "し",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "ba",
@@ -11113,7 +15762,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "jump, hop",
-        "kana": "ぴょんぴょん",
+        "kana": [
+            "ぴょ",
+            "ん",
+            "ぴょ",
+            "ん"
+        ],
         "type": "hiragana",
         "romaji": [
             "pyo",
@@ -11124,7 +15778,14 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "corn",
-        "kana": "とうもろこし",
+        "kana": [
+            "と",
+            "う",
+            "も",
+            "ろ",
+            "こ",
+            "し"
+        ],
         "type": "hiragana",
         "romaji": [
             "to",
@@ -11137,7 +15798,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "splashing, washing",
-        "kana": "じゃぶじゃぶ",
+        "kana": [
+            "じゃ",
+            "ぶ",
+            "じゃ",
+            "ぶ"
+        ],
         "type": "hiragana",
         "romaji": [
             "ja",
@@ -11148,7 +15814,12 @@ export const hiraganaWords: HiraganaWord[] = [
     },
     {
         "definition": "butterfly",
-        "kana": "ちょうちょう",
+        "kana": [
+            "ちょ",
+            "う",
+            "ちょ",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "cho",
@@ -11162,7 +15833,10 @@ export const hiraganaWords: HiraganaWord[] = [
 export const katakanaWords: KatakanaWord[] = [
     {
         "definition": "door",
-        "kana": "ドア",
+        "kana": [
+            "ド",
+            "ア"
+        ],
         "type": "katakana",
         "romaji": [
             "do",
@@ -11171,7 +15845,10 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "dollar",
-        "kana": "ドル",
+        "kana": [
+            "ド",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "do",
@@ -11180,7 +15857,10 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "bus",
-        "kana": "バス",
+        "kana": [
+            "バ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "ba",
@@ -11189,7 +15869,10 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "eggplant",
-        "kana": "ナス",
+        "kana": [
+            "ナ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "na",
@@ -11198,7 +15881,10 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "gas",
-        "kana": "ガス",
+        "kana": [
+            "ガ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "ga",
@@ -11207,7 +15893,10 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "building",
-        "kana": "ビル",
+        "kana": [
+            "ビ",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "bi",
@@ -11216,7 +15905,10 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "memo, note",
-        "kana": "メモ",
+        "kana": [
+            "メ",
+            "モ"
+        ],
         "type": "katakana",
         "romaji": [
             "me",
@@ -11225,7 +15917,10 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "bread",
-        "kana": "パン",
+        "kana": [
+            "パ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "pa",
@@ -11234,7 +15929,10 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "visa",
-        "kana": "ビザ",
+        "kana": [
+            "ビ",
+            "ザ"
+        ],
         "type": "katakana",
         "romaji": [
             "bi",
@@ -11243,7 +15941,10 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "elastic, rubber",
-        "kana": "ゴム",
+        "kana": [
+            "ゴ",
+            "ム"
+        ],
         "type": "katakana",
         "romaji": [
             "go",
@@ -11252,7 +15953,10 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "pen",
-        "kana": "ペン",
+        "kana": [
+            "ペ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "pe",
@@ -11261,7 +15965,10 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "zero, none",
-        "kana": "ゼロ",
+        "kana": [
+            "ゼ",
+            "ロ"
+        ],
         "type": "katakana",
         "romaji": [
             "ze",
@@ -11270,7 +15977,10 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "bell",
-        "kana": "ベル",
+        "kana": [
+            "ベ",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "be",
@@ -11279,7 +15989,10 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "ham",
-        "kana": "ハム",
+        "kana": [
+            "ハ",
+            "ム"
+        ],
         "type": "katakana",
         "romaji": [
             "ha",
@@ -11288,7 +16001,10 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "kiss",
-        "kana": "キス",
+        "kana": [
+            "キ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "ki",
@@ -11297,7 +16013,10 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "cross, x-mark (on errors, mistakes etc.)",
-        "kana": "バツ",
+        "kana": [
+            "バ",
+            "ツ"
+        ],
         "type": "katakana",
         "romaji": [
             "ba",
@@ -11306,7 +16025,10 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "squid",
-        "kana": "イカ",
+        "kana": [
+            "イ",
+            "カ"
+        ],
         "type": "katakana",
         "romaji": [
             "i",
@@ -11315,7 +16037,10 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "professional",
-        "kana": "プロ",
+        "kana": [
+            "プ",
+            "ロ"
+        ],
         "type": "katakana",
         "romaji": [
             "pu",
@@ -11324,7 +16049,10 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "dam",
-        "kana": "ダム",
+        "kana": [
+            "ダ",
+            "ム"
+        ],
         "type": "katakana",
         "romaji": [
             "da",
@@ -11333,7 +16061,10 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "hairpin, pin",
-        "kana": "ピン",
+        "kana": [
+            "ピ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "pi",
@@ -11342,7 +16073,10 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "demonstration",
-        "kana": "デモ",
+        "kana": [
+            "デ",
+            "モ"
+        ],
         "type": "katakana",
         "romaji": [
             "de",
@@ -11351,7 +16085,10 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "mistake",
-        "kana": "ミス",
+        "kana": [
+            "ミ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "mi",
@@ -11360,7 +16097,10 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "mom",
-        "kana": "ママ",
+        "kana": [
+            "マ",
+            "マ"
+        ],
         "type": "katakana",
         "romaji": [
             "ma",
@@ -11369,7 +16109,10 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "dad",
-        "kana": "パパ",
+        "kana": [
+            "パ",
+            "パ"
+        ],
         "type": "katakana",
         "romaji": [
             "pa",
@@ -11378,7 +16121,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "television",
-        "kana": "テレビ",
+        "kana": [
+            "テ",
+            "レ",
+            "ビ"
+        ],
         "type": "katakana",
         "romaji": [
             "te",
@@ -11388,7 +16135,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "class (in school)",
-        "kana": "クラス",
+        "kana": [
+            "ク",
+            "ラ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "ku",
@@ -11398,7 +16149,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "hotel",
-        "kana": "ホテル",
+        "kana": [
+            "ホ",
+            "テ",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "ho",
@@ -11408,7 +16163,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "test",
-        "kana": "テスト",
+        "kana": [
+            "テ",
+            "ス",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "te",
@@ -11418,7 +16177,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "postbox, mailbox",
-        "kana": "ポスト",
+        "kana": [
+            "ポ",
+            "ス",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "po",
@@ -11428,7 +16191,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "lunch",
-        "kana": "ランチ",
+        "kana": [
+            "ラ",
+            "ン",
+            "チ"
+        ],
         "type": "katakana",
         "romaji": [
             "ra",
@@ -11438,7 +16205,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "camera",
-        "kana": "カメラ",
+        "kana": [
+            "カ",
+            "メ",
+            "ラ"
+        ],
         "type": "katakana",
         "romaji": [
             "ka",
@@ -11448,7 +16219,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "golf",
-        "kana": "ゴルフ",
+        "kana": [
+            "ゴ",
+            "ル",
+            "フ"
+        ],
         "type": "katakana",
         "romaji": [
             "go",
@@ -11458,7 +16233,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "glass (material)",
-        "kana": "ガラス",
+        "kana": [
+            "ガ",
+            "ラ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "ga",
@@ -11468,7 +16247,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "radio",
-        "kana": "ラジオ",
+        "kana": [
+            "ラ",
+            "ジ",
+            "オ"
+        ],
         "type": "katakana",
         "romaji": [
             "ra",
@@ -11478,7 +16261,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "video",
-        "kana": "ビデオ",
+        "kana": [
+            "ビ",
+            "デ",
+            "オ"
+        ],
         "type": "katakana",
         "romaji": [
             "bi",
@@ -11488,7 +16275,10 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "shirt",
-        "kana": "シャツ",
+        "kana": [
+            "シャ",
+            "ツ"
+        ],
         "type": "katakana",
         "romaji": [
             "sha",
@@ -11497,7 +16287,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "gram",
-        "kana": "グラム",
+        "kana": [
+            "グ",
+            "ラ",
+            "ム"
+        ],
         "type": "katakana",
         "romaji": [
             "gu",
@@ -11507,7 +16301,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "software, program",
-        "kana": "ソフト",
+        "kana": [
+            "ソ",
+            "フ",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "so",
@@ -11517,7 +16315,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "toilet",
-        "kana": "トイレ",
+        "kana": [
+            "ト",
+            "イ",
+            "レ"
+        ],
         "type": "katakana",
         "romaji": [
             "to",
@@ -11527,7 +16329,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "wine",
-        "kana": "ワイン",
+        "kana": [
+            "ワ",
+            "イ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "wa",
@@ -11537,7 +16343,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "piano",
-        "kana": "ピアノ",
+        "kana": [
+            "ピ",
+            "ア",
+            "ノ"
+        ],
         "type": "katakana",
         "romaji": [
             "pi",
@@ -11547,7 +16357,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "tennis",
-        "kana": "テニス",
+        "kana": [
+            "テ",
+            "ニ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "te",
@@ -11557,7 +16371,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "button",
-        "kana": "ボタン",
+        "kana": [
+            "ボ",
+            "タ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "bo",
@@ -11567,7 +16385,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "drama",
-        "kana": "ドラマ",
+        "kana": [
+            "ド",
+            "ラ",
+            "マ"
+        ],
         "type": "katakana",
         "romaji": [
             "do",
@@ -11577,7 +16399,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "knife",
-        "kana": "ナイフ",
+        "kana": [
+            "ナ",
+            "イ",
+            "フ"
+        ],
         "type": "katakana",
         "romaji": [
             "na",
@@ -11587,7 +16413,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "motorcycle",
-        "kana": "バイク",
+        "kana": [
+            "バ",
+            "イ",
+            "ク"
+        ],
         "type": "katakana",
         "romaji": [
             "ba",
@@ -11597,7 +16427,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "pink",
-        "kana": "ピンク",
+        "kana": [
+            "ピ",
+            "ン",
+            "ク"
+        ],
         "type": "katakana",
         "romaji": [
             "pi",
@@ -11607,7 +16441,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "glass",
-        "kana": "グラス",
+        "kana": [
+            "グ",
+            "ラ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "gu",
@@ -11617,7 +16455,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "chart, graph",
-        "kana": "グラフ",
+        "kana": [
+            "グ",
+            "ラ",
+            "フ"
+        ],
         "type": "katakana",
         "romaji": [
             "gu",
@@ -11627,7 +16469,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "banana",
-        "kana": "バナナ",
+        "kana": [
+            "バ",
+            "ナ",
+            "ナ"
+        ],
         "type": "katakana",
         "romaji": [
             "ba",
@@ -11637,7 +16483,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "towel",
-        "kana": "タオル",
+        "kana": [
+            "タ",
+            "オ",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "ta",
@@ -11647,7 +16497,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "lemon",
-        "kana": "レモン",
+        "kana": [
+            "レ",
+            "モ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "re",
@@ -11657,7 +16511,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "tomato",
-        "kana": "トマト",
+        "kana": [
+            "ト",
+            "マ",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "to",
@@ -11667,7 +16525,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "milk",
-        "kana": "ミルク",
+        "kana": [
+            "ミ",
+            "ル",
+            "ク"
+        ],
         "type": "katakana",
         "romaji": [
             "mi",
@@ -11677,7 +16539,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "salad",
-        "kana": "サラダ",
+        "kana": [
+            "サ",
+            "ラ",
+            "ダ"
+        ],
         "type": "katakana",
         "romaji": [
             "sa",
@@ -11687,7 +16553,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "belt",
-        "kana": "ベルト",
+        "kana": [
+            "ベ",
+            "ル",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "be",
@@ -11697,7 +16567,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "dance, dancing",
-        "kana": "ダンス",
+        "kana": [
+            "ダ",
+            "ン",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "da",
@@ -11707,7 +16581,10 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "jam",
-        "kana": "ジャム",
+        "kana": [
+            "ジャ",
+            "ム"
+        ],
         "type": "katakana",
         "romaji": [
             "ja",
@@ -11716,7 +16593,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "ice cream (for short)",
-        "kana": "アイス",
+        "kana": [
+            "ア",
+            "イ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "a",
@@ -11726,7 +16607,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "formal dress",
-        "kana": "ドレス",
+        "kana": [
+            "ド",
+            "レ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "do",
@@ -11736,7 +16621,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "brush",
-        "kana": "ブラシ",
+        "kana": [
+            "ブ",
+            "ラ",
+            "シ"
+        ],
         "type": "katakana",
         "romaji": [
             "bu",
@@ -11746,7 +16635,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "website",
-        "kana": "サイト",
+        "kana": [
+            "サ",
+            "イ",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "sa",
@@ -11756,7 +16649,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "signature, autograph",
-        "kana": "サイン",
+        "kana": [
+            "サ",
+            "イ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "sa",
@@ -11766,7 +16663,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "tent",
-        "kana": "テント",
+        "kana": [
+            "テ",
+            "ン",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "te",
@@ -11776,7 +16677,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "pants, trousers",
-        "kana": "パンツ",
+        "kana": [
+            "パ",
+            "ン",
+            "ツ"
+        ],
         "type": "katakana",
         "romaji": [
             "pa",
@@ -11786,7 +16691,10 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "fan, admirer",
-        "kana": "ファン",
+        "kana": [
+            "ファ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "fa",
@@ -11795,7 +16703,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "best",
-        "kana": "ベスト",
+        "kana": [
+            "ベ",
+            "ス",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "be",
@@ -11805,7 +16717,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "hint, clue",
-        "kana": "ヒント",
+        "kana": [
+            "ヒ",
+            "ン",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "hi",
@@ -11815,7 +16731,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "quiz, quiz show",
-        "kana": "クイズ",
+        "kana": [
+            "ク",
+            "イ",
+            "ズ"
+        ],
         "type": "katakana",
         "romaji": [
             "ku",
@@ -11825,7 +16745,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "flat tire",
-        "kana": "パンク",
+        "kana": [
+            "パ",
+            "ン",
+            "ク"
+        ],
         "type": "katakana",
         "romaji": [
             "pa",
@@ -11835,7 +16759,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "part-time job (for short)",
-        "kana": "バイト",
+        "kana": [
+            "バ",
+            "イ",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "ba",
@@ -11845,7 +16773,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "level",
-        "kana": "レベル",
+        "kana": [
+            "レ",
+            "ベ",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "re",
@@ -11855,7 +16787,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "model",
-        "kana": "モデル",
+        "kana": [
+            "モ",
+            "デ",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "mo",
@@ -11865,7 +16801,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "type",
-        "kana": "タイプ",
+        "kana": [
+            "タ",
+            "イ",
+            "プ"
+        ],
         "type": "katakana",
         "romaji": [
             "ta",
@@ -11874,18 +16814,12 @@ export const katakanaWords: KatakanaWord[] = [
         ]
     },
     {
-        "definition": "class, category",
-        "kana": "クラス",
-        "type": "katakana",
-        "romaji": [
-            "ku",
-            "ra",
-            "su"
-        ]
-    },
-    {
         "definition": "club",
-        "kana": "クラブ",
+        "kana": [
+            "ク",
+            "ラ",
+            "ブ"
+        ],
         "type": "katakana",
         "romaji": [
             "ku",
@@ -11895,7 +16829,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "ink",
-        "kana": "インク",
+        "kana": [
+            "イ",
+            "ン",
+            "ク"
+        ],
         "type": "katakana",
         "romaji": [
             "i",
@@ -11905,7 +16843,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "plus, advantage",
-        "kana": "プラス",
+        "kana": [
+            "プ",
+            "ラ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "pu",
@@ -11915,7 +16857,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "plan",
-        "kana": "プラン",
+        "kana": [
+            "プ",
+            "ラ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "pu",
@@ -11925,7 +16871,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "rhythm",
-        "kana": "リズム",
+        "kana": [
+            "リ",
+            "ズ",
+            "ム"
+        ],
         "type": "katakana",
         "romaji": [
             "ri",
@@ -11935,7 +16885,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "lens",
-        "kana": "レンズ",
+        "kana": [
+            "レ",
+            "ン",
+            "ズ"
+        ],
         "type": "katakana",
         "romaji": [
             "re",
@@ -11945,7 +16899,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "microphone",
-        "kana": "マイク",
+        "kana": [
+            "マ",
+            "イ",
+            "ク"
+        ],
         "type": "katakana",
         "romaji": [
             "ma",
@@ -11955,7 +16913,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "tire",
-        "kana": "タイヤ",
+        "kana": [
+            "タ",
+            "イ",
+            "ヤ"
+        ],
         "type": "katakana",
         "romaji": [
             "ta",
@@ -11965,7 +16927,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "tempo, pace",
-        "kana": "テンポ",
+        "kana": [
+            "テ",
+            "ン",
+            "ポ"
+        ],
         "type": "katakana",
         "romaji": [
             "te",
@@ -11975,7 +16941,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "bench",
-        "kana": "ベンチ",
+        "kana": [
+            "ベ",
+            "ン",
+            "チ"
+        ],
         "type": "katakana",
         "romaji": [
             "be",
@@ -11985,7 +16955,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "pipe",
-        "kana": "パイプ",
+        "kana": [
+            "パ",
+            "イ",
+            "プ"
+        ],
         "type": "katakana",
         "romaji": [
             "pa",
@@ -11995,7 +16969,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "modern",
-        "kana": "モダン",
+        "kana": [
+            "モ",
+            "ダ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "mo",
@@ -12005,7 +16983,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "ribbon",
-        "kana": "リボン",
+        "kana": [
+            "リ",
+            "ボ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "ri",
@@ -12015,7 +16997,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "bucket",
-        "kana": "バケツ",
+        "kana": [
+            "バ",
+            "ケ",
+            "ツ"
+        ],
         "type": "katakana",
         "romaji": [
             "ba",
@@ -12025,7 +17011,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "paint",
-        "kana": "ペンキ",
+        "kana": [
+            "ペ",
+            "ン",
+            "キ"
+        ],
         "type": "katakana",
         "romaji": [
             "pe",
@@ -12035,7 +17025,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "guide",
-        "kana": "ガイド",
+        "kana": [
+            "ガ",
+            "イ",
+            "ド"
+        ],
         "type": "katakana",
         "romaji": [
             "ga",
@@ -12045,7 +17039,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "panda",
-        "kana": "パンダ",
+        "kana": [
+            "パ",
+            "ン",
+            "ダ"
+        ],
         "type": "katakana",
         "romaji": [
             "pa",
@@ -12055,7 +17053,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "down, malfunction",
-        "kana": "ダウン",
+        "kana": [
+            "ダ",
+            "ウ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "da",
@@ -12065,7 +17067,10 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "jazz",
-        "kana": "ジャズ",
+        "kana": [
+            "ジャ",
+            "ズ"
+        ],
         "type": "katakana",
         "romaji": [
             "ja",
@@ -12074,7 +17079,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "trousers, pants",
-        "kana": "ズボン",
+        "kana": [
+            "ズ",
+            "ボ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "zu",
@@ -12084,7 +17093,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "AIDS",
-        "kana": "エイズ",
+        "kana": [
+            "エ",
+            "イ",
+            "ズ"
+        ],
         "type": "katakana",
         "romaji": [
             "e",
@@ -12094,7 +17107,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "chicken",
-        "kana": "チキン",
+        "kana": [
+            "チ",
+            "キ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "chi",
@@ -12104,7 +17121,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "pliers, pincers",
-        "kana": "ペンチ",
+        "kana": [
+            "ペ",
+            "ン",
+            "チ"
+        ],
         "type": "katakana",
         "romaji": [
             "pe",
@@ -12114,7 +17135,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "katakana",
-        "kana": "カタカナ",
+        "kana": [
+            "カ",
+            "タ",
+            "カ",
+            "ナ"
+        ],
         "type": "katakana",
         "romaji": [
             "ka",
@@ -12125,7 +17151,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "system",
-        "kana": "システム",
+        "kana": [
+            "シ",
+            "ス",
+            "テ",
+            "ム"
+        ],
         "type": "katakana",
         "romaji": [
             "shi",
@@ -12136,7 +17167,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "chance",
-        "kana": "チャンス",
+        "kana": [
+            "チャ",
+            "ン",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "cha",
@@ -12146,7 +17181,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "personal computer",
-        "kana": "パソコン",
+        "kana": [
+            "パ",
+            "ソ",
+            "コ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "pa",
@@ -12157,7 +17197,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "handkerchief",
-        "kana": "ハンカチ",
+        "kana": [
+            "ハ",
+            "ン",
+            "カ",
+            "チ"
+        ],
         "type": "katakana",
         "romaji": [
             "ha",
@@ -12168,7 +17213,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "blouse",
-        "kana": "ブラウス",
+        "kana": [
+            "ブ",
+            "ラ",
+            "ウ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "bu",
@@ -12179,7 +17229,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "camping, camp",
-        "kana": "キャンプ",
+        "kana": [
+            "キャ",
+            "ン",
+            "プ"
+        ],
         "type": "katakana",
         "romaji": [
             "kya",
@@ -12189,7 +17243,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "tie, necktie",
-        "kana": "ネクタイ",
+        "kana": [
+            "ネ",
+            "ク",
+            "タ",
+            "イ"
+        ],
         "type": "katakana",
         "romaji": [
             "ne",
@@ -12200,7 +17259,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "orange",
-        "kana": "オレンジ",
+        "kana": [
+            "オ",
+            "レ",
+            "ン",
+            "ジ"
+        ],
         "type": "katakana",
         "romaji": [
             "o",
@@ -12211,7 +17275,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "text, textbook",
-        "kana": "テキスト",
+        "kana": [
+            "テ",
+            "キ",
+            "ス",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "te",
@@ -12222,7 +17291,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "album",
-        "kana": "アルバム",
+        "kana": [
+            "ア",
+            "ル",
+            "バ",
+            "ム"
+        ],
         "type": "katakana",
         "romaji": [
             "a",
@@ -12233,7 +17307,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "pachinko (Japanese pinball)",
-        "kana": "パチンコ",
+        "kana": [
+            "パ",
+            "チ",
+            "ン",
+            "コ"
+        ],
         "type": "katakana",
         "romaji": [
             "pa",
@@ -12244,7 +17323,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "drive",
-        "kana": "ドライブ",
+        "kana": [
+            "ド",
+            "ラ",
+            "イ",
+            "ブ"
+        ],
         "type": "katakana",
         "romaji": [
             "do",
@@ -12255,7 +17339,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "stereo",
-        "kana": "ステレオ",
+        "kana": [
+            "ス",
+            "テ",
+            "レ",
+            "オ"
+        ],
         "type": "katakana",
         "romaji": [
             "su",
@@ -12266,7 +17355,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "film",
-        "kana": "フィルム",
+        "kana": [
+            "フィ",
+            "ル",
+            "ム"
+        ],
         "type": "katakana",
         "romaji": [
             "fi",
@@ -12276,7 +17369,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "pajamas",
-        "kana": "パジャマ",
+        "kana": [
+            "パ",
+            "ジャ",
+            "マ"
+        ],
         "type": "katakana",
         "romaji": [
             "pa",
@@ -12286,7 +17383,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "playing cards",
-        "kana": "トランプ",
+        "kana": [
+            "ト",
+            "ラ",
+            "ン",
+            "プ"
+        ],
         "type": "katakana",
         "romaji": [
             "to",
@@ -12297,7 +17399,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "engine",
-        "kana": "エンジン",
+        "kana": [
+            "エ",
+            "ン",
+            "ジ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "e",
@@ -12308,7 +17415,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "idea",
-        "kana": "アイデア",
+        "kana": [
+            "ア",
+            "イ",
+            "デ",
+            "ア"
+        ],
         "type": "katakana",
         "romaji": [
             "a",
@@ -12319,7 +17431,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "minus, below zero",
-        "kana": "マイナス",
+        "kana": [
+            "マ",
+            "イ",
+            "ナ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "ma",
@@ -12330,7 +17447,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "comment",
-        "kana": "コメント",
+        "kana": [
+            "コ",
+            "メ",
+            "ン",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "ko",
@@ -12341,7 +17463,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "nylon",
-        "kana": "ナイロン",
+        "kana": [
+            "ナ",
+            "イ",
+            "ロ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "na",
@@ -12352,7 +17479,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "iron (for clothes)",
-        "kana": "アイロン",
+        "kana": [
+            "ア",
+            "イ",
+            "ロ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "a",
@@ -12363,7 +17495,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "gasoline",
-        "kana": "ガソリン",
+        "kana": [
+            "ガ",
+            "ソ",
+            "リ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "ga",
@@ -12374,7 +17511,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "point",
-        "kana": "ポイント",
+        "kana": [
+            "ポ",
+            "イ",
+            "ン",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "po",
@@ -12385,7 +17527,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "business",
-        "kana": "ビジネス",
+        "kana": [
+            "ビ",
+            "ジ",
+            "ネ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "bi",
@@ -12396,7 +17543,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "design",
-        "kana": "デザイン",
+        "kana": [
+            "デ",
+            "ザ",
+            "イ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "de",
@@ -12407,7 +17559,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "mass communication",
-        "kana": "マスコミ",
+        "kana": [
+            "マ",
+            "ス",
+            "コ",
+            "ミ"
+        ],
         "type": "katakana",
         "romaji": [
             "ma",
@@ -12418,7 +17575,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "stress",
-        "kana": "ストレス",
+        "kana": [
+            "ス",
+            "ト",
+            "レ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "su",
@@ -12429,7 +17591,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "jump",
-        "kana": "ジャンプ",
+        "kana": [
+            "ジャ",
+            "ン",
+            "プ"
+        ],
         "type": "katakana",
         "romaji": [
             "ja",
@@ -12439,7 +17605,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "celebrity",
-        "kana": "タレント",
+        "kana": [
+            "タ",
+            "レ",
+            "ン",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "ta",
@@ -12450,7 +17621,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "change, exchange",
-        "kana": "チェンジ",
+        "kana": [
+            "チェ",
+            "ン",
+            "ジ"
+        ],
         "type": "katakana",
         "romaji": [
             "che",
@@ -12460,7 +17635,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "idol",
-        "kana": "アイドル",
+        "kana": [
+            "ア",
+            "イ",
+            "ド",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "a",
@@ -12471,7 +17651,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "catalogue",
-        "kana": "カタログ",
+        "kana": [
+            "カ",
+            "タ",
+            "ロ",
+            "グ"
+        ],
         "type": "katakana",
         "romaji": [
             "ka",
@@ -12482,7 +17667,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "karaoke",
-        "kana": "カラオケ",
+        "kana": [
+            "カ",
+            "ラ",
+            "オ",
+            "ケ"
+        ],
         "type": "katakana",
         "romaji": [
             "ka",
@@ -12493,7 +17683,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "air-conditioning, air conditioner",
-        "kana": "エアコン",
+        "kana": [
+            "エ",
+            "ア",
+            "コ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "e",
@@ -12504,7 +17699,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "cabbage",
-        "kana": "キャベツ",
+        "kana": [
+            "キャ",
+            "ベ",
+            "ツ"
+        ],
         "type": "katakana",
         "romaji": [
             "kya",
@@ -12514,7 +17713,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "waist",
-        "kana": "ウエスト",
+        "kana": [
+            "ウ",
+            "エ",
+            "ス",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "u",
@@ -12525,7 +17729,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "style, figure",
-        "kana": "スタイル",
+        "kana": [
+            "ス",
+            "タ",
+            "イ",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "su",
@@ -12536,7 +17745,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "balance",
-        "kana": "バランス",
+        "kana": [
+            "バ",
+            "ラ",
+            "ン",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "ba",
@@ -12547,7 +17761,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "table tennis",
-        "kana": "ピンポン",
+        "kana": [
+            "ピ",
+            "ン",
+            "ポ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "pi",
@@ -12558,7 +17777,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "slide",
-        "kana": "スライド",
+        "kana": [
+            "ス",
+            "ラ",
+            "イ",
+            "ド"
+        ],
         "type": "katakana",
         "romaji": [
             "su",
@@ -12569,7 +17793,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "print",
-        "kana": "プリント",
+        "kana": [
+            "プ",
+            "リ",
+            "ン",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "pu",
@@ -12580,7 +17809,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "antenna",
-        "kana": "アンテナ",
+        "kana": [
+            "ア",
+            "ン",
+            "テ",
+            "ナ"
+        ],
         "type": "katakana",
         "romaji": [
             "a",
@@ -12591,7 +17825,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "table lamp, desk lamp",
-        "kana": "スタンド",
+        "kana": [
+            "ス",
+            "タ",
+            "ン",
+            "ド"
+        ],
         "type": "katakana",
         "romaji": [
             "su",
@@ -12602,7 +17841,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "tunnel",
-        "kana": "トンネル",
+        "kana": [
+            "ト",
+            "ン",
+            "ネ",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "to",
@@ -12613,7 +17857,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "steering wheel",
-        "kana": "ハンドル",
+        "kana": [
+            "ハ",
+            "ン",
+            "ド",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "ha",
@@ -12624,7 +17873,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "experienced person, veteran",
-        "kana": "ベテラン",
+        "kana": [
+            "ベ",
+            "テ",
+            "ラ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "be",
@@ -12635,7 +17889,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "vitamin",
-        "kana": "ビタミン",
+        "kana": [
+            "ビ",
+            "タ",
+            "ミ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "bi",
@@ -12646,7 +17905,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "marathon",
-        "kana": "マラソン",
+        "kana": [
+            "マ",
+            "ラ",
+            "ソ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "ma",
@@ -12657,7 +17921,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "organ (music)",
-        "kana": "オルガン",
+        "kana": [
+            "オ",
+            "ル",
+            "ガ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "o",
@@ -12668,7 +17937,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "Christ",
-        "kana": "キリスト",
+        "kana": [
+            "キ",
+            "リ",
+            "ス",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "ki",
@@ -12679,7 +17953,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "pride",
-        "kana": "プライド",
+        "kana": [
+            "プ",
+            "ラ",
+            "イ",
+            "ド"
+        ],
         "type": "katakana",
         "romaji": [
             "pu",
@@ -12690,7 +17969,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "intelligent person",
-        "kana": "インテリ",
+        "kana": [
+            "イ",
+            "ン",
+            "テ",
+            "リ"
+        ],
         "type": "katakana",
         "romaji": [
             "i",
@@ -12701,7 +17985,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "pistol",
-        "kana": "ピストル",
+        "kana": [
+            "ピ",
+            "ス",
+            "ト",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "pi",
@@ -12712,7 +18001,11 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "disco",
-        "kana": "ディスコ",
+        "kana": [
+            "ディ",
+            "ス",
+            "コ"
+        ],
         "type": "katakana",
         "romaji": [
             "di",
@@ -12722,7 +18015,13 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "program booklet",
-        "kana": "プログラム",
+        "kana": [
+            "プ",
+            "ロ",
+            "グ",
+            "ラ",
+            "ム"
+        ],
         "type": "katakana",
         "romaji": [
             "pu",
@@ -12734,7 +18033,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "potato",
-        "kana": "ジャガイモ",
+        "kana": [
+            "ジャ",
+            "ガ",
+            "イ",
+            "モ"
+        ],
         "type": "katakana",
         "romaji": [
             "ja",
@@ -12745,7 +18049,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "apartment, residential building",
-        "kana": "マンション",
+        "kana": [
+            "マ",
+            "ン",
+            "ショ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "ma",
@@ -12756,7 +18065,13 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "part-time job",
-        "kana": "アルバイト",
+        "kana": [
+            "ア",
+            "ル",
+            "バ",
+            "イ",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "a",
@@ -12768,7 +18083,13 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "restaurant",
-        "kana": "レストラン",
+        "kana": [
+            "レ",
+            "ス",
+            "ト",
+            "ラ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "re",
@@ -12780,7 +18101,13 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "present",
-        "kana": "プレゼント",
+        "kana": [
+            "プ",
+            "レ",
+            "ゼ",
+            "ン",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "pu",
@@ -12792,7 +18119,13 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "Christmas",
-        "kana": "クリスマス",
+        "kana": [
+            "ク",
+            "リ",
+            "ス",
+            "マ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "ku",
@@ -12804,7 +18137,13 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "violin",
-        "kana": "バイオリン",
+        "kana": [
+            "バ",
+            "イ",
+            "オ",
+            "リ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "ba",
@@ -12816,7 +18155,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "channel",
-        "kana": "チャンネル",
+        "kana": [
+            "チャ",
+            "ン",
+            "ネ",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "cha",
@@ -12827,7 +18171,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "business shirt, dress shirt",
-        "kana": "ワイシャツ",
+        "kana": [
+            "ワ",
+            "イ",
+            "シャ",
+            "ツ"
+        ],
         "type": "katakana",
         "romaji": [
             "wa",
@@ -12838,7 +18187,13 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "hiking",
-        "kana": "ハイキング",
+        "kana": [
+            "ハ",
+            "イ",
+            "キ",
+            "ン",
+            "グ"
+        ],
         "type": "katakana",
         "romaji": [
             "ha",
@@ -12850,7 +18205,13 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "earrings",
-        "kana": "イヤリング",
+        "kana": [
+            "イ",
+            "ヤ",
+            "リ",
+            "ン",
+            "グ"
+        ],
         "type": "katakana",
         "romaji": [
             "i",
@@ -12862,7 +18223,13 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "frying pan",
-        "kana": "フライパン",
+        "kana": [
+            "フ",
+            "ラ",
+            "イ",
+            "パ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "fu",
@@ -12874,7 +18241,13 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "contest, competition",
-        "kana": "コンテスト",
+        "kana": [
+            "コ",
+            "ン",
+            "テ",
+            "ス",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "ko",
@@ -12886,7 +18259,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "amateur",
-        "kana": "アマチュア",
+        "kana": [
+            "ア",
+            "マ",
+            "チュ",
+            "ア"
+        ],
         "type": "katakana",
         "romaji": [
             "a",
@@ -12897,7 +18275,13 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "photographer",
-        "kana": "カメラマン",
+        "kana": [
+            "カ",
+            "メ",
+            "ラ",
+            "マ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "ka",
@@ -12909,7 +18293,13 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "strike",
-        "kana": "ストライキ",
+        "kana": [
+            "ス",
+            "ト",
+            "ラ",
+            "イ",
+            "キ"
+        ],
         "type": "katakana",
         "romaji": [
             "su",
@@ -12921,7 +18311,13 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "X-rays",
-        "kana": "レントゲン",
+        "kana": [
+            "レ",
+            "ン",
+            "ト",
+            "ゲ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "re",
@@ -12933,7 +18329,13 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "advice",
-        "kana": "アドバイス",
+        "kana": [
+            "ア",
+            "ド",
+            "バ",
+            "イ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "a",
@@ -12945,7 +18347,13 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "request",
-        "kana": "リクエスト",
+        "kana": [
+            "リ",
+            "ク",
+            "エ",
+            "ス",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "ri",
@@ -12957,7 +18365,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "cancellation",
-        "kana": "キャンセル",
+        "kana": [
+            "キャ",
+            "ン",
+            "セ",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "kya",
@@ -12968,7 +18381,13 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "sunglasses",
-        "kana": "サングラス",
+        "kana": [
+            "サ",
+            "ン",
+            "グ",
+            "ラ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "sa",
@@ -12980,7 +18399,12 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "jogging",
-        "kana": "ジョギング",
+        "kana": [
+            "ジョ",
+            "ギ",
+            "ン",
+            "グ"
+        ],
         "type": "katakana",
         "romaji": [
             "jo",
@@ -12991,7 +18415,13 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "accent, stress",
-        "kana": "アクセント",
+        "kana": [
+            "ア",
+            "ク",
+            "セ",
+            "ン",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "a",
@@ -13003,7 +18433,13 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "outlet",
-        "kana": "コンセント",
+        "kana": [
+            "コ",
+            "ン",
+            "セ",
+            "ン",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "ko",
@@ -13015,7 +18451,13 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "stupid, absurd",
-        "kana": "バカらしい",
+        "kana": [
+            "バ",
+            "カ",
+            "ら",
+            "し",
+            "い"
+        ],
         "type": "katakana",
         "romaji": [
             "ba",
@@ -13027,7 +18469,13 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "ground, (playing or sports) field",
-        "kana": "グラウンド",
+        "kana": [
+            "グ",
+            "ラ",
+            "ウ",
+            "ン",
+            "ド"
+        ],
         "type": "katakana",
         "romaji": [
             "gu",
@@ -13039,7 +18487,13 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "cheating",
-        "kana": "カンニング",
+        "kana": [
+            "カ",
+            "ン",
+            "ニ",
+            "ン",
+            "グ"
+        ],
         "type": "katakana",
         "romaji": [
             "ka",
@@ -13051,7 +18505,14 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "diamond",
-        "kana": "ダイヤモンド",
+        "kana": [
+            "ダ",
+            "イ",
+            "ヤ",
+            "モ",
+            "ン",
+            "ド"
+        ],
         "type": "katakana",
         "romaji": [
             "da",
@@ -13064,7 +18525,14 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "misprint",
-        "kana": "ミスプリント",
+        "kana": [
+            "ミ",
+            "ス",
+            "プ",
+            "リ",
+            "ン",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "mi",
@@ -13077,7 +18545,14 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "aluminum",
-        "kana": "アルミニウム",
+        "kana": [
+            "ア",
+            "ル",
+            "ミ",
+            "ニ",
+            "ウ",
+            "ム"
+        ],
         "type": "katakana",
         "romaji": [
             "a",
@@ -13090,7 +18565,16 @@ export const katakanaWords: KatakanaWord[] = [
     },
     {
         "definition": "gas station",
-        "kana": "ガソリンスタンド",
+        "kana": [
+            "ガ",
+            "ソ",
+            "リ",
+            "ン",
+            "ス",
+            "タ",
+            "ン",
+            "ド"
+        ],
         "type": "katakana",
         "romaji": [
             "ga",
@@ -13105,10 +18589,15 @@ export const katakanaWords: KatakanaWord[] = [
     }
 ];
 
+// need to fix the kana array for basically all words in this group
 export const wordsWithTsuOrElongation: Word[] = [
     {
         "definition": "more",
-        "kana": "もっと",
+        "kana": [
+            "も",
+            "っ",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13116,7 +18605,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "here, this way (casual)",
-        "kana": "こっち",
+        "kana": [
+            "こ",
+            "っ",
+            "ち"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13124,7 +18617,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "which (casual)",
-        "kana": "どっち",
+        "kana": [
+            "ど",
+            "っ",
+            "ち"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13132,7 +18629,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "there (casual)",
-        "kana": "そっち",
+        "kana": [
+            "そ",
+            "っ",
+            "ち"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13140,7 +18641,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "other side, over there (casual)",
-        "kana": "あっち",
+        "kana": [
+            "あ",
+            "っ",
+            "ち"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13148,7 +18653,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "all the time, all through",
-        "kana": "ずっと",
+        "kana": [
+            "ず",
+            "っ",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13156,7 +18665,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "at last, finally (used only for a good outcome)",
-        "kana": "やっと",
+        "kana": [
+            "や",
+            "っ",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13164,7 +18677,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "earlier, only a moment ago",
-        "kana": "さっき",
+        "kana": [
+            "さ",
+            "っ",
+            "き"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13172,7 +18689,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "surely, certainly",
-        "kana": "きっと",
+        "kana": [
+            "き",
+            "っ",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13180,7 +18701,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "without moving, still",
-        "kana": "じっと",
+        "kana": [
+            "じ",
+            "っ",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13188,7 +18713,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "softly, gently",
-        "kana": "そっと",
+        "kana": [
+            "そ",
+            "っ",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13196,7 +18725,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "(feel) refreshed, satisfied",
-        "kana": "すっと",
+        "kana": [
+            "す",
+            "っ",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13204,7 +18737,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "quickly",
-        "kana": "さっと",
+        "kana": [
+            "さ",
+            "っ",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13212,7 +18749,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "feel relieved",
-        "kana": "ほっと",
+        "kana": [
+            "ほ",
+            "っ",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13220,7 +18761,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "taken aback, startled",
-        "kana": "はっと",
+        "kana": [
+            "は",
+            "っ",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13228,7 +18773,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "in a temper, in a rage",
-        "kana": "かっと",
+        "kana": [
+            "か",
+            "っ",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13236,7 +18785,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "burst (out laughing etc.)",
-        "kana": "どっと",
+        "kana": [
+            "ど",
+            "っ",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13244,7 +18797,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "only, merely",
-        "kana": "たった",
+        "kana": [
+            "た",
+            "っ",
+            "た"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13252,7 +18809,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "suddenly, quickly",
-        "kana": "ぱっと",
+        "kana": [
+            "ぱ",
+            "っ",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13260,7 +18821,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "game",
-        "kana": "ゲーム",
+        "kana": [
+            "ゲ",
+            "ー",
+            "ム"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13268,7 +18833,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "part-time",
-        "kana": "パート",
+        "kana": [
+            "パ",
+            "ー",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13276,7 +18845,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "cup, glass",
-        "kana": "コップ",
+        "kana": [
+            "コ",
+            "ッ",
+            "プ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13284,7 +18857,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "course, route",
-        "kana": "コース",
+        "kana": [
+            "コ",
+            "ー",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13292,7 +18869,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "beer",
-        "kana": "ビール",
+        "kana": [
+            "ビ",
+            "ー",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13300,7 +18881,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "page",
-        "kana": "ページ",
+        "kana": [
+            "ペ",
+            "ー",
+            "ジ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13308,7 +18893,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "coat, jacket",
-        "kana": "コート",
+        "kana": [
+            "コ",
+            "ー",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13316,7 +18905,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "copy, photocopy",
-        "kana": "コピー",
+        "kana": [
+            "コ",
+            "ピ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13324,7 +18917,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "card",
-        "kana": "カード",
+        "kana": [
+            "カ",
+            "ー",
+            "ド"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13332,7 +18929,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "ski, skiing",
-        "kana": "スキー",
+        "kana": [
+            "ス",
+            "キ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13340,7 +18941,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "color",
-        "kana": "カラー",
+        "kana": [
+            "カ",
+            "ラ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13348,7 +18953,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "pool",
-        "kana": "プール",
+        "kana": [
+            "プ",
+            "ー",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13356,7 +18965,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "ball",
-        "kana": "ボール",
+        "kana": [
+            "ボ",
+            "ー",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13364,7 +18977,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "notebook",
-        "kana": "ノート",
+        "kana": [
+            "ノ",
+            "ー",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13372,7 +18989,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "platform (for short)",
-        "kana": "ホーム",
+        "kana": [
+            "ホ",
+            "ー",
+            "ム"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13380,7 +19001,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "bed",
-        "kana": "ベッド",
+        "kana": [
+            "ベ",
+            "ッ",
+            "ド"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13388,7 +19013,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "light boat, small craft",
-        "kana": "ボート",
+        "kana": [
+            "ボ",
+            "ー",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13396,7 +19025,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "sports court",
-        "kana": "コート",
+        "kana": [
+            "コ",
+            "ー",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13404,7 +19037,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "bag",
-        "kana": "バッグ",
+        "kana": [
+            "バ",
+            "ッ",
+            "グ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13412,7 +19049,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "guitar",
-        "kana": "ギター",
+        "kana": [
+            "ギ",
+            "タ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13420,7 +19061,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "soup",
-        "kana": "スープ",
+        "kana": [
+            "ス",
+            "ー",
+            "プ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13428,7 +19073,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "cake",
-        "kana": "ケーキ",
+        "kana": [
+            "ケ",
+            "ー",
+            "キ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13436,7 +19085,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "suit",
-        "kana": "スーツ",
+        "kana": [
+            "ス",
+            "ー",
+            "ツ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13444,7 +19097,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "date, romantic meeting",
-        "kana": "デート",
+        "kana": [
+            "デ",
+            "ー",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13452,7 +19109,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "cheese",
-        "kana": "チーズ",
+        "kana": [
+            "チ",
+            "ー",
+            "ズ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13460,7 +19121,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "sauce",
-        "kana": "ソース",
+        "kana": [
+            "ソ",
+            "ー",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13468,7 +19133,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "butter",
-        "kana": "バター",
+        "kana": [
+            "バ",
+            "タ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13476,7 +19145,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "e-mail",
-        "kana": "メール",
+        "kana": [
+            "メ",
+            "ー",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13484,7 +19157,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "star",
-        "kana": "スター",
+        "kana": [
+            "ス",
+            "タ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13492,7 +19169,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "wool",
-        "kana": "ウール",
+        "kana": [
+            "ウ",
+            "ー",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13500,7 +19181,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "cola, coke",
-        "kana": "コーラ",
+        "kana": [
+            "コ",
+            "ー",
+            "ラ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13508,7 +19193,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "cup",
-        "kana": "カップ",
+        "kana": [
+            "カ",
+            "ッ",
+            "プ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13516,7 +19205,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "cook, chef",
-        "kana": "コック",
+        "kana": [
+            "コ",
+            "ッ",
+            "ク"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13524,7 +19217,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "bed sheet",
-        "kana": "シーツ",
+        "kana": [
+            "シ",
+            "ー",
+            "ツ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13532,7 +19229,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "data",
-        "kana": "データ",
+        "kana": [
+            "デ",
+            "ー",
+            "タ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13540,7 +19241,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "close-up",
-        "kana": "アップ",
+        "kana": [
+            "ア",
+            "ッ",
+            "プ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13548,7 +19253,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "case",
-        "kana": "ケース",
+        "kana": [
+            "ケ",
+            "ー",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13556,7 +19265,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "rule",
-        "kana": "ルール",
+        "kana": [
+            "ル",
+            "ー",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13564,7 +19277,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "logo",
-        "kana": "マーク",
+        "kana": [
+            "マ",
+            "ー",
+            "ク"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13572,7 +19289,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "fad, boom",
-        "kana": "ブーム",
+        "kana": [
+            "ブ",
+            "ー",
+            "ム"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13580,7 +19301,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "mood",
-        "kana": "ムード",
+        "kana": [
+            "ム",
+            "ー",
+            "ド"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13588,7 +19313,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "rope",
-        "kana": "ロープ",
+        "kana": [
+            "ロ",
+            "ー",
+            "プ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13596,7 +19325,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "pot, thermos",
-        "kana": "ポット",
+        "kana": [
+            "ポ",
+            "ッ",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13604,7 +19337,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "badge",
-        "kana": "バッジ",
+        "kana": [
+            "バ",
+            "ッ",
+            "ジ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13612,7 +19349,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "pace",
-        "kana": "ペース",
+        "kana": [
+            "ペ",
+            "ー",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13620,7 +19361,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "manners",
-        "kana": "マナー",
+        "kana": [
+            "マ",
+            "ナ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13628,7 +19373,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "beach",
-        "kana": "ビーチ",
+        "kana": [
+            "ビ",
+            "ー",
+            "チ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13636,7 +19385,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "hot",
-        "kana": "ホット",
+        "kana": [
+            "ホ",
+            "ッ",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13644,7 +19397,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "back, reverse",
-        "kana": "バック",
+        "kana": [
+            "バ",
+            "ッ",
+            "ク"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13652,7 +19409,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "team",
-        "kana": "チーム",
+        "kana": [
+            "チ",
+            "ー",
+            "ム"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13660,7 +19421,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "theme, subject matter",
-        "kana": "テーマ",
+        "kana": [
+            "テ",
+            "ー",
+            "マ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13668,7 +19433,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "top, the best",
-        "kana": "トップ",
+        "kana": [
+            "ト",
+            "ッ",
+            "プ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13676,7 +19445,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "set",
-        "kana": "セット",
+        "kana": [
+            "セ",
+            "ッ",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13684,7 +19457,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "cord",
-        "kana": "コード",
+        "kana": [
+            "コ",
+            "ー",
+            "ド"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13692,7 +19469,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "match, matchbox",
-        "kana": "マッチ",
+        "kana": [
+            "マ",
+            "ッ",
+            "チ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13700,7 +19481,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "cover, covering",
-        "kana": "カバー",
+        "kana": [
+            "カ",
+            "バ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13708,7 +19493,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "curve",
-        "kana": "カーブ",
+        "kana": [
+            "カ",
+            "ー",
+            "ブ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13716,7 +19505,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "coach",
-        "kana": "コーチ",
+        "kana": [
+            "コ",
+            "ー",
+            "チ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13724,7 +19517,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "waiter, porter",
-        "kana": "ボーイ",
+        "kana": [
+            "ボ",
+            "ー",
+            "イ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13732,7 +19529,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "sailboat, yacht",
-        "kana": "ヨット",
+        "kana": [
+            "ヨ",
+            "ッ",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13740,7 +19541,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "knock",
-        "kana": "ノック",
+        "kana": [
+            "ノ",
+            "ッ",
+            "ク"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13748,7 +19553,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "rock (music)",
-        "kana": "ロック",
+        "kana": [
+            "ロ",
+            "ッ",
+            "ク"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13756,7 +19565,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "hard",
-        "kana": "ハード",
+        "kana": [
+            "ハ",
+            "ー",
+            "ド"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13764,7 +19577,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "cut",
-        "kana": "カット",
+        "kana": [
+            "カ",
+            "ッ",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13772,7 +19589,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "the lead, taking a lead",
-        "kana": "リード",
+        "kana": [
+            "リ",
+            "ー",
+            "ド"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13780,7 +19601,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "tape",
-        "kana": "テープ",
+        "kana": [
+            "テ",
+            "ー",
+            "プ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13788,7 +19613,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "bat",
-        "kana": "バット",
+        "kana": [
+            "バ",
+            "ッ",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13796,7 +19625,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "money",
-        "kana": "マネー",
+        "kana": [
+            "マ",
+            "ネ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13804,7 +19637,11 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "guardrail",
-        "kana": "ガード",
+        "kana": [
+            "ガ",
+            "ー",
+            "ド"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -13812,7 +19649,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "just a moment, just a little",
-        "kana": "ちょっと",
+        "kana": [
+            "ち",
+            "ょ",
+            "っ",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13820,7 +19662,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "full",
-        "kana": "いっぱい",
+        "kana": [
+            "い",
+            "っ",
+            "ぱ",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13828,7 +19675,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "slowly",
-        "kana": "ゆっくり",
+        "kana": [
+            "ゆ",
+            "っ",
+            "く",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13836,7 +19688,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "clearly",
-        "kana": "はっきり",
+        "kana": [
+            "は",
+            "っ",
+            "き",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13844,7 +19701,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "rarely, seldom",
-        "kana": "めったに",
+        "kana": [
+            "め",
+            "っ",
+            "た",
+            "に"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13852,7 +19714,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "just as I thought, after all",
-        "kana": "やっぱり",
+        "kana": [
+            "や",
+            "っ",
+            "ぱ",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13860,7 +19727,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "soundly",
-        "kana": "ぐっすり",
+        "kana": [
+            "ぐ",
+            "っ",
+            "す",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13868,7 +19740,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "mature, responsible",
-        "kana": "しっかり",
+        "kana": [
+            "し",
+            "っ",
+            "か",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13876,7 +19753,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "all, completely",
-        "kana": "すっかり",
+        "kana": [
+            "す",
+            "っ",
+            "か",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13884,7 +19766,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "exactly right, perfect",
-        "kana": "ぴったり",
+        "kana": [
+            "ぴ",
+            "っ",
+            "た",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13892,7 +19779,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "fully, amply",
-        "kana": "たっぷり",
+        "kana": [
+            "た",
+            "っ",
+            "ぷ",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13900,7 +19792,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "completely not",
-        "kana": "さっぱり",
+        "kana": [
+            "さ",
+            "っ",
+            "ぱ",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13908,7 +19805,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "refreshed",
-        "kana": "すっきり",
+        "kana": [
+            "す",
+            "っ",
+            "き",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13916,7 +19818,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "almost identical",
-        "kana": "そっくり",
+        "kana": [
+            "そ",
+            "っ",
+            "く",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13924,7 +19831,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "secretly",
-        "kana": "こっそり",
+        "kana": [
+            "こ",
+            "っ",
+            "そ",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13932,7 +19844,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "carelessly, accidentally",
-        "kana": "うっかり",
+        "kana": [
+            "う",
+            "っ",
+            "か",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13940,7 +19857,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "feel disappointed",
-        "kana": "がっかり",
+        "kana": [
+            "が",
+            "っ",
+            "か",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13948,7 +19870,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "(not) at all (casual)",
-        "kana": "ちっとも",
+        "kana": [
+            "ち",
+            "っ",
+            "と",
+            "も"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13956,7 +19883,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "long ago, already",
-        "kana": "とっくに",
+        "kana": [
+            "と",
+            "っ",
+            "く",
+            "に"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13964,7 +19896,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "diligently, hard",
-        "kana": "せっせと",
+        "kana": [
+            "せ",
+            "っ",
+            "せ",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13972,7 +19909,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "smiling brightly",
-        "kana": "にっこり",
+        "kana": [
+            "に",
+            "っ",
+            "こ",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13980,7 +19922,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "tightly, closely",
-        "kana": "ぎっしり",
+        "kana": [
+            "ぎ",
+            "っ",
+            "し",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13988,7 +19935,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "bluntly, easily",
-        "kana": "あっさり",
+        "kana": [
+            "あ",
+            "っ",
+            "さ",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -13996,7 +19948,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "with much trouble",
-        "kana": "せっかく",
+        "kana": [
+            "せ",
+            "っ",
+            "か",
+            "く"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -14004,7 +19961,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "rather, instead",
-        "kana": "かえって",
+        "kana": [
+            "か",
+            "え",
+            "っ",
+            "て"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -14012,7 +19974,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "comfortable, easy fit",
-        "kana": "ゆったり",
+        "kana": [
+            "ゆ",
+            "っ",
+            "た",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -14020,7 +19987,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "surprised, shocked",
-        "kana": "どきっと",
+        "kana": [
+            "ど",
+            "き",
+            "っ",
+            "と"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -14028,7 +20000,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "opportunity, trigger",
-        "kana": "きっかけ",
+        "kana": [
+            "き",
+            "っ",
+            "か",
+            "け"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -14036,7 +20013,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "at once, promptly",
-        "kana": "とっさに",
+        "kana": [
+            "と",
+            "っ",
+            "さ",
+            "に"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -14044,7 +20026,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "impatient, hasty",
-        "kana": "せっかち",
+        "kana": [
+            "せ",
+            "っ",
+            "か",
+            "ち"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -14052,7 +20039,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "exactly, precisely",
-        "kana": "きっちり",
+        "kana": [
+            "き",
+            "っ",
+            "ち",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -14060,7 +20052,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "quite right",
-        "kana": "もっとも",
+        "kana": [
+            "も",
+            "っ",
+            "と",
+            "も"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -14068,7 +20065,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "table",
-        "kana": "テーブル",
+        "kana": [
+            "テ",
+            "ー",
+            "ブ",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14076,7 +20078,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "menu",
-        "kana": "メニュー",
+        "kana": [
+            "メ",
+            "ニ",
+            "ュ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14084,7 +20091,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "receipt",
-        "kana": "レシート",
+        "kana": [
+            "レ",
+            "シ",
+            "ー",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14092,7 +20104,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "fork",
-        "kana": "フォーク",
+        "kana": [
+            "フ",
+            "ォ",
+            "ー",
+            "ク"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14100,7 +20117,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "spoon",
-        "kana": "スプーン",
+        "kana": [
+            "ス",
+            "プ",
+            "ー",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14108,7 +20130,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "sport",
-        "kana": "スポーツ",
+        "kana": [
+            "ス",
+            "ポ",
+            "ー",
+            "ツ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14116,7 +20143,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "service, on the house",
-        "kana": "サービス",
+        "kana": [
+            "サ",
+            "ー",
+            "ビ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14124,7 +20156,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "group",
-        "kana": "グループ",
+        "kana": [
+            "グ",
+            "ル",
+            "ー",
+            "プ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14132,7 +20169,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "apartment, flat",
-        "kana": "アパート",
+        "kana": [
+            "ア",
+            "パ",
+            "ー",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14140,7 +20182,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "coffee",
-        "kana": "コーヒー",
+        "kana": [
+            "コ",
+            "ー",
+            "ヒ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14148,7 +20195,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "taxi",
-        "kana": "タクシー",
+        "kana": [
+            "タ",
+            "ク",
+            "シ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14156,7 +20208,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "news",
-        "kana": "ニュース",
+        "kana": [
+            "ニ",
+            "ュ",
+            "ー",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14164,7 +20221,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "sweater",
-        "kana": "セーター",
+        "kana": [
+            "セ",
+            "ー",
+            "タ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14172,7 +20234,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "truck",
-        "kana": "トラック",
+        "kana": [
+            "ト",
+            "ラ",
+            "ッ",
+            "ク"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14180,7 +20247,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "record",
-        "kana": "レコード",
+        "kana": [
+            "レ",
+            "コ",
+            "ー",
+            "ド"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14188,7 +20260,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "department store",
-        "kana": "デパート",
+        "kana": [
+            "デ",
+            "パ",
+            "ー",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14196,7 +20273,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "sofa, couch",
-        "kana": "ソファー",
+        "kana": [
+            "ソ",
+            "フ",
+            "ァ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14204,7 +20286,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "switch",
-        "kana": "スイッチ",
+        "kana": [
+            "ス",
+            "イ",
+            "ッ",
+            "チ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14212,7 +20299,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "pocket",
-        "kana": "ポケット",
+        "kana": [
+            "ポ",
+            "ケ",
+            "ッ",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14220,7 +20312,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "curtain",
-        "kana": "カーテン",
+        "kana": [
+            "カ",
+            "ー",
+            "テ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14228,7 +20325,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "plastic, vinyl",
-        "kana": "ビニール",
+        "kana": [
+            "ビ",
+            "ニ",
+            "ー",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14236,7 +20338,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "skirt",
-        "kana": "スカート",
+        "kana": [
+            "ス",
+            "カ",
+            "ー",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14244,7 +20351,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "juice",
-        "kana": "ジュース",
+        "kana": [
+            "ジ",
+            "ュ",
+            "ー",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14252,7 +20364,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "soccer, football",
-        "kana": "サッカー",
+        "kana": [
+            "サ",
+            "ッ",
+            "カ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14260,7 +20377,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "police car",
-        "kana": "パトカー",
+        "kana": [
+            "パ",
+            "ト",
+            "カ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14268,7 +20390,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "ticket",
-        "kana": "チケット",
+        "kana": [
+            "チ",
+            "ケ",
+            "ッ",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14276,7 +20403,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "racket",
-        "kana": "ラケット",
+        "kana": [
+            "ラ",
+            "ケ",
+            "ッ",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14284,7 +20416,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "air conditioner (cooling)",
-        "kana": "クーラー",
+        "kana": [
+            "ク",
+            "ー",
+            "ラ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14292,7 +20429,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "ramen (Chinese noodles)",
-        "kana": "ラーメン",
+        "kana": [
+            "ラ",
+            "ー",
+            "メ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14300,7 +20442,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "lighter",
-        "kana": "ライター",
+        "kana": [
+            "ラ",
+            "イ",
+            "タ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14308,7 +20455,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "shower",
-        "kana": "シャワー",
+        "kana": [
+            "シ",
+            "ャ",
+            "ワ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14316,7 +20468,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "slippers",
-        "kana": "スリッパ",
+        "kana": [
+            "ス",
+            "リ",
+            "ッ",
+            "パ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14324,7 +20481,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "skate, skates",
-        "kana": "スケート",
+        "kana": [
+            "ス",
+            "ケ",
+            "ー",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14332,7 +20494,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "scarf, muffler",
-        "kana": "マフラー",
+        "kana": [
+            "マ",
+            "フ",
+            "ラ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14340,7 +20507,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "maker, manufacturer",
-        "kana": "メーカー",
+        "kana": [
+            "メ",
+            "ー",
+            "カ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14348,7 +20520,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "section (of a store etc.), corner",
-        "kana": "コーナー",
+        "kana": [
+            "コ",
+            "ー",
+            "ナ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14356,7 +20533,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "shock",
-        "kana": "ショック",
+        "kana": [
+            "シ",
+            "ョ",
+            "ッ",
+            "ク"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14364,7 +20546,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "dessert",
-        "kana": "デザート",
+        "kana": [
+            "デ",
+            "ザ",
+            "ー",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14372,7 +20559,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "speed",
-        "kana": "スピード",
+        "kana": [
+            "ス",
+            "ピ",
+            "ー",
+            "ド"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14380,7 +20572,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "kitchen",
-        "kana": "キッチン",
+        "kana": [
+            "キ",
+            "ッ",
+            "チ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14388,7 +20585,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "fruit",
-        "kana": "フルーツ",
+        "kana": [
+            "フ",
+            "ル",
+            "ー",
+            "ツ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14396,7 +20598,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "rush, rush hour",
-        "kana": "ラッシュ",
+        "kana": [
+            "ラ",
+            "ッ",
+            "シ",
+            "ュ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14404,7 +20611,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "cookie",
-        "kana": "クッキー",
+        "kana": [
+            "ク",
+            "ッ",
+            "キ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14412,7 +20624,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "shoes",
-        "kana": "シューズ",
+        "kana": [
+            "シ",
+            "ュ",
+            "ー",
+            "ズ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14420,7 +20637,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "bargain sale",
-        "kana": "バーゲン",
+        "kana": [
+            "バ",
+            "ー",
+            "ゲ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14428,7 +20650,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "toast",
-        "kana": "トースト",
+        "kana": [
+            "ト",
+            "ー",
+            "ス",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14436,7 +20663,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "word processor",
-        "kana": "ワープロ",
+        "kana": [
+            "ワ",
+            "ー",
+            "プ",
+            "ロ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14444,7 +20676,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "center (for an activity, etc.), hub",
-        "kana": "センター",
+        "kana": [
+            "セ",
+            "ン",
+            "タ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14452,7 +20689,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "image",
-        "kana": "イメージ",
+        "kana": [
+            "イ",
+            "メ",
+            "ー",
+            "ジ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14460,7 +20702,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "member",
-        "kana": "メンバー",
+        "kana": [
+            "メ",
+            "ン",
+            "バ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14468,7 +20715,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "series",
-        "kana": "シリーズ",
+        "kana": [
+            "シ",
+            "リ",
+            "ー",
+            "ズ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14476,7 +20728,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "report, paper",
-        "kana": "レポート",
+        "kana": [
+            "レ",
+            "ポ",
+            "ー",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14484,7 +20741,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "start, begin",
-        "kana": "スタート",
+        "kana": [
+            "ス",
+            "タ",
+            "ー",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14492,7 +20754,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "pattern",
-        "kana": "パターン",
+        "kana": [
+            "パ",
+            "タ",
+            "ー",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14500,7 +20767,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "robot",
-        "kana": "ロボット",
+        "kana": [
+            "ロ",
+            "ボ",
+            "ッ",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14508,7 +20780,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "season, time period when something is commonly done",
-        "kana": "シーズン",
+        "kana": [
+            "シ",
+            "ー",
+            "ズ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14516,7 +20793,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "stage (for a performance)",
-        "kana": "ステージ",
+        "kana": [
+            "ス",
+            "テ",
+            "ー",
+            "ジ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14524,7 +20806,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "circle, club",
-        "kana": "サークル",
+        "kana": [
+            "サ",
+            "ー",
+            "ク",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14532,7 +20819,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "bonus",
-        "kana": "ボーナス",
+        "kana": [
+            "ボ",
+            "ー",
+            "ナ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14540,7 +20832,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "poster",
-        "kana": "ポスター",
+        "kana": [
+            "ポ",
+            "ス",
+            "タ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14548,7 +20845,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "brake",
-        "kana": "ブレーキ",
+        "kana": [
+            "ブ",
+            "レ",
+            "ー",
+            "キ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14556,7 +20858,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "number",
-        "kana": "ナンバー",
+        "kana": [
+            "ナ",
+            "ン",
+            "バ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14564,7 +20871,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "stop",
-        "kana": "ストップ",
+        "kana": [
+            "ス",
+            "ト",
+            "ッ",
+            "プ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14572,7 +20884,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "cream",
-        "kana": "クリーム",
+        "kana": [
+            "ク",
+            "リ",
+            "ー",
+            "ム"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14580,7 +20897,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "speech",
-        "kana": "スピーチ",
+        "kana": [
+            "ス",
+            "ピ",
+            "ー",
+            "チ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14588,7 +20910,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "humor",
-        "kana": "ユーモア",
+        "kana": [
+            "ユ",
+            "ー",
+            "モ",
+            "ア"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14596,7 +20923,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "sophisticated, skillful",
-        "kana": "スマート",
+        "kana": [
+            "ス",
+            "マ",
+            "ー",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14604,7 +20936,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "motor, engine",
-        "kana": "モーター",
+        "kana": [
+            "モ",
+            "ー",
+            "タ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14612,7 +20949,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "meter",
-        "kana": "メーター",
+        "kana": [
+            "メ",
+            "ー",
+            "タ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14620,7 +20962,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "liter",
-        "kana": "リットル",
+        "kana": [
+            "リ",
+            "ッ",
+            "ト",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14628,7 +20975,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "chalk",
-        "kana": "チョーク",
+        "kana": [
+            "チ",
+            "ョ",
+            "ー",
+            "ク"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14636,7 +20988,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "locker",
-        "kana": "ロッカー",
+        "kana": [
+            "ロ",
+            "ッ",
+            "カ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14644,7 +21001,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "exaggerated, overly done",
-        "kana": "オーバー",
+        "kana": [
+            "オ",
+            "ー",
+            "バ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14652,7 +21014,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "jeans",
-        "kana": "ジーパン",
+        "kana": [
+            "ジ",
+            "ー",
+            "パ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14660,7 +21027,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "stove",
-        "kana": "ストーブ",
+        "kana": [
+            "ス",
+            "ト",
+            "ー",
+            "ブ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14668,7 +21040,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "green",
-        "kana": "グリーン",
+        "kana": [
+            "グ",
+            "リ",
+            "ー",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14676,7 +21053,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "rugby",
-        "kana": "ラグビー",
+        "kana": [
+            "ラ",
+            "グ",
+            "ビ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14684,7 +21066,12 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "smog",
-        "kana": "スモッグ",
+        "kana": [
+            "ス",
+            "モ",
+            "ッ",
+            "グ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14692,7 +21079,13 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "drenched, soaked",
-        "kana": "びっしょり",
+        "kana": [
+            "び",
+            "っ",
+            "し",
+            "ょ",
+            "り"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -14700,7 +21093,13 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "say, tell (honorific)",
-        "kana": "おっしゃる",
+        "kana": [
+            "お",
+            "っ",
+            "し",
+            "ゃ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -14708,7 +21107,13 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "beat up",
-        "kana": "やっつける",
+        "kana": [
+            "や",
+            "っ",
+            "つ",
+            "け",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -14716,7 +21121,13 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "all at once",
-        "kana": "いっぺんに",
+        "kana": [
+            "い",
+            "っ",
+            "ぺ",
+            "ん",
+            "に"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -14724,7 +21135,13 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "passport",
-        "kana": "パスポート",
+        "kana": [
+            "パ",
+            "ス",
+            "ポ",
+            "ー",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14732,7 +21149,13 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "tissue",
-        "kana": "ティッシュ",
+        "kana": [
+            "テ",
+            "ィ",
+            "ッ",
+            "シ",
+            "ュ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14740,7 +21163,13 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "waiter",
-        "kana": "ウェーター",
+        "kana": [
+            "ウ",
+            "ェ",
+            "ー",
+            "タ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14748,7 +21177,13 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "party",
-        "kana": "パーティー",
+        "kana": [
+            "パ",
+            "ー",
+            "テ",
+            "ィ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14756,7 +21191,13 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "motorbike, motorcycle",
-        "kana": "オートバイ",
+        "kana": [
+            "オ",
+            "ー",
+            "ト",
+            "バ",
+            "イ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14764,7 +21205,13 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "calendar",
-        "kana": "カレンダー",
+        "kana": [
+            "カ",
+            "レ",
+            "ン",
+            "ダ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14772,7 +21219,13 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "necklace",
-        "kana": "ネックレス",
+        "kana": [
+            "ネ",
+            "ッ",
+            "ク",
+            "レ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14780,7 +21233,13 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "ballpoint pen",
-        "kana": "ボールペン",
+        "kana": [
+            "ボ",
+            "ー",
+            "ル",
+            "ペ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14788,7 +21247,13 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "picnic",
-        "kana": "ピクニック",
+        "kana": [
+            "ピ",
+            "ク",
+            "ニ",
+            "ッ",
+            "ク"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14796,7 +21261,13 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "scotch tape",
-        "kana": "セロテープ",
+        "kana": [
+            "セ",
+            "ロ",
+            "テ",
+            "ー",
+            "プ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14804,7 +21275,13 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "percent",
-        "kana": "パーセント",
+        "kana": [
+            "パ",
+            "ー",
+            "セ",
+            "ン",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14812,7 +21289,13 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "market",
-        "kana": "マーケット",
+        "kana": [
+            "マ",
+            "ー",
+            "ケ",
+            "ッ",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14820,7 +21303,13 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "airmail (loanword)",
-        "kana": "エアメール",
+        "kana": [
+            "エ",
+            "ア",
+            "メ",
+            "ー",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14828,7 +21317,13 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "whisky",
-        "kana": "ウィスキー",
+        "kana": [
+            "ウ",
+            "ィ",
+            "ス",
+            "キ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14836,7 +21331,13 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "concert",
-        "kana": "コンサート",
+        "kana": [
+            "コ",
+            "ン",
+            "サ",
+            "ー",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14844,7 +21345,13 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "one-piece dress",
-        "kana": "ワンピース",
+        "kana": [
+            "ワ",
+            "ン",
+            "ピ",
+            "ー",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14852,7 +21359,13 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "questionnaire",
-        "kana": "アンケート",
+        "kana": [
+            "ア",
+            "ン",
+            "ケ",
+            "ー",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14860,7 +21373,13 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "alcohol, alcoholic beverage",
-        "kana": "アルコール",
+        "kana": [
+            "ア",
+            "ル",
+            "コ",
+            "ー",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14868,7 +21387,13 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "volume",
-        "kana": "ボリューム",
+        "kana": [
+            "ボ",
+            "リ",
+            "ュ",
+            "ー",
+            "ム"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14876,7 +21401,13 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "mayonnaise",
-        "kana": "マヨネーズ",
+        "kana": [
+            "マ",
+            "ヨ",
+            "ネ",
+            "ー",
+            "ズ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14884,7 +21415,13 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "energy",
-        "kana": "エネルギー",
+        "kana": [
+            "エ",
+            "ネ",
+            "ル",
+            "ギ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14892,7 +21429,13 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "classical music, the classics",
-        "kana": "クラシック",
+        "kana": [
+            "ク",
+            "ラ",
+            "シ",
+            "ッ",
+            "ク"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14900,7 +21443,13 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "speaker",
-        "kana": "スピーカー",
+        "kana": [
+            "ス",
+            "ピ",
+            "ー",
+            "カ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14908,7 +21457,13 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "pilot",
-        "kana": "パイロット",
+        "kana": [
+            "パ",
+            "イ",
+            "ロ",
+            "ッ",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14916,7 +21471,13 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "shutter",
-        "kana": "シャッター",
+        "kana": [
+            "シ",
+            "ャ",
+            "ッ",
+            "タ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14924,7 +21485,13 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "contest, competition (mainly in arts)",
-        "kana": "コンクール",
+        "kana": [
+            "コ",
+            "ン",
+            "ク",
+            "ー",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14932,7 +21499,13 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "etiquette",
-        "kana": "エチケット",
+        "kana": [
+            "エ",
+            "チ",
+            "ケ",
+            "ッ",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14940,7 +21513,13 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "fax",
-        "kana": "ファックス",
+        "kana": [
+            "フ",
+            "ァ",
+            "ッ",
+            "ク",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14948,7 +21527,13 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "melody",
-        "kana": "メロディー",
+        "kana": [
+            "メ",
+            "ロ",
+            "デ",
+            "ィ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14956,7 +21541,13 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "underwear",
-        "kana": "パンティー",
+        "kana": [
+            "パ",
+            "ン",
+            "テ",
+            "ィ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -14964,7 +21555,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "be surprised, be startled (casual)",
-        "kana": "びっくりする",
+        "kana": [
+            "び",
+            "っ",
+            "く",
+            "り",
+            "す",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -14972,7 +21570,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "ticklish",
-        "kana": "くすぐったい",
+        "kana": [
+            "く",
+            "す",
+            "ぐ",
+            "っ",
+            "た",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -14980,7 +21585,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "wasteful, a shame",
-        "kana": "もったいない",
+        "kana": [
+            "も",
+            "っ",
+            "た",
+            "い",
+            "な",
+            "い"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -14988,7 +21600,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "frequently, repeatedly",
-        "kana": "しょっちゅう",
+        "kana": [
+            "し",
+            "ょ",
+            "っ",
+            "ち",
+            "ゅ",
+            "う"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -14996,7 +21615,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "come, go (honorific)",
-        "kana": "いらっしゃる",
+        "kana": [
+            "い",
+            "ら",
+            "っ",
+            "し",
+            "ゃ",
+            "る"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -15004,7 +21630,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "meeting",
-        "kana": "ミーティング",
+        "kana": [
+            "ミ",
+            "ー",
+            "テ",
+            "ィ",
+            "ン",
+            "グ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15012,7 +21645,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "waitress",
-        "kana": "ウェートレス",
+        "kana": [
+            "ウ",
+            "ェ",
+            "ー",
+            "ト",
+            "レ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15020,7 +21660,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "dry cleaning",
-        "kana": "クリーニング",
+        "kana": [
+            "ク",
+            "リ",
+            "ー",
+            "ニ",
+            "ン",
+            "グ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15028,7 +21675,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "office worker, company employee",
-        "kana": "サラリーマン",
+        "kana": [
+            "サ",
+            "ラ",
+            "リ",
+            "ー",
+            "マ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15036,7 +21690,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "elevator",
-        "kana": "エレベーター",
+        "kana": [
+            "エ",
+            "レ",
+            "ベ",
+            "ー",
+            "タ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15044,7 +21705,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "interview",
-        "kana": "インタビュー",
+        "kana": [
+            "イ",
+            "ン",
+            "タ",
+            "ビ",
+            "ュ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15052,7 +21720,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "plastic",
-        "kana": "プラスチック",
+        "kana": [
+            "プ",
+            "ラ",
+            "ス",
+            "チ",
+            "ッ",
+            "ク"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15060,7 +21735,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "romantic",
-        "kana": "ロマンチック",
+        "kana": [
+            "ロ",
+            "マ",
+            "ン",
+            "チ",
+            "ッ",
+            "ク"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15068,7 +21750,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "hamburger",
-        "kana": "ハンバーガー",
+        "kana": [
+            "ハ",
+            "ン",
+            "バ",
+            "ー",
+            "ガ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15076,7 +21765,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "chocolate",
-        "kana": "チョコレート",
+        "kana": [
+            "チ",
+            "ョ",
+            "コ",
+            "レ",
+            "ー",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15084,7 +21780,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "volleyball",
-        "kana": "バレーボール",
+        "kana": [
+            "バ",
+            "レ",
+            "ー",
+            "ボ",
+            "ー",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15092,7 +21795,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "announcer",
-        "kana": "アナウンサー",
+        "kana": [
+            "ア",
+            "ナ",
+            "ウ",
+            "ン",
+            "サ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15100,7 +21810,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "sandwich",
-        "kana": "サンドイッチ",
+        "kana": [
+            "サ",
+            "ン",
+            "ド",
+            "イ",
+            "ッ",
+            "チ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15108,7 +21825,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "curry rice",
-        "kana": "カレーライス",
+        "kana": [
+            "カ",
+            "レ",
+            "ー",
+            "ラ",
+            "イ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15116,7 +21840,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "accessories, jewelry",
-        "kana": "アクセサリー",
+        "kana": [
+            "ア",
+            "ク",
+            "セ",
+            "サ",
+            "リ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15124,7 +21855,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "raincoat",
-        "kana": "レインコート",
+        "kana": [
+            "レ",
+            "イ",
+            "ン",
+            "コ",
+            "ー",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15132,7 +21870,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "training, workout",
-        "kana": "トレーニング",
+        "kana": [
+            "ト",
+            "レ",
+            "ー",
+            "ニ",
+            "ン",
+            "グ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15140,7 +21885,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "schedule",
-        "kana": "スケジュール",
+        "kana": [
+            "ス",
+            "ケ",
+            "ジ",
+            "ュ",
+            "ー",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15148,7 +21900,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "handbag",
-        "kana": "ハンドバッグ",
+        "kana": [
+            "ハ",
+            "ン",
+            "ド",
+            "バ",
+            "ッ",
+            "グ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15156,7 +21915,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "music",
-        "kana": "ミュージック",
+        "kana": [
+            "ミ",
+            "ュ",
+            "ー",
+            "ジ",
+            "ッ",
+            "ク"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15164,7 +21930,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "commercial, advertising",
-        "kana": "コマーシャル",
+        "kana": [
+            "コ",
+            "マ",
+            "ー",
+            "シ",
+            "ャ",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15172,7 +21945,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "network",
-        "kana": "ネットワーク",
+        "kana": [
+            "ネ",
+            "ッ",
+            "ト",
+            "ワ",
+            "ー",
+            "ク"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15180,7 +21960,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "fashion",
-        "kana": "ファッション",
+        "kana": [
+            "フ",
+            "ァ",
+            "ッ",
+            "シ",
+            "ョ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15188,7 +21975,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "shopping",
-        "kana": "ショッピング",
+        "kana": [
+            "シ",
+            "ョ",
+            "ッ",
+            "ピ",
+            "ン",
+            "グ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15196,7 +21990,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "hardware",
-        "kana": "ハードウェア",
+        "kana": [
+            "ハ",
+            "ー",
+            "ド",
+            "ウ",
+            "ェ",
+            "ア"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15204,7 +22005,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "pineapple",
-        "kana": "パイナップル",
+        "kana": [
+            "パ",
+            "イ",
+            "ナ",
+            "ッ",
+            "プ",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15212,7 +22020,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "the Olympics",
-        "kana": "オリンピック",
+        "kana": [
+            "オ",
+            "リ",
+            "ン",
+            "ピ",
+            "ッ",
+            "ク"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15220,7 +22035,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "orchestra",
-        "kana": "オーケストラ",
+        "kana": [
+            "オ",
+            "ー",
+            "ケ",
+            "ス",
+            "ト",
+            "ラ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15228,7 +22050,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "concrete",
-        "kana": "コンクリート",
+        "kana": [
+            "コ",
+            "ン",
+            "ク",
+            "リ",
+            "ー",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15236,7 +22065,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "helicopter",
-        "kana": "ヘリコプター",
+        "kana": [
+            "ヘ",
+            "リ",
+            "コ",
+            "プ",
+            "タ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15244,7 +22080,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "videotape",
-        "kana": "ビデオテープ",
+        "kana": [
+            "ビ",
+            "デ",
+            "オ",
+            "テ",
+            "ー",
+            "プ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15252,7 +22095,14 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "sales representative, salesperson",
-        "kana": "セールスマン",
+        "kana": [
+            "セ",
+            "ー",
+            "ル",
+            "ス",
+            "マ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15260,7 +22110,15 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "perhaps",
-        "kana": "ひょっとしたら",
+        "kana": [
+            "ひ",
+            "ょ",
+            "っ",
+            "と",
+            "し",
+            "た",
+            "ら"
+        ],
         "type": "hiragana",
         "romaji": [
             "MANUAL"
@@ -15268,7 +22126,15 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "computer",
-        "kana": "コンピューター",
+        "kana": [
+            "コ",
+            "ン",
+            "ピ",
+            "ュ",
+            "ー",
+            "タ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15276,7 +22142,15 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "iced coffee",
-        "kana": "アイスコーヒー",
+        "kana": [
+            "ア",
+            "イ",
+            "ス",
+            "コ",
+            "ー",
+            "ヒ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15284,7 +22158,15 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "ice cream",
-        "kana": "アイスクリーム",
+        "kana": [
+            "ア",
+            "イ",
+            "ス",
+            "ク",
+            "リ",
+            "ー",
+            "ム"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15292,7 +22174,15 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "escalator",
-        "kana": "エスカレーター",
+        "kana": [
+            "エ",
+            "ス",
+            "カ",
+            "レ",
+            "ー",
+            "タ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15300,7 +22190,15 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "typewriter",
-        "kana": "タイプライター",
+        "kana": [
+            "タ",
+            "イ",
+            "プ",
+            "ラ",
+            "イ",
+            "タ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15308,7 +22206,15 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "Internet",
-        "kana": "インターネット",
+        "kana": [
+            "イ",
+            "ン",
+            "タ",
+            "ー",
+            "ネ",
+            "ッ",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15316,7 +22222,15 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "boyfriend",
-        "kana": "ボーイフレンド",
+        "kana": [
+            "ボ",
+            "ー",
+            "イ",
+            "フ",
+            "レ",
+            "ン",
+            "ド"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15324,7 +22238,15 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "girlfriend",
-        "kana": "ガールフレンド",
+        "kana": [
+            "ガ",
+            "ー",
+            "ル",
+            "フ",
+            "レ",
+            "ン",
+            "ド"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15332,7 +22254,15 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "rush hour",
-        "kana": "ラッシュアワー",
+        "kana": [
+            "ラ",
+            "ッ",
+            "シ",
+            "ュ",
+            "ア",
+            "ワ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15340,7 +22270,15 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "self-service",
-        "kana": "セルフサービス",
+        "kana": [
+            "セ",
+            "ル",
+            "フ",
+            "サ",
+            "ー",
+            "ビ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15348,7 +22286,15 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "journalist",
-        "kana": "ジャーナリスト",
+        "kana": [
+            "ジ",
+            "ャ",
+            "ー",
+            "ナ",
+            "リ",
+            "ス",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15356,7 +22302,15 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "platform",
-        "kana": "プラットホーム",
+        "kana": [
+            "プ",
+            "ラ",
+            "ッ",
+            "ト",
+            "ホ",
+            "ー",
+            "ム"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15364,7 +22318,15 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "cassette tape",
-        "kana": "カセットテープ",
+        "kana": [
+            "カ",
+            "セ",
+            "ッ",
+            "ト",
+            "テ",
+            "ー",
+            "プ"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15372,7 +22334,15 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "flight attendant",
-        "kana": "スチュワーデス",
+        "kana": [
+            "ス",
+            "チ",
+            "ュ",
+            "ワ",
+            "ー",
+            "デ",
+            "ス"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15380,7 +22350,15 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "journalism",
-        "kana": "ジャーナリズム",
+        "kana": [
+            "ジ",
+            "ャ",
+            "ー",
+            "ナ",
+            "リ",
+            "ズ",
+            "ム"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15388,7 +22366,15 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "alphabet",
-        "kana": "アルファベット",
+        "kana": [
+            "ア",
+            "ル",
+            "フ",
+            "ァ",
+            "ベ",
+            "ッ",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15396,7 +22382,15 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "weekend",
-        "kana": "ウィークエンド",
+        "kana": [
+            "ウ",
+            "ィ",
+            "ー",
+            "ク",
+            "エ",
+            "ン",
+            "ド"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15404,7 +22398,16 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "basketball",
-        "kana": "バスケットボール",
+        "kana": [
+            "バ",
+            "ス",
+            "ケ",
+            "ッ",
+            "ト",
+            "ボ",
+            "ー",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15412,7 +22415,16 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "cash card",
-        "kana": "キャッシュカード",
+        "kana": [
+            "キ",
+            "ャ",
+            "ッ",
+            "シ",
+            "ュ",
+            "カ",
+            "ー",
+            "ド"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15420,7 +22432,16 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "mechanical pencil",
-        "kana": "シャープペンシル",
+        "kana": [
+            "シ",
+            "ャ",
+            "ー",
+            "プ",
+            "ペ",
+            "ン",
+            "シ",
+            "ル"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15428,7 +22449,16 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "inflation",
-        "kana": "インフレーション",
+        "kana": [
+            "イ",
+            "ン",
+            "フ",
+            "レ",
+            "ー",
+            "シ",
+            "ョ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15436,7 +22466,16 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "recreation",
-        "kana": "レクリエーション",
+        "kana": [
+            "レ",
+            "ク",
+            "リ",
+            "エ",
+            "ー",
+            "シ",
+            "ョ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15444,7 +22483,16 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "tape recorder",
-        "kana": "テープレコーダー",
+        "kana": [
+            "テ",
+            "ー",
+            "プ",
+            "レ",
+            "コ",
+            "ー",
+            "ダ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15452,7 +22500,16 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "intonation",
-        "kana": "イントネーション",
+        "kana": [
+            "イ",
+            "ン",
+            "ト",
+            "ネ",
+            "ー",
+            "シ",
+            "ョ",
+            "ン"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15460,7 +22517,17 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "supermarket",
-        "kana": "スーパーマーケット",
+        "kana": [
+            "ス",
+            "ー",
+            "パ",
+            "ー",
+            "マ",
+            "ー",
+            "ケ",
+            "ッ",
+            "ト"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15468,7 +22535,17 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "toilet paper",
-        "kana": "トイレットペーパー",
+        "kana": [
+            "ト",
+            "イ",
+            "レ",
+            "ッ",
+            "ト",
+            "ペ",
+            "ー",
+            "パ",
+            "ー"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"
@@ -15476,7 +22553,17 @@ export const wordsWithTsuOrElongation: Word[] = [
     },
     {
         "definition": "golden week",
-        "kana": "ゴールデンウィーク",
+        "kana": [
+            "ゴ",
+            "ー",
+            "ル",
+            "デ",
+            "ン",
+            "ウ",
+            "ィ",
+            "ー",
+            "ク"
+        ],
         "type": "katakana",
         "romaji": [
             "MANUAL"

@@ -51,6 +51,14 @@
     display: none;
 }
 
+.stuck {
+    position: sticky;
+}
+
+.bold {
+    font-weight: $fontWeightBold;
+}
+
 %rounded-border {
     border-radius: $borderRadius;
 }

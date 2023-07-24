@@ -40,6 +40,13 @@ const Settings = forwardRef((props: Props, ref: ReactForwardedRef<HTMLButtonElem
             <div className = "setting-options">
                 <SettingOption
                     ref = {ref}
+                    title = "Auto focus next input"
+                    onEnable = {() => setSettings(currentSettings => ({ ...currentSettings, autoFocusNextInput: true }))}
+                    onDisable = {() => setSettings(currentSettings => ({ ...currentSettings, autoFocusNextInput: false }))}
+                    startDeactivated = {settings.autoFocusNextInput === false}
+                />
+                <SettingOption
+                    ref = {ref}
                     title = "Show word definitions"
                     onEnable = {() => setSettings(currentSettings => ({ ...currentSettings, showDefinitions: true }))}
                     onDisable = {() => setSettings(currentSettings => ({ ...currentSettings, showDefinitions: false }))}

@@ -5,15 +5,16 @@
     display: flex;
 
     .icon {
-        color: $lightModeTextColor;
         margin-right: 1rem;
     }
     
     .check {
         background-color: $complete;
+        color: $lightModeTextColor;
     }
-
+    
     .x {
         background-color: $crimson;
+        color: $darkModeTextColor;
     }
 }

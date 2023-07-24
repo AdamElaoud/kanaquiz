@@ -8,6 +8,7 @@ import "./TextInput.scss";
 
 interface Props {
     defaultValue?: string,
+    disabled?: boolean,
     name: string,
     onChange: (inputState: TextInputState) => void | string,
     showFlareOnInvalidInput?: boolean,
@@ -16,6 +17,7 @@ interface Props {
     validator?: (value: string) => { valid: boolean, errorMsg: string }
 };
 
+const DEFAULT_DISABLED_SETTING = false;
 const DEFAULT_INITIAL_VALUE = "";
 const DEFAULT_SHOW_FLARE_ON_INVALID_INPUT = false;
 const DEFAULT_SIZE = Size.Medium;
@@ -23,6 +25,7 @@ const DEFAULT_SIZE = Size.Medium;
 const TextInput = (props: Props) => {
     const {
         defaultValue = DEFAULT_INITIAL_VALUE,
+        disabled = DEFAULT_DISABLED_SETTING,
         name,
         onChange,
         showFlareOnInvalidInput = DEFAULT_SHOW_FLARE_ON_INVALID_INPUT,
@@ -64,6 +67,7 @@ const TextInput = (props: Props) => {
             <label className = "visually-hidden" htmlFor = {`${name}-input`}>{`Text input for ${name}`}</label>
             <input
                 name = {`${name}-input`}
+                disabled = {disabled}
                 ref = {inputRef}
                 type = "text"
                 role = "input"

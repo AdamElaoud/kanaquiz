@@ -71,10 +71,9 @@ html {
     
     .page {
         height: calc(92% - $headerHeight - $headerSpacing);
-        overflow-y: auto;
 
         &.is-in-quiz {
-            height: 100%;
+            height: calc(100% - $headerHeight - $headerSpacing);
         }
     }
 
@@ -93,7 +92,7 @@ html {
             height: calc(88% - $headerHeight - $headerSpacing);
 
             &.is-in-quiz {
-                height: 100%;
+                height: calc(100% - $headerHeight - $headerSpacing);
             }
         }
     
@@ -107,10 +106,13 @@ html {
     .app {
         .page {
             height: calc(82% - $headerHeight - $headerSpacing);
-            margin-bottom: 2%;
+
+            &:not(.is-in-quiz) {
+                margin-bottom: 2%;
+            }
 
             &.is-in-quiz {
-                height: 100%;
+                height: calc(100% - $headerHeight - $headerSpacing);
             }
         }
     

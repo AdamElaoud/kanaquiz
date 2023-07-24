@@ -46,6 +46,7 @@ const App = () : JSX.Element => {
     const [page, setPage] = useState<PageType>(PageType.QuizSelect);
     const [showSettings, setShowSettings] = useState<boolean>(false);
     const [settings, setSettings] = useLocalStorage<SettingsData>(SETTINGS_KEY, {
+        autoFocusNextInput: true,
         showDefinitions: true,
         showRotationWarning: true
     }, { listenGlobal: true });

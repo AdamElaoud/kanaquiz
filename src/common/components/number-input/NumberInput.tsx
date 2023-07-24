@@ -11,6 +11,7 @@ import "./NumberInput.scss";
 interface Props {
     buttonIcons?: [downIcon: IconType, upIcon: IconType],
     defaultValue?: number | "",
+    disabled?: false,
     max?: number,
     min?: number,
     name: string,
@@ -22,6 +23,7 @@ interface Props {
 };
 
 const DEFAULT_BUTTON_ICONS: [IconType, IconType] = [FontAwesomeIconType.Down, FontAwesomeIconType.Up]
+const DEFAULT_DISABLED_SETTING = false;
 const DEFAULT_INITIAL_VALUE = 1;
 const DEFAULT_SHOW_BUTTONS = true;
 const DEFAULT_SHOW_FLARE_ON_INVALID_INPUT = false;
@@ -31,6 +33,7 @@ const NumberInput = (props: Props) => {
     const {
         buttonIcons = DEFAULT_BUTTON_ICONS,
         defaultValue = DEFAULT_INITIAL_VALUE,
+        disabled = DEFAULT_DISABLED_SETTING,
         max,
         min,
         name,
@@ -108,6 +111,7 @@ const NumberInput = (props: Props) => {
                 <label className = "visually-hidden" htmlFor = {`${name}-input`}>{`Number input for ${name}`}</label>
                 <input
                     name = {`${name}-input`}
+                    disabled = {disabled}
                     ref = {inputRef}
                     type = "number"
                     min = {min}

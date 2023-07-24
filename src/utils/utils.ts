@@ -84,6 +84,7 @@ export const generateQuestions = (
         const isMultChoice = format === QuizFormat.MultipleChoice;
 
         const responseMode = isJPtoEN ? Mode.Romaji : Mode.Kana;
+        const detailsMode = isJPtoEN ? Mode.Kana : Mode.Romaji;
         const promptMode = isJPtoEN ? Mode.Kana : Mode.Romaji;
 
         const selectionLetters: KanaLetters[] = kanaSelections.map(selection => {
@@ -99,6 +100,7 @@ export const generateQuestions = (
 
         return prompts.map(prompt => ({
             answer: prompt[responseMode],
+            answerDetails: prompt[detailsMode],
             prompt: prompt[promptMode],
             ...(isMultChoice && {
                 choices: generateChoicesForPrompt(prompt, selectionLetters, responseMode) 
@@ -120,7 +122,8 @@ export const generateQuestions = (
 
         return prompts.map(prompt => ({
             answer: prompt.romaji,
-            prompt: prompt.kana,
+            answerDetails: prompt.kana,
+            prompt: prompt.kana.join(""),
             context: prompt.definition
         }));
     }

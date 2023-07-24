@@ -1,0 +1,17 @@
+@use "../../common/styles/index" as *;
+
+.answer-explanation {
+    column-gap: 1rem;
+    display: flex;
+    font-weight: $fontWeightSuperBold;
+
+    .correct-answer-with-details {
+        display: flex;
+        column-gap: 1rem;
+
+        .tooltip-text {
+            color: $crimson;
+            text-decoration-color: $crimson;
+        }
+    }
+}
