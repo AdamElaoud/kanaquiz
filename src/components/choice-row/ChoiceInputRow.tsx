@@ -15,7 +15,7 @@ const ChoiceInputRow = (props: Props) : JSX.Element => {
         return <TextInput key = {questionIndex} disabled = {disabled} name = {answers} onChange = {onChange}/>;
 
     return (
-        <>{answers.map((answer, index) => <TextInput key = {`${answer}-${index}`} disabled = {disabled} name = {answer} onChange = {onChange}/>)}</>
+        <>{answers.map((answer, index) => <TextInput key = {`${questionIndex}-${answer}-${index}`} disabled = {disabled} name = {answer} onChange = {onChange}/>)}</>
     );
 };
 
