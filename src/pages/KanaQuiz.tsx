@@ -50,14 +50,17 @@ const KanaQuiz = () : JSX.Element => {
     const answerIsWord = typeof activeQuestion.answer !== "string";
     // type cast is protected by check for answerIsWord, TypeScript is just stoopid
     const activeQuestionAnswer = !answerIsWord ? activeQuestion.answer : (activeQuestion.answer as string[]).join(" ");
-    const activeQuestionAnswerSize = !answerIsWord ? 1 : activeQuestion.answer.length;
+    const activeQuestionNumberOfPrompts = !answerIsWord ? 1 : activeQuestion.answer.length;
+
+    const hasAnsweredAllInputs =
+        writeResponses.length === activeQuestionNumberOfPrompts && writeResponses.every(response => response !== "");
 
     const isMultChoice = quizSelections.format === QuizFormat.MultipleChoice;
 
     const submitIsEnabled = 
         !showResult && 
         ((isMultChoice && multChoiceResponse) ||
-        (!isMultChoice && writeResponses.length === activeQuestionAnswerSize && writeResponses.every(response => response !== "")));
+        (!isMultChoice && hasAnsweredAllInputs));
 
     useEffect(() => {
         if (!isMultChoice) {
