@@ -4,7 +4,7 @@ import { PlainFn, ReactFormOnSubmitEvent, ReactForwardedRef, ReactSetState } fro
 import { isMobileDevice } from "@/common/utils/utils";
 import SettingOption from "@/components/setting-option/SettingOption";
 import { SettingsData } from "@/types";
-import { CLEAR_STORED_DATA_TOOLTIP, GLOBAL_KEY, LOCAL_STORAGE_EVENT_NAME, STORAGE_CLEARED, STORAGE_CLEARED_ID } from "@/utils/constants";
+import { CANNOT_CLEAR_STORED_DATA_TOOLTIP, CLEAR_STORED_DATA_TOOLTIP, GLOBAL_KEY, LOCAL_STORAGE_EVENT_NAME, STORAGE_CLEARED, STORAGE_CLEARED_ID } from "@/utils/constants";
 import { forwardRef } from "react";
 
 import "./Settings.scss";
@@ -64,7 +64,7 @@ const Settings = forwardRef((props: Props, ref: ReactForwardedRef<HTMLButtonElem
                     <Button className = "clear-storage-button" onClick = {clearStorage} disabled = {isInQuiz}>
                         Clear All Data
                     </Button>
-                    <HelpTooltip tooltip = {CLEAR_STORED_DATA_TOOLTIP}/>
+                    <HelpTooltip tooltip = {isInQuiz ? CANNOT_CLEAR_STORED_DATA_TOOLTIP : CLEAR_STORED_DATA_TOOLTIP}/>
                 </div>
             </div>
         </form>
