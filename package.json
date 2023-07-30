@@ -2,7 +2,11 @@
   "name": "kanaquiz",
   "private": true,
   "version": "1.0.0",
-  "browserslist": "last 2 versions, not dead, >0.2%",
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    ">0.2%"
+  ],
   "homepage": "https://adamelaoud.github.io/",
   "type": "module",
   "vsc-organize-imports": {
