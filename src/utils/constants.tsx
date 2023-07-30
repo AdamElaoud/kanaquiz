@@ -1,13 +1,7 @@
 /* eslint-disable */
 import { Icon, LinkText } from "@/common/components";
 import { CustomIconType, FontAwesomeIconType, Size } from "@/common/types";
-import KanaQuiz from "@/pages/KanaQuiz";
-import KanaSelection from "@/pages/KanaSelection";
-import QuizRecap from "@/pages/QuizRecap";
-import QuizSelection from "@/pages/QuizSelection";
-import QuizSummary from "@/pages/QuizSummary";
-import WordSelection from "@/pages/WordSelection";
-import { PageMapType, QuizDirection, QuizFormat, QuizTopic, SummaryMapType } from "@/types";
+import { QuizDirection, QuizFormat, QuizTopic, SummaryMapType } from "@/types";
 
 // this value is expected to match the SCSS $sizeWidthThreshhold variable in _values.scss
 export const SCREEN_WIDTH_THRESHHOLD = 600;
@@ -24,15 +18,6 @@ export const SCREEN_PARTIAL_FILL_PERCENT = 65; // percentage contents should fil
 export const DEFAULT_QUESTION_AMOUNT = 20;
 export const MINIMUM_QUESTION_AMOUNT = 1;
 export const MAXIMUM_QUESTION_AMOUNT = 50;
-
-export const PAGES: PageMapType = {
-    KanaQuiz: () => <KanaQuiz />,
-    KanaSelection: () => <KanaSelection />,
-    QuizRecap: () => <QuizRecap />,
-    QuizSelection: () => <QuizSelection />,
-    QuizSummary: () => <QuizSummary />,
-    WordSelection: () => <WordSelection />
-};
 
 export const SUMMARY_DISPLAY: SummaryMapType = {
     [QuizTopic.Kana]: () => 

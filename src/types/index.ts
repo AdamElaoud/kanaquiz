@@ -1,4 +1,4 @@
-import { ReactElementFn, ReactNodeFn } from "@/common/types";
+import { ReactElementFn } from "@/common/types";
 
 // potential future color theming
 export enum Theme {
@@ -27,23 +27,19 @@ export enum QuizFormat {
     WriteTheAnswer = "Write-the-Answer",
 };
 
-export enum PageType {
-    KanaQuiz = "KanaQuiz",
-    KanaSelect = "KanaSelection",
-    QuizRecap = "QuizRecap",
-    QuizSelect = "QuizSelection",
-    QuizSummary = "QuizSummary",
-    WordSelection = "WordSelection"
+export enum PageRoute {
+    KanaQuiz = "kana-quiz",
+    KanaSelect = "kana-selection",
+    QuizRecap = "quiz-recap",
+    QuizSelect = "/", // index route
+    QuizSummary = "quiz-summary",
+    WordSelect = "word-selection"
 };
 
 export enum TabID {
     Hiragana = 0,
     Katakana = 1,
     Lookalikes = 2
-};
-
-export type PageMapType = {
-    [key in PageType]: ReactNodeFn;
 };
 
 export type SummaryMapType =  Record<QuizTopic | QuizDirection | QuizFormat, ReactElementFn>;

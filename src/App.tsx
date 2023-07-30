@@ -13,7 +13,7 @@ import ModeProvider from '@/contexts/ModeContext';
 import QuizSelectionsProvider from '@/contexts/QuizSelectionsContext';
 import SettingsProvider from '@/contexts/SettingsContext';
 import WordSelectionsProvider from '@/contexts/WordSelectionsContext';
-import { Mode, PageType, QuizDirection, QuizFormat, QuizSelectionData, QuizTopic, SettingsData, WordSelectionData } from '@/types';
+import { Mode, PageRoute, QuizDirection, QuizFormat, QuizSelectionData, QuizTopic, SettingsData, WordSelectionData } from '@/types';
 import {
     DEFAULT_QUESTION_AMOUNT,
     KANA_SELECTION_STORAGE_KEY,
@@ -22,7 +22,6 @@ import {
     NOT_ENOUGH_WORDS,
     ORIENTATION_WARNING,
     ORIENTATION_WARNING_ID,
-    PAGES,
     QUIZ_SELECTION_STORAGE_KEY,
     SCREEN_FILL_PERCENT,
     SCREEN_FILL_WIDTH,
@@ -33,17 +32,19 @@ import {
     WORD_SELECTION_STORAGE_KEY
 } from '@/utils/constants';
 import { useLayoutEffect, useRef, useState } from "react";
+import { Outlet, useLocation, useNavigate } from "react-router-dom"
 
 import '@/styles/App.scss';
 
 const App = () : JSX.Element => {
+    const { pathname } = useLocation();
+    const navigate = useNavigate();
     const pageRef = useRef<HTMLDivElement>(null);
     const closeModalButtonRef = useRef<HTMLButtonElement>(null);
     const settingOptionRef = useRef<HTMLButtonElement>(null);
     const [wizardKey, resetWizard] = useState<boolean>(false);
     const [pageKey, resetPage] = useState<boolean>(false);
     const [mode, setMode] = useState<Mode>(Mode.Kana);
-    const [page, setPage] = useState<PageType>(PageType.QuizSelect);
     const [showSettings, setShowSettings] = useState<boolean>(false);
     const [settings, setSettings] = useLocalStorage<SettingsData>(SETTINGS_KEY, {
         autoFocusNextInput: true,
@@ -115,7 +116,7 @@ const App = () : JSX.Element => {
     const onComplete = () => setShownWelcomeMessage(true);
 
     const onStepChange = ({ newStepID }: StepState) => {
-        setPage(newStepID as PageType);
+        navigate(newStepID as string)
         pageRef.current?.scroll(0, 0);
     };
 
@@ -124,14 +125,14 @@ const App = () : JSX.Element => {
     const pageSteps: StepConfig[] = [
         {
             iconType: FontAwesomeIconType.Pencil,
-            ID: PageType.QuizSelect,
+            ID: PageRoute.QuizSelect,
             title: "Quiz",
             blockNextStep: () => quizSelections.amount === "",
             nextStepBlockedError: () => NOT_ENOUGH_QUESTIONS
         },
         {
             iconType: kanaIsSelectedTopic ? CustomIconType.Kana : FontAwesomeIconType.Book,
-            ID: kanaIsSelectedTopic ? PageType.KanaSelect : PageType.WordSelection,
+            ID: kanaIsSelectedTopic ? PageRoute.KanaSelect : PageRoute.WordSelect,
             title: kanaIsSelectedTopic ? "Kana" : "Words",
             blockNextStep: () => kanaIsSelectedTopic && kanaSelections.length < 3
                 || !kanaIsSelectedTopic && (!wordSelections.allHiragana && !wordSelections.allKatakana),
@@ -139,17 +140,17 @@ const App = () : JSX.Element => {
         },
         {
             iconType: FontAwesomeIconType.ClipboardQuestion,
-            ID: PageType.QuizSummary,
+            ID: PageRoute.QuizSummary,
             title: "Review"
         },
     ];
 
     const wizardCompleteConfig = {
         text: "START",
-        onComplete: () => setPage(PageType.KanaQuiz)
+        onComplete: () => navigate(PageRoute.KanaQuiz)
     };
 
-    const isInQuiz = page === PageType.KanaQuiz || page === PageType.QuizRecap;
+    const isInQuiz = pathname === `/${PageRoute.KanaQuiz}` || pathname === `/${PageRoute.QuizRecap}`;
 
     const pageClasses = ["page"];
     if (isInQuiz) pageClasses.push("is-in-quiz");
@@ -198,12 +199,12 @@ const App = () : JSX.Element => {
                                 <div className = "app" style = {appStyle}>
                                     <Header
                                         style = {dynamicWidth}
-                                        onClick = {() => { setPage(PageType.QuizSelect); resetWizard(state => !state); }}
+                                        onClick = {() => { navigate(PageRoute.QuizSelect); resetWizard(state => !state); }}
                                         openSettings = {() => setShowSettings(true)}
                                     />
 
                                     <div key = {`page-${pageKey}`} ref = {pageRef} className = {pageClasses.join(" ")} style = {dynamicWidth}>
-                                        {PAGES[page]()}
+                                        <Outlet />
                                     </div>
                                     
                                     {!isInQuiz && <StepWizard
