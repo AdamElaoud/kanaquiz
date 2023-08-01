@@ -150,7 +150,7 @@ const App = () : JSX.Element => {
         onComplete: () => navigate(PageRoute.KanaQuiz)
     };
 
-    const isInQuiz = pathname === `/${PageRoute.KanaQuiz}` || pathname === `/${PageRoute.QuizRecap}`;
+    const isInQuiz = pathname === PageRoute.KanaQuiz || pathname === PageRoute.QuizRecap;
 
     const pageClasses = ["page"];
     if (isInQuiz) pageClasses.push("is-in-quiz");
