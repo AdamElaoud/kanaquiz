@@ -4,7 +4,7 @@
     "background_color": "#010818",
     "display": "standalone",
     "description": "Master Hiragana and Katakana!",
-    "start_url": "https://kanaquiz.pro/",
+    "start_url": ".",
     "serviceworker": {
 
     },
