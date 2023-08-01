@@ -9,14 +9,14 @@ import QuizSummary from '@/pages/QuizSummary';
 import WordSelection from '@/pages/WordSelection';
 import { PageRoute } from '@/types';
 import { createRoot } from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createMemoryRouter, RouterProvider } from 'react-router-dom';
 
 // This app is functionally a large guided Step Wizard. As such,
 // it does not make sense to allow the user to jump to particular
 // pages via the URL, effectively skipping steps. As such, Memory
 // Router is being used instead of Browser router to avoid
 // putting paths into the URL
-const router = createBrowserRouter([
+const router = createMemoryRouter([
     {
         path: "/",
         element: <App />,
