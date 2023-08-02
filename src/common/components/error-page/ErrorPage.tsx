@@ -17,20 +17,20 @@ const ErrorPage = () : JSX.Element => {
     const { hash, key, pathname, search, state } = useLocation();
     const matches = useMatches();
     const routeError = useRouteError();
-    console.log(routeError);
 
-    const { data, error, internal, status, statusText } = routeError as ErrorResponse;
+    // const { data, error, internal, status, statusText } = routeError as ErrorResponse;
 
     return (
         <div className = "error-page">
-            <div>Stack: {error.stack}</div>
+            <div>Error: {typeof routeError}</div>
+            {/* <div>Stack: {error.stack}</div>
             <div>----------</div>
             <div>Error: {error.message}</div>
             <div>Data: {data}</div>
             <div>Internal: {internal}</div>
             <div>Status: {status}</div>
             <div>Status Text: {statusText}</div>
-            <div>----------</div>
+            <div>----------</div> */}
             <div>Hash: {hash}</div>
             <div>Path Name: {pathname}</div>
             <div>Key: {key}</div>
