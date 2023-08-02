@@ -2,16 +2,16 @@ import { useLocation, useMatches, useRouteError } from "react-router-dom";
 
 import "./ErrorPage.scss";
 
-type ErrorResponse = {
-    data: string,
-    error: {
-        message: string,
-        stack: string
-    },
-    internal: boolean,
-    status: number,
-    statusText: string
-};
+// type ErrorResponse = {
+//     data: string,
+//     error: {
+//         message: string,
+//         stack: string
+//     },
+//     internal: boolean,
+//     status: number,
+//     statusText: string
+// };
 
 const ErrorPage = () : JSX.Element => {
     const { hash, key, pathname, search, state } = useLocation();
