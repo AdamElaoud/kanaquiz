@@ -1,13 +1,15 @@
-import { useLocation, useMatches } from "react-router-dom";
+import { useLocation, useMatches, useRouteError } from "react-router-dom";
 
 import "./ErrorPage.scss";
 
 const ErrorPage = () : JSX.Element => {
     const { hash, key, pathname, search, state } = useLocation();
     const matches = useMatches();
+    const error = useRouteError();
 
     return (
         <div className = "error-page">
+            <div>Error: {error as string}</div>
             <div>Hash: {hash}</div>
             <div>Pathname: {pathname}</div>
             <div>Key: {key}</div>
