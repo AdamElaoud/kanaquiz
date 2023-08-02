@@ -2,36 +2,34 @@ import { useLocation, useMatches, useRouteError } from "react-router-dom";
 
 import "./ErrorPage.scss";
 
-// type ErrorResponse = {
-//     data: string,
-//     error: {
-//         message: string,
-//         stack: string
-//     },
-//     internal: boolean,
-//     status: number,
-//     statusText: string
-// };
+type ErrorResponse = {
+    data?: string,
+    error?: {
+        message?: string,
+        stack?: string
+    },
+    internal?: boolean,
+    status?: number,
+    statusText?: string
+};
 
 const ErrorPage = () : JSX.Element => {
     const { hash, key, pathname, search, state } = useLocation();
     const matches = useMatches();
     const routeError = useRouteError();
 
-    // const { data, error, internal, status, statusText } = routeError as ErrorResponse;
+    const { data, error, internal, status, statusText } = routeError as ErrorResponse;
 
     return (
         <div className = "error-page">
-            <div>Error: {typeof routeError}</div>
-            <div>Attributes: {typeof routeError === "object" ? Object.keys(routeError as object) : "N/A"}</div>
-            {/* <div>Stack: {error.stack}</div>
+            <div>Stack: {error?.stack}</div>
             <div>----------</div>
-            <div>Error: {error.message}</div>
+            <div>Error: {error?.message}</div>
             <div>Data: {data}</div>
             <div>Internal: {internal}</div>
             <div>Status: {status}</div>
             <div>Status Text: {statusText}</div>
-            <div>----------</div> */}
+            <div>----------</div>
             <div>Hash: {hash}</div>
             <div>Path Name: {pathname}</div>
             <div>Key: {key}</div>
