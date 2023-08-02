@@ -9,9 +9,11 @@ import QuizSummary from '@/pages/QuizSummary';
 import WordSelection from '@/pages/WordSelection';
 import { PageRoute } from '@/types';
 import { createRoot } from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 
-const router = createBrowserRouter([
+// Hash router is required here because we don't have control over the server
+// due to hosting being provided by github pages
+const router = createHashRouter([
     {
         path: "/",
         element: <App />,
