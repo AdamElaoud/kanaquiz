@@ -23,6 +23,7 @@ const ErrorPage = () : JSX.Element => {
     return (
         <div className = "error-page">
             <div>Error: {typeof routeError}</div>
+            <div>Attributes: {typeof routeError === "object" ? Object.keys(routeError as object) : "N/A"}</div>
             {/* <div>Stack: {error.stack}</div>
             <div>----------</div>
             <div>Error: {error.message}</div>
