@@ -18,8 +18,8 @@ const ErrorPage = () : JSX.Element => {
 
                 return (
                     <>
-                        <div>Match</div>
-                        <div>ID: {id}</div>
+                        <div>----------</div>
+                        <div>Match {id}</div>
                         <div>Pathname: {pathname}</div>
                     </>
                 );
