@@ -79,10 +79,10 @@ const App = () : JSX.Element => {
         console.log(screen.orientation);
         console.log(screen.orientation.type);
 
-        if (isRotationWarningEnabled && screen.orientation.type.includes("portrait"))
+        if (isRotationWarningEnabled && screen?.orientation?.type.includes("portrait"))
             dismissOne(ORIENTATION_WARNING_ID);
             
-        if (isRotationWarningEnabled && screen.orientation.type.includes("landscape"))
+        if (isRotationWarningEnabled && screen?.orientation?.type.includes("landscape"))
             warning(ORIENTATION_WARNING, { autoClose: false, toastId: ORIENTATION_WARNING_ID });
 
     // a render is triggered on rotation due to the useWindowSize and useDynamicWidth hooks
