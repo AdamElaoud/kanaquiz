@@ -1,4 +1,5 @@
 import Button from "@/common/components/button/Button";
+import ErrorBoundary from "@/common/components/error-boundary/ErrorBoundary";
 import ErrorPage from "@/common/components/error-page/ErrorPage";
 import HelpTooltip from "@/common/components/help-tooltip/HelpTooltip";
 import Icon from "@/common/components/icon/Icon";
@@ -23,6 +24,7 @@ import TooltipTrigger from "@/common/components/tooltip/TooltipTrigger";
 
 export {
     Button,
+    ErrorBoundary,
     ErrorPage,
     HelpTooltip,
     Icon,

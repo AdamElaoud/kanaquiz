@@ -1,4 +1,4 @@
-import { Modal, NotificationCenter, StepWizard } from '@/common/components';
+import { ErrorBoundary, Modal, NotificationCenter, StepWizard } from '@/common/components';
 import useDynamicWidth from '@/common/hooks/useDynamicWidth';
 import useLocalStorage from '@/common/hooks/useLocalStorage';
 import useNotification from '@/common/hooks/useNotification';
@@ -163,7 +163,7 @@ const App = () : JSX.Element => {
     };
 
     return (
-        <>
+        <ErrorBoundary>
             <NotificationCenter />
 
             <Modal
@@ -223,7 +223,7 @@ const App = () : JSX.Element => {
                     </KanaSelectionsProvider>
                 </ModeProvider>
             </SettingsProvider>
-        </>
+        </ErrorBoundary>
     );
 };
 
