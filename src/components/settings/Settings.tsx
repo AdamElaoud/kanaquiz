@@ -32,6 +32,11 @@ const Settings = forwardRef((props: Props, ref: ReactForwardedRef<HTMLButtonElem
         onClearStorage();
     };
 
+    // Note: this check for existence is required for browsers that do not support the
+    // ScreenOrientation API *cough cough Safari*
+    const browserSupportsScreenOrientation = screen.orientation;
+    const isRotationWarningEnabled = browserSupportsScreenOrientation && isMobileDevice();
+
     return (
         <form className = "settings-modal" onSubmit = {onSubmit}>
             <div className = "settings-title">
@@ -47,13 +52,12 @@ const Settings = forwardRef((props: Props, ref: ReactForwardedRef<HTMLButtonElem
                     startDeactivated = {settings.autoFocusNextInput === false}
                 />
                 <SettingOption
-                    ref = {ref}
                     title = "Show word definitions"
                     onEnable = {() => setSettings(currentSettings => ({ ...currentSettings, showDefinitions: true }))}
                     onDisable = {() => setSettings(currentSettings => ({ ...currentSettings, showDefinitions: false }))}
                     startDeactivated = {settings.showDefinitions === false}
                 />
-                {isMobileDevice() && <SettingOption
+                {isRotationWarningEnabled && <SettingOption
                     title = "Show rotation warning"
                     onEnable = {() => setSettings(currentSettings => ({ ...currentSettings, showRotationWarning: true }))}
                     onDisable = {() => setSettings(currentSettings => ({ ...currentSettings, showRotationWarning: false }))}
