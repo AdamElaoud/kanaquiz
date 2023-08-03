@@ -84,8 +84,10 @@ const App = () : JSX.Element => {
 
     // a render is triggered on rotation due to the useWindowSize and useDynamicWidth hooks
     // this recalculation is desired only when the value of the screen orientation type has changed
+    // Note: this optional chaining is required for browsers that do not support the ScreenOrientation
+    // API *cough cough Safari*
     // eslint-disable-next-line
-    }, [screen.orientation.type]);
+    }, [screen?.orientation?.type]);
 
     const updateKanaSelections = (letters: string[], addOnly?: boolean, deleteOnly?: boolean) => {
         const updatedSelections = [...kanaSelections];
