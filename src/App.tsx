@@ -89,7 +89,7 @@ const App = () : JSX.Element => {
     // Note: this optional chaining is required for browsers that do not support the ScreenOrientation
     // API *cough cough Safari*
     // eslint-disable-next-line
-    }, [screen?.orientation.type]);
+    }, [screen?.orientation?.type]);
 
     const updateKanaSelections = (letters: string[], addOnly?: boolean, deleteOnly?: boolean) => {
         const updatedSelections = [...kanaSelections];
