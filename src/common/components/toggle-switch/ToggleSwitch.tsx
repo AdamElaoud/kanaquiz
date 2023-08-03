@@ -35,7 +35,7 @@ const ToggleSwitch = forwardRef((props: Props, ref: ReactForwardedRef<HTMLButton
     return (
         <div className = {classes.join(" ")}>
             <button ref = {ref} className = "toggle-switch-button" onClick = {onToggle}>
-                .
+                <span className = "visually-hidden">toggle button</span>
             </button>
         </div>
     );
