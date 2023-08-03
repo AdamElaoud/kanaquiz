@@ -1,4 +1,4 @@
-import { ErrorBoundary, Modal, NotificationCenter, StepWizard } from '@/common/components';
+import { Modal, NotificationCenter, StepWizard } from '@/common/components';
 import useDynamicWidth from '@/common/hooks/useDynamicWidth';
 import useLocalStorage from '@/common/hooks/useLocalStorage';
 import useNotification from '@/common/hooks/useNotification';
@@ -74,6 +74,10 @@ const App = () : JSX.Element => {
 
     useLayoutEffect(() => {
         const isRotationWarningEnabled = settings.showRotationWarning && isMobileDevice();
+
+        console.log(screen);
+        console.log(screen.orientation);
+        console.log(screen.orientation.type);
 
         if (isRotationWarningEnabled && screen.orientation.type.includes("portrait"))
             dismissOne(ORIENTATION_WARNING_ID);
@@ -163,7 +167,7 @@ const App = () : JSX.Element => {
     };
 
     return (
-        <ErrorBoundary>
+        <>
             <NotificationCenter />
 
             <Modal
@@ -223,7 +227,7 @@ const App = () : JSX.Element => {
                     </KanaSelectionsProvider>
                 </ModeProvider>
             </SettingsProvider>
-        </ErrorBoundary>
+        </>
     );
 };
 
