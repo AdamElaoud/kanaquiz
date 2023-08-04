@@ -1,4 +1,4 @@
-import { ReactKeyboardEvent } from "@/common/types";
+import { ReactKeyboardEvent, TimeUnits } from "@/common/types";
 
 export const onEnterPress = (responseFn: (event: ReactKeyboardEvent) => void) => (event: ReactKeyboardEvent) => {
     if (event.key === "Enter") responseFn(event);
@@ -20,4 +20,25 @@ export const isMobileDevice = (isDevMode = false) : boolean => {
     const firstCharactersOfUserAgent = navigator.userAgent.slice(0, 4);
     
     return mobileBrowserRegex.test(navigator.userAgent) || mobileDeviceRegex.test(firstCharactersOfUserAgent);
+};
+
+export const calcTimeUnits = (ms: number) : TimeUnits => ({
+    day: Math.floor(ms / 86400000),
+    hour: Math.floor(ms / 3600000) % 24,
+    min: Math.floor(ms / 60000) % 60,
+    sec: Math.floor(ms / 1000) % 60,
+    ms: Math.floor(ms) % 1000
+});
+
+export const prettifyTime = (ms: number, includeUnits = false) : string => {
+    const { day, hour, min, sec, ms: calcMS } = calcTimeUnits(ms);
+
+    const prettifiedTime = [];
+    if (day > 0) prettifiedTime.push(includeUnits ? `${day}d` : day);
+    if (hour > 0) prettifiedTime.push(includeUnits ? `${hour}h` : hour);
+    if (min > 0) prettifiedTime.push(includeUnits ? `${min}m` : min);
+    if (sec > 0) prettifiedTime.push(includeUnits ? `${sec}s` : sec);
+    if (calcMS > 0) prettifiedTime.push(includeUnits ? `${calcMS}ms` : calcMS);
+
+    return prettifiedTime.join(":");
 };

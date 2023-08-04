@@ -34,6 +34,14 @@ export enum Position {
     TopStart = "top-start",
 }
 
+export type TimeUnits = {
+    day: number;
+    hour: number;
+    min: number;
+    sec: number;
+    ms: number;
+};
+
 export enum CloseMethod {
     XButton = "x-button",
     Escape = "escape",

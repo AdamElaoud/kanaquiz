@@ -28,12 +28,12 @@ export enum QuizFormat {
 };
 
 export enum PageRoute {
-    KanaQuiz = "kana-quiz",
-    KanaSelect = "kana-selection",
-    QuizRecap = "quiz-recap",
+    KanaQuiz = "/kana-quiz",
+    KanaSelect = "/kana-selection",
+    QuizRecap = "/quiz-recap",
     QuizSelect = "/", // index route
-    QuizSummary = "quiz-summary",
-    WordSelect = "word-selection"
+    QuizSummary = "/quiz-summary",
+    WordSelect = "/word-selection"
 };
 
 export enum TabID {
@@ -89,6 +89,11 @@ export type Question = {
     choices?: KanaLetters,
     prompt: string,
     context?: string
+};
+
+export type QuestionResult = Question & {
+    correct: boolean,
+    time: string
 };
 
 export interface KanaButtonProps {

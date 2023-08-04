@@ -2,24 +2,29 @@ import { Button, Icon } from "@/common/components";
 import useDebounce from "@/common/hooks/useDebounce";
 import useDynamicWidth from "@/common/hooks/useDynamicWidth";
 import { FontAwesomeIconType, Size, TextInputState } from "@/common/types";
+import { prettifyTime } from "@/common/utils/utils";
 import ChoiceInputRow from "@/components/choice-row/ChoiceInputRow";
 import CorrectAnswerDisplay from "@/components/correct-answer-display/CorrectAnswerDisplay";
 import useKanaSelections from "@/hooks/useKanaSelections";
 import useQuizSelections from "@/hooks/useQuizSelections";
 import useSettings from "@/hooks/useSettings";
 import useWordSelections from "@/hooks/useWordSelections";
-import { QuizFormat } from "@/types";
+import { PageRoute, QuestionResult, QuizFormat } from "@/types";
 import { SCREEN_FILL_PERCENT, SCREEN_FILL_WIDTH, SCREEN_PARTIAL_FILL_PERCENT, SCREEN_PARTIAL_FILL_WIDTH } from "@/utils/constants";
 import { generateQuestions } from "@/utils/utils";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import "./KanaQuiz.scss";
 
 const KanaQuiz = () : JSX.Element => {
+    const navigate = useNavigate();
     const { quizSelections } = useQuizSelections();
     const { kanaSelections } = useKanaSelections();
     const { wordSelections } = useWordSelections();
     const { autoFocusNextInput, showDefinitions } = useSettings();
+    const [startTime, setStartTime] = useState<Date>(new Date());
+    const [quizResults, setQuizResults] = useState<QuestionResult[]>([]);
     const [showResult, setShowResult] = useState<boolean>(false);
     const [answerIsCorrect, setAnswerIsCorrect] = useState<boolean>(false);
     const [multChoiceResponse, setMultChoiceResponse] = useState<string>("");
@@ -35,16 +40,16 @@ const KanaQuiz = () : JSX.Element => {
         SCREEN_FILL_PERCENT
     );
 
+    // this value should only be generated on mount and should never be changed
+    // eslint-disable-next-line
+    const questions = useMemo(() => generateQuestions(quizSelections, kanaSelections, wordSelections), []);
+
     // this casting is protected by the step wizard. The user will not be 
     // allowed to reach this point unless a valid quiz question amount
     // number was supplied
     const remainingQuestions = quizSelections.amount as number - correctCount - incorrectCount;
     const activeQuestionIndex = correctCount + incorrectCount;
-
-    // this value should only be generated on mount and should never be changed
-    // eslint-disable-next-line
-    const questions = useMemo(() => generateQuestions(quizSelections, kanaSelections, wordSelections), []);
-
+    const isLastQuestion = activeQuestionIndex === questions.length - 1;
     
     const activeQuestion = questions[activeQuestionIndex];
     const answerIsWord = typeof activeQuestion.answer !== "string";
@@ -90,26 +95,42 @@ const KanaQuiz = () : JSX.Element => {
     const checkAnswer = () => {
         // only check answer if not already submitted
         if (!showResult) {
+            let correct: boolean;
+
             if (isMultChoice) {
-                setAnswerIsCorrect(multChoiceResponse === activeQuestionAnswer);
+                correct = multChoiceResponse === activeQuestionAnswer;
+                setAnswerIsCorrect(correct);
     
             } else {
                 const writeResponse = writeResponses.join(" ").toLocaleLowerCase();
-                setAnswerIsCorrect(writeResponse === activeQuestionAnswer);
+                correct = writeResponse === activeQuestionAnswer;
+                setAnswerIsCorrect(correct);
             }
+
+            const endTime = new Date();
+            const time = endTime.getTime() - startTime.getTime();
+            const prettifiedTime = prettifyTime(time, true);
     
+            setQuizResults(results => [...results, { ...activeQuestion, correct, time: prettifiedTime }]);
             setShowResult(true);
         }
     };
 
     const nextQuestion = () => {
-        if (answerIsCorrect) setCorrectCount(count => count + 1);
-        else setIncorrectCount(count => count + 1);
-
-        if (isMultChoice) setMultChoiceResponse("");
-        else setWriteResponses([]);
-
-        setShowResult(false);
+        // if last question 
+        if(isLastQuestion) {
+            navigate(PageRoute.QuizRecap, { replace: true, state: { quizResults } });
+            
+        } else {
+            if (answerIsCorrect) setCorrectCount(count => count + 1);
+            else setIncorrectCount(count => count + 1);
+    
+            if (isMultChoice) setMultChoiceResponse("");
+            else setWriteResponses([]);
+    
+            setStartTime(new Date());
+            setShowResult(false);
+        }
     };
 
     const makeSelection = (choice: string) => () => {
@@ -194,7 +215,7 @@ const KanaQuiz = () : JSX.Element => {
                 {!answerIsCorrect && <CorrectAnswerDisplay questionIndex = {activeQuestionIndex} answer = {activeQuestion.answer} answerDetails = {activeQuestion.answerDetails}/>}
 
                 <Button className = "next-question-button" onClick = {nextQuestion}>
-                    NEXT QUESTION
+                    {isLastQuestion ? "FINISH" : "NEXT QUESTION"}
                 </Button>
             </div>}
         </div>

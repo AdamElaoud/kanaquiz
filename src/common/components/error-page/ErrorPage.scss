@@ -46,7 +46,7 @@
     }
 
     $stackTraceButtonPadding: 1rem;
-    .stack-trace-button {
+    .error-button {
         @include padding(0.5);
         padding-right: $padding;
         bottom: $stackTraceButtonPadding;

@@ -1,0 +1,19 @@
+@use "../../common/styles/index" as *;
+
+.question-result {
+    align-items: center;
+    display: flex;
+
+    .icon {
+        background-color: $darkModeTextColor;
+        color: $lightRed;
+        margin-right: 0.75rem;
+    }
+
+    &.correct {
+        .icon {
+            background-color: $lightModeTextColor;
+            color: $lightComplete;
+        }
+    }
+}

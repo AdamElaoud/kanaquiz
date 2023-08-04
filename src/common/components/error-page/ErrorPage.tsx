@@ -48,11 +48,11 @@ const ErrorPage = (props: Props) : JSX.Element => {
                     </Button>
                 </div>
                 <Button
-                    className = "stack-trace-button"
+                    className = "error-button"
                     iconType = {FontAwesomeIconType.Copy}
                     onClick = {copyErrorToClipboard}
                 >
-                    Stack Trace
+                    Error
                 </Button>
             </div>
         </>
