@@ -17,7 +17,7 @@ const router = createHashRouter([
     {
         path: "/",
         element: <App />,
-        errorElement: <ErrorPage />,
+        errorElement: <ErrorPage homepagePath = {PageRoute.QuizSelect}/>,
         children: [
             {
                 index: true,

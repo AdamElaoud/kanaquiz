@@ -152,6 +152,7 @@ export enum FontAwesomeIconType {
     CircleArrowLeft = "circleArrowLeft",
     CircleArrowRight = "circleArrowRight",
     CircleCheck = "circleCheck",
+    Copy = "copy",
     Delete = "delete",
     Dojo = "dojo",
     Down = "down",

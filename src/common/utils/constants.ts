@@ -8,3 +8,9 @@ export const TEXT_INPUT_INVALID_ID = "text-input-invalid";
 
 export const DEFAULT_STEP_WIZARD_NEXT_STEP_BLOCKED = "You must fulfill all conditions on this step to continue"
 export const STEP_WIZARD_NEXT_STEP_BLOCKED_ID = "step-wizard-next-step-blocked";
+
+export const COPY_SUCCESS = "Successfully copied to clipboard!";
+export const COPY_SUCCESS_ID = "copy-success";
+
+export const COPY_FAIL = "Copy failed, please try again.";
+export const COPY_FAIL_ID = "copy-fail";
