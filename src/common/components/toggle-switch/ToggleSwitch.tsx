@@ -1,4 +1,5 @@
 import { PlainFn, ReactForwardedRef } from "@/common/types";
+import { buildClassNames } from "@/common/utils/utils";
 import { forwardRef, useState } from "react";
 
 import "./ToggleSwitch.scss";
@@ -14,7 +15,7 @@ interface Props {
 const ToggleSwitch = forwardRef((props: Props, ref: ReactForwardedRef<HTMLButtonElement>) : JSX.Element => {
     const { disabled, onDeactivate, onActivate, startDeactivated } = props;
 
-    const [activated, setActivated] = useState(!disabled && !startDeactivated);
+    const [activated, setActivated] = useState<boolean>(!disabled && !startDeactivated);
 
     const onToggle = () => {
         if (!disabled) {
@@ -27,13 +28,14 @@ const ToggleSwitch = forwardRef((props: Props, ref: ReactForwardedRef<HTMLButton
         }
     };
 
-    const classes = ["toggle-switch"];
-    if (activated) classes.push("activated");
-    else classes.push("deactivated");
-    if (disabled) classes.push("disabled");
+    const classes = buildClassNames({
+        activated,
+        deactivated: !activated,
+        disabled
+    }, ["toggle-switch"]);
 
     return (
-        <div className = {classes.join(" ")}>
+        <div className = {classes}>
             <button ref = {ref} className = "toggle-switch-button" onClick = {onToggle}>
                 <span className = "visually-hidden">toggle button</span>
             </button>

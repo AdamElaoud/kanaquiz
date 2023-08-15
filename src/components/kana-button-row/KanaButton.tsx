@@ -1,4 +1,5 @@
 import { Button, Tooltip, TooltipContent, TooltipTrigger } from "@/common/components";
+import { buildClassNames } from "@/common/utils/utils";
 import useKanaSelections from "@/hooks/useKanaSelections";
 import useMode from "@/hooks/useMode";
 import { KanaButtonProps, Mode } from "@/types";
@@ -20,12 +21,13 @@ const KanaButton = (props: KanaButtonProps) : JSX.Element => {
 
     const isSelected = letters.some(char => kanaSelections.includes(char));
 
-    const classes = ["kana-button"];
-    if (className) classes.push(className);
-    if (disableOnClick) classes.push("disable-on-click");
-    if (isSearchTarget) classes.push("is-search-target");
-    if (isSelected) classes.push("is-selected");
-    if (mode === Mode.Kana) classes.push("is-kana");
+    const classes = buildClassNames({
+        [className ?? ""]: className,
+        "disable-on-click": disableOnClick,
+        "is-search-target": isSearchTarget,
+        "is-selected": isSelected,
+        "is-kana": mode === Mode.Kana
+    }, ["kana-button"]);
 
     const onClick = () => {
         if (!disableOnClick)
@@ -37,7 +39,7 @@ const KanaButton = (props: KanaButtonProps) : JSX.Element => {
     return (
         <Tooltip holdDelay = {100} toggleOnClick = {false}>
             <TooltipTrigger tabIndex = {-1}>
-                <Button className = {classes.join(" ")} onClick = {onClick}>
+                <Button className = {classes} onClick = {onClick}>
                     {letters[mode]}
                 </Button>
             </TooltipTrigger>

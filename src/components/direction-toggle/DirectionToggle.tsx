@@ -1,5 +1,6 @@
 import { Icon } from "@/common/components";
 import { FontAwesomeIconType, ItemConfig, Side, Size } from "@/common/types";
+import { buildClassNames } from "@/common/utils/utils";
 import { useState } from "react";
 
 import "./DirectionToggle.scss";
@@ -28,15 +29,18 @@ const DirectionToggle = (props: Props) : JSX.Element => {
 
     const [leftItem, rightItem] = content;
 
-    const leftItemClasses = ["direction-toggle-item"];
-    if (leftItem.className) leftItemClasses.push(leftItem.className);
+    const leftItemClasses = buildClassNames({
+        [leftItem.className ?? ""]: leftItem.className
+    }, ["direction-toggle-item"]);
 
-    const rightItemClasses = ["direction-toggle-item"];
-    if (rightItem.className) rightItemClasses.push(rightItem.className);
+    const rightItemClasses = buildClassNames({
+        [rightItem.className ?? ""]: rightItem.className
+    }, ["direction-toggle-item"]);
 
-    const directionToggleClasses = ["direction-toggle"];
-    if (disabled) directionToggleClasses.push("disabled");
-    if (className) directionToggleClasses.push(className);
+    const directionToggleClasses = buildClassNames({
+        disabled,
+        [className ?? ""]: className
+    }, ["direction-toggle"]);
 
     const onClick = () => {
         const newDirection = pointDirection === Side.Left ? Side.Right : Side.Left;
@@ -49,8 +53,8 @@ const DirectionToggle = (props: Props) : JSX.Element => {
     };
 
     return (
-        <div className = {directionToggleClasses.join(" ")}>
-            <div className = {leftItemClasses.join(" ")} onClick = {leftItem.onClick}>
+        <div className = {directionToggleClasses}>
+            <div className = {leftItemClasses} onClick = {leftItem.onClick}>
                 {leftItem.content}
             </div>
             <button className = "direction-toggle-button" onClick = {onClick} disabled = {disabled}>
@@ -59,7 +63,7 @@ const DirectionToggle = (props: Props) : JSX.Element => {
                     type = {pointDirection === Side.Left ? FontAwesomeIconType.CircleArrowLeft : FontAwesomeIconType.CircleArrowRight}
                 />
             </button>
-            <div className = {rightItemClasses.join(" ")} onClick = {rightItem.onClick}>
+            <div className = {rightItemClasses} onClick = {rightItem.onClick}>
                 {rightItem.content}
             </div>
         </div>

@@ -13,6 +13,7 @@ import { SCREEN_FILL_WIDTH, SCREEN_PARTIAL_FILL_WIDTH, SUMMARY_DISPLAY } from "@
 import { getRowsFromSelections } from "@/utils/utils";
 
 import "./QuizSummary.scss";
+import { buildClassNames } from "@/common/utils/utils";
 
 const QuizSummary = () : JSX.Element => {
     const dynamicSummaryWidth = useDynamicWidth(SCREEN_PARTIAL_FILL_WIDTH, 33, SCREEN_FILL_WIDTH, 90);
@@ -33,8 +34,7 @@ const QuizSummary = () : JSX.Element => {
 
     const defaultActiveSide = mode === Mode.Kana ? Side.Left : Side.Right;
 
-    const topicSelectionItemsClasses = ["topic-selections-items"];
-    if (topicIsKana) topicSelectionItemsClasses.push("topic-is-kana");
+    const topicSelectionItemsClasses = buildClassNames({ "topic-is-kana": topicIsKana}, ["topic-selections-items"]);
 
     return (
         <div className = "quiz-summary-page">
@@ -69,7 +69,7 @@ const QuizSummary = () : JSX.Element => {
 
                 <div className = "topic-selections">
                     {topicIsKana && <ToggleButton buttons = {displayModeToggleButtons} defaultActiveSide = {defaultActiveSide}/>}
-                    <div className = {topicSelectionItemsClasses.join(" ")}>
+                    <div className = {topicSelectionItemsClasses}>
                         {topicIsKana && <div className = "kana-selections-container">
                             {/* // container is necessary to add space between scrollbar and side of element */}
                             {selectionGroups.map((group, index) => {

@@ -2,7 +2,7 @@ import { Button, Icon } from "@/common/components";
 import useDebounce from "@/common/hooks/useDebounce";
 import useDynamicWidth from "@/common/hooks/useDynamicWidth";
 import { FontAwesomeIconType, Size, TextInputState } from "@/common/types";
-import { prettifyTime } from "@/common/utils/utils";
+import { buildClassNames, prettifyTime } from "@/common/utils/utils";
 import ChoiceInputRow from "@/components/choice-row/ChoiceInputRow";
 import CorrectAnswerDisplay from "@/components/correct-answer-display/CorrectAnswerDisplay";
 import useKanaSelections from "@/hooks/useKanaSelections";
@@ -140,11 +140,11 @@ const KanaQuiz = () : JSX.Element => {
         else setMultChoiceResponse(choice);
     };
 
-    const promptQuestionClasses = ["prompt-question"];
-    if (activeQuestion.prompt.length > 7) promptQuestionClasses.push("large-word");
+    const promptQuestionClasses = buildClassNames({
+        "large-word": activeQuestion.prompt.length > 7
+    }, ["prompt-question"]);
 
-    const questionResultClasses = ["question-result"];
-    if (answerIsCorrect) questionResultClasses.push("correct");
+    const questionResultClasses = buildClassNames({ correct: answerIsCorrect }, ["question-result"]);
 
     return (
         <div className = "kana-quiz-page">
@@ -165,7 +165,7 @@ const KanaQuiz = () : JSX.Element => {
 
             <div className = "prompt-and-answer-input">
                 <div className = "prompt">
-                    <div className = {promptQuestionClasses.join(" ")}>
+                    <div className = {promptQuestionClasses}>
                         {activeQuestion.prompt}
                     </div>
 
@@ -178,11 +178,15 @@ const KanaQuiz = () : JSX.Element => {
                     {isMultChoice && activeQuestion.choices?.map(choice => {
                         const isSelection = choice === multChoiceResponse;
 
-                        const buttonClasses = ["choice-button"];
-                        if (isSelection) buttonClasses.push("is-selection");
+                        const buttonClasses = buildClassNames({ "is-selection": isSelection }, ["choice-button"]);
 
                         return (
-                            <Button key = {`${activeQuestionIndex}-${choice}`} disabled = {showResult} className = {buttonClasses.join(" ")} onClick = {makeSelection(choice)}>
+                            <Button
+                                key = {`${activeQuestionIndex}-${choice}`}
+                                disabled = {showResult}
+                                className = {buttonClasses}
+                                onClick = {makeSelection(choice)}
+                            >
                                 {choice}
                             </Button>
                         );
@@ -201,7 +205,7 @@ const KanaQuiz = () : JSX.Element => {
                 SUBMIT
             </Button>
 
-            {showResult && <div className = {questionResultClasses.join(" ")} style = {dynamicWidth}>
+            {showResult && <div className = {questionResultClasses} style = {dynamicWidth}>
                 <span className = "question-result-title">
                     {answerIsCorrect && <Icon type = {FontAwesomeIconType.Check} size = {Size.Small}/>}
                     {!answerIsCorrect && <Icon type = {FontAwesomeIconType.X} size = {Size.Small}/>}

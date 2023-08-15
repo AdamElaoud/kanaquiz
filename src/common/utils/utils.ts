@@ -42,3 +42,15 @@ export const prettifyTime = (ms: number, includeUnits = false) : string => {
 
     return prettifiedTime.join(":");
 };
+
+export const buildClassNames = (classNames: { [key: string]: unknown }, defaultClasses: string[] = []) : string => {
+    const builtClassNames = [...defaultClasses];
+
+    for (const className in classNames) {
+        const condition = classNames[className];
+
+        if (condition) builtClassNames.push(className);
+    }
+
+    return builtClassNames.join(" ");
+};

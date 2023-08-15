@@ -1,4 +1,5 @@
 import { BasicID, CustomIconType, FontAwesomeIconType, IconType, Size } from "@/common/types";
+import { buildClassNames } from "@/common/utils/utils";
 
 import { Icon } from "..";
 
@@ -18,15 +19,12 @@ const DEFAULT_ICON_TYPE = CustomIconType.Blank;
 const Step = (props: Props) : JSX.Element => {
     const { active, className, complete, iconType = DEFAULT_ICON_TYPE, showCheckOnComplete, title } = props;
 
-    const classes = ["step"];
-    if (active) classes.push("active");
-    if (className) classes.push(className);
-    if (complete) classes.push("complete");
+    const classes = buildClassNames({ active, complete, [className ?? ""]: className }, ["step"]);
 
     const evaluatedIconType = showCheckOnComplete && complete ? FontAwesomeIconType.Check : iconType;
 
     return (
-        <div className = {classes.join(" ")}>
+        <div className = {classes}>
             <Icon type = {evaluatedIconType} size = {Size.Small} />
             <span className = "title">
                 {title}

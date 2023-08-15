@@ -1,6 +1,7 @@
 import useNotification from "@/common/hooks/useNotification";
 import { BasicID, CSSStyles, FontAwesomeIconType, PlainFn, Side, StepConfig, StepState } from "@/common/types";
 import { DEFAULT_STEP_WIZARD_NEXT_STEP_BLOCKED, STEP_WIZARD_NEXT_STEP_BLOCKED_ID } from "@/common/utils/constants";
+import { buildClassNames } from "@/common/utils/utils";
 import { useState } from "react";
 
 import { Button, StepDisplay } from "..";
@@ -89,11 +90,11 @@ const StepWizard = (props: Props) : JSX.Element => {
         setActiveStepIndex(currentStepIndex => currentStepIndex - 1);
     };
 
-    const nextButtonClasses = ["next-button"];
-    if (nextStepIsDisabledFromCondition) nextButtonClasses.push("blocked-by-condition");
+    const nextButtonClasses = buildClassNames({
+        "blocked-by-condition": nextStepIsDisabledFromCondition
+    }, ["next-button"]);
 
-    const stepWizardClasses = ["step-wizard"];
-    if (className) stepWizardClasses.push(className);
+    const stepWizardClasses = buildClassNames({ [className ?? ""]: className}, ["step-wizard"]);
 
     const stepText = steps[activeStepIndex].text;
 
@@ -101,7 +102,7 @@ const StepWizard = (props: Props) : JSX.Element => {
     const isOnLastStep = activeStepIndex === steps.length - 1;
 
     return (
-        <div className = {stepWizardClasses.join(" ")} style = {style}>
+        <div className = {stepWizardClasses} style = {style}>
             {!isOnFirstStep && <Button
                 className = "back-button"
                 onClick = {goToPreviousStep}
@@ -123,7 +124,7 @@ const StepWizard = (props: Props) : JSX.Element => {
             </div>
 
             <Button
-                className = {nextButtonClasses.join(" ")}
+                className = {nextButtonClasses}
                 onClick = {isOnLastStep ? completeConfig.onComplete : goToNextStep}
                 iconType = {FontAwesomeIconType.AngleRight}
                 iconSide = {Side.Right}

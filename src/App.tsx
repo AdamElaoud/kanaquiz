@@ -4,7 +4,7 @@ import useLocalStorage from '@/common/hooks/useLocalStorage';
 import useNotification from '@/common/hooks/useNotification';
 import useWindowSize from '@/common/hooks/useWindowSize';
 import { CustomIconType, FontAwesomeIconType, StepConfig, StepState } from '@/common/types';
-import { isMobileDevice } from '@/common/utils/utils';
+import { buildClassNames, isMobileDevice } from '@/common/utils/utils';
 import Header from '@/components/header/Header';
 import Settings from '@/components/settings/Settings';
 import WelcomeMessage from '@/components/welcome-message/WelcomeMessage';
@@ -157,8 +157,7 @@ const App = () : JSX.Element => {
 
     const isInQuiz = pathname === PageRoute.KanaQuiz || pathname === PageRoute.QuizRecap;
 
-    const pageClasses = ["page"];
-    if (isInQuiz) pageClasses.push("is-in-quiz");
+    const pageClasses = buildClassNames({ "is-in-quiz": isInQuiz }, ["page"]);
 
     // window innerheight & innerwidth is used instead
     // of 100vw and 100vw to account for browser elements
@@ -208,7 +207,7 @@ const App = () : JSX.Element => {
                                         openSettings = {() => setShowSettings(true)}
                                     />
 
-                                    <div key = {`page-${pageKey}`} ref = {pageRef} className = {pageClasses.join(" ")} style = {dynamicWidth}>
+                                    <div key = {`page-${pageKey}`} ref = {pageRef} className = {pageClasses} style = {dynamicWidth}>
                                         <Outlet />
                                     </div>
                                     

@@ -1,4 +1,5 @@
 import { FontAwesomeIconType, ReactNode, StepConfig } from "@/common/types";
+import { buildClassNames } from "@/common/utils/utils";
 
 import { Icon, Step } from "..";
 
@@ -32,11 +33,9 @@ const StepDisplay = (props: Props) : JSX.Element => {
         };
 
         if (index !== 0) {
-            const barClasses = ["bar"];
-            if (active) barClasses.push("active");
-            if (complete) barClasses.push("complete");
+            const barClasses = buildClassNames({ active, complete }, ["bar"]);
 
-            stepDisplay.push(<div className = {barClasses.join(" ")} key = {`${ID}-bar`}/>);
+            stepDisplay.push(<div className = {barClasses} key = {`${ID}-bar`}/>);
         }
 
         stepDisplay.push(<Step {...stepProps}/>);

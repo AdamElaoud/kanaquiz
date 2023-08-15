@@ -1,5 +1,6 @@
 import { CustomIconMap, FontAwesomeIconMap } from "@/common/components/icon/IconTypes";
 import { CSSStyles, IconType, isCustomIconType, isFontAwesomeIconType, ReactDivOnClickEvent, ReactForwardedRef, ReactKeyboardEvent, Size } from "@/common/types";
+import { buildClassNames } from "@/common/utils/utils";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { forwardRef } from "react";
 
@@ -21,14 +22,13 @@ const DEFAULT_ICON_SIZE = Size.Medium;
 const Icon = forwardRef((props: Props, ref?: ReactForwardedRef<HTMLDivElement>) : JSX.Element => {
     const { className, id, onClick, onKeyDown, size = DEFAULT_ICON_SIZE, style, tabIndex, type } = props;
     
-    const classes = ["icon", size];
-    if (className) classes.push(className);
+    const classes = buildClassNames({ [className ?? ""]: className }, ["icon", size]);
 
     if (isFontAwesomeIconType(type)) {
         const fontAwesomeIconType = FontAwesomeIconMap[type];
 
         return (
-            <div id = {id} ref = {ref} className = {classes.join(" ")} onClick = {onClick} onKeyDown = {onKeyDown} style = {style} tabIndex = {tabIndex}>
+            <div id = {id} ref = {ref} className = {classes} onClick = {onClick} onKeyDown = {onKeyDown} style = {style} tabIndex = {tabIndex}>
                 <FontAwesomeIcon icon = {fontAwesomeIconType} />
             </div>
         );
@@ -39,7 +39,7 @@ const Icon = forwardRef((props: Props, ref?: ReactForwardedRef<HTMLDivElement>) 
         const content = isImage ? <img src = {src} alt = {text}/> : text
 
         return (
-            <div id = {id} ref = {ref} className = {classes.join(" ")} onClick = {onClick} onKeyDown = {onKeyDown} style = {style} tabIndex = {tabIndex}>
+            <div id = {id} ref = {ref} className = {classes} onClick = {onClick} onKeyDown = {onKeyDown} style = {style} tabIndex = {tabIndex}>
                 {content}
             </div>
         );

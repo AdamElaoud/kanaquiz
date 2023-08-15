@@ -1,4 +1,5 @@
 import { BasicID, PlainFn, ReactNode, TabConfig, TabState } from "@/common/types";
+import { buildClassNames } from "@/common/utils/utils";
 import { createContext, useState } from "react";
 
 import "./TabSet.scss";
@@ -49,12 +50,11 @@ const TabSet = (props: Props) => {
         tabs
     };
 
-    const classes = ["tabset"];
-    if (className) classes.push(className);
+    const classes = buildClassNames({ [className ?? ""]: className }, ["tabset"]);
 
     return (
         <TabSetContext.Provider value = {value}>
-            <div className = {classes.join(" ")}>
+            <div className = {classes}>
                 {children}
             </div>
         </TabSetContext.Provider>
