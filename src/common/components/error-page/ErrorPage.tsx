@@ -19,7 +19,17 @@ const ErrorPage = (props: Props) : JSX.Element => {
 
     const copyErrorToClipboard = async () => {
         try {
-            await navigator.clipboard.writeText(JSON.stringify(routeError));
+            let log: string;
+
+            if (routeError instanceof Error) {
+                const { cause, message, name, stack } = routeError;
+                log = JSON.stringify({ cause, message, name, stack });
+
+            } else {
+                log = routeError ? routeError.toString() : "Route Error is undefined or null";
+            }
+                    
+            await navigator.clipboard.writeText(log);
             success(COPY_SUCCESS, { toastId: COPY_SUCCESS_ID });
 
         } catch (err) {
@@ -28,9 +38,10 @@ const ErrorPage = (props: Props) : JSX.Element => {
     };
 
     return (
-        <>
+        <div className = "error-page">
             <NotificationCenter />
-            <div className = "error-page">
+
+            <div className = "error-page-content">
                 <Icon className = "error-page-icon" type = {FontAwesomeIconType.Error}/>
                 <div className = "error-page-title">
                     Oops! Something went wrong
@@ -47,15 +58,16 @@ const ErrorPage = (props: Props) : JSX.Element => {
                         Home
                     </Button>
                 </div>
-                <Button
-                    className = "error-button"
-                    iconType = {FontAwesomeIconType.Copy}
-                    onClick = {copyErrorToClipboard}
-                >
-                    Error
-                </Button>
             </div>
-        </>
+
+            <Button
+                className = "log-button"
+                iconType = {FontAwesomeIconType.Copy}
+                onClick = {copyErrorToClipboard}
+            >
+                Log
+            </Button>
+        </div>
     );
 };
 

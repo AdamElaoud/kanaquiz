@@ -1,68 +1,72 @@
 @use "../../styles/index" as *;
 
 .error-page {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    margin-top: 15vh;
-    row-gap: 3rem;
-    text-align: center;
-
-    $errorIconSize: 6rem;
-    .icon {
-        &.error-page-icon {
-            color: $crimson;
-            font-size: $errorIconSize;
-            height: $errorIconSize;
-            width: $errorIconSize;
-        }
-    }
-
-    .error-page-title {
-        font-size: $largeFontSize;
-        font-weight: $fontWeightBold;
-    }
-
-    .error-page-description {
-        display: flex;
-        flex-direction: column;
-        font-size: $smallFontSize;
-    }
-
-    .error-page-actions {
+    .error-page-content {
         align-items: center;
         display: flex;
-        column-gap: 1rem;
-
-        .button {
+        flex-direction: column;
+        margin-top: 15vh;
+        row-gap: 3rem;
+        text-align: center;
+    
+        $errorIconSize: 6rem;
+        .icon {
+            &.error-page-icon {
+                color: $crimson;
+                font-size: $errorIconSize;
+                height: $errorIconSize;
+                width: $errorIconSize;
+            }
+        }
+    
+        .error-page-title {
+            font-size: $largeFontSize;
             font-weight: $fontWeightBold;
         }
-
-        .home-button {
-            @include button-press($active);
-            background-color: $active;
-            color: $lightModeTextColor;
+    
+        .error-page-description {
+            display: flex;
+            flex-direction: column;
+            font-size: $smallFontSize;
+        }
+    
+        .error-page-actions {
+            align-items: center;
+            display: flex;
+            column-gap: 1rem;
+    
+            .button {
+                font-weight: $fontWeightBold;
+            }
+    
+            .home-button {
+                @include button-press($active);
+                background-color: $active;
+                color: $lightModeTextColor;
+            }
         }
     }
-
+    
     $stackTraceButtonPadding: 1rem;
-    .error-button {
+    .log-button {
         @include padding(0.5);
-        padding-right: $padding;
         bottom: $stackTraceButtonPadding;
         font-size: $smallFontSize;
         left: $stackTraceButtonPadding;
-        position: absolute;
+        padding-right: $padding;
+        position: fixed;
     }
 }
 
 @media (hover: hover) and (pointer: fine) {
     .error-page {
-        .error-page-actions {
-            .home-button {
-                &:hover {
-                    @include button-press($gold);
-                    background-color: $gold;
+        .error-page-content {
+            .error-page-actions {
+                .home-button {
+                    &:hover {
+                        @include button-press($gold);
+                        background-color: $gold;
+                    }
                 }
             }
         }
