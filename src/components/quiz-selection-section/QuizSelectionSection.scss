@@ -21,10 +21,8 @@ $quizSelectionSectionContentWidth: 58%;
         align-items: center;
         display: flex;
 
-        &:has(.help-tooltip) {
-            .section-title-text {
-                margin-right: 0.5rem;
-            }
+        .help-tooltip {
+            margin-left: 0.5rem;
         }
     }
 }
