@@ -1,5 +1,6 @@
 import useWindowSize from "@/common/hooks/useWindowSize";
 import { CloseMethod, CSSStyles, FontAwesomeIconType, ReactMouseEvent, ReactNode, ReactRef } from "@/common/types";
+import { buildClassNames } from "@/common/utils/utils";
 import { useRef } from "react";
 
 import { Button } from "..";
@@ -8,8 +9,10 @@ import "./Modal.scss";
 
 interface Props {
     children: ReactNode,
+    className?: string
     defaultOpen?: boolean,
     hideCloseButton?: boolean,
+    id?: string,
     initialFocusTarget?: ReactRef<HTMLElement>,
     onClose?: (closeMethod: CloseMethod | null) => void,
     style?: CSSStyles
@@ -18,7 +21,16 @@ interface Props {
 const DEFAULT_OPEN = false;
 
 const Modal = (props: Props) : JSX.Element => {
-    const { children, defaultOpen = DEFAULT_OPEN, hideCloseButton, initialFocusTarget, onClose, style } = props;
+    const {
+        children,
+        className,
+        defaultOpen = DEFAULT_OPEN,
+        hideCloseButton,
+        id,
+        initialFocusTarget,
+        onClose,
+        style
+    } = props;
 
     const closeMethod = useRef<CloseMethod | null>(null);
     const modalRef = useRef<HTMLDialogElement>(null);
@@ -54,6 +66,8 @@ const Modal = (props: Props) : JSX.Element => {
             initialFocusTarget.current?.focus();
     }
 
+    const classes = buildClassNames({ [className ?? ""]: className }, ["modal"]);
+
     const defaultStyle = {
         marginTop: `${windowHeight * 0.15}px`,
     };
@@ -61,7 +75,8 @@ const Modal = (props: Props) : JSX.Element => {
     return (
         <dialog
             ref = {modalRef}
-            className = "modal"
+            className = {classes}
+            id = {id}
             style = {{ ...defaultStyle, ...style }}
             onClose = {() => onClose?.(closeMethod.current)}
             onClick = {onClick}

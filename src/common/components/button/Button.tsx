@@ -1,5 +1,5 @@
 import { Icon } from "@/common/components";
-import { IconType, PlainFn, ReactForwardedRef, ReactNode, Side, Size } from "@/common/types";
+import { CSSStyles, IconType, PlainFn, ReactForwardedRef, ReactNode, Side, Size } from "@/common/types";
 import { forwardRef } from "react";
 
 import "./Button.scss";
@@ -12,7 +12,8 @@ interface Props {
     iconSide?: Side,
     iconSize?: Size,
     id?: string,
-    onClick: PlainFn
+    onClick: PlainFn,
+    style?: CSSStyles
 };
 
 const DEFAULT_ICON_SIDE = Side.Left;
@@ -27,7 +28,8 @@ const Button = forwardRef((props: Props, ref?: ReactForwardedRef<HTMLButtonEleme
         iconSide = DEFAULT_ICON_SIDE,
         iconSize,
         id,
-        onClick
+        onClick,
+        style
     } = props;
 
     const classes = className ? `button ${className}` : "button";
@@ -35,7 +37,7 @@ const Button = forwardRef((props: Props, ref?: ReactForwardedRef<HTMLButtonEleme
     const displayIcon = iconType && <Icon size = {iconSize} type = {iconType} />;
 
     return (
-        <button id = {id} ref = {ref} className = {classes} disabled = {disabled} onClick = {onClick}>
+        <button id = {id} ref = {ref} className = {classes} disabled = {disabled} onClick = {onClick} style = {style}>
             {iconSide === Side.Left && displayIcon}
             {children}
             {iconSide === Side.Right && displayIcon}

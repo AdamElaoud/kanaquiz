@@ -1,8 +1,9 @@
 import useNotification from "@/common/hooks/useNotification";
-import { Direction, FontAwesomeIconType, IconType, NumberInputState, ReactInputOnChangeEvent, Size } from "@/common/types";
+import { CSSStyles, Direction, FontAwesomeIconType, IconType, NumberInputState, ReactForwardedRef, ReactInputOnChangeEvent, Size } from "@/common/types";
 import { NUMBER_INPUT_MAXIMUM, NUMBER_INPUT_MAXIMUM_ID, NUMBER_INPUT_MINIMUM, NUMBER_INPUT_MINIMUM_ID } from "@/common/utils/constants";
-import { onEnterPress } from "@/common/utils/utils";
+import { buildClassNames, onEnterPress } from "@/common/utils/utils";
 import { useRef, useState } from "react";
+import { forwardRef } from "react";
 
 import { Icon } from "..";
 
@@ -10,8 +11,10 @@ import "./NumberInput.scss";
 
 interface Props {
     buttonIcons?: [downIcon: IconType, upIcon: IconType],
+    className?: string,
     defaultValue?: number | "",
     disabled?: false,
+    id?: string,
     max?: number,
     min?: number,
     name: string,
@@ -19,6 +22,7 @@ interface Props {
     showButtons?: boolean,
     showFlareOnInvalidInput?: boolean,
     size?: Size,
+    style?: CSSStyles,
     title?: string
 };
 
@@ -29,11 +33,13 @@ const DEFAULT_SHOW_BUTTONS = true;
 const DEFAULT_SHOW_FLARE_ON_INVALID_INPUT = false;
 const DEFAULT_SIZE = Size.Medium;
 
-const NumberInput = (props: Props) => {
+const NumberInput = forwardRef((props: Props, ref?: ReactForwardedRef<HTMLDivElement>) => {
     const {
         buttonIcons = DEFAULT_BUTTON_ICONS,
+        className,
         defaultValue = DEFAULT_INITIAL_VALUE,
         disabled = DEFAULT_DISABLED_SETTING,
+        id,
         max,
         min,
         name,
@@ -41,6 +47,7 @@ const NumberInput = (props: Props) => {
         showButtons = DEFAULT_SHOW_BUTTONS,
         showFlareOnInvalidInput = DEFAULT_SHOW_FLARE_ON_INVALID_INPUT,
         size = DEFAULT_SIZE,
+        style,
         title
     } = props;
 
@@ -95,8 +102,10 @@ const NumberInput = (props: Props) => {
     // blur to hide mobile keyboards on submission
     const hideKeyboard = () => inputRef.current?.blur();
 
+    const classes = buildClassNames({ [className ?? ""]: className }, ["number-input", size]);
+
     return (
-        <div className = {`number-input ${size}`}>
+        <div className = {classes} id = {id} style = {style} ref = {ref}>
             {title && <span className = "number-input-title">{title}</span>}
 
             <div className = "number-input-content">
@@ -132,6 +141,6 @@ const NumberInput = (props: Props) => {
             </div>
         </div>
     );
-};
+});
 
 export default NumberInput;

@@ -8,7 +8,7 @@ import Modal from "@/common/components/modal/Modal";
 import NotificationCenter from "@/common/components/notification-center/NotificationCenter";
 import NumberInput from "@/common/components/number-input/NumberInput";
 import Searchbar from "@/common/components/searchbar/Searchbar";
-import StepWizard from "@/common/components/step-carousel/StepWizard";
+import StepWizard from "@/common/components/step-wizard/StepWizard";
 import Step from "@/common/components/step-display/Step";
 import StepDisplay from "@/common/components/step-display/StepDisplay";
 import TabContent from "@/common/components/tabs/TabContent";

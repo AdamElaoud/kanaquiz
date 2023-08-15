@@ -1,6 +1,6 @@
-import { BasicID, PlainFn, ReactNode, TabConfig, TabState } from "@/common/types";
+import { BasicID, CSSStyles, PlainFn, ReactForwardedRef, ReactNode, TabConfig, TabState } from "@/common/types";
 import { buildClassNames } from "@/common/utils/utils";
-import { createContext, useState } from "react";
+import { createContext, forwardRef, useState } from "react";
 
 import "./TabSet.scss";
 
@@ -15,15 +15,17 @@ export const TabSetContext = createContext<TabSetContextType>({} as TabSetContex
 interface Props {
     children: ReactNode,
     className?: string,
+    id?: string,
     onTabChange?: (tabState: TabState) => void,
     startingTabID?: BasicID,
+    style?: CSSStyles,
     tabs: TabConfig[]
 };
 
 const DEFAULT_STARTING_TAB_INDEX = 0;
 
-const TabSet = (props: Props) => {
-    const { children, className, onTabChange, startingTabID, tabs } = props;
+const TabSet = forwardRef((props: Props, ref?: ReactForwardedRef<HTMLDivElement>) => {
+    const { children, className, id, onTabChange, startingTabID, style, tabs } = props;
 
     const [activeTabIndex, setActiveTabIndex] = useState<number>(() => {
         const tabIndex = tabs.findIndex(tab => tab.ID === startingTabID);
@@ -54,11 +56,11 @@ const TabSet = (props: Props) => {
 
     return (
         <TabSetContext.Provider value = {value}>
-            <div className = {classes}>
+            <div className = {classes} id = {id} style = {style} ref = {ref}>
                 {children}
             </div>
         </TabSetContext.Provider>
     );
-};
+});
 
 export default TabSet;

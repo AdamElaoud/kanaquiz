@@ -1,8 +1,8 @@
 import useNotification from "@/common/hooks/useNotification";
-import { BasicID, CSSStyles, FontAwesomeIconType, PlainFn, Side, StepConfig, StepState } from "@/common/types";
+import { BasicID, CSSStyles, FontAwesomeIconType, PlainFn, ReactForwardedRef, Side, StepConfig, StepState } from "@/common/types";
 import { DEFAULT_STEP_WIZARD_NEXT_STEP_BLOCKED, STEP_WIZARD_NEXT_STEP_BLOCKED_ID } from "@/common/utils/constants";
 import { buildClassNames } from "@/common/utils/utils";
-import { useState } from "react";
+import { forwardRef, useState } from "react";
 
 import { Button, StepDisplay } from "..";
 
@@ -10,25 +10,27 @@ import "./StepWizard.scss";
 
 interface Props {
     className?: string,
-    displayFlagAtEnd?: boolean,
     completeConfig: {
         text?: string,
         onComplete: PlainFn
     },
+    displayFlagAtEnd?: boolean,
+    id?: string,
     onStepChange?: (stepState: StepState) => void,
     showCheckOnComplete?: boolean,
     startingStepID?: BasicID,
     steps: StepConfig[],
-    style: CSSStyles
+    style?: CSSStyles
 };
 
 const DEFAULT_STARTING_STEP_INDEX = 0;
 
-const StepWizard = (props: Props) : JSX.Element => {
+const StepWizard = forwardRef((props: Props, ref?: ReactForwardedRef<HTMLDivElement>) : JSX.Element => {
     const {
         className,
         completeConfig,
         displayFlagAtEnd,
+        id,
         onStepChange,
         showCheckOnComplete,
         steps,
@@ -102,7 +104,7 @@ const StepWizard = (props: Props) : JSX.Element => {
     const isOnLastStep = activeStepIndex === steps.length - 1;
 
     return (
-        <div className = {stepWizardClasses} style = {style}>
+        <div className = {stepWizardClasses} id = {id} style = {style} ref = {ref}>
             {!isOnFirstStep && <Button
                 className = "back-button"
                 onClick = {goToPreviousStep}
@@ -133,6 +135,6 @@ const StepWizard = (props: Props) : JSX.Element => {
             </Button>
         </div>
     );
-};
+});
 
 export default StepWizard;

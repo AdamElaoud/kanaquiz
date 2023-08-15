@@ -1,18 +1,21 @@
 import useNotification from "@/common/hooks/useNotification";
-import { ReactInputOnChangeEvent, Size, TextInputState } from "@/common/types";
+import { CSSStyles, ReactForwardedRef, ReactInputOnChangeEvent, Size, TextInputState } from "@/common/types";
 import { TEXT_INPUT_INVALID_ID } from "@/common/utils/constants";
-import { onEnterPress } from "@/common/utils/utils";
-import { useRef, useState } from "react";
+import { buildClassNames, onEnterPress } from "@/common/utils/utils";
+import { forwardRef, useRef, useState } from "react";
 
 import "./TextInput.scss";
 
 interface Props {
+    className?: string,
     defaultValue?: string,
     disabled?: boolean,
+    id?: string,
     name: string,
     onChange: (inputState: TextInputState) => void | string,
     showFlareOnInvalidInput?: boolean,
     size?: Size,
+    style?: CSSStyles,
     title?: string,
     validator?: (value: string) => { valid: boolean, errorMsg: string }
 };
@@ -22,14 +25,17 @@ const DEFAULT_INITIAL_VALUE = "";
 const DEFAULT_SHOW_FLARE_ON_INVALID_INPUT = false;
 const DEFAULT_SIZE = Size.Medium;
 
-const TextInput = (props: Props) => {
+const TextInput = forwardRef((props: Props, ref?: ReactForwardedRef<HTMLDivElement>) => {
     const {
+        className,
         defaultValue = DEFAULT_INITIAL_VALUE,
         disabled = DEFAULT_DISABLED_SETTING,
+        id,
         name,
         onChange,
         showFlareOnInvalidInput = DEFAULT_SHOW_FLARE_ON_INVALID_INPUT,
         size = DEFAULT_SIZE,
+        style,
         title,
         validator
     } = props;
@@ -60,8 +66,10 @@ const TextInput = (props: Props) => {
     // blur to hide mobile keyboards on submission
     const hideKeyboard = () => inputRef.current?.blur();
 
+    const classes = buildClassNames({ [className ?? ""]: className }, ["text-input", size]);
+
     return (
-        <div className = {`text-input ${size}`}>
+        <div className = {classes} id = {id} style = {style} ref = {ref}>
             {title && <span className = "text-input-title">{title}</span>}
 
             <label className = "visually-hidden" htmlFor = {`${name}-input`}>{`Text input for ${name}`}</label>
@@ -77,6 +85,6 @@ const TextInput = (props: Props) => {
             />
         </div>
     );
-};
+});
 
 export default TextInput;

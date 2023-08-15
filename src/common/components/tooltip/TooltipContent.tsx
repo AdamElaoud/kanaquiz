@@ -10,11 +10,12 @@ interface Props {
     children: ReactNode,
     className?: string,
     hideArrow?: boolean,
+    id?: string,
     style?: CSSStyles
 };
 
 const TooltipContent = (props: Props) : JSX.Element | null => {
-    const { children, className, hideArrow, style } = props;
+    const { children, className, hideArrow, id, style } = props;
 
     const { arrowRef, context, floatingStyles, getFloatingProps, open, refs } = useTooltip();
 
@@ -26,7 +27,7 @@ const TooltipContent = (props: Props) : JSX.Element | null => {
     if (!open) return null;
 
     return (
-        <div className = {tooltipClasses} ref = {refs.setFloating} style = {tooltipStyles} {...getFloatingProps()}>
+        <div className = {tooltipClasses} id = {id} ref = {refs.setFloating} style = {tooltipStyles} {...getFloatingProps()}>
             {children}
             {!hideArrow && <FloatingArrow className = "tooltip-arrow" context = {context} ref = {arrowRef}/>}
         </div>

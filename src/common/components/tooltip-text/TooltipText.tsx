@@ -1,4 +1,6 @@
-import { ReactElement } from "@/common/types";
+import { CSSStyles, ReactElement, ReactForwardedRef } from "@/common/types";
+import { buildClassNames } from "@/common/utils/utils";
+import { forwardRef } from "react";
 
 import { Tooltip, TooltipContent, TooltipTrigger } from "..";
 
@@ -6,16 +8,21 @@ import "./TooltipText.scss";
 
 interface Props {
     children: string,
+    className?: string,
+    id?: string,
+    style?: CSSStyles,
     tooltip: string | ReactElement
 };
 
-const TooltipText = (props: Props) : JSX.Element => {
-    const { children, tooltip } = props;
+const TooltipText = forwardRef((props: Props, ref?: ReactForwardedRef<HTMLSpanElement>) : JSX.Element => {
+    const { children, className, id, style, tooltip } = props;
+
+    const classes = buildClassNames({ [className ?? ""]: className }, ["tooltip-text"]);
 
     return (
         <Tooltip gap = {5}>
             <TooltipTrigger tabIndex = {-1}>
-                <span className = "tooltip-text" tabIndex = {0}>
+                <span className = {classes} id = {id} style = {style} ref = {ref} tabIndex = {0}>
                     {children}
                 </span>
             </TooltipTrigger>
@@ -25,6 +32,6 @@ const TooltipText = (props: Props) : JSX.Element => {
             </TooltipContent>
         </Tooltip>
     );
-};
+});
 
 export default TooltipText;

@@ -1,6 +1,8 @@
 import useMouseClick from "@/common/hooks/useMouseClick";
-import { CSSStyles, FontAwesomeIconType, MouseClickState, ReactFormOnSubmitEvent, ReactInputOnChangeEvent, ReactKeyboardEvent, ReactNode, Size } from "@/common/types";
+import { CSSStyles, FontAwesomeIconType, MouseClickState, ReactFormOnSubmitEvent, ReactForwardedRef, ReactInputOnChangeEvent, ReactKeyboardEvent, ReactNode, Size } from "@/common/types";
+import { buildClassNames } from "@/common/utils/utils";
 import { useRef, useState } from "react";
+import { forwardRef } from "react";
 
 import "@/styles/_index.scss";
 
@@ -9,8 +11,10 @@ import { Button, Icon, Modal } from "..";
 import "./Searchbar.scss";
 
 interface Props {
-    delimiters?: string[],
     alwaysShowResults?: boolean,
+    className?: string,
+    delimiters?: string[],
+    id?: string,
     nonBlurTargets?: HTMLElement[] | undefined,
     openInModal?: boolean,
     placeholder?: string,
@@ -24,10 +28,12 @@ const DEFAULT_NEVER_CLOSE_RESULTS = false;
 const DEFAULT_OPEN_IN_MODAL = false;
 const DEFAULT_SHOW_BUTTON_TEXT = false;
 
-const Searchbar = (props: Props) : JSX.Element => {
+const Searchbar = forwardRef((props: Props, ref?: ReactForwardedRef<HTMLDivElement>) : JSX.Element => {
     const {
-        delimiters = DEFAULT_DELIMITERS,
         alwaysShowResults = DEFAULT_NEVER_CLOSE_RESULTS,
+        className,
+        delimiters = DEFAULT_DELIMITERS,
+        id,
         nonBlurTargets,
         openInModal = DEFAULT_OPEN_IN_MODAL,
         placeholder = "",
@@ -122,11 +128,12 @@ const Searchbar = (props: Props) : JSX.Element => {
         setShowResults(false);
     };
 
-    const classes = showResults ? "search-form showing-results" : "search-form";
+    const formClasses = buildClassNames({ "showing-results": showResults }, ["search-form"]);
+    const containerClasses = buildClassNames({ [className ?? ""]: className }, ["search"]);
 
     const search = (
-        <div className = "search" style = {style}>
-            <form className = {classes} role = "search" onSubmit = {onSubmit}>
+        <div className = {containerClasses} id = {id} style = {style} ref = {ref}>
+            <form className = {formClasses} role = "search" onSubmit = {onSubmit}>
                 <Icon className = "search-icon" type = {FontAwesomeIconType.Search}/>
                 <label className = "visually-hidden" htmlFor = "searchbar">Search for Kana</label>
                 <input
@@ -189,7 +196,7 @@ const Searchbar = (props: Props) : JSX.Element => {
     }
 
     return search;
-};
+});
 
 const buildRegexFromDelimiters = (delimiters: string[]) : RegExp => {
     const escapedDelimiters = delimiters.map(delimiter => delimiter.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
