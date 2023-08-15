@@ -1,10 +1,10 @@
 import { Button, Icon, NotificationCenter } from "@/common/components";
+import useNotification from "@/common/hooks/useNotification";
 import { FontAwesomeIconType } from "@/common/types";
-import { useNavigate, useRouteError } from "react-router-dom";
+import { COPY_FAIL, COPY_FAIL_ID, COPY_SUCCESS, COPY_SUCCESS_ID } from "@/common/utils/constants";
+import { isRouteErrorResponse, useNavigate, useRouteError } from "react-router-dom";
 
 import "./ErrorPage.scss";
-import useNotification from "@/common/hooks/useNotification";
-import { COPY_FAIL, COPY_FAIL_ID, COPY_SUCCESS, COPY_SUCCESS_ID } from "@/common/utils/constants";
 
 interface Props {
     homepagePath: string
@@ -24,6 +24,10 @@ const ErrorPage = (props: Props) : JSX.Element => {
             if (routeError instanceof Error) {
                 const { cause, message, name, stack } = routeError;
                 log = JSON.stringify({ cause, message, name, stack });
+
+            } else if (isRouteErrorResponse(routeError)) {
+                const { data, error, internal, status, statusText } = routeError;
+                log = JSON.stringify({ data, error, internal, status, statusText });
 
             } else {
                 log = routeError ? routeError.toString() : "Route Error is undefined or null";
