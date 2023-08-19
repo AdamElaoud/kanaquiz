@@ -125,7 +125,6 @@ const KanaSelection = () : JSX.Element => {
                     alwaysShowResults = {inMobileDeviceThreshhold}
                 />
 
-                {/* <ToggleButton ref = {toggleRef} buttons = {displayModeToggleButtons} defaultActiveSide = {defaultActiveSide}/> */}
                 <ButtonGroup defaultActiveButton = {defaultMode}>
                     <Button id = {KANA_BUTTON_ID} onClick = {() => setMode(Mode.Kana)}>
                         Kana

@@ -27,6 +27,7 @@
         background-color: $darkNavy;
         border: 1px solid shadowColor($darkNavy);
         color: $nonFocusedDarkModeTextColor;
+        width: 100%;
 
         &.is-active {
             @include button-press($active);
