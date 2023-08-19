@@ -33,7 +33,7 @@ const ToggleSwitch = forwardRef((props: Props, ref: ReactForwardedRef<HTMLButton
 
     const classes = buildClassNames({
         activated,
-        [className ?? ""]: className,
+        className,
         deactivated: !activated,
         disabled
     }, ["toggle-switch"]);

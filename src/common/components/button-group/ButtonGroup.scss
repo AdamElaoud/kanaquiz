@@ -1,0 +1,37 @@
+@use "../../styles/index" as *;
+
+.button-group {
+    @include rounded-border(1.5);
+    align-items: center;
+    background-color: $darkNavy;
+    display: flex;
+    gap: 0.75rem;
+    justify-content: space-between;
+    padding: $buttonGroupPadding;
+    padding-bottom: calc($buttonGroupPadding + $buttonShadowHeight);
+
+    &.is-vertical {
+        flex-direction: column;
+    }
+
+    &.disabled {
+        opacity: $disabledOpacity;
+    }
+
+    button {
+        font-size: $smallFontSize;
+    }
+
+    .button {
+        @include button-press($darkNavy);
+        background-color: $darkNavy;
+        color: $nonFocusedDarkModeTextColor;
+
+        &.is-active {
+            @include button-press($active);
+            background-color: $active;
+            color: $lightModeTextColor;
+            font-weight: $fontWeightBold;
+        }
+    }
+}

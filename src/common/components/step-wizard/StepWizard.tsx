@@ -96,7 +96,7 @@ const StepWizard = forwardRef((props: Props, ref?: ReactForwardedRef<HTMLDivElem
         "blocked-by-condition": nextStepIsDisabledFromCondition
     }, ["next-button"]);
 
-    const stepWizardClasses = buildClassNames({ [className ?? ""]: className}, ["step-wizard"]);
+    const stepWizardClasses = buildClassNames({ className }, ["step-wizard"]);
 
     const stepText = steps[activeStepIndex].text;
 

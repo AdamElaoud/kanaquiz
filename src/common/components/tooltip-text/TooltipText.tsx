@@ -17,7 +17,7 @@ interface Props {
 const TooltipText = forwardRef((props: Props, ref?: ReactForwardedRef<HTMLSpanElement>) : JSX.Element => {
     const { children, className, id, style, tooltip } = props;
 
-    const classes = buildClassNames({ [className ?? ""]: className }, ["tooltip-text"]);
+    const classes = buildClassNames({ className }, ["tooltip-text"]);
 
     return (
         <Tooltip gap = {5}>

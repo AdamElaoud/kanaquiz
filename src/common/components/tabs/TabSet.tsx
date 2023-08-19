@@ -52,7 +52,7 @@ const TabSet = forwardRef((props: Props, ref?: ReactForwardedRef<HTMLDivElement>
         tabs
     };
 
-    const classes = buildClassNames({ [className ?? ""]: className }, ["tabset"]);
+    const classes = buildClassNames({ className }, ["tabset"]);
 
     return (
         <TabSetContext.Provider value = {value}>

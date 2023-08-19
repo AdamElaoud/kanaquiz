@@ -22,7 +22,7 @@ const KanaButton = (props: KanaButtonProps) : JSX.Element => {
     const isSelected = letters.some(char => kanaSelections.includes(char));
 
     const classes = buildClassNames({
-        [className ?? ""]: className,
+        className,
         "disable-on-click": disableOnClick,
         "is-search-target": isSearchTarget,
         "is-selected": isSelected,

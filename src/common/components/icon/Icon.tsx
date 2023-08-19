@@ -22,7 +22,7 @@ const DEFAULT_ICON_SIZE = Size.Medium;
 const Icon = forwardRef((props: Props, ref?: ReactForwardedRef<HTMLDivElement>) : JSX.Element => {
     const { className, id, onClick, onKeyDown, size = DEFAULT_ICON_SIZE, style, tabIndex, type } = props;
     
-    const classes = buildClassNames({ [className ?? ""]: className }, ["icon", size]);
+    const classes = buildClassNames({ className }, ["icon", size]);
 
     if (isFontAwesomeIconType(type)) {
         const fontAwesomeIconType = FontAwesomeIconMap[type];

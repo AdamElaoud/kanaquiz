@@ -1,5 +1,7 @@
 import { Icon } from "@/common/components";
+import useButtonGroup from "@/common/components/button-group/useButtonGroup";
 import { CSSStyles, IconType, PlainFn, ReactForwardedRef, ReactNode, Side, Size } from "@/common/types";
+import { buildClassNames } from "@/common/utils/utils";
 import { forwardRef } from "react";
 
 import "./Button.scss";
@@ -28,16 +30,29 @@ const Button = forwardRef((props: Props, ref?: ReactForwardedRef<HTMLButtonEleme
         iconSide = DEFAULT_ICON_SIDE,
         iconSize,
         id,
-        onClick,
+        onClick: customOnClick,
         style
     } = props;
 
-    const classes = className ? `button ${className}` : "button";
+    const { getButtonGroupClasses, buttonGroupIsDisabled, isInButtonGroup, makeActive } = useButtonGroup();
+
+    if (isInButtonGroup && !id)
+        throw "Buttons must be given a unique 'id' when used within a ButtonGroup!";
+
+    const onClick = () => {
+        if (isInButtonGroup && id) makeActive(id);
+        if (customOnClick) customOnClick();
+    };
+
+    const classes = buildClassNames({
+        className,
+        [getButtonGroupClasses(id ?? null)]: isInButtonGroup
+    }, ["button"]);
 
     const displayIcon = iconType && <Icon size = {iconSize} type = {iconType} />;
 
     return (
-        <button id = {id} ref = {ref} className = {classes} disabled = {disabled} onClick = {onClick} style = {style}>
+        <button id = {id} ref = {ref} className = {classes} disabled = {disabled || buttonGroupIsDisabled} onClick = {onClick} style = {style}>
             {iconSide === Side.Left && displayIcon}
             {children}
             {iconSide === Side.Right && displayIcon}

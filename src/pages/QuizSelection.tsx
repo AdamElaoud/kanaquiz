@@ -1,6 +1,6 @@
-import { Icon, NumberInput, ToggleButton } from "@/common/components";
+import { Button, ButtonGroup, Icon, NumberInput } from "@/common/components";
 import useDynamicWidth from "@/common/hooks/useDynamicWidth";
-import { CustomIconType, ItemConfig, NumberInputState, ReactFormOnSubmitEvent, Side, Size, ToggleButtonConfig } from "@/common/types";
+import { CustomIconType, ItemConfig, NumberInputState, ReactFormOnSubmitEvent, Side, Size } from "@/common/types";
 import DirectionToggle from "@/components/direction-toggle/DirectionToggle";
 import QuizSelectionSection from "@/components/quiz-selection-section/QuizSelectionSection";
 import useQuizSelections from "@/hooks/useQuizSelections";
@@ -15,6 +15,11 @@ import {
 } from "@/utils/constants";
 
 import "./QuizSelection.scss";
+
+const KANA_TOPIC_BUTTON_ID = "kana-topic-button";
+const WORDS_TOPIC_BUTTON_ID = "words-topic-button";
+const WRITE_FORMAT_BUTTON_ID = "write-format-button";
+const CHOOSE_FORMAT_BUTTON_ID = "choose-format-button";
 
 const QuizSelection = () : JSX.Element => {
     const dynamicQuizOptionsWidth = useDynamicWidth(SCREEN_PARTIAL_FILL_WIDTH, 33, SCREEN_FILL_WIDTH, 90);
@@ -31,21 +36,8 @@ const QuizSelection = () : JSX.Element => {
     const { amount, direction, format, topic } = quizSelections;
 
     const defaultDirection = direction === QuizDirection.ENtoJP ? Side.Right : Side.Left;
-    const defaultFormatSide = format === QuizFormat.WriteTheAnswer ? Side.Left : Side.Right;
-    const defaultTopicSide = topic === QuizTopic.Kana ? Side.Left : Side.Right;
-
-    const topicToggleButtons: [ToggleButtonConfig, ToggleButtonConfig] = [
-        { content: "Kana", onClick: () => updateQuizSelectionField("topic", QuizTopic.Kana) },
-        {
-            content: "Words",
-            onClick: () => updateQuizSelections({
-                ...quizSelections,
-                topic: QuizTopic.Words,
-                direction: QuizDirection.JPtoEN,
-                format: QuizFormat.WriteTheAnswer 
-            })
-        }
-    ];
+    const defaultFormat = format === QuizFormat.WriteTheAnswer ? WRITE_FORMAT_BUTTON_ID : CHOOSE_FORMAT_BUTTON_ID;
+    const defaultTopic = topic === QuizTopic.Kana ? KANA_TOPIC_BUTTON_ID : WORDS_TOPIC_BUTTON_ID;
 
     const directionToggleButtons: [ItemConfig, ItemConfig] = [
         { content: <Icon type = {CustomIconType.USFlag} /> }, 
@@ -59,11 +51,6 @@ const QuizSelection = () : JSX.Element => {
             updateQuizSelectionField("direction", QuizDirection.ENtoJP)
     };
 
-    const formatToggleButtons: [ToggleButtonConfig, ToggleButtonConfig] = [
-        { content: "Write", onClick: () => updateQuizSelectionField("format", QuizFormat.WriteTheAnswer) },
-        { content: "Choose", onClick: () => updateQuizSelectionField("format", QuizFormat.MultipleChoice) }
-    ];
-
     const wordsIsSelectedTopic = topic === QuizTopic.Words;
 
     return (
@@ -75,7 +62,19 @@ const QuizSelection = () : JSX.Element => {
             
             <form className = "quiz-options" style = {dynamicQuizOptionsWidth} onSubmit = {onSubmit}>
                 <QuizSelectionSection title = "Topic">
-                    <ToggleButton buttons = {topicToggleButtons} defaultActiveSide = {defaultTopicSide}/>
+                    <ButtonGroup defaultActiveButton = {defaultTopic}>
+                        <Button id = {KANA_TOPIC_BUTTON_ID} onClick = {() => updateQuizSelectionField("topic", QuizTopic.Kana)}>
+                            Kana
+                        </Button>
+                        <Button id = {WORDS_TOPIC_BUTTON_ID} onClick = {() => updateQuizSelections({
+                            ...quizSelections,
+                            topic: QuizTopic.Words,
+                            direction: QuizDirection.JPtoEN,
+                            format: QuizFormat.WriteTheAnswer 
+                        })}>
+                            Words
+                        </Button>
+                    </ButtonGroup>
                 </QuizSelectionSection>
 
                 <QuizSelectionSection title = "Translate" helpTooltip = {DIRECTION_TOOLTIP}>
@@ -89,12 +88,14 @@ const QuizSelection = () : JSX.Element => {
                 </QuizSelectionSection>
 
                 <QuizSelectionSection title = "Answer" helpTooltip = {FORMAT_TOOLTIP}>
-                    <ToggleButton
-                        key = {`format-selection-${topic}`}
-                        buttons = {formatToggleButtons}
-                        defaultActiveSide = {wordsIsSelectedTopic ? Side.Left : defaultFormatSide}
-                        disabled = {wordsIsSelectedTopic}
-                    />
+                    <ButtonGroup defaultActiveButton = {defaultFormat} key = {`format-selection-${topic}`} disabled = {wordsIsSelectedTopic}>
+                        <Button id = {WRITE_FORMAT_BUTTON_ID} onClick = {() => updateQuizSelectionField("format", QuizFormat.WriteTheAnswer)}>
+                            Write
+                        </Button>
+                        <Button id = {CHOOSE_FORMAT_BUTTON_ID} onClick = {() => updateQuizSelectionField("format", QuizFormat.MultipleChoice)}>
+                            Choose
+                        </Button>
+                    </ButtonGroup>
                 </QuizSelectionSection>
 
                 <QuizSelectionSection title = "Questions">

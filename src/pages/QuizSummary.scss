@@ -1,6 +1,5 @@
 @use "../styles/index" as *;
 @use "../common/styles/index" as *;
-@use "../common/components/toggle-button/ToggleButton.scss" as *;
 
 $summaryTitleHeight: calc($mediumFontSize + ($sectionSpacing / 2));
 
@@ -42,15 +41,17 @@ $summaryTitleHeight: calc($mediumFontSize + ($sectionSpacing / 2));
             flex-direction: column;
             height: calc(100% - $padding - $summaryTitleHeight);
 
-            .toggle-button {
+            .button-group {
                 background-color: $lightNavy;
                 width: fit-content;
                 margin-bottom: $sectionSpacing;
                 
-                .toggle-button-item {
+                .button {
+                    @include button-press($lightNavy);
                     background-color: $lightNavy;
 
-                    &.active {
+                    &.is-active {
+                        @include button-press($active);
                         background-color: $active;
                     }
                 }
@@ -69,7 +70,7 @@ $summaryTitleHeight: calc($mediumFontSize + ($sectionSpacing / 2));
                 width: 100%;
                 
                 &.topic-is-kana {
-                    max-height: calc(100% - $toggleButtonHeight - $sectionSpacing);
+                    max-height: calc(100% - $sectionSpacing);
                 }
                 
                 .kana-selections-container {
@@ -97,16 +98,18 @@ $summaryTitleHeight: calc($mediumFontSize + ($sectionSpacing / 2));
 
 @media (hover: hover) and (pointer: fine) {
     .quiz-summary-page {
-        .toggle-button {
+        .button-group {
             &:not(.disabled) {
-                .toggle-button-item {
+                .button {
                     &:hover {
+                        @include button-press($gold);
                         background-color: $gold;
                         color: $lightModeTextColor;
                         cursor: pointer;
                     }
         
-                    &.active {
+                    &.is-active {
+                        @include button-press($active);
                         background-color: $active;
                         color: $lightModeTextColor;
                     }

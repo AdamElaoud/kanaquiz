@@ -66,7 +66,7 @@ const TextInput = forwardRef((props: Props, ref?: ReactForwardedRef<HTMLDivEleme
     // blur to hide mobile keyboards on submission
     const hideKeyboard = () => inputRef.current?.blur();
 
-    const classes = buildClassNames({ [className ?? ""]: className }, ["text-input", size]);
+    const classes = buildClassNames({ className }, ["text-input", size]);
 
     return (
         <div className = {classes} id = {id} style = {style} ref = {ref}>

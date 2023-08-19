@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { Icon, LinkText } from "@/common/components";
 import { CustomIconType, FontAwesomeIconType, Size } from "@/common/types";
 import { QuizDirection, QuizFormat, QuizTopic, SummaryMapType } from "@/types";

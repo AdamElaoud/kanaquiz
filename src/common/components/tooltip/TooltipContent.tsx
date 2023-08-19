@@ -21,7 +21,7 @@ const TooltipContent = (props: Props) : JSX.Element | null => {
 
     const tooltipStyles = { ...style, ...floatingStyles };
 
-    const tooltipClasses = buildClassNames({ [className ?? ""]: className }, ["tooltip"]);
+    const tooltipClasses = buildClassNames({ className }, ["tooltip"]);
 
     // TODO: add animation styling here
     if (!open) return null;

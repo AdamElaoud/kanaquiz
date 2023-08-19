@@ -102,7 +102,7 @@ const NumberInput = forwardRef((props: Props, ref?: ReactForwardedRef<HTMLDivEle
     // blur to hide mobile keyboards on submission
     const hideKeyboard = () => inputRef.current?.blur();
 
-    const classes = buildClassNames({ [className ?? ""]: className }, ["number-input", size]);
+    const classes = buildClassNames({ className }, ["number-input", size]);
 
     return (
         <div className = {classes} id = {id} style = {style} ref = {ref}>

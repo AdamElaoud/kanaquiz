@@ -1,7 +1,7 @@
-import { Searchbar, TabContent, TabHeaders, TabSet, ToggleButton } from "@/common/components";
+import { Button, ButtonGroup, Searchbar, TabContent, TabHeaders, TabSet } from "@/common/components";
 import useLocalStorage from "@/common/hooks/useLocalStorage";
 import useWindowSize from "@/common/hooks/useWindowSize";
-import { Side, TabConfig, TabState, ToggleButtonConfig } from "@/common/types";
+import { TabConfig, TabState } from "@/common/types";
 import KanaButtonRow from "@/components/kana-button-row/KanaButtonRow";
 import TabButtonRow from "@/components/tab-button-row/TabButtonRow";
 import TitleWithBadge from "@/components/title-with-badge/TitleWithBadge";
@@ -13,6 +13,9 @@ import { ENGLISH_DELIMITERS, JAPANESE_DELIMITERS, KANA_SELECTION_TAB_STORAGE_KEY
 import { useMemo, useRef } from "react";
 
 import "./KanaSelection.scss";
+
+const KANA_BUTTON_ID = "kana-mode-button";
+const ROMAJI_BUTTON_ID = "romaji-mode-button";
 
 const KanaSelection = () : JSX.Element => {
     const [selectedTabID, setSelectedTabID] = useLocalStorage<number>(KANA_SELECTION_TAB_STORAGE_KEY, TabID.Hiragana);
@@ -101,12 +104,7 @@ const KanaSelection = () : JSX.Element => {
         updateKanaSelections
     ]);
 
-    const displayModeToggleButtons: [ToggleButtonConfig, ToggleButtonConfig] = [
-        { content: 'Kana', onClick: () => setMode(Mode.Kana) },
-        { content: 'Romaji', onClick: () => setMode(Mode.Romaji) }
-    ];
-
-    const defaultActiveSide = mode === Mode.Kana ? Side.Left : Side.Right;
+    const defaultMode = mode === Mode.Kana ? KANA_BUTTON_ID : ROMAJI_BUTTON_ID;
 
     const inMobileDeviceThreshhold = windowWidth < SCREEN_WIDTH_THRESHHOLD;
 
@@ -127,7 +125,15 @@ const KanaSelection = () : JSX.Element => {
                     alwaysShowResults = {inMobileDeviceThreshhold}
                 />
 
-                <ToggleButton ref = {toggleRef} buttons = {displayModeToggleButtons} defaultActiveSide = {defaultActiveSide}/>
+                {/* <ToggleButton ref = {toggleRef} buttons = {displayModeToggleButtons} defaultActiveSide = {defaultActiveSide}/> */}
+                <ButtonGroup defaultActiveButton = {defaultMode}>
+                    <Button id = {KANA_BUTTON_ID} onClick = {() => setMode(Mode.Kana)}>
+                        Kana
+                    </Button>
+                    <Button id = {ROMAJI_BUTTON_ID} onClick = {() => setMode(Mode.Romaji)}>
+                        Romaji
+                    </Button>
+                </ButtonGroup>
             </div>
 
             <TabSet

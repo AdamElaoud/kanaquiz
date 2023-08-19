@@ -19,7 +19,7 @@ const DEFAULT_ICON_TYPE = CustomIconType.Blank;
 const Step = (props: Props) : JSX.Element => {
     const { active, className, complete, iconType = DEFAULT_ICON_TYPE, showCheckOnComplete, title } = props;
 
-    const classes = buildClassNames({ active, complete, [className ?? ""]: className }, ["step"]);
+    const classes = buildClassNames({ active, complete, className }, ["step"]);
 
     const evaluatedIconType = showCheckOnComplete && complete ? FontAwesomeIconType.Check : iconType;
 

@@ -19,7 +19,7 @@ const DEFAULT_DISABLED_SETTING = false;
 const HelpTooltip = forwardRef((props: Props, ref?: ReactForwardedRef<HTMLDivElement>) : JSX.Element => {
     const { className, disabled = DEFAULT_DISABLED_SETTING, id, style, tooltip } = props;
 
-    const helpTooltipClasses = buildClassNames({ [className ?? ""]: className, disabled }, ["help-tooltip"]);
+    const helpTooltipClasses = buildClassNames({ className, disabled }, ["help-tooltip"]);
 
     return (
         <>

@@ -129,7 +129,7 @@ const Searchbar = forwardRef((props: Props, ref?: ReactForwardedRef<HTMLDivEleme
     };
 
     const formClasses = buildClassNames({ "showing-results": showResults }, ["search-form"]);
-    const containerClasses = buildClassNames({ [className ?? ""]: className }, ["search"]);
+    const containerClasses = buildClassNames({ className }, ["search"]);
 
     const search = (
         <div className = {containerClasses} id = {id} style = {style} ref = {ref}>

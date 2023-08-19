@@ -19,6 +19,11 @@ export enum Direction {
     Down = -1
 };
 
+export enum Orientation {
+    Horizontal = "horizontal",
+    Vertical = "vertical"
+};
+
 export enum Position {
     BottomCenter = "bottom",
     BottomEnd = "bottom-end",
@@ -109,8 +114,6 @@ export interface ItemConfig {
     content: string | ReactElement,
     onClick?: PlainFn
 };
-
-export type ToggleButtonConfig = Pick<ItemConfig, "className" | "content"> & { onClick: PlainFn };
 
 export type PlainFn = () => void;
 

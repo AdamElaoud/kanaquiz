@@ -1,8 +1,8 @@
 @use "../../styles/index" as *;
 
-$toggleButtonSize: $miniIconSize;
+$toggleSwitchSize: $miniIconSize;
 $paddingMultiplier: 0.5;
-$toggleSwitchWidth: calc($toggleButtonSize * 3);
+$toggleSwitchWidth: calc($toggleSwitchSize * 3);
 $toggleSwitchPadding: calc($padding * $paddingMultiplier);
 
 .toggle-switch {
@@ -11,24 +11,24 @@ $toggleSwitchPadding: calc($padding * $paddingMultiplier);
     background-color: $richGray;
     border-radius: calc($borderRadius * 1.75);
     display: flex;
-    height: calc($toggleButtonSize * 1.5);
+    height: calc($toggleSwitchSize * 1.5);
     position: relative;
     transition: all 0.3s ease-in-out;
     width: $toggleSwitchWidth;
 
     .toggle-switch-button {
         border-radius: 50%;
-        height: $toggleButtonSize;
+        height: $toggleSwitchSize;
         position: absolute;
         transition: all 0.3s ease-in-out;
-        width: $toggleButtonSize;
+        width: $toggleSwitchSize;
     }
 
     &.activated {
         background-color: $active;
 
         .toggle-switch-button {
-            left: calc($toggleSwitchWidth - $toggleSwitchPadding - $toggleButtonSize);
+            left: calc($toggleSwitchWidth - $toggleSwitchPadding - $toggleSwitchSize);
         }
     }
     
@@ -48,22 +48,22 @@ $toggleSwitchPadding: calc($padding * $paddingMultiplier);
     }
 }
 
-$smallToggleButtonSize: calc($miniIconSize * 0.85);
-$smallToggleSwitchWidth: calc($smallToggleButtonSize * 3);
+$smallToggleSwitchSize: calc($miniIconSize * 0.85);
+$smallToggleSwitchWidth: calc($smallToggleSwitchSize * 3);
 
 @media (max-width: $sizeWidthThreshhold) {
     .toggle-switch {
-        height: calc($smallToggleButtonSize * 1.5);
+        height: calc($smallToggleSwitchSize * 1.5);
         width: $smallToggleSwitchWidth;
 
         .toggle-switch-button {
-            height: $smallToggleButtonSize;
-            width: $smallToggleButtonSize;
+            height: $smallToggleSwitchSize;
+            width: $smallToggleSwitchSize;
         }
 
         &.activated {
             .toggle-switch-button {
-                left: calc($smallToggleSwitchWidth - $toggleSwitchPadding - $smallToggleButtonSize);
+                left: calc($smallToggleSwitchWidth - $toggleSwitchPadding - $smallToggleSwitchSize);
             }
         }
         

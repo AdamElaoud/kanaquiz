@@ -17,7 +17,7 @@ interface Props {
 const LinkText = forwardRef((props: Props, ref?: ReactForwardedRef<HTMLSpanElement>) : JSX.Element => {
     const { children, className, id, link, style } = props;
 
-    const classes = buildClassNames({ [className ?? ""]: className }, ["link-text"]);
+    const classes = buildClassNames({ className }, ["link-text"]);
 
     return (
         <span className = {classes} id = {id} style = {style} ref = {ref}>

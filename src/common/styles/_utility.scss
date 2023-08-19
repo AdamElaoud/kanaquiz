@@ -37,13 +37,12 @@
 
 @mixin button-press($buttonColor: $richGray) {
     $shadowColor: #{color.adjust($buttonColor, $lightness: -6%, $saturation: 15%)};
-    $shadowHeight: 3px;
 
-    @include box-shadow($color: $shadowColor, $blurRadius: 0px, $yOffset: $shadowHeight);
+    @include box-shadow($color: $shadowColor, $blurRadius: 0px, $yOffset: $buttonShadowHeight);
 
-    &:active {
+    &:active:not(:disabled) {
         box-shadow: none;
-        transform: translateY($shadowHeight);
+        transform: translateY($buttonShadowHeight);
     }
 }
 
@@ -80,7 +79,7 @@ $halfPadding: calc($padding / 2);
 %disable-button-press {
     box-shadow: none;
 
-    &:active {
+    &:active:not(:disabled) {
         transform: none;
     }
 }

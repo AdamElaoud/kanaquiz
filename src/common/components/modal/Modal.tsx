@@ -66,7 +66,7 @@ const Modal = (props: Props) : JSX.Element => {
             initialFocusTarget.current?.focus();
     }
 
-    const classes = buildClassNames({ [className ?? ""]: className }, ["modal"]);
+    const classes = buildClassNames({ className }, ["modal"]);
 
     const defaultStyle = {
         marginTop: `${windowHeight * 0.15}px`,

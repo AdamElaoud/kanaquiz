@@ -1,9 +1,6 @@
 @use "sass:color" as color;
 @use "../styles/index" as *;
 @use "../common/styles/index" as *;
-@use "../common/components/tabs/TabHeader.scss" as *;
-@use "../common/components/searchbar/Searchbar.scss" as *;
-@use "../common/components/toggle-button/ToggleButton.scss" as *;
 
 .quiz-selection-page {
     @extend %page;
@@ -32,20 +29,22 @@
 
         .quiz-selection-section {
             width: 100%;
-    
-            .toggle-button {
+
+            .button-group {
                 background-color: $lightNavy;
                 display: flex;
                 justify-content: space-evenly;
-                max-height: calc(3rem + ($toggleButtonPadding * 2));
+                max-height: calc(3rem + ($buttonGroupPadding * 2));
                 width: 100%;
                 
-                .toggle-button-item {
+                .button {
+                    @include button-press($lightNavy);
                     background-color: $lightNavy;
                     max-height: calc(2rem + ($padding));
                     width: 50%;
 
-                    &.active {
+                    &.is-active {
+                        @include button-press($active);
                         background-color: $active;
                     }
                 }
@@ -56,16 +55,18 @@
 
 @media (hover: hover) and (pointer: fine) {
     .quiz-selection-page {
-        .toggle-button {
+        .button-group {
             &:not(.disabled) {
-                .toggle-button-item {
+                .button {
                     &:hover {
+                        @include button-press($gold);
                         background-color: $gold;
                         color: $lightModeTextColor;
                         cursor: pointer;
                     }
         
-                    &.active {
+                    &.is-active {
+                        @include button-press($active);
                         background-color: $active;
                         color: $lightModeTextColor;
                     }

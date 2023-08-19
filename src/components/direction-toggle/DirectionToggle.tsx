@@ -29,18 +29,9 @@ const DirectionToggle = (props: Props) : JSX.Element => {
 
     const [leftItem, rightItem] = content;
 
-    const leftItemClasses = buildClassNames({
-        [leftItem.className ?? ""]: leftItem.className
-    }, ["direction-toggle-item"]);
-
-    const rightItemClasses = buildClassNames({
-        [rightItem.className ?? ""]: rightItem.className
-    }, ["direction-toggle-item"]);
-
-    const directionToggleClasses = buildClassNames({
-        disabled,
-        [className ?? ""]: className
-    }, ["direction-toggle"]);
+    const leftItemClasses = buildClassNames({ className: leftItem.className }, ["direction-toggle-item"]);
+    const rightItemClasses = buildClassNames({ className: rightItem.className }, ["direction-toggle-item"]);
+    const directionToggleClasses = buildClassNames({ disabled, className }, ["direction-toggle"]);
 
     const onClick = () => {
         const newDirection = pointDirection === Side.Left ? Side.Right : Side.Left;

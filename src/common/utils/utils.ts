@@ -49,7 +49,8 @@ export const buildClassNames = (classNames: { [key: string]: unknown }, defaultC
     for (const className in classNames) {
         const condition = classNames[className];
 
-        if (condition) builtClassNames.push(className);
+        if (className === "className" && condition) builtClassNames.push(condition as string);
+        else if (condition) builtClassNames.push(className);
     }
 
     return builtClassNames.join(" ");

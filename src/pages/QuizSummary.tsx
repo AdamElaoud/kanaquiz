@@ -1,6 +1,6 @@
-import { ToggleButton } from "@/common/components";
+import { Button, ButtonGroup } from "@/common/components";
 import useDynamicWidth from "@/common/hooks/useDynamicWidth";
-import { Side, ToggleButtonConfig } from "@/common/types";
+import { buildClassNames } from "@/common/utils/utils";
 import KanaButtonRow from "@/components/kana-button-row/KanaButtonRow";
 import SummaryItem from "@/components/summary-item/SummaryItem";
 import WordSelectionDisplay from "@/components/word-selection-display/WordSelectionDisplay";
@@ -13,7 +13,9 @@ import { SCREEN_FILL_WIDTH, SCREEN_PARTIAL_FILL_WIDTH, SUMMARY_DISPLAY } from "@
 import { getRowsFromSelections } from "@/utils/utils";
 
 import "./QuizSummary.scss";
-import { buildClassNames } from "@/common/utils/utils";
+
+const KANA_BUTTON_ID = "kana-mode-button";
+const ROMAJI_BUTTON_ID = "romaji-mode-button";
 
 const QuizSummary = () : JSX.Element => {
     const dynamicSummaryWidth = useDynamicWidth(SCREEN_PARTIAL_FILL_WIDTH, 33, SCREEN_FILL_WIDTH, 90);
@@ -27,12 +29,7 @@ const QuizSummary = () : JSX.Element => {
     const selectionGroups = Object.values(selectionGroupsToChars);
     const selectionGroupIDs = Object.keys(selectionGroupsToChars);
 
-    const displayModeToggleButtons: [ToggleButtonConfig, ToggleButtonConfig] = [
-        { content: 'Kana', onClick: () => setMode(Mode.Kana) },
-        { content: 'Romaji', onClick: () => setMode(Mode.Romaji) }
-    ];
-
-    const defaultActiveSide = mode === Mode.Kana ? Side.Left : Side.Right;
+    const defaultMode = mode === Mode.Kana ? KANA_BUTTON_ID : ROMAJI_BUTTON_ID;
 
     const topicSelectionItemsClasses = buildClassNames({ "topic-is-kana": topicIsKana}, ["topic-selections-items"]);
 
@@ -68,7 +65,14 @@ const QuizSummary = () : JSX.Element => {
                 </div>
 
                 <div className = "topic-selections">
-                    {topicIsKana && <ToggleButton buttons = {displayModeToggleButtons} defaultActiveSide = {defaultActiveSide}/>}
+                    {topicIsKana && <ButtonGroup defaultActiveButton = {defaultMode}>
+                        <Button id = {KANA_BUTTON_ID} onClick = {() => setMode(Mode.Kana)}>
+                            Kana
+                        </Button>
+                        <Button id = {ROMAJI_BUTTON_ID} onClick = {() => setMode(Mode.Romaji)}>
+                            Romaji
+                        </Button>                        
+                    </ButtonGroup>}
                     <div className = {topicSelectionItemsClasses}>
                         {topicIsKana && <div className = "kana-selections-container">
                             {/* // container is necessary to add space between scrollbar and side of element */}
