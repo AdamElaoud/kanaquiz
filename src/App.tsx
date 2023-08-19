@@ -157,6 +157,12 @@ const App = () : JSX.Element => {
 
     const isInQuiz = pathname === PageRoute.KanaQuiz || pathname === PageRoute.QuizRecap;
 
+    // if the pathname cannot be found, the Error Page will be rendered instead
+    // of this file. If the pathname is a route that does not exist in the step
+    // config (i.e. the user is in a quiz) then the Step Wizard will not be rendered
+    const startingStep = pageSteps.find(step => step.ID === pathname);
+    const startingStepID = startingStep?.ID ?? pageSteps[0].ID;
+
     const pageClasses = buildClassNames({ "is-in-quiz": isInQuiz }, ["page"]);
 
     // window innerheight & innerwidth is used instead
@@ -219,7 +225,7 @@ const App = () : JSX.Element => {
                                         onStepChange = {onStepChange}
                                         showCheckOnComplete = {true}
                                         style = {dynamicWidth}
-                                        startingStepID = {pageSteps[0].ID}
+                                        startingStepID = {startingStepID}
                                     />}
                                 </div>
                             </WordSelectionsProvider>
