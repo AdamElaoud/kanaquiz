@@ -20,6 +20,12 @@ import {
 } from "@/utils/katakana";
 import { allWords, hiraganaWords, katakanaWords } from "@/utils/words";
 
+export const quizSelectionsAreValid = (quizSelections: QuizSelectionData) => quizSelections.amount !== "";
+
+export const kanaSelectionsAreValid = (kanaSelections: string[]) => kanaSelections.length >= 3;
+
+export const wordSelectionsAreValid = (wordSelections: WordSelectionData) => wordSelections.allHiragana || wordSelections.allKatakana;
+
 export const getGroupAndLettersInTargetGroupFromID = (
     ID: string,
     IDGroupToSearch: string[],
@@ -77,9 +83,12 @@ export const getRowsFromSelections = (selections: string[]) : GroupsToChars => {
 export const generateQuestions = (
     { amount, direction, format, topic }: QuizSelectionData,
     kanaSelections: string[],
-    { allHiragana, allKatakana }: WordSelectionData
+    wordSelections: WordSelectionData
 ) : Question[] => {
     if (topic === QuizTopic.Kana) {
+        const selectionsAreValid = kanaSelectionsAreValid(kanaSelections);
+        if (!selectionsAreValid) throw "invalid kana selections supplied!";
+
         const isJPtoEN = direction === QuizDirection.JPtoEN;
         const isMultChoice = format === QuizFormat.MultipleChoice;
 
@@ -109,6 +118,11 @@ export const generateQuestions = (
     }
 
     if (topic === QuizTopic.Words) {
+        const selectionsAreValid = wordSelectionsAreValid(wordSelections);
+        if (!selectionsAreValid) throw "invalid word selections supplied!";
+
+        const { allHiragana, allKatakana } = wordSelections;
+
         const selectionWords = allHiragana && allKatakana 
             ? allWords
             : allHiragana

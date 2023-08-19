@@ -25,11 +25,13 @@
     .button {
         @include button-press($darkNavy);
         background-color: $darkNavy;
+        border: 1px solid shadowColor($darkNavy);
         color: $nonFocusedDarkModeTextColor;
 
         &.is-active {
             @include button-press($active);
             background-color: $active;
+            border: none;
             color: $lightModeTextColor;
             font-weight: $fontWeightBold;
         }

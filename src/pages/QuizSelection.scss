@@ -1,4 +1,3 @@
-@use "sass:color" as color;
 @use "../styles/index" as *;
 @use "../common/styles/index" as *;
 
@@ -40,12 +39,14 @@
                 .button {
                     @include button-press($lightNavy);
                     background-color: $lightNavy;
+                    border: 1px solid shadowColor($lightNavy);
                     max-height: calc(2rem + ($padding));
                     width: 50%;
 
                     &.is-active {
                         @include button-press($active);
                         background-color: $active;
+                        border: none;
                     }
                 }
             }

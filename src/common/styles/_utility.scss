@@ -35,8 +35,12 @@
     }
 }
 
+@function shadowColor($buttonColor: $richGray) {
+    @return #{color.adjust($buttonColor, $lightness: -6%, $saturation: 15%)};
+}
+
 @mixin button-press($buttonColor: $richGray) {
-    $shadowColor: #{color.adjust($buttonColor, $lightness: -6%, $saturation: 15%)};
+    $shadowColor: shadowColor($buttonColor);
 
     @include box-shadow($color: $shadowColor, $blurRadius: 0px, $yOffset: $buttonShadowHeight);
 

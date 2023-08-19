@@ -9,6 +9,7 @@ import QuizSummary from '@/pages/QuizSummary';
 import WordSelection from '@/pages/WordSelection';
 import { PageRoute, QuizSelectionData, QuizTopic, WordSelectionData } from '@/types';
 import { KANA_SELECTION_STORAGE_KEY, QUIZ_SELECTION_STORAGE_KEY, WORD_SELECTION_STORAGE_KEY } from '@/utils/constants';
+import { kanaSelectionsAreValid, quizSelectionsAreValid, wordSelectionsAreValid } from '@/utils/utils';
 import { createRoot } from 'react-dom/client';
 import { createHashRouter, redirect, RouterProvider } from 'react-router-dom';
 
@@ -32,9 +33,8 @@ const router = createHashRouter([
                     if (!data) return redirect(PageRoute.QuizSelect);
 
                     const quizSelections = JSON.parse(data) as QuizSelectionData;
-                    // this condition check MUST match the logic in the corresponding
-                    // step wizard "blockNextStep" attribute
-                    if (quizSelections.amount === "") return redirect(PageRoute.QuizSelect);
+
+                    if (!quizSelectionsAreValid(quizSelections)) return redirect(PageRoute.QuizSelect);
 
                     return null;
                 },
@@ -48,9 +48,8 @@ const router = createHashRouter([
                     if (!data) return redirect(PageRoute.QuizSelect);
 
                     const quizSelections = JSON.parse(data) as QuizSelectionData;
-                    // this condition check MUST match the logic in the corresponding
-                    // step wizard "blockNextStep" attribute
-                    if (quizSelections.amount === "") return redirect(PageRoute.QuizSelect);
+
+                    if (!quizSelectionsAreValid(quizSelections)) return redirect(PageRoute.QuizSelect);
 
                     return null;
                 },
@@ -73,9 +72,7 @@ const router = createHashRouter([
                         
                         const kanaSelections = JSON.parse(kanaData) as string[];
 
-                        // this condition check MUST match the logic in the corresponding
-                        // step wizard "blockNextStep" attribute
-                        if (kanaSelections.length < 3) return redirect(PageRoute.KanaSelect);
+                        if (!kanaSelectionsAreValid(kanaSelections)) return redirect(PageRoute.KanaSelect);
 
                     } else {
                         const wordData = localStorage.getItem(WORD_SELECTION_STORAGE_KEY);
@@ -84,9 +81,7 @@ const router = createHashRouter([
                         
                         const wordSelections = JSON.parse(wordData) as WordSelectionData;
 
-                        // this condition check MUST match the logic in the corresponding
-                        // step wizard "blockNextStep" attribute
-                        if (!wordSelections.allHiragana && !wordSelections.allKatakana) return redirect(PageRoute.WordSelect);
+                        if (!wordSelectionsAreValid(wordSelections)) return redirect(PageRoute.WordSelect);
                     }
 
                     return null;
@@ -95,12 +90,10 @@ const router = createHashRouter([
             },
             {
                 path: PageRoute.KanaQuiz,
-                loader: () => redirect(PageRoute.QuizSelect),
                 element: <KanaQuiz />
             },
             {
                 path: PageRoute.QuizRecap,
-                loader: () => redirect(PageRoute.QuizSelect),
                 element: <QuizRecap />
             },
         ]

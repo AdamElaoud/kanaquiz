@@ -1,17 +1,24 @@
 import { Button, Icon, NotificationCenter } from "@/common/components";
 import useNotification from "@/common/hooks/useNotification";
-import { FontAwesomeIconType } from "@/common/types";
+import { CSSStyles, FontAwesomeIconType } from "@/common/types";
 import { COPY_FAIL, COPY_FAIL_ID, COPY_SUCCESS, COPY_SUCCESS_ID } from "@/common/utils/constants";
+import { buildClassNames } from "@/common/utils/utils";
 import { isRouteErrorResponse, useNavigate, useRouteError } from "react-router-dom";
 
 import "./ErrorPage.scss";
 
 interface Props {
-    homepagePath: string
+    className?: string,
+    hideCopyButton?: boolean,
+    homepagePath: string,
+    id?: string,
+    style?: CSSStyles
 };
 
+const DEFAULT_HIDE_COPY_BUTTON = false;
+
 const ErrorPage = (props: Props) : JSX.Element => {
-    const { homepagePath } = props;
+    const { className, hideCopyButton = DEFAULT_HIDE_COPY_BUTTON, homepagePath, id, style } = props;
 
     const navigate = useNavigate();
     const routeError = useRouteError();
@@ -41,8 +48,10 @@ const ErrorPage = (props: Props) : JSX.Element => {
         }
     };
 
+    const classes = buildClassNames({ className }, ["error-page"]);
+
     return (
-        <div className = "error-page">
+        <div className = {classes} id = {id} style = {style}>
             <NotificationCenter />
 
             <div className = "error-page-content">
@@ -64,13 +73,13 @@ const ErrorPage = (props: Props) : JSX.Element => {
                 </div>
             </div>
 
-            <Button
+            {!hideCopyButton && <Button
                 className = "log-button"
                 iconType = {FontAwesomeIconType.Copy}
                 onClick = {copyErrorToClipboard}
             >
                 Log
-            </Button>
+            </Button>}
         </div>
     );
 };

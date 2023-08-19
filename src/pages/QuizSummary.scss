@@ -49,10 +49,12 @@ $summaryTitleHeight: calc($mediumFontSize + ($sectionSpacing / 2));
                 .button {
                     @include button-press($lightNavy);
                     background-color: $lightNavy;
+                    border: 1px solid shadowColor($lightNavy);
 
                     &.is-active {
                         @include button-press($active);
                         background-color: $active;
+                        border: none;
                     }
                 }
             }

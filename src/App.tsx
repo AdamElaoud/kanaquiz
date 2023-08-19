@@ -31,6 +31,7 @@ import {
     SHOWN_WELCOME_MESSAGE_KEY,
     WORD_SELECTION_STORAGE_KEY
 } from '@/utils/constants';
+import { kanaSelectionsAreValid, quizSelectionsAreValid, wordSelectionsAreValid } from '@/utils/utils';
 import { useLayoutEffect, useRef, useState } from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom"
 
@@ -132,15 +133,15 @@ const App = () : JSX.Element => {
             iconType: FontAwesomeIconType.Pencil,
             ID: PageRoute.QuizSelect,
             title: "Quiz",
-            blockNextStep: () => quizSelections.amount === "",
+            blockNextStep: () => !quizSelectionsAreValid(quizSelections),
             nextStepBlockedError: () => NOT_ENOUGH_QUESTIONS
         },
         {
             iconType: kanaIsSelectedTopic ? CustomIconType.Kana : FontAwesomeIconType.Book,
             ID: kanaIsSelectedTopic ? PageRoute.KanaSelect : PageRoute.WordSelect,
             title: kanaIsSelectedTopic ? "Kana" : "Words",
-            blockNextStep: () => kanaIsSelectedTopic && kanaSelections.length < 3
-                || !kanaIsSelectedTopic && (!wordSelections.allHiragana && !wordSelections.allKatakana),
+            blockNextStep: () => (kanaIsSelectedTopic && !kanaSelectionsAreValid(kanaSelections))
+                || (!kanaIsSelectedTopic && !wordSelectionsAreValid(wordSelections)),
             nextStepBlockedError: () => kanaIsSelectedTopic ? NOT_ENOUGH_KANA : NOT_ENOUGH_WORDS
         },
         {
