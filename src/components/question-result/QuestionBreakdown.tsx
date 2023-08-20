@@ -13,6 +13,8 @@ const QuestionBreakdown = (props: QuestionResult) : JSX.Element => {
 
     const questionBreakdownClasses = buildClassNames({ correct }, ["question-breakdown"]);
 
+    const prettyTime = prettifyTime(time, true, new Set<TimeUnits>([TimeUnits.Ms])) || "< 1s";
+
     return (
         <div className = {questionBreakdownClasses}>
             <span className = "result">
@@ -42,7 +44,7 @@ const QuestionBreakdown = (props: QuestionResult) : JSX.Element => {
                         />
                     </TooltipTrigger>
                     <TooltipContent>
-                        {prettifyTime(time, true, new Set<TimeUnits>([TimeUnits.Ms]))}
+                        {prettyTime}
                     </TooltipContent>
                 </Tooltip>
             </span>

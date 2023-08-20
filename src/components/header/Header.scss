@@ -28,12 +28,18 @@
     }
 
     .header-actions {
+        display: flex;
         position: absolute;
         right: 0;
         
         .button {
             @extend %disable-button-press;
             background-color: transparent;
+            padding: 0;
+        }
+        
+        .settings-button {
+            padding-right: $padding;
         }
     }
 }
