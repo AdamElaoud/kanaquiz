@@ -2,20 +2,22 @@ import { Button } from "@/common/components";
 import { CSSStyles, FontAwesomeIconType, PlainFn } from "@/common/types";
 
 import "./Header.scss";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { PageRoute } from "@/types";
 
 interface Props {
-    isInQuiz: boolean,
     onClick: PlainFn,
     openSettings: PlainFn
     style?: CSSStyles
 };
 
 const Header = (props: Props) : JSX.Element => {
-    const { isInQuiz, openSettings, onClick, style } = props;
+    const { openSettings, onClick, style } = props;
 
     const navigate = useNavigate();
+    const { pathname } = useLocation();
+
+    const showCloseQuizButton = pathname === PageRoute.KanaQuiz
 
     return (
         <header className = "header" style = {style}>
@@ -24,7 +26,7 @@ const Header = (props: Props) : JSX.Element => {
             </Button>
 
             <div className = "header-actions">
-                {isInQuiz && <Button iconType = {FontAwesomeIconType.X} onClick = {() => navigate(PageRoute.QuizSelect)}/>}
+                {showCloseQuizButton && <Button iconType = {FontAwesomeIconType.X} onClick = {() => navigate(PageRoute.QuizSelect)}/>}
                 <Button className = "settings-button" iconType = {FontAwesomeIconType.Gear} onClick = {openSettings}/>
             </div>
         </header>
