@@ -1,7 +1,7 @@
 import { Button, Icon } from "@/common/components";
 import useDebounce from "@/common/hooks/useDebounce";
 import useDynamicWidth from "@/common/hooks/useDynamicWidth";
-import { FontAwesomeIconType, Size, TextInputState } from "@/common/types";
+import { FontAwesomeIconType, ReactFormOnSubmitEvent, Size, TextInputState } from "@/common/types";
 import { buildClassNames, prettifyTime } from "@/common/utils/utils";
 import ChoiceInputRow from "@/components/choice-row/ChoiceInputRow";
 import CorrectAnswerDisplay from "@/components/correct-answer-display/CorrectAnswerDisplay";
@@ -75,22 +75,29 @@ const KanaQuiz = () : JSX.Element => {
 
     }, [isMultChoice, activeQuestionIndex]);
 
-    const onInputChange = useDebounce<TextInputState, void>(({ newValue }) => {
-        const currentInputIndex = textInputRefs.current?.findIndex(ele => ele === document.activeElement);
-
-        setWriteResponses(currentResponses => {
-            const copy = [...currentResponses];
-            copy[currentInputIndex] = newValue;
-            return copy;
-        });
-
-        if (autoFocusNextInput && newValue.length > 0) {
+    const focusNextInput = useDebounce<{ value: string, currentInputIndex: number }, void>(({ value, currentInputIndex }) => {
+        if (autoFocusNextInput && value.length > 0) {
             if (currentInputIndex !== textInputRefs.current.length - 1)
                 textInputRefs.current[currentInputIndex + 1].focus();
             else
                 textInputRefs.current[currentInputIndex].blur();
         }
     }, 550);
+
+    const onInputChange = ({ newValue }: TextInputState) => {
+        const value = newValue.toLowerCase();
+
+        const currentInputIndex = textInputRefs.current?.findIndex(ele => ele === document.activeElement);
+
+        setWriteResponses(currentResponses => {
+            const copy = [...currentResponses];
+            copy[currentInputIndex] = value;
+            return copy;
+        });
+
+        focusNextInput({ value, currentInputIndex });
+        return value;
+    };
 
     const checkAnswer = () => {
         // only check answer if not already submitted
@@ -140,6 +147,10 @@ const KanaQuiz = () : JSX.Element => {
         else setMultChoiceResponse(choice);
     };
 
+    const onSubmit = (event: ReactFormOnSubmitEvent) => {
+        event.preventDefault();
+    };
+
     const promptQuestionClasses = buildClassNames({
         "large-word": activeQuestion.prompt.length > 7
     }, ["prompt-question"]);
@@ -174,7 +185,7 @@ const KanaQuiz = () : JSX.Element => {
                     </span>}
                 </div>
 
-                <div className = "answer-input">
+                <form className = "answer-input" onSubmit = {onSubmit}>
                     {isMultChoice && activeQuestion.choices?.map(choice => {
                         const isSelection = choice === multChoiceResponse;
 
@@ -198,7 +209,7 @@ const KanaQuiz = () : JSX.Element => {
                             answers = {activeQuestion.answer}
                             onChange = {onInputChange}
                         />}
-                </div>
+                </form>
             </div>
 
             <Button ref = {submitButtonRef} className = "submit-choice-button" onClick = {checkAnswer} disabled = {!submitIsEnabled}>
