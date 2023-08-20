@@ -212,7 +212,6 @@ const App = () : JSX.Element => {
                                         style = {dynamicWidth}
                                         onClick = {() => { navigate(PageRoute.QuizSelect); resetWizard(state => !state); }}
                                         openSettings = {() => setShowSettings(true)}
-                                        isInQuiz = {isInQuiz}
                                     />
 
                                     <div key = {`page-${pageKey}`} ref = {pageRef} className = {pageClasses} style = {dynamicWidth}>
