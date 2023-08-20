@@ -1,4 +1,4 @@
-import { ReactKeyboardEvent, TimeUnits } from "@/common/types";
+import { ReactKeyboardEvent, TimeUnitData, TimeUnits, isTimeUnitDataType } from "@/common/types";
 
 export const onEnterPress = (responseFn: (event: ReactKeyboardEvent) => void) => (event: ReactKeyboardEvent) => {
     if (event.key === "Enter") responseFn(event);
@@ -22,7 +22,7 @@ export const isMobileDevice = (isDevMode = false) : boolean => {
     return mobileBrowserRegex.test(navigator.userAgent) || mobileDeviceRegex.test(firstCharactersOfUserAgent);
 };
 
-export const calcTimeUnits = (ms: number) : TimeUnits => ({
+export const calcTimeUnits = (ms: number) : TimeUnitData => ({
     day: Math.floor(ms / 86400000),
     hour: Math.floor(ms / 3600000) % 24,
     min: Math.floor(ms / 60000) % 60,
@@ -30,17 +30,34 @@ export const calcTimeUnits = (ms: number) : TimeUnits => ({
     ms: Math.floor(ms) % 1000
 });
 
-export const prettifyTime = (ms: number, includeUnits = false) : string => {
-    const { day, hour, min, sec, ms: calcMS } = calcTimeUnits(ms);
+export const calcMS = (timeUnits: TimeUnitData) : number => {
+    const { day, hour, min, ms, sec } = timeUnits;
+
+    return ms + (sec * 1000) + (min * 60000) + (hour * 3600000) + (day * 86400000);
+};
+
+export const evalTimeUnits = (a: TimeUnitData, b: TimeUnitData, evalFn: (a: number, b: number) => number) : TimeUnitData => {
+    const aInMS = calcMS(a);
+    const bInMS = calcMS(b);
+
+    const result = evalFn(aInMS, bInMS);
+
+    return calcTimeUnits(result);
+};
+
+export const prettifyTime = (ms: number | TimeUnitData, includeUnits = false, omitUnits: Set<TimeUnits> = new Set<TimeUnits>) : string => {
+    const timeUnits = isTimeUnitDataType(ms) ? ms : calcTimeUnits(ms);
+
+    const { day, hour, min, sec, ms: calcMS } = timeUnits;
 
     const prettifiedTime = [];
-    if (day > 0) prettifiedTime.push(includeUnits ? `${day}d` : day);
-    if (hour > 0) prettifiedTime.push(includeUnits ? `${hour}h` : hour);
-    if (min > 0) prettifiedTime.push(includeUnits ? `${min}m` : min);
-    if (sec > 0) prettifiedTime.push(includeUnits ? `${sec}s` : sec);
-    if (calcMS > 0) prettifiedTime.push(includeUnits ? `${calcMS}ms` : calcMS);
+    if (day > 0 && !omitUnits.has(TimeUnits.Day)) prettifiedTime.push(includeUnits ? `${day}d` : day);
+    if (hour > 0 && !omitUnits.has(TimeUnits.Hour)) prettifiedTime.push(includeUnits ? `${hour}h` : hour);
+    if (min > 0 && !omitUnits.has(TimeUnits.Min)) prettifiedTime.push(includeUnits ? `${min}m` : min);
+    if (sec > 0 && !omitUnits.has(TimeUnits.Sec)) prettifiedTime.push(includeUnits ? `${sec}s` : sec);
+    if (calcMS > 0 && !omitUnits.has(TimeUnits.Ms)) prettifiedTime.push(includeUnits ? `${calcMS}ms` : calcMS);
 
-    return prettifiedTime.join(":");
+    return prettifiedTime.join(" : ");
 };
 
 export const buildClassNames = (classNames: { [key: string]: unknown }, defaultClasses: string[] = []) : string => {

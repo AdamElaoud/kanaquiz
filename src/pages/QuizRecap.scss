@@ -1,0 +1,157 @@
+@use "../common/styles/index" as *;
+@use "../styles/index" as *;
+
+$statsHeight: 3rem;
+
+.quiz-recap-page {
+    @extend %page;
+    row-gap: 2rem;
+
+    .call-to-action {
+        @extend %call-to-action;
+        margin-bottom: 0;
+    }
+
+    .stats-section {
+        align-items: center;
+        column-gap: 3rem;
+        display: flex;
+        font-size: $largeFontSize;
+        height: $statsHeight;
+        justify-content: center;
+        margin-bottom: $sectionSpacing;
+
+        .stat-number {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+    
+            .icon {
+                margin-right: 0.5rem;
+            }
+    
+            .correct, .time {
+                color: $lightModeTextColor;
+            }
+    
+            .correct {
+                background-color: $complete;
+            }
+    
+            .incorrect {
+                background-color: $crimson;
+            }
+    
+            .time {
+                background-color: $active;
+            }
+        }
+    }
+
+    .display-section {
+        max-height: max(65%, 32rem);
+        min-height: min(35%, 20rem);
+        padding-left: calc($padding / 2);
+        padding-right: calc($padding / 2);
+
+        .display-section-items {
+            row-gap: 0;
+
+            .button-group {
+                background-color: $lightNavy;
+                width: fit-content;
+                margin: auto;
+                margin-bottom: ($sectionSpacing);
+                
+                .button {
+                    @include button-press($lightNavy);
+                    background-color: $lightNavy;
+                    border: 1px solid shadowColor($lightNavy);
+
+                    &.is-active {
+                        @include button-press($active);
+                        background-color: $active;
+                        border: none;
+                    }
+                }
+            }
+
+            .breakdown-container {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                padding: 0 calc($padding / 2);
+                row-gap: 0.75rem;
+                overflow: auto;
+
+                &:has(.empty-text) {
+                    justify-content: center;
+                }
+
+                .empty-text {
+                    font-style: italic;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .action-buttons {
+        bottom: 0;
+        column-gap: 2rem;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+        position: absolute;
+        width: 100%;
+
+        $buttonHorizontalPadding: 3rem;
+        .button {
+            padding-left: $buttonHorizontalPadding;
+            padding-right: $buttonHorizontalPadding;
+
+            &.new-quiz-button {
+                @include button-press($lightNavy);
+                background-color: $lightNavy;
+            }
+        }
+    }
+}
+
+@media (max-height: $landscapeMobileHeightThreshhold) {
+    .quiz-recap-page {
+        .action-buttons {
+            position: static;
+        }
+    }
+}
+
+
+@media (hover: hover) and (pointer: fine) {
+    .quiz-recap-page {
+        .display-section {
+            .display-section-items {
+                .button-group {
+                    &:not(.disabled) {
+                        .button {
+                            &:not(.is-active):hover {
+                                @include button-press($gold);
+                                background-color: $gold;
+                                border: 1px solid $gold;
+                                color: $lightModeTextColor;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .action-buttons {    
+            .new-quiz-button:hover {
+                @include button-press($gold);
+                background-color: $gold;
+            }
+        }
+    }
+}

@@ -36,6 +36,7 @@ interface Props {
     disabled?: boolean,
     gap?: number,
     hideDelay?: number,
+    hideOnScroll?: boolean,
     holdDelay?: number,
     isOpen?: boolean,
     onOpenChange?: (open: boolean) => void,
@@ -46,6 +47,7 @@ interface Props {
 };
 
 const DEFAULT_HIDE_DELAY = 100;
+const DEFAULT_HIDE_ON_SCROLL = true;
 const DEFAULT_GAP = 14;
 const DEFAULT_OPEN = false;
 const DEFAULT_OPEN_ON_CLICK = false;
@@ -60,6 +62,7 @@ const Tooltip = (props: Props) : JSX.Element => {
         disabled,
         gap = DEFAULT_GAP,
         hideDelay = DEFAULT_HIDE_DELAY,
+        hideOnScroll = DEFAULT_HIDE_ON_SCROLL,
         holdDelay,
         isOpen: controlledOpen,
         onOpenChange: setControlledOpen,
@@ -124,7 +127,7 @@ const Tooltip = (props: Props) : JSX.Element => {
         ignoreMouse: !openOnClick,
         toggle: toggleOnClick
     });
-    const dismiss = useDismiss(context);
+    const dismiss = useDismiss(context, { ancestorScroll: hideOnScroll });
     const role = useRole(context, { role: "tooltip" });
 
     const { getReferenceProps, ...restOfInteractions } = useInteractions([hover, focus, click, dismiss, role]);

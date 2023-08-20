@@ -59,17 +59,12 @@
         .button-group {
             &:not(.disabled) {
                 .button {
-                    &:hover {
+                    &:not(.is-active):hover {
                         @include button-press($gold);
                         background-color: $gold;
+                        border: 1px solid $gold;
                         color: $lightModeTextColor;
                         cursor: pointer;
-                    }
-        
-                    &.is-active {
-                        @include button-press($active);
-                        background-color: $active;
-                        color: $lightModeTextColor;
                     }
                 }
             }

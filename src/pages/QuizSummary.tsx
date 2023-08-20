@@ -1,7 +1,7 @@
 import { Button, ButtonGroup } from "@/common/components";
-import useDynamicWidth from "@/common/hooks/useDynamicWidth";
 import { buildClassNames } from "@/common/utils/utils";
 import KanaButtonRow from "@/components/kana-button-row/KanaButtonRow";
+import Section from "@/components/section/Section";
 import SummaryItem from "@/components/summary-item/SummaryItem";
 import WordSelectionDisplay from "@/components/word-selection-display/WordSelectionDisplay";
 import useKanaSelections from "@/hooks/useKanaSelections";
@@ -9,7 +9,7 @@ import useMode from "@/hooks/useMode";
 import useQuizSelections from "@/hooks/useQuizSelections";
 import useWordSelections from "@/hooks/useWordSelections";
 import { Mode, QuizTopic } from "@/types";
-import { SCREEN_FILL_WIDTH, SCREEN_PARTIAL_FILL_WIDTH, SUMMARY_DISPLAY } from "@/utils/constants";
+import { SUMMARY_DISPLAY } from "@/utils/constants";
 import { getRowsFromSelections } from "@/utils/utils";
 
 import "./QuizSummary.scss";
@@ -18,7 +18,6 @@ const KANA_BUTTON_ID = "kana-mode-button";
 const ROMAJI_BUTTON_ID = "romaji-mode-button";
 
 const QuizSummary = () : JSX.Element => {
-    const dynamicSummaryWidth = useDynamicWidth(SCREEN_PARTIAL_FILL_WIDTH, 33, SCREEN_FILL_WIDTH, 90);
     const { quizSelections } = useQuizSelections();
     const { kanaSelections } = useKanaSelections();
     const { wordSelections } = useWordSelections();
@@ -39,31 +38,22 @@ const QuizSummary = () : JSX.Element => {
                 Review your selections
             </div>
 
-            <div className = "selections-summary" style = {dynamicSummaryWidth}>
-                <div className = "summary-title">
-                    Quiz Selections
-                </div>
-                <div className = "summary-items">
-                    <SummaryItem title = "Topic">
-                        {SUMMARY_DISPLAY[quizSelections.topic]()}
-                    </SummaryItem>
-                    <SummaryItem title = "Translate">
-                        {SUMMARY_DISPLAY[quizSelections.direction]()}
-                    </SummaryItem>
-                    <SummaryItem title = "Answer">
-                        {SUMMARY_DISPLAY[quizSelections.format]()}
-                    </SummaryItem>
-                    <SummaryItem title = "Questions">
-                        {quizSelections.amount}
-                    </SummaryItem>
-                </div>
-            </div>
+            <Section title = "Quiz Selections">
+                <SummaryItem title = "Topic">
+                    {SUMMARY_DISPLAY[quizSelections.topic]()}
+                </SummaryItem>
+                <SummaryItem title = "Translate">
+                    {SUMMARY_DISPLAY[quizSelections.direction]()}
+                </SummaryItem>
+                <SummaryItem title = "Answer">
+                    {SUMMARY_DISPLAY[quizSelections.format]()}
+                </SummaryItem>
+                <SummaryItem title = "Questions">
+                    {quizSelections.amount}
+                </SummaryItem>
+            </Section>
 
-            <div className = "selections-summary"  style = {dynamicSummaryWidth}>
-                <div className = "summary-title">
-                    {topicIsKana ? "Kana Selections" : "Word Selections"}
-                </div>
-
+            <Section title = {topicIsKana ? "Kana Selections" : "Word Selections"}>
                 <div className = "topic-selections">
                     {topicIsKana && <ButtonGroup defaultActiveButton = {defaultMode}>
                         <Button id = {KANA_BUTTON_ID} onClick = {() => setMode(Mode.Kana)}>
@@ -94,7 +84,7 @@ const QuizSummary = () : JSX.Element => {
                         </>}
                     </div>
                 </div>
-            </div>
+            </Section>
         </div>
     );
 };

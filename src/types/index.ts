@@ -1,4 +1,4 @@
-import { ReactElementFn } from "@/common/types";
+import { ReactElementFn, TimeUnitData } from "@/common/types";
 
 // potential future color theming
 export enum Theme {
@@ -93,7 +93,8 @@ export type Question = {
 
 export type QuestionResult = Question & {
     correct: boolean,
-    time: string
+    response: string | string[],
+    time: TimeUnitData
 };
 
 export interface KanaButtonProps {

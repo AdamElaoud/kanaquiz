@@ -1,19 +1,52 @@
 @use "../../common/styles/index" as *;
 
 .question-breakdown {
+    @extend %rounded-border;
+    @extend %padding;
     align-items: center;
+    background-color: $lightRed;
+    color: $darkModeTextColor;
     display: flex;
+    font-weight: $fontWeightSuperBold;
+    justify-content: space-between;
 
-    .icon {
-        background-color: $darkModeTextColor;
-        color: $lightRed;
-        margin-right: 0.75rem;
+    .result {
+        display: flex;
+
+        .icon {
+            background-color: $darkModeTextColor;
+            color: $lightRed;
+            margin-right: 2rem;
+        }
     }
 
     &.correct {
+        background-color: $lightComplete;
+        color: $lightModeTextColor;
+
+        .result {
+            .icon {
+                background-color: $lightModeTextColor;
+                color: $lightComplete;
+            }
+        }
+    }
+
+    .detail-buttons {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem;
+        
         .icon {
-            background-color: $lightModeTextColor;
-            color: $lightComplete;
+            &.time {
+                background-color: $active;
+                color: $lightModeTextColor;
+            }
+    
+            &.context {
+                background-color: $royalPurple;
+                color: $darkModeTextColor;
+            }
         }
     }
 }

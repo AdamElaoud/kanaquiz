@@ -39,12 +39,24 @@ export enum Position {
     TopStart = "top-start",
 }
 
-export type TimeUnits = {
+export type TimeUnitData = {
     day: number;
     hour: number;
     min: number;
     sec: number;
     ms: number;
+};
+
+export const isTimeUnitDataType = (ms: number | TimeUnitData): ms is TimeUnitData => {
+    return typeof ms !== "number";
+};
+
+export enum TimeUnits {
+    Day = "day",
+    Hour = "hour",
+    Min = "min",
+    Sec = "sec",
+    Ms = "ms"
 };
 
 export enum CloseMethod {
@@ -177,6 +189,7 @@ export enum FontAwesomeIconType {
     Pencil = "pencil",
     Play = "play",
     Search = "search",
+    Stopwatch = "stopwatch",
     Question = "question",
     Tap = "tap",
     Torii = "torii",

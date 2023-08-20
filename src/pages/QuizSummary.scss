@@ -1,8 +1,6 @@
 @use "../styles/index" as *;
 @use "../common/styles/index" as *;
 
-$summaryTitleHeight: calc($mediumFontSize + ($sectionSpacing / 2));
-
 .quiz-summary-page {
     @extend %page;
     row-gap: 2rem;
@@ -12,87 +10,66 @@ $summaryTitleHeight: calc($mediumFontSize + ($sectionSpacing / 2));
         margin-bottom: 0;
     }
 
-    .summary-title {
-        font-weight: $fontWeightSuperBold;
-        text-align: center;
-        width: 100%;
-    }
-
-    .selections-summary {
-        @extend %rounded-border;
-        @extend %padding;
-        background-color: $darkNavy;
-        max-height: max(45%, 23.5rem);
-
-        .summary-title {
-            margin-bottom: calc($sectionSpacing / 2);
-        }
-
-        .summary-items {
-            display: flex;
-            flex-direction: column;
-            height: calc(100% - $padding - $summaryTitleHeight);
-            row-gap: 0.75rem;
-        }
-
-        .topic-selections {
-            align-items: center;
-            display: flex;
-            flex-direction: column;
-            height: calc(100% - $padding - $summaryTitleHeight);
-
-            .button-group {
-                background-color: $lightNavy;
-                width: fit-content;
-                margin-bottom: $sectionSpacing;
-                
-                .button {
-                    @include button-press($lightNavy);
+    .display-section {
+        .display-section-items {
+            .topic-selections {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+    
+                .button-group {
                     background-color: $lightNavy;
-                    border: 1px solid shadowColor($lightNavy);
-
-                    &.is-active {
-                        @include button-press($active);
-                        background-color: $active;
-                        border: none;
+                    width: fit-content;
+                    margin-bottom: $sectionSpacing;
+                    
+                    .button {
+                        @include button-press($lightNavy);
+                        background-color: $lightNavy;
+                        border: 1px solid shadowColor($lightNavy);
+    
+                        &.is-active {
+                            @include button-press($active);
+                            background-color: $active;
+                            border: none;
+                        }
+                    }
+                }
+    
+                .topic-selections-items {
+                    @extend %rounded-border;
+                    @extend %padding;
+                    background-color: $lightNavy;
+                    column-gap: 0.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                    row-gap: 0.75rem;
+                    width: 100%;
+                    
+                    $approxButtonHeight: calc(2rem + $buttonShadowHeight + $padding);
+                    $approximateButtonGroupHeight: calc($approxButtonHeight + ($buttonGroupPadding * 2));
+                    &.topic-is-kana {
+                        max-height: calc(100% - $approximateButtonGroupHeight - $sectionSpacing);
+                    }
+                    
+                    .kana-selections-container {
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 0.2rem;
+                        overflow-y: auto;
                     }
                 }
             }
-
-            .topic-selections-items {
-                @extend %rounded-border;
-                @extend %padding;
-                background-color: $lightNavy;
-                column-gap: 0.5rem;
-                display: flex;
-                flex-direction: column;
-                flex-wrap: nowrap;
-                justify-content: center;
-                row-gap: 0.75rem;
-                width: 100%;
-                
-                $approxButtonHeight: calc(2rem + $buttonShadowHeight + $padding);
-                $approximateButtonGroupHeight: calc($approxButtonHeight + ($buttonGroupPadding * 2));
-                &.topic-is-kana {
-                    max-height: calc(100% - $approximateButtonGroupHeight - $sectionSpacing);
-                }
-                
-                .kana-selections-container {
-                    display: flex;
-                    flex-direction: column;
-                    row-gap: 0.2rem;
-                    overflow-y: auto;
-                }
-            }
         }
+
     }
 }
 
 @media (max-width: $sizeWidthThreshhold) {
     .quiz-summary-page {
-        .selections-summary {
-            min-height: 25%;
-            
+        .display-section {
             &:has(.topic-selections-items.topic-is-kana) {
                 min-height: 35%;
             }
@@ -102,20 +79,21 @@ $summaryTitleHeight: calc($mediumFontSize + ($sectionSpacing / 2));
 
 @media (hover: hover) and (pointer: fine) {
     .quiz-summary-page {
-        .button-group {
-            &:not(.disabled) {
-                .button {
-                    &:hover {
-                        @include button-press($gold);
-                        background-color: $gold;
-                        color: $lightModeTextColor;
-                        cursor: pointer;
-                    }
-        
-                    &.is-active {
-                        @include button-press($active);
-                        background-color: $active;
-                        color: $lightModeTextColor;
+        .display-section {
+            .display-section-items {
+                .topic-selections {
+                    .button-group {
+                        &:not(.disabled) {
+                            .button {
+                                &:not(.is-active):hover {
+                                    @include button-press($gold);
+                                    background-color: $gold;
+                                    border: 1px solid $gold;
+                                    color: $lightModeTextColor;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
                     }
                 }
             }

@@ -2,7 +2,7 @@ import { Button, Icon } from "@/common/components";
 import useDebounce from "@/common/hooks/useDebounce";
 import useDynamicWidth from "@/common/hooks/useDynamicWidth";
 import { FontAwesomeIconType, ReactFormOnSubmitEvent, Size, TextInputState } from "@/common/types";
-import { buildClassNames, prettifyTime } from "@/common/utils/utils";
+import { buildClassNames, calcTimeUnits } from "@/common/utils/utils";
 import ChoiceInputRow from "@/components/choice-row/ChoiceInputRow";
 import CorrectAnswerDisplay from "@/components/correct-answer-display/CorrectAnswerDisplay";
 import useKanaSelections from "@/hooks/useKanaSelections";
@@ -103,22 +103,27 @@ const KanaQuiz = () : JSX.Element => {
         // only check answer if not already submitted
         if (!showResult) {
             let correct: boolean;
+            let response: string | string[];
 
             if (isMultChoice) {
                 correct = multChoiceResponse === activeQuestionAnswer;
                 setAnswerIsCorrect(correct);
+
+                response = multChoiceResponse;
     
             } else {
                 const writeResponse = writeResponses.join(" ").toLocaleLowerCase();
                 correct = writeResponse === activeQuestionAnswer;
                 setAnswerIsCorrect(correct);
+
+                response = writeResponses;
             }
 
             const endTime = new Date();
             const time = endTime.getTime() - startTime.getTime();
-            const prettifiedTime = prettifyTime(time, true);
+            const timeData = calcTimeUnits(time);
     
-            setQuizResults(results => [...results, { ...activeQuestion, correct, time: prettifiedTime }]);
+            setQuizResults(results => [...results, { ...activeQuestion, correct, response, time: timeData }]);
             setShowResult(true);
         }
     };
@@ -227,7 +232,10 @@ const KanaQuiz = () : JSX.Element => {
                     Meaning: {activeQuestion.context}
                 </span>}
 
-                {!answerIsCorrect && <CorrectAnswerDisplay questionIndex = {activeQuestionIndex} answer = {activeQuestion.answer} answerDetails = {activeQuestion.answerDetails}/>}
+                {!answerIsCorrect && <CorrectAnswerDisplay
+                    answer = {activeQuestion.answer}
+                    response = {quizResults[activeQuestionIndex].response}
+                />}
 
                 <Button className = "next-question-button" onClick = {nextQuestion}>
                     {isLastQuestion ? "FINISH" : "NEXT QUESTION"}
